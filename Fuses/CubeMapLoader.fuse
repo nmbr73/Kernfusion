@@ -38,8 +38,22 @@ function getLayoutInfo(index)
     return "-"
   end
 
-  return '<font color="#f93931">'..LAYOUT_INFOS[index].."</font>"
+  return '<font color="gray">'..LAYOUT_INFOS[index].."</font>"
 end
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+function setError(msg)
+
+  if msg==nil or msg == '' then
+    InErrorLabel:SetAttrs({LINKS_Name = "", IC_Visible=false })
+  else
+    print(msg)
+    InErrorLabel:SetAttrs({LINKS_Name = '<font color="#f93931">'..msg..'</font>', IC_Visible=true })
+  end
+
+end
+
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------
@@ -66,7 +80,7 @@ function Create()
     IC_NoReset = true,
     INP_External = false,
     INP_Passive = true,
-    IC_NoLabel = true,
+    IC_NoLabel = false,
     ICD_Width =0.6,
   })
 
@@ -103,11 +117,6 @@ function Create()
   end
 
 
-
-
-
-
-
   InLayoutCombo = self:AddInput( "Frame", "frame", {
     LINKID_DataType = "Number",
     INPID_InputControl = "ComboControl",
@@ -135,6 +144,19 @@ function Create()
 		})
 
 
+
+  InErrorLabel = self:AddInput( "Errorx", "error", {
+    LINKID_DataType = "Text",
+    INPID_InputControl = "LabelControl",
+    LBLC_MultiLine = true,
+    IC_NoReset = true,
+    INP_External = false,
+    INP_Passive = true,
+    -- IC_NoLabel = true,
+    IC_Visible = false,
+  })
+
+
   OutImage   = self:AddOutput( "Output", "Output", {
     LINKID_DataType = "Image",
     LINK_Main = 1
@@ -153,14 +175,14 @@ end
 function LoadTexture(file,layout)
 
   if not bmd.fileexists(file) then
-    print("no such file '"..file.."'")
+    setError("no such file '"..file.."'")
     return
   end
 
   local clip = Clip(file,false)
 
   if clip:GetFrame(5) == nil then
-    print("need six frames at least")
+    setError("need six frames at least")
     return
   end
 
@@ -168,7 +190,7 @@ function LoadTexture(file,layout)
 
   for i=0,5 do
     if clip:GetFrame(0).Width~=clip:GetFrame(0).Height or clip:GetFrame(0).Width ~=size then
-      print("images must be squares and all of the same size")
+      setError("images must be squares and all of the same size")
       return
     end
   end
@@ -255,6 +277,7 @@ function Process(req)
     CURRENT_LAYOUT = layout
     TEXTURE_IMAGE  = nil
     HAS_ERRORS     = false
+    setError(nil)
 
     LoadTexture(file,layout)
 
