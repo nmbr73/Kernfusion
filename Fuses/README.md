@@ -6,6 +6,8 @@
 
 ## Link Fuses into Fusion
 
+Make sure to ste a 'Kernfusion:' path map to the folder you checked out the repository to.
+
 ### on macOS
 
 Set PROJECTS to whatever folder you want to clone the project into:
