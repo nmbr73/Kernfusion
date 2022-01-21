@@ -1,0 +1,331 @@
+--- Load the six faces of a cube ... WORK IN PROGRESS
+--
+
+
+-- ----------------------------------------------------------------------------------------------------------------------------------------
+
+FuRegisterClass("CubeMapLoader_nmbr73", CT_SourceTool, {
+    REGS_Name = "CubeMap Loader",
+	  REGS_Category = "Fuses/Kernfusion",
+    REGS_OpDescription = "Load the six faces of a cube. Serves for example as an input fragment shaders that use a cube map. Use the CubeMap (3Cu) tool to test this Fuse.",
+	  REGS_OpIconString = "cml.73",
+    REG_Source_GlobalCtrls = true,
+    REG_Source_SizeCtrls = true,
+    REG_Source_AspectCtrls = true,
+    REG_Source_DepthCtrls = true,
+	  REG_TimeVariant = false,
+	  REGS_Company = "nmbr73",
+	  REGS_URL = "https://nmbr73.github.io/",
+	  REG_Version	= 000001,
+    REG_Fuse_NoEdit = true,
+    REG_Fuse_NoReload = false,
+    })
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+CURRENT_FILE   = ""
+CURRENT_LAYOUT  = 0
+TEXTURE_IMAGE   = nil
+LAYOUT_INFOS    = {}
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+function getLayoutInfo(index)
+
+  if LAYOUT_INFOS==nil then
+    return "-"
+  end
+
+  return '<font color="#f93931">'..LAYOUT_INFOS[index].."</font>"
+end
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+-- Callback to initialize the tool.
+--
+function Create()
+
+
+  LAYOUT_INFOS = { [0] =
+    "Face 0 / +X / right",
+    "Face 1 / -X / left",
+    "Face 2 / +Y / top",
+    "Face 3 / -Y / bottom",
+    "Face 4 / +Z / front",
+    "Face 5 / -Z / back",
+    "Horizontal Cross",
+    "Vertical Cross",
+  }
+
+  InLayoutInfo = self:AddInput( getLayoutInfo(0),"faceInfo", {
+    LINKID_DataType = "Text",
+    INPID_InputControl = "LabelControl",
+    LBLC_MultiLine = true,
+    IC_NoReset = true,
+    INP_External = false,
+    INP_Passive = true,
+    IC_NoLabel = true,
+    ICD_Width =0.6,
+  })
+
+
+
+
+  InLayoutButtons = {}
+
+  attrs={
+    LINKID_DataType = "Number",
+    INPID_InputControl = "MultiButtonControl",
+    INP_DoNotifyChanged = true,
+    INP_Default = 0,
+    IC_ControlGroup = 1,
+    MBTNC_Type = 'Toggle',
+    MBTNC_ShowName = true,
+  }
+
+  InLayoutButtons[6] = self:AddInput("Layout", "horiz", { attrs,
+    IC_ControlID = 0,
+    { MBTNC_AddButton = 'H', MBTNCD_ButtonWidth = 0.125, },
+  })
+
+  InLayoutButtons[7] = self:AddInput("", "vert", { attrs,
+    IC_ControlID = 1,
+    { MBTNC_AddButton = 'V', MBTNCD_ButtonWidth = 0.125, },
+  })
+
+  for i = 0,5 do
+    InLayoutButtons[i] = self:AddInput("", "face"..i, { attrs,
+      IC_ControlID = i+2,
+      { MBTNC_AddButton = ''..i, MBTNCD_ButtonWidth = 0.125, },
+    })
+  end
+
+
+
+
+
+
+
+  InLayoutCombo = self:AddInput( "Frame", "frame", {
+    LINKID_DataType = "Number",
+    INPID_InputControl = "ComboControl",
+    INP_DoNotifyChanged = false,
+    INP_Default = 6,
+    INP_Integer = true,
+    { CCS_AddString = "Face 0", },
+    { CCS_AddString = "Face 1", },
+    { CCS_AddString = "Face 2", },
+    { CCS_AddString = "Face 3", },
+    { CCS_AddString = "Face 4", },
+    { CCS_AddString = "Face 5", },
+    { CCS_AddString = "Horizontal Cross", },
+    { CCS_AddString = "Vertical Cross", },
+    IC_Visible      = false,
+  })
+
+
+
+	InFileSelect = self:AddInput("File", "file", {
+		LINKID_DataType = "Text",
+		INPID_InputControl = "FileControl",
+		FC_IsSaver = false,
+		FC_ClipBrowse = true,
+		})
+
+
+  OutImage   = self:AddOutput( "Output", "Output", {
+    LINKID_DataType = "Image",
+    LINK_Main = 1
+  })
+
+  self:AddControlPage("Image")
+
+  InGlobalIn  = self:AddInput("Global In",  "GlobalIn",  { LINKID_DataType = "Number", })
+  InGlobalOut = self:AddInput("Global Out", "GlobalOut", { LINKID_DataType = "Number", })
+
+end
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+-- Callback to render the node.
+--
+function Process(req)
+
+	local file = self.Comp:MapPath(InFileSelect:GetValue(req).Value)
+  local layout = InLayoutCombo:GetValue(req).Value
+
+  print("file='"..file.."'")
+  -- if true then
+  --   print("file='"..file.."'")
+  --   OutImage:Set(req,nil)
+  --   return
+  -- end
+
+  if CURRENT_FILE ~= file or CURRENT_LAYOUT ~= layout then
+
+    if CURRENT_FILE~=file then
+      CURRENT_FILE=file
+    end
+
+    CURRENT_LAYOUT = layout
+    TEXTURE_IMAGE = nil
+
+
+    if not bmd.fileexists(file) then
+      print("no such file '"..file.."'")
+    else
+      print("load '"..file.."'")
+      local clip = Clip(file,false)
+
+      if clip:GetFrame(5) == nil then
+        print("need six frames at least")
+      else
+
+        local size = math.min(clip:GetFrame(0).Width,clip:GetFrame(0).Height)
+
+        dump(clip:GetFrame(6))
+
+        if CURRENT_LAYOUT>=6 then
+          print("create horizontal cross")
+
+          TEXTURE_IMAGE = Image({
+            IMG_Document = self.Comp,
+            { IMG_Channel = "Red",    },
+            { IMG_Channel = "Green",  },
+            { IMG_Channel = "Blue",   },
+            { IMG_Channel = "Alpha",  },
+            IMG_Width   = size * 4,
+            IMG_Height  = size * 3,
+            IMG_XScale  = 1.0,
+            IMG_YScale  = 1.0,
+          })
+
+          TEXTURE_IMAGE:Fill(Pixel({R=0,G=0,B=0,A=0}))
+
+          TEXTURE_IMAGE:OMerge(clip:GetFrame(1), 0, size)
+          TEXTURE_IMAGE:OMerge(clip:GetFrame(4), 1*size, size)
+          TEXTURE_IMAGE:OMerge(clip:GetFrame(0), 2*size, size)
+          TEXTURE_IMAGE:OMerge(clip:GetFrame(5), 3*size, size)
+          TEXTURE_IMAGE:OMerge(clip:GetFrame(3), size, 0)
+          TEXTURE_IMAGE:OMerge(clip:GetFrame(2), size, 2*size)
+
+        else
+          print("display face "..(CURRENT_LAYOUT))
+          TEXTURE_IMAGE = clip:GetFrame(CURRENT_LAYOUT)
+        end
+      end
+    end
+
+  end
+
+
+
+  if TEXTURE_IMAGE~=nil then
+    OutImage:Set(req,TEXTURE_IMAGE)
+    return
+  end
+
+
+  local width  = 73
+  local height = 73
+  local depth  = nil
+
+
+
+  local dst = Image({
+    IMG_Document = self.Comp,
+    { IMG_Channel = "Red",    },
+    { IMG_Channel = "Green",  },
+    { IMG_Channel = "Blue",   },
+    { IMG_Channel = "Alpha",  },
+    IMG_Width   = width,
+    IMG_Height  = height,
+    IMG_XScale  = 1.0,
+    IMG_YScale  = 1.0,
+  })
+
+  local black  = Pixel({R=0,G=0,B=0,A=0})
+  dst:Fill(black)
+
+  if req:IsPreCalc() then
+    dst = Image({IMG_Like = dst, IMG_NoData = true})
+  end
+
+  OutImage:Set(req,dst)
+
+end
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+-- Callback to handle UI control events.
+--
+
+function NotifyChanged(inp, param, time)
+
+  if inp == nil or param == nil then
+    return
+  end
+
+  -- simulation of a toogle type multibutton
+  -- if a button get's activated, then we
+  -- deactivate the currently active one
+
+  for i = 0,7 do
+    if inp == InLayoutButtons[i] then
+      status  = InLayoutButtons[i]:GetSource(0).Value
+      current = InLayoutCombo:GetSource(0).Value
+
+      if status == 1 and current ~= i then
+
+        InLayoutInfo:SetAttrs({LINKS_Name = getLayoutInfo(i)})
+
+        InLayoutCombo:SetSource(Number(i),0)
+        InLayoutButtons[current]:SetSource(Number(0),0)
+
+      elseif current == i and status == 0 then
+
+        InLayoutButtons[i]:SetSource(Number(1),0)
+
+      end
+
+      return
+    end
+  end
+
+
+
+  local file  = 0
+  local blurred   = 0
+
+  if inp == InTextureCombo then
+
+    selected  = param.Value
+    blurred   = InBlurredCheckBox:GetSource(0).Value
+
+  elseif inp == InBlurredCheckBox then
+
+    selected  = InTextureCombo:GetSource(0).Value
+    blurred   = param.Value
+
+  else
+
+    return
+
+  end
+
+  if selected ~= 0 and blurred~=0 then
+    selected = selected + 3
+  end
+
+  if MEDIAFOLDER==nil then
+    MEDIAFOLDER = self.Comp:MapPath("Fetch-n-Fuse:/Assets/Cubemaps/")
+  end
+
+  InTexturePreview:SetAttrs({LINKS_Name = getPreview(selected)})
+  InTextureInfo:SetAttrs({LINKS_Name = getInfo(selected)})
+
+end
