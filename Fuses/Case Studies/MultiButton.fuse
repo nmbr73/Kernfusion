@@ -1,0 +1,170 @@
+--- Simulate a toggle type multibutton
+--
+
+
+-- ----------------------------------------------------------------------------------------------------------------------------------------
+-- Register the tool on Fusion start up
+--
+
+FuRegisterClass("MultiButtonStudy_nmbr73", CT_SourceTool, {
+    REGS_Name = "Multi Button",
+	  REGS_Category = "Fuses/Kernfusion/Case Studies",
+    REGS_OpDescription = "Multibuttons not working as expected.",
+	  REGS_OpIconString = "case study",
+    REG_Source_GlobalCtrls = true,
+    REG_Source_SizeCtrls = true,
+    REG_Source_AspectCtrls = true,
+    REG_Source_DepthCtrls = true,
+	  REG_TimeVariant = false,
+	  REGS_Company = "nmbr73",
+	  REGS_URL = "https://nmbr73.github.io/",
+	  REG_Version	= 000001,
+    REG_Fuse_NoEdit = true,
+    REG_Fuse_NoReload = false,
+    })
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+-- Callback to initialize the tool.
+--
+function Create()
+
+  self:AddInput("What this is about...", "info", {
+    LINKID_DataType = "Text",
+    INPID_InputControl = "ButtonControl",
+    INP_DoNotifyChanged = false,
+    INP_External = false,
+    BTNCS_Execute = 'bmd.openurl("https://nmbr73.github.io/Kernfusion/Fuses/Case Studies/MultiButton.html")',
+  })
+
+  InMultiButton1 = self:AddInput("Multibutton 1", "btnA", {
+    LINKID_DataType = "Number",
+    INPID_InputControl = "MultiButtonControl",
+    MBTNC_Type = "Normal",
+    { MBTNC_AddButton = "Bombur",  },
+    { MBTNC_AddButton = "Dwalin", },
+    { MBTNC_AddButton = "Bifur",  },
+    MBTNC_StretchToFit = true,
+    INP_Default = 0,
+  })
+
+  InMultiButton2 = self:AddInput("Multibutton 2", "btnB", {
+		LINKID_DataType = "Number",
+		INPID_InputControl = "MultiButtonControl",
+		INP_Default = 0.0,
+    MBTNC_Type = "Toggle",
+		{ MBTNC_AddButton = "Balin",  MBTNCD_ButtonWidth = 0.33, },
+		{ MBTNC_AddButton = "Kili",   MBTNCD_ButtonWidth = 0.33, },
+		{ MBTNC_AddButton = "Nori",   MBTNCD_ButtonWidth = 0.33, },
+	})
+
+  InMultiButton3 = self:AddInput("Multibutton 3", "btnC", {
+		LINKID_DataType = "Number",
+		INPID_InputControl = "MultiButtonControl",
+		INP_Default = 0.0,
+    MBTNC_Type = "TriState",
+    MBTNC_StretchToFit = true,
+		{ MBTNC_AddButton = "Bofur",   },
+		{ MBTNC_AddButton = "Fili",   },
+		{ MBTNC_AddButton = "Gloin",   },
+	})
+
+  InMultiButtonSim = {}
+
+
+  btns={ "Oin", "Dori", "Balin"}
+  strs={}
+
+  for i, v in ipairs(btns) do
+
+    InMultiButtonSim[i-1] = self:AddInput("Multibutton 3", "btn"..i, {
+      LINKID_DataType = "Number",
+      INPID_InputControl = "MultiButtonControl",
+      INP_DoNotifyChanged = true,
+      INP_Default = 0,
+      IC_ControlGroup = 42,
+      IC_ControlID = i-1,
+      MBTNC_Type = 'Toggle',
+      MBTNC_ShowName = true,
+      { MBTNC_AddButton = v, MBTNCD_ButtonWidth = 0.33, },
+    })
+
+    table.insert(strs,{ CCS_AddString = v, })
+
+  end
+
+  InMultiButtonSimCombo = self:AddInput( "Hidden", "btncombo", {
+    LINKID_DataType = "Number",
+    INPID_InputControl = "ComboControl",
+    INP_DoNotifyChanged = false,
+    INP_Default = 0,
+    INP_Integer = true,
+    strs,
+    IC_Visible      = false,
+  })
+
+
+
+  OutImage   = self:AddOutput( "Output", "Output", {
+    LINKID_DataType = "Image",
+    LINK_Main = 1
+  })
+
+
+
+  self:AddControlPage("Image")
+
+  InGlobalIn  = self:AddInput("Global In",  "GlobalIn",  { LINKID_DataType = "Number", })
+  InGlobalOut = self:AddInput("Global Out", "GlobalOut", { LINKID_DataType = "Number", })
+
+end
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+-- Callback to render the node.
+--
+function Process(req)
+
+  OutImage:Set(req,nil)
+
+end
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+-- Callback to handle UI control events.
+--
+
+function NotifyChanged(inp, param, time)
+
+  if inp == nil or param == nil then
+    return
+  end
+
+  -- simulation of a toogle type multibutton
+  -- if a button get's activated, then we
+  -- deactivate the currently active one
+
+  for i = 0,3 do
+    if inp == InMultiButtonSim[i] then
+
+      -- it's one of our buttons
+
+      status  = InMultiButtonSim[i]:GetSource(0).Value
+      current = InMultiButtonSimCombo:GetSource(0).Value
+
+      if status == 1 and current ~= i then
+        InMultiButtonSimCombo:SetSource(Number(i),0)
+        InMultiButtonSim[current]:SetSource(Number(0),0)
+      elseif current == i and status == 0 then
+        InMultiButtonSim[i]:SetSource(Number(1),0)
+      end
+
+      return
+
+    end
+  end
+end
