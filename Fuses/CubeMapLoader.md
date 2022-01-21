@@ -11,7 +11,7 @@ What you can do with it:
 
 Questions it raises:
 - Why does it instantly crash Fusion if `REG_Source_GlobalCtrls` is set to `false`?
-- Why does a simple and useful thing like the [NultiButton](Case Studies/MultiButton.md) not work anymore?!?
+- Why does a simple and useful thing like the [MultiButton](Case%20Studies/MultiButton.md) not work anymore?!?
 
 Things to discover in its source code:
 - Creating a simple, fully Lua based tool for Fusion
