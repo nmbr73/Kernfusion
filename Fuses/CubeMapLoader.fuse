@@ -73,9 +73,10 @@ function Create()
     "Vertical Cross",
   }
 
-  InLayoutInfo = self:AddInput( getLayoutInfo(0),"faceInfo", {
+  InLayoutInfo = self:AddInput( getLayoutInfo(6),"layoutInfo", {
     LINKID_DataType = "Text",
     INPID_InputControl = "LabelControl",
+    INPS_StatusText = "Current layout is "..LAYOUT_INFOS[6],
     LBLC_MultiLine = true,
     IC_NoReset = true,
     INP_External = false,
@@ -173,6 +174,11 @@ end
 -------------------------------------------------------------------------------------------------------------------------------------------
 
 function LoadTexture(file,layout)
+
+  if file==nil or file=='' then
+    setError("please choose image sequence files")
+    return
+  end
 
   if not bmd.fileexists(file) then
     setError("no such file '"..file.."'")
@@ -344,7 +350,10 @@ function NotifyChanged(inp, param, time)
 
       if status == 1 and current ~= i then
 
-        InLayoutInfo:SetAttrs({LINKS_Name = getLayoutInfo(i)})
+        InLayoutInfo:SetAttrs({
+          LINKS_Name = getLayoutInfo(i),
+          INPS_StatusText = "Current layout is "..LAYOUT_INFOS[i],
+        })
 
         InLayoutCombo:SetSource(Number(i),0)
         InLayoutButtons[current]:SetSource(Number(0),0)

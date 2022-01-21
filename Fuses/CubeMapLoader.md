@@ -20,4 +20,6 @@ Things to discover in its source code:
 - Creating a simple, fully Lua based tool for Fusion
 - Loading a sequence of pictures as a clip
 - Creating a single image copying the clip pictures into a single textures
+- Copy, translate, rotate images into a target texture (i.e. the vertical cross)
+- Simple but often forgotten things like setting tooltips on buttons and status texts for labels
 - Simulating kind of a toggle multi button (see [Examples/MultiButtonControl](Examples/MultiButtonControl.md))
