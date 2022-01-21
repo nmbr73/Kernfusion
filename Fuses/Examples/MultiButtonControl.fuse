@@ -6,10 +6,10 @@
 -- Register the tool on Fusion start up
 --
 
-FuRegisterClass("MultiButtonStudy_nmbr73", CT_SourceTool, {
-    REGS_Name = "Multi Button",
-	  REGS_Category = "Fuses/Kernfusion/Case Studies",
-    REGS_OpDescription = "Multibuttons not working as expected.",
+FuRegisterClass("MultiButtonControlExampleFuse_by_nmbr73", CT_SourceTool, {
+    REGS_Name = "ex.MultiButtonControl",
+	  REGS_Category = "Fuses/Kernfusion/Examples",
+    REGS_OpDescription = "MultiButtonControl not working as expected.",
 	  REGS_OpIconString = "case study",
     REG_Source_GlobalCtrls = true,
     REG_Source_SizeCtrls = true,
@@ -19,7 +19,7 @@ FuRegisterClass("MultiButtonStudy_nmbr73", CT_SourceTool, {
 	  REGS_Company = "nmbr73",
 	  REGS_URL = "https://nmbr73.github.io/",
 	  REG_Version	= 000001,
-    REG_Fuse_NoEdit = true,
+    REG_Fuse_NoEdit = false,
     REG_Fuse_NoReload = false,
     })
 
@@ -31,6 +31,7 @@ FuRegisterClass("MultiButtonStudy_nmbr73", CT_SourceTool, {
 function Create()
 
   self:AddInput("What this is about...", "info", {
+    IC_ControlPage = -1,
     LINKID_DataType = "Text",
     INPID_InputControl = "ButtonControl",
     INP_DoNotifyChanged = false,
@@ -38,40 +39,64 @@ function Create()
     BTNCS_Execute = 'bmd.openurl("https://nmbr73.github.io/Kernfusion/Fuses/Case%20Studies/MultiButton.html")',
   })
 
+
+
+
+  -- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
+
+  -- Always the same result - no matter what "MBTNC_Type" we use
+
   InMultiButton1 = self:AddInput("Multibutton 1", "btnA", {
     LINKID_DataType = "Number",
     INPID_InputControl = "MultiButtonControl",
     MBTNC_Type = "Normal",
+    -- MBTNC_Type = "Toggle",
+    -- MBTNC_Type = "TriState",
+    MBTNC_StretchToFit = true,
+    INP_Default = 0,
     { MBTNC_AddButton = "Bombur",  },
     { MBTNC_AddButton = "Dwalin", },
     { MBTNC_AddButton = "Bifur",  },
-    MBTNC_StretchToFit = true,
-    INP_Default = 0,
   })
+
+
+
+  -- Works the same if we put the tables into a separate table
 
   InMultiButton2 = self:AddInput("Multibutton 2", "btnB", {
 		LINKID_DataType = "Number",
 		INPID_InputControl = "MultiButtonControl",
 		INP_Default = 0.0,
-    MBTNC_Type = "Toggle",
-		{ MBTNC_AddButton = "Balin",  MBTNCD_ButtonWidth = 0.33, },
-		{ MBTNC_AddButton = "Kili",   MBTNCD_ButtonWidth = 0.33, },
-		{ MBTNC_AddButton = "Nori",   MBTNCD_ButtonWidth = 0.33, },
+    MBTNC_Type = "Toggle", {
+		  { MBTNC_AddButton = "Balin",  MBTNCD_ButtonWidth = 0.33, },
+		  { MBTNC_AddButton = "Kili",   MBTNCD_ButtonWidth = 0.33, },
+		  { MBTNC_AddButton = "Nori",   MBTNCD_ButtonWidth = 0.33, },
+    }
 	})
+
+
+
+  -- And even this is possible
 
   InMultiButton3 = self:AddInput("Multibutton 3", "btnC", {
 		LINKID_DataType = "Number",
 		INPID_InputControl = "MultiButtonControl",
 		INP_Default = 0.0,
     MBTNC_Type = "TriState",
-    MBTNC_StretchToFit = true,
-		{ MBTNC_AddButton = "Bofur",   },
-		{ MBTNC_AddButton = "Fili",   },
-		{ MBTNC_AddButton = "Gloin",   },
-	})
+    MBTNC_AddButton = "Bofur",
+  })
+
+  InMultiButton3:SetAttrs({ MBTNC_AddButton = "Fili" })
+  InMultiButton3:SetAttrs({ MBTNC_AddButton = "Gloin" })
+
+
+
+  -- Okay, now following a very cumbersome workaround to mimic a multi button:
 
   InMultiButtonSim = {}
-
 
   btns={ "Oin", "Dori", "Balin"}
   strs={}
@@ -105,12 +130,14 @@ function Create()
   })
 
 
+  -- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
 
   OutImage   = self:AddOutput( "Output", "Output", {
     LINKID_DataType = "Image",
     LINK_Main = 1
   })
-
 
 
   self:AddControlPage("Image")

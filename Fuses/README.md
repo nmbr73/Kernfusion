@@ -1,5 +1,9 @@
 # Fuses
 
+- [CubeMampLoader](CubeMapLoader.md)
+- [Examples/](Examples/README.md) are not fuses meant to be actually used in Fusion, but are simple code examples you can play with
+  - [MultiButtonControl.md](Examples/MultiButtonControl.md)
+
 ## Link Fuses into Fusion
 
 ### on macOS
