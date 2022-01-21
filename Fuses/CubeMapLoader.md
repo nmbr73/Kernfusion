@@ -2,6 +2,9 @@
 
 Fuse to create a 2D representation of a cube map.
 
+![cml](CubeMapLoader.jpg)
+
+
 Status
 - Does not work yet!
 
