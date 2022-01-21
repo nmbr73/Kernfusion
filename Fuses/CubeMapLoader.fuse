@@ -24,7 +24,8 @@ FuRegisterClass("CubeMapLoader_nmbr73", CT_SourceTool, {
 
 -------------------------------------------------------------------------------------------------------------------------------------------
 
-CURRENT_FILE   = ""
+HAS_ERRORS      = false
+CURRENT_FILE    = ""
 CURRENT_LAYOUT  = 0
 TEXTURE_IMAGE   = nil
 LAYOUT_INFOS    = {}
@@ -86,18 +87,18 @@ function Create()
 
   InLayoutButtons[6] = self:AddInput("Layout", "horiz", { attrs,
     IC_ControlID = 0,
-    { MBTNC_AddButton = 'H', MBTNCD_ButtonWidth = 0.125, },
+    { MBTNC_AddButton = 'H', MBTNCD_ButtonWidth = 0.125, MBTNCS_ToolTip = LAYOUT_INFOS[6] },
   })
 
   InLayoutButtons[7] = self:AddInput("", "vert", { attrs,
     IC_ControlID = 1,
-    { MBTNC_AddButton = 'V', MBTNCD_ButtonWidth = 0.125, },
+    { MBTNC_AddButton = 'V', MBTNCD_ButtonWidth = 0.125, MBTNCS_ToolTip = LAYOUT_INFOS[7] },
   })
 
   for i = 0,5 do
     InLayoutButtons[i] = self:AddInput("", "face"..i, { attrs,
       IC_ControlID = i+2,
-      { MBTNC_AddButton = ''..i, MBTNCD_ButtonWidth = 0.125, },
+      { MBTNC_AddButton = ''..i, MBTNCD_ButtonWidth = 0.125, MBTNCS_ToolTip = LAYOUT_INFOS[i] },
     })
   end
 
@@ -147,22 +148,103 @@ function Create()
 end
 
 
+-------------------------------------------------------------------------------------------------------------------------------------------
 
+function LoadTexture(file,layout)
+
+  if not bmd.fileexists(file) then
+    print("no such file '"..file.."'")
+    return
+  end
+
+  local clip = Clip(file,false)
+
+  if clip:GetFrame(5) == nil then
+    print("need six frames at least")
+    return
+  end
+
+  local size = clip:GetFrame(0).Width
+
+  for i=0,5 do
+    if clip:GetFrame(0).Width~=clip:GetFrame(0).Height or clip:GetFrame(0).Width ~=size then
+      print("images must be squares and all of the same size")
+      return
+    end
+  end
+
+  if CURRENT_LAYOUT == 6 then
+
+    TEXTURE_IMAGE = Image({
+      IMG_Document = self.Comp,
+      { IMG_Channel = "Red",    },
+      { IMG_Channel = "Green",  },
+      { IMG_Channel = "Blue",   },
+      { IMG_Channel = "Alpha",  },
+      IMG_Width   = size * 4,
+      IMG_Height  = size * 3,
+      IMG_XScale  = 1.0,
+      IMG_YScale  = 1.0,
+    })
+
+    TEXTURE_IMAGE:Fill(Pixel({R=0,G=0,B=0,A=0}))
+
+    TEXTURE_IMAGE:OMerge(clip:GetFrame(1), 0,        size )
+    TEXTURE_IMAGE:OMerge(clip:GetFrame(4), 1*size,   size )
+    TEXTURE_IMAGE:OMerge(clip:GetFrame(0), 2*size,   size )
+    TEXTURE_IMAGE:OMerge(clip:GetFrame(5), 3*size,   size )
+    TEXTURE_IMAGE:OMerge(clip:GetFrame(3),   size, 0      )
+    TEXTURE_IMAGE:OMerge(clip:GetFrame(2),   size, 2*size )
+
+
+  elseif CURRENT_LAYOUT == 7 then
+
+    TEXTURE_IMAGE = Image({
+      IMG_Document = self.Comp,
+      { IMG_Channel = "Red",    },
+      { IMG_Channel = "Green",  },
+      { IMG_Channel = "Blue",   },
+      { IMG_Channel = "Alpha",  },
+      IMG_Width   = size * 3,
+      IMG_Height  = size * 4,
+      IMG_XScale  = 1.0,
+      IMG_YScale  = 1.0,
+    })
+
+    TEXTURE_IMAGE:Fill(Pixel({R=0,G=0,B=0,A=0}))
+
+    local rotate={
+      XF_XOffset  = 0.5,    XF_YOffset  = 0.5,
+      XF_XAxis    = 0.5,    XF_YAxis    = 0.5,
+      XF_XSize    = 1.0,    XF_YSize    = 1.0,
+      XF_EdgeMode = 'Black',
+      XF_Angle    = 180.0,
+    }
+
+    TEXTURE_IMAGE:OMerge(clip:GetFrame(2), size, size*3)
+    TEXTURE_IMAGE:OMerge(clip:GetFrame(4), size, size*2)
+    TEXTURE_IMAGE:OMerge(clip:GetFrame(3), size, size)
+    TEXTURE_IMAGE:OMerge(clip:GetFrame(5):Transform(nil, rotate), size, 0)
+
+    TEXTURE_IMAGE:OMerge(clip:GetFrame(1), 0,      size*2)
+    TEXTURE_IMAGE:OMerge(clip:GetFrame(0), size*2, size*2)
+
+  else
+
+    TEXTURE_IMAGE = clip:GetFrame(CURRENT_LAYOUT)
+
+  end
+
+
+end
 
 -------------------------------------------------------------------------------------------------------------------------------------------
 -- Callback to render the node.
 --
 function Process(req)
 
-	local file = self.Comp:MapPath(InFileSelect:GetValue(req).Value)
-  local layout = InLayoutCombo:GetValue(req).Value
-
-  print("file='"..file.."'")
-  -- if true then
-  --   print("file='"..file.."'")
-  --   OutImage:Set(req,nil)
-  --   return
-  -- end
+	local file    = self.Comp:MapPath(InFileSelect:GetValue(req).Value)
+  local layout  = InLayoutCombo:GetValue(req).Value
 
   if CURRENT_FILE ~= file or CURRENT_LAYOUT ~= layout then
 
@@ -171,55 +253,13 @@ function Process(req)
     end
 
     CURRENT_LAYOUT = layout
-    TEXTURE_IMAGE = nil
+    TEXTURE_IMAGE  = nil
+    HAS_ERRORS     = false
 
-
-    if not bmd.fileexists(file) then
-      print("no such file '"..file.."'")
-    else
-      print("load '"..file.."'")
-      local clip = Clip(file,false)
-
-      if clip:GetFrame(5) == nil then
-        print("need six frames at least")
-      else
-
-        local size = math.min(clip:GetFrame(0).Width,clip:GetFrame(0).Height)
-
-        dump(clip:GetFrame(6))
-
-        if CURRENT_LAYOUT>=6 then
-          print("create horizontal cross")
-
-          TEXTURE_IMAGE = Image({
-            IMG_Document = self.Comp,
-            { IMG_Channel = "Red",    },
-            { IMG_Channel = "Green",  },
-            { IMG_Channel = "Blue",   },
-            { IMG_Channel = "Alpha",  },
-            IMG_Width   = size * 4,
-            IMG_Height  = size * 3,
-            IMG_XScale  = 1.0,
-            IMG_YScale  = 1.0,
-          })
-
-          TEXTURE_IMAGE:Fill(Pixel({R=0,G=0,B=0,A=0}))
-
-          TEXTURE_IMAGE:OMerge(clip:GetFrame(1), 0, size)
-          TEXTURE_IMAGE:OMerge(clip:GetFrame(4), 1*size, size)
-          TEXTURE_IMAGE:OMerge(clip:GetFrame(0), 2*size, size)
-          TEXTURE_IMAGE:OMerge(clip:GetFrame(5), 3*size, size)
-          TEXTURE_IMAGE:OMerge(clip:GetFrame(3), size, 0)
-          TEXTURE_IMAGE:OMerge(clip:GetFrame(2), size, 2*size)
-
-        else
-          print("display face "..(CURRENT_LAYOUT))
-          TEXTURE_IMAGE = clip:GetFrame(CURRENT_LAYOUT)
-        end
-      end
-    end
+    LoadTexture(file,layout)
 
   end
+
 
 
 
@@ -229,10 +269,11 @@ function Process(req)
   end
 
 
-  local width  = 73
-  local height = 73
-  local depth  = nil
-
+  if not HAS_ERRORS then
+    OutImage:Set(req,nil)
+    HAS_ERRORS = true
+    return
+  end
 
 
   local dst = Image({
@@ -241,14 +282,13 @@ function Process(req)
     { IMG_Channel = "Green",  },
     { IMG_Channel = "Blue",   },
     { IMG_Channel = "Alpha",  },
-    IMG_Width   = width,
-    IMG_Height  = height,
+    IMG_Width   = 40,
+    IMG_Height  = 30,
     IMG_XScale  = 1.0,
     IMG_YScale  = 1.0,
   })
 
-  local black  = Pixel({R=0,G=0,B=0,A=0})
-  dst:Fill(black)
+  dst:Fill(Pixel({R=1.0,G=0,B=0,A=0}))
 
   if req:IsPreCalc() then
     dst = Image({IMG_Like = dst, IMG_NoData = true})
