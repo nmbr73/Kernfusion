@@ -6,7 +6,9 @@
 
 Fuse to create a 2D representation of a cube map.
 
-![cml](CubeMapLoader.jpg)[^1]: The picture you see being used as in input in the screenshot is the work of Emil Persson, aka [Humus](http://www.humus.name).
+![cml](CubeMapLoader.jpg)[^1]
+
+[^1]: The picture you see being used as in input in the screenshot is the work of Emil Persson, aka [Humus](http://www.humus.name).
 
 
 
