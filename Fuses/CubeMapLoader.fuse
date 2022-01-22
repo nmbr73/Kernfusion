@@ -18,7 +18,7 @@ FuRegisterClass("CubeMapLoader_nmbr73", CT_SourceTool, {
 	  REGS_URL = "https://nmbr73.github.io/",
 	  REG_Version	= 000001,
     REG_Fuse_NoEdit = true,
-    REG_Fuse_NoReload = false,
+    REG_Fuse_NoReload = true,
     })
 
 

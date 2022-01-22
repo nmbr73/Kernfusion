@@ -2,7 +2,7 @@ Composition {
 	CurrentTime = 0,
 	RenderRange = { 0, 1000 },
 	GlobalRange = { 0, 1000 },
-	CurrentID = 4,
+	CurrentID = 60,
 	HiQ = true,
 	PlaybackUpdateMode = 0,
 	Version = "Fusion Studio 17.0 build 43",
@@ -17,30 +17,33 @@ Composition {
 	},
 	Tools = {
 		CubeMapLoader1 = Fuse.CubeMapLoader_nmbr73 {
+			CtrlWZoom = false,
 			Inputs = {
 				Width = Input { Value = 1920, },
 				Height = Input { Value = 1080, },
 				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
 				horiz = Input { Value = 1, },
-				file = Input { Value = "Kernfusion:Data/CubeMaps/Ryfjallet_1.jpg", },
+				file = Input { Value = "Kernfusion:/Data/CubeMaps/Ryfjallet_1.jpg", },
 				GlobalOut = Input { Value = 1000, },
 			},
-			ViewInfo = OperatorInfo { Pos = { 264.667, 67.3636 } },
+			ViewInfo = OperatorInfo { Pos = { 100, -4.75758 } },
 			Version = 1
 		},
 		CubeMap1 = CubeMap {
-			CtrlWZoom = false,
 			Inputs = {
 				Layout = Input { Value = 2, },
 				Convention = Input { Value = FuID { "NegativeZ" }, },
 				Rotation = Input { Value = 1, },
+				["Rotate.X"] = Input { Value = -386.1, },
+				["Rotate.Y"] = Input { Value = 13, },
+				["Rotate.Z"] = Input { Value = -47, },
 				CrossImage = Input {
 					SourceOp = "CubeMapLoader1",
 					Source = "Output",
 				},
 				MaterialID = Input { Value = 1, },
 			},
-			ViewInfo = OperatorInfo { Pos = { 486, 39.4848 } },
+			ViewInfo = OperatorInfo { Pos = { 210, -0.515199 } },
 		}
 	},
 	Frames = {
@@ -51,63 +54,63 @@ Composition {
 			PresetName = "Default",
 			Left = 0,
 			Top = 27,
-			Width = 1680,
-			Height = 886,
+			Width = 903,
+			Height = 572,
 			ZoneInfo = {
-				AuxRight = { Expanded = true },
-				Right = { Expanded = true, },
-				Left = { Expanded = false, },
-				AuxLeft = { Expanded = true },
+				["!Right"] = {
+				},
 				["!Left"] = {
 				},
-				["!Right"] = {
-				}
+				AuxLeft = { Expanded = true },
+				Right = { Expanded = true, },
+				Left = { Expanded = false, },
+				AuxRight = { Expanded = true }
 			},
 			ViewInfo = {
+				Viewer1 = { Show = true, RatioY = 0.01, RatioX = 1.05254777070064, },
+				InnerLeft = {
+				},
+				MainSplit = {
+					RatioX = 100,
+					RatioY = 1.00377358490566,
+				},
+				CenterSplit = {
+					RatioX = 1.09052213084541,
+					RatioY = 100,
+				},
+				Viewer2 = { Show = true, RatioY = 0.01, RatioX = 0.947452229299363, },
+				Comments = { Show = false },
+				Time = { Show = true, PixelY = 83, RatioX = 100, },
+				InnerColumns = {
+					RatioX = 100,
+					RatioY = 1.99622641509434,
+				},
 				Keyframes = { Show = false, },
 				LayoutStrip = { Show = true, RatioX = 100, },
-				Inspector = { Show = true, RatioX = 100, RatioY = 1, },
-				Effects = { Show = false, },
-				Viewer2 = { Show = true, RatioX = 1, RatioY = 0.01, },
-				Comments = { Show = false },
-				Clips = { Show = false, },
-				ActionStrip = { Show = true, RatioX = 100, },
-				Time = { Show = true, RatioX = 100, PixelY = 83, },
-				MediaPool = { Show = false, },
-				Nodes = { Show = true, RatioX = 1, RatioY = 100, },
-				Metadata = { Show = false, },
-				Viewer1 = { Show = true, RatioX = 1, RatioY = 0.01, },
-				Spline = { Show = false, },
+				Inspector = { Show = true, RatioY = 1, RatioX = 99.9761478831246, },
+				InnerRight = {
+				},
+				OuterLeft = {
+				},
 				OuterColumns = {
 					RatioX = 100,
 					RatioY = 1,
 				},
-				CenterSplit = {
-					RatioX = 1,
-					RatioY = 100,
-				},
-				InnerColumns = {
-					RatioX = 100,
-					RatioY = 1.9974293059126,
-				},
+				Effects = { Show = false, },
+				Clips = { Show = false, },
+				Metadata = { Show = false, },
+				ActionStrip = { Show = true, RatioX = 100, },
 				ViewerSplit = {
 					RatioX = 100,
 					RatioY = 1,
 				},
-				MainSplit = {
-					RatioX = 100,
-					RatioY = 1.0025706940874,
-				},
+				Nodes = { Show = true, RatioY = 99.874213836478, RatioX = 1, },
 				OuterRight = {
-					PixelX = 420,
 					RatioY = 100,
+					PixelX = 380,
 				},
-				OuterLeft = {
-				},
-				InnerLeft = {
-				},
-				InnerRight = {
-				}
+				MediaPool = { Show = false, },
+				Spline = { Show = false, }
 			},
 			Views = ordered() {
 				Effects = MultiView {
@@ -134,7 +137,7 @@ Composition {
 						Direction = "Horizontal",
 						PipeStyle = "Direct",
 						RootScale = 1,
-						RootOffset = { 26, 29 }
+						RootOffset = { 22, 30.8182 }
 					}
 				},
 				Keyframes = MultiView {
@@ -157,7 +160,7 @@ Composition {
 						KeyFrameView = {
 							Position = { Left = 232, Bottom = 320 },
 							ScaleX = 2.14424951267057,
-							OffsetX = -49.317738791423,
+							OffsetX = -51.4619883040936,
 							OffsetY = 0,
 							AutoScaling = "scroll",
 							AutoSnapTo = "frame",
@@ -235,7 +238,7 @@ Composition {
 					RatioY = 1,
 					{
 						Rows = 3,
-						RatioX = 1,
+						RatioX = 1.09052213084541,
 						RatioY = 100,
 						{
 							Rows = 2,
@@ -245,18 +248,49 @@ Composition {
 								Columns = 2,
 								RatioX = 100,
 								RatioY = 1,
-								{ ID = "Viewer1", RatioX = 1, RatioY = 0.01 },
-								{ ID = "Viewer2", RatioX = 1 }
+								{ ID = "Viewer1", RatioX = 1.05254777070064, RatioY = 0.01 },
+								{ ID = "Viewer2", RatioX = 0.947452229299363 }
 							},
 							{ ID = "Time", FixedY = 83, Flat = true }
 						},
 						{ ID = "ActionStrip", FixedY = 50, Flat = true },
-						{ ID = "Nodes", RatioX = 1, RatioY = 100 }
+						{ ID = "Nodes", RatioX = 1, RatioY = 99.874213836478 }
 					},
-					{ ID = "Inspector", RatioX = 100, RatioY = 1 }
+					{ ID = "Inspector", RatioX = 99.9761478831246, RatioY = 1 }
 				}
 			}
 		}
 	},
-
+	Prefs = {
+		Comp = {
+			Views = {
+				RightView = {
+					Viewer = {
+						ScaleMode = 1,
+					},
+					MaterialViewer = {
+						Camera = {
+							Rotation = {
+								X = 15,
+								Y = -20,
+								Z = 0
+							}
+						}
+					}
+				},
+				LeftView = {
+					Viewer = {
+						ScaleMode = 1,
+					},
+				},
+				View1 = {
+				},
+			},
+			Paths = {
+			},
+			QuickTime = {
+			},
+		}
+	},
 }
+

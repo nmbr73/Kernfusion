@@ -1,12 +1,12 @@
 # CubeMap Loader
 
+- [CubeMapLoader.fuse](CubeMapLoader.fuse)
+- [CubeMapLoader.comp](../Comp/CubeMapLoader.comp)
+
+
 Fuse to create a 2D representation of a cube map.
 
 ![cml](CubeMapLoader.jpg)
-
-
-Status
-- Does not work yet!
 
 What you can do with it:
 - Use it as an input for Fusion's *'CubeMap (3Cu)* tool ... but I have no idea what this 3Cu tool is good for
