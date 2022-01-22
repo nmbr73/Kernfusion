@@ -1,4 +1,4 @@
---- Simulate a toggle type multibutton
+--- Example of the MultiButonControl not working (most probably)
 --
 
 
@@ -52,9 +52,7 @@ function Create()
   InMultiButton1 = self:AddInput("Multibutton 1", "btnA", {
     LINKID_DataType = "Number",
     INPID_InputControl = "MultiButtonControl",
-    MBTNC_Type = "Normal",
-    -- MBTNC_Type = "Toggle",
-    -- MBTNC_Type = "TriState",
+    MBTNC_Type = "Normal", -- Normal|Toggle|TriState, whereby TriState never has been implemented
     MBTNC_StretchToFit = true,
     INP_Default = 0,
     { MBTNC_AddButton = "Bombur",  },
@@ -93,41 +91,6 @@ function Create()
   InMultiButton3:SetAttrs({ MBTNC_AddButton = "Gloin" })
 
 
-
-  -- Okay, now following a very cumbersome workaround to mimic a multi button:
-
-  InMultiButtonSim = {}
-
-  btns={ "Oin", "Dori", "Balin"}
-  strs={}
-
-  for i, v in ipairs(btns) do
-
-    InMultiButtonSim[i-1] = self:AddInput("Multibutton 3", "btn"..i, {
-      LINKID_DataType = "Number",
-      INPID_InputControl = "MultiButtonControl",
-      INP_DoNotifyChanged = true,
-      INP_Default = 0,
-      IC_ControlGroup = 42,
-      IC_ControlID = i-1,
-      MBTNC_Type = 'Toggle',
-      MBTNC_ShowName = true,
-      { MBTNC_AddButton = v, MBTNCD_ButtonWidth = 0.33, },
-    })
-
-    table.insert(strs,{ CCS_AddString = v, })
-
-  end
-
-  InMultiButtonSimCombo = self:AddInput( "Hidden", "btncombo", {
-    LINKID_DataType = "Number",
-    INPID_InputControl = "ComboControl",
-    INP_DoNotifyChanged = false,
-    INP_Default = 0,
-    INP_Integer = true,
-    strs,
-    IC_Visible      = false,
-  })
 
 
   -- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
@@ -169,29 +132,5 @@ function NotifyChanged(inp, param, time)
 
   if inp == nil or param == nil then
     return
-  end
-
-  -- simulation of a toogle type multibutton
-  -- if a button get's activated, then we
-  -- deactivate the currently active one
-
-  for i = 0,3 do
-    if inp == InMultiButtonSim[i] then
-
-      -- it's one of our buttons
-
-      status  = InMultiButtonSim[i]:GetSource(0).Value
-      current = InMultiButtonSimCombo:GetSource(0).Value
-
-      if status == 1 and current ~= i then
-        InMultiButtonSimCombo:SetSource(Number(i),0)
-        InMultiButtonSim[current]:SetSource(Number(0),0)
-      elseif current == i and status == 0 then
-        InMultiButtonSim[i]:SetSource(Number(1),0)
-      end
-
-      return
-
-    end
   end
 end
