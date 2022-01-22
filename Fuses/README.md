@@ -1,6 +1,7 @@
 # Fuses
 
 - [CubeMapLoader](CubeMapLoader.md) to load a sequence of 6 images as a single texture
+- [CubeMapUnfold](CubeMapUnfold.md) DCTL to display a CubeMapLoader input
 - [Examples/](Examples/README.md) are not fuses meant to be actually used in Fusion, but are simple code examples to play with
   - [MultiButtonControl.md](Examples/MultiButtonControl.md)
   - [MultiButtonEmulation.md](Examples/MultiButtonEmulation.md)
