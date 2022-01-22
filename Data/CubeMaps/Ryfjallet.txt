@@ -16,4 +16,4 @@ http://creativecommons.org/licenses/by/3.0/
 
 Notes
 =======
-File have been scaled down and renamed.
+Files have been scaled down and renamed.
