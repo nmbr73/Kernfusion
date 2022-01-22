@@ -14,7 +14,7 @@ Fuse to create a 2D representation of a cube map.
 
 What you can do with it:
 - Use it as an input for Fusion's *CubeMap (3Cu)* tool ... but I have no idea what this 3Cu tool is good for.
-- Use it as an input for DCTL fragment shaders that work with a cube map texture (example in this repository to come) ... but that's a very special use case.
+- Use it as an input for DCTL fragment shaders that work with a cube map texture (see [CubeMapUnfold](CubeMapUnfold.md)) ... but that's a very special use case.
 - No idea if it is even needed - most probably there are already built-in tools that do all of this and a lot more?!?
 - Or maybe it can be done with some images and transform nodes as a simple composition / macro / whatsoever?
 

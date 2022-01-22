@@ -1,0 +1,321 @@
+--- Unfold a horizonzal cross texture to a horizontal cross texture
+--
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+FuRegisterClass("CubeMapUnfold_nmbr73", CT_SourceTool, {
+    REGS_Name = "CubeMap Unfold",
+	  REGS_Category = "Fuses/Kernfusion",
+    REGS_OpDescription = "Display a crossmap 2D textur as a crossmap 2D texture. Looks a bit weird, but is useful to debug DCTL code for such a cubemap representation.",
+	  REGS_OpIconString = "cmu.73",
+    REG_Source_GlobalCtrls = true,
+    REG_Source_SizeCtrls = true,
+    REG_Source_AspectCtrls = true,
+    REG_Source_DepthCtrls = true,
+	  REG_TimeVariant = false,
+	  REGS_Company = "nmbr73",
+	  REGS_URL = "https://nmbr73.github.io/",
+	  REG_Version	= 000001,
+    REG_Fuse_NoEdit = false,
+    REG_Fuse_NoReload = false,
+    })
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+ParametersCode =
+[[
+  float in_width;
+  float in_height;
+
+  float out_width;
+  float out_height;
+]]
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+CompatibilityCode =
+[[
+
+__DEVICE__ float4 decube_f3(__TEXTURE2D__ t, float3 xyz)
+{
+  float ax=_fabs(xyz.x);
+  float ay=_fabs(xyz.y);
+  float az=_fabs(xyz.z);
+
+  if (xyz.x>0.0f && ax>=ay && ax>=az) // +X, Face 0, right
+    return _tex2DVecN(t,(-xyz.z/ax+1.0f)/8.0f + 0.5f,(xyz.y/ax+1.0f)/6.0f + (1.0f/3.0f),15);
+
+  if (xyz.y>0.0f && ay>=ax && ay>=az) // +Y, Face 2, top
+    return _tex2DVecN(t,(xyz.x/ay+1.0f)/8.0f + 0.25f,(-xyz.z/ay+1.0f)/6.0f + (2.0f/3.0f),15);
+
+  if (xyz.z>0.0f && az>=ax && az>=ay) // +Z, Face 4, front
+    return _tex2DVecN(t,(xyz.x/az+1.0f)/8.0f + 0.25f,(xyz.y/az+1.0f)/6.0f + (1.0f/3.0f),15);
+
+  if (xyz.x<0.0f && ax>=ay && ax>=az) // -X, Face 1, left
+    return _tex2DVecN(t,(xyz.z/ax+1.0f)/8.0f,(xyz.y/ax+1.0f)/6.0f + (1.0f/3.0f),15);
+
+  if (xyz.y<0.0f && ay>=ax && ay>=az) // -Y, Face 3, bottom
+    return _tex2DVecN(t,(xyz.x/ay+1.0f)/8.0f + 0.25f,(xyz.z/ay+1.0f)/6.0f,15);
+
+  if (xyz.z<0.0f && az>=ax && az>=ay) // -Z, Face 5, back
+    return _tex2DVecN(t,(-xyz.x/az+1.0f)/8.0f + 0.75f,(xyz.y/az+1.0f)/6.0f + (1.0f/3.0f),15);
+
+  return to_float4(1.0f,0.0f,0.0f,1.0f); // error
+}
+
+
+]]
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+
+KernelCode =
+[[
+
+
+
+
+
+__DEVICE__ int outCubeIndex(float normalized_x, float normalized_y)
+{
+  if (normalized_x < 0.0f || normalized_x > 1.0f)
+    return -7;
+
+  if (normalized_y < 0.0f || normalized_y > 1.0f)
+    return -8;
+
+  int col = int(floor(normalized_x / 0.25f));
+  int row = int(floor(normalized_y / (1.0f / 3.0f)));
+
+  const int map[3][4]=
+  {
+    { -1,  2, -2, -4 },
+    {  1,  4,  0,  5 },
+    { -4,  3, -5, -6 }
+  };
+
+  return map[row][col];
+}
+
+
+
+
+__KERNEL__ void CubeMapUnfoldKernel(__CONSTANTREF__ Params*  params,  __TEXTURE2D__ iChannel0, __TEXTURE2D_WRITE__ destinationTexture)
+{
+   DEFINE_KERNEL_ITERATORS_XY(x, y);
+
+   if (x >= params->out_width || y >= params->out_height)
+     return;
+
+  float inWidth   = params->in_width;
+  float inHeight  = params->in_height;
+  float outWidth  = params->out_width;
+  float outHeight = params->out_height;
+
+
+  float4 fragColor   = to_float4(0.0f, 0.0f, 0.2f, 0.0f);
+
+  float nX,nY,nZ; // nomalized coordinates
+
+
+  // --------
+
+
+
+
+  {
+    nX = x/params->out_width;   // x normalized to [0..1]
+    nY = y/params->out_height;  // y normalized to [0..1]
+
+    int col = int(floor(nX / (1.0f / 4.0f))); // 0|1|2|3
+    int row = int(floor(nY / (1.0f / 3.0f))); // 0|1|2
+
+    // origin of our coordinate system is in the lower left
+    // therefore face 2 and face 3 must be turned upside down
+    // in the following map:
+
+    const int map[3][4]=
+    {
+      { -1,  3, -2, -4 },
+      {  1,  4,  0,  5 },
+      { -4,  2, -5, -6 }
+    };
+
+
+
+    int face = map[row][col];
+
+
+//  row 1:
+//      uv = to_float2(nX * 4.0f, (nY - 1.0f/3.0f) * 3.0f);
+//      uv = 2.0 * to_float2(uv.x - float(col) * 1.0f, uv.y) - 1.0f;
+//  row 0 or 2:
+//      uv = to_float2((nX - 0.25f) * 4.0f, (nY - float(row) / 3.0f) * 3.0f);
+//      uv = 2.0f * uv - 1.0f;
+
+    float u;
+    float v;
+
+    if (row == 1) {
+      // row 1 -> col is 0|1|2|3
+      u = (nX - 0.0f ) * 4.0f; v = (nY - float(row) / 3.0f) * 3.0f;
+      u = u - float(col) * 1.0f;
+    } else {
+      // row is 0 or 2 -> col is 1 and only 1
+      u = (nX - 0.25f) * 4.0f; v = (nY - float(row) / 3.0f) * 3.0f;
+    }
+
+    u = 2.0f * u - 1.0f; v = 2.0f * v - 1.0f;
+
+    nX=nY=nZ=0.0f; // normalized to [-1..1]
+
+
+    switch (face) {
+      case 1: nX= -1.0f ; nY=   v   ; nZ=    u   ; break; // -X, row 1, col 0
+      case 4: nX=   u   ; nY=   v   ; nZ=   1.0f ; break; // +Z, row 1, col 1
+      case 0: nX=  1.0  ; nY=   v   ; nZ=   -u   ; break; // +X, row 1, col 2
+      case 5: nX=  -u   ; nY=   v   ; nZ=  -1.0f ; break; // -Z, row 1, col 3
+      case 2: nX=   u   ; nY=  1.0f ; nZ=   -v   ; break; // +Y, row 0, col 1
+      case 3: nX=   u   ; nY= -1.0f ; nZ=    v   ; break; // -Y, row 2, col 1
+      default:
+        break;
+    }
+  }
+
+  if ((nX != 0.0f) && (nY != 0.0f)) {
+    fragColor = decube_f3(iChannel0,to_float3(nX,nY,nZ));
+    fragColor.w=1.0f;
+  } else {
+    fragColor   = to_float4(0.8f, 0.0f, 0.0f, 0.0f);
+  }
+
+
+   _tex2DVec4Write(destinationTexture, x, y, fragColor);
+}
+
+]]
+-- /*
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+function Create()
+
+
+  ----- In/Out
+
+  InChannel0 = self:AddInput( "iChannel0",  "iChannel0",  { LINKID_DataType = "Image", LINK_Main = 1, INP_Required = false  })
+
+  OutImage = self:AddOutput("Output", "Output", {
+    LINKID_DataType = "Image",
+    LINK_Main       = 1,
+  })
+
+  ----- Inspector Panel Controls
+
+  self:AddControlPage("Image")
+
+  InGlobalIn  = self:AddInput("Global In",  "GlobalIn",  { LINKID_DataType = "Number", })
+  InGlobalOut = self:AddInput("Global Out", "GlobalOut", { LINKID_DataType = "Number", })
+
+end
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+function Process(req)
+
+  local imgattrs = {
+    IMG_Document = self.Comp,
+    { IMG_Channel = "Red", },
+    { IMG_Channel = "Green", },
+    { IMG_Channel = "Blue", },
+    { IMG_Channel = "Alpha", },
+    IMG_Width  = Width,
+    IMG_Height = Height,
+    IMG_XScale = XAspect,
+    IMG_YScale = YAspect,
+    IMG_Quality = not req:IsQuick(),
+    IMG_MotionBlurQuality = not req:IsNoMotionBlur(),
+    IMG_DeferAlloc = true,
+    IMG_ProxyScale = ( (not req:IsStampOnly()) and 1 or nil),
+    IMG_Depth = ( (SourceDepth~=0) and SourceDepth or nil   )
+  }
+
+  local dst   = Image(imgattrs)
+  local black = Pixel({R=0,G=0,B=0,A=0})
+  dst:Fill(black)
+
+  if req:IsPreCalc() then
+    local out = Image({IMG_Like = dst, IMG_NoData = true})
+    OutImage:Set(req, out)
+    return
+  end
+
+  local node = DVIPComputeNode(req,
+    "CubeMapUnfoldKernel", CompatibilityCode..KernelCode,
+    "Params", ParametersCode
+  )
+
+  -- Extern texture or create a new one
+
+  iChannel0 = InChannel0:GetValue(req)
+
+  if iChannel0==nil then
+    iChannel0 = Image(imgattrs)
+    iChannel0:Fill(black)
+  end
+
+  -- DCTL parameters
+
+  local framerate = self.Comp:GetPrefs("Comp.FrameFormat.Rate")
+
+  local params = {}
+
+  params = node:GetParamBlock(ParametersCode)
+
+  params.in_width = iChannel0.Width
+  params.in_height = iChannel0.Height
+
+  params.out_width  = dst.Width
+  params.out_height = dst.Height
+
+
+
+  -- Set parameters and add I/O
+
+  node:SetParamBlock(params)
+  node:AddSampler("RowSampler", TEX_FILTER_MODE_LINEAR,TEX_ADDRESS_MODE_MIRROR, TEX_NORMALIZED_COORDS_TRUE)
+  node:AddInput("iChannel0",iChannel0)
+  node:AddOutput("dst", dst)
+
+  local ok = node:RunSession(req)
+
+	if (not ok) then
+		dst = nil
+    dump(node:GetErrorLog())
+	end
+
+  OutImage:Set(req,dst)
+end
+
+
+
+-- // ------------------------------------------------------------------------
+-- // Callback
+-- // ------------------------------------------------------------------------
+
+-- function NotifyChanged(inp, param, time)
+-- 	if (param ~= nil) then
+-- 		if (param.Value == 1) then
+-- 			if (inp == ...) then
+--         ...
+-- 			end
+-- 		end
+-- 	end
+-- end
