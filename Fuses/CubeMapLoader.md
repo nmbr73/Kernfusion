@@ -6,7 +6,9 @@
 
 Fuse to create a 2D representation of a cube map.
 
-![cml](CubeMapLoader.jpg)
+![cml](CubeMapLoader.jpg)[^1]: The picture you see being used as in input in the screenshot is the work of Emil Persson, aka [Humus](http://www.humus.name).
+
+
 
 What you can do with it:
 - Use it as an input for Fusion's *'CubeMap (3Cu)* tool ... but I have no idea what this 3Cu tool is good for
