@@ -1,12 +1,12 @@
 # Fuses
 
-- [CubeMampLoader](CubeMapLoader.md)
-- [Examples/](Examples/README.md) are not fuses meant to be actually used in Fusion, but are simple code examples you can play with
+- [CubeMapLoader](CubeMapLoader.md)
+- [Examples/](Examples/README.md) are not fuses meant to be actually used in Fusion, but are simple code examples to play with
   - [MultiButtonControl.md](Examples/MultiButtonControl.md)
 
 ## Link Fuses into Fusion
 
-Make sure to ste a 'Kernfusion:' path map to the folder you checked out the repository to.
+Make sure to set a 'Kernfusion:' path map to the folder you checked out the repository to.
 
 ### on macOS
 
