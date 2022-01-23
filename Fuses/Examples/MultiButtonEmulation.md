@@ -1,4 +1,4 @@
-# [MultiButtonEmulation.fuse](MultiButtonEmulation.fuse)
+# [MultiButtonEmulation.fuse](MultiButtonEmulation.fuse) (study)
 
 There is a problem with the [MultiButtonControl](MultiButtonCOntrol.md) not working.
 
