@@ -87,7 +87,16 @@ function Create()
 
 
 
+  InLoadType = self:AddInput("Load", "load", {
+    INPID_InputControl = "MultiButtonControl",
+    LINKID_DataType = "Number",
+    INP_DoNotifyChanged = true,
+    INP_Default = 0,
+    MBTNC_ForceButtons = true,
 
+    { MBTNC_AddButton = 'Image Sequence', MBTNCD_ButtonWidth = 0.5 },
+    { MBTNC_AddButton = 'Single Images', MBTNCD_ButtonWidth = 0.5,  },
+  })
 
 
   InLayoutButton = self:AddInput("Layout", "layout", {
@@ -113,6 +122,13 @@ function Create()
 		FC_IsSaver = false,
 		FC_ClipBrowse = true,
 		})
+
+
+  InFiles= {}
+
+  for i = 0,5 do
+    InFiles[i] = self:AddInput(LAYOUT_INFOS[i+2], "file"..i, { LINKID_DataType = "Text", INPID_InputControl = "FileControl", FC_IsSaver = false, FC_ClipBrowse = true, IC_Visible = false, })
+  end
 
 
 
@@ -308,6 +324,21 @@ function NotifyChanged(inp, param, time)
   if inp == nil or param == nil then
     return
   end
+
+
+  if inp == InLoadType then
+
+    local seq = param.Value == 0
+
+    InFileSelect:SetAttrs({IC_Visible = seq })
+
+    for i=0,5 do
+      InFiles[i]:SetAttrs({IC_Visible = not seq })
+    end
+
+    return
+  end
+
 
   if inp == InLayoutButton then
 
