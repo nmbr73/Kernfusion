@@ -6,11 +6,11 @@
 -- Register the tool on Fusion start up
 --
 
-FuRegisterClass("MultiButtonControlExampleFuse_by_nmbr73", CT_SourceTool, {
-    REGS_Name = "ex.MultiButtonControl",
-	  REGS_Category = "Fuses/Kernfusion/Examples",
+FuRegisterClass("MultiButtonControlFuse_by_nmbr73", CT_SourceTool, {
+    REGS_Name = "MultiButtonControl",
+	  REGS_Category = "Fuses/Kernfusion/Docs/",
     REGS_OpDescription = "MultiButtonControl not working as expected.",
-	  REGS_OpIconString = "case study",
+	  REGS_OpIconString = "docs",
     REG_Source_GlobalCtrls = true,
     REG_Source_SizeCtrls = true,
     REG_Source_AspectCtrls = true,
@@ -46,87 +46,68 @@ function Create()
   -- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
-
-  InMultiButton1 = self:AddInput("Multibutton 1", "mbtn1", {
-    LINKID_DataType = "Number",
+  attrs = {
     INPID_InputControl = "MultiButtonControl",
-    --MBTNC_Type = "Normal", -- Normal|Toggle|TriState, whereby TriState never has been implemented -- "Normal" darf nicht angewählt werden, sonst geht's schief - warum auch immer
-    MBTNC_ForceButtons = true,  -- hiermit werden wieder Buttons dargestellt
-    MBTNC_StretchToFit = true,
+    LINKID_DataType = "Number",
+    INP_DoNotifyChanged = true,
     INP_Default = 1,
-    { MBTNC_AddButton = "Oin",  },
-    { MBTNC_AddButton = "Dori", },
-    { MBTNC_AddButton = "Balin",  },
+    IC_NoLabel = false, -- do not show the Controls lefthandside label text and use the whole width for the control.
+    IC_NoReset = true, -- do not show the 'Keyframe' indicator
+    MBTNC_StretchToFit  = true,
+    }
+
+
+
+  InMultiButton = {}
+
+
+
+  InMultiButton[1] = self:AddInput("Multi 1", "mbtn1", { attrs,
+
+    MBTNC_Type          = nil,    -- nil|Normal|Toggle|TriState
+    MBTNC_ForceButtons = true,
+
+    MBTNC_ShowToolTip   = false,  -- has no effect
+
+    { MBTNC_AddButton = "Oin",    IC_ControlID=1, MBTNCS_ToolTip = "Brother of Gloin, cousin of Dwalin and Balin, uncle of Gimli and nephew of Fundin, who in turn is the father of Balin and Dwalin.", },
+    { MBTNC_AddButton = "Dori",   IC_ControlID=2, MBTNCS_ToolTip = "Brother Nori and cousin of Ori." },
+    { MBTNC_AddButton = "Balin",  IC_ControlID=3, MBTNCS_ToolTip = "Son of Fundin, and elder brother of Dwalin.", },
   })
 
 
-  -- Always the same result - no matter what "MBTNC_Type" we use
 
-  InMultiButton1 = self:AddInput("Multibutton 1", "btnA", {
-    LINKID_DataType = "Number",
-    INPID_InputControl = "MultiButtonControl",
-    MBTNC_Type = "Normal",
+  InMultiButton[2] = self:AddInput("Broken 2", "mbtn2", { attrs,
+
+    MBTNC_Type = "Toggle",
     MBTNC_ForceButtons = true,
-    MBTNC_StretchToFit = true,
-    INP_Default = 1,
+
     { MBTNC_AddButton = "Bombur",  },
     { MBTNC_AddButton = "Dwalin", },
     { MBTNC_AddButton = "Bifur",  },
   })
 
 
+  InMultiButton[3] = self:AddInput("Combo 3", "mbtn3", { attrs,
 
-  -- Works the same if we put the tables into a separate table
+    MBTNC_ForceButtons = false,
 
-  InMultiButton2 = self:AddInput("Multibutton 2", "btnB", {
-		LINKID_DataType = "Number",
-		INPID_InputControl = "MultiButtonControl",
-		INP_Default = 1,
-    MBTNC_ForceButtons = true,
-
-    -- IC_ControlGroup = 42,
-
-
-    MBTNC_Type = "Toggle",
-    { MBTNC_AddButton = "Balin",  MBTNCD_ButtonWidth = 0.33 }, -- IC_ControlID = 0,
-    { MBTNC_AddButton = "Kili",   MBTNCD_ButtonWidth = 0.33 },
-    { MBTNC_AddButton = "Nori",   MBTNCD_ButtonWidth = 0.33 },
-	})
-
-
-
-  -- And even this is possible - but TriStae behaves exactly like
-
-  InMultiButton3 = self:AddInput("Multibutton 3", "btnC", {
-		LINKID_DataType = "Number",
-		INPID_InputControl = "MultiButtonControl",
-		INP_Default = 0.0,
-    MBTNC_Type = "Toggle",
-    MBTNC_ForceButtons = true,
-    MBTNC_StretchToFit = true,
-    MBTNC_AddButton = "Bofur",
-  })
-
-  InMultiButton3:SetAttrs({ MBTNC_AddButton = "Fili" })
-  InMultiButton3:SetAttrs({ MBTNC_AddButton = "Gloin" })
-
-
-
-  InMultiButton4 = self:AddInput("Multibutton 4", "btnD", {
-    LINKID_DataType = "Number",
-    INPID_InputControl = "MultiButtonControl",
-    MBTNC_Type = "Toggle",
-    MBTNC_ForceButtons = true,
-    MBTNC_StretchToFit = true,
-    INP_Default = 0,
-    { MBTNC_AddButton = "Oin",  },
-    { MBTNC_AddButton = "Dori", },
     { MBTNC_AddButton = "Balin",  },
+    { MBTNC_AddButton = "Kili",   },
+    { MBTNC_AddButton = "Nori",   },
   })
 
 
 
+  InMultiButton[4] = self:AddInput("Multi 4", "mbtn4", { attrs,
 
+    MBTNC_ForceButtons = true,
+
+    MBTNC_ShowToolTip   = false,
+    MBTNC_AddButton     = "Bofur",
+  })
+
+  InMultiButton[4]:SetAttrs({ MBTNC_AddButton = "Fili" })
+  InMultiButton[4]:SetAttrs({ MBTNC_AddButton = "Gloin" })
 
 
 
@@ -168,39 +149,20 @@ end
 
 function NotifyChanged(inp, param, time)
 
+
   if inp == nil or param == nil then
+    print("empty event")
     return
   end
+
+  for i,btn in ipairs(InMultiButton) do
+    if InMultiButton[i] == inp then
+      print("Multibutton "..i.." pressed at frame "..time.."; value is "..param.Value)
+      return
+    end
+  end
+
+  -- print("unknown source")
+  -- dump(inp)
+
 end
-
-
--- function NotifyChanged(inp, param, time)
-
---   if inp == nil or param == nil then
---     return
---   end
-
---   -- simulation of a toogle type multibutton
---   -- if a button get's activated, then we
---   -- deactivate the currently active one
-
---   for i = 0,3 do
---     if inp == MultiButtonEmulationButton[i] then
-
---       -- it's one of our buttons
-
---       status  = MultiButtonEmulationButton[i]:GetSource(0).Value
---       current = MultiButtonEmulationCombo:GetSource(0).Value
-
---       if status == 1 and current ~= i then
---         MultiButtonEmulationCombo:SetSource(Number(i),0)
---         MultiButtonEmulationButton[current]:SetSource(Number(0),0)
---       elseif current == i and status == 0 then
---         MultiButtonEmulationButton[i]:SetSource(Number(1),0)
---       end
-
---       return
-
---     end
---   end
--- end
