@@ -18,17 +18,18 @@ FuRegisterClass("CubeMapLoader_nmbr73", CT_SourceTool, {
 	  REGS_URL = "https://nmbr73.github.io/",
 	  REG_Version	= 000001,
     REG_Fuse_NoEdit = true,
-    REG_Fuse_NoReload = false,
+    REG_Fuse_NoReload = true,
     })
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------
 
-HAS_ERRORS      = false
-CURRENT_FILE    = ""
-CURRENT_LAYOUT  = 0
-TEXTURE_IMAGE   = nil
-LAYOUT_INFOS    = {}
+HAS_ERRORS        = false
+CURRENT_FILE      = ""
+CURRENT_LAYOUT    = 0
+CURRENT_LOADTYPE  = 0
+TEXTURE_IMAGE     = nil
+LAYOUT_INFOS      = {}
 
 -------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -53,8 +54,6 @@ function setError(msg)
   end
 
 end
-
-
 
 -------------------------------------------------------------------------------------------------------------------------------------------
 -- Callback to initialize the tool.
@@ -249,6 +248,145 @@ function LoadTexture(file,layout)
 
   end
 
+end
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+function LoadFrame(file, size)
+
+  local frame = Clip(file,false):GetFrame(0)
+
+  if frame == nil then
+    setError("failed to load file '"..file.."''")
+    return nil
+  end
+
+  if frame.Width ~= frame.Height then
+    setError("file '"..file.."'' must be a square image")
+    return nil
+  end
+
+  if size ~= nil and frame.Width ~= size then
+    setError("file '"..file.."'' is not "..size.."x"..size.." as the precious image is")
+    return nil
+  end
+
+  return frame
+end
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+function LoadTextures(files,layout)
+
+
+  for i=0,5 do
+
+    if files[i]==nil or files[i]=='' then
+      setError("please choose image file for face "..i)
+      return
+    end
+
+    if not bmd.fileexists(files[i]) then
+      setError("no such file '"..files[i].."' for face "..i)
+      return
+    end
+  end
+
+  -- local size = clip:GetFrame(0).Width
+
+  -- for i=0,5 do
+  --   if clip:GetFrame(0).Width~=clip:GetFrame(0).Height or clip:GetFrame(0).Width ~=size then
+  --     setError("images must be squares and all of the same size")
+  --     return
+  --   end
+  -- end
+
+  local frames = {}
+  local size   = nil
+
+  if CURRENT_LAYOUT == 0 or CURRENT_LAYOUT == 1 then
+    frames[0] = LoadFrame(files[0],nil)
+    size  = frames[0].Width
+
+    for i=1,5 do
+      frames[i]=LoadFrame(files[i],size)
+      if frames[i]==nil then
+        return
+      end
+    end
+
+  end
+
+
+  if CURRENT_LAYOUT == 0 then
+
+
+    TEXTURE_IMAGE = Image({
+      IMG_Document = self.Comp,
+      { IMG_Channel = "Red",    },
+      { IMG_Channel = "Green",  },
+      { IMG_Channel = "Blue",   },
+      { IMG_Channel = "Alpha",  },
+      IMG_Width   = size * 4,
+      IMG_Height  = size * 3,
+      IMG_XScale  = 1.0,
+      IMG_YScale  = 1.0,
+    })
+
+    TEXTURE_IMAGE:Fill(Pixel({R=0,G=0,B=0,A=0}))
+
+
+    TEXTURE_IMAGE:OMerge(frames[1], 0,        size )
+    TEXTURE_IMAGE:OMerge(frames[4], 1*size,   size )
+    TEXTURE_IMAGE:OMerge(frames[0], 2*size,   size )
+    TEXTURE_IMAGE:OMerge(frames[5], 3*size,   size )
+    TEXTURE_IMAGE:OMerge(frames[3],   size, 0      )
+    TEXTURE_IMAGE:OMerge(frames[2],   size, 2*size )
+
+
+  elseif CURRENT_LAYOUT == 1 then
+
+    TEXTURE_IMAGE = Image({
+      IMG_Document = self.Comp,
+      { IMG_Channel = "Red",    },
+      { IMG_Channel = "Green",  },
+      { IMG_Channel = "Blue",   },
+      { IMG_Channel = "Alpha",  },
+      IMG_Width   = size * 3,
+      IMG_Height  = size * 4,
+      IMG_XScale  = 1.0,
+      IMG_YScale  = 1.0,
+    })
+
+    TEXTURE_IMAGE:Fill(Pixel({R=0,G=0,B=0,A=0}))
+
+    local rotate={
+      XF_XOffset  = 0.5,    XF_YOffset  = 0.5,
+      XF_XAxis    = 0.5,    XF_YAxis    = 0.5,
+      XF_XSize    = 1.0,    XF_YSize    = 1.0,
+      XF_EdgeMode = 'Black',
+      XF_Angle    = 180.0,
+    }
+
+    TEXTURE_IMAGE:OMerge(frames[2], size, size*3)
+    TEXTURE_IMAGE:OMerge(frames[4], size, size*2)
+    TEXTURE_IMAGE:OMerge(frames[3], size, size)
+    TEXTURE_IMAGE:OMerge(frames[5]:Transform(nil, rotate), size, 0)
+    TEXTURE_IMAGE:OMerge(frames[1], 0,      size*2)
+    TEXTURE_IMAGE:OMerge(frames[0], size*2, size*2)
+
+  else
+
+    local frame = LoadFrame(files[CURRENT_LAYOUT-2],nil)
+
+    if frame ~= nil then
+      TEXTURE_IMAGE = frame
+    end
+
+  end
+
 
 end
 
@@ -257,21 +395,39 @@ end
 --
 function Process(req)
 
-	local file    = self.Comp:MapPath(InFileSelect:GetValue(req).Value)
-  local layout  = InLayoutButton:GetValue(req).Value
+	local file      = self.Comp:MapPath(InFileSelect:GetValue(req).Value)
+  local layout    = InLayoutButton:GetValue(req).Value
+  local loadtype  = InLoadType:GetValue(req).Value
+  local files     = {}
 
-  if CURRENT_FILE ~= file or CURRENT_LAYOUT ~= layout then
+  if loadtype == 1 then
+    for i=0,5 do
+      files[i]=InFiles[i]:GetValue(req).Value
+    end
+    file = '('..table.concat(files,",")..')'
+  end
+
+
+  if CURRENT_FILE ~= file or CURRENT_LAYOUT ~= layout or CURRENT_LOADTYPE ~= loadtype then
 
     if CURRENT_FILE~=file then
       CURRENT_FILE=file
     end
 
-    CURRENT_LAYOUT = layout
-    TEXTURE_IMAGE  = nil
-    HAS_ERRORS     = false
+    CURRENT_LOADTYPE = loadtype
+    CURRENT_LAYOUT  = layout
+    TEXTURE_IMAGE   = nil
+    HAS_ERRORS      = false
     setError(nil)
 
-    LoadTexture(file,layout)
+    if CURRENT_LOADTYPE==0 then
+      LoadTexture(file,layout)
+    else
+      for i=0,5 do
+        files[i]=self.Comp:MapPath(files[i])
+      end
+      LoadTextures(files,layout)
+    end
 
   end
 
