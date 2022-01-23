@@ -2,7 +2,7 @@ Composition {
 	CurrentTime = 0,
 	RenderRange = { 0, 1000 },
 	GlobalRange = { 0, 1000 },
-	CurrentID = 22,
+	CurrentID = 24,
 	HiQ = true,
 	PlaybackUpdateMode = 0,
 	Version = "Fusion Studio 17.0 build 43",
@@ -22,6 +22,7 @@ Composition {
 				Width = Input { Value = 1920, },
 				Height = Input { Value = 1080, },
 				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+				load = Input { Value = 1, },
 				file = Input { Value = "Kernfusion:/Data/CubeMaps/Ryfjallet_1.jpg", },
 				file0 = Input { Value = "Kernfusion:/Data/CubeMaps/Maskonaive2/posx.jpg", },
 				file1 = Input { Value = "Kernfusion:/Data/CubeMaps/Maskonaive2/negx.jpg", },
@@ -36,6 +37,7 @@ Composition {
 		},
 		CubeMap1 = CubeMap {
 			Inputs = {
+				Layout = Input { Value = 2, },
 				Convention = Input { Value = FuID { "NegativeZ" }, },
 				CrossImage = Input {
 					SourceOp = "CubeMapLoader1",
@@ -57,60 +59,60 @@ Composition {
 			Width = 1680,
 			Height = 886,
 			ZoneInfo = {
-				AuxRight = { Expanded = true },
-				Right = { Expanded = true, },
-				Left = { Expanded = false, },
-				AuxLeft = { Expanded = true },
+				["!Right"] = {
+				},
 				["!Left"] = {
 				},
-				["!Right"] = {
-				}
+				AuxLeft = { Expanded = true },
+				Right = { Expanded = true, },
+				Left = { Expanded = false, },
+				AuxRight = { Expanded = true }
 			},
 			ViewInfo = {
-				Keyframes = { Show = false, },
-				LayoutStrip = { Show = true, RatioX = 100, },
-				Inspector = { Show = true, RatioX = 100, RatioY = 1, },
-				Effects = { Show = false, },
-				Viewer2 = { Show = true, RatioX = 1, RatioY = 0.01, },
-				Comments = { Show = false },
-				Clips = { Show = false, },
-				ActionStrip = { Show = true, RatioX = 100, },
-				Time = { Show = true, RatioX = 100, PixelY = 83, },
-				MediaPool = { Show = false, },
-				Nodes = { Show = true, RatioX = 1, RatioY = 100, },
-				Metadata = { Show = false, },
-				Viewer1 = { Show = true, RatioX = 1, RatioY = 0.01, },
-				Spline = { Show = false, },
-				OuterColumns = {
+				Viewer1 = { Show = true, RatioY = 0.01, RatioX = 1.05305466237942, },
+				InnerLeft = {
+				},
+				MainSplit = {
 					RatioX = 100,
-					RatioY = 1,
+					RatioY = 1.00377358490566,
 				},
 				CenterSplit = {
 					RatioX = 0.990453460620525,
 					RatioY = 100,
 				},
+				Viewer2 = { Show = true, RatioY = 0.01, RatioX = 0.946945337620579, },
+				Comments = { Show = false },
+				Time = { Show = true, PixelY = 83, RatioX = 100, },
 				InnerColumns = {
 					RatioX = 100,
-					RatioY = 1.9974293059126,
+					RatioY = 1.99622641509434,
 				},
+				Keyframes = { Show = false, },
+				LayoutStrip = { Show = true, RatioX = 100, },
+				Inspector = { Show = true, RatioY = 1, RatioX = 100.026919020925, },
+				InnerRight = {
+				},
+				OuterLeft = {
+				},
+				OuterColumns = {
+					RatioX = 100,
+					RatioY = 1,
+				},
+				Effects = { Show = false, },
+				Clips = { Show = false, },
+				Metadata = { Show = false, },
+				ActionStrip = { Show = true, RatioX = 100, },
 				ViewerSplit = {
 					RatioX = 100,
 					RatioY = 1,
 				},
-				MainSplit = {
-					RatioX = 100,
-					RatioY = 1.0025706940874,
-				},
+				Nodes = { Show = true, RatioY = 99.874213836478, RatioX = 1, },
 				OuterRight = {
-					PixelX = 432,
 					RatioY = 100,
+					PixelX = 432,
 				},
-				OuterLeft = {
-				},
-				InnerLeft = {
-				},
-				InnerRight = {
-				}
+				MediaPool = { Show = false, },
+				Spline = { Show = false, }
 			},
 			Views = ordered() {
 				Effects = MultiView {
@@ -160,7 +162,7 @@ Composition {
 						KeyFrameView = {
 							Position = { Left = 232, Bottom = 320 },
 							ScaleX = 2.14424951267057,
-							OffsetX = -49.317738791423,
+							OffsetX = -51.4619883040936,
 							OffsetY = 0,
 							AutoScaling = "scroll",
 							AutoSnapTo = "frame",
@@ -248,18 +250,17 @@ Composition {
 								Columns = 2,
 								RatioX = 100,
 								RatioY = 1,
-								{ ID = "Viewer1", RatioX = 1, RatioY = 0.01 },
-								{ ID = "Viewer2", RatioX = 1 }
+								{ ID = "Viewer1", RatioX = 1.05305466237942, RatioY = 0.01 },
+								{ ID = "Viewer2", RatioX = 0.946945337620579 }
 							},
 							{ ID = "Time", FixedY = 83, Flat = true }
 						},
 						{ ID = "ActionStrip", FixedY = 50, Flat = true },
-						{ ID = "Nodes", RatioX = 1, RatioY = 100 }
+						{ ID = "Nodes", RatioX = 1, RatioY = 99.874213836478 }
 					},
-					{ ID = "Inspector", RatioX = 100, RatioY = 1 }
+					{ ID = "Inspector", RatioX = 100.026919020925, RatioY = 1 }
 				}
 			}
 		}
 	},
-
 }
