@@ -46,16 +46,28 @@ function Create()
 
 
 
+  InMultiButton1 = self:AddInput("Multibutton 1", "mbtn1", {
+    LINKID_DataType = "Number",
+    INPID_InputControl = "MultiButtonControl",
+    --MBTNC_Type = "Normal", -- Normal|Toggle|TriState, whereby TriState never has been implemented -- "Normal" darf nicht angewählt werden, sonst geht's schief - warum auch immer
+    MBTNC_ForceButtons = true,  -- hiermit werden wieder Buttons dargestellt
+    MBTNC_StretchToFit = true,
+    INP_Default = 1,
+    { MBTNC_AddButton = "Oin",  },
+    { MBTNC_AddButton = "Dori", },
+    { MBTNC_AddButton = "Balin",  },
+  })
+
 
   -- Always the same result - no matter what "MBTNC_Type" we use
 
   InMultiButton1 = self:AddInput("Multibutton 1", "btnA", {
     LINKID_DataType = "Number",
     INPID_InputControl = "MultiButtonControl",
-    MBTNC_Type = "Normal", -- Normal|Toggle|TriState, whereby TriState never has been implemented
+    MBTNC_Type = "Normal",
     MBTNC_ForceButtons = true,
     MBTNC_StretchToFit = true,
-    INP_Default = 0,
+    INP_Default = 1,
     { MBTNC_AddButton = "Bombur",  },
     { MBTNC_AddButton = "Dwalin", },
     { MBTNC_AddButton = "Bifur",  },
@@ -68,7 +80,7 @@ function Create()
   InMultiButton2 = self:AddInput("Multibutton 2", "btnB", {
 		LINKID_DataType = "Number",
 		INPID_InputControl = "MultiButtonControl",
-		INP_Default = 0.0,
+		INP_Default = 1,
     MBTNC_ForceButtons = true,
 
     -- IC_ControlGroup = 42,
@@ -78,7 +90,6 @@ function Create()
     { MBTNC_AddButton = "Balin",  MBTNCD_ButtonWidth = 0.33 }, -- IC_ControlID = 0,
     { MBTNC_AddButton = "Kili",   MBTNCD_ButtonWidth = 0.33 },
     { MBTNC_AddButton = "Nori",   MBTNCD_ButtonWidth = 0.33 },
-
 	})
 
 
