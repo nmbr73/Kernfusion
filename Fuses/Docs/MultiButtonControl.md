@@ -49,13 +49,4 @@ And for the buttons added to the control there are the following additional attr
 
 > Todo: MBTNC_ShowBasicButton is said to have no effect, or to depend on the skin, or to maybe have some effect by hiding the button but not its label ... have to try that out in a current Fusion version.
 
-
-
-## Example: [MultiButtonControl.fuse](MultiButtonControl.fuse)
-
-This [MultiButtonControl.fuse](MultiButtonControl.fuse) shows the issue of MultiButtonControls being shown as ComboBoxes (as least it shows it as long as the issue exists). Not only do MultiButtons provide a better look and feel for some purposes, but they require less clicks and in particular allow not only for a 'Normal' but also a 'Toggle' type (and in theory a 'TriState' type; but as far as I know the QPushbutton does not provide that, so it's probably very unlikely that we'd get a TriState some day).
-
-See the [MultiButtonEmulation](MultiButtonEmulation.md) for a (bad) example how one could mimic a multi button's behavior (showing that there still is some dedicated implementation behind the MultiButtonControl).
-
-What you can use it for:
-- Nothing, it's just example code and not an actually useable fuse ... use it to see different attempts to create a MultiButtonControl and maybe use it as a starting point for your own experiments to do so
+- Example: [MultiButtonControl.fuse](MultiButtonControl.fuse)

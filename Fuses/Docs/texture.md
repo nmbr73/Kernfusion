@@ -1,10 +1,6 @@
-# YET NO TEXT
-
-See [CubeMapUnfold.fuse](CubeMapUnfold.fuse) ... to test [CubeMapLoader](CubeMapLoader.md) as an input for a DCTL Fuse
+# WORK IN PROGRESS
 
 Code
-
-    // Aus Fehlermeldungen ersichtlich:
 
     #define _tex2DVecN(texID, X, Y, O)   make_intensity(_tex2DVec4((texID), (X), (Y)), (O))
     #define _tex2DVec4(texID, X, Y)      texID.sample(RowSampler, float2((float)(X), (float)(Y)))
