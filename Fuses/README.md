@@ -2,9 +2,7 @@
 
 - **[CubeMapLoader](CubeMapLoader.md)** to load a sequence of 6 images as a single texture
 - **[Studies/](Studies/README.md)** are not fuses meant to be actually used in Fusion, but are simple code examples to play with
-  - **[CubeMapUnfold](Studies/CubeMapUnfold.md)** DCTL to display a [CubeMapLoader](CubeMapLoader.md) input
 - **[Docs/](Docs/README.md)** documentation to help developing Fuses in Lua
-  - **[MultiButtonControl.md](Docs/MultiButtonControl.md)**
 
 ## Link Fuses into Fusion
 
