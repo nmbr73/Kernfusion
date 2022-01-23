@@ -22,3 +22,6 @@ Code
     METAL_FUNC vec<T, 4> sample(sampler s, float2 coord, bias options, int2 offset = int2(0)) const constant
     METAL_FUNC vec<T, 4> sample(sampler s, float2 coord, level options, int2 offset = int2(0)) const constant
     METAL_FUNC vec<T, 4> sample(sampler s, float2 coord, gradient2d options, int2 offset = int2(0)) const constant
+
+Worth a look:
+- https://www.nirsoft.net/utils/dll_export_viewer.html
