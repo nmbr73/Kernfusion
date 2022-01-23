@@ -53,6 +53,7 @@ function Create()
     LINKID_DataType = "Number",
     INPID_InputControl = "MultiButtonControl",
     MBTNC_Type = "Normal", -- Normal|Toggle|TriState, whereby TriState never has been implemented
+    MBTNC_ForceButtons = true,
     MBTNC_StretchToFit = true,
     INP_Default = 0,
     { MBTNC_AddButton = "Bombur",  },
@@ -68,27 +69,52 @@ function Create()
 		LINKID_DataType = "Number",
 		INPID_InputControl = "MultiButtonControl",
 		INP_Default = 0.0,
-    MBTNC_Type = "Toggle", {
-		  { MBTNC_AddButton = "Balin",  MBTNCD_ButtonWidth = 0.33, },
-		  { MBTNC_AddButton = "Kili",   MBTNCD_ButtonWidth = 0.33, },
-		  { MBTNC_AddButton = "Nori",   MBTNCD_ButtonWidth = 0.33, },
-    }
+    MBTNC_ForceButtons = true,
+
+    -- IC_ControlGroup = 42,
+
+
+    MBTNC_Type = "Toggle",
+    { MBTNC_AddButton = "Balin",  MBTNCD_ButtonWidth = 0.33 }, -- IC_ControlID = 0,
+    { MBTNC_AddButton = "Kili",   MBTNCD_ButtonWidth = 0.33 },
+    { MBTNC_AddButton = "Nori",   MBTNCD_ButtonWidth = 0.33 },
+
 	})
 
 
 
-  -- And even this is possible
+  -- And even this is possible - but TriStae behaves exactly like
 
   InMultiButton3 = self:AddInput("Multibutton 3", "btnC", {
 		LINKID_DataType = "Number",
 		INPID_InputControl = "MultiButtonControl",
 		INP_Default = 0.0,
-    MBTNC_Type = "TriState",
+    MBTNC_Type = "Toggle",
+    MBTNC_ForceButtons = true,
+    MBTNC_StretchToFit = true,
     MBTNC_AddButton = "Bofur",
   })
 
   InMultiButton3:SetAttrs({ MBTNC_AddButton = "Fili" })
   InMultiButton3:SetAttrs({ MBTNC_AddButton = "Gloin" })
+
+
+
+  InMultiButton4 = self:AddInput("Multibutton 4", "btnD", {
+    LINKID_DataType = "Number",
+    INPID_InputControl = "MultiButtonControl",
+    MBTNC_Type = "Toggle",
+    MBTNC_ForceButtons = true,
+    MBTNC_StretchToFit = true,
+    INP_Default = 0,
+    { MBTNC_AddButton = "Oin",  },
+    { MBTNC_AddButton = "Dori", },
+    { MBTNC_AddButton = "Balin",  },
+  })
+
+
+
+
 
 
 
@@ -134,3 +160,35 @@ function NotifyChanged(inp, param, time)
     return
   end
 end
+
+
+-- function NotifyChanged(inp, param, time)
+
+--   if inp == nil or param == nil then
+--     return
+--   end
+
+--   -- simulation of a toogle type multibutton
+--   -- if a button get's activated, then we
+--   -- deactivate the currently active one
+
+--   for i = 0,3 do
+--     if inp == MultiButtonEmulationButton[i] then
+
+--       -- it's one of our buttons
+
+--       status  = MultiButtonEmulationButton[i]:GetSource(0).Value
+--       current = MultiButtonEmulationCombo:GetSource(0).Value
+
+--       if status == 1 and current ~= i then
+--         MultiButtonEmulationCombo:SetSource(Number(i),0)
+--         MultiButtonEmulationButton[current]:SetSource(Number(0),0)
+--       elseif current == i and status == 0 then
+--         MultiButtonEmulationButton[i]:SetSource(Number(1),0)
+--       end
+
+--       return
+
+--     end
+--   end
+-- end
