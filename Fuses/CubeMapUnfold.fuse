@@ -79,28 +79,13 @@ KernelCode =
 
 
 
-__DEVICE__ int outCubeIndex(float normalized_x, float normalized_y)
+
+
+// returns normalized (-1..1) xyz coordinate
+__DEVICE__ float3 horizontal_cross(float x, float y, float w, float h)
 {
-  if (normalized_x < 0.0f || normalized_x > 1.0f)
-    return -7;
 
-  if (normalized_y < 0.0f || normalized_y > 1.0f)
-    return -8;
-
-  int col = int(floor(normalized_x / 0.25f));
-  int row = int(floor(normalized_y / (1.0f / 3.0f)));
-
-  const int map[3][4]=
-  {
-    { -1,  2, -2, -4 },
-    {  1,  4,  0,  5 },
-    { -4,  3, -5, -6 }
-  };
-
-  return map[row][col];
 }
-
-
 
 
 __KERNEL__ void CubeMapUnfoldKernel(__CONSTANTREF__ Params*  params,  __TEXTURE2D__ iChannel0, __TEXTURE2D_WRITE__ destinationTexture)
@@ -127,15 +112,42 @@ __KERNEL__ void CubeMapUnfoldKernel(__CONSTANTREF__ Params*  params,  __TEXTURE2
 
 
   {
+    // face
+    //
+    //    Determining the index (face) to use from the
+    //    cubemap to display it in one of the tiles
+    //    of the horizontal cross texture. To do so
+    //    row and column are calculated and then mapped
+    //    to the respective index.
+
+    // row, col
+    //
+    //    We separate our output into 4x3 tiles, so if
+    //    1/4 are the columns and 1/3 the rows. Dividing
+    //    our xy-Coordinate accordingly, we know which
+    //    tile (resp. row and column) die coordinate falls
+    //    into.
+
+    // map
+    //
+    //    Using the numbers (indices) 1 for the left,
+    //    4 for the front, 0 for the right, 5 for the
+    //    back, 2 for the top and 3 for the bottom face
+    //    of the cube is a commonly used scheme.
+
+
+
     nX = x/params->out_width;   // x normalized to [0..1]
     nY = y/params->out_height;  // y normalized to [0..1]
 
     int col = int(floor(nX / (1.0f / 4.0f))); // 0|1|2|3
     int row = int(floor(nY / (1.0f / 3.0f))); // 0|1|2
 
-    // origin of our coordinate system is in the lower left
-    // therefore face 2 and face 3 must be turned upside down
-    // in the following map:
+
+    // Origin of our coordinate system is in the lower left
+    // therefore face 2 (top) is on the last line (the bottom)
+    // and face 3 (bottom) on the first line (the top) of
+    // the mapping.
 
     const int map[3][4]=
     {
@@ -144,17 +156,11 @@ __KERNEL__ void CubeMapUnfoldKernel(__CONSTANTREF__ Params*  params,  __TEXTURE2
       { -4,  2, -5, -6 }
     };
 
-
-
     int face = map[row][col];
 
 
-//  row 1:
-//      uv = to_float2(nX * 4.0f, (nY - 1.0f/3.0f) * 3.0f);
-//      uv = 2.0 * to_float2(uv.x - float(col) * 1.0f, uv.y) - 1.0f;
-//  row 0 or 2:
-//      uv = to_float2((nX - 0.25f) * 4.0f, (nY - float(row) / 3.0f) * 3.0f);
-//      uv = 2.0f * uv - 1.0f;
+
+
 
     float u;
     float v;
@@ -189,7 +195,7 @@ __KERNEL__ void CubeMapUnfoldKernel(__CONSTANTREF__ Params*  params,  __TEXTURE2
     fragColor = decube_f3(iChannel0,to_float3(nX,nY,nZ));
     fragColor.w=1.0f;
   } else {
-    fragColor   = to_float4(0.8f, 0.0f, 0.0f, 0.0f);
+    fragColor  = to_float4(0.8f, 0.0f, 0.0f, 0.0f);
   }
 
 
