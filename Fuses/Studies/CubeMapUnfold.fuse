@@ -39,7 +39,7 @@ ParametersCode =
 CompatibilityCode =
 [[
 
-__DEVICE__ float4 decube_f3(__TEXTURE2D__ t, float3 xyz)
+__DEVICE__ float4 cubemap(__TEXTURE2D__ t, float3 xyz)
 {
   float ax=_fabs(xyz.x);
   float ay=_fabs(xyz.y);
@@ -74,133 +74,202 @@ __DEVICE__ float4 decube_f3(__TEXTURE2D__ t, float3 xyz)
 
 KernelCode =
 [[
+/*
+MIT License
+
+Copyright (c) 2022 nmbr73
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+*/
+
+#define DCTL
+
+#ifdef DCTL
+  typedef float2 vec2;
+  typedef float3 vec3;
+  typedef float4 vec4;
+  #define make_vec2(A,B)      make_float2(A,B)
+  #define make_vec3(A,B,C)    make_float3(A,B,C)
+  #define make_vec4(A,B,C,D)  make_float4(A,B,C,D)
+  #define make_vec4_aw(V,F)   make_float4_aw(V,F)
+  #define in
+  #define out
+  #define DEVICE  __DEVICE__
+#else
+  #define cubemap(M,XYZ)      texture(M,XYZ)
+  #define make_vec2(A,B)      vec2(A,B)
+  #define make_vec3(A,B,C)    vec3(A,B,C)
+  #define make_vec4(A,B,C,D)  vec4(A,B,C,D)
+  #define make_vec4_aw(V,F)   vec4(V,F)
+  #define DEVICE
+#endif
 
 
-
-
-
-
-
-// returns normalized (-1..1) xyz coordinate
-__DEVICE__ float3 horizontal_cross(float x, float y, float w, float h)
+DEVICE vec3 unfold(in vec2 coord, in vec2 res)
 {
+  float x = coord.x;
+  float y = coord.y;
+  float w = res.x;
+  float h = res.y;
 
-}
-
-
-__KERNEL__ void CubeMapUnfoldKernel(__CONSTANTREF__ Params*  params,  __TEXTURE2D__ iChannel0, __TEXTURE2D_WRITE__ destinationTexture)
-{
-   DEFINE_KERNEL_ITERATORS_XY(x, y);
-
-   if (x >= params->out_width || y >= params->out_height)
-     return;
-
-  float inWidth   = params->in_width;
-  float inHeight  = params->in_height;
-  float outWidth  = params->out_width;
-  float outHeight = params->out_height;
-
-
-  float4 fragColor   = to_float4(0.0f, 0.0f, 0.2f, 0.0f);
 
   float nX,nY,nZ; // nomalized coordinates
 
+  // face
+  //
+  //    Determining the index (face) to use from the
+  //    cubemap to display it in one of the tiles
+  //    of the horizontal cross texture. To do so
+  //    row and column are calculated and then mapped
+  //    to the respective index.
 
-  // --------
+  // row, col
+  //
+  //    We separate our output into 4x3 tiles, so if
+  //    1/4 are the columns and 1/3 the rows. Dividing
+  //    our xy-Coordinate accordingly, we know which
+  //    tile (resp. row and column) die coordinate falls
+  //    into.
 
-
-
-
-  {
-    // face
-    //
-    //    Determining the index (face) to use from the
-    //    cubemap to display it in one of the tiles
-    //    of the horizontal cross texture. To do so
-    //    row and column are calculated and then mapped
-    //    to the respective index.
-
-    // row, col
-    //
-    //    We separate our output into 4x3 tiles, so if
-    //    1/4 are the columns and 1/3 the rows. Dividing
-    //    our xy-Coordinate accordingly, we know which
-    //    tile (resp. row and column) die coordinate falls
-    //    into.
-
-    // map
-    //
-    //    Using the numbers (indices) 1 for the left,
-    //    4 for the front, 0 for the right, 5 for the
-    //    back, 2 for the top and 3 for the bottom face
-    //    of the cube is a commonly used scheme.
+  // map
+  //
+  //    Using the numbers (indices) 1 for the left,
+  //    4 for the front, 0 for the right, 5 for the
+  //    back, 2 for the top and 3 for the bottom face
+  //    of the cube is a commonly used scheme.
 
 
 
-    nX = x/params->out_width;   // x normalized to [0..1]
-    nY = y/params->out_height;  // y normalized to [0..1]
+  nX = x/w;   // x normalized to [0..1]
+  nY = y/h;  // y normalized to [0..1]
 
-    int col = int(floor(nX / (1.0f / 4.0f))); // 0|1|2|3
-    int row = int(floor(nY / (1.0f / 3.0f))); // 0|1|2
-
-
-    // Origin of our coordinate system is in the lower left
-    // therefore face 2 (top) is on the last line (the bottom)
-    // and face 3 (bottom) on the first line (the top) of
-    // the mapping.
-
-    const int map[3][4]=
-    {
-      { -1,  3, -2, -4 },
-      {  1,  4,  0,  5 },
-      { -4,  2, -5, -6 }
-    };
-
-    int face = map[row][col];
+  int col = int(floor(nX / (1.0f / 4.0f))); // 0|1|2|3
+  int row = int(floor(nY / (1.0f / 3.0f))); // 0|1|2
 
 
+  // Origin of our coordinate system is in the lower left
+  // therefore face 2 (top) is on the last line (the bottom)
+  // and face 3 (bottom) on the first line (the top) of
+  // the mapping.
+
+  // Arrays of arrays supported in GLSL ES 3.10 only
+  // and array initialization does also look a bit strange.
 
 
+  #ifdef DCTL
 
-    float u;
-    float v;
+  const int map[] = {
+      -1,  3, -2, -4 ,
+      1,  4,  0,  5 ,
+      -4,  2, -5, -6
+  };
 
-    if (row == 1) {
-      // row 1 -> col is 0|1|2|3
-      u = (nX - 0.0f ) * 4.0f; v = (nY - float(row) / 3.0f) * 3.0f;
-      u = u - float(col) * 1.0f;
-    } else {
-      // row is 0 or 2 -> col is 1 and only 1
-      u = (nX - 0.25f) * 4.0f; v = (nY - float(row) / 3.0f) * 3.0f;
-    }
+  #else
 
-    u = 2.0f * u - 1.0f; v = 2.0f * v - 1.0f;
+  const int map[] = int[3*4](
+      -1,  3, -2, -4 ,
+      1,  4,  0,  5 ,
+      -4,  2, -5, -6
+  );
 
-    nX=nY=nZ=0.0f; // normalized to [-1..1]
+  #endif
 
 
-    switch (face) {
-      case 1: nX= -1.0f ; nY=   v   ; nZ=    u   ; break; // -X, row 1, col 0
-      case 4: nX=   u   ; nY=   v   ; nZ=   1.0f ; break; // +Z, row 1, col 1
-      case 0: nX=  1.0  ; nY=   v   ; nZ=   -u   ; break; // +X, row 1, col 2
-      case 5: nX=  -u   ; nY=   v   ; nZ=  -1.0f ; break; // -Z, row 1, col 3
-      case 2: nX=   u   ; nY=  1.0f ; nZ=   -v   ; break; // +Y, row 0, col 1
-      case 3: nX=   u   ; nY= -1.0f ; nZ=    v   ; break; // -Y, row 2, col 1
-      default:
-        break;
-    }
-  }
+  int face = map[row*4+col];
 
-  if ((nX != 0.0f) || (nY != 0.0f) || (nZ != 0.0f)) {
-    fragColor = decube_f3(iChannel0,to_float3(nX,nY,nZ));
-    fragColor.w=1.0f;
+  float u;
+  float v;
+
+  if (row == 1) {
+    // row 1 -> col is 0|1|2|3
+    u = (nX - 0.0f ) * 4.0f; v = (nY - float(row) / 3.0f) * 3.0f;
+    u = u - float(col) * 1.0f;
   } else {
-    fragColor  = to_float4(0.8f, 0.0f, 0.0f, 0.0f);
+    // row is 0 or 2 -> col is 1 and only 1
+    u = (nX - 0.25f) * 4.0f; v = (nY - float(row) / 3.0f) * 3.0f;
+  }
+
+  u = 2.0f * u - 1.0f; v = 2.0f * v - 1.0f;
+
+  nX=nY=nZ=0.0f; // normalized to [-1..1]
+
+
+  switch (face) {
+    case 1: nX= -1.0f ; nY=   v   ; nZ=    u   ; break; // -X, row 1, col 0
+    case 4: nX=   u   ; nY=   v   ; nZ=   1.0f ; break; // +Z, row 1, col 1
+    case 0: nX=  1.0  ; nY=   v   ; nZ=   -u   ; break; // +X, row 1, col 2
+    case 5: nX=  -u   ; nY=   v   ; nZ=  -1.0f ; break; // -Z, row 1, col 3
+    case 2: nX=   u   ; nY=  1.0f ; nZ=   -v   ; break; // +Y, row 0, col 1
+    case 3: nX=   u   ; nY= -1.0f ; nZ=    v   ; break; // -Y, row 2, col 1
+    default:
+      break;
   }
 
 
-   _tex2DVec4Write(destinationTexture, x, y, fragColor);
+  return make_vec3(nX,nY,nZ);
 }
+
+
+#ifdef DCTL
+
+__KERNEL__ void CubeMapUnfoldKernel(__CONSTANTREF__ Params*  params,  __TEXTURE2D__ iChannel0, __TEXTURE2D_WRITE__ destinationTexture)
+{
+  DEFINE_KERNEL_ITERATORS_XY(x, y);
+
+  if (x >= params->out_width || y >= params->out_height)
+    return;
+
+  vec4 fragColor;
+  vec2 fragCoord = make_vec2(x,y);
+  vec2 iResolution = make_vec2(params->out_width,params->out_height);
+
+  // -----
+
+  vec3 xyz = unfold(fragCoord, iResolution);
+  fragColor   = vec4(1.0f, 0.0f, 0.0f, 0.0f);
+
+  if ((xyz.x != 0.0f) || (xyz.y != 0.0f) || (xyz.z != 0.0f)) {
+    fragColor = cubemap(iChannel0,xyz);
+    fragColor.w=1.0f;
+  }
+
+  // -----
+
+  _tex2DVec4Write(destinationTexture, x, y, fragColor);
+
+}
+
+#else
+
+void mainImage( out vec4 fragColor, in vec2 fragCoord )
+{
+  vec3 xyz = unfold(fragCoord, iResolution.xy);
+
+  fragColor   = vec4(1.0f, 0.0f, 0.0f, 0.0f);
+
+  if ((xyz.x != 0.0f) || (xyz.y != 0.0f) || (xyz.z != 0.0f)) {
+    fragColor = cubemap(iChannel0,xyz);
+    fragColor.w=1.0f;
+  }
+}
+
+#endif
 
 ]]
 -- /*
