@@ -191,7 +191,7 @@ __KERNEL__ void CubeMapUnfoldKernel(__CONSTANTREF__ Params*  params,  __TEXTURE2
     }
   }
 
-  if ((nX != 0.0f) && (nY != 0.0f)) {
+  if ((nX != 0.0f) || (nY != 0.0f) || (nZ != 0.0f)) {
     fragColor = decube_f3(iChannel0,to_float3(nX,nY,nZ));
     fragColor.w=1.0f;
   } else {
