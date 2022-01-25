@@ -1,3 +1,7 @@
 # CubeMapUnfold
 
 The [CubeMapUnfold.fuse](CubeMapUnfold.fuse) can be used to test [CubeMapLoader](../CubeMapLoader.md) as an input for a DCTL Fuse. It shows some transformations from different vector formats to others (normalizes or not, 2D and 3D).
+
+The fragment shader is written in a form so that you can copy and paste the code to run it in OpenGL ES (see it on [shadertoy.com](https://www.shadertoy.com/view/7sBcRh)) ... makes no sense, but was just to try it out. But this makes it probably not the best readable example code. But that doesn't really matter, because what the Fuse does is of little practical use anyway:
+
+The `cubemap` function in the `CompatibilityCode` takes a normalized 3D vector meant to point into a cube map and converts it to the respective pixel on a 2D horizontal cross texture. This way we can use such horizontal crosses as an input for those fragment shaders that work on a cube map. Now the CubeMapUnfold's kernel is a fragment shader that displays a cube map as an horizontal cross - so it kind of does what the `cubemap` code does, but the other way around; maybe so to say it undoes it. However: you put a 2D horizontal cross texture into that fuse and the result is a 2D horizontal cross texture. A functionality that is pretty useless as such. But on the one hand seeing both directions of the calculations might help someone not used to that stuff (like me when I wrote this Fuse) to understand the principle; and on the other hand it is good to have to doublecheck and debug if the `cubemap` function does the right thing.

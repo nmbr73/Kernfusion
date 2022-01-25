@@ -8,7 +8,7 @@ FuRegisterClass("CubeMapUnfold_nmbr73", CT_SourceTool, {
     REGS_Name = "CubeMap Unfold",
 	  REGS_Category = "Fuses/Kernfusion",
     REGS_OpDescription = "Display a crossmap 2D textur as a crossmap 2D texture. Looks a bit weird, but is useful to debug DCTL code for such a cubemap representation.",
-	  REGS_OpIconString = "cmu.73",
+	  REGS_OpIconString = "73",
     REG_Source_GlobalCtrls = true,
     REG_Source_SizeCtrls = true,
     REG_Source_AspectCtrls = true,
