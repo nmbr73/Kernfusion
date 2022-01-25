@@ -64,6 +64,8 @@ function Create()
 
   InMultiButton[1] = self:AddInput("Multi 1", "mbtn1", { attrs,
 
+    -- LINKS_Name         = "mbtn-1",
+
     MBTNC_Type          = nil,    -- nil|Normal|Toggle|TriState
     MBTNC_ForceButtons = true,
 
@@ -78,16 +80,20 @@ function Create()
 
   InMultiButton[2] = self:AddInput("Broken 2", "mbtn2", { attrs,
 
+    -- LINKS_Name         = "mbtn-2",
+
     MBTNC_Type = "Toggle",
     MBTNC_ForceButtons = true,
 
-    { MBTNC_AddButton = "Bombur",  },
+    { MBTNC_AddButton = "Bombur", },
     { MBTNC_AddButton = "Dwalin", },
     { MBTNC_AddButton = "Bifur",  },
   })
 
 
   InMultiButton[3] = self:AddInput("Combo 3", "mbtn3", { attrs,
+
+    -- LINKS_Name         = "mbtn-3",
 
     MBTNC_ForceButtons = false,
 
@@ -99,6 +105,8 @@ function Create()
 
 
   InMultiButton[4] = self:AddInput("Multi 4", "mbtn4", { attrs,
+
+    -- LINKS_Name         = "mbtn-4",
 
     MBTNC_ForceButtons = true,
 
