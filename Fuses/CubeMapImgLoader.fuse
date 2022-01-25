@@ -4,30 +4,28 @@
 
 -- ----------------------------------------------------------------------------------------------------------------------------------------
 
-FuRegisterClass("CubeMapLoader_nmbr73", CT_SourceTool, {
-    REGS_Name = "CubeMap Loader",
-	  REGS_Category = "Fuses/Kernfusion",
-    REGS_OpDescription = "Load the six faces of a cube. Serves for example as an input fragment shaders that use a cube map. Use the CubeMap (3Cu) tool to test this Fuse.",
-	  REGS_OpIconString = "CML",
-    REG_Source_GlobalCtrls = true,
-    REG_Source_SizeCtrls = true,
-    REG_Source_AspectCtrls = true,
-    REG_Source_DepthCtrls = true,
-	  REG_TimeVariant = false,
-	  REGS_Company = "nmbr73",
-	  REGS_URL = "https://nmbr73.github.io/",
-	  REG_Version	= 000001,
-    REG_Fuse_NoEdit = true,
-    REG_Fuse_NoReload = true,
-    })
-
+FuRegisterClass("CubeMapImgLoader_nmbr73", CT_SourceTool, {
+  REGS_Name = "CubeMap Img Loader",
+  REGS_Category = "Fuses/Kernfusion",
+  REGS_OpDescription = "The CubeMap Image Loader loads the six faces of a cube from single imag files. Serves for example as an input fragment shaders that use a cube map. Use the CubeMap (3Cu) tool to test this Fuse.",
+  REGS_OpIconString = "CMIL",
+  REG_Source_GlobalCtrls = true,
+  REG_Source_SizeCtrls = true,
+  REG_Source_AspectCtrls = true,
+  REG_Source_DepthCtrls = true,
+  REG_TimeVariant = false,
+  REGS_Company = "nmbr73",
+  REGS_URL = "https://nmbr73.github.io/",
+  REG_Version	= 000001,
+  REG_Fuse_NoEdit = true,
+  REG_Fuse_NoReload = true,
+  })
 
 -------------------------------------------------------------------------------------------------------------------------------------------
 
 HAS_ERRORS        = false
 CURRENT_FILE      = ""
 CURRENT_LAYOUT    = 0
-CURRENT_LOADTYPE  = 0
 TEXTURE_IMAGE     = nil
 LAYOUT_INFOS      = {}
 
@@ -86,17 +84,6 @@ function Create()
 
 
 
-  InLoadType = self:AddInput("Load", "load", {
-    INPID_InputControl = "MultiButtonControl",
-    LINKID_DataType = "Number",
-    INP_DoNotifyChanged = true,
-    INP_Default = 0,
-    MBTNC_ForceButtons = true,
-
-    { MBTNC_AddButton = 'Image Sequence', MBTNCD_ButtonWidth = 0.5 },
-    { MBTNC_AddButton = 'Single Images', MBTNCD_ButtonWidth = 0.5,  },
-  })
-
 
   InLayoutButton = self:AddInput("Layout", "layout", {
     INPID_InputControl = "MultiButtonControl",
@@ -114,19 +101,10 @@ function Create()
   end
 
 
-
-	InFileSelect = self:AddInput("File", "file", {
-		LINKID_DataType = "Text",
-		INPID_InputControl = "FileControl",
-		FC_IsSaver = false,
-		FC_ClipBrowse = true,
-		})
-
-
   InFiles= {}
 
   for i = 0,5 do
-    InFiles[i] = self:AddInput(LAYOUT_INFOS[i+2], "file"..i, { LINKID_DataType = "Text", INPID_InputControl = "FileControl", FC_IsSaver = false, FC_ClipBrowse = true, IC_Visible = false, })
+    InFiles[i] = self:AddInput(LAYOUT_INFOS[i+2], "file"..i, { LINKID_DataType = "Text", INPID_InputControl = "FileControl", FC_IsSaver = false, FC_ClipBrowse = true,  })
   end
 
 
@@ -154,103 +132,6 @@ function Create()
   InGlobalOut = self:AddInput("Global Out", "GlobalOut", { LINKID_DataType = "Number", })
 
 end
-
-
--------------------------------------------------------------------------------------------------------------------------------------------
-
-function LoadTexture(file,layout)
-
-  if file==nil or file=='' then
-    setError("please choose image sequence files")
-    return
-  end
-
-  if not bmd.fileexists(file) then
-    setError("no such file '"..file.."'")
-    return
-  end
-
-  local clip = Clip(file,false)
-
-  if clip:GetFrame(5) == nil then
-    setError("need six frames at least")
-    return
-  end
-
-  local size = clip:GetFrame(0).Width
-
-  for i=0,5 do
-    if clip:GetFrame(0).Width~=clip:GetFrame(0).Height or clip:GetFrame(0).Width ~=size then
-      setError("images must be squares and all of the same size")
-      return
-    end
-  end
-
-  if CURRENT_LAYOUT == 0 then
-
-    TEXTURE_IMAGE = Image({
-      IMG_Document = self.Comp,
-      { IMG_Channel = "Red",    },
-      { IMG_Channel = "Green",  },
-      { IMG_Channel = "Blue",   },
-      { IMG_Channel = "Alpha",  },
-      IMG_Width   = size * 4,
-      IMG_Height  = size * 3,
-      IMG_XScale  = 1.0,
-      IMG_YScale  = 1.0,
-    })
-
-    TEXTURE_IMAGE:Fill(Pixel({R=0,G=0,B=0,A=0}))
-
-    TEXTURE_IMAGE:OMerge(clip:GetFrame(1), 0,        size )
-    TEXTURE_IMAGE:OMerge(clip:GetFrame(4), 1*size,   size )
-    TEXTURE_IMAGE:OMerge(clip:GetFrame(0), 2*size,   size )
-    TEXTURE_IMAGE:OMerge(clip:GetFrame(5), 3*size,   size )
-    TEXTURE_IMAGE:OMerge(clip:GetFrame(3),   size, 0      )
-    TEXTURE_IMAGE:OMerge(clip:GetFrame(2),   size, 2*size )
-
-
-  elseif CURRENT_LAYOUT == 1 then
-
-    TEXTURE_IMAGE = Image({
-      IMG_Document = self.Comp,
-      { IMG_Channel = "Red",    },
-      { IMG_Channel = "Green",  },
-      { IMG_Channel = "Blue",   },
-      { IMG_Channel = "Alpha",  },
-      IMG_Width   = size * 3,
-      IMG_Height  = size * 4,
-      IMG_XScale  = 1.0,
-      IMG_YScale  = 1.0,
-    })
-
-    TEXTURE_IMAGE:Fill(Pixel({R=0,G=0,B=0,A=0}))
-
-    local rotate={
-      XF_XOffset  = 0.5,    XF_YOffset  = 0.5,
-      XF_XAxis    = 0.5,    XF_YAxis    = 0.5,
-      XF_XSize    = 1.0,    XF_YSize    = 1.0,
-      XF_EdgeMode = 'Black',
-      XF_Angle    = 180.0,
-    }
-
-    TEXTURE_IMAGE:OMerge(clip:GetFrame(2), size, size*3)
-    TEXTURE_IMAGE:OMerge(clip:GetFrame(4), size, size*2)
-    TEXTURE_IMAGE:OMerge(clip:GetFrame(3), size, size)
-    TEXTURE_IMAGE:OMerge(clip:GetFrame(5):Transform(nil, rotate), size, 0)
-
-    TEXTURE_IMAGE:OMerge(clip:GetFrame(1), 0,      size*2)
-    TEXTURE_IMAGE:OMerge(clip:GetFrame(0), size*2, size*2)
-
-  else
-
-    TEXTURE_IMAGE = clip:GetFrame(CURRENT_LAYOUT-2)
-
-  end
-
-end
-
-
 
 -------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -395,39 +276,31 @@ end
 --
 function Process(req)
 
-	local file      = self.Comp:MapPath(InFileSelect:GetValue(req).Value)
+	local file
   local layout    = InLayoutButton:GetValue(req).Value
-  local loadtype  = InLoadType:GetValue(req).Value
   local files     = {}
 
-  if loadtype == 1 then
-    for i=0,5 do
-      files[i]=InFiles[i]:GetValue(req).Value
-    end
-    file = '('..table.concat(files,",")..')'
+  for i=0,5 do
+    files[i]=InFiles[i]:GetValue(req).Value
   end
+  file = '('..table.concat(files,",")..')'
 
 
-  if CURRENT_FILE ~= file or CURRENT_LAYOUT ~= layout or CURRENT_LOADTYPE ~= loadtype then
+  if CURRENT_FILE ~= file or CURRENT_LAYOUT ~= layout then
 
     if CURRENT_FILE~=file then
       CURRENT_FILE=file
     end
 
-    CURRENT_LOADTYPE = loadtype
     CURRENT_LAYOUT  = layout
     TEXTURE_IMAGE   = nil
     HAS_ERRORS      = false
     setError(nil)
 
-    if CURRENT_LOADTYPE==0 then
-      LoadTexture(file,layout)
-    else
-      for i=0,5 do
-        files[i]=self.Comp:MapPath(files[i])
-      end
-      LoadTextures(files,layout)
+    for i=0,5 do
+      files[i]=self.Comp:MapPath(files[i])
     end
+    LoadTextures(files,layout)
 
   end
 
@@ -480,21 +353,6 @@ function NotifyChanged(inp, param, time)
   if inp == nil or param == nil then
     return
   end
-
-
-  if inp == InLoadType then
-
-    local seq = param.Value == 0
-
-    InFileSelect:SetAttrs({IC_Visible = seq })
-
-    for i=0,5 do
-      InFiles[i]:SetAttrs({IC_Visible = not seq })
-    end
-
-    return
-  end
-
 
   if inp == InLayoutButton then
 
