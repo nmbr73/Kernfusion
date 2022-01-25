@@ -85,6 +85,7 @@ function Create()
   InMultiButton[2] = self:AddInput("2: 'Toggle',nil=Checkboxes", "mbtn2", { attrs,
 
     MBTNC_Type            = "Toggle",
+    MBTNC_ShowBasicButton = true,     -- has no effect
 
     { MBTNC_AddButton = "Bombur", },
     { MBTNC_AddButton = "Dwalin", },
@@ -94,6 +95,7 @@ function Create()
   InMultiButton[3] = self:AddInput("3: nil,true=Radio", "mbtn3", { attrs,
 
     MBTNC_ForceButtons = true,
+    MBTNC_ShowBasicButton = true,     -- has no effect
 
     MBTNC_AddButton     = "Bofur",
   })
@@ -104,6 +106,8 @@ function Create()
 
 
   InMultiButton[4] = self:AddInput("4: nil,nil=Radio=Combo", "mbtn4", { attrs,
+
+    MBTNC_ShowBasicButton = true,     -- has no effect
 
     { MBTNC_AddButton = "Balin",  },
     { MBTNC_AddButton = "Kili",   },
