@@ -6,7 +6,7 @@
 
 FuRegisterClass("Skybox_nmbr73", CT_SourceTool, {
     REGS_Name = "Skybox",
-	  REGS_Category = "Fuses/Kernfusion",
+	  REGS_Category = "Fuses\\Kernfusion\\WIP",
     REGS_OpDescription = "...",
 	  REGS_OpIconString = "SBX",
     REG_Source_GlobalCtrls = true,
