@@ -21,7 +21,6 @@ Todo:
 - Find out when and why `REG_Source_GlobalCtrls=false` shreds Fusion!?!
 
 Things to discover in its source code:
-- Creating a simple, fully Lua based tool for Fusion
 - Simple but often forgotten things like setting tooltips on buttons and status texts
 - Loading a sequence of pictures as a clip
 - Creating a single image copying the clip pictures into a single texture
