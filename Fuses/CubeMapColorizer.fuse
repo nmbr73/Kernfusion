@@ -102,15 +102,15 @@ __KERNEL__ void CubeMapColorizerKernel(
 
   if (row == 1)
     switch (col) {
-      case 0: tinge.r=1.0f; break;
-      case 1: tinge.g=1.0f; break;
-      case 2: tinge.b=1.0f; break;
-      case 3: tinge.r=1.0f; tinge.g=1.0f; break;
+      case 0: tinge.x=1.0f; break;
+      case 1: tinge.y=1.0f; break;
+      case 2: tinge.z=1.0f; break;
+      case 3: tinge.x=1.0f; tinge.y=1.0f; break;
     }
   else if (col == 1)
     switch (row) {
-      case 0: tinge.g=1.0f; tinge.b=1.0f; break;
-      case 2: tinge.r=1.0f; tinge.b=1.0f; break;
+      case 0: tinge.y=1.0f; tinge.z=1.0f; break;
+      case 2: tinge.x=1.0f; tinge.z=1.0f; break;
     };
 
   float4 colorized=mix(color,tinge,to_float4_s(params->gain));
