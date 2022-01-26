@@ -1,8 +1,10 @@
 # Fuses
 
 - **[CubeMapLoader](CubeMapLoader.md)** to load a sequence of 6 images as a single texture
-- **[Studies/](Studies/README.md)** are not fuses meant to be actually used in Fusion, but are simple code examples to play with
-- **[Docs/](Docs/README.md)** documentation to help developing Fuses in Lua
+- **[CubeMapUnfold](CubeMapUnfold.md)** DCTL non-sense (was just to develop and debug the the shader access to a cube map texture)
+- **[CubeMapColorizer](CubeMapColorizer.md)** colorize the faces of a cube by different colors (via DCTL)
+- **[Docs/](Docs/README.md)** examples for developing Fuses in Lua (nothing there yet)
+  - **[MultiButtonControls.fuse](Docs/MultiButtonControls.fuse)** example for the different [MultiButtonControl](https://github.com/nmbr73/Kernfusion/wiki/MultiButtonControl) types
 
 ## Link Fuses into Fusion
 
