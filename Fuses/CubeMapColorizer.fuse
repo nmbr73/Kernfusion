@@ -6,7 +6,7 @@
 
 FuRegisterClass("CubeMapColorizer_nmbr73", CT_SourceTool, {
     REGS_Name = "CubeMap Colorizer",
-	  REGS_Category = "Fuses/Kernfusion",
+	  REGS_Category = "Fuses\\Kernfusion",
     REGS_OpDescription = "Colorize the faces of a CubeMap. Helps to locate them in the output (for debugging).",
 	  REGS_OpIconString = "CMC",
     REG_Source_GlobalCtrls = true,
