@@ -95,20 +95,26 @@ KernelCode =
 
 #define PI 3.1415926f //const float PI = 3.1415926f;
 
-__DEVICE__ mat3 rotX(float theta){
-    float s = _sinf(theta);
-    float c = _cosf(theta);
+
+
+__DEVICE__ mat3 rotX(float theta) {
+
+  float s = _sinf(theta);
+  float c = _cosf(theta);
 
   mat3 m =
         mat3( 1, 0,  0,
               0, c,  -s,
               0, s,  c);
-    return m;
+  return m;
 }
 
-__DEVICE__ mat3 rotY(float theta){
-    float s = _sinf(theta);
-    float c = _cosf(theta);
+
+
+__DEVICE__ mat3 rotY(float theta) {
+
+  float s = _sinf(theta);
+  float c = _cosf(theta);
 
   mat3 m =
         mat3( c, 0, -s,
@@ -117,20 +123,7 @@ __DEVICE__ mat3 rotY(float theta){
     return m;
 }
 
-__DEVICE__ mat3 rotZ(float theta){
-    float s = _sinf(theta);
-    float c = _cosf(theta);
 
-  mat3 m =
-        mat3( c, -s, 0,
-              s, c,  0,
-              0, 0,  1);
-    return m;
-}
-
-__DEVICE__ float deg2rad(float deg){
-    return deg*PI / 180.0f;
-}
 
 __KERNEL__ void CubeMapEquirectangularKernel(
     __CONSTANTREF__ Params*   params,
@@ -138,6 +131,8 @@ __KERNEL__ void CubeMapEquirectangularKernel(
     __TEXTURE2D_WRITE__       output
 )
 {
+  // Mapping from spherical coordinates to cartesian 3D coordinates, which is then used as normals/tcoords for a cube map. Use posX and posY to move around.
+
    DEFINE_KERNEL_ITERATORS_XY(x, y);
 
   float w = params->width;
@@ -146,55 +141,41 @@ __KERNEL__ void CubeMapEquirectangularKernel(
   if (x >= w || y >= h)
     return;
 
-  float2 iResolution = to_float2(w,h);
-  float2 fragCoord   = to_float2(x,y);
+  float posU = params->posx; // [0,1]
+  float posV = params->posy; // [0,1]
 
-
-  float  POSX = params->posx;
-  float  POSY = params->posy;
-  float  FOVX = params->fovx;
-  float  FOVY = params->fovy;
+  float fovX = params->fovx * PI / 180.0f;   // deg2rad(FOVX);
+  float fovY = params->fovy * PI / 180.0f;   // deg2rad(FOVY);
 
   // --------
 
 
+  float u = x / w;        // [0,1]
+  float v = 1.0f - y / h; // [0,1]
 
-  float2 interp = fragCoord / iResolution;
-    //Mouse coordinates in [-1, 1] range
-    float2 mp=to_float2(POSX,POSY);
+  //360 degrees around the x-axis, 180 degrees on the y-axis
+  //The frustum can be split into several parts:
+  //The very top is +y, the north pole, and the very bottom
+  //is -y, i.e the south pole.
+  //The middle consists of +z, -z, +x and -x, where -z
+  //is the center of the frustum, and the left and right
+  //frustum edges show +z, i.e what is behind you
 
-    interp.y = 1.0f - interp.y;
-    mp.y = 1.0f - mp.y;
+  float hOffset = (2.0f*PI - fovX)*0.5f;
+  float vOffset = (PI - fovY)*0.5f;
+  float hAngle = hOffset + u * fovX;
+  float vAngle = vOffset + v * fovY;
+  float3 n;
+  n.x = _sinf(vAngle) * _sinf(hAngle);
+  n.y = _cosf(vAngle);
+  n.z = _sinf(vAngle) * _cosf(hAngle);
 
-    //360 degrees around the x-axis, 180 degrees on the y-axis
-    //The frustum can be split into several parts:
-    //The very top is +y, the north pole, and the very bottom
-    //is -y, i.e the south pole.
-    //The middle consists of +z, -z, +x and -x, where -z
-    //is the center of the frustum, and the left and right
-    //frustum edges show +z, i.e what is behind you
-
-    float fovX = deg2rad(FOVX);
-    float fovY = deg2rad(FOVY);
-    float hOffset = (2.0f*PI - fovX)*0.5f;
-    float vOffset = (PI - fovY)*0.5f;
-    float hAngle = hOffset + interp.x * fovX;
-    float vAngle = vOffset + interp.y * fovY;
-    float3 n;
-    n.x = _sinf(vAngle) * _sinf(hAngle);
-    n.y = _cosf(vAngle);
-    n.z = _sinf(vAngle) * _cosf(hAngle);
-
-    //Normal pitch-yaw camera controlled with the mouse
-    n = rotY(mp.x * 2.0f * PI) * rotX(mp.y * 2.0f * PI) * n;
-
-    float4 color;
-
-    color = cubemap(input,n);
+  //Normal pitch-yaw camera controlled with the mouse
+  n = rotY(posU * 2.0f * PI) * rotX(posV * 2.0f * PI) * n;
 
 
 
-  _tex2DVec4Write(output, x, y, color);
+  _tex2DVec4Write(output, x, y, cubemap(input,n));
 }
 ]]
 -- /*
@@ -210,35 +191,39 @@ function Create()
 
   InImage = self:AddInput( "Input",  "image",  { LINKID_DataType = "Image", LINK_Main = 1, INP_Required = false  })
 
-  InPOSXSlider = self:AddInput("Pos X", "posx", {
+  InPOSXSlider = self:AddInput("Position U", "u", {
       LINKID_DataType    = "Number",
       INPID_InputControl = "SliderControl",
-      INP_MinScale       = -1.0,
+      -- INP_MinScale       = -1.0,
+      INP_MinScale       = 0.0,
       INP_MaxScale       = 1.0,
       INP_Default        = 0.0,
   })
 
-  InPOSYSlider = self:AddInput("Pos Y", "posy", {
+  InPOSYSlider = self:AddInput("Position V", "v", {
       LINKID_DataType    = "Number",
       INPID_InputControl = "SliderControl",
-      INP_MinScale       = -1.0,
+      -- INP_MinScale       = -1.0,
+      INP_MinScale       = 0.0,
       INP_MaxScale       = 1.0,
       INP_Default        = 0.0,
   })
 
-  InFOVXSlider = self:AddInput("FoV X", "fovx", {
+  InFOVXSlider = self:AddInput("Field of View X", "fovx", {
       LINKID_DataType    = "Number",
       INPID_InputControl = "SliderControl",
       INP_MinScale       = 0.0,
-      INP_MaxScale       = 360.0,
+      -- INP_MaxScale       = 360.0,
+      INP_MaxScale       = 3 * 360,
       INP_Default        = 360.0,
   })
 
-  InFOVYSlider = self:AddInput("FoV Y", "fovy", {
+  InFOVYSlider = self:AddInput("Field of View Y", "fovy", {
       LINKID_DataType    = "Number",
       INPID_InputControl = "SliderControl",
       INP_MinScale       = 0.0,
-      INP_MaxScale       = 360.0,
+      -- INP_MaxScale       = 360.0,
+      INP_MaxScale       = 3 * 360,
       INP_Default        = 180.0,
   })
 
