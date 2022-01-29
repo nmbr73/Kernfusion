@@ -1,5 +1,11 @@
 # Fuses
 
+The fuses in this repository are not meant to provide any 'production ready' functionality or to be actually used in Fusion. It's more about having a simple example to show a single aspect without getting lost in tons of code that has all the bells and whistles. On the contrary, it is even about avoiding all the comfy inspector controls and options that would bloat the code.
+
+If you search for a specific aspect implemented in one of these Fuses (see the readme and try the Fuse), then working with it is probably not about using the Fuse, but about reading and reusing the code for your own Fuse. Completely new to the whole subject matter of VFx, I'm myself currently learning only the very basics of Fusion scripting (I did not even use Fusion, Python, Lua, Git, etc before). And this repository just is kind of my personal notebook to have a kind of reference at hand for my findings on that path. Maybe it can be of help for another noob like me out there on the search for some basic information.
+
+All of this is in a very early stage / not much in here yet; so far I started working on ...
+
 - **[CubeMapLoader](CubeMapLoader.md)** to load a sequence of 6 images as a single texture
 - **[CubeMapUnfold](CubeMapUnfold.md)** DCTL non-sense (was just to develop and debug the the shader access to a cube map texture)
 - **[CubeMapColorizer](CubeMapColorizer.md)** colorize the faces of a cube by different colors (via DCTL)
@@ -24,7 +30,7 @@ Set PROJECTS to whatever folder you want to clone the project into:
 
 ### on Windows
 
-No idea. Did that once for the [Shadertoys](https://nmbr73.github.io/Shadertoys/) setup script, but I don't have a PC and softlinks seem to me pretty weird.
+No idea. Did that once for the [Shadertoys](https://nmbr73.github.io/Shadertoys/) setup script, but I don't have a PC and softlinks seem to me pretty weird on Windows.
 
 ### on Linux
 
