@@ -41,24 +41,46 @@ FuRegisterClass("CubeMapLayout_nmbr73", CT_SourceTool, {
 --
 function Create()
 
-  InLayout = self:AddInput("Layout", "Layout", {
+
+  local layouts = {
+    { MBTNC_AddButton = "Horizontal Cross (Pixar)", MBTNCD_ButtonWidth = 1, MBTNCS_ToolTip = "Horizontal Cross (Pixar)"         },
+    { MBTNC_AddButton = "Vertical Cross",           MBTNCD_ButtonWidth = 1, MBTNCS_ToolTip = "Vertical Cross",                  },
+    { MBTNC_AddButton = "Row (UE4)",                MBTNCD_ButtonWidth = 0.5, MBTNCS_ToolTip = "Row / Horizontal Strip (NVIDIA / Unreal Engine 4)"  },
+    { MBTNC_AddButton = "Column (OpenEXR)",         MBTNCD_ButtonWidth = 0.5, MBTNCS_ToolTip = "Column / Vertical Strip (OpenEXR)" },
+    { MBTNC_AddButton = "Horizontal T",             MBTNCD_ButtonWidth = 0.5, MBTNCS_ToolTip = "Horizontal T",                    },
+    { MBTNC_AddButton = "Vertical T",               MBTNCD_ButtonWidth = 0.5, MBTNCS_ToolTip = "Vertical T",                      },
+    { MBTNC_AddButton = "3x2 (TIFF)",               MBTNCD_ButtonWidth = 0.5, MBTNCS_ToolTip = "TIFF",                            },
+    { MBTNC_AddButton = "3x2 (Facebook)",           MBTNCD_ButtonWidth = 0.5, MBTNCS_ToolTip = "Facebook",                        },
+  }
+
+  InLayout = self:AddInput("Input Layout", "FromLayout", {
     INPID_InputControl = "MultiButtonControl",
     LINKID_DataType = "Number",
-    INP_Default = 6,
+    INP_Default = 0,
+    -- MBTNC_ForceButtons = true,
+    -- IC_NoLabel = true,
+    IC_NoReset = true,
+    layouts
+  })
+
+
+  OutLayout = self:AddInput("Output Layout", "ToLayout", {
+    INPID_InputControl = "MultiButtonControl",
+    LINKID_DataType = "Number",
+    INP_Default = 0,
     -- MBTNC_ForceButtons = true,
     -- IC_NoLabel = true,
     IC_NoReset = true,
 
-    { MBTNC_AddButton = "Face 0 / +X / right",  },
-    { MBTNC_AddButton = "Face 1 / -X / left",   },
-    { MBTNC_AddButton = "Face 2 / +Y / top",    },
-    { MBTNC_AddButton = "Face 3 / -Y / bottom", },
-    { MBTNC_AddButton = "Face 4 / +Z / front",  },
-    { MBTNC_AddButton = "Face 5 / -Z / back",   },
-    { MBTNC_AddButton = "Horizontal Cross",     },
-    { MBTNC_AddButton = "Vertical Cross",       },
-    { MBTNC_AddButton = "Horizontal Strip",     },
-    { MBTNC_AddButton = "Vertical Strip",       },
+    layouts,
+
+    { MBTNC_AddButton = "Face 0 / +X / right",      MBTNCD_ButtonWidth = 0.5, MBTNCS_ToolTip = "Right (Positive X; Index 0)",     },
+    { MBTNC_AddButton = "Face 1 / -X / left",       MBTNCD_ButtonWidth = 0.5, MBTNCS_ToolTip = "Left (Negative X; Index 1)",      },
+    { MBTNC_AddButton = "Face 2 / +Y / top",        MBTNCD_ButtonWidth = 0.5, MBTNCS_ToolTip = "Top (Positive Y; Index 2)",       },
+    { MBTNC_AddButton = "Face 3 / -Y / bottom",     MBTNCD_ButtonWidth = 0.5, MBTNCS_ToolTip = "Bottom (Negative Y; Index 3)",    },
+    { MBTNC_AddButton = "Face 4 / +Z / front",      MBTNCD_ButtonWidth = 0.5, MBTNCS_ToolTip = "Front (Positive Z; Index 4)",     },
+    { MBTNC_AddButton = "Face 5 / -Z / back",       MBTNCD_ButtonWidth = 0.5, MBTNCS_ToolTip = "Back (Negative Z; Index 5)",      },
+
   })
 
 
@@ -91,36 +113,46 @@ function Process(req)
   local ay = YAspect
   local sd = SourceDepth
 
-  local layout = InLayout:GetValue(req).Value
 
-  local input = InImage:GetValue(req)
+  local input_image   = InImage:GetValue(req)
+
+  if input_image == nil then
+    OutImage:Set(req,nil)
+    return
+  end
+
+  local input_layout  = InLayout:GetValue(req).Value
+  local output_layout = OutLayout:GetValue(req).Value
 
 
 
 
 
-  if input ~= nil then
 
-    fw = input.Width  / 4
-    fh = input.Height / 3
 
-    if layout < 6 then
+
+  if input_image ~= nil then
+
+    fw = input_image.Width  / 4
+    fh = input_image.Height / 3
+
+    if output_layout < 6 then
       -- single face
       w = fw
       h = fh
-    elseif layout == 6 then
+    elseif output_layout == 6 then
       -- horizontal cross
-      w = input.Width
-      h = input.Height
-    elseif layout == 7 then
+      w = input_image.Width
+      h = input_image.Height
+    elseif output_layout == 7 then
       -- vertical cross
       w = fw * 3
       h = fh * 4
-    elseif layout == 8 then
+    elseif output_layout == 8 then
       -- horizontal strip
       w = fw * 6
       h = fh
-    elseif layout == 9 then
+    elseif output_layout == 9 then
       -- vertical strip
       w = fw
       h = fh * 6
@@ -154,16 +186,16 @@ function Process(req)
     face[i]=Image({IMG_Like = face[0], })
   end
 
-  input:Crop(face[0], { CROP_XOffset  = fw*2, CROP_YOffset  = fh, CROP_Width    = fw, CROP_Height   = fh, })
-  input:Crop(face[1], { CROP_XOffset  = 0, CROP_YOffset  = fh, CROP_Width    = fw, CROP_Height   = fh, })
-  input:Crop(face[2], { CROP_XOffset  = fw, CROP_YOffset  = fh*2, CROP_Width    = fw, CROP_Height   = fh, })
-  input:Crop(face[3], { CROP_XOffset  = fw, CROP_YOffset  = 0, CROP_Width    = fw, CROP_Height   = fh, })
-  input:Crop(face[4], { CROP_XOffset  = fw, CROP_YOffset  = fh, CROP_Width    = fw, CROP_Height   = fh, })
-  input:Crop(face[5], { CROP_XOffset  = fw*3, CROP_YOffset  = fh, CROP_Width    = fw, CROP_Height   = fh, })
+  input_image:Crop(face[0], { CROP_XOffset  = fw*2, CROP_YOffset  = fh, CROP_Width    = fw, CROP_Height   = fh, })
+  input_image:Crop(face[1], { CROP_XOffset  = 0, CROP_YOffset  = fh, CROP_Width    = fw, CROP_Height   = fh, })
+  input_image:Crop(face[2], { CROP_XOffset  = fw, CROP_YOffset  = fh*2, CROP_Width    = fw, CROP_Height   = fh, })
+  input_image:Crop(face[3], { CROP_XOffset  = fw, CROP_YOffset  = 0, CROP_Width    = fw, CROP_Height   = fh, })
+  input_image:Crop(face[4], { CROP_XOffset  = fw, CROP_YOffset  = fh, CROP_Width    = fw, CROP_Height   = fh, })
+  input_image:Crop(face[5], { CROP_XOffset  = fw*3, CROP_YOffset  = fh, CROP_Width    = fw, CROP_Height   = fh, })
 
 
 
-  local output = Image({
+  local output_image = Image({
 
     IMG_Document = self.Comp,
     { IMG_Channel = "Red", },
@@ -182,25 +214,25 @@ function Process(req)
 
   })
 
-  output:Fill(Pixel({R=0,G=0,B=0,A=0}))
+  output_image:Fill(Pixel({R=0,G=0,B=0,A=0}))
 
 
-  if req:IsPreCalc() or input == nil then
-    output = Image({IMG_Like = output, IMG_NoData = true})
+  if req:IsPreCalc() or input_image == nil then
+    output_image = Image({IMG_Like = output_image, IMG_NoData = true})
   end
 
 
-  if layout == 6 then
+  if output_layout == 6 then
     -- horizontal cross
 
-    output:OMerge(face[0], fw*2, fh)
-    output:OMerge(face[1], 0, fh)
-    output:OMerge(face[2], fw, fh*2)
-    output:OMerge(face[3], fw, 0)
-    output:OMerge(face[4], fw, fh)
-    output:OMerge(face[5], fw*3, fh)
+    output_image:OMerge(face[0], fw*2, fh)
+    output_image:OMerge(face[1], 0, fh)
+    output_image:OMerge(face[2], fw, fh*2)
+    output_image:OMerge(face[3], fw, 0)
+    output_image:OMerge(face[4], fw, fh)
+    output_image:OMerge(face[5], fw*3, fh)
 
-  elseif layout == 7 then
+  elseif output_layout == 7 then
     -- vertical cross
 
 
@@ -212,12 +244,12 @@ function Process(req)
       XF_Angle    = 180.0,
     }
 
-    output:OMerge(face[0], fw*2, fh*2)
-    output:OMerge(face[1], 0,      fh*2)
-    output:OMerge(face[2], fw, fh*3)
-    output:OMerge(face[3], fw, fh)
-    output:OMerge(face[4], fw, fh*2)
-    output:OMerge(face[5]:Transform(nil, rotate), fw, 0)
+    output_image:OMerge(face[0], fw*2, fh*2)
+    output_image:OMerge(face[1], 0,      fh*2)
+    output_image:OMerge(face[2], fw, fh*3)
+    output_image:OMerge(face[3], fw, fh)
+    output_image:OMerge(face[4], fw, fh*2)
+    output_image:OMerge(face[5]:Transform(nil, rotate), fw, 0)
 
 
 
@@ -226,12 +258,12 @@ function Process(req)
 
 
 
-  if layout < 6 then
+  if output_layout < 6 then
 
-    output = face[layout]
+    output_image = face[output_layout]
 
   end
 
-  OutImage:Set(req,output)
+  OutImage:Set(req,output_image)
 
 end
