@@ -1,0 +1,237 @@
+--- Implements different layouts for a cube map.
+--
+-- See for example https://docs.unity3d.com/Manual/class-Cubemap.html or https://github.com/Microsoft/DirectXTex/wiki/Texassemble
+-- for the horizontal/vertical cross/strip layouts.
+-- See https://tools.bivrost360.com/webplayer-docs/cubemap-facebook.html or https://www.researchgate.net/figure/360-video-projected-as-a-cubemap-Order-of-cube-faces-from-top-left-to-bottom-right-are_fig2_316914613
+-- for the Facebook format.
+--
+-- Maybe a T: https://www.researchgate.net/figure/The-cube-map-generated-by-projecting-the-surrounding-point-cloud-onto-6-faces-of-a-cube_fig2_338879396
+--
+-- https://renderman.pixar.com/resources/RenderMan_20/ptexture.html
+-- https://docs.unrealengine.com/4.27/en-US/RenderingAndGraphics/Textures/Cubemaps/CreatingCubemaps/
+-- https://rmanwiki.pixar.com/display/REN24/txmake
+--
+-- https://community.khronos.org/t/image-orientation-for-cubemaps-actually-a-very-old-topic/105338
+-- https://stackoverflow.com/questions/11685608/convention-of-faces-in-opengl-cubemapping
+
+
+-- ----------------------------------------------------------------------------------------------------------------------------------------
+
+FuRegisterClass("CubeMapLayout_nmbr73", CT_SourceTool, {
+    REGS_Name = "CubeMap Layout",
+	  REGS_Category = "Fuses\\Kernfusion",
+    REGS_OpDescription = "Different layouts for the six faces of a cube map",
+	  REGS_OpIconString = "CML",
+    REG_Source_GlobalCtrls = true,
+    REG_Source_SizeCtrls = true,
+    REG_Source_AspectCtrls = true,
+    REG_Source_DepthCtrls = true,
+	  REG_TimeVariant = false,
+    -- REGS_IconID = "Icons.Tools.Icons.Layout",
+    REGS_Company = "nmbr73",
+	  REGS_URL = "https://nmbr73.github.io/",
+	  REG_Version	= 000001,
+    REG_Fuse_NoEdit = true,
+    REG_Fuse_NoReload = false,
+    })
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+-- Callback to initialize the tool.
+--
+function Create()
+
+  InLayout = self:AddInput("Layout", "Layout", {
+    INPID_InputControl = "MultiButtonControl",
+    LINKID_DataType = "Number",
+    INP_Default = 6,
+    -- MBTNC_ForceButtons = true,
+    -- IC_NoLabel = true,
+    IC_NoReset = true,
+
+    { MBTNC_AddButton = "Face 0 / +X / right",  },
+    { MBTNC_AddButton = "Face 1 / -X / left",   },
+    { MBTNC_AddButton = "Face 2 / +Y / top",    },
+    { MBTNC_AddButton = "Face 3 / -Y / bottom", },
+    { MBTNC_AddButton = "Face 4 / +Z / front",  },
+    { MBTNC_AddButton = "Face 5 / -Z / back",   },
+    { MBTNC_AddButton = "Horizontal Cross",     },
+    { MBTNC_AddButton = "Vertical Cross",       },
+    { MBTNC_AddButton = "Horizontal Strip",     },
+    { MBTNC_AddButton = "Vertical Strip",       },
+  })
+
+
+  InImage   = self:AddInput( "Input",  "Input",  {
+    LINKID_DataType = "Image",
+    LINK_Main = 1,
+    INP_Required = false
+  })
+
+  OutImage  = self:AddOutput( "Output", "Output", {
+    LINKID_DataType = "Image",
+    LINK_Main = 1
+  })
+
+end
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+-- Callback to render the node.
+--
+function Process(req)
+
+  local w = Width
+  local h = Height
+  local fw = Width  / 4
+  local fh = Height / 3
+  local ax = XAspect
+  local ay = YAspect
+  local sd = SourceDepth
+
+  local layout = InLayout:GetValue(req).Value
+
+  local input = InImage:GetValue(req)
+
+
+
+
+
+  if input ~= nil then
+
+    fw = input.Width  / 4
+    fh = input.Height / 3
+
+    if layout < 6 then
+      -- single face
+      w = fw
+      h = fh
+    elseif layout == 6 then
+      -- horizontal cross
+      w = input.Width
+      h = input.Height
+    elseif layout == 7 then
+      -- vertical cross
+      w = fw * 3
+      h = fh * 4
+    elseif layout == 8 then
+      -- horizontal strip
+      w = fw * 6
+      h = fh
+    elseif layout == 9 then
+      -- vertical strip
+      w = fw
+      h = fh * 6
+    end
+
+  end
+
+  local face = {}
+
+  face[0]=Image({
+
+    IMG_Document = self.Comp,
+    { IMG_Channel = "Red", },
+    { IMG_Channel = "Green", },
+    { IMG_Channel = "Blue", },
+    { IMG_Channel = "Alpha", },
+    IMG_Width  = fw,
+    IMG_Height = fh,
+    IMG_XScale = ax,
+    IMG_YScale = ay,
+    IMG_Quality = not req:IsQuick(),
+    IMG_MotionBlurQuality = not req:IsNoMotionBlur(),
+    IMG_DeferAlloc = true,
+    IMG_ProxyScale = ( (not req:IsStampOnly()) and 1 or nil),
+    IMG_Depth = ( (sd~=0) and sd or nil   )
+  })
+
+  face[0]:Fill(Pixel({R=0,G=0,B=0,A=0}))
+
+  for i = 1,5 do
+    face[i]=Image({IMG_Like = face[0], })
+  end
+
+  input:Crop(face[0], { CROP_XOffset  = fw*2, CROP_YOffset  = fh, CROP_Width    = fw, CROP_Height   = fh, })
+  input:Crop(face[1], { CROP_XOffset  = 0, CROP_YOffset  = fh, CROP_Width    = fw, CROP_Height   = fh, })
+  input:Crop(face[2], { CROP_XOffset  = fw, CROP_YOffset  = fh*2, CROP_Width    = fw, CROP_Height   = fh, })
+  input:Crop(face[3], { CROP_XOffset  = fw, CROP_YOffset  = 0, CROP_Width    = fw, CROP_Height   = fh, })
+  input:Crop(face[4], { CROP_XOffset  = fw, CROP_YOffset  = fh, CROP_Width    = fw, CROP_Height   = fh, })
+  input:Crop(face[5], { CROP_XOffset  = fw*3, CROP_YOffset  = fh, CROP_Width    = fw, CROP_Height   = fh, })
+
+
+
+  local output = Image({
+
+    IMG_Document = self.Comp,
+    { IMG_Channel = "Red", },
+    { IMG_Channel = "Green", },
+    { IMG_Channel = "Blue", },
+    { IMG_Channel = "Alpha", },
+    IMG_Width  = w,
+    IMG_Height = h,
+    IMG_XScale = ax,
+    IMG_YScale = ay,
+    IMG_Quality = not req:IsQuick(),
+    IMG_MotionBlurQuality = not req:IsNoMotionBlur(),
+    IMG_DeferAlloc = true,
+    IMG_ProxyScale = ( (not req:IsStampOnly()) and 1 or nil),
+    IMG_Depth = ( (sd~=0) and sd or nil   )
+
+  })
+
+  output:Fill(Pixel({R=0,G=0,B=0,A=0}))
+
+
+  if req:IsPreCalc() or input == nil then
+    output = Image({IMG_Like = output, IMG_NoData = true})
+  end
+
+
+  if layout == 6 then
+    -- horizontal cross
+
+    output:OMerge(face[0], fw*2, fh)
+    output:OMerge(face[1], 0, fh)
+    output:OMerge(face[2], fw, fh*2)
+    output:OMerge(face[3], fw, 0)
+    output:OMerge(face[4], fw, fh)
+    output:OMerge(face[5], fw*3, fh)
+
+  elseif layout == 7 then
+    -- vertical cross
+
+
+    local rotate={
+      XF_XOffset  = 0.5,    XF_YOffset  = 0.5,
+      XF_XAxis    = 0.5,    XF_YAxis    = 0.5,
+      XF_XSize    = 1.0,    XF_YSize    = 1.0,
+      XF_EdgeMode = 'Black',
+      XF_Angle    = 180.0,
+    }
+
+    output:OMerge(face[0], fw*2, fh*2)
+    output:OMerge(face[1], 0,      fh*2)
+    output:OMerge(face[2], fw, fh*3)
+    output:OMerge(face[3], fw, fh)
+    output:OMerge(face[4], fw, fh*2)
+    output:OMerge(face[5]:Transform(nil, rotate), fw, 0)
+
+
+
+  end
+
+
+
+
+  if layout < 6 then
+
+    output = face[layout]
+
+  end
+
+  OutImage:Set(req,output)
+
+end
