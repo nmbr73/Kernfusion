@@ -100,30 +100,232 @@ end
 
 -------------------------------------------------------------------------------------------------------------------------------------------
 
+  SIZE_DIVISORS = { [0] =
+    { w = 4, h = 3 }, -- 0 Horizontal Cross (Pixar)
+    { w = 3, h = 4 }, -- 1 Vertical Cross
+    { w = 6, h = 1 }, -- 2 Row (UE4)
+    { w = 1, h = 6 }, -- 3 Column (OpenEXR)
+    { w = 4, h = 3 }, -- 4 Horizontal T
+    { w = 3, h = 4 }, -- 5 Vertical T
+    { w = 3, h = 2 }, -- 6 3x2 (TIFF)
+    { w = 3, h = 2 }, -- 7 3x2 (Facebook)
+  }
+
+
+  CROP_OFFSETS = { [0] =
+    -- 0 Horizontal Cross (Pixar)
+    { [0] =
+      { x = 2, y = 1 },   -- face 0
+      { x = 0, y = 1 },   -- face 1
+      { x = 1, y = 2 },   -- face 2
+      { x = 1, y = 0 },   -- face 3
+      { x = 1, y = 1 },   -- face 4
+      { x = 3, y = 1 },   -- face 5
+    },
+    -- 1 Vertical Cross
+    { [0] =
+      { x = 2, y = 1 },   -- face 0
+      { x = 0, y = 1 },   -- face 1
+      { x = 1, y = 2 },   -- face 2
+      { x = 1, y = 0 },   -- face 3
+      { x = 1, y = 1 },   -- face 4
+      { x = 1, y = 3 },   -- face 5
+    },
+    -- 2 Row (UE4)
+    { [0] =
+      { x = 0, y = 0 },   -- face 0
+      { x = 1, y = 0 },   -- face 1
+      { x = 2, y = 0 },   -- face 2
+      { x = 3, y = 0 },   -- face 3
+      { x = 4, y = 0 },   -- face 4
+      { x = 5, y = 0 },   -- face 5
+    },
+    -- 3 Column (OpenEXR)
+    { [0] =
+      { x = 0, y = 0 },   -- face 0
+      { x = 0, y = 1 },   -- face 1
+      { x = 0, y = 2 },   -- face 2
+      { x = 0, y = 3 },   -- face 3
+      { x = 0, y = 4 },   -- face 4
+      { x = 0, y = 5 },   -- face 5
+    },
+    -- 4 Horizontal T
+    { [0] =
+      { x = 2, y = 1 },   -- face 0
+      { x = 0, y = 1 },   -- face 1
+      { x = 0, y = 2 },   -- face 2
+      { x = 0, y = 0 },   -- face 3
+      { x = 1, y = 1 },   -- face 4
+      { x = 3, y = 1 },   -- face 5
+    },
+    -- 5 Vertical T
+    { [0] =
+      { x = 2, y = 0 },   -- face 0
+      { x = 0, y = 0 },   -- face 1
+      { x = 1, y = 2 },   -- face 2
+      { x = 1, y = 0 },   -- face 3
+      { x = 1, y = 1 },   -- face 4
+      { x = 1, y = 3 },   -- face 5
+    },
+    -- 6 3x2 (TIFF)
+    { [0] =
+      { x = 0, y = 0 },   -- face 0
+      { x = 0, y = 1 },   -- face 1
+      { x = 1, y = 0 },   -- face 2
+      { x = 1, y = 1 },   -- face 3
+      { x = 2, y = 0 },   -- face 4
+      { x = 2, y = 1 },   -- face 5
+    },
+    -- 7 3x2 (Facebook)
+    { [0] =
+      { x = 0, y = 0 },   -- face 0
+      { x = 1, y = 0 },   -- face 1
+      { x = 2, y = 0 },   -- face 2
+      { x = 0, y = 1 },   -- face 3
+      { x = 1, y = 1 },   -- face 4
+      { x = 2, y = 1 },   -- face 5
+    },
+  }
+
+
 -------------------------------------------------------------------------------------------------------------------------------------------
 -- Callback to render the node.
 --
 function Process(req)
 
-  local w = Width
-  local h = Height
-  local fw = Width  / 4
-  local fh = Height / 3
-  local ax = XAspect
-  local ay = YAspect
-  local sd = SourceDepth
-
 
   local input_image   = InImage:GetValue(req)
 
   if input_image == nil then
+    print("no input connected")
     OutImage:Set(req,nil)
     return
   end
 
+
   local input_layout  = InLayout:GetValue(req).Value
+
+
+
+
+  local face_width  =  input_image.Width  / SIZE_DIVISORS[input_layout]['w']
+  local face_height =  input_image.Height / SIZE_DIVISORS[input_layout]['h']
+
+  -- if input_layout == 0 or input_layout == 4 then
+  --   -- horizontal cross or T
+  --   face_width = input_image.Width  / 4
+  --   face_height = input_image.Height  / 3
+  -- elseif input_layout == 1 or input_layout == 5 then
+  --   -- vertical cross or T
+  --   face_width = input_image.Width  / 3
+  --   face_height = input_image.Height  / 4
+  -- elseif input_layout == 6 or input_layout == 7 then
+  --   -- 3x2 tiff or fb
+  --   face_width = input_image.Width  / 3
+  --   face_height = input_image.Height  / 2
+  -- elseif input_layout == 2 then
+  --   -- row
+  --   face_width = input_image.Width  / 6
+  --   face_height = input_image.Height
+  -- elseif input_layout == 7 then
+  --   -- col
+  --   face_width = input_image.Width
+  --   face_height = input_image.Height / 6
+  -- else
+  --   print("unknown input layout "..input_layout)
+  --   OutImage:Set(req,nil)
+  --   return
+  -- end
+
+  if face_width ~= face_height then
+    print("face width and height must be equal (wxh = "..face_width.."x"..face_height..")")
+    OutImage:Set(req,nil)
+    return
+  end
+
+
+
+
+
+
+  local face = {}
+
+  for i = 0,5 do
+
+    face[i]=Image({
+      IMG_Document = self.Comp,
+      { IMG_Channel = "Red", },
+      { IMG_Channel = "Green", },
+      { IMG_Channel = "Blue", },
+      { IMG_Channel = "Alpha", },
+      IMG_Width  = face_width,
+      IMG_Height = face_height,
+      -- IMG_XScale = 1.0,
+      -- IMG_YScale = 1.0,
+      -- IMG_Quality = not req:IsQuick(),
+      -- IMG_MotionBlurQuality = not req:IsNoMotionBlur(),
+      IMG_DeferAlloc = true,
+      -- IMG_ProxyScale = ( (not req:IsStampOnly()) and 1 or nil),
+      -- IMG_Depth = ( (sd~=0) and sd or nil   )
+    })
+
+    input_image:Crop(face[i], {
+      CROP_XOffset  = face_width * CROP_OFFSETS[input_layout][i]['x'],
+      CROP_YOffset  = face_height * CROP_OFFSETS[input_layout][i]['y'],
+      CROP_Width    = face_width,
+      CROP_Height   = face_height,
+    })
+
+  end
+
+
+
+
+  -- input_image:Crop(face[0], { CROP_XOffset = face_width*2,  CROP_YOffset = face_height,    CROP_Width = face_width,  CROP_Height = face_height, })
+  -- input_image:Crop(face[1], { CROP_XOffset = 0,             CROP_YOffset = face_height,    CROP_Width = face_width,  CROP_Height = face_height, })
+  -- input_image:Crop(face[2], { CROP_XOffset = face_width,    CROP_YOffset = face_height*2,  CROP_Width = face_width,  CROP_Height = face_height, })
+  -- input_image:Crop(face[3], { CROP_XOffset = face_width,    CROP_YOffset = 0,              CROP_Width = face_width,  CROP_Height = face_height, })
+  -- input_image:Crop(face[4], { CROP_XOffset = face_width,    CROP_YOffset = face_height,    CROP_Width = face_width,  CROP_Height = face_height, })
+  -- input_image:Crop(face[5], { CROP_XOffset = face_width*3,  CROP_YOffset = face_height,    CROP_Width = face_width,  CROP_Height = face_height, })
+
+
+
+
+
+
+
+
+
+
+  if input_layout == 0 then
+    -- horizontal cross
+
+    local fw  = Width  / 4
+    local fh  = Height / 3
+
+
+
+
+  elseif input_layout == 0 then
+  end
+
+
+
+
+
+
   local output_layout = OutLayout:GetValue(req).Value
 
+
+
+
+  local w   = Width
+  local h   = Height
+  local fw  = Width  / 4
+  local fh  = Height / 3
+  local ax  = XAspect
+  local ay  = YAspect
+  local sd  = SourceDepth
 
 
 
