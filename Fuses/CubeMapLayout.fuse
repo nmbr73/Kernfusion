@@ -1,5 +1,8 @@
 --- Implements different layouts for a cube map.
 --
+--
+-- Vertical Cross for Skyrim: http://wiki.tesnexus.com/index.php/Creating_cubemaps_for_Skyrim
+--
 -- See for example https://docs.unity3d.com/Manual/class-Cubemap.html or https://github.com/Microsoft/DirectXTex/wiki/Texassemble
 -- for the horizontal/vertical cross/strip layouts.
 -- See https://tools.bivrost360.com/webplayer-docs/cubemap-facebook.html or https://www.researchgate.net/figure/360-video-projected-as-a-cubemap-Order-of-cube-faces-from-top-left-to-bottom-right-are_fig2_316914613
@@ -13,6 +16,9 @@
 --
 -- https://community.khronos.org/t/image-orientation-for-cubemaps-actually-a-very-old-topic/105338
 -- https://stackoverflow.com/questions/11685608/convention-of-faces-in-opengl-cubemapping
+
+
+-- https://blenderartists.org/t/cubemap-setup-in-bge/523185
 
 
 -- ----------------------------------------------------------------------------------------------------------------------------------------
@@ -124,12 +130,12 @@ end
     },
     -- 1 Vertical Cross
     { [0] =
-      { x = 2, y = 1 },   -- face 0
-      { x = 0, y = 1 },   -- face 1
-      { x = 1, y = 2 },   -- face 2
-      { x = 1, y = 0 },   -- face 3
-      { x = 1, y = 1 },   -- face 4
-      { x = 1, y = 3 },   -- face 5
+      { x = 2, y = 2 },   -- face 0
+      { x = 0, y = 2 },   -- face 1
+      { x = 1, y = 3 },   -- face 2
+      { x = 1, y = 1 },   -- face 3
+      { x = 1, y = 2 },   -- face 4
+      { x = 1, y = 0 },   -- face 5
     },
     -- 2 Row (UE4)
     { [0] =
@@ -142,12 +148,12 @@ end
     },
     -- 3 Column (OpenEXR)
     { [0] =
-      { x = 0, y = 0 },   -- face 0
-      { x = 0, y = 1 },   -- face 1
-      { x = 0, y = 2 },   -- face 2
-      { x = 0, y = 3 },   -- face 3
-      { x = 0, y = 4 },   -- face 4
-      { x = 0, y = 5 },   -- face 5
+      { x = 0, y = 5 },   -- face 0
+      { x = 0, y = 4 },   -- face 1
+      { x = 0, y = 3 },   -- face 2
+      { x = 0, y = 2 },   -- face 3
+      { x = 0, y = 1 },   -- face 4
+      { x = 0, y = 0 },   -- face 5
     },
     -- 4 Horizontal T
     { [0] =
@@ -160,30 +166,30 @@ end
     },
     -- 5 Vertical T
     { [0] =
-      { x = 2, y = 0 },   -- face 0
-      { x = 0, y = 0 },   -- face 1
-      { x = 1, y = 2 },   -- face 2
-      { x = 1, y = 0 },   -- face 3
-      { x = 1, y = 1 },   -- face 4
-      { x = 1, y = 3 },   -- face 5
+      { x = 2, y = 3 },   -- face 0
+      { x = 0, y = 3 },   -- face 1
+      { x = 1, y = 3 },   -- face 2
+      { x = 1, y = 1 },   -- face 3
+      { x = 1, y = 2 },   -- face 4
+      { x = 1, y = 0 },   -- face 5
     },
     -- 6 3x2 (TIFF)
     { [0] =
-      { x = 0, y = 0 },   -- face 0
-      { x = 0, y = 1 },   -- face 1
-      { x = 1, y = 0 },   -- face 2
-      { x = 1, y = 1 },   -- face 3
-      { x = 2, y = 0 },   -- face 4
-      { x = 2, y = 1 },   -- face 5
+      { x = 0, y = 1 },   -- face 0
+      { x = 0, y = 0 },   -- face 1
+      { x = 1, y = 1 },   -- face 2
+      { x = 1, y = 0 },   -- face 3
+      { x = 2, y = 1 },   -- face 4
+      { x = 2, y = 0 },   -- face 5
     },
     -- 7 3x2 (Facebook)
     { [0] =
-      { x = 0, y = 0 },   -- face 0
-      { x = 1, y = 0 },   -- face 1
-      { x = 2, y = 0 },   -- face 2
-      { x = 0, y = 1 },   -- face 3
-      { x = 1, y = 1 },   -- face 4
-      { x = 2, y = 1 },   -- face 5
+      { x = 0, y = 1 },   -- face 0
+      { x = 1, y = 1 },   -- face 1
+      { x = 2, y = 1 },   -- face 2
+      { x = 0, y = 0 },   -- face 3
+      { x = 1, y = 0 },   -- face 4
+      { x = 2, y = 0 },   -- face 5
     },
   }
 
