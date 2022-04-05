@@ -1,6 +1,9 @@
 # Ignore Fusion's automagically generated composition files
 Comp/*.autocomp
 
+# Ignore Obsidian-Files
+ConFusion/.obsidian/*
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

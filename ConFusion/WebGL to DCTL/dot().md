@@ -1,0 +1,1 @@
+No restrictions are known in Cuda and OpenCl so far. ```dot()``` can be accepted without changes

@@ -1,0 +1,1 @@
+No restrictions are known in Cuda and OpenCl so far. ```clamp(variable, min, max)``` can be accepted without changes
