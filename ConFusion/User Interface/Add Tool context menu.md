@@ -1,0 +1,1 @@
+On top of the context menu of your composition's [[Node panel]] you'll find the 'Add Tool' menu item to add a [[Tool]] to your composition. Alternatively you can add a Tool via the [[Effects panel]], the [[Tools menu]], or the [[Select Tool dialog]].

@@ -1,3 +1,7 @@
+---
+tags: [reference]
+---
+
 ## bit
 * [[Script/Library/bit/rol|rol]]
 * [[Script/Library/bit/rshift|rshift]]
@@ -98,3 +102,4 @@
 * [[Script/Library/os/time|time]]
 * [[Script/Library/os/clock|clock]]
 * [[Script/Library/os/tmpname|tmpname]]
+

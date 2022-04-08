@@ -1,11 +1,10 @@
-**Use [Obsidian](https://obsidian.md) to edit files in here. To do so just open this folder as a vault.**
-
-- Clone this repository
-  - Do a `git clone https://github.com/nmbr73/Kernfusion`
-- In Obsidian
-  - Select "Open folder as vault"
-  - Chose the 'ConFusion' subdirectory
-
+> Use [Obsidian](https://obsidian.md) to edit files in here. To do so just open this folder as a vault.
+>
+> - Clone this repository
+>   - Do a `git clone https://github.com/nmbr73/Kernfusion`
+> - In Obsidian
+>   - Select "Open folder as vault"
+>   - Chose the 'ConFusion' subdirectory
 
 -----
 

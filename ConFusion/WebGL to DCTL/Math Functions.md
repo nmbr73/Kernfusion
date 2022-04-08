@@ -1,3 +1,7 @@
+---
+tags: [reference]
+---
+
 Most shader languages are based on some kind of C and thereby seem to inherit a good bunch of the well known `math.h` functions. On the other hand does GLSL define additional functions which don't come with the C standard libraries, or it uses features like overloading, which leads to problems when a function like `sin()` is defined as `sin(float)` as well as for `sin(double)` - in these cases DCTL avoids the ambiguity by providing explicit functions to determine the required variant - in the example a `_sinf()` works for a float parameter and only a float parameter.
 
 

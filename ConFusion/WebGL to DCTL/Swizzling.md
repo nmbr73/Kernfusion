@@ -73,7 +73,7 @@ With these ugly little helpers you can make for example a ...
 ```C
 dir.yz=prod_float2_mat2(swiyz(dir),to_mat2(_cosf(an),_sinf(an),-_sinf(an),_cosf(an)));
 ```
-that would compile neither on OpenCL nor on Cude, a
+that would compile neither on OpenCL nor on CUDA, a
 ```C
 lswiyz(dir,prod_float2_mat2(swiyz(dir),to_mat2(_cosf(an),_sinf(an),-_sinf(an),_cosf(an))));
 ```
