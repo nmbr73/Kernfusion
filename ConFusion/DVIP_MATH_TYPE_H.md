@@ -1,7 +1,9 @@
 ```C
 #define DVIP_MATH_TYPE_H
+```
 
 
+```C
 #ifndef DEVICE_IS_OPENCL
 namespace DAVINCIIP_NAMESPACE {
 #endif
@@ -26,7 +28,9 @@ typedef struct TransformMatrixI
 
 #endif
 
-    #ifdef DEVICE_IS_CUDA
+
+
+#ifdef DEVICE_IS_CUDA
 
 
 
@@ -43,214 +47,72 @@ typedef unsigned short ushort;
 #endif
 
 #ifndef __CUDACC__
-
-
-
-
-
-inline float fminf(float a, float b)
-{
-    return a < b ? a : b;
-}
-
-inline float fmaxf(float a, float b)
-{
-    return a > b ? a : b;
-}
-
-inline int max(int a, int b)
-{
-    return a > b ? a : b;
-}
-
-inline int min(int a, int b)
-{
-    return a < b ? a : b;
-}
-
-inline float rsqrtf(float x)
-{
-    return 1.0f / sqrtf(x);
-}
+inline float fminf(float a, float b) { return a < b ? a : b; }
+inline float fmaxf(float a, float b) { return a > b ? a : b; }
+inline int max(int a, int b) { return a > b ? a : b; }
+inline int min(int a, int b) { return a < b ? a : b; }
+inline float rsqrtf(float x) { return 1.0f / sqrtf(x); }
 #endif
 
 
+```
+
+```
+inline __host__ __device__ <T>2 make_<TYPE>2(<TYPE> s)
+````
 
 
+```C
+float2 make_float2(float s) // x=y=s
+float2 make_float2(float3 a) //x=a.x, y=a.y
+float2 make_float2(int2 a) //x=a.x, y=a.y
+float2 make_float2(uint2 a) //x=a.x, y=a.y
 
-inline __host__ __device__ float2 make_float2(float s)
-{
-    return make_float2(s, s);
-}
-inline __host__ __device__ float2 make_float2(float3 a)
-{
-    return make_float2(a.x, a.y);
-}
-inline __host__ __device__ float2 make_float2(int2 a)
-{
-    return make_float2(float(a.x), float(a.y));
-}
-inline __host__ __device__ float2 make_float2(uint2 a)
-{
-    return make_float2(float(a.x), float(a.y));
-}
+int2 make_int2(int s) // x=y=s
+int2 make_int2(int3 a) // x=a.x, y=a.y
+int2 make_int2(uint2 a) // x=a.x, y=a.y
+int2 make_int2(float2 a) // x=a.x, y=a.y
 
-inline __host__ __device__ int2 make_int2(int s)
-{
-    return make_int2(s, s);
-}
-inline __host__ __device__ int2 make_int2(int3 a)
-{
-    return make_int2(a.x, a.y);
-}
-inline __host__ __device__ int2 make_int2(uint2 a)
-{
-    return make_int2(int(a.x), int(a.y));
-}
-inline __host__ __device__ int2 make_int2(float2 a)
-{
-    return make_int2(int(a.x), int(a.y));
-}
+uint2 make_uint2(uint s) // x=y=s
+uint2 make_uint2(uint3 a) // x=a.x, y=a.y
+uint2 make_uint2(int2 a) // x=a.x, y=a.y
 
-inline __host__ __device__ uint2 make_uint2(uint s)
-{
-    return make_uint2(s, s);
-}
-inline __host__ __device__ uint2 make_uint2(uint3 a)
-{
-    return make_uint2(a.x, a.y);
-}
-inline __host__ __device__ uint2 make_uint2(int2 a)
-{
-    return make_uint2(uint(a.x), uint(a.y));
-}
+float3 make_float3(float s) // x=y=z=s
+float3 make_float3(float2 a) // x=a.x, y=a.y, z=0
+float3 make_float3(float2 a, float s) // x=a.x, y=a.y, z=s
+float3 make_float3(float4 a) // x=a.x, y=a.y, z=a.z
+float3 make_float3(int3 a) // x=a.x, y=a.y, z=a.z
+float3 make_float3(uint3 a) // x=a.x, y=a.y, z=a.z
 
-inline __host__ __device__ float3 make_float3(float s)
-{
-    return make_float3(s, s, s);
-}
-inline __host__ __device__ float3 make_float3(float2 a)
-{
-    return make_float3(a.x, a.y, 0.0f);
-}
-inline __host__ __device__ float3 make_float3(float2 a, float s)
-{
-    return make_float3(a.x, a.y, s);
-}
-inline __host__ __device__ float3 make_float3(float4 a)
-{
-    return make_float3(a.x, a.y, a.z);
-}
-inline __host__ __device__ float3 make_float3(int3 a)
-{
-    return make_float3(float(a.x), float(a.y), float(a.z));
-}
-inline __host__ __device__ float3 make_float3(uint3 a)
-{
-    return make_float3(float(a.x), float(a.y), float(a.z));
-}
+int3 make_int3(int s) // x=y=z=s
+int3 make_int3(int2 a) // x=a.x, y=a.y, z=0
+int3 make_int3(int2 a, int s) // x=a.x, y=a.y, z=s
+int3 make_int3(uint3 a) // x=a.x, y=a.y, z=a.z
+int3 make_int3(float3 a) // x=a.x, y=a.y, z=a.z
 
-inline __host__ __device__ int3 make_int3(int s)
-{
-    return make_int3(s, s, s);
-}
-inline __host__ __device__ int3 make_int3(int2 a)
-{
-    return make_int3(a.x, a.y, 0);
-}
-inline __host__ __device__ int3 make_int3(int2 a, int s)
-{
-    return make_int3(a.x, a.y, s);
-}
-inline __host__ __device__ int3 make_int3(uint3 a)
-{
-    return make_int3(int(a.x), int(a.y), int(a.z));
-}
-inline __host__ __device__ int3 make_int3(float3 a)
-{
-    return make_int3(int(a.x), int(a.y), int(a.z));
-}
+uint3 make_uint3(uint s) // x=y=z=s
+uint3 make_uint3(uint2 a) // x=a.x, y=a.y, z=0
+uint3 make_uint3(uint2 a, uint s) // x=a.x, y=a.y, z=s
+uint3 make_uint3(uint4 a) // x=a.x, y=a.y, z=a.z
+uint3 make_uint3(int3 a) // x=a.x, y=a.y, z=a.z
 
-inline __host__ __device__ uint3 make_uint3(uint s)
-{
-    return make_uint3(s, s, s);
-}
-inline __host__ __device__ uint3 make_uint3(uint2 a)
-{
-    return make_uint3(a.x, a.y, 0);
-}
-inline __host__ __device__ uint3 make_uint3(uint2 a, uint s)
-{
-    return make_uint3(a.x, a.y, s);
-}
-inline __host__ __device__ uint3 make_uint3(uint4 a)
-{
-    return make_uint3(a.x, a.y, a.z);
-}
-inline __host__ __device__ uint3 make_uint3(int3 a)
-{
-    return make_uint3(uint(a.x), uint(a.y), uint(a.z));
-}
+float4 make_float4(float s) // x=y=z=w=s
+float4 make_float4(float3 a) // x=a.x, y=a.y, z=a.z, w=0
+float4 make_float4(float3 a, float s) // x=a.x, y=a.y, z=a.z, w=s
+float4 make_float4(int4 a) // x=a.x, y=a.y, z=a.z, w=a.w
+float4 make_float4(uint4 a) // x=a.x, y=a.y, z=a.z, w=a.w
 
-inline __host__ __device__ float4 make_float4(float s)
-{
-    return make_float4(s, s, s, s);
-}
-inline __host__ __device__ float4 make_float4(float3 a)
-{
-    return make_float4(a.x, a.y, a.z, 0.0f);
-}
-inline __host__ __device__ float4 make_float4(float3 a, float w)
-{
-    return make_float4(a.x, a.y, a.z, w);
-}
-inline __host__ __device__ float4 make_float4(int4 a)
-{
-    return make_float4(float(a.x), float(a.y), float(a.z), float(a.w));
-}
-inline __host__ __device__ float4 make_float4(uint4 a)
-{
-    return make_float4(float(a.x), float(a.y), float(a.z), float(a.w));
-}
-
-inline __host__ __device__ int4 make_int4(int s)
-{
-    return make_int4(s, s, s, s);
-}
-inline __host__ __device__ int4 make_int4(int3 a)
-{
-    return make_int4(a.x, a.y, a.z, 0);
-}
-inline __host__ __device__ int4 make_int4(int3 a, int w)
-{
-    return make_int4(a.x, a.y, a.z, w);
-}
-inline __host__ __device__ int4 make_int4(uint4 a)
-{
-    return make_int4(int(a.x), int(a.y), int(a.z), int(a.w));
-}
-inline __host__ __device__ int4 make_int4(float4 a)
-{
-    return make_int4(int(a.x), int(a.y), int(a.z), int(a.w));
-}
+int4 make_int4(int s) // x=y=z=w=s
+int4 make_int4(int3 a) // x=a.x, y=a.y, z=a.z, w=0
+int4 make_int4(int3 a, int s) // x=a.x, y=a.y, z=a.z, w=s
+int4 make_int4(uint4 a) // x=a.x, y=a.y, z=a.z, w=a.w
+int4 make_int4(float4 a) // x=a.x, y=a.y, z=a.z, w=a.w
 
 
-inline __host__ __device__ uint4 make_uint4(uint s)
-{
-    return make_uint4(s, s, s, s);
-}
-inline __host__ __device__ uint4 make_uint4(uint3 a)
-{
-    return make_uint4(a.x, a.y, a.z, 0);
-}
-inline __host__ __device__ uint4 make_uint4(uint3 a, uint w)
-{
-    return make_uint4(a.x, a.y, a.z, w);
-}
-inline __host__ __device__ uint4 make_uint4(int4 a)
-{
-    return make_uint4(uint(a.x), uint(a.y), uint(a.z), uint(a.w));
-}
+uint4 make_uint4(uint s)  // x=y=z=w=s
+uint4 make_uint4(uint3 a) // x=a.x, y=a.y, z=a.z, w=0
+uint4 make_uint4(uint3 a, uint s) // x=a.x, y=a.y, z=a.z, w=s
+uint4 make_uint4(int4 a) // x=a.x, y=a.y, z=a.z, w=a.w
 
 
 
