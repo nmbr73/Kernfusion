@@ -234,7 +234,7 @@ function Process(req)
     "Params", ParametersCode
   )
 
-  -- Extern texture or create a new one
+  -- External texture or create a new one
 
   if input==nil then
     input = Image({IMG_Like = output})

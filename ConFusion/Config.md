@@ -1,3 +1,8 @@
+---
+name: 'Config/'
+tags: [reference]
+---
+
 Information and examples can be found here:
 
 -   Hotkey Configuration in Fusion 8: [https://www.steakunderwater.com/wesuckless/viewtopic.php?f=16&t=724](https://www.steakunderwater.com/wesuckless/viewtopic.php?f=16&t=724)

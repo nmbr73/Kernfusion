@@ -1,5 +1,4 @@
-This article is mainly based on [@J-i-P-i](https://github.com/J-i-P-i)'s excellent WSL post "[Convert a Shadertoy WebGL Code to DCTL](https://www.steakunderwater.com/wesuckless/viewtopic.php?f=17&t=4460)" which is the main basis and origin for this whole repository.
-
+This article is mainly based on [@J-i-P-i](https://github.com/J-i-P-i)'s excellent WSL post "[Convert a Shadertoy WebGL Code to DCTL](https://www.steakunderwater.com/wesuckless/viewtopic.php?f=17&t=4460)".
 
 
 ### Show Stoppers

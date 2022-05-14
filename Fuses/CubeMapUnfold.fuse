@@ -23,8 +23,9 @@ IN THE SOFTWARE.
 --]]--
 
 
---- Unfold a horizonzal cross texture to a horizontal cross texture
---
+-- Unfold a horizonzal cross texture into a horizontal cross texture.
+-- So obviously this fuse is of no practical use and exists just for
+-- explanation and testing/debugging purposes.
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------

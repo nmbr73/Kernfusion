@@ -8,6 +8,10 @@
 
 -----
 
+Copied and pasted some stuff from learnnowfx's attemp to build up a wiki. My own notes ... still haven't found the right way to compile the information.
+
+-----
+
 Welcome to the Kernfusion wiki!
 
 Yet nothing usable to be found here ... no, not an attempt to build up some serious documentation, but more my personal notebook / scribbling pad.
