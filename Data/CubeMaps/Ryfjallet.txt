@@ -18,4 +18,4 @@ Notes
 =======
 Files have been renamed and scaled down from 2048x2048 each to 512x512. That's
 to safe some space as a lower resolution is sufficient for demo purposes. But for
-the best quality you consider to download and replace them by the originals.
+the best quality you may want to download and replace them by the original files.
