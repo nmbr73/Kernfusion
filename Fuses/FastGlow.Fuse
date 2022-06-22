@@ -4,13 +4,13 @@ Copyright (c) 2022, Jacob Danell, Ember Light AB
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are met:
+modification, are permitted provided that the following conditions are met: 
 
 1. Redistributions of source code must retain the above copyright notice, this
-   list of conditions and the following disclaimer.
+   list of conditions and the following disclaimer. 
 2. Redistributions in binary form must reproduce the above copyright notice,
    this list of conditions and the following disclaimer in the documentation
-   and/or other materials provided with the distribution.
+   and/or other materials provided with the distribution. 
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
 ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
@@ -111,7 +111,7 @@ FuRegisterClass("FastGlow", CT_Tool, {
     REG_NoObjMatCtrls       = false,
     REG_NoBlendCtrls        = false,
     })
-
+    
 function Create()
     InViewMode = self:AddInput("View Mode", "ViewMode", {
         LINKID_DataType = "Number",
@@ -145,7 +145,7 @@ function Create()
         INPID_InputControl = "SeparatorControl",
         })
 
-
+    
 
     InSpread = self:AddInput("Spread", "Spread", {
         LINKID_DataType = "Number",
@@ -154,7 +154,7 @@ function Create()
         INP_MinScale   = 0.0,
         INP_MaxScale   = 20.0,
         INP_MinAllowed = 0.0,
-        INP_Integer    = false,
+        INP_Integer    = false, 
         })
 
     InGain = self:AddInput("Gain", "Gain", {
@@ -183,7 +183,7 @@ function Create()
         INP_MinAllowed = 1,
         INP_MaxScale   = 10,
         INP_MaxAllowed = 10,
-        INP_Integer    = true,
+        INP_Integer    = true, 
         })
 
     InLow = self:AddInput("Low", "Low", {
@@ -193,7 +193,7 @@ function Create()
         IC_ControlGroup = 1,
         IC_ControlID = 0,
         INP_MinScale = 0,
-        INP_MaxScale = 1,
+        INP_MaxScale = 1,    
         })
 
     InHigh = self:AddInput("High", "High", {
@@ -203,7 +203,7 @@ function Create()
         IC_ControlGroup = 1,
         IC_ControlID = 1,
         INP_MinScale = 0,
-        INP_MaxScale = 1,
+        INP_MaxScale = 1,            
         })
 
     self:BeginControlNest("Gradient", "GradientNest", false, {})
@@ -225,8 +225,8 @@ function Create()
         INP_External         = false,
         INP_Passive          = true,
         IC_NoLabel           = false,
-        })
-
+        }) 
+    
     InInterpolation = self:AddInput("Gradient Interpolation Method", "GradientInterpolationMethod", {
         LINKID_DataType      = "FuID",
         INPID_InputControl   = "MultiButtonIDControl",
@@ -262,7 +262,7 @@ function Create()
         INP_MinAllowed = 0.0,
         INP_MaxAllowed = 2.0,
         INP_DoNotifyChanged = true,
-        INP_Integer    = false,
+        INP_Integer    = false, 
         })
 
     InLeft = self:AddInput("Left", "Left", {
@@ -273,7 +273,7 @@ function Create()
         INP_MaxScale   = 1.0,
         INP_MinAllowed   = 0.0,
         INP_MaxAllowed   = 1.0,
-        INP_Integer    = false,
+        INP_Integer    = false, 
         })
 
     InRight = self:AddInput("Right", "Right", {
@@ -284,7 +284,7 @@ function Create()
         INP_MaxScale   = 1.0,
         INP_MinAllowed   = 0.0,
         INP_MaxAllowed   = 1.0,
-        INP_Integer    = false,
+        INP_Integer    = false, 
         })
 
     InTop = self:AddInput("Top", "Top", {
@@ -295,7 +295,7 @@ function Create()
         INP_MaxScale   = 1.0,
         INP_MinAllowed   = 0.0,
         INP_MaxAllowed   = 1.0,
-        INP_Integer    = false,
+        INP_Integer    = false, 
         })
 
     InBottom = self:AddInput("Bottom", "Bottom", {
@@ -306,7 +306,7 @@ function Create()
         INP_MaxScale   = 1.0,
         INP_MinAllowed   = 0.0,
         INP_MaxAllowed   = 1.0,
-        INP_Integer    = false,
+        INP_Integer    = false, 
         })
 
     InController = self:AddInput("Controller", "Controller", {
@@ -324,7 +324,7 @@ function Create()
         INP_MaxScale   = 1.0,
         INP_MinAllowed   = 0.0,
         INP_MaxAllowed   = 1.0,
-        INP_Integer    = false,
+        INP_Integer    = false, 
         })
 
     self:EndControlNest()
@@ -356,7 +356,7 @@ function Create()
         { MBTNC_AddButton = "Canvas"},
         { MBTNC_AddButton = "Wrap"},
         { MBTNC_AddButton = "Duplicate"},
-        { MBTNC_AddButton = "Mirror"},
+        { MBTNC_AddButton = "Mirror"}, 
         })
 
     InGlowOnly = self:AddInput("Glow Only", "GlowOnly", {
@@ -490,7 +490,7 @@ function update_lbrt(req)
         local y = InController:GetValue(req).Y*2
         local yForX = math.abs(y-1) * InNarrow:GetValue(req).Value
         local xForY = math.abs(x-1) * InNarrow:GetValue(req).Value
-
+        
         left = math.max(0, math.min(1, 2 - x - yForX))
         right = math.max(0, math.min(1, x - yForX))
         top = math.max(0, math.min(1, y - xForY))
@@ -625,7 +625,7 @@ function Process(req)
             end
         end
     end
-
+ 
     OutImage:Set(req, output)
     collectgarbage()
 end
@@ -633,7 +633,7 @@ end
 function lumaMask(req, src, depth, matte, low, high)
     local dst = Image{ IMG_Like = src, IMG_Depth = depth}
     local nodeLumaMask = DVIPComputeNode(req, "LumaMaskKernell", LumaMaskKernell, "LumaMaskParamss", LumaMaskParamss)
-
+ 
     local params = nodeLumaMask:GetParamBlock(LumaMaskParamss)
     params.srcDoD[0] = src.DataWindow:Width()
     params.srcDoD[1] = src.DataWindow:Height()
@@ -651,17 +651,17 @@ function lumaMask(req, src, depth, matte, low, high)
     --This gets the values of our sliders from the control panel.
     params.srcCompOrder = src:IsMask() and 1 or 15
     params.maskCompOrder = src:IsMask() and 1 or 15
-
+ 
     nodeLumaMask:SetParamBlock(params)
 
     nodeLumaMask:AddSampler("RowSampler", TEX_FILTER_MODE_LINEAR,TEX_ADDRESS_MODE_BORDER, TEX_NORMALIZED_COORDS_TRUE)
-
+ 
     nodeLumaMask:AddInput("src", src)
     nodeLumaMask:AddInput("matte", matte)
     nodeLumaMask:AddOutput("dst", dst)
-
+ 
     local ok = nodeLumaMask:RunSession(req)
-
+ 
     if not ok then
         dst = nil
         dump(nodeLumaMask:GetErrorLog())
@@ -671,17 +671,17 @@ function lumaMask(req, src, depth, matte, low, high)
 end
 
 function boxesForGauss(sigma, n)  -- standard deviation, number of boxes
-    local wIdeal = math.sqrt((12*sigma*sigma/n)+1)  -- Ideal averaging filter width
+    local wIdeal = math.sqrt((12*sigma*sigma/n)+1)  -- Ideal averaging filter width 
     local wl = math.floor(wIdeal)
     if (wl%2==0) then
         wl = wl - 1
     end
 
     local wu = wl+2
-
+                
     local mIdeal = (12*sigma*sigma - n*wl*wl - 4*n*wl - 3*n)/(-4*wl - 4)
     local m = math.floor(mIdeal + 0.5)
-
+                
     local sizes = {}
 
     for i=1, n do
@@ -702,7 +702,7 @@ function boxBlur_4 (req, src, output, r)
 
     --This calls on our kernel to process the image we created.
     local nodeHKernel = DVIPComputeNode(req, "ComputeWKernell", ComputeWKernell, "ComputeParamss", ComputeParamss)
-
+     
     local params = nodeHKernel:GetParamBlock(ComputeParamss)
     --This gets the values of our sliders from the control panel.
     params.iarr = 1/(r1+r2+1)
@@ -722,20 +722,26 @@ function boxBlur_4 (req, src, output, r)
     params.r1 = r1
     params.r2 = r2
     params.srcCompOrder = src:IsMask() and 1 or 15
-
+ 
     nodeHKernel:SetParamBlock(params)
-
-    local edges = {[0]=TEX_ADDRESS_MODE_BORDER,TEX_ADDRESS_MODE_WRAP,TEX_ADDRESS_MODE_DUPLICATE,TEX_ADDRESS_MODE_MIRROR}
-    local tex_address_mode = edges[InEdges:GetValue(req).Value]
-
+ 
+    local edges = InEdges:GetValue(req).Value
     --This gets the value of our input image for us to modify inside the kernel
-    nodeHKernel:AddSampler("RowSampler", TEX_FILTER_MODE_LINEAR, tex_address_mode, TEX_NORMALIZED_COORDS_TRUE)
+    if edges == 0 then
+        nodeHKernel:AddSampler("RowSampler", TEX_FILTER_MODE_LINEAR,TEX_ADDRESS_MODE_BORDER, TEX_NORMALIZED_COORDS_TRUE)
+    elseif edges == 1 then
+        nodeHKernel:AddSampler("RowSampler", TEX_FILTER_MODE_LINEAR,TEX_ADDRESS_MODE_WRAP, TEX_NORMALIZED_COORDS_TRUE)
+    elseif edges == 2 then
+        nodeHKernel:AddSampler("RowSampler", TEX_FILTER_MODE_LINEAR,TEX_ADDRESS_MODE_DUPLICATE, TEX_NORMALIZED_COORDS_TRUE)
+    elseif edges == 3 then
+        nodeHKernel:AddSampler("RowSampler", TEX_FILTER_MODE_LINEAR,TEX_ADDRESS_MODE_MIRROR, TEX_NORMALIZED_COORDS_TRUE)
+    end
 
     nodeHKernel:AddInput("src", src)
     nodeHKernel:AddOutput("dst", dst1)
-
+ 
     local ok = nodeHKernel:RunSession(req)
-
+ 
     if not ok then
         dst1 = nil
         dump(nodeHKernel:GetErrorLog())
@@ -767,21 +773,29 @@ function boxBlur_4 (req, src, output, r)
     params.r1 = r1
     params.r2 = r2
     params.srcCompOrder = dst1:IsMask() and 1 or 15
-
+ 
     nodeVKernel:SetParamBlock(params)
 
     --This gets the value of our input image for us to modify inside the kernel
-    nodeVKernel:AddSampler("RowSampler", TEX_FILTER_MODE_LINEAR,tex_address_mode, TEX_NORMALIZED_COORDS_TRUE)
-
+    if edges == 0 then
+        nodeVKernel:AddSampler("RowSampler", TEX_FILTER_MODE_LINEAR,TEX_ADDRESS_MODE_BORDER, TEX_NORMALIZED_COORDS_TRUE)
+    elseif edges == 1 then
+        nodeVKernel:AddSampler("RowSampler", TEX_FILTER_MODE_LINEAR,TEX_ADDRESS_MODE_WRAP, TEX_NORMALIZED_COORDS_TRUE)
+    elseif edges == 2 then
+        nodeVKernel:AddSampler("RowSampler", TEX_FILTER_MODE_LINEAR,TEX_ADDRESS_MODE_DUPLICATE, TEX_NORMALIZED_COORDS_TRUE)
+    elseif edges == 3 then
+        nodeVKernel:AddSampler("RowSampler", TEX_FILTER_MODE_LINEAR,TEX_ADDRESS_MODE_MIRROR, TEX_NORMALIZED_COORDS_TRUE)
+    end
+ 
     nodeVKernel:AddInput("src", dst1)
     nodeVKernel:AddOutput("dst", dst2)
-
-    -- local ok = nodeVKernel:RunSession(req)
-
-    -- if not ok then
-    --     dst2 = nil
-    --     dump(nodeVKernel:GetErrorLog())
-    -- end
+ 
+    local ok = nodeVKernel:RunSession(req)
+ 
+    if not ok then
+        dst2 = nil
+        dump(nodeVKernel:GetErrorLog())
+    end
 
     collectgarbage()
     return dst2
@@ -791,7 +805,7 @@ end
 function postProcessBlur(req, src, color)
     local dst = Image{ IMG_Like = src}
     local nodePostProcessBlur = DVIPComputeNode(req, "PostProcessBlurKernell", PostProcessBlurKernell, "PostProcessBlurParamss", PostProcessBlurParamss)
-
+ 
     local params = nodePostProcessBlur:GetParamBlock(PostProcessBlurParamss)
 
     params.srcDoD[0] = src.DataWindow:Width()
@@ -803,14 +817,14 @@ function postProcessBlur(req, src, color)
     params.colorGain[3] = color.A
     --This gets the values of our sliders from the control panel.
     params.srcCompOrder = src:IsMask() and 1 or 15
-
+ 
     nodePostProcessBlur:SetParamBlock(params)
-
+ 
     nodePostProcessBlur:AddInput("src", src)
     nodePostProcessBlur:AddOutput("dst", dst)
-
+ 
     local ok = nodePostProcessBlur:RunSession(req)
-
+ 
     if not ok then
         dst = nil
         dump(nodePostProcessBlur:GetErrorLog())
@@ -823,7 +837,7 @@ end
 function dctlAdd(req, bg, fg, range)
     local dst = Image{ IMG_Like = fg}
     local nodeAdd = DVIPComputeNode(req, "AddKernell", AddKernell, "AddParamss", AddParamss)
-
+ 
     local params = nodeAdd:GetParamBlock(AddParamss)
     params.srcDoD[0] = fg.DataWindow:Width()
     params.srcDoD[1] = fg.DataWindow:Height()
@@ -837,15 +851,15 @@ function dctlAdd(req, bg, fg, range)
     params.srcCompOrder = bg:IsMask() and 1 or 15
 
     nodeAdd:SetParamBlock(params)
-
+ 
     nodeAdd:AddSampler("RowSampler", TEX_FILTER_MODE_LINEAR,TEX_ADDRESS_MODE_BORDER, TEX_NORMALIZED_COORDS_TRUE)
 
     nodeAdd:AddInput("bg", bg)
     nodeAdd:AddInput("fg", fg)
     nodeAdd:AddOutput("dst", dst)
-
+ 
     local ok = nodeAdd:RunSession(req)
-
+ 
     if not ok then
         dst = nil
         dump(nodeAdd:GetErrorLog())
@@ -857,7 +871,7 @@ end
 function dctlDivide(req, src, amount)
     local dst = Image{ IMG_Like = src}
     local nodeDivide = DVIPComputeNode(req, "DivideKernell", DivideKernell, "DivideParamss", DivideParamss)
-
+ 
     local params = nodeDivide:GetParamBlock(DivideParamss)
     params.srcDoD[0] = src.DataWindow:Width()
     params.srcDoD[1] = src.DataWindow:Height()
@@ -865,14 +879,14 @@ function dctlDivide(req, src, amount)
     params.amount = amount
     --This gets the values of our sliders from the control panel.
     params.srcCompOrder = src:IsMask() and 1 or 15
-
+ 
     nodeDivide:SetParamBlock(params)
-
+ 
     nodeDivide:AddInput("src", src)
     nodeDivide:AddOutput("dst", dst)
-
+ 
     local ok = nodeDivide:RunSession(req)
-
+ 
     if not ok then
         dst = nil
         dump(nodeDivide:GetErrorLog())
@@ -894,7 +908,7 @@ LumaMaskParamss = [[
     int srcCompOrder;
     int maskCompOrder;
 ]]
-
+ 
 --This is the GPU kernel, all of the image algorithms happen here.
 LumaMaskKernell = [[
     __KERNEL__ void LumaMaskKernell(
@@ -940,7 +954,7 @@ ComputeParamss = [[
     float iarr;
     int srcCompOrder;
 ]]
-
+ 
 ComputeWKernell = [[
     __DEVICE__ float4 max4f(float4 v, float i) {return to_float4(_fmaxf(v.x,i),_fmaxf(v.y,i),_fmaxf(v.z,i),_fmaxf(v.w,i));}
 
@@ -1037,7 +1051,7 @@ PostProcessBlurParamss = [[
     float colorGain[4];
     int srcCompOrder;
 ]]
-
+ 
 --This is the GPU kernel, all of the image algorithms happen here.
 PostProcessBlurKernell = [[
     __KERNEL__ void PostProcessBlurKernell(
@@ -1081,7 +1095,7 @@ AddParamss = [[
     float imgOffset[2];
     int srcCompOrder;
 ]]
-
+ 
 --This is the GPU kernel, all of the image algorithms happen here.
 AddKernell = [[
     __KERNEL__ void AddKernell(
@@ -1117,7 +1131,7 @@ DivideParamss = [[
     int amount;
     int srcCompOrder;
 ]]
-
+ 
 --This is the GPU kernel, all of the image algorithms happen here.
 DivideKernell = [[
     __KERNEL__ void DivideKernell(
