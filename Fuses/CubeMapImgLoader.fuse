@@ -1,0 +1,318 @@
+--[[--
+
+Copyright (c) 2021 nmbr73 (https://www.youtube.com/c/nmbr73/)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the “Software”), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+
+--]]--
+
+--- Load the six faces of a cube ... WORK IN PROGRESS
+--
+
+
+-- ----------------------------------------------------------------------------------------------------------------------------------------
+
+FuRegisterClass("CubeMapImgLoader_nmbr73", CT_SourceTool, {
+    REGS_Name = "CubeMap Images",
+	  REGS_Category = "Fuses\\Kernfusion",
+    REGS_OpDescription = "Load the six faces of a cube from six seperate image files. Output is a 2D horizontal cross cube map texture. Serves for example as an input fragment shaders that use a cube map. Use the CubeMap (3Cu) tool to test this Fuse.",
+	  REGS_OpIconString = "CMIL",
+    -- REG_Source_GlobalCtrls = true,
+    -- REG_Source_SizeCtrls = true,
+    -- REG_Source_AspectCtrls = true,
+    REG_Source_DepthCtrls = true,
+	  REG_TimeVariant = false,
+    REGS_IconID = "Icons.Tools.Icons.Loader",
+    REGS_Company = "nmbr73",
+	  REGS_URL = "https://nmbr73.github.io/",
+	  REG_Version	= 000001,
+    REG_Fuse_NoEdit = false, -- true,
+    REG_Fuse_NoReload = false, -- true,
+    })
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+HAS_ERRORS        = false
+CURRENT_FILE      = ""
+CURRENT_LAYOUT    = 0
+CURRENT_LOADTYPE  = 0
+TEXTURE_IMAGE     = nil
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+function SetError(msg)
+
+  if msg==nil or msg == '' then
+    InErrorLabel:SetAttrs({LINKS_Name = "", IC_Visible=false })
+  else
+    print(msg)
+    InErrorLabel:SetAttrs({LINKS_Name = '<font color="#f93931">'..msg..'</font>', IC_Visible=true })
+  end
+
+end
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+-- Callback to initialize the tool.
+--
+function Create()
+
+  InFiles= {}
+
+  attrs = {
+    LINKID_DataType = "Text",
+    INPID_InputControl = "FileControl",
+    FC_IsSaver = false,
+    FC_ClipBrowse = true,
+  }
+
+  InFiles[0] = self:AddInput("Face 0 / +X / right",  "file0", attrs )
+  InFiles[1] = self:AddInput("Face 1 / -X / left",   "file1", attrs )
+  InFiles[2] = self:AddInput("Face 2 / +Y / top",    "file2", attrs )
+  InFiles[3] = self:AddInput("Face 3 / -Y / bottom", "file3", attrs )
+  InFiles[4] = self:AddInput("Face 4 / +Z / front",  "file4", attrs )
+  InFiles[5] = self:AddInput("Face 5 / -Z / back",   "file5", attrs )
+
+
+  InErrorLabel = self:AddInput( "Error", "error", {
+    LINKID_DataType = "Text",
+    INPID_InputControl = "LabelControl",
+    LBLC_MultiLine = true,
+    IC_NoReset = true,
+    INP_External = false,
+    INP_Passive = true,
+    -- IC_NoLabel = true,
+    IC_Visible = false,
+  })
+
+
+  OutImage   = self:AddOutput( "Output", "Output", {
+    LINKID_DataType = "Image",
+    LINK_Main = 1
+  })
+
+  -- self:AddControlPage("Image")
+  -- InGlobalIn  = self:AddInput("Global In",  "GlobalIn",  { LINKID_DataType = "Number", })
+  -- InGlobalOut = self:AddInput("Global Out", "GlobalOut", { LINKID_DataType = "Number", })
+
+end
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+function LoadFrame(file, size)
+
+  local frame = Clip(file,false):GetFrame(0)
+
+  if frame == nil then
+    SetError("failed to load file '"..file.."''")
+    return nil
+  end
+
+  if frame.Width ~= frame.Height then
+    SetError("file '"..file.."'' must be a square image")
+    return nil
+  end
+
+  if size ~= nil and frame.Width ~= size then
+    SetError("file '"..file.."'' is not "..size.."x"..size.." and thereby does not match the previous image")
+    return nil
+  end
+
+  return frame
+end
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+function LoadTextures(files,layout)
+
+
+  for i=0,5 do
+
+    if files[i]==nil or files[i]=='' then
+      SetError("please choose image file for face "..i)
+      return
+    end
+
+    if not bmd.fileexists(files[i]) then
+      SetError("no such file '"..files[i].."' for face "..i)
+      return
+    end
+  end
+
+  -- local size = clip:GetFrame(0).Width
+
+  -- for i=0,5 do
+  --   if clip:GetFrame(0).Width~=clip:GetFrame(0).Height or clip:GetFrame(0).Width ~=size then
+  --     setError("images must be squares and all of the same size")
+  --     return
+  --   end
+  -- end
+
+  local frames = {}
+  local size   = nil
+
+  if CURRENT_LAYOUT == 0 or CURRENT_LAYOUT == 1 then
+    frames[0] = LoadFrame(files[0],nil)
+    size  = frames[0].Width
+
+    for i=1,5 do
+      frames[i]=LoadFrame(files[i],size)
+      if frames[i]==nil then
+        return
+      end
+    end
+
+  end
+
+
+
+  TEXTURE_IMAGE = Image({
+    IMG_Document = self.Comp,
+    { IMG_Channel = "Red",    },
+    { IMG_Channel = "Green",  },
+    { IMG_Channel = "Blue",   },
+    { IMG_Channel = "Alpha",  },
+    IMG_Width   = size * 4,
+    IMG_Height  = size * 3,
+    IMG_XScale  = 1.0,
+    IMG_YScale  = 1.0,
+  })
+
+  TEXTURE_IMAGE:Fill(Pixel({R=0,G=0,B=0,A=0}))
+
+
+  TEXTURE_IMAGE:OMerge(frames[1], 0,        size )
+  TEXTURE_IMAGE:OMerge(frames[4], 1*size,   size )
+  TEXTURE_IMAGE:OMerge(frames[0], 2*size,   size )
+  TEXTURE_IMAGE:OMerge(frames[5], 3*size,   size )
+  TEXTURE_IMAGE:OMerge(frames[3],   size, 0      )
+  TEXTURE_IMAGE:OMerge(frames[2],   size, 2*size )
+
+
+end
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+-- Callback to render the node.
+--
+function Process(req)
+
+  local file  = ''
+  local files = {}
+
+  for i=0,5 do
+    files[i]=InFiles[i]:GetValue(req).Value
+  end
+  file = '('..table.concat(files,",")..')'
+
+
+
+  if CURRENT_FILE ~= file then
+
+    CURRENT_FILE = file
+    TEXTURE_IMAGE = nil
+    HAS_ERRORS = false
+    SetError(nil)
+
+    for i=0,5 do
+      files[i]=self.Comp:MapPath(files[i])
+    end
+    LoadTextures(files,layout)
+
+  end
+
+
+
+
+  if TEXTURE_IMAGE ~= nil then
+    OutImage:Set(req,TEXTURE_IMAGE)
+    return
+  end
+
+
+  if not HAS_ERRORS then
+    OutImage:Set(req,nil)
+    HAS_ERRORS = true
+    return
+  end
+
+
+  local dst = Image({
+    IMG_Document = self.Comp,
+    { IMG_Channel = "Red",    },
+    { IMG_Channel = "Green",  },
+    { IMG_Channel = "Blue",   },
+    { IMG_Channel = "Alpha",  },
+    IMG_Width   = 40,
+    IMG_Height  = 30,
+    IMG_XScale  = 1.0,
+    IMG_YScale  = 1.0,
+  })
+
+  dst:Fill(Pixel({R=1.0,G=0,B=0,A=0}))
+
+  if req:IsPreCalc() then
+    dst = Image({IMG_Like = dst, IMG_NoData = true})
+  end
+
+  OutImage:Set(req,dst)
+
+end
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+-- Callback to handle UI control events.
+--
+
+function NotifyChanged(inp, param, time)
+
+  if inp == nil or param == nil then
+    return
+  end
+
+
+  if inp == InLoadType then
+
+    local seq = param.Value == 0
+
+    InFileSelect:SetAttrs({IC_Visible = seq })
+
+    for i=0,5 do
+      InFiles[i]:SetAttrs({IC_Visible = not seq })
+    end
+
+    return
+  end
+
+
+  if inp == InLayoutButton then
+
+    InLayoutInfo:SetAttrs({
+      LINKS_Name = getLayoutInfo(param.Value),
+      INPS_StatusText = "Current layout is "..LAYOUT_INFOS[param.Value],
+    })
+
+    return
+  end
+
+
+end
