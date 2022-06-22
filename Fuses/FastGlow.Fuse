@@ -725,19 +725,11 @@ function boxBlur_4 (req, src, output, r)
 
     nodeHKernel:SetParamBlock(params)
 
-test
+    local edges = {[0]=TEX_ADDRESS_MODE_BORDER,TEX_ADDRESS_MODE_WRAP,TEX_ADDRESS_MODE_DUPLICATE,TEX_ADDRESS_MODE_MIRROR}
+    local tex_address_mode = edges[InEdges:GetValue(req).Value]
 
-    local edges = InEdges:GetValue(req).Value
     --This gets the value of our input image for us to modify inside the kernel
-    if edges == 0 then
-        nodeHKernel:AddSampler("RowSampler", TEX_FILTER_MODE_LINEAR,TEX_ADDRESS_MODE_BORDER, TEX_NORMALIZED_COORDS_TRUE)
-    elseif edges == 1 then
-        nodeHKernel:AddSampler("RowSampler", TEX_FILTER_MODE_LINEAR,TEX_ADDRESS_MODE_WRAP, TEX_NORMALIZED_COORDS_TRUE)
-    elseif edges == 2 then
-        nodeHKernel:AddSampler("RowSampler", TEX_FILTER_MODE_LINEAR,TEX_ADDRESS_MODE_DUPLICATE, TEX_NORMALIZED_COORDS_TRUE)
-    elseif edges == 3 then
-        nodeHKernel:AddSampler("RowSampler", TEX_FILTER_MODE_LINEAR,TEX_ADDRESS_MODE_MIRROR, TEX_NORMALIZED_COORDS_TRUE)
-    end
+    nodeHKernel:AddSampler("RowSampler", TEX_FILTER_MODE_LINEAR, tex_address_mode, TEX_NORMALIZED_COORDS_TRUE)
 
     nodeHKernel:AddInput("src", src)
     nodeHKernel:AddOutput("dst", dst1)
@@ -779,25 +771,17 @@ test
     nodeVKernel:SetParamBlock(params)
 
     --This gets the value of our input image for us to modify inside the kernel
-    if edges == 0 then
-        nodeVKernel:AddSampler("RowSampler", TEX_FILTER_MODE_LINEAR,TEX_ADDRESS_MODE_BORDER, TEX_NORMALIZED_COORDS_TRUE)
-    elseif edges == 1 then
-        nodeVKernel:AddSampler("RowSampler", TEX_FILTER_MODE_LINEAR,TEX_ADDRESS_MODE_WRAP, TEX_NORMALIZED_COORDS_TRUE)
-    elseif edges == 2 then
-        nodeVKernel:AddSampler("RowSampler", TEX_FILTER_MODE_LINEAR,TEX_ADDRESS_MODE_DUPLICATE, TEX_NORMALIZED_COORDS_TRUE)
-    elseif edges == 3 then
-        nodeVKernel:AddSampler("RowSampler", TEX_FILTER_MODE_LINEAR,TEX_ADDRESS_MODE_MIRROR, TEX_NORMALIZED_COORDS_TRUE)
-    end
+    nodeVKernel:AddSampler("RowSampler", TEX_FILTER_MODE_LINEAR,tex_address_mode, TEX_NORMALIZED_COORDS_TRUE)
 
     nodeVKernel:AddInput("src", dst1)
     nodeVKernel:AddOutput("dst", dst2)
 
-    local ok = nodeVKernel:RunSession(req)
+    -- local ok = nodeVKernel:RunSession(req)
 
-    if not ok then
-        dst2 = nil
-        dump(nodeVKernel:GetErrorLog())
-    end
+    -- if not ok then
+    --     dst2 = nil
+    --     dump(nodeVKernel:GetErrorLog())
+    -- end
 
     collectgarbage()
     return dst2
