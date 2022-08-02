@@ -700,6 +700,8 @@ function boxBlur_4 (req, src, output, r)
     local r1 = math.floor((r * left))
     local r2 = math.floor((r * right))
 
+print("left: "..left)
+
     --This calls on our kernel to process the image we created.
     local nodeHKernel = DVIPComputeNode(req, "ComputeWKernell", ComputeWKernell, "ComputeParamss", ComputeParamss)
 
@@ -776,12 +778,12 @@ function boxBlur_4 (req, src, output, r)
     nodeVKernel:AddInput("src", dst1)
     nodeVKernel:AddOutput("dst", dst2)
 
-    -- local ok = nodeVKernel:RunSession(req)
+    local ok = nodeVKernel:RunSession(req)
 
-    -- if not ok then
-    --     dst2 = nil
-    --     dump(nodeVKernel:GetErrorLog())
-    -- end
+    if not ok then
+        dst2 = nil
+        dump(nodeVKernel:GetErrorLog())
+    end
 
     collectgarbage()
     return dst2
