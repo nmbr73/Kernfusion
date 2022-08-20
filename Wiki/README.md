@@ -1,3 +1,10 @@
+
+# This is a (still useless) thingy!
+
+Finding a "how to do this simple thing" all to often seems to be like searching the [VFXPedia](https://www.steakunderwater.com/VFXPedia/96.0.243.189/index4875.html?title=Main_Page) mirror, reading not only multiple articles the information is distributed on, but also the discussion pages, to then jump into some threads on the [wesuckless](https://www.steakunderwater.com/wesuckless/) and [bmd](https://forum.blackmagicdesign.com) forums to finally try a google search to maybe complement the whole picture by some (excellent but ancient) blog posts.
+
+In the long run a MediaWiki like it was initiated by LearnNowFX would be a great solution. But collecting stuff from different sources and taking my own notes, for me personally it's currently easier to do this locally (in particular as long as its not dozens of people working on it). If this turns out to become something useful someday, then it should be not too much of an effort to import it into a Wiki.
+
 > Use [Obsidian](https://obsidian.md) to edit files in here. To do so just open this folder as a vault.
 >
 > - Clone this repository
@@ -6,21 +13,11 @@
 >   - Select "Open folder as vault"
 >   - Chose the 'ConFusion' subdirectory
 
------
+# Welcome to the Kernfusion (yet not a) Wiki!
 
-Copied and pasted some stuff from learnnowfx's attemp to build up a wiki. My own notes ... still haven't found the right way to compile the information.
-
------
-
-Welcome to the Kernfusion wiki!
-
-Yet nothing usable to be found here ... no, not an attempt to build up some serious documentation, but more my personal notebook / scribbling pad.
+Yet nothing usable to be found here ... still nothing more than my personal notebook / scribbling pad.
 
 * [[Event-Functions]]
 * [[AddControlPage]]
 * [[MultiButtonControl]]
 * [[WebGL to DCTL/README|WebGL to DCTL]]
-
-Finding a "how to do this simple thing" all to often seems to be like searching the [VFXPedia](https://www.steakunderwater.com/VFXPedia/96.0.243.189/index4875.html?title=Main_Page) mirror, reading not only multiple articles the information is distributed on, but also the discussion pages, to then jump into some threads on the [wesuckless](https://www.steakunderwater.com/wesuckless/) and [bmd](https://forum.blackmagicdesign.com) forums to finally try a google search to maybe complement the whole picture by some (excellent but ancient) blog posts.
-
-I think there is no chance to compile, and investigate, and update all that documentation - in particular not for a single person. But as I take my notes of some things I find out anyways (at least I try to take some notes if I have to lookup something a second time), why not take them in a wiki - seems to be an okay format to complement and evolve the single articles incrementally and whenever there is a need or something I find out.

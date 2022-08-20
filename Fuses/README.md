@@ -1,8 +1,6 @@
 # Fuses
 
-The fuses in this repository are not meant to provide any 'production ready' functionality or to be actually used in Fusion. It's more about having a simple example to show a single aspect without getting lost in tons of code that has all the bells and whistles. On the contrary, it is even about avoiding all the comfy inspector controls and options that would bloat the code.
-
-If you search for a specific aspect implemented in one of these Fuses (see the readme and try the Fuse), then working with it is probably not about using the Fuse, but about reading and reusing the code for your own Fuse. Completely new to the whole subject matter of VFx, I'm myself currently learning only the very basics of Fusion scripting (I did not even use Fusion, Python, Lua, Git, etc before). And this repository just is kind of my personal notebook to have a kind of reference at hand for my findings on that path. Maybe it can be of help for another noob like me out there on the search for some basic information.
+The Fuses in this repository are not meant to provide any 'production ready' functionality or to be even used in Fusion. It's more of getting some ideas and having a basis for your own experiments. Being myself a noob when it comes to Fusion, Lua, Python and even Git, this repo is actually just my personal playground to persist and evolve some of my findings.
 
 All of this is in a very early stage / not much in here yet; so far I started working on ...
 
