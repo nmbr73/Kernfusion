@@ -1,3 +1,7 @@
+---
+tags:
+- theory
+---
 
 A [Voronoi diagram](https://en.wikipedia.org/wiki/Voronoi_diagram) ....
 

@@ -1,3 +1,6 @@
+---
+tags: [webgl2dctl]
+---
 
 - [The Book of Shaders](https://thebookofshaders.com) a comprehensive and highly recommended guide to Fragment Shaders.
 - [Shadertoy media files](https://shadertoyunofficial.wordpress.com/2019/07/23/shadertoy-media-files/) can be used as Media-In files for Fuses to mimic and test if it matches the original's behavior.

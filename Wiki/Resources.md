@@ -1,9 +1,61 @@
 
-# YouTube Channels 
+# Documentation
 
-> Real names of persons are listed on this page if and only if they are easily accessible on their internet presence anyway. Please make sure that you do not expose any personal data here otherwise!
+- [[Scripting Guide]]
 
-Dedicated DaFusion channels ...
+
+
+# Forums
+
+[We Suck Less](https://steakunderwater.com/wesuckless) - The Friendliest Blackmagic Fusion Studio Community Online.
+
+[The Blackmagic Design Forum](https://forum.blackmagicdesign.com/) - The Official Fusion forum that is managed by the developers
+
+# Facebook Groups
+
+[Fusion for Davinci Resolve Users](https://www.facebook.com/groups/DavinciResolveFusion) - A Group for people using the Fusion page Inside of Davinci Resolve. Managed by yours truly
+
+[Fusion Artists](https://www.facebook.com/groups/blackmagic.fusion) - A Group for Professional Fusion Artists
+
+[Blackmagic Fusion User Group](https://www.facebook.com/groups/1507383929534178) - An Unofficial User Group Where You Can Discuss Fusion, Post Works, Share Info, and Ask for Help
+
+[DaVinci Resolve Fusion](https://www.facebook.com/groups/BlackmagicDesignFusion) - This Group is for DaVinci Resolve Fusion Users. Welcome!
+
+# Discord Servers
+
+[Davinci Resolve Community](https://discord.gg/3HWSHdg7fM) - A Great place to get quick answers to your questions. Managed by Jake Wipp
+
+[Blackmagic Design Community](https://discord.gg/URJpZQQCmx) - A Large Server for Davinci Resolve and Fusion Users
+
+[Pirates of Confusion](https://discord.gg/vnv8yr5gju) - A Ship Server of Professional Fusion VFX Artists
+
+
+# Blogs
+
+There are some really great blogs out there that can help you learn Fusion. Here is a list of some of them:
+
+[Bryan Ray Visual FX](http://www.bryanray.name/wordpress/) - The Everyday Life of Hollywood VFX Artist Bryan Ray
+
+
+# Wikis
+
+- [VFXPedia](https://www.steakunderwater.com/VFXPedia/96.0.243.189/index4875.html?title=Main_Page)
+- [WikiFusion](https://learnnowfx.com/wikifusion/)
+- [DaVinci Resolve Wiki](http://www.davinci-resolve-forum.de/wiki/) (German)
+
+
+# Git Repositories
+
+- [bfloch / fusionscript](https://github.com/bfloch/fusionscript)
+- 
+
+
+# YouTube Channels
+
+> Real names of persons are listed on this page if and only if they are easily accessible on their internet presence anyway. Please make sure that you do not expose any personal information here otherwise!
+
+## Dedicated DaFusion channels ...
+
 * [Blackmagic Design](https://www.youtube.com/channel/UCufB8sMVyP9JEScMjLz74YA) 
 * [William Justice](https://www.youtube.com/channel/UCBHxgQI3JmCKhJuLLEQnnUA) does a lot of crazy stuff in particular with scripting in DaFusion
 * Chris Ridings' [Improving Resolve](https://www.youtube.com/channel/UCATpHEAIqyE2CBpl2Zf847g) is the de facto go to place when it comes to Fusion scripting
@@ -28,16 +80,17 @@ Dedicated DaFusion channels ...
 * [Tida](https://www.youtube.com/channel/UCv3lIVq21UC_a1EUw8QOPZw) demos
 * [Resolve Training](https://www.youtube.com/c/ResolveTraining)
 
-DaFusion and such ...
+## DaFusion and such ...
+
 * Nick Carter is [That Modern Dude](https://www.youtube.com/channel/UCjTGot-9fjpmsH0PO-uOhDA) doing DR tutorials and other stuff
 * [Skyline Motions](https://www.youtube.com/channel/UC1pJ74V_1-wEx5ysN034CaQ) does Ae and DR
 * The [HowToGuy](https://www.youtube.com/channel/UC1JYDR8ZcGlNXMcBFOD_-qA) has single uploads on DR
 * [Creative Video Tips](https://www.youtube.com/c/CreativeVideoTips)
 
 
-# Other Languages
+## Other Languages
 
-## German
+### German
 
 * [MeinVideoStudio](https://www.youtube.com/channel/UChOk9mbWtgR4mLgMv7z3qNQ) does mainly Fusion tutorials
 * [Sofjas DaVinci Tutorials](https://www.youtube.com/channel/UCEAT38aIxoNJN30kvnDVO6w)

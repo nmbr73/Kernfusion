@@ -1,3 +1,7 @@
+---
+tags: [webgl2dctl]
+---
+
 ## Background
 
 WebGL supports the so called *swizzling*. This is to generate a vector out of single and reordered elements of another vector.
