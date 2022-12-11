@@ -1,8 +1,9 @@
-Kartaverse Workflows | Immersive Pipeline Integration Guide 512 pages https://docs.google.com/document/d/1tewIaHZh8mWI8x5BzlpZBkF8eXhK2b_XhTWiU_93HBA/edit?usp=sharing 
+Kartaverse Workflows | Immersive Pipeline Integration Guide 512 pages https://docs.google.com/document/d/1tewIaHZh8mWI8x5BzlpZBkF8eXhK2b_XhTWiU_93HBA/edit?usp=sharing
 
-A recent question on LinkedIn asked me to summarize what the Kartaverse Pipeline Guide was about: Q. 
+A recent question on LinkedIn asked me to summarize what the Kartaverse Pipeline Guide was about: Q.
 
-So this giant document is an overview of the Kartaverse? And it is platform agnostic? More theoretical? 
+So this giant document is an overview of the Kartaverse? And it is platform agnostic? More theoretical?
+
 
 My response on the effort: A.
 
