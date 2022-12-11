@@ -17,8 +17,9 @@
 # the original markdown file is saved with a '.bak' suffix
 #
 # Example:
-# cd /Users/nmbr73/Projects/Kernfusion/
-# Tools/fix_images.py Wiki/Andrew/Pipeline\ Guide.md
+# cd Kernfusion/
+# source venv/bin/activate
+# python3 Tools/fix_images.py Wiki/Andrew/Pipeline\ Guide.md
 
 
 import sys
