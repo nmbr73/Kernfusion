@@ -4,7 +4,7 @@ Comp/*.autocomp
 # Ignore Obsidian-Files
 ConFusion/.obsidian/*
 Wiki/.obsidian/*
-
+Wiki/.obsidian/workspace.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -136,3 +136,4 @@ dmypy.json
 # Pyre type checker
 .pyre/
 .DS_Store
+
