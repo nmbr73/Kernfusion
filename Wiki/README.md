@@ -12,11 +12,12 @@ In the long run a MediaWiki like it was initiated by LearnNowFX would be a great
 >   - Do a `git clone https://github.com/nmbr73/Kernfusion`
 > - In Obsidian
 >   - Select "Open folder as vault"
->   - Chose the 'ConFusion' subdirectory
+>   - Chose the 'Kernfusion/Wiki' subdirectory
 
-> [!TODO]
-> Check out [jobindj/obsidian-publish-mkdocs](https://github.com/jobindj/obsidian-publish-mkdocs) and similar tools
-> Sphynx, MkDoc, ... MediaWiki to Markdown, Pandoc
+> [!TODO] Check out ...
+>
+> - [jobindj/obsidian-publish-mkdocs](https://github.com/jobindj/obsidian-publish-mkdocs) and similar tools
+> - Sphynx, MkDoc, ... MediaWiki to Markdown, Pandoc
 
 
 # Welcome to the Kernfusion (yet not a) Wiki!
