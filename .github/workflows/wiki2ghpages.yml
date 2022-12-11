@@ -6,6 +6,7 @@ on:
     paths:
       - Wiki/**.md
       - .github/workflows/wiki2ghpages.yml
+      - mkdocs.yml
 jobs:
   deploy:
     runs-on: ubuntu-latest

@@ -40,6 +40,10 @@ markdown_extensions:
   - pymdownx.keys
   - pymdownx.mark
   - pymdownx.tilde
+  - nl2br
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
 
   - toc:
       permalink: true
@@ -48,6 +52,8 @@ plugins:
   - search
   - roamlinks
   - mermaid2
+  - search
+  - callouts
 
 extra_javascript:
   - javascripts/mathjax.js
