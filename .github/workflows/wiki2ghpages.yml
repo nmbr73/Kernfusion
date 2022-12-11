@@ -23,4 +23,5 @@ jobs:
       - name: Run mkdocs
         run: |
           mv Wiki docs
+          mv docs/README.md docs/index.md
           mkdocs gh-deploy --force
