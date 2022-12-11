@@ -16,7 +16,7 @@ Created: 2022-01-29 Last Updated: 2022-12-03 10.55 PM (UTC -4)
 By: Andrew Hazelden <[andrew@andrewhazelden.com](mailto:andrew@andrewhazelden.com)>
 
 
-![](https://lh5.googleusercontent.com/JtMTtblYhSvpU6z--S37W0ncStxmvXxhtE30C4U-GDR0uM-8sdwzoHIHByP3LBNxrSrBeiC21c5YVRXlBJiLSakDyceccb14c4NoWk8usciIiQapaBT0KXC4QEDxPQr8vYoSye65Co7S3AX0kWFU1ryFNOJJ_SoDo7FQIbmEAlEtfIyl9zPxqFukJKp_RA)![](https://lh4.googleusercontent.com/pt-gAgtVv_N945aCP_EZ-u_al5eWSyRCdM-wFbJ7Q8OfTF_bus658AqNrgsW9NYCZ2U5ljIj7OZ2B3OfaSggj9whVxD3YrUCSRaZlYpqflobhjo8diZDUMnXllDcreBdLuc23kXiCfbLF3YlUGioJ4vlbyYgvvAq209VdJZr5d9lr2MxEuDICKzONPSxQA)
+![[Pipeline Guide.img/Resolve Studio Splash.png]]![[Pipeline Guide.img/Fusion Studio Splash.png]]
 
 # Overview
 
@@ -82,7 +82,7 @@ Make sure to have a trailing slash on the final absolute filepath used to define
 
 
 
-![](https://lh4.googleusercontent.com/4G7j87uWHZ4vzSCV0bBMBp4n-jKGlgU2sy91Sjuanpwo0qm09WgHef7-0AnwTqZ3LWoYLqR3TTHiq2ADmOYXNDHnTpW4FdSB5pYB1XqIXJeOnC-Tap0w4V3gXTfzrDDjwENNzTZC4gFrJgSyL6-TCf-8n7yXxf96j1zSnGqgSUqcotviYQSjjLyWKBWS)
+![[Pipeline Guide.img/Untitled.png]]
 
 
 
@@ -90,7 +90,7 @@ Make sure to have a trailing slash on the final absolute filepath used to define
 
 
 
-![](https://lh5.googleusercontent.com/CTezNbUuX7FOO5wPEYC_tG5Ut39jh6eGss0kn2djQf1QtCd1ynXQWK9RxRAzwbsFsd9zJr5ddGDE7yAnL8VvbrO7KnyWMXJ7wsaZMQMeLAET7cFM_jvGEac5rJ9fF_vPHFwLEgAYfMaGjywhptWJDXWT5YQzuqvjjEsNLdX6bn-fVFmAhcVHDWmTwjAa)
+![[Pipeline Guide.img/Untitled_1.png]]
 
 
 
@@ -164,7 +164,7 @@ If you need to install Reactor on an entire render farm, the following guide exp
 
 [https://www.steakunderwater.com/wesuckless/viewtopic.php?p=42846#p42846](https://www.steakunderwater.com/wesuckless/viewtopic.php?p=42846#p42846)
 
-![](https://lh6.googleusercontent.com/SnTN1xAu3YsdC0Hu19yaisVMjJJdzKSxm_u1CzEzLrU34iZirU8duTXWt8VcAiuNosR2RGnVlHv-DLUhT39QT2zzYs-YJI-nJaJIw0zkIt64bJ2YXESloz6Vs3TbEkV97dyKeS6owFhbvq_n0vg-SjUHTBMVk3Vq2Uka10dcnxsY46KrKCFt3d5pUEfL)
+![[Pipeline Guide.img/Untitled_2.png]]
 
 Installing the BMD Resolve / Fusion Software
 
@@ -182,7 +182,7 @@ If you want to install the absolutely latest release of Resolve or Fusion you sh
 
 
 
-![](https://lh4.googleusercontent.com/2PV94SrgHGe3KWyhzoN3zC2r6HHfo9TOTvuWGqyj1LhYHCuOEJhwUX7qLsPmqr-LoutIMzdiJjE03cQv5NYVeKiHFO_83TzR6-WZEpdp3bAA45eQDOpux5ikz8rwvggrfoYtrHJJYwYOg02kdZmyaIHUwDmtrfsVUf9_H3VAlCftwpt3eF-K0QT4Hpbx4g)
+![[Pipeline Guide.img/BMD Support Center.png]]
 
 
 
@@ -210,7 +210,7 @@ Blackmagic Design provides access to a version of the Fusion compositing environ
 
 
 
-![](https://lh4.googleusercontent.com/H0uJWMnDEMZLX_Qf65OqmaGiSiygUBAE0_prAsJj8YgYllIaPh7F4NSNYnnIb8PZBAgaz2U_MAWDrxAsP3lMwPLBCntuL30_In5wueTulaWGwghxYgEZq_hnvCN7WiGhmCxqgGJsyv9C5CeSO6cC8TUg5-4hvkqCcVHRS21EY1gZx9IDMJHYhKlmRLeyMw)
+![[Pipeline Guide.img/Resolve Fusion page.png]]
 
 
 
@@ -238,7 +238,7 @@ If you are a freelancer doing multi-pass compositing with 4K UHD resolution EXR 
 
 # Resolve Studio (Paid)
 
-![](https://lh4.googleusercontent.com/Z0lwsDbWNGIjghgDr6edWYVeKuOPX6DuTWIxv7P7GxEURBlIlZK14PiYzWMLkGZZPUYjflsvM3hsrptFa9mqGiLCQZ5kYFkz1DQmMhnSHPtleY_en_FbKtRv2LPMOLf4Xs8csQyq4Eywa9rD3yKl0_Ag7zjs-eHVUZj-s8486TcEmOc_dOnr0k2mw5ap0A)
+![[Pipeline Guide.img/Resolve Studio Splash_1.png]]
 
 
 
@@ -272,7 +272,7 @@ Resolve Studio unlocks access to higher-resolution rendering support, provides i
 
 # Fusion Studio Standalone (Paid)
 
-![](https://lh6.googleusercontent.com/6L28bIWKbtNc6Z6fyk4PFz15ttzlCDxe3nvVS64FCIBmWMW3OJBQoYasOt2ATZGn1-02pQDc39m5A2bY-y69VrTWtGd9dPGKDDslhJ_2D0TToqk8Op1TVHNqGtsw7yHmb5J8izaVyMMbRxp_9qdNgH772HfG0PJ5bkJ-VKnL9UZoGlHNcAKD87GiLVdwkQ)
+![[Pipeline Guide.img/Fusion Studio Splash_1.png]]
 
 
 
@@ -312,7 +312,7 @@ Fusion Studio Standalone has a built-in Render Manager feature that works well f
 
 
 
-![](https://lh6.googleusercontent.com/AnmasKAcvVgSboChleU0mzKqj6HexZX_cLf4BafOryjWrC4cKvxtdHLPSg3s9O4TMjKuaFGGyYXkkthq9KUh7sbgTQ_hXoGcBccGabiwHTNLIl7bj86A7daHiYBu_a8P9b1xYGLL2UEXi2dQNlPJQcX1Himovk_4e9trwYyfOWnd9llQMkIrfRgSUCIXGg)
+![[Pipeline Guide.img/Fusion Render Manager.png]]
 
 # Fusion Render Node
 
@@ -320,7 +320,7 @@ The Fusion Render Node program is available if you have a Fusion Studio license 
 
 
 
-![](https://lh6.googleusercontent.com/4Vacq2Ds8T94QO4aEW-rH1YEi5kicumwq2E7sY1Vy-pRdtL9ygFz-oVpUv2Kh9A-xQGziYj0Br-q1egp_gzz5D3lkawMOQrjJYvq4RRa5D-RV2KTqkg35dxQagVVXygFjNSnzzNg9J77OVAS_rs7IBFPkECh1qlqXD7WatkbeIV-oxLPJykgcrDPTPRIlQ)
+![[Pipeline Guide.img/Fusion Render Node Install.png]]
 
 
 
@@ -357,7 +357,7 @@ If you need a quick way to grab the filepath for your .comp document in the Find
 
 
 
-![](https://lh5.googleusercontent.com/xc3KAy_AiUEZ_p6Pxy3w00hiDYZA23bC7jOktrwU6eplnvSHoh3lJZ6IHy1kSUqIf3YyJMtYYyr3XiQ8irs8HPWWu52c87HIQSMwGHjLZJSLXxxB1XYugwAFxPrfTu6lqAeqMheHtUswY1VzZ2fBph2GouG4yDa4KsALoDnpO-UgCwEbNw3VLxtSHfo2-w)
+![[Pipeline Guide.img/Fusion Render Node - Copy as Path.png]]
 
 
 
@@ -365,7 +365,7 @@ On Windows 10/11 you have a similar feature that lets you right-click on a file,
 
 
 
-![](https://lh3.googleusercontent.com/ADVF7Mv9-XEzUQyYYhAJpoFbjfhwjxHyOuGoASlk-jdCQXMkFNY20p6iEqvh68t6vLCeOLZ3Ml19-e7XMpzS5lCZFSEXYwVn26vD77ponIJpA8KfD8PWNcjxO2tt8LruvXJ9o8FMMpbv0tjtKl2ltGU-r-l03_pYT75eN6rdWD_kc9j2i54KvZ7CBiaEyA)
+![[Pipeline Guide.img/Fusion Render Node Windows Copy as Path.png]]
 
 ## External Render Manager Usage
 
@@ -387,7 +387,7 @@ Having a dependent job submitted to Deadline, in a single step, reduces the amou
 
 The "Submit Fusion Job to Deadline" scripted tool is used to define the Fusion .comp file you would like to render, the frame range to render, how many frames should be rendered per-job task, the version of Fusion Render Node to use, and many other options.
 
-![](https://lh5.googleusercontent.com/Y74VAs0IegYkB_zuMEti7eaEzT_7KUw-Q31Zyi_RRncxb3jo150xNhpjYvs6nRc7nsEU0RdmvkGD4d0L1eSmsBJgcBLcPiexuIx--9_ck2upo5T_mdl-VTXK5B9UYaW55t8vABS77RLdEy-bV5XrIupdJj5cdbgZNJfYrCWcGboD5OjUEieENnyftGOo_A)
+![[Pipeline Guide.img/Deadline Submit Fusion Job.png]]
 
 # Automated Fusion Studio Installs
 
@@ -513,7 +513,7 @@ If you are getting started with Fusion it can be a bit scary using nodes for the
 
 # Loading Imagery
 
-![](https://lh3.googleusercontent.com/5OOkAf2XIagOcsTdPEDqFfggLml8_zYfZSKsTsvFeVLbJr1xKyYPshmGDgq8dlu2cd9CquTQ1LUFTDmYwRXojLLCIgzD754JQkPgvPjtPLm1KWPGcWuFvOntNviK_vLcEhjbl3RG0Li7kcaL1o6MnUwDEElJXPvpvGo0rvFnuT5RJb2WVbcwxnGWGL7XwQ)
+![[Pipeline Guide.img/fusion-essentials-loading-and-saving-footage.png]]
 
 Imagery is imported into Fusion using Loader or MediaIn nodes.
 
@@ -555,7 +555,7 @@ Nodes are connected in Fusion by dragging a line from a red "output" box shape o
 
 
 
-![](https://lh3.googleusercontent.com/97KRbfVuYR-Q2I6TUxKGaIU2dZ2XBnSF2NsNRe-lSDyAMDII6gS8Vg3QWoGQPfZ6EwSmWmKmX05AfuoIOjgIyRoOcF3Tmp-mbMifXitJe5XW0Y-7ikCxvSyvYkNlOMXBsq7DyLmf4kmFJzji412TwflJDWgl5yh9D-tcWfNhDvPjjsH-RsFOzLt8QTOqFw)
+![[Pipeline Guide.img/fusion-essentials-connecting-nodes.png]]
 
 
 
@@ -563,7 +563,7 @@ If you want to connect a macro with multiple output "red" boxes like the "Vertic
 
 
 
-![](https://lh5.googleusercontent.com/w9v61fzfpYBWo__IWugAvko2-Fl7tasDOsicgdL9nx9RlrHsSaPFOe3ytELHs-ejEd1E6pPlR_UIKUT3347rAoMFOvGpVkZ3NSLfnFTCBl-Usy_fIHY1yAIkqbtfgY2RznxSFhbRdgB2ODJVtwfeYNTnMPilHqxnaH9WAeO90w_RxxtM7kBW5QCS2GQLAg)
+![[Pipeline Guide.img/fusion-essentials-node-outputs.png]]
 
 
 
@@ -579,7 +579,7 @@ You can break the connection of a node by hovering over the starting part or end
 
 
 
-![](https://lh3.googleusercontent.com/dEqXYVax6QzxCLqIscUE_uI7mgYmdxwcVWtpj6csJDRljXfbFTFhdQE5iOEhcxOBI8AdUkK3qLCSnM3_0MVg2lxdVK2uqAKlU9bC1Kk1_q4ZPUND3fQUl0kfIRNzrOdGkMPrjSl46LT25xJ0XDLg2G16NcUPoVszQ7U_wA-OiTJSCPpVLFgIk-BptHOtPQ)
+![[Pipeline Guide.img/fusion-essentials-disconnecting-a-node.gif]]
 
 
 
@@ -587,7 +587,7 @@ If you want to make a connection to a node that has multiple inputs, you can hol
 
 
 
-![](https://lh4.googleusercontent.com/hkdxvv3BS1Q0SYAQQwSyhz5S3eoBJlVH_p2c41LWk2jMnwe2Q27xcS2G12G2UWalyKKZSijrzJvzEMpL9Y0tFlkaA4mbaC9ULRzafpfb0WfVncAmrPXGxaI6NloI9u09PuxTENS2f5UahVoZGZ8Li6V81rdcf2vdn-LWipgUAqUhyZ3kF_2iZpBjbez49A)
+![[Pipeline Guide.img/fusion-essentials-alt-key-node-popup.png]]
 
 # The Fusion Viewer Window
 
@@ -595,7 +595,7 @@ You can toggle to a single viewer or a double viewer window layout using the fol
 
 
 
-![](https://lh5.googleusercontent.com/TB2npTpQYRpWo0BApvxGhQWF2RBtOw27Zzr4DpfZy-sZe8vIaLlsejECfWXaCGORcn7_2mCNoX7TAFwrYTjYdI4glCf5bEyXxEJShv4NH-56tH0tlSkfAEqdC0vZhWKXA_kYELg4JZL0UH45OgOC4AIbXFzt7Y-dw0mEo8mzKO6D8yCu8NTxx93tPkb8bg)
+![[Pipeline Guide.img/fusion-essentials-view-layouts.png]]
 
 
 
@@ -603,7 +603,7 @@ This is the typical viewer window layout in Fusion where there are two viewer wi
 
 
 
-![](https://lh6.googleusercontent.com/trOorHOcMQ_JOS4ytzRn-5mGEBVtrlq-DwC3cNiUCHEAlaGz7OX_Gd0qvJpy4FUCeG85WvP2BKzGXj82TYEqsY-8U-UBZYt0TbP5d8JHqzUGBwE-xtdLVt2ei52dABDcPcvQRqCDMzVkzM3BPRx6Dv7MF1UzfdoEwpv0HlUyLxhfsVunhEYl9b5bvklBoA)
+![[Pipeline Guide.img/fusion-essentials-viewer-window.png]]
 
 When a node is selected in the "flow" area, you can load its imagery into a specific viewer window by clicking with the left mouse button and dragging that node icon into the viewer window.
 
@@ -613,7 +613,7 @@ Another way to load a node's imagery into a specific viewer window is by pressin
 
 ## Color and Viewer LUTs
 
-![](https://lh4.googleusercontent.com/8DoU-Hv9BYMOh2jCQ9y8PFRsC9ypuvLQ9FV24YIR-gnbcpcnW_RwtCz3ZDiK3g6aTNU1V4yJxHQVzuilH_C3OinKUxoaHXBjaTAZTpXCxQvjxAf0X1iRpD_vbaRCjUkyBw3ZZB2oijJgq8gvKQNuOA8nmeaTkTyjMsVh4fjzMHWyJOc70Bps1gAbpWnUkg)
+![[Pipeline Guide.img/fusion-essentials-color-channels.png]]
 
 You can access individual color channels in the viewer window's toolbar with the color channel menu, or by clicking in the viewer window and pressing the hotkeys C (Shows the Color RGB Channels), R (Shows the Red Channel), G (Shows the Green Channel), B (Shows the Blue Channel), or A (Shows the Alpha Channel).
 
@@ -621,11 +621,11 @@ You can access individual color channels in the viewer window's toolbar with the
 
 If you are working with EXR format multi-channel imagery that includes extra image channels, more entries will be displayed in the color channel menus for items like Z-Depth, Disparity X/Y, Motion Vectors, etc.
 
-![](https://lh6.googleusercontent.com/P83jiOzwiRysWHIHDsgXC_XZkmCfm1NS8i5RLql-0mfEtu5SOrI5_VIl2c5jmBCgisjB5sRKsOcTuVN79OINeu0ChcG0EC6_dkC7tdi3JoyVavzJA5r1b5_31Rt0jBwIux5srV2qnS4JoS1wtdVEd7cancVax4kGc5UCcTr2hvec2r69qBvnoXiOmMJrhQ)
+![[Pipeline Guide.img/fusion-essentials-lut.png]]
 
 The LUT button allows you to change the viewer windows' preview LUT (Look Up Table) which means you can preview the effect of different color spaces on your imagery. This is useful for viewing RAW, sRGB, or Linear gamma based imagery. If your imagery looks washed out when loaded in Fusion it is typically due to a LUT setting mismatch.
 
-![](https://lh6.googleusercontent.com/K9uqlMlyxkJjvmna1enTp5YcXUvo6KGIFuQ2Ut2u_8el4cG_DjQuid9Ch0-Q-oFWZMWRETduAlWWZbZgAjO1hF9rJFYmtC2pCk6zDi1FzAqnlCFzhFHozyDtwuQXgT2fzk6_jbcM1rT9-EZf0auFlNM45k3jVmpZR2pKAAczVE4R2ppXjE53gkewqQ5nVA)
+![[Pipeline Guide.img/fusion-essentials-ociocolorspaceviewlut.png]]
 
 If you need to preview imagery in a color space other than the footage's native format, I recommend you try out the OpenColorIO based LUT menu option called OCIO ColorSpace ViewLUT as it is one of the easiest to use.
 
@@ -639,7 +639,7 @@ As a tip, you can type a Color Gamma value of 2.2 into the OCIO ColorSpace LUT w
 
 ## Viewer Zoom
 
-![](https://lh6.googleusercontent.com/omPOOvoRqN_RlQ68GTHzzO5ccD8EKqymtIpAzyJLK6UjRHYv5hlBrCNhNvnMytQvrj4512iOuNTK3BMI4aD3XR8G2y0CUdBYyKnvuuLAeRJVrfWE8iWit62vucBeS8sdFjPkDdTJLjuJGx0pZz009mQo3DphLs1knqDtbHFJZUMlWIaSreo9m4GvPOOBgw)
+![[Pipeline Guide.img/fusion-essentials-zoom-levels.png]]
 
 If an image is too large to easily be seen in the viewer window, you can press the "FIT" icon in the viewer window to scale the imagery to the size of the viewer window. The hotkey for fitting the image to the viewer window is Control + F (Win/Linux) or Command + F (macOS).
 
@@ -653,7 +653,7 @@ Holding down the Control key (Win/Linux) or  Command key(macOS) and scrolling t
 
 ## Viewer Transparency
 
-![](https://lh5.googleusercontent.com/-HHnXyvrQ_p9BqQkiQ374104WAMKCWNStWPQGa10QLfaz-J16IWpgPDUuG3FDL0hek0JdS6Qn_PIw0geRZ8WS8UR5dE-bRb0MGkhwHcx3c8y5hwyt93qL2EhAyoFSpWjYNVEUhzwGpwLMJNnxKjMOT9J4H_2fCjQmAOOD3vgWDsXA2yQRe4dvwjjeW2kIA)
+![[Pipeline Guide.img/fusion-essentials-transparent-checker-bg.png]]
 
 The viewer "•••" kebab menu (the menu entry with three dots) has a "Checker Underlay" option that is used to toggle on/off the transparent background checkerboard pattern in the viewer. This will allow you to either have a black background shown behind your transparent alpha channel image areas or a dark grey checker pattern.
 
@@ -665,7 +665,7 @@ When you use the left mouse button to click on the "Prx" button you can toggle t
 
 
 
-![](https://lh6.googleusercontent.com/Vlu28Sn9N_eH1PQI5fWHR210tyDTfjQGI8ZItFy0cO0u7JTk7p1eUCYFetNn2ESjrWEydG5Flq7Zal9YF3tG2AIZL4oVx1lI0RqRzvk6ubO8DmyEUmqdS94_GG8nKb0IZE-y6nVy9JXI_lOI7atTyyciqDxfT2H-VR4ACkdT3iCLQySBtRS_GUeLz-mSGg)
+![[Pipeline Guide.img/proxy-icons.png]]
 
 When the proxy mode is enabled, the viewer windows are rendered at a reduced resolution compared to your final output setting. This makes Fusion's viewer windows more responsive and interactive which is quite noticeable when you start to adjust nodes and update the node settings on footage over 2K in resolution. 
 
@@ -675,7 +675,7 @@ Using proxies as you develop a new comp is a very effective way to improve the r
 
 
 
-![](https://lh6.googleusercontent.com/o81H91iWFl1_kgQ1msGTYEcT4KQgRyljR18AJTGavlfQuni7-9kENOw40yD1XBQ5ri5s2ohiXK61mJPTLEkDhD06oWG01EaX41DJRetpXgwB4p6hwMI-pJ6DNpJcRf6WXr3ZkdevDeLdWpfEHdRbPTMClavAmdhrJd58HZzkpsaCgC3IkBXEgub7e8wJgg)
+![[Pipeline Guide.img/proxy-resolution.png]]
 
 If you click on the "Prx" button with your right mouse button, a popup menu will appear that lets you adjust the level of the proxy resolution reduction that is used when the proxy mode is enabled.
 
@@ -691,7 +691,7 @@ The "APrx" button is the Auto Proxy mode and it is used to provide a way to have
 
 # Adding Nodes Quickly
 
-![](https://lh6.googleusercontent.com/Gzbs36DirTf1Xn7JR_XBpd55r7U6ypDSknsg6Vm1SdjvwwxurwR4R0f0h2OQ5SZGK_2sT0rXRTHYHfQGI-S87XtD62t0PxGsfDEiWOuxX62OyUHsX1O9_qs85okoK3jjcmgMpAIBHAHrVpX-Ag_8AQIe8wMzVl5vT-jKu65h_vzaou0VqfvZWcLlzm6j7w)
+![[Pipeline Guide.img/add-tool-dialog.png]]
 
 When you are working in Fusion's flow area, you can press the Shift + Space hotkey to open up the Add Tool dialog. This window provides a quick way to add new tools and macros to your scene without having to navigate through the menu system to find the right item.
 
@@ -701,7 +701,7 @@ As you type in the name of the tool or macro you want to add, the list is update
 
 
 
-![](https://lh5.googleusercontent.com/2VvhaNL13u6_lQ--JW7lWsHlVXHvR14X3gi35VU0cYfO2y-ywCU9RtKxC5Dx5f4OGnfxUydI3dqdfqfVCfp1tg4uuhEDPnXJFvafXZvVcfCXawl1LD9HuYPpfZ3xj_qsICE2pv3EEmYB32cyYyGacQVi31G1hB64s4IfsfUyPr0ZyB85FtQsZrg31zy6Xg)
+![[Pipeline Guide.img/add-tool-dialog-alpha.png]]
 
 
 
@@ -723,7 +723,7 @@ The Lua and Python scripting documentation for the Resolve API is located on-dis
 
 
 
-![](https://lh5.googleusercontent.com/-JTODkyELjjpyJRvHR7_E-OwygYn-9zuVlsq4T8lxWyuQg5aX_8Ffl_uwRMBghxieOnOYgN3vjVDLaoezPR0P_F0i464UQzYNHmFLlSuXm4IJO-SdJ6_4gupEsoajYc7DPN5_bpyIqtqOPCg-6WpUkbf4D8tRb9LYaipM8O3mZQL6eOO_Pdd-QP-3tvuxg)
+![[Pipeline Guide.img/Screen Shot 2022-11-09 at 6.34.24 AM.png]]
 
 
 
@@ -767,7 +767,7 @@ It is also possible to configure a relative filepath system called a "PathMap'' 
 
 
 
-![](https://lh5.googleusercontent.com/Jh1Rtr0E_oZs50sOl3wm9nWcJPeLCPrgui9d1qikUWGGgKvCyG9m_dab29pRj6NUfF2SUgflUUq9wIfJC7zLNyQ3YkEsrDNKnwgBk5-pWAvcsfA_tcC4NBKTm2LL5LXGJ4M76yb00XWYJohTiOiL8O3iYRxVSD7WyUyOIrm0jrtODQBVgcBXlh27JRPFqw)
+![[Pipeline Guide.img/Resolve Pathmap Settings.png]]
 
 ### Fusion Class Browser Script
 
@@ -779,7 +779,7 @@ This screenshot shows the results from examining the available Fairlight API fun
 
 
 
-![](https://lh5.googleusercontent.com/2ZzEFNV1OkNAy19bWdc9FxoaKze0e09w37hTcL-y0koFNc8c7pfY6YWKnrUau2cp-4_fCq_jjY7NyHGNbvoHj4c9XY0mJI3WHsDnJSPmtkuzJtd7LkmCNdBfm-6cSfKuGraSvlpvPp8ldxDltBPPdR1SBzOmIivC8UaRnKa3f7S7l19-ROBGOwqoGilSAw)
+![[Pipeline Guide.img/Reactor Class Browser Script.png]]
 
 ### UI Manager Scripting Examples
 
@@ -791,7 +791,7 @@ There is a companion "UI Manager Lua & Python Examples" package in the Reactor P
 
 
 
-![](https://lh3.googleusercontent.com/-nxWyCTc8cyQ0AfqC-kpEgPD8-GID2rdQ91pwKUVAlulCqFFicPuMWOzuduBvyFX9m1z0obSkY0cN93H0UEYeqKFdKOYBjb9DhBtbBppdmiWzcKKA4HxZYsUGQnlEHdNadCgcmQSCA_kyAJSHvSIKXmpXiujUreihSHtwTos4q7ue24bAd_y2xZyE63CvA)
+![[Pipeline Guide.img/UI Manager.png]]
 
 ### ScriptLib Files
 
@@ -839,7 +839,7 @@ The UI Manager example scripts include a minimal prototype of a QT-based Action/
 
 
 
-![](https://lh3.googleusercontent.com/lRspzDKBagd0DYeHnri39WB7zLSsn473OFJnEvT1j39bJj2Fra_a5ziNHhyesgLdrtn5DcqmpWFigVdtvc86qyVHx9Q0yKgQ6LLLKPhr7pl5lnNbMzKy2Y9jzavOTJltdNULyHUuM7yAl4d_YBPMhmxkmRFKSAUC7NHDsZCAw_9HxaR30can4_k8cragzA)
+![[Pipeline Guide.img/Action Listener 1.png]]
 
 ## GPU Accelerated Effects
 
@@ -851,7 +851,7 @@ There is a customized version of the OFX plugin development documentation availa
 
 
 
-![](https://lh3.googleusercontent.com/2STh52CkOtf233KmVTFSdqp0taZZPUph8oVbfpkQLmH3ZJ4JYw4ONDLOdlEC2K5-1pQtcVQ3UtWwyVQZwsHubHAZBadWmTw5WNsPCOjR6tzZJA7gWgFUFZMz36t0-POfthhD2LtuSRgbi3JMpgPvQcLWIq8iVni_ROO6P2Gn8YvZLri5VwQNNXoZSiNv1w)
+![[Pipeline Guide.img/OpenFX Plugin Development Folder.png]]
 
 
 
@@ -859,7 +859,7 @@ Resolve also has a DCTL (DaVinci Color Transform Language) that is used to creat
 
 
 
-![](https://lh6.googleusercontent.com/DRloxkSRe1IW2-NHitT_t2ytb5wh26o0vzoPY9qZAs1OrSxWIULUL9NVCrfMIkRStOk9p0dVSvLH3sVyCddNhGfs84jjZAFDLevCYA2Y49nZXjZ-jkvNh0zrn81sKDes7Ib0LtqJzuRrMGi9pYqryKDdI3FI6a8_9Iyb4i0W-jBuDT0rpxy4BGiTjPFpKg)
+![[Pipeline Guide.img/DCTL Plugin Development Folder.png]]
 
 
 
@@ -871,7 +871,7 @@ This system allows for any Fusion node to be wrapped into a Group/Macro containe
 
 
 
-![](https://lh6.googleusercontent.com/YRZneyzGYCen8gZCMDZ02S27h15fCSlTtsrLvoetvjt7BeD_fdofYwaRoAWFBvRerHi5rTPFQfzawwUr5fz39LSUebLUJ37ZWRHej_NpJFxygn_KZ1niaTd8GGhoA_TotocND4tzHBGf-ejdGbWMNUOpCJFNvHs7i3ARQQ0EmSXdYekSxEBR0qYZbC1ueQ)
+![[Pipeline Guide.img/Resolve Effects Templates.png]]
 
 
 
@@ -879,7 +879,7 @@ Custom GUI controls added to an Effects Template "macro" are accessible in the I
 
 
 
-![](https://lh4.googleusercontent.com/WuMYzKnuyXHSKQc0HwoPyQ4TH1vbY0hCVxGwbhB2x_IoHIyL8EhCcdm2FHBG-gz5vQOWfQQMYrBq6zA8E8Ce66a-CNwUavLiyBukFe9oodKWqjHm0eZq8qs-nGN6KMmrVlw5wWJp9PX4-cu1L2taEr7NxSKcWN6mOQZFSbgeB-kIllmMcmpNXVJEBHsGIA)
+![[Pipeline Guide.img/Resolve Effects Template in Edit Page Inspector.png]]
 
 
 
@@ -887,7 +887,7 @@ You are able to refine an Edit page effect using the controls provided by the Fu
 
 
 
-![](https://lh5.googleusercontent.com/qmMTqpyILwuAKQGaqYLkzfTVKA2ekD_DOkhVweE0FUdFCamogS-4lueiZxUQuZtLuaA0PsYPElLWVxIeRHKGvUtpJGAMVIBnvXvnVt2_U_eSyPdHajnofIoMkFMOyLQuGWUH9xop2KD45gvS2m6fVJqylJYz_NaLXzDibkGUOkOHvlGmOh-BufT2Gw2Ukw)
+![[Pipeline Guide.img/Resolve Effects Template Wand in Inspector.png]]
 
 
 
@@ -899,7 +899,7 @@ These animation editing controls in Fusion are more full-featured for adjusting 
 
 
 
-![](https://lh6.googleusercontent.com/O1gFTY1jI4CcbK2-ssfK3ud4gAEbEVMghmnNqZOOngVvty-UzpB-EKFuJs6hpPj47uFBzSkHeE9IggA3b_e6SlnnrCknrqHEqIsrQ3wkiyI8Bw2Zo6onDVeGS7Ss5EKz0ME4UREnQWwPVckxOUF6bpEDoZUO-lWsSoLUDrmK3cDIdZRpYQ8xURSUILo7JA)
+![[Pipeline Guide.img/Resolve Effects Template in Fusion Page Curves.png]]
 
 ### Fusion SDK
 
@@ -927,7 +927,7 @@ BMD released a new Fuse SDK PDF guide this year which is an excellent document f
 
 
 
-![](https://lh3.googleusercontent.com/9RbphKcKiS96y-_AmM1WzS8b-hdHXF79NYYLEiwrZV2Mx9JbEqRyCxFiUhGNZyRe-x8kUPvvytuk5EbjRYuLEG7g95C23_uCXa2yAYTe6AS33NcTJz5VPzh8Rb_1y-32W9O_pFobEUiJzyWvQ2isA9rKnTx3rVJigq1Iyk39bP7-ImYR4bfz2mhu8ABQ2A)
+![[Pipeline Guide.img/BMD Support Center - Fuse SDK Guide.png]]
 
 
 
@@ -965,7 +965,7 @@ There is an introductory "[Macro Building Essentials](https://www.steakunderwate
 
 
 
-![](https://lh5.googleusercontent.com/rnwEqogeNvgmD9s1EHEUrcShe71ahS_zcAJEQAmNFV72YTMLxnny4chTKgCuCE9aq21I0YNMIHzr620EBrpdgQ0pmKdKdVny1xxiuPqoKfqcoZXh3aRPto0TGJOliMUh_wY_zJ2NSWWz5VuDMND_Lb6rSMyZdEm5G8GBBFOzGwdGOh3m_5_Y_puG-eulbA)
+![[Pipeline Guide.img/WSL macro building essentials.png]]
 
 
 
@@ -1042,7 +1042,7 @@ The AddWindow() command is used to create a new UI Manager window. This window h
 
 
 
-![](https://lh6.googleusercontent.com/NFo-9-VXcaXN1PMncvm1sbIMTZp667MdKm8K5nI0kDixdvC9UraRhvcglJ6Lf9k4Ian5Sfw1hNpEACj3goBDFF4usOQkf-hnTa8VUaqyTEtdqVv9BbAQf5GEWBex7c0XbNeka78CTyrNFd2Payd6ik9U_p6TgPCq3fvQSGzbEYVNJl41kIMZYarC5cEM0A)
+![[Pipeline Guide.img/Untitled_3.png]]
 
 
 
@@ -1177,7 +1177,7 @@ ui.HGap(0, 1.0),
 
 The ui:Button{} control will create a simple rectangular shaped clickable button. 
 
-![](https://lh3.googleusercontent.com/Z-x20nHchgrX4QasCNaj2vtDWs3rlJZiTewwR7st3vuNgSABPPPZzc5s6MCT37ElZGug6WzMNkolg0hNIA76EfdOXoJ0ed4pbvXJKSRzPpcNbwXgJ75VoN6k-SHLPLRnpRSCY8sFyl0thxh933sjsWQAZzBfI-v2ZVhBKikJIsZ-viRw3s0mVDXWODlwqw)
+![[Pipeline Guide.img/Untitled_4.png]]
 
 
 
@@ -1367,7 +1367,7 @@ The ui:CheckBox{} control will add a checkbox to the window layout. This control
 
 
 
-![](https://lh5.googleusercontent.com/769GRNaMjij-mySwQbfexEmHhLRHtRZrXgSoWpHq0xCt8zZ4UflDiZzgaSysifd-QQ4jmd-UVmKPbQY_Lry7d7EgKRNlP3rfipJfdkslzBG6p7twvJsc39-PAcFr9Gmcl8AVBwsNLm_LnpDZPHdfrfSzkE7g-hh_hK_514Z0frHRgtjfbcUW79yQsSG_iw)
+![[Pipeline Guide.img/Untitled_5.png]]
 
 
 
@@ -1495,7 +1495,7 @@ The ui:ColorPicker{} control provides Red/Green/Blue color sliders and a preview
 
 
 
-![](https://lh5.googleusercontent.com/eqjTJrIUa0CCcPUsaP1qg20SoNGEzF-ERw7S7rSCNjw5zvjbgPfNqZF2WlrEwLqI3so5SZhXj-DJu9MqAzyqMRtyzKgcalttv7W677EK8H587kVQEiyZm8si-YAIKA_7JRF1x5KKoKmsxsZPqyIj9W1wQZsZE7DQNZVwRpPaCMjPDf-l3o7pKcdhWrGpIQ)
+![[Pipeline Guide.img/Untitled_6.png]]
 
 
 
@@ -1577,7 +1577,7 @@ The ui:ComboBox{} control allows you to show a ComboControl / Options Menu style
 
 
 
-![](https://lh5.googleusercontent.com/N8PSLaWeZB6vX8zNpeoXBZGr1Pk80Hv5eMYnfbD5cT22-RN75frnbi-W9S5HseO8LxuRQVMyDvZFUas8jB6SMLvh0c4aT_Itm3X_CUGVL6cU1D_Zu8jqzHWrZeDuUcV6awAw_dSoTWfGcYmo1LpSvGeOgxWGww8D86mDnpyk6fPNZXasXSyItpuefViHQA)
+![[Pipeline Guide.img/Untitled_7.png]]
 
 
 
@@ -1805,7 +1805,7 @@ The ui:DoubleSpinBox{} control allows you to enter numeric values. This GUI elem
 
 
 
-![](https://lh4.googleusercontent.com/RHs7nSdyEZ3_JMyPZyve_lDL5TpEVfHdQwx5qtNtOrrTo0-AxVpNHPBOXHuRrRZcGmBKTYPowXzWpF8sT0RV0gSEoodapPz4mhlNjLPD4WkIlnm2WS_y1F_lQ-HhXLuCHqYuIBkuhNpaT3R0exGa4l0aZQCdTa7VvoFQ1BF_4tyiTROc_XgREJB2_uL6Wg)
+![[Pipeline Guide.img/Untitled_8.png]]
 
 
 
@@ -1931,7 +1931,7 @@ The ui:Label{} control allows you to add a block of non user editable text to th
 
 
 
-![](https://lh4.googleusercontent.com/byuSk48Za2CrFou0-Oq0Dwchx9fr67VuNpOhRPSaDxBc90Wvo6cuztsl0uI2pWuWGXVdQ8ybs-LxjyALxOJSt9yXMkn6iC8vr9S-t5ZcZnxs7_kUbHmiN1J09BJpkvqp1Ke780-7DdkZUm9W9I3UhRZRT5OA_oreGhZ2nEypI8nuLCtgy5aZWyj0nCkJTg)
+![[Pipeline Guide.img/Untitled_9.png]]
 
 
 
@@ -2043,7 +2043,7 @@ The ui:Slider{} control provides a horizontal slider control.
 
 
 
-![](https://lh4.googleusercontent.com/qBwMJ1Ei-sG4eo85ZkIrcfOuGWsQQ4AEi8EyudLUNBYr99hoBDrZXZK_ryGMtJTWH17DMYK-y2OkseWdLxua_GsfNzog4gmQjRnpg1FGLuHUyfTZWvVaQ7twIc-lf7elJ0gtqw11AogDWoggtO-_MYWY_aNkdht6LYDeVVePzS0wNvdUjeQr4E2gYP85Hg)
+![[Pipeline Guide.img/Untitled_10.png]]
 
 
 
@@ -2183,7 +2183,7 @@ The ui:LineEdit{} control adds a single line based editable text field control.
 
 
 
-![](https://lh5.googleusercontent.com/TQJtPfyZU9sULAquexStZgr7oBelvU6Bs0zKd5PAF6sYswkkYi8keXxjapsQT0hsZVoBm9Lq4-J-EFPh1VhG9wBuYE6tUsKwqpE1XIozv5PAn8UIc4etDCrwECSSbF-KNy-tH4BWn0irwUKhi2RKCL1HkowW4CHvdJor_9lQZ8I6Uvi9p5LBrbUqWBzWaA)
+![[Pipeline Guide.img/Untitled_11.png]]
 
 
 
@@ -2329,7 +2329,7 @@ The ui:TextEdit{} control adds an editable text field. It is possible to render 
 
 
 
-![](https://lh4.googleusercontent.com/v0kMAyPtc7sgDaYDk7O14zlwjMxLfyZxKJ3oHe8CEL-_FGORAgepDo59MnQrntc2hOtAiokiaSKoWxNHU5d1_m4bxcvWQlGqCXeuZhrG8KDQ5bibdsTHItbG724DUHpTMUcktPbHEOlSLIREicMesyqLHReUumC120r8C0rWM-62LHUWaq_KGl1bDAoBew)
+![[Pipeline Guide.img/Untitled_12.png]]
 
 
 
@@ -2485,7 +2485,7 @@ The ui:Tree{} control creates a spreadsheet like grid layout. This is useful for
 
 
 
-![](https://lh5.googleusercontent.com/T_L1P6OtkJaH_92Bsdmnaa5r-SIJ7wfPVNUjzt0Lf-mtOEm_CB_PA6UgMIYauiv849hbeQ2zZjnf8D8-Ljizp-qiEA1DzH2n5gFeaHSl3WGB8bDuqQecePVgYvuRd0xREpWjMh8mTi5wPu__bHi81IEUPlC5rAUc_uhDObsvx1rqSs_2eBjp8Zk9ZUVcuQ)
+![[Pipeline Guide.img/Untitled_13.png]]
 
 
 
@@ -3081,9 +3081,9 @@ The RequestFile/RequestDir functions provide pre-made file browsing user interfa
 
 
 
-![](https://lh5.googleusercontent.com/209WPeMvJIQakL6lTBWD1CvVANBa-618_smtuJBIJRFnyQ1zxjkdRDkfawZto0XzApbhqOiFprm1rKqwkmG41RqvdV6AV0i5w8C_l48PzQyZL700Jz-abJoDfomVX2kpWmzwywLcAeMgYRQEyKLZpCuMcf3yQoOW2jhs2J57B7ei0DWVFBdB7speLrV1Uw)
+![[Pipeline Guide.img/File Dialog.png]]
 
-![](https://lh4.googleusercontent.com/DM7cXl4xsb0L7hxyMzo_TmwHPvuAl5cGKUhijeuElVltO9UFlocknSSv0OnzaXyvVVAsdPzWzgqk4Zu_4KnmRYQXMLPcBr-0BvE1S1jJZFxBxfTLfa_hvK3crikYUoNa4c-sCqD7XJSnX7-AtgGpaEtx7cHO9bF68ipYgy71RbEdIUJYIxpS4hyN-x6xBw)
+![[Pipeline Guide.img/Folder Dialog.png]]
 
 
 
@@ -3494,7 +3494,7 @@ SlashFor is by far the most significant SlashCommand fuse. It was created by WSL
 
 
 
-![](https://lh4.googleusercontent.com/--5CNyLXQsPwQpeeuvbNdAOHqRkJ2t3VGsvKmMOp0_Ff-itV2gqmAg6rcktC6e53lcWb2Iz18dUxtnjzAG-QB0jQI0Sar6l3vluKC-2TcE-d6Ss9H-SH1tiegBWNVP62lF45A1osEvYdRjAkAgWO_37qmyALU5DXItVts_h8FtC3N_0CjI26MREI84_0cQ)
+![[Pipeline Guide.img/Untitled_14.png]]
 
 
 
@@ -3502,7 +3502,7 @@ Here is an example of what the "SlashFor" tool returns in the Console when it is
 
 
 
-![](https://lh4.googleusercontent.com/__3PyqGTt1la328-by2H5tFvNhfS6hdSU8oOL10B3MSBGLVBmR0IEpB29J3NwplmdSyEcJn9u6yVqZcEg6qjpuDvLGq_x4AexnrdTNzhZmmLGrS2gFLhQq7erw1wiYWEvzrGGZ9s7lybz6iet6zzYlCrq-AkF8fFxx4sjHVL-IH45JB4CbGIwuDWZf76LA)
+![[Pipeline Guide.img/SlashCommand SlashFor.png]]
 
 
 
@@ -3852,7 +3852,7 @@ If a Loader or Saver node has a version tag added to the clip filename like "V00
 
 
 
-![](https://lh3.googleusercontent.com/KPfEprEIHt5CfFmWtqzsMVNhhrCRgsQ3eodyA1y3TGkHQu4FFsjirKhns2bovsPuRh4g2I3DCcInl_dTwQymnXyJIDo4MKowSubjDU1f0E8yJT6WjP9RMrj369opafH2J6DT-aqjEtlij3BywyZ6X0Ofe3z4z7HWZHbwBRwBcqo02XVB4dHygptpe10qcQ)
+![[Pipeline Guide.img/Untitled_15.png]]
 
 
 
@@ -4040,7 +4040,7 @@ The "Hypertext Compositor" tool is available in Reactor and it can be used to cr
 
 
 
-![](https://lh4.googleusercontent.com/yTgDmhXoHuzC8FOc5qbdr-86_IlJZt71Kn-CmE_iDAaC2GvuNYr-oI0PM8nNN9_egJxdIluQE4EAmvX__Y6m1zUNYkgYRZBr-RXj6CZ5q9SXFOLlalhaYlG9GKbrNgoHUVgQFn9eeSDLiIlJlyBuHwLQC7YPSqEqMaLUb_TEMV913crgMCpGlFSb6cO6Sg)
+![[Pipeline Guide.img/Reactor Hypertext Compositor.png]]
 
 
 
@@ -4064,7 +4064,7 @@ Here are two screenshots that show the Hypertext Compositor window active with a
 
 
 
-![](https://lh6.googleusercontent.com/U4AhrPlE-9t3CGXkSRSGOGzG6J-PE0ZwoFpesHByz7xZYEtsGWzDQVgxMxs1POxhX4yB1EDi5jnPuVNFUBJ19oHsMLGO8xe4blG8U-iaQQdiQvp-lNhgLRVLS3qYvN26GPkKhJzHDqFQJVWq4lt3kGSfMfI55gd4HYl-XIEpDlHsCgWEd7UMDfoWd5YxnA)![](https://lh4.googleusercontent.com/sRkDlQm_-vhNTEXZJ4YT5ONydUEt9j0PYbbfSFXZodihrguyBCq8hdqEhpoIc2j_5n832KzU6GNmb3uex7dWEBrwfH6oHoGkBodeRicWE3Wc3fxvh68YW0NBx84kB5PtcN6oHFhBVu8TFOEDg3bSQ9B2N-efQlBfzG69e6yOw_6VDAc2foXIi4v69DlVXQ)
+![[Pipeline Guide.img/ht-screenshot.jpg]]![[Pipeline Guide.img/ht-view.png]]
 
 ### Hypertext Compositor Usage
 
@@ -4082,7 +4082,7 @@ An HTML code editor is provided that makes it easy to live-edit and preview the 
 
 
 
-![](https://lh5.googleusercontent.com/x5pTlpvldFGjAzVdgPbYSahmqnZ1g_AMfBXHH0a5-pFsSG8SOcyHVrnRjVWFQO_oEqmAbKyvy2TwGb7U2HNdAZSnlYfg_UUQSJ1aVMuX9DTNkXpD_u_LwtUGidEG32qSxJO3GMqK7K2PCANuI9VhdPNwDLU02y-fNrhvoIueW9FHlTBecHoFBCx1au9Zwg)
+![[Pipeline Guide.img/Reactor Hypertext Compositor_1.png]]
 
 
 
@@ -4368,7 +4368,7 @@ Editing the Windows OS %PATH% environment variable is done by opening your Windo
 
 
 
-![](https://lh4.googleusercontent.com/IS8cFtNi7TjJ_InMicqjUeFDquBWTzs5ZuoSl3dlztZWoeLrTrdol63d83PqdJYFVPy4mYBx27jBkbZtagS7FYDPf9R4tFmxvrufshrt4lienhM0nPmBiyrDXabOoE_3proSZXUW4AX4EHdkW7JEmbiJZOh4ybProa6J3IAJzuWTMMJ5goJ1R9Eu5ZQ4)
+![[Pipeline Guide.img/Untitled_16.png]]
 
 
 
@@ -4376,7 +4376,7 @@ The "System Properties" window will appear. Click on the Environment Variables..
 
 
 
-![](https://lh4.googleusercontent.com/N8IYg8ciK3yccnFPgoeLTyBonU-7KWh5EEbBl25gUtZs09RBgQNl1cZpXdM36GRbqkIwLksTCQdViCw-CEhhsMrh4ZDQagLTMXD_y4fPzQfQ60TQylMwr4-e98K3_yDM-SE7Ixg0gEGblk6s-QxZiZEdfgSMqf30hGdvZtJh2mHc6jC64NFMpPlfz9e6)
+![[Pipeline Guide.img/Untitled_17.png]]
 
 
 
@@ -4384,7 +4384,7 @@ In the "Environment Variable" window you need to scroll down in the "System vari
 
 
 
-![](https://lh6.googleusercontent.com/lzAtGJupDgElgBdJFDznb6-Elg5ff-5hFJQH-S3h_hxKTdJ9yenSpGMJaNly1g3nfbILdMCUkutkOHRKdImYoDBUTilhpZa_CobGtr3ksUQ1n9hZNUE_vPV5R7jFWNgxZM48cnEb71jQatYxoiUfwbQ0SwE9L3N6iQSJp_I0aFyOfZf7hk0apob9fV0R)
+![[Pipeline Guide.img/Untitled_18.png]]
 
 
 
@@ -4392,7 +4392,7 @@ On Windows 10 a visual "Edit environment variable" editor window will appear. Th
 
 
 
-![](https://lh3.googleusercontent.com/rk3K08ZnRkFcj_doQknZctAkKgFd8XNPEYMLj4Z1rrk7Y2_RWajttFMkmyGQ86aB2lZeeYbgjaJ_rMahY64kRueNKu88ltuchjBFVQPTVPsQjBkJyDnYgbp9i861HSVHDVyXQKLtShA2wQQVMSeNBZd42nT-0Xm9wX4-cU0jCdGXVKPGgxiW40F3lxyz)
+![[Pipeline Guide.img/Untitled_19.png]]
 
 ### Listing the Active Windows Environment Variables
 
@@ -4400,7 +4400,7 @@ On Windows 10 you can type "set" into the Command Prompt window to see all of th
 
 
 
-![](https://lh5.googleusercontent.com/cVhgQgmbZ4lvgqwwwixmFBEcXv-FkoYtK7Ack-sl-bMvFbAsvdHy-hGf8Ty_WdHfIuIpGD9pKhiSCzX3g8Yc9LOHZFetOVPIUPhxlKx0DKfn6tOeE09baLe0z7eCPHvGw4ZeqmjGadAnaQknUYcUw4LPv0QH7xnFNhDQd_nVvqleQdy_vpEKvbjKRBHc)
+![[Pipeline Guide.img/Untitled_20.png]]
 
 # Linux Environment Variables
 
@@ -4520,7 +4520,7 @@ On MacOS you can type "env" into the Terminal window to see all of the active en
 
 
 
-![](https://lh3.googleusercontent.com/CVWnAUw4TWYkOjdrr7hvI7_iRGeL_KW8uSIiXJka2yRMi5BwpmWIJo88gv3Yu7ozwQyRUc_bd_wVmT7PI5tEcaCaPkh0C0RJ-eDCzWNVW-C_EzUeI33pzc4_UG65mF8vZHQtqWmHddOVaIKf3SnGozzcK5YSZCaDp13EcI819GZwx5ieEZitMtX_oHZo)
+![[Pipeline Guide.img/Untitled_21.png]]
 
 
 
@@ -4615,7 +4615,7 @@ The "UI Manager" atom package includes a handy script called the "OFX Blocklist 
 
 
 
-![](https://lh4.googleusercontent.com/SFlTeBtJNPKfBZ6B6c9h4F_BaE-dkrY61ILE6NRE-dh7_jDbq1quoQMP4mdHtzcFYU1WQIjoSB1ozWUH80O2hh7onSShyrcIHEbi8s-ArcLEtDsTe5AAgb935YkIH0ae1PSgoX0sIQQ0eDt8xZSJ7laAvwOtDb05IowaDnpfBI8hOX5wzAaYD_a3HRTDcQ)
+![[Pipeline Guide.img/UI Manager OFX Blocklist Generator.png]]
 
 ## Fusion Profile Customizations
 
@@ -4631,11 +4631,11 @@ The "UI Manager" atom package includes a handy script called the "Fusion Diagnos
 
 
 
-![](https://lh6.googleusercontent.com/IiQGEeZmlyDTJyMMzj2LYBTenu5g8c4ANcmZ4hNoiYzgcTxQobFuz5UaEodNTj-_kvD9D6KUlZVkVx5DpAwVrbEiAxpCghkKD_fr_eiT0iOQoN1zZZXMOuNZTdtc_hHyWUDuKLpspfkqCRP5kaaubcgkMMlzwk9StrmD-P-BI8_8fH7Id85Hr6gL77l-pA)
+![[Pipeline Guide.img/UI Manager Fusion Diagnostics Tool.png]]
 
 AWS Deadline Deployment
 
-![](https://lh4.googleusercontent.com/nw3eV11r5_GzPaP0ySR6hbBFv23vIHtyR1OVodihSt0RH2_4l9aWM2P48cfW_cVIgE94vdmG6BlvAAD3tu-imlk8NDQ0JSeS2f1jxj5JSclTPmaCEmIKJw3H2AWNCKTaeS-Q1XXJz3SblLbrWuuZfO50E4-4qOhaAYF47Bxu9YgnypARyCWBs62xuVcX-w)
+![[Pipeline Guide.img/Deadline Worker Startup.png]]
 
 
 
@@ -4655,7 +4655,7 @@ Rendering jobs in Deadline are managed using the "Monitor" program which can be 
 
 
 
-![](https://lh5.googleusercontent.com/1GfUYfOIyK5pWggxiu9XEdnsgOozkUjerV7S1MBTFCaBF1o-JsnqlOkeOKdQcqIFf1z0u2XP7CuBXxDyQZnyP9as0dBjjNxCW96-4kipPZ19gp25xtHVeloE6MRmhxJkgCcCWKEqhx87yaPp8teMy56MqTYG-oP31a-Wx58X697QxS04Ha02tGhpCatb)
+![[Pipeline Guide.img/Untitled_22.png]]
 
 # Deadline Configuration
 
@@ -4719,7 +4719,7 @@ This interface allows you to segment job tasks you want to run based upon the be
 
 
 
-![](https://lh3.googleusercontent.com/b4sk3IZ1DYXDt8AoZUVyjfMBmI50zfrGwODH7tYwkTnFQlNdIrlq6pO_4HPf0kiyi7ouLQ3nDOFdVIoO2o6hxeb7A26HaHq4umPhittuXaIUQlP5cTzkOTGOxyrKPSMtrKeqxhMEMYGGor-BoNEi0xRuCHMjihVVMjyzeNTws2xidU_Ol2zA5yFwlUC4)
+![[Pipeline Guide.img/Untitled_23.png]]
 
 #### Pools:
 
@@ -4751,7 +4751,7 @@ This interface allows you to segment job tasks you want to run based upon the be
 
 
 
-![](https://lh6.googleusercontent.com/4ZUykaH0xCwLj2R0rEdJ3UEG0QRaOUzqpsXiCCjFaZRPkzB6jVA9tLr4W2fV9QkXQtLIZ21bV5EaIaeKyGA9KMpcLDO2rruNrTlmQzbdVS9oda0X4RGqe9azOvto6F5kXcV0CdLyO3H2yZAlDbSIvDzp7eXi0Y3QVUNStUnrKIWHPkQ2ixguMOMOskzv)
+![[Pipeline Guide.img/Untitled_24.png]]
 
 ### 2D Comp
 
@@ -4827,7 +4827,7 @@ want to launch on render nodes.
 
 
 
-![](https://lh5.googleusercontent.com/HFKHA24BLpxq94PgqctPuAY7omxG72sIOetQ7gzFPuF6PuJ9tdA0awTbwbZdhsCOL-CbJ9lChrbHNsTE-BGWA-m99nGVgM-bi0uRoHh7cKw-Zqrr8HqSMpPhj0FaSeh6YfcffhmJWqVVOchE_eYAyLtRi9fDs34xmEKcvcl0XPFDRuZgnc2500Uv_WLu)
+![[Pipeline Guide.img/Untitled_25.png]]
 
 
 
@@ -4911,7 +4911,7 @@ The "Submit Fusion Job To Deadline" scripted GUI looks like this image below. It
 
 
 
-![](https://lh3.googleusercontent.com/8mn0hjBpwOgEPG088i1sgpPUu0UkOVQK-Y8wbNH6sOZXfghylnWfkttaZHkkqohPwvKdBPHuty6rAxTACMyoiQWF8x19MENBRGOGlLPQvQ8TNG-US7PaLR9vWUPQIddtoScDsIv17HtBPeoZlVD1Ro175sKrL_RobWTec8xTKxkc_VRJPLN1kNXtibT6eg)
+![[Pipeline Guide.img/Deadline Submit Fusion Job_1.png]]
 
 
 
@@ -5356,7 +5356,7 @@ Tractor can be controlled from a WebUI, as well as from a terminal based command
 
 
 
-![](https://lh5.googleusercontent.com/JmMwDvq6drUxOMTPdq2h2e-W3cAszXpbvIFoCfWavOw8TDyT-oIhU3DEw4qNPhoDKkWbkR_e1r9HVogt5_Y9XfIKaDYQ8zwX6qbuU3_L_FFKoz_4NWJP_7AxmWgWAX5nSCr-hwWCIyfhD2F2UCEX-w_lBrtduHbGox54EsNg4Jbk91paQrdXYpPYD1A7ow)
+![[Pipeline Guide.img/Pixar Tractor.png]]
 
 ## Tractor and macOS Port Ranges
 
@@ -5447,13 +5447,13 @@ This can remove the need to juggle multiple keyboards on the same desk if you ne
 
 
 
-![](https://lh3.googleusercontent.com/rlKaU28b3v2OoqsxBNwknhtKO2mA8i_HMDtgKKIspCJxST_Ohi9fNEuiAa5Fdx8Oo9kEylOj28fX5CnMjiEOlmtRqOAMaF68ABJBhl75aVJ3JSQT80j9RHyNfHKPqDKJC8Ou_XRAk5wmQELI3uBNG9JbLjzgy985xMbGME7PcYynP5OhwadUAIU8Ly5t)
+![[Pipeline Guide.img/Untitled_26.png]]
 
 ## Sharing a Microsoft Windows Keyboard with a macOS System Using Windows Key vs Command Key Remapping
 
 
 
-![](https://lh4.googleusercontent.com/KAgFTc1p7zX4xcqJvdZ6Zn-T2wn_Qmd6TJCkwLHi7op3kkCapYnyjJIvkno_CgepN20P01K98jbnzwXRikNRdpb9Q5jkJEvpQXCh_z3RmBi9fReibxr-uy3YpSsJefwa_LBFtKGJqZAcn2JSNTJ5OcqQKmcFNUxppZiHtTQLq2B-Y23YoX32serDKGOdzA)
+![[Pipeline Guide.img/Synergy Mac Side Command Key Remapping.png]]
 
 # VirtualHere Network-Based USB Device Sharing
 
@@ -5479,7 +5479,7 @@ You have a useful option with the Sharp Keys utility of being able modify both t
 
 
 
-![](https://lh4.googleusercontent.com/RBRO64gweskFJD47cH8zUG1PXtu990Bov008Rrmrwvq_lRMZlRz9guEvNXpWIEeUfiVezkRqTdhggP7o-M2dMXigcCHIcWZkdBRl2fuR7Sx0nO11So_WltJDPqoqZi-ISkJwiqgerb7X4MiUm1HK5XEoSjMuDFBp1E0UF_fCKjQ9g8bde2XinDcF5kbJJg)
+![[Pipeline Guide.img/Mac Keyboard Sharp Keys Command Remap.PNG]]
 
 
 
@@ -5487,7 +5487,7 @@ Or you could choose to bind only a single Windows key (like the left Windows key
 
 
 
-![](https://lh3.googleusercontent.com/LBMp9Zx1ATnRdWfZf5AvjETsarPV-TbjUW6m7JDR26d8LeIyNJ3AEwjLdQ3q130ivZl3QAFcOXnydR2dPOahVJ3iqyauR1QixpayFjzgrKRv7Btao0gw8SFQP4F_QWz909HpqPXtG_kQv_Wyc_Kjb891YCJXcUdedC6deT2tPtuqoqXTedEaa-WG6ZDXJQ)
+![[Pipeline Guide.img/Sharp Keys.png]]
 
 # Install Meta QuestLink / AirLink Drivers on Windows
 
@@ -5497,7 +5497,7 @@ Please see guide "Kartaverse Workflows | SketchFab in VR Via QuestLink "
 
 
 
-![](https://lh6.googleusercontent.com/oSR06B--AB-7CmKnnlKgQtTHbSahoS49RclbIQslSyhjs_jeoMlV4Xsp00xFmzi3S7dCDNal2HamGoZ_6DCsiJD1xn0-Lsw4RlLGPpmrRuVDndmXCitHiP18262EumQNFxBvWFSPCOot3WlYmrQcAqdRUZf9ylmF4AkqB9-MXEqhW-Oj3bQAzAN9rbmY)
+![[Pipeline Guide.img/Untitled_27.png]]
 
 
 
@@ -5527,7 +5527,7 @@ sudo dnf install blender -y
 
 ## Maya Installation
 
-![](https://lh6.googleusercontent.com/UyiFEejpEQ0LI6jcNKNRHLbZOiidI00URsEFah5QifwDMAYY_umV_v3GSuYo5y2qsUnz7vQqR-jX2J7VJHUItdt83lLi0XGVDMxbHHgsm53sjFPcUS9KTG3RPlBRRjhYxiRLbnfpJRa14jvq8oE7CMcMcMobUYAh4wPA-gWSOMnbiPsa5D5dC2Gd8zV1)
+![[Pipeline Guide.img/Untitled_28.png]]
 
 
 
@@ -5973,7 +5973,7 @@ It's worth mentioning that the V-Ray benchmark program is Multi-GPU and Multi-CP
 
 
 
-![](https://lh5.googleusercontent.com/eyXbWSMlVxnW3rJwLngLAFwdG4d_hkoGJXnXqjx6TRNosSQzUl2m65_1ipsxH0MdaQtUtAlujg1QGTBqnJFtzQzFUncy6Lon22dUrssHWasxkOwm2QRYIMIVJfE3hcxXSNwcZKijG61IIDGxOd43BKdqIIQV1CjUFHtfSADgFrM_wYDh0MSIVnMlRG5WMA)![](https://lh3.googleusercontent.com/M5zPsbyqwQib7VSv2IEskd8Sz4eyFft7nTxtCcpx4JGzScyVPsnuRPGg6vC5Za7s2Kri2Yj66-TESui-0rRHv3G1ZnwYHkSPBV44WLeNBLxfheUwhmjTTn3D_uZ_W2CoEy78dcaSWXbQZWz2dOt8mhkE1CAhMzVjQVAWwLX4EyEcRjZp9z9n7dREchLkrQ)
+![[Pipeline Guide.img/vrary rtx benchmarks.jpg]]![[Pipeline Guide.img/vray cuda benchmarks.jpg]]
 
 ## Installing V-Ray Universal Render Node
 
@@ -5985,7 +5985,7 @@ This executable supports the creation of render farms that can process content c
 
 
 
-![](https://lh4.googleusercontent.com/meFnHlSkgAZgQh_jwDMOZSUbqjpubCZZOVEBeNzi_3XcYFHtYuGiwjTysn-yS7FQBT3xa0khy_Nl3ejmvcv9sjDHYeatCrJ8gsmcc9je96ZEqmran7kByRTtpGcmjz_u_GhW-Lcd8SsOLj9k--InQxPIP6vsaJETdEiiilM2cUsgYoYDVOiWGTQ5CxPwuw)
+![[Pipeline Guide.img/Vray Render Node.png]]
 
 ## V-Ray Installer XML-Based Config Files
 
@@ -6139,7 +6139,7 @@ This V-Ray distributed rendering approach is discussed in the following article:
 
 
 
-![](https://lh4.googleusercontent.com/be9MIOm7n8z2PREbWk0nDqTGRNtnf2MfOr-POgpVNpkqeWgvYyCW7k81Wd1deu5pkXVYqdc9g92Oscqrmd1aSZUnwkvHAIfYoshU-SePdFIy05iJvcmf5poikzocCGk-D3ZETJp83W_DGoz_YfZ1-Mgn6TRBVS-3OQjF7GKvzu6JYmu7UWNbSfbsJf_aew)
+![[Pipeline Guide.img/Vray distributed rendering.gif]]
 
 ## V-Ray Scene Render for Fusion Fuse
 
@@ -6151,13 +6151,13 @@ Render V-Ray based .vrscene file assets interactively from the V-Ray VFB window,
 
 
 
-![](https://lh4.googleusercontent.com/giwuSvLD0RrHySwMFfbgesXazmBK0brN19PAYRDFI8uWyCQGNGcHMBEsWYlliOD8Dee1GDUxABhiuMyWXdG79KSWpNfBPmgdD6tVVFrriZs8cxwYmd6juHZuyKdM6_vo-I4zwtgVfaYcrTJe61FjllFrETN7DQS7YdmNhKcfuYpoyDoMmT5POsBqnjX2HA)
+![[Pipeline Guide.img/vraySceneRender.jpg]]
 
 
 
 ## GUI Controls
 
-![](https://lh5.googleusercontent.com/tDRBCs63qIy9e3KVdNunCSmioOv9hWXS4B1JlKrtp0AM6L1oV8nKY7U71SmnUnv6Z7FvJm-k6HZC0XMgO3hVfmQ4qrOjlR_GjcAqtULLzCXVDefdlynRHFCxDal424p3OS3lJYgVcPlN97mUJHFs3nzbrG2onpiYOgCurEtK-osv3-IBVF_lYd7gvZzVwA)
+![[Pipeline Guide.img/VrayBatchRender.jpg]]
 
 
 
@@ -6340,19 +6340,19 @@ Marcel Gandriau (Tolosa Films) has a new RenderMan v24 for Fusion plugin that is
 
 This image shows the Eisko Louise character asset from the RenderMan learning page being used with the TF31 RenderMan for Fusion plugin:
 
-![](https://lh4.googleusercontent.com/xQbpfQS3017DctSRqvznxMwRDVqn53fEBjHUeiyCRKlAXh_ph-qFBEu2SxPddRVcYg8bJh2DYVn7td4bzedUHl6jkLdVVCdrvgfKeGSowoKgSIgm1O36rPge2QUjsqGtkOnuAWf8-tp2noS4nExYqI2VW7bZCL-BnKfPuMhRLaIVMKYGN_wv9jaFt_rEPA)
+![[Pipeline Guide.img/Louise Character.png]]
 
 
 
 This image shows a plush dragon model with alembic hair curves. The asset is from the RenderMan learning page and it is shown in a Fusion composite that uses the TF31 RenderMan for Fusion plugin:
 
-![](https://lh3.googleusercontent.com/RCjFsBW9Gd6nYk_JhdgPnRW0i8ReXHVNrI5JGmlquqlTejOcvWT3f1cHX3I045j27G0tD8vbkheJxnc0zpZ8foMNdjBIe2UAlC4KRaga2UzqRTggM0PiUBw-kDPiWaeTXV2518iWSMfX9l3ZR7ncfu6SEhSqTt7H_HKfuKDo1TdtEz6nlwWw8RmVuWzwXg)
+![[Pipeline Guide.img/dragon plush xgen.png]]
 
 
 
 This image shows the Cookies and Milk assets from the RenderMan learning page in a Fusion composite that uses the TF31 RenderMan for Fusion plugin:
 
-![](https://lh6.googleusercontent.com/iTwn0PE9LWA6DNTTMZgyzg3WvE_oJpKx9Q0rRDCcdcC4SVmYb46A3sE8hRVyrqD6HqBsehcFEVCwgL2K_-FFGQL6oKhdzVOR1I4l6EdhCK50leyfXnhtJUWRZ3CgbcBrVnjHsjUsTuekjaWDJaXJQADvZ7_9bQXwthjbjEjcqXLnHfDgx1HI1zkUOL82zA)
+![[Pipeline Guide.img/cookies and milk.png]]
 
 
 
@@ -6385,7 +6385,7 @@ Click the "Free to Try" button to register for a free RenderMan account that all
 
 
 
-![](https://lh5.googleusercontent.com/INWgf7V50fh3t4dAydDWkwp0HoSJe_O5x_nfhDYr_2UmHOhqyU9k8kBBW7JcqB2eks2qaww19F7tnrFLGlMHaLgtywxOrC8IU_Y0M0fu5C4T3YVtMw4zB3OVH-6x3RkjROtBoZexvoMmPmr0DI5yuR9e533Hvd_hLyEVPivLU1hoQ3Tv9zyTTQDSCIWF4Q)
+![[Pipeline Guide.img/renderman 24 nc download.png]]
 
 
 
@@ -6412,7 +6412,7 @@ Once these changes have been made you can run the "RenderMan Installer.app" prog
 
 
 
-![](https://lh4.googleusercontent.com/NY1fb10MFAOw28GyNHj9saj7towBG7bzXiC9CDXLzYIdZkpdPj_PF2d150fNNkje9accz849ImLslRcA1s8c_SnpNcANbTTbdir8c9wpBs0OHEmpHgtle148ru6XuXSRxz-ID3cGZIHGi1QsxDP1rak3bvzHDCL0waiANCoX60-jExsbWfOpsaLJmnkZWQ)
+![[Pipeline Guide.img/install.png]]
 
 
 
@@ -6420,7 +6420,7 @@ If you don't make the macOS disk permission changes, the first time the RenderMa
 
 
 
-![](https://lh6.googleusercontent.com/8cQWieRzvsBxLy7Lza3-Q3pL330m862zkJOgISU0AV6gbPQjxUNW3UVg30uEdYmg58DaotdXn-r0aS1d2kwZVpPAU1KPOfwwytIgnbSCusRNEtQSL7PqLXVlbeunOOKHeJgxcUv7AGHxtiDhPYIeLa2nqCIXKGFTDj8JcM1oM4zBhjKOFMHo8moYIDnQLw)![](https://lh5.googleusercontent.com/rtOYFH6urI0P93VEbQG1RMrl3QlAF38qAIdC94NOByZyeZld_ArmYHlmbp5CSNsexhY9nPLM3H4ubldWGWq7M2ntfii1plmMR3osmy3JIpIcuDd4ip1krAnjniOSFD6Lcts8nkCmWwya5k4C0DEsasDIZaxG-15vou9arErHiAvEw7g7XWbC5khzjoCImA)
+![[Pipeline Guide.img/install rfm error.png]]![[Pipeline Guide.img/install rps error.png]]
 
 
 
@@ -6498,7 +6498,7 @@ The "tf31.tif" image is the default placeholder texture map that is applied to 3
 
 
 
-![](https://lh6.googleusercontent.com/0sa8z6t9-p5ULEL-5p2hAJJekiCVRwB9-yjpVDzqF0XN6gH5TKxb7m_xZMhgi2pNjb5_0rcfhzncKO1ZWHgUGxZlDtJRPhGCwALKP01fWAayhdcXPtoFtuHmMnCdUKOg7VCESIwDIdMJnybWveVXmAKf4uYka0VQeK2xYS-GtRndCfOQE6_ic84Y4PWaQg)
+![[Pipeline Guide.img/tf31.png]]
 
 ### Launch Fusion Studio
 
@@ -6528,7 +6528,7 @@ Then click on one of the TF31 plugin's nodes, in the list on the lower left part
 
 
 
-![](https://lh5.googleusercontent.com/CG2nzTjFM2GrEq212nogn7xTjMTWSVgnqhDBbwZ9_cCFIX4HlhICJJx82HFRSFrvS2c6GbwmKTs1g1mkxpeqshBrV-6G9ODTLdhJvaXwJ3wwjGmwf8qy5iOMs-207KOdv5OrZHnhzhgj-kq-EyXItKdKtOSLwCTH7Jtwpql_dHsd4ojQ393EXz_gaP9nQw)
+![[Pipeline Guide.img/TF31 Plugin Build.png]]
 
 ### The Tools Menu
 
@@ -6536,7 +6536,7 @@ The RenderMan for Fusion nodes are accessible in Fusion Studio using the "Tools 
 
 
 
-![](https://lh5.googleusercontent.com/JRB8owdGe7L4IPfHY4yxIqWIqNgjEB_l3qBnr7XTn18VW86HDx_b9yJNN-K4AdAwxS9TmPnOLPHzkK9lFemNyCzD7ypHtjym_FMznT4lzFuPwR5DoJvcgrdHGEtY3QEmw2jkusBalzcBR5ik_rk90wUyJInY4c-lzf8jkG9zUX4UxGg20JPEBBkq1B38zw)
+![[Pipeline Guide.img/Tools Menu.gif]]
 
 ### Fusion Preferences
 
@@ -6546,13 +6546,13 @@ Global and Default Settings > Rib
 
 
 
-![](https://lh5.googleusercontent.com/KJkR8sVLGLvuRT-RetQqfnaWtG6_PylE8UVLhNjD7w10FhikoImQ-ITLoiBadZUMyiWag3WOvy6J_UPf3KJzIvTJd5iuP_g9L6al1nC49teb4_-RA6CCDnflu3jdNcDl9FgMHaNN2OBW6CVusOpD2zVgvLQc0nNoSK9H3G8sM7UydXM7DIDm0I2UyWguDQ)
+![[Pipeline Guide.img/Fusion Prefs.png]]
 
 
 
 ## Creating RenderMan Node Graphs in Fusion
 
-![](https://lh5.googleusercontent.com/SXSR49A0xKxT-YGE_Ydtl2maqNzUe8-dfLjos5em391x8Jp3cQSldsd_CfmxOm4bs65OTULSu3T9yYf6qsHvJ663rr8d9-K6NS-CMo3PsIP1YrG80-LUQx9MvTaijsLMlAuyZQSU15l0ltM5dINnCFQ1nnsngEAOIHTyUy0_DF08hmaklSoeBl2hlBFNNg)
+![[Pipeline Guide.img/Shading Network.png]]
 
 
 
@@ -6592,7 +6592,7 @@ When creating a new Fusion 3D comp, you need to change the Renderer3D node's "Re
 
 
 
-![](https://lh5.googleusercontent.com/frBTWugxm1uILLvKEzwIVgyaoMFlYeWchQju8FtDJpEsxvXkgjs2s4jfNuSv48_iVlqiqULEm9Rr9nnZTvmwvmoauqFJFBFkDVCJzHoOEYD9VJCN5iGAS7hhdBijBDQGy70A8hmRG9cT7H0gDp9HvxIerb5N7sOwwM1jpzlvxBe85GsAdEPhU3qLuoxoyQ)
+![[Pipeline Guide.img/Tf31 Renderer Type.png]]
 
 
 
@@ -6604,7 +6604,7 @@ This "Alfred" .alf file streamlines the process of using RenderMan Pro Server to
 
 
 
-![](https://lh4.googleusercontent.com/d6BtZkiiMncwCyDWmi5nwmhN8DaJKwUREmgwu8YQAwvc3S_U2ladnrzTC1aGNdunYw84vvyx26pp4itiEwzbadwOdXT9gLi4l5m3D3L-v5kkH9MMAmgbvWA1HRmzAYfhesTCBVsK6sNEZ5zS398Lnp-zEH463mP6ow-aHYdem9IZkgi9FKF7aucMDUTiFA)
+![[Pipeline Guide.img/Local Queue.png]]
 
 ### TF31PxrAlembic Node
 
@@ -6616,7 +6616,7 @@ Note: When RenderMan surface materials are displayed in the real-time Fusion 3D 
 
 
 
-![](https://lh5.googleusercontent.com/v3cOr4eVE_c9XFF9qEeg40nd4sPL4bSbRr3RgkHP0lcIvznArwrmZWWc4CXL4NE7QiYovdMQ2Wr_Nf4W360ch3ptvJuP_cZHvo-UkJSQISJRP_548jZST4xQZ0hHcyW21C0sqq3a_ooT2MUduv37cAYP6gsS56LiQExxIgZFO9acSqRIJ6kdHkQ_J1SY8A)
+![[Pipeline Guide.img/PXrSG Nodes.png]]
 
 
 
@@ -6634,7 +6634,7 @@ The rib file will typically render an OpenEXR formatted image to disk with the .
 
 
 
-![](https://lh5.googleusercontent.com/cdu76BrHqTs7B_RD6wIiszbjZCxbH77Bgr6lyJICpr7xShikg-I5wR-a5_QNASo4Xvv4PfJZA-wQE837_bvQMV31O4hBLwuPnaT0ReOhEMcOGAGHN28mppsfIH8OCzjjoG4mhJlSM_KAjdcjU7jZTqygt-uWfE5QU0CK-mLAQBO1eTC9uJ0HuHE2NyOcvw)
+![[Pipeline Guide.img/RenderMan Pro Server CLI Render.png]]
 
 ## RenderMan Lacks ARM64 Native Support
 
@@ -6648,7 +6648,7 @@ This is due to the Pixar RenderMan SDK's lack of ARM64 compatible include/header
 
 In the meantime you will see this error message on a macOS ARM64 system if you run the TF31 plugin inside of Fusion Studio.
 
-![](https://lh4.googleusercontent.com/fSKEDfvN9FUaX783j2w66Y5Y8OraMYCGzFB0s4Nkw9blzEb8SQhP7GBjxxkDXo1CkTcp1lNYboYfoUkxPRM-uOKNS2kStn-9QA2-Hmp4lfu8AHAosA3McCNWUqXi9d4tcamxyf14sXVvnfRGO136EoOyryJ46gObnuEjQ3_YDmCDiTpU41vmgyUNo5hRVQ)
+![[Pipeline Guide.img/No ARM64 Support.png]]
 
 ## What the heck is a Fusion Plugins Blocklist File?
 
@@ -6656,7 +6656,7 @@ If you have a Fusion 3rd party plugin loading issue during Fusion Studio's start
 
 
 
-![](https://lh3.googleusercontent.com/pNTp_TDM448abU_N4SNejkP2URdiMIUANe7VYPmUD6vW-pQ7EK6Yq__lFCDRUu4_QKm4__H3JO5cxVKPY2IhFiweNO11b0fnsY1mOzyi_KobgDfiKFl2KCCvgLJRhR402fw3z8pZKphh3leWhgk2UknHfYH1aLNMfKcxE0l8nmNo1WYK3LIjeEdiXKoc1Q)
+![[Pipeline Guide.img/Fusion Rib Error.png]]
 
 
 
@@ -6771,7 +6771,7 @@ Ikonic is a cloud based media management solution. Ikonic is released by the sam
 
 # Jupyter Notebook Deployment
 
-![](https://lh3.googleusercontent.com/4b0lxGyEIHN6s_4AfMBf-tet8ds7EPDOm2XWOQqUM-sb8m-AkvVhlCSHNwblpuY6Xhwk6nVbTlz9PKClJIffjyRRX09ORRRvUMCpELIKHn-gXLARcvP4OJUKf9jf3ymJdQ5xFgqNf8fmaIggfzKn5f0A5D0nC3ToYSKRsPZlJNBSGVHSj_qN6qf4Vgvb)
+![[Pipeline Guide.img/Untitled_29.png]]
 
 
 
@@ -6835,7 +6835,7 @@ Licensing Settings
 
 # Houdini 19.5 Install for Linux
 
-![](https://lh6.googleusercontent.com/bB3n5JJX88rSjXYtSpF-kaD3RNeOr3HCFVkf8nBFyFHFsZnqtOWska4VhjDggYqysRc9QH0dLdymLvTDwXXetPOEq3Nl_bUtkC8sPRu99duLhxzKaXMBbjbXbqgL0z8RmwwzSx8LW6uQssd7p-eq3BNzFDrIzvEEL4QPrt9xBYZYT-pti_U04O9nZ6zM)
+![[Pipeline Guide.img/Untitled_30.png]]
 
 ## Linux Dependencies
 
@@ -7291,13 +7291,13 @@ It is possible to use Houdini TOPs to control image processing workflows:
 
 
 
-![](https://lh3.googleusercontent.com/kwxY103MRLsBvc-0cdaJ2-op0Y2Tbq62CHjTZ4yATT5EtamtGS4Xpjlbbwva1aGitxwnSJsgvczlSPdcpO1run2S9J6rCqWIeqwDooCwTdXdaflGwXJpayk3-DJPi3XDTcfryUpP3epT-IViThLoUU55wpUBY-GRxr4_dTDFtZJyV6nzvqjkVVE4WajA)
+![[Pipeline Guide.img/Untitled_31.png]]
 
 
 
 # Distributing a Houdini TOPs Job With HQueue
 
-# ![](https://lh4.googleusercontent.com/fjnuisk9JII-jGYaJf7veEZv7PLlZVhkwxl-pIf2kYv_locKHAUW5Vtg1OYhpJq3EYshghda3OHGXX8pcjAvag8eW3ZpipA3JNmdruEsLjj6wlxLilrQy-qepbirbEpUxNjT0MYfZVbaAPMsovFLdXlZvX_3aWkswedAkXNA2DsUGLwQyHUZaoTwnDo-)
+# ![[Pipeline Guide.img/Untitled_32.png]]
 
 Shortly after you create your first TOPs job in Houdini, you will feel the need to speed up your render time and output volume through another layer of automation. This is where distributed compute techniques come into play. 
 
@@ -7475,7 +7475,7 @@ If you need to check the current command-line parameters available in Metashape 
 
 
 
-![](https://lh3.googleusercontent.com/R-8T3MV6W8GXbZSOl-1TtNskKLCoTCTx-sv_JEkZgXiWDJLiHdrCmpcyz87EhaN-1_sk9dtdq4Gig9eVKHfmQ0UwaNfYX6ce404LKYk2lBOBzG5nyZLaC_vlJ4cot6aw62DTeUrfEsGwZp1fgvFaRJ0uld9L299s2gTjoPcK1ZMFpNou_jbULP-FE3wv)
+![[Pipeline Guide.img/Untitled_33.png]]
 
 ## Setting up an AGI Metashape Pro Render Cluster
 
@@ -7501,7 +7501,7 @@ Switch in the Metashape Preferences window to the "Network" tab. Make sure to ty
 
 
 
-# ![](https://lh3.googleusercontent.com/ejvmBGrazNhI4IZUnfTtvnA9hBQmDOV4ZHwavMU-hjWWM17ayIlAg-KxTKVsWK76hQE3zl2cX7BDFPWTiPLY9NXAldGbvR2LSdDiuyfXzCyGgh9ET1KMB7ZXsLvdpGCzw_MI6lTzSzLukF-dv7OxAET18n94Abo1rH6luCzP8oda1tkEDu1YcbqCGLJC)
+# ![[Pipeline Guide.img/Untitled_34.png]]
 
 ## KartaVR Metashape Automation Script
 
@@ -7509,7 +7509,7 @@ KartaVR provides a "Send to Photoscan" script that allows you to export Loader/S
 
 
 
-![](https://lh5.googleusercontent.com/4G4w4DEd0JYCPSJW4ivP_FYULcSaIHke8rJDD6oJea2wWWUw2e8hNY9g0hAu5D3M9RTLBJ1Q32Rl1Rhf33R_7D3tMNfc7ALOBOgGPhJj_W1vV-tsTxMAmRUaet5YN-T3nRAu32QSfwwMMv31PJwEVZjaTokYlNuDzRhg7NS6psmld6VW1nxP8UCmJZtSvQ)
+![[Pipeline Guide.img/script-send-media-to-photoscan-tutorial.png]]
 
 
 
@@ -7526,7 +7526,7 @@ With this Lua script you can select as many loader and saver node clips as you w
 
 
 
-![](https://lh5.googleusercontent.com/1EAaAHQ5LZEFyGvWtkG3BlQMLEqA26HiZieIAVmyhJhnpUQP382qKVBeVdiyOn09cTca6TjcUkR_vUuHcjjqefZmo1dhfm5bjmX6le4e6jkHDK_x06dubcWP1-Tl_1vM60KetDzfftBGx6PzfMHqwqc0SVl9ry8Lw5AoRpCdpJgBFVJRkz9diXECIjpNLQ)
+![[Pipeline Guide.img/script-send-media-to-photoscan.png]]
 
 
 
@@ -7673,7 +7673,7 @@ AliceVision Meshroom is an open-source photogrammetry pipeline that is node-base
 
 
 
-![](https://lh4.googleusercontent.com/xs2pe2yIU4LdLuETMr4-FAuzr7jQPD7zkIPrXuSLW1nTkIEjKjerVyQCRE2_MWQ_o-3hT9w4CXOgJK2IRVvMVx2ogEetrXWWhY0bZP1p97eOOeF3iO5-SVHWPaqH7bi1Eeg436fdZL0Qg_U0tR_C8UFhSs0vDiY9-KycFQku_6QndK_Rby9jJI9jBPq9EA)
+![[Pipeline Guide.img/pasted image 0.png]]
 
 
 
@@ -7846,7 +7846,7 @@ The Faro Scene software is used to process LIDAR scan data from FARO brand LIDAR
 
 
 
-![](https://lh4.googleusercontent.com/Zo32fpX_jl90_d_VLtWj3BWl_vyVSnt8JQY0H3BWgwS0xkIhzl898KUugSY6BGWTj3lc5GaNWHzdJSN-Af6_4xsbIdY1epURUEnWX2olCxRNyLgl4hETGoBoIcb0Mz9C7ZDnHS0VHAOYrOdBbN55A3apM6u0rBLQ7-vZ-7-jB8XAn6LSEb4jAHsJxPuFHQ)
+![[Pipeline Guide.img/Untitled.jpg]]
 
 
 
@@ -7859,7 +7859,7 @@ For more information about Faro Scene and Faro Focus Scanners:
 -   [Vimeo | SEPRI (Spanish Language) | Using a laser scanner to map caves and caverns in Puerto Rico](https://vimeo.com/666185584)
 
 
-# ![](https://lh6.googleusercontent.com/LgpjkVY2PawbC3wN6weINk4zErqAW7iJ_X5aKhqxqwGMP_rGRB0-Ct-Zs9cvqR-QjYjOeK_pShTQifiCXhpeC3HDkV3gjkroXCWSll7o0RrBJH14vKWNsm2aOURL4z1GtVpmF57QRy-XhA_Kr2TFJUZR61hhmJGxA_5rhC95yH4-RISLyJA2T6DQAznt0g)
+# ![[Pipeline Guide.img/Untitled_35.png]]
 
 Using Faro Scene, a semi-automated approach can be taken to register and align LIDAR information. The Faro Scene integrated masking tools helped to remove and "clip out" the LIDAR scanner tripods from each station scan. Finally, the point clouds are merged into a unified dataset that spans the full length of the scanned environment.
 
@@ -7869,7 +7869,7 @@ Faro Scene is able to export finished point cloud data into a [compressed e57 fi
 
 
 
-![](https://lh6.googleusercontent.com/4G-4Guh1HvXeFdjm_HN2-_MHd1pbuFTWGhlIfhIaEi-hAmDpuwcdKz_g-_xXVa8BhudhLk5nkJAQ5I8WIzs9dZjL3Sc2xFYn6uN1qbbOtmy-5-grE-a_30Cwy4kbpe30CpZqumYYUB0_wtkEOFFvALzxTor1upeYB-rY5uwmZ5IEIVKD3ifXbiV_i-m63A)![](https://lh5.googleusercontent.com/tVkUvkZx335ig2mPEdPbwW8V-5uhNjl9jmPjYyzb9UbNZeVs647PwJLkLdIQFkBVAez1vsddaPZOJUN3KbuaZOwnP17uC3i0rxJVTIwcmvUfhSRFixiteICAxOaL18QdHZxCdduzMtPRdnIzDis5fC6Vvc3BkD1jr3GC33lICuHTFGachMoqJ-JHkfk6Tw)
+![[Pipeline Guide.img/Untitled_36.png]]![[Pipeline Guide.img/Untitled_37.png]]
 
 
 
@@ -7879,15 +7879,15 @@ A Faro Focus 360 LIDAR scanner captures both point cloud data, and RGB color ima
 
 The following Faro Focus LIDAR scanner photos were provided by Robert Moreno of La Sociedad Espeleológica de Puerto Rico, Inc. (SEPRI) "Speleological Society of Puerto Rico" [http://sepri.org/](http://mundosubterraneo.org/)
 
-![](https://lh6.googleusercontent.com/rBznCiU5cVeNNyNGwwHGznjjHRBwq5lE1y3eNMt_CS5UO8n97q7JUtnBHZDltHQfPE8uUbVaY0sgyG-C77f5Cc3ViCrUT4e2DrzJ_YssdI234CUXg96f8OoTq8KVsnQKe0WpbKPngueX8Rixb107IFfuh3N5XGjic16aJVNfPvG0m-x2SghygfNzkb4P8w)
+![[Pipeline Guide.img/Untitled_1.jpg]]
 
 
 
-![](https://lh3.googleusercontent.com/f09DCwOEOoKDFDrrnijywhmmGZdEns-mGUHzHA8G_Rtw_DLku5Ilj9t5vKoE7dm4_Kg3fJjvuKVUFJm_MTHeeXSlyJtgWHQqosDYdANsu5enpbAAcHdbt86FabDtPCTV-9boXdgBRyX9s9OVEvl_dKw5UJK2VzC1AnxMvpSoVCCIE2EnpMBx8g-gVftXag)
+![[Pipeline Guide.img/Untitled_2.jpg]]
 
 
 
-![](https://lh6.googleusercontent.com/KMmSiVM23NJShftjvICy4fy-0TQTHp0h4r-nwTGi182CPCngHpVm063-Q8c6j05LgcFK6mVwKrUyBnLnQwZg-SWa-btjOjKyqWakM08AhuIU0w2lrAur4an7GWglMMCjy1lrL0GbGIkTWzw4Nnh4irh05o9YlJAMiOLEqtzAlQBX_FhrmwUbEIpVQsUxKA)
+![[Pipeline Guide.img/Untitled_3.jpg]]
 
 # Leica Cyclone Register 360
 
@@ -7921,7 +7921,7 @@ USDView is an efficient 3D scene graph viewing tool provided by the OpenUSD repo
 
 
 
-![](https://lh6.googleusercontent.com/wmInwTCLmvx1ZK3F-G5SHuccoeNpYVbI3I9yj-fmM-mtQIBf8bOdT4PuQWe8gTR87yty9uZGJR9tguob4X28SIv2A1vFkRmokXzTPih9HK7Hm2WQHuy-yVUr7O6g39WVE5b3rQDBoZGV9MOO0n80DOEhy2D6NV2BXiQMpk7wjmKTIGakQfP3AqMG_mx7ow)
+![[Pipeline Guide.img/usdview-kitchen-scene.png]]
 
 ## J-Cube Multiverse for Maya and Muse
 
@@ -7939,7 +7939,7 @@ The KartaVR Export point cloud script works with the currently selected PointClo
 
 
 
-![](https://lh4.googleusercontent.com/-VFScZJclw7ItucSW8tyGAv3VetzueYHVsTFwsKDD5dyyQkvDHr_XRlAjnu8YbCSZbR88K5bDkXbDNoAGu2IzMAgk_yYoWjE3EkwpkrkhoW3d4HkuYQI7nPuDuKV9pjJy_ipEJnGmvtgqf2KCbZgQW33BsVVAKsJlHRg0j-IS1i6PqV9V_AbUBUluQhG-A)
+![[Pipeline Guide.img/Export Point Cloud 1.jpg]]
 
 
 
@@ -7947,7 +7947,7 @@ The "Export to Point Cloud" script can also be used to de-compose a Fusion FBXMe
 
 
 
-![](https://lh6.googleusercontent.com/KaBd1S3EEM7gaE5C-PVzAEnzbsGO6o-pq7dBXuA23HgDtDCBRtlwyn1T8kWXaB1sJs5hrKFw4ioLGNhsWmm2XGD2I2nEUJ6gkkXXXCSRgWPcqSGItuD_1OkxgRH1HchcdSLc9MVycea61tnFC8FwM02V-1sINseIb91Hu2WjOzTAjYGG9QjuR9IVYndMZQ)
+![[Pipeline Guide.img/Decompose to points.jpg]]
 
 
 
@@ -7955,11 +7955,11 @@ KartaVR supports .ma (Maya ASCII) based exports from Fusion 3D system PointCloud
 
 
 
-![](https://lh4.googleusercontent.com/iK5oIHu4EHWY14L-bL4n2kepN8arbNO9A5OikXUciFmpZOrNqR7o2BlxQeAxDjUyZyfuBkNc8lgahW1zaj1__v3IR1j2J_UzbtYzX0Sinhf0NbthFAFAmBUYd2gtyM_4yvFJ6OIaaI0kkIFVMuIrtCmOvkKAho8vGqTdmQSgLdcNNDLAQ2e0TfJkxH4fIQ)
+![[Pipeline Guide.img/Export to Maya.jpg]]
 
 
 
-![](https://lh4.googleusercontent.com/IL13wLvN9piL6V3CA0QMBl2AmabUhJiBejcJB_8z9JdR77wHUl9fQ9q99scgASIXoCE5rKHZEZ3AU4EbYUulWZd8sYV9GCQ75800za2YVVNlm6CWDYijhbHky_HZGv1vO6K_TP8NQ8D9_IKYQcnO9UC0buxRbYKJZ_wCgdzU3U7lXQA_ugzXc-HyuFKkAw)
+![[Pipeline Guide.img/Maya Export Scene Contents.jpg]]
 
 ## Vonk 3D Node
 
@@ -7967,7 +7967,7 @@ The Vonk data node "v3DToFile" fuse makes it possible to export the PointCloud3D
 
 
 
-![](https://lh6.googleusercontent.com/oRtvEsZrRAQRCPWtINPBwjXaSLlt3aV5uyeDThmE21BfgSfSOodMw4DsRQ9nFD_luJ8K1XOQmAP7whn6iyIlaY8BH-38feWc5D--1nJg2Qw_2nuXNWldXaBrhrtBk_UVkmCJam_w67bAQWb5-QWbEC7e_E0f7-lREntf_sDWQCpFSoGLm-wLnzh7_5zKhQ)
+![[Pipeline Guide.img/Untitled_38.png]]
 
 
 
@@ -7997,7 +7997,7 @@ There is a Fusion example comp provided with the Vonk data nodes that shows how 
 
 
 
-![](https://lh5.googleusercontent.com/OwGc6vimMev_3t3EOd2ZJIqsHbCSt0dy5HGnPddFyKeHO668-vo-stJcMFxiUbl2y64FzRnRHZYf_2790Fy-kNg1kkYz0aT0rKJNhyru4Ps9pvhPAgShmJn15ojG4iCwSqbiJOtlVhIEcnbWxX21qS300Oid22lrT8YZFYB_nnScD95tMOQQsOwrRWgWTg)
+![[Pipeline Guide.img/Vonk 3D Demp Comp.png]]
 
 
 
@@ -8017,7 +8017,7 @@ This is an open-source NeRF toolset for interactive neural graphics based volume
 
 
 
-![](https://lh6.googleusercontent.com/68eZBe9aTh_MFZhaHHI7NnRCotV1Mq9dCTG_QUHIVMycxEq2X6fcdF1MvIHTehrdDprKsrrH1acrmlFQRYKt6UGV-FPvmoDqLCDuHSYZz_JO99UlnJbFiGJyWpu1y0X0OwQG3uCC7tdoGJ5VbCvmYLkrbmUTJW_-H0sqlc3nOBFndc8UPGqgKK4ZHYBK)
+![[Pipeline Guide.img/Untitled_39.png]]
 
 
 
@@ -8077,7 +8077,7 @@ Reaper is a free open-source DAW software package that is excellent for spatial 
 
 Apple's [Logic Pro](https://www.apple.com/logic-pro/) DAW software can be used to trim spatial audio based recordings down to the sound clip's final edited duration. The program runs on macOS systems.
 
-## ![](https://lh6.googleusercontent.com/zMLBVEvfGunv91_Gcw1qXEg7QlGbvdSu29QoNNjykz387C0MeLtJIQcQVJ89Y_8jiWpVNBKAxntiO_nwHob8aPSbo_o2Z3BYTeLLxVMoNR4p7UydhO_BxHFOlk9xjsXxJ_ncbe3KxJqzisdWVJLjz37gLpDtkkUhIe5hxQMH6-aUH4OoclNEyM60w3u6ag)
+## ![[Pipeline Guide.img/Untitled_40.png]]
 
 # Resolve Fairlight DAW
 
@@ -8089,13 +8089,13 @@ Blackmagic Design's NLE software Resolve (free) and Resolve Studio (Paid) includ
 
 
 
-![](https://lh3.googleusercontent.com/bN0jq4u8tcy9F3CxjeBlj74IS0Iag9C7d8HcPzWFBX3Vf2aOSIBqhUcagd6Fk1_CN8OPO57iLit_thnTtRS6OVyGazTfkq3Nz3sALUBf81Rv13xa30PPG_lKFPz1XCYRDnE77zcgVkol_91YarrjuOVkyy_N9emYpYiGCnxv3ccxZnhsO53PHosTAg5m1w)
+![[Pipeline Guide.img/Fairlight DAW.png]]
 
 ## About Fairlight
 
 Fairlight has its own dedicated page environment inside the Resolve software:
 
-![](https://lh4.googleusercontent.com/6rlkmcZRqjMi1JUzyE01F8lO59WQ0p-RqSGWVh77_sqesb5i5dJDiK_Gvq8ZeL7zCrBtyY2qn1CFAuHWkYh80rhZ5_EnwRgpZqC--ggGgkbVd1zA9WbPOX37LZsUe1iBdxOAl3h6Auy52mvkkqpiVxr8SVUpqXX8IVminNIguhNWL0a8rqWnbQ4-oZ3KTA)
+![[Pipeline Guide.img/Fairlight.png]]
 
 
 
@@ -8107,13 +8107,13 @@ When you first open the Fairlight page Sound Library tab an option is presented 
 
 
 
-![](https://lh4.googleusercontent.com/AIpXnHZqpzurEpk7DIA59HU1PlaioX6lCpnyi7UZZBIIaTYDnDlwT4OKfUeCPKn0ZJpqJXrdpKbRcQ5UyfqO3l85lgs_BW1-eBuJ1Hv0Dje9wQ2sqMXmrzfgGg0bdfI8LZBHovzYyFKibhVn_TbMdAhhquGvcgG_woSEse7_JYenzXktdrlD0lC9PxMrIg)
+![[Pipeline Guide.img/Fairlight Downloads.png]]
 
 
 
 Clicking the "Download" button takes you to the BMD Support Center webpage in your default web browser. After completing the 2-part form on the webpage you can then download a macOS or Windows based install package.
 
-![](https://lh6.googleusercontent.com/kDusMn9WfImqeT5HhQL0Xa-ZyuMzdLEmEDHvHzqHkNmEW5XqfaBrciPWffk6zh6IQB0w9qhIXzhzQzsuSV72hvrIAcoE5dkqEh4oZx8Lz-OpZ5BDx1r_WHIS8g7lJCAqvWtx3VFAQjGH7RRVbM_c1vfMKJj855L6pZgzb7tZsPUn3wctBxggNPT0KVj0uA)
+![[Pipeline Guide.img/Fairlight Sound Library.png]]
 
 
 
@@ -8121,7 +8121,7 @@ Once you press the "Register & Download" button a new download link will be gene
 
 
 
-![](https://lh3.googleusercontent.com/zWYRIccNfBFeGurGnwPg8Fa9ADJxjLspMH-39pQQpzObwU7DDHRoj10vOHlEmZzweFrBhSWRNNZgc3z4T0UGUweAQ1yopxMG182coqIA96f0PQB2nDj9kCs5T4s-rkLDoC_6E3BSP4DX02zR642u4t20Mx7kr8ic__qf7MsqkyGIHhmy4g5hDPy6W-pR-w)
+![[Pipeline Guide.img/Fairlight Sound Library Download.png]]
 
 
 
@@ -8135,7 +8135,7 @@ The disk image holds a "Install Fairlight Sound Library 1.0.pkg" installer.
 
 
 
-![](https://lh3.googleusercontent.com/tWxVxDDnm5zhQWouL5S4a5aQoSPdL8t4PkshXcOwPScdP_GBrJ2nmkUIio_oP8-BDq4KH6mnJ7J_oAJSEuSv-_R_W0B_NUbE2WvbyFdFhDcyOGLhGkKQGA2g1foWhVIAVWGjbVAh2OUs15CVlafEENpvcrG0Nnq8z1tbwiDgHLWpQChV7fwVRXOqUeKk-A)
+![[Pipeline Guide.img/Fairlight DMG.png]]
 
 
 
@@ -8143,7 +8143,7 @@ The PKG installer then adds the 1.12 GB of sound resources to a folder that Reso
 
 
 
-![](https://lh3.googleusercontent.com/Pbl7TUY-IlaJBQ__FWgT7nn7DAxwNZh-3nLvAqDIudFOBWEKxpkJFL5obvv6XfvjmDy-D-NjHQiSWFYVeZTv10mlRyTohxmAPRQ1nXo_kC3k7HWarRXsIMLIAhGBuTVAA54HSN8zc80FljuS_HvXursVe6z5xbJa3Y447WC_9lzYZry1SVl7TBLs-M11OA)
+![[Pipeline Guide.img/Installer.png]]
 
 
 
@@ -8247,7 +8247,7 @@ Comsol Multiphysics, when combined with the Comsol [acoustics simulation module]
 
 
 
-![](https://lh3.googleusercontent.com/l97zNm3wpueoejlRNLI1OEeyJZZ4d9lqg_wigMJGFTnexx5G4dvevva2fHy7DhDj8lu6fLuY7QpOvt-4YjTUmd6dNqOXrR8n9qNM5InlS5R-5N3xbEqFSnDYSvwf1ElpsS_ib34KYBd_h2_dvddZjfnOCEsR7j1m2bXJ7XOjwSrx_GabXaPpur45w9mjqw)
+![[Pipeline Guide.img/Untitled_4.jpg]]
 
 
 
@@ -8255,7 +8255,7 @@ This is a sample Comsol website image of simulating sound emission from a source
 
 
 
-![](https://lh4.googleusercontent.com/CuCxbF-venhGIuRaljWK8VySUK-L6xLAxIFyePDsflzNOZh4VXckHIpH6P5BRwED0f87EjASZ26G_z29uedI84ikZJECLzBq7K6PBwUdCp2-Y6thZoAznhV6My2gBtdjTvT2ehokjvGjZba3vsq8kUMdICJYtFcxPVL9XWlNCyUvHJLFsb7SsNoalxLMww)
+![[Pipeline Guide.img/pasted image 0_1.png]]
 
 
 
@@ -8263,7 +8263,7 @@ These techniques potentially take the volumetric research further by allowing fo
 
 
 
-![](https://lh5.googleusercontent.com/MMuKANCUFdMKQFl4IKKrJ4PZC9F_i2JTW7e1R6Xl6yp2I0Xy3UIWh2LGw7lM0_7VYTait7ioZxz_Hbf190zbz9sT-UFMY6-uHb7R6mNxWxKVwKfd_OGANsv4UTzLO5YwlDr4GvJE4i7YRbChfj8u-1KuzknGRR7Ft1XTd-qbD-QchBj1jvTodn3NjXZafQ)
+![[Pipeline Guide.img/Untitled_41.png]]
 
 
 
@@ -8277,7 +8277,7 @@ This image shows a real-world ultrasonic audio recording of a pulse train of bat
 
 
 
-![](https://lh3.googleusercontent.com/Q-2WlEe43EWdvn6gVvFTKNP53owAvgPT1KMNNbNWOfen73wpOFP5tanzBmLRvnmzrTB47g9sNViYkmzVa3q4Oaa8I93Z-CRzfz_duFjTXgIgbPm4iO_ZfLJEvQuIADUgeg_8tGPdQjGyGagupHz-maQm-VPpR7AUKq-8f6DBnvaUWdNqVATVbzzYRKJ75A)
+![[Pipeline Guide.img/Untitled_42.png]]
 
 
 
@@ -8330,7 +8330,7 @@ Project Triton | Talks
 
 
 
-![](https://lh4.googleusercontent.com/mUI7nWMO6w2urdtsJ4H_z6kCv2_JnFiStv869SwyAHt6fEIUBvca9tYQ3KqLHgOrrZOiD99D1ZFaWG-N0S0CY9icGsfsGotFf37Hdh-zv-PCZ74MoHqFITBoPd77vYA4XwdFYETSqaVJuOTuHjWQ2pZhLfNcxIWFC6uffrHQPUTFWSnlLVpD11PKMcMLfA)
+![[Pipeline Guide.img/Untitled_43.png]]
 
 Project Acoustics Figure: Connecting simulation to audio DSP with parameters
 
@@ -8340,7 +8340,7 @@ The Project Acoustics YouTube video "[Interactive sound simulation: Rendering im
 
 
 
-[![](https://lh3.googleusercontent.com/3q_891-THb-9kXyKE_fF6gEB29kQyTwQSr09S6-qIacAM-FuKDBgzrEAuK-wH1DdJfw2eJVEwOuihUxRhyBIRgwuNPyxfmjmNinE10CoaHfjRBaBEGv7iPsbqR0uc9bwD9JMxfRiSDTZ4Olazvxv36HlG3tquXV4xHMyl9K1RKDbjisEjaMZKwimMbMwjQ)](https://www.youtube.com/watch?v=Fy9lQT_MJ3Q)
+[![[Pipeline Guide.img/Untitled_44.png]]](https://www.youtube.com/watch?v=Fy9lQT_MJ3Q)
 
 
 
@@ -8442,11 +8442,11 @@ These two screenshots show common settings for batch processing operations.
 
 
 
-![](https://lh3.googleusercontent.com/ZSdR4SH2k5anYjrgsswimwOLG5Dc5QrelBD_tMpMGTJxP1Z_d6s2yAvRW_2ok2YfhNSO8fgswcEp-MbYoQTPJ13OqqoxD3BcQCE-oir8x9Yu3asjyUXMFhnaoKV8GFrFOSc3aJwdLr5JCT2Q-mNKVKwx9q9FRbbyFFcW3jGyrrId0e07KtYSMDWfM-sWSQ)
+![[Pipeline Guide.img/photomatix  Insta360_Pro_z360_PhotomatixPro_Batch_Bracketing_to_EXR.png]]
 
 
 
-![](https://lh4.googleusercontent.com/2pccwagTkHF0FSchdIoqJ5pfLIGd1U6aZfzg3A8iQxIe33_kwcJegxGA72F49IYSf2KM7oVT1CbA0Y3ePeb7fFE46v6umcRkVkkUB-VAPPK1vwmxvYaMvyUQkbbAzgfU3qpbT776g57VVg2nXrYQZraeFTEMO3E1Sp16tV4K-lfz8Fi0i1GkFvK1BpCjGg)
+![[Pipeline Guide.img/photomatix Insta360_Pro_z360_PhotomatixPro_Batch_Tonemapping_to_Tiff_16_bit.png]]
 
 # DxO Optics PhotoLab
 
@@ -8964,7 +8964,7 @@ OCIO Resources:
 
 ## Installing OpenColorIO
 
-## ![](https://lh3.googleusercontent.com/SAr05wcr1ZUqA4AUm2E1kYKZw_jgFGHs9-R1FL0BokgRM48yA9N25DO5WVAAwYezsQpb0WlUHbQJSs8a16Obi5VEeqyLsqVAeoi-is4dPKNFNBgT7b8CE0Tx8Cup-6FtGL5-yDuFv_pqiVxMSBwUP81f8wLB9WXWdF7IAIU5p-kqXinBKBV83dxXupzb1w)
+## ![[Pipeline Guide.img/OCIO Logo.png]]
 
 Installing OpenColorIO v1.0.3 is done by downloading the resources directly from an OCIO repository, or to install the OCIO config files with the Reactor Package Manager.
 
@@ -8982,7 +8982,7 @@ With OCIO installed on your system, in Fusion Studio v18.1 you can then add a vi
 
 
 
-![](https://lh3.googleusercontent.com/eriADKKC1yToTKztqUSSUKgf84g6_yVO2xPFVEXYXWNNpGyjAgC1IvOaKpVEBdY__mWWHOj_OhyajSO_mzm8kVc2Fywv_2jV5YJmW91ZHkQEZYziwK5IVTo1aysjB786RlkjCDh4AfLXKr4NE8cUnV1kLWjHjUk7lpiryUVakcOZ5Q_eX1M0vNDaf63nvw)
+![[Pipeline Guide.img/OCIO Viewer LUT.png]]
 
 
 
@@ -8990,7 +8990,7 @@ The "OCIOColorspace" node is then used by Fusion's node graph to convert your fo
 
 
 
-![](https://lh6.googleusercontent.com/JLCj9zta846YAsDzYUoD06j0cm2VdhIXmAQYOWUHbEtCZ3SU7MCPggAx70_Yhmtwqy5clkbJIKD-AOeqKfEU_4z1rNo2qp69Y68VFhRVsfH8ztgEsT1H4u1pln3wXD2XA3QtutUuTkONddce3EvBPh5fDyNc8Am1uu48YFaKtVUaTrMpF-44gcTGNsIs2A)
+![[Pipeline Guide.img/OCIOColorspace Node View.png]]
 
 
 
@@ -8998,7 +8998,7 @@ With the OCIOColorspace node selected in the Nodes view you can then access the 
 
 
 
-![](https://lh4.googleusercontent.com/gfKmPlPKe8MvM6JGTzmZgCJUKq4xMmgIQGBkLavHyJ6wZAqIDT6XfOLweJ4fQ1FRPJ1Aw1SGc-Clla15-j8JoHB_2qN2qFstg-DD9lJL13SMfaoj5_mKW9zbEmdM4Ctr3WDM4aSCsYa7hmnUeLT0cEODdGYN5ZCGP03YZhw5hTET5dnUxZVWWENWOv28gw)
+![[Pipeline Guide.img/OCIOColorspace Node Inspector.png]]
 
 
 
@@ -9043,11 +9043,11 @@ Step 1. Google in their infinite wisdom removed the VR180 Creator tool from thei
 
 
 
-![](https://lh4.googleusercontent.com/gJLKGUun93DvLQQXQnJgoC_k1awPGia_xzDhQPUY75uWwXPK11BlxWqN0CtVjb8jhemvHzewf3B8ZgxK9lNtECTl-HD9Gsd1aTOWK0gwNjb5kWXVAVAaYLWvIZfxAMSuw_aDJKTbJO7bBEXNkgMJEh6eIxga_RqPbHQf3Ipn0KozGpu9ZNYu_7D1uNi5Kg)
+![[Pipeline Guide.img/VR180 Creator 1.jpg]]
 
 Step 2. Drag the "VR180 Creator.app" file from the disk image into your macOS Applications folder.
 
-![](https://lh6.googleusercontent.com/MqqoHacZzUxfFRDC0ovkABUqqZGUo8S7veeBO5nAlLvMEgfkmmlaQFmRAT2VDeQp8Lfc_-7qKTxky_LEB1T3YZLsR-_PN91eG3FsSOKGB6SOrGd6S6oBdK3b6bFGyU-ankMjNaKLOqgp0anWvTnUgT5SDTojaiK7E3BL5XDk4hh0IohqLpUDWxxdIQZ1Tg)
+![[Pipeline Guide.img/VR180 Creator 2.jpg]]
 
 Step 4. If you are on a macOS Monterey system you will likely have to edit the "System Preferences > Security & Privacy > Full Disk Access" settings to allow the application to run.
 
@@ -9063,19 +9063,19 @@ Select the "Prepare for Publishing" option.
 
 
 
-![](https://lh5.googleusercontent.com/ADqv6hCHQM3wtwECErUTXVhI6ae-BX5OCguMfUfSJ8_jMEnUYORVjYdcJgTIw9UMzUqG8orYYRH8QCtZnPT4xERccEJirI34cgF57x5vYVgFYQ591iLUqrYzntq_Epie_UVPvRdifCmFld-Myw_sL04vomySfPbBBM-t_wQ2tcYbkdWNSkEkKjOxgeVsOg)
+![[Pipeline Guide.img/VR180 Creator 3.jpg]]
 
 Drag an MP4 video into the window, or select the file manually from your hard disk by clicking on the blue "Select" button in the center of the view.
 
-![](https://lh3.googleusercontent.com/QmoecZhPTzZsZgHX-Bb4xMnYcNGRBnIc3TADcqgbQ4klc7-wVet5gcCe5Wn7_uIlJl-LhiPteUJaYj9Lrc7MVxRguowye9KKMt29RTWCxyAzZ-jBIKf-5WvTaNCXPNqdDzEmoBRO6lZTVLe-JrtMhbPhDnYbhEtr0C5bC3xy-DyNWOOqwRi36vacd8IgJw)
+![[Pipeline Guide.img/VR180 Creator 4.jpg]]
 
 Customize the "Prepare for publishing" settings before exporting your video:
 
-![](https://lh4.googleusercontent.com/8bJoM5KlEw3Y4fVUc4sHX388pPxCayI7Trb8h136Y2uYlQdvR0a1hTvWX08rzucNTUNZQOnltD9kemy798xV-DLjHEXLSxnY4V7d2QGhPmt52Z6qE6IKLesqZqTvJID6bsQgsdIxsGQrd8VyEmD1ovGcRTJV7ddIM8rfwNlcu0rZwKgAJHUV8yG2Ko-72A)
+![[Pipeline Guide.img/VR180 Creator 5.jpg]]
 
 Viewing the Finished VR180 Metadata Injected Movie in YouTube's VR media player allows you to pan-and-tilt the view to navigate around the scene:
 
-![](https://lh4.googleusercontent.com/jGPQxEMq6NC3LOy8PiWu_50gBVSqXwZt6h0Xu9QsjgAfdfZb1OX95DLmy79AfyM89i4mFA0rsCjFGIrZ10V_-kZN1JUVjf_xtf2herm-3PDM3EVb2QnBLNeUT-AKwi3awaACDLOFINvvP8TWLCMh_h_QViUIMpS8U_odM_J7WW4AODsgB-dR_67Cn0ONMA)
+![[Pipeline Guide.img/VR180 Creator 6.jpg]]
 
 # KartaLink Media Command
 
@@ -9085,7 +9085,7 @@ When Media Command is launched it automatically scans for Lua and Python scripts
 
 If you are a long time Fusion user, you will find the Media Command script was designed to give your Media page content management operations the same power and flexibility as you have with a Fusion page "tool" script in the Fusion nodes view context.
 
-![](https://lh4.googleusercontent.com/NSRJgJuBSlfV2UoJz1R4K7RQkPlNe1Cy0auR6_NoVLg-8JKl0N9ADoselOcWp361Ijz0snIujn-AggvIYXvB4zyuGWJVuI2wDEpiK4MeWMALe-n2nKizLAzOzj15vpCfW3G895D8RnSx6HZ9FjK1QvEcdcarSCGtmNrEgfqLlEemF7VZAktI6JLv06n28w)
+![[Pipeline Guide.img/media_command.png]]
 
 Media Command Resources:
 
@@ -9106,7 +9106,7 @@ The "Type:" ComboMenu allows you to limit the tree view to show only media of a 
 
 
 
-![](https://lh5.googleusercontent.com/v7Kd1OjDvO18nZkrpVHUwwc0UbSiVoxpA4p3zi5tfgfZPMQDZ8HaJM_0q_anwDpypic9lSHmfo1jO5ZRAOr7Wjr3bWtxp0bpXSAIdxcNfX6GcWaSt2rvjATAz_V4uISB5Mm_cXu_t5WZxaJpIawn-zMW_mLlQaugNMblyww3h-Ol9phWwnUJRu8Eu9whQQ)
+![[Pipeline Guide.img/type_combomenu.png]]
 
 
 
@@ -9114,7 +9114,7 @@ The "Search:" text field allows you to narrow down the results in the tree view 
 
 
 
-![](https://lh6.googleusercontent.com/qo1wXHtLKHaznn_uy4jW9sDlMvvAWbvy13TbgvRJv2hHBbeqTLUh82g7neXH4KMHCzSagUzpaefKy5uN1W1RSGGEOtjsn8YySci6cd1AuaP0kbHkUyk7eUrhYvnJkd44IpVjlKkVWJVq7ww_-CoUAjPGb5VsiYQPezJCei59G4ltxHt2f2Te5eh7Mie0tw)
+![[Pipeline Guide.img/search_field.png]]
 
 
 
@@ -9122,7 +9122,7 @@ The "Select: (All) (None) (Invert)" buttons can be used to quickly modify the fo
 
 
 
-![](https://lh6.googleusercontent.com/Sci2sEL0is2JwkJ2qeaJ676bEyuNqfnmmqFNGKz03D1dPhBc-AH1kumtTxFpm_M09bk5M2104uUORfQNv1PNSUTD4BiG3i_8ZielSC_CoSna-7MB3NW3j--70ClfJ_Aljycipn2S2fYZi3zEWCI25orIOd6CODRSbVcfa5JBHsG4jTpITJA52H871qd3DA)
+![[Pipeline Guide.img/select_buttons.png]]
 
 ### Script Controls
 
@@ -9130,7 +9130,7 @@ The "Command Script:" ComboMenu allows you to select a Lua or Python script you 
 
 
 
-![](https://lh3.googleusercontent.com/SWAoWRHakXkRimiXtt_ZWjjQJPtjumQVsRWfslSWx7xGI7Pl4HAijJSYzR3pE3Qn3PHGxqrU-ZS-IWHXwpKUuY4jGhYETGHfLOYTjn7IdMvWIr2NV0juq2JT7f5AjfNm86NZ1lH78fthGf0cQCz3gXy5VwohQL9-s27GHdTB827zIJT5TJB2yKko3Oikcw)
+![[Pipeline Guide.img/command_script.png]]
 
 
 
@@ -9142,7 +9142,7 @@ The (Go!) button will run the active command script and use it to process the me
 
 
 
-![](https://lh5.googleusercontent.com/VAsZ1vrcYsEV3trXA_j2jFLu80HqIYqiKzmG8fuLUS9SEfZFPgPzEnO2oKD4FhwHkl4D-hkvUiURS7rRrUoVUXcvMkt7q4KGdewEGBK_Rf1-kfguuqCG0kb9Xwe6oQBK40H1s4EQ3eyTHkFX78Xtm4vscFOASpO5dYGAZ67Gmb-QKfZr0Y_WYhfF1_lHcQ)
+![[Pipeline Guide.img/edit_go_buttons.png]]
 
 ### View Controls
 
@@ -9158,7 +9158,7 @@ The "Refresh" button allows you to reload the tree view listing. This is somethi
 
 
 
-![](https://lh6.googleusercontent.com/0k1TxxhNJSBBNUIpArj5wGUxAZuzY_socl6tTpj6Lcuso2c-9X7CnjFpFqqGbQQ7ovBcQGVmTMDYWqy3aWt4jfHGdmRCK-8L6e-RjwsPMln7UOGCEknR3hgkYJ89DaAqkk9FeYPPwYF4VUIUpawmWZK47kc505oGPFoMLWukF-vq6qNkyaokwUl95fKCfQ)
+![[Pipeline Guide.img/view_buttons.png]]
 
 ### Script Usage
 
@@ -9186,7 +9186,7 @@ Note: If you are using Python scripting in Resolve v18, you might have to set Re
 
 
 
-![](https://lh5.googleusercontent.com/tIiN84YZHM62W_2D3EvTlxYN6Kgj42C66PbNK1Eh9_zOKFlepZOKzajXDDY4OJhFSXUXjsbbegi5z4_Qj7S_jLlm1LrkhnXGc0hxbI8q6-9Ab9OTGc3lnW3FfC4OPqdzVShqCRi3sIDF-QJ2Wl-Uar0On3wsXuvNC2ot1O61wpUcymjX4lE-08wPMwIG2Q)
+![[Pipeline Guide.img/fusion_settings_script.png]]
 
 ## Bundled Scripts
 
@@ -9240,7 +9240,7 @@ Opens a new DeoVR Player on Windows session where the currently selected images 
 
 Opens a new PTGui session where the currently selected images are auto-loaded into the project.
 
-![](https://lh4.googleusercontent.com/cLp_mJJ5Lhv1iOynKZDIBRsUPf9kLuAgzU8ldgUjuimJ66_1wdqHAu6GGR9RmrHh_ylY-952A9T4dYLzX95pkVJrVB6Q7r0L6Ax7j79I4AsCYHv5wRhrSG6rzXkdKszeWHdlryyR6PEPDSpCGyNG4dg6TCj1BfYPFQCUF3VHbdu1Kud4CHUHPze2elgmJw)
+![[Pipeline Guide.img/script_send_to_ptgui.png]]
 
 ### Example Comps
 
@@ -9250,7 +9250,7 @@ This example shows how "Copy Lua Table" script exports can be used with the Vonk
 
 
 
-![](https://lh5.googleusercontent.com/vmXSBzxcDdDUvMBJ5jH_j-yjv2GTGTvuXnxt9hK3Ej1UN-gRjgzYESU-a7uE_rKFjZdPNel6qEbjHg7jMqLVK1ZsjONxcIHHHEBzyfQdGLY7vsz3J0FHtyo7nnt_07EJAcFIuJlLVr5HSIKh2WNJj0UzNYVU7Sww4Ffc6ml_R-nOOrgRCeA4kHC12jx5_Q)
+![[Pipeline Guide.img/example_clip_lua_table_to_scriptval.png]]
 
 
 
@@ -9307,7 +9307,7 @@ TD 360VR Stitching Resources:
 
 ## Building the STMap Warping Node-Graph in TD
 
-![](https://lh4.googleusercontent.com/pVQB0Xl3_B1u619GC-rWM0KrRgszaHA-xIcFF0EK7kaL2EOdQk_Njd-ldTln3L72O2YluIDejhjNpJM_NrYgvEZvaNXp1pUx8mMsgJ-hzP8FTsW9R4e3IyyyqaHofx-08jQE8XQVRGEvqPmlv_vUcsrNyDXQAhWQPhnF9qYOi-i6xueIJMUWu1T1ARR1LA)
+![[Pipeline Guide.img/TouchDesigner Real-Time STMap Warping.png]]
 
 
 
@@ -9375,7 +9375,7 @@ Step 6. If you want you could enable pushing footage out to an HMD in real-time,
 
 ## Fusion Studio Based STMap Template Creation
 
-STmap Creation.comp![](https://lh4.googleusercontent.com/gTq-bT0w1RQdAhZzspmNNVPe_S8vBFOa7qwsgVSIo5jQGWZNmnCjA-N_-lUItHtkAnRHkBP5F8x2VrtTQDGMn8X2795H-CcV0kAteZ3qbWpfUPccR6sJ2mYt2q_pRSPCAwJs0LHwmanqxrEOPB6HA9M-cU11WfUsKzVSImP0Ke3NYsgaHBzTbzZ98X_I6Q)
+STmap Creation.comp![[Pipeline Guide.img/Fusion STmap Creation.png]]
 
 
 
@@ -9416,7 +9416,7 @@ For more information about ST Maps check out the article:
 
 STmap Rendering.comp
 
-![](https://lh5.googleusercontent.com/7Q5DSvv8fJMk-q7koFPM2iZwQHCnLENyeLOaGlI5I1pZNHikdULB5q2OzkfJpeCKBCzBYm8lhvBaCtPbBt3U0Lwx4H01Ee3ezvu-22tzjxGKlfAGJwJwq6UUoU8WZKKLgAzbLteH6TgV4WM4LK0OXfI-v_81jMDm39n2Wej4FJM0SGwXPhFgIs-NO56VuA)
+![[Pipeline Guide.img/Fusion STmap Rendering.png]]
 
 
 
@@ -9451,7 +9451,7 @@ Step 1. Create a new Resolve Studio project. 
 
 
 
-![](https://lh3.googleusercontent.com/gDg4IOWz02t7z1IW-feag3-0OvephiP-rpei3tFRdfeODqa0AfK8F1aXx6sBdttqObCWbHySwrh9DEOynV4doTYr14zeELr2-xgf-_xzNAaTLjbP2lSulJO9B5svHfLslneX_-MjKe6MmQqO3U4S3xJNWtjqEBcsA72WuF6RecO3-2Lxm8lJMOeHVPMImA)
+![[Pipeline Guide.img/Resolve Project Settings 1.png]]
 
 
 
@@ -9459,7 +9459,7 @@ Step 2. Edit the project settings. 
 
 
 
-![](https://lh3.googleusercontent.com/jM9Eh2rxsFSs-sL-_bZFmmT1Yq0tup_w8QufqgueGo4HBriXX3lKkYMTi3_Xr24HKDSKz0wxtq_nREKrgBRsWbnx91po838mv0BX39hvQE6vVmgJ0f2BXHqKu3KOc58APLDa_Iv9DRGMdDdqoRtbPBf39qeb1D_Dl3guBSe4QtIr_16TlfB4jo7UmTYicw)
+![[Pipeline Guide.img/Resolve Project Settings 2.png]]
 
 
 
@@ -9479,9 +9479,9 @@ Set the Output Scaling to Mismatched resolution files > Stretch frame to all cor
 
 
 
-![](https://lh3.googleusercontent.com/nSzEqj7eplutSja-eE246hdp6aqNDdvXZ7lY56v_EtgFAUjOKOxZIuDSeHcN5RSDo9IxZBl32DYwVaWqS2eCwDVCA6wjawyhY9Ig5CNAWXKTdmal2C1p39Uoh0AgRvhyM-KQrurJWqiNEwb3-ajQ8X408_OF_F1UjdiLk-oPZ8YO2UYyK8fICiifdv3eag)
+![[Pipeline Guide.img/Resolve Create New Timeline 1.png]]
 
-![](https://lh6.googleusercontent.com/31ChUx6RTnH4LfEmKAMVmA9TFRqkPXBnCD-LjgWy7dCjKMEpYZh0USIZ-eJPb8Ngdv6ZNVRTAfGUCxbrVYlqrq7_HJeZQWRbQdVaQuC8JQaI6l-Fbdp0cVJwSsp7lvdlbe_GGKxfXB_TeJhEg8PYYfO0xwdidW2RkgidXNH7VpO3OVzKBzDwc6SWJPUkqQ)![](https://lh6.googleusercontent.com/iS_NWdzxI-T8GIT8wDnGAeixw_bELZm2BZsmUEx8vXc4Utn8BD_STGcTZqmJphj59JjW1IcuOP6QEFy3ouekj7liq6Js0KfofyQPkW_jV-PQGmfwYrt2_bP_SgQHvh7DYstnRadJTkaXvh2KkBhpDgG3tXsQVpUtvs1xu_r_R-QUrnK-kP_ye7PZ9G-bfQ)
+![[Pipeline Guide.img/Resolve Create New Timeline 2.png]]![[Pipeline Guide.img/Resolve Create New Timeline 3.png]]
 
 Step 3. Add the movie file to the Resolve Media Pool. Create a new timeline based upon the clip. 
 
@@ -9497,7 +9497,7 @@ Timeline Frame Rate 59.94 fps. Mismatched Resolution Stretch frame to all corner
 
 Step 4. In the Edit page, open the "Effects" tab at the top left of the user interface. Expand the "Toolbox > Effects > Stitching" section. Select the "STMapperInline" item and drag it onto the video clip in the Edit page timeline.
 
-### ![](https://lh5.googleusercontent.com/co9I06WbN5QXaQyNW0gACFV1_mIWC0abP2g8e3h7aLfsX9s2Ht3aGbKdnrpaIif6V8w9YtXenFbYPVOzVaLK9B64Gb9FxeRGuOy3ijQqtNg0MWySVOFnDYmhNUNfweC7Yy9ucdamrY3PPoTYU0U62pG9a7nB7OGUnlda5pJzE1N08aag_AQtJWNmgDPy3w)
+### ![[Pipeline Guide.img/Resolve Edit Page - Effects Template - STMapper Inline.png]]
 
 Step 5. Expand the Edit page "Inspector" tab. Switch to the Effects section in the Inspector window. Select the STMapperInline item. 
 
@@ -9545,7 +9545,7 @@ Frame Rate: 59.94 fps
 
 
 
-![](https://lh3.googleusercontent.com/KYrpXJYXrAOT8x51vbyEY8ai9wX1Zu-zvg-hIet5aPpoJ1X8mRhp94tcLAG84dS5J1nqF-gC8UdJV0diwI8FdffVG-_so08xugcTJ9dIWr-ATjCYNjIog_cEx2fR-vIKXY4g4HeZE5ztwc-VIj2tsWcAdBXNDmMkD2pHTLbCuDKAcpkLPNv8aHnGz_8LCg)
+![[Pipeline Guide.img/Resolve Delivery Page.png]]
 
 # PTGui Pro Batch Automated Workflows
 
@@ -9561,7 +9561,7 @@ The Batch-Builder mode needs image sequences to be broken down into numbered fol
 
 
 
-![](https://lh5.googleusercontent.com/gfdg2pJTTbA0oKDz0Q-Ozaa-vc5t2cGvxU2yn2MR5QliB4fJLsoVhjsb_mIce86WOBz6uFllazeuFXRVm20LCBBeJXxBjZKk1nQ5dxYFDIrmxu1bGSacuhQROcnPDdhE7Jk6r1IwWAOFpKuXDbszondeY5ExhFLfi3aBscuTTR_J7DVDNZ4HyplSOLUm)
+![[Pipeline Guide.img/Untitled_45.png]]
 
 
 
@@ -9579,7 +9579,7 @@ A big change for PTGui v11-12+ project files is that they are stored in a JSON f
 
 
 
-![](https://lh3.googleusercontent.com/MaEM3V21ZQEgxXZ_59_Ar9t4dNaoAHn4qLIkHzyheuLV8cMLOWFtFTpSmmZirNFT-EfyZ-gMR03TF9yT-TFgZ-hhcVCQtNd5QDI5OrvJEHzVSEujRlEGfhB-avfthk2kglTgZ7qwQFRhlZpDQKjbtXzSrp1vJ2iHrtAYX9Q8HzWOvq79cAcuhtZMZaUpkg)
+![[Pipeline Guide.img/npp_for_fusion_json_pts_viewing.png]]
 
 ## A Summary of the PTGui Pro .pts JSON Hierarchy
 
@@ -9666,7 +9666,7 @@ The KartaVR toolset includes two Lua-based automation scripts called "[PTGui Bat
 
 
 
-![](https://lh5.googleusercontent.com/jHqqMVfY-cDilhj7Y3tgbFn3kDrziulGW1bQlQhc6XV3XfDK2NsVXhRHbjuSUFV_aYtwoBoPFJfSD4CIhOy7vIGhnMPWa5EGZDmDEb2mRKU9iXrxkjWDxlF9aCeATWt0reHkyvRcXgd5Eo3vOAfvK511cIGFSFGP75CGvTZ8tNp5fX0mtkj_BfgBJwpZQw)![](https://lh3.googleusercontent.com/3xbgm-0cIhb4yWfqFAArZjwACt30JPN6QpWo1Gxn3gAHiNmH7-CjiPi1xsW-EI3BZAsWN2ongTaeB-xelx658H1v9c3NPMRXYp19dJE3TMz-lhdr7pe88o1EdxYWtzr6EfaVv9god7ZZ60erEwFUOpjgZVs5DYc0_zQ7oIlh0tg1z1__h9RuoSncSue3NA)
+![[Pipeline Guide.img/kartavr scripts-ptgui-batchbuilder-creator.png]]![[Pipeline Guide.img/kartavr scripts-ptgui-batchbuilder-extractor.png]]
 
 
 
@@ -9676,7 +9676,7 @@ The Vonk Data Nodes also provide several example .comp files that show approache
 
 
 
-![](https://lh6.googleusercontent.com/MC7nYlnXBXt-SiE1SlBmYXrzyJDswobT1401bt9vgtPOz7V0MzTSgyJVNl3DLWonfSp5LkqWMV_78e_jJpY7aw_rwyIQ_z_nX5G3nyVRLvTj3dyV5osstRtIAYQBdVW3GDdhU6UqmkZNbEhr1FLpeqCUwBn1bjVdksTn67p_RvKeFKIE8twSQ8qw7T_UbQ)
+![[Pipeline Guide.img/PTGui batch stitching.png]]
 
 ## Virtual Production Cylinder Stitching Example
 
@@ -9684,7 +9684,7 @@ This KartaVP stitching example shows an interesting workflow that interactively 
 
 
 
-![](https://lh3.googleusercontent.com/VZ5KNwnGk6MC9F5FFeEqHfP1KexmqMpBkhZYbWB9xIEqlBFBBVodqWulBt4x7Hgq7lL-gWHYbq0VSTuNoxBtdLpaHB2q8qsCETT_sYCfGS6uVpDcm3X8dfNXWRgeLvQdtzwY5hT0PmQo2od23aHiI3KXE0sFN66n6GW6A6bR5n92fPqb2jmrvyjpz3spGQ)
+![[Pipeline Guide.img/Stitched_Cylinder.jpg]]
 
 
 
@@ -9692,7 +9692,7 @@ Then Vonk JSON and Vonk Text data nodes work together to parse the JSON formatte
 
 
 
-![](https://lh4.googleusercontent.com/3PYEa-Mdwprdjl7S9x79ElAmFm-dqyh1FZWClvTdLTYWNV36npqAsVxLOEfCCvdJqLQeEDAxdNq-0keOkOQa18HkB6GfoK7ysUJ3ec7CKFxzgPrXbsV2jhlOBHcW7FqdcGhz8ycPCt5fanBpnt2DJwbmjM47EqSmFOugX4qO38FFKi9Q5DqZewDprnBebQ)
+![[Pipeline Guide.img/Vonk_JSON_PTS_Loading.png]]
 
 
 
@@ -9700,7 +9700,7 @@ Finally, a simulated virtual production LED video stage wall is created using Fu
 
 
 
-![](https://lh6.googleusercontent.com/w-wSbQA9jZjE5EWa_CRy3FbbYwcbtDRMq8gCHaECge3dvuJApApmsSgyTVGPoDwH1BRwtFsFx7YRZQIrUzjrxGgi-0d3TrqtzCScsH4GaDzlirrMDNaMmcrDyXItsLXdyrgazOj7iIGMN4Oc31Wr6HRWo4YMPeNJ00MltJR7fYOhZ5y1O1n2desL2_6MBg)
+![[Pipeline Guide.img/Virtual_Production_Cylinder_Previz.png]]
 
 This sample footage was captured using a Nikon D750 Camera with an AF DX Fisheye-Nikkor 10.5mm F/2.8 ED lens. A Nodal Ninja panoramic head was adjusted to an indexed rotation value of 15 degrees per view rotation increment, and 12 view angles were captured in the Nikon RAW NEF image format starting at 1:30 AM, local time on 2021-12-08.
 
@@ -9734,7 +9734,7 @@ A MVR distributed rendering process becomes relevant if you start to create live
 
 
 
-![](https://lh5.googleusercontent.com/T7rwjFBY6pjkxq6mFMvowtwh9igrqWHdX0Jj2l7_AgguLgmiDlYqoSGgz6df6i_hekaoGlV8vMjpC7zwLSb1ZIw-LQyUBCBFxdP5WJPaFPjm6RrVL1SxnCnXMLNeruRUQysN35_KZkbN-4yaIFCsk_cJejuc7Gs_cA0eIKMRqFanDFNx3HhPI8H376XCIQ)
+![[Pipeline Guide.img/Deadline MistikaVR.png]]
 
 
 
@@ -9746,7 +9746,7 @@ The "Frames Per Task" control specifies how many frames are sent to an individua
 
 
 
-![](https://lh6.googleusercontent.com/Wv37FYx7OPO2BFyKkG_X3UijpfMpscxlo3HaweyrBIW6kic-nQCt8HqP_sUuyoD-umE5oQrWsqWrzKv4laHiamvZHvEyzQFQizH3J_lIEWYLIpFVwjpPgj89VXM9eBmHSdNWgvh-sGruVK73T5qumZPsBcW7_dsDkaor5TTMM5X2P8jRHYK70FlH-QvckA)
+![[Pipeline Guide.img/Deadline MistikaVR Submit.png]]
 
 # StitchEm VideoStitch Studio + VahanaVR
 
@@ -9762,13 +9762,13 @@ VideoStitch Studio and VahanaVR played an important role in the development of t
 
 VideoStitch Studio User Interface:
 
-![](https://lh6.googleusercontent.com/GpRO1rXEVk7pOgsV57dZtNJepJ7DN6S8GTuKPwdr_bZ2uIoGZJfdNXf1WyUq5P-k1AMPUjeeEQHGZFF0vIfL3je6mq-IWRj_Y7JUDrfZyLU9nTtWjE9QQWTp0wkVM3oJ7gligLAQmLOJ56skbVTyAvHmVQSelkKgG1i4pghH5zxcLUUl_vd5HjSjwaKSdQ)
+![[Pipeline Guide.img/video stitch studio.jpg]]
 
 
 
 VahanaVR User Interface:
 
-![](https://lh6.googleusercontent.com/5dHt6aPWjUKoil10yXVSS6nhWrgrnNx7IB2zUImE80a4aMB3EfE6Nz5d2X04s4xZ15xtMEC3qIOsioYA5Gn5TyWMt2atepQ3n2F4fz8jVuLhCX89TjUBnGDnBjqI0urstdGZGRxNRShDIteFzj3sLw-BaxsHfnzcqq-6iS6x4LKSH2luu9BEsEgKOUXEig)
+![[Pipeline Guide.img/Vahana VR.jpg]]
 
 ## License
 
@@ -9793,7 +9793,7 @@ Both the StitchEm Video Stitch Studio and VahanaVR programs are available in the
 
 
 
-![](https://lh6.googleusercontent.com/8wSVrjTEDnh6NzYpk-4Mz9G3juCKMJCARjD29-9gvovmO4IvAOrw3TRwnCLjAs8NFw-rMhTo4VNfpLYL8nOAfFLOKStthFuTLHp8LgR9iiDHurNUpeHUfw__5OQeXN8DGTU3wx9deqxBjeYd94dorUL8W3DnOTgaqiWNxC_dTYfM04yP73zuwGV4B75ERg)![](https://lh5.googleusercontent.com/zBatGJgf_90diAa7Eb5u_r3Gmk6XwjMRLSdZBTIMmF4Em0nWFGDNq5k2xgBN-QsBCLEnA3_-OpHk2Gy4iHx6hCgh6kAcFPH9PfbkdIEt6naJtJeez5p6hEOLNCBcMW3LiOioVIRrrm9ekdOeq5BiLiPxWeHRJzogJV3YPp6DpxhSKxPpyaTnghzE8xLGag)
+![[Pipeline Guide.img/StitchEM Vahana VR.png]]![[Pipeline Guide.img/StitchEM Video Stitch.png]]
 
 # Resolve/Fusion HMD Connectivity
 
@@ -9801,7 +9801,7 @@ When you are running Resolve Studio (the Paid edition of Resolve) you can connec
 
 In Fusion Studio Standalone this settings change is done by opening the "Fusion Preferences" menu item.
 
-![](https://lh6.googleusercontent.com/k3Zd3Vhw5BwRRqbxgeXjUJkbHt9Gfv-Ns7IPJ0GgKS5OjMeHJf1-5K_yleu64QgbpueqW4hfS4Aij7VE2hZX1Cy2-V1x8zNP-qxF8OtR3i7oa_ihcaGt85SPDsGpvWzne5l7l8TlOakvWCiTzmM3nU1O-v2Tw2arOnTXJhTl-2o65eEDlUmfRuhl0fCvbg)
+![[Pipeline Guide.img/Fusion Quest Link Prefs.jpg]]
 
 Then in the Fusion page settings window select the category on the left side of the window labelled "VR Headset". In this "VR Headset" section you can adjust the HMD settings to match your personal needs. With the HMD Support in the Resolve Fusion page, you can use Oculus SDK, and OpenVR based HMDs. The same approach works inside of Fusion Studio Standalone, too.
 
@@ -9833,7 +9833,7 @@ WarpStitch Ultra Resources:
 
 
 
-![](https://lh3.googleusercontent.com/zpZEPYAuTVkEGt9ixc-atofFrARiBOtfp8DQd4a8b4Mcbl3ILTfJClwV3m2Zi_Qe-Z6nDbbZkXqsWo1oxjt9aqz3s48UI8B5STxiFAp23TMDhbKrtY8hRO_lIr_Fts9FLKpy67sRVJk3VqYn39J2NjtR2UzQF_1482pb-_HGP9R-o4Ii4yAK6vwUnb6uyA)
+![[Pipeline Guide.img/WarpStitch Canon 180VR.png]]
 
 
 
@@ -9865,7 +9865,7 @@ Known Issues:
 
 ## The WarpStitch Ultra User Interface
 
-![](https://lh3.googleusercontent.com/7mSu6THu-iYLJRwWV1ZRm6X9lktdpD_bFY2RWjU6iLuwpcasL2NICi7f9HMoWTooVTrPZ3xoDujxJlJADTi40lVmlYqQjoKsPSaPYMeS8q_djamlLj9TDtfaodBAoc0yq7wARCNNofddOW072MBeYe-aql-uV5Z9wAMdtXJt1FKy0No_W09te7VxDDkfeQ)![](https://lh6.googleusercontent.com/5BVTl4RXcfAbxtVayclqB7SUPGETFDovX-VMSymzh-Gv8v0u5Os9ujVx0DAaB0wuc0KfdZ9yWDDeOZYc3p0ViTK6t40fMwNOhigDJmMqMenHwkwLEB-ycPvr84R3QQWpGCryZyIyFjv4ER4AsnHJ_Yio19SgiwdNWRLvfMaPjcMEMqxMr-rY261IbbQT8A)![](https://lh5.googleusercontent.com/K-nbYsAcfiN1AD-ZvrVQrR8euhckNBUFdMS1thnwDBmPi8l7-v5zPIt333UVHIfe_8a0h8vr-IR9Fjz0U3FWrA2Dold4kZT3rUN4uN7DE8ygx8rs251jWkPMqfIBaNa0AM1YzxvSAipeqsTYUutGEOgTpLn-Duj1PGfn5gBqCJ2Wy9V3nZnllghETboieg)![](https://lh6.googleusercontent.com/_yT9K_HxF3tldRyEtV9jKq7mCwNaDlUfBnAzkBnyVqBeQpHMsTuyX4ZZACoS-8b7kuMjxnBX4bHPHrNBAhIOld9jHtSKxsNMqYSsouyJm-ZeT7KBT3yZpu1v4rN_L5Po7hLeYCgTy3Qte4ZtedAyDezAdF9kKLJvWzvrTy2T5kSMkGdcP7ner8zGVqHlSQ)
+![[Pipeline Guide.img/WarpStitch 1.png]]![[Pipeline Guide.img/WarpStitch 2.png]]![[Pipeline Guide.img/WarpStitch 3.png]]![[Pipeline Guide.img/WarpStitch 4.png]]
 
 ## An Introduction to WarpStitch Ultra
 
@@ -10010,7 +10010,7 @@ kvrReframe360Ultra Resources:
 
 
 
-![](https://lh3.googleusercontent.com/aTG8W7vgrdzB2Pr0hEoC9POwA2VgoGa0-9jMhISop-oMFnW4S1CubS8FPUwlrG58-tLRlKi5sNcD5BYNsHrkv2YDiO2BJgoo5K8aMEWrFWKakbDDiswCSGFNGa7XNXIb5JV2rOE-vT2UEVoD9rV3cekZAGWEt9trLTqTAfDQCoEDnSnqrMTm5ov4YxVHtQ)
+![[Pipeline Guide.img/Reframe360 Ultra Fusion UI.png]]
 
 
 
@@ -10031,7 +10031,7 @@ DCTL Fuse Support Requirements: 
 
 ## The Reframe360 Ultra User Interface
 
-![](https://lh4.googleusercontent.com/q7FKRl8D89eFVWUPcyy8N_ky4D_chYCewkqRpWdESVCXNI1XDeIbBAEtevSkqCyW7z83vCFfMMEo-FfXOrqOsqA-WA7L4tbZTVpxkKtUwvMk8rkQ-uRM4PJohDpUCAK4XNyopRI4HqsNvokpgQuJA-hRsI5EY_4SB2WI4ExVmXkkrE2_B4e6flHjTUHe9Q)![](https://lh3.googleusercontent.com/0MzmCMue3R56CFzmVqCXYxD3TJwpMH4rB7REHPDk9MY0oDxGNHhlaJDd2I7aow8Mk4PIDhvB2CesAyNwjDcQ8U2S8Qw_qhDuybttGim2thWZW26XbX7KUSjSccSHxQDq6ZWXXoDtNMHc-CuTC_MPombLycvQ1pMRzdybZa0wE0UF6_3fAbrgdwRzzWfQzQ)
+![[Pipeline Guide.img/Reframe360 1.png]]![[Pipeline Guide.img/Reframe360 2.png]]
 
 ## Fusion Comp Examples
 
@@ -10061,7 +10061,7 @@ This will fit the source MP4 video so the width and height are scaled to precise
 
 The "Mismatched resolution files" setting can also be defined in the "Project Settings > Image Scaling > Input Scaling" preferences window, too.
 
-![](https://lh3.googleusercontent.com/uwI0QesA3_pWNHwZbClcnhJVel21SBBaXNodHfDHmqtPRll8BZx47LCLkDqpCmkXnXF1jtpp566udUgYz86BJjPppFHywwkAD8j8Olcx6dMhnlYa5i6P6q2HfeZTlZaOj30x03Q2rnRDNc9d0koMj5274BE7XMQNbqX7-ruBJwbqGNREXcM76-qdH9re3w)
+![[Pipeline Guide.img/Reframe360 Black Hole Fix.jpg]]
 
 
 
@@ -10087,7 +10087,7 @@ Step 3. Add a Transform3D node. Connect the geometry to the Transform3D node. Th
 
 
 
-![](https://lh6.googleusercontent.com/EV45grE95jn67yTW5O8tv2c9dbfKa4nWKFcwMywfo7kPDctXpfkDB5iy_ZSYz-qW5cwV4MKu9FJH15GoqGmb-BX7O1FqLIPP-nwByEB2VdpxR33ooQb6a8hP2cjbZH-mssxu6mxd2NlmmSPxIhglklE5F56GdewREJ18eGbhHStvZ0kxg_tjnpB6keEj0g)
+![[Pipeline Guide.img/Example Comp.png]]
 
 
 
@@ -10099,7 +10099,7 @@ On the Y Rotation channel right-click and select the Connect To > Tracker1 > Off
 
 
 
-![](https://lh5.googleusercontent.com/VJymK_lVk0fA2f9n3NshI1bn87vF541o1rHE_LBMCN9DoQT0KxpUIn5-o7T4o2m4VCYDd_FC27L2LdXUYArV_e8zZiKFc432pvsULDTK4pnQ9OJ96wP3nWvm9KzvMfxN8xHMX302myOAwoxG4E4_kywFWJzpUcQcB4WrBiMzu9biI2m4BMqfYAG0S2m-fg)
+![[Pipeline Guide.img/Y-Axis Connect To.png]]
 
 
 
@@ -10107,7 +10107,7 @@ Then on the Y Rotation channel, right-click again and select "Insert > Calculati
 
 
 
-![](https://lh3.googleusercontent.com/DxUxtCl08kq0mW5NzDWlBqMPB2QimeXhZt1_bhylExIdjIeJsWWxjKAdm1I1KqTkgY8sT5bfRXY1KoLHlPndJ1m9o0SAdhLYqvsjvJzj3M36fVZFdQv_P01azaIOZik9oXanQA_LuT9IYrS3zAqOpk8HtCpo9v-wRg2CB0WzM6LGs0xOKyrynBAbqZvpEw)
+![[Pipeline Guide.img/Y-Axis Insert.png]]
 
 
 
@@ -10119,7 +10119,7 @@ Click on the "Modifiers" tab on the Transform3D node to see the new modifier.  
 
 
 
-![](https://lh5.googleusercontent.com/Y5_Mn2wMqgD0oyiq1YR68dT8KtdDqvwBuXCiCU-ZX-X4JivuFkPz8g0p4B-IvQfF-m_TU8iFOpJfA-MFc2yWqYYDY9hpEFqBjOONLCpxW64grg1GsvB7QJQfQvgzJTa2aAKQ_aX0UJiRkSiVaeDPCZTS_hPpCdjaMKerK9Su5YkiWD1Jlu-Jhif0pPuF0w)
+![[Pipeline Guide.img/Y-Axis Modifier.png]]
 
 
 
@@ -10145,7 +10145,7 @@ Click on the "Modifiers" tab on the Transform3D node to see the new modifier. Th
 
 
 
-![](https://lh6.googleusercontent.com/32LI74VDGSoSousjuvHKf1fuRSBpu28RZ06mnEJLHKyrrvvyrhNgi_RUOPpwvTEfDn2btoWu6glRLPzGpdtOqerUSqvNKseD-td2c_a0Hh0ZdEZO0PpwsbF_1g4VX1MB_umvT-8PNllsnVtlmrlzgSdRfD1n6tSqRkUpUJm_rJApZVlAoXEWtfCT_mpkhw)
+![[Pipeline Guide.img/Modifiers.png]]
 
 ## Applying 2D Tracking to the PanoMap Node
 
@@ -10153,7 +10153,7 @@ It is also possible to apply this same type of approach to a PanoMap node's rota
 
 
 
-![](https://lh3.googleusercontent.com/VjwZ4W8F2rVTQfbPByNUa6lpiNDgBMx2ERU0UryExgbAFPRz2IRszNbY25Nn-SxLS3R9-Nr8-aKeVTShUAwfxSAv4pOFVDw-2fBP-q_30Fwq9o-nF9VRyljOveWEq5UmCmi8JfmU1M3rK6qwjZpMtlPpQfzDXoNskhcDFiqxj3vKMgTaOdUgi98f_Hqcwg)
+![[Pipeline Guide.img/PanoMap Tracking Comp.png]]
 
 
 
@@ -10161,7 +10161,7 @@ The PanoMap node's Rotation X and Rotation Y channels are what you would bind to
 
 
 
-![](https://lh4.googleusercontent.com/4dg8URYAPYw4tj74mm0bySPLILcOeYnJ-4N-IVK0NnjEttLmXUh1-aiU1bhFdxm1LS39sHIU58yX9s7IWVwAGf_FMzsWOidV_omq6QtA3MgYwXcUSP0tsK6gtvsGvbEopS7Sl8-cODXOF6xtRRpRFzGUCeQ9Hn0a0SFSmnevNLZ4KE7AoKvYw86DUpl6Sg)
+![[Pipeline Guide.img/PanoMap Node.png]]
 
 
 
@@ -10169,7 +10169,7 @@ The same modifier approach is then used to adapt the screen space 0-1 normalized
 
 
 
-![](https://lh5.googleusercontent.com/M9-UwUnChMVUmJafiEH_fJblorC0k17Mgn-FnVzO0lVUtSEA45a-9ENBvBkta34IRuxU7ScD_T0cuWfyqVg1dVUSyK4tXX1wXg3teUEq-i5WYZPGR_L361yLd04igfqq-tuAbeQrJBAU0lHevno8IkvrBdJQHXGMAg3CjqHA-xmS7rb6NO486t_1vxzOmQ)
+![[Pipeline Guide.img/Modifer on PanoMap.png]]
 
 
 
@@ -10215,7 +10215,7 @@ Or multiple camera views (per-timeline-frame) can be packaged into a single EXR 
 
 ## EXR Multi-Channel Data
 
-![](https://lh4.googleusercontent.com/B2En_6cQ4FSMjZojm7v2Ckd1WhqQ5aSrKRTlKpz_HaqbpxrY2OnKOD1YALYQvqLSaf2ArJNbZAi4KAyo14FWCGu-_WKBSKDimtF6h6di7xyUYGFnYpeWUuOLronakbFj6sD5MQe6YJDkj652jBKM1VgLHda7FSET2WBzuWSymIWmrkuDCdw4WiOEEQ1HwA)
+![[Pipeline Guide.img/Untitled_46.png]]
 
 
 
@@ -10258,13 +10258,13 @@ This is an example of a Fusion Loader node accessing the multi-channel component
 
 
 
-![](https://lh3.googleusercontent.com/t0d1lYCad8nBy1K7Qj9VkPdDmGLsEDE9yfYTXA_auvYnM8Tvk2Bc2CWTtncdLgCPCmwWzWvq9yo6IDx75t2kPRsX-3peYQVKBBf4Y6_OSEMv26tcq9IzxRFUB5LZe6G3RR6yx4x4jrG_m3Shsc3zvCra251jfh8PU_-jne_f_J5s_5sKSjw2ejK0SKtYAQ)![](https://lh3.googleusercontent.com/BRXZxPZnGFqxd0Xd7vEK_hyqPb1AdzaIDGXLfS6sg6-Uhk0wyoxgkPn7ix04jc7cPuVucdC24me5t1STlxM9iju6LxkSojCs7UERzXe875hTIk2oq1DNiEZxWuUbYrW8OrMIbYLwCGr5y-aG1FnJ-CY2KKb6hqKob8-fW9arRhpwY61jfxJV-HtN2poc-A)![](https://lh6.googleusercontent.com/KjRKouKpigbRingtBU_qWPGp1OGh1m17WiwHexfjMCKh-DnCQXmtKh5u0bS-Er8_QWaeTCR-HpOFY3_8GBKGHG__esO4ZU_DMUyxW21KsB4d0qghz9DaXEyOHyX5xPUqFq59NqtqXIFI0WKC63Woc1NILvjsIRJBIuwZMeqgJcmpybjMm2EUV0TI6Hcz8Q)
+![[Pipeline Guide.img/Untitled_47.png]]![[Pipeline Guide.img/Untitled_48.png]]![[Pipeline Guide.img/Untitled_49.png]]
 
 
 
 ## EXR Multi-Part Data
 
-![](https://lh3.googleusercontent.com/RYKCPCWSt5y9qfufbCb2N0K-UtCxWT6lAP-j83cJVfmQeb0Je2u_3u1SnXKdxNs5PcPfnjDFaj7GxQCN8TmlsTWcimCGWu9E5U4cuNlbQITSPAHDnsWqva_J2LTtkZPCAYpWt6EOgHM7Qbfvv8NiuU29QNjnr-hmVLqwI4GE3cdePzGkm4FDumKL9k36zg)
+![[Pipeline Guide.img/Untitled_50.png]]
 
 
 
@@ -10294,11 +10294,11 @@ Channels: RGBA  
 
 
 
-![](https://lh3.googleusercontent.com/4NwRbNN0NJ_jEKPBsCxE2Lylbx7D-eMfwLagh5UFty9f5gnSYlwSj8YNvW2noQb9ymitHlx7DM-3MliEZiaLg5u90vhU6OnQzRzFwYIjQZMo6z1X2U0SaSeRaScwFRVvoeteZHdEVuVmhjr_tKNBNdRxBe_4cZKp8h3GGL3p8GOAwoeJhZR4pCF-OEyb6Q)![](https://lh6.googleusercontent.com/W_PAcoxwThE49ob9XBxo7CKZCeDSuBzIx8x2PSCIhcjUxQMPz1yOpHYGPWGG9wOGbOyWC4ZMOzKSJ5ngxae8Q5Ncd5jHEUIKbDsPgi_Cg9iBtHhr6BpLG1BNgGaP5InsHaVd-_usLreJ25GwJfhpWvXGUGZH6-36QgTiv3SYDDcf2ShnUWmMdEpT5Nxr9A)![](https://lh6.googleusercontent.com/wRzVl3g2iO-OwIV-I6qWhnSUvBEmWC_zrCnOrKnXSO7Cdk2pNFotERN7vlW4VWG8lL4P8sO8YDVdHcgEfhOSZnkmv4yMwPjEvS4XPmflAJ9qySOyscutxbjJE3h3vQiJ9ddOclcu5maSjr-15qax9NiqEpff8JYOT9MgOTr9HfUPbmteYOIpDFFrHqXIXQ)
+![[Pipeline Guide.img/Untitled_51.png]]![[Pipeline Guide.img/Untitled_52.png]]![[Pipeline Guide.img/Untitled_53.png]]
 
 ## Quilted Frame
 
-![](https://lh3.googleusercontent.com/KEj9JNREpXu81jNirvhLt-CB0-FbE6pfmncLa17bPvIhc-fNZ75ag_xTsbM3QG6A4jI249bnjVxdzBfx3rsi_uRY-a_whe5mATr7tUQLski9R0guUsIfx_6IWjUEdYACi6HaZwb034AAz20QcwkAMPawxT-8Zlr6_2QJX6RsI72GfcyVkMwvyZor5X9d0Q)
+![[Pipeline Guide.img/Untitled_54.png]]
 
 
 
@@ -10312,7 +10312,7 @@ This would sometimes be called a texture atlas, a quilted image, or a grid/tiled
 
 ## Multi-View Image Sequences
 
-![](https://lh5.googleusercontent.com/v5_E1SBXPW0Y5I-GcCIfGnYXN-K7Pq9VKRS4192J2rm0xImD4igwTOEhf-F6d0oDBI8bVqQoVAPausxPMH91kOrGwHOY37yHqrFGBbC2EWupEjSGHrP2TTQ9Riay-lDpis9bkStf7RfdH2_V2ZPYN9Mx6bHFaGqGZOnXGlcmtxQHSkPZnaQDF4k7VIGAFQ)
+![[Pipeline Guide.img/Untitled_55.png]]
 
 
 
@@ -10336,7 +10336,7 @@ Then each of the 9 camera view positions were precisely aligned and registered a
 
 
 
-![](https://lh4.googleusercontent.com/FSIDFoYXmVu6f068I0JojNL22mRrd5odpHIryPdL6t-w0u6HRsjfjw3JQ9Em1UAW3iXkNlRe3vD1tsUkVHhwDFRTN9L5c1Ph4gwG4RGKjM9Qi4Xdt4OvSlsYeXacR38ZgiIxSkcJy-wEHboJ2sOxyuAKz4mcdaXTNSIhN22HRvR71OaqN7_M66Y48EqajQ)
+![[Pipeline Guide.img/K Lens Lightfield.jpg]]
 
 
 
@@ -10374,7 +10374,7 @@ KartaVR includes several Looking Glass Display optimized macro nodes and example
 
 Check out the [LookingGlassRenderer3D macro](https://andrewhazelden.com/projects/kartavr/docs/macros-guide-looking-glass.html#LookingGlassRenderer3D) docs for information about the node:
 
-![](https://lh4.googleusercontent.com/mW7WEAT42yjkfGhm2tn8QHI7EPTwwn3Gop8b6oiiF62jhZXEaQbt3aHPF6hiK1HjkI72tpsaNTXWGcCWvCzMn9AdV5NI49vZXUp-50rrpOSNiNsT5LDvPSG4tLMrIP8LuVCqDQ6UGRtxn1xdUIbYVx3Py9RPUEx_YEbfphxSG3AHAISFE397syyHHY-2pg)
+![[Pipeline Guide.img/LookingGlassRenderer3D-comp-example.png]]
 
 ## Vonk vImageCreateTiles Node
 
@@ -10382,7 +10382,7 @@ The Vonk Data Node project provides a "vImageCreateTiles" fuse node that makes t
 
 
 
-![](https://lh3.googleusercontent.com/PY3Y573QvePZXIMveankxEg0cZDbT2J1dpAnltNihpE6_W9M45ZWz2UICxyac4TscgbedfPQgCP0vBflj5qoeDvp9IajitNO7JKZ_SXn1yXINmwzUWTWH4Dn0K6GClVhRvpTqyZ_IOnTc7u1xzzJv4qAnjPLiU4VhIck340WqCrDkqUC3MZeEnau3xlWCQ)
+![[Pipeline Guide.img/Untitled_56.png]]
 
 
 
@@ -10410,7 +10410,7 @@ Reactor:/Deploy/Macros/KartaVR/Images/pikachu_13x10_image_grid.jpg
 
 
 
-![](https://lh4.googleusercontent.com/HT2kMAPI2wMtLhx8eEPg8BZUBB3-9osXW8etGPnAV4zSNrE-rGwwLm5E2VITt9CBQ_BsKucONocyJ4wtGlukBpelzabniQpNzed3fUksoYZQaNV0hrDbIvptkZ2MJFsjt7PIOMHmpMH1pQ2KY7NilnFkA0EboXyGAT4oXa90r1a9PK56ifh615pRMRO-mQ)
+![[Pipeline Guide.img/pikachu_13x10_image_grid.jpg]]
 
 
 
@@ -10426,7 +10426,7 @@ Reactor:/Deploy/Macros/KartaVR/Images/lg_silver_mask_4x4_quilted.0001.jpg
 
 
 
-![](https://lh6.googleusercontent.com/P1rrhnoVXp68EKd3RkNmEu68DPeZAuBDuzGaeOzi9frgda2pUjFwLeoQVHjhCwUmrSYmd16RgATqigIRaiV3A0NeKEY5e-taZc1gzoelcDw9KTMtG1EJzj-kXQRkVSa91o6F7ssv1WqqoLpKpA1NwN3rELdlaTucQGqy6hi8jAceQDakmj8n1M0g4VxDWw)
+![[Pipeline Guide.img/lg_silver_mask_4x4_quilted.0001.jpg]]
 
 
 
@@ -10442,7 +10442,7 @@ Reactor:/Deploy/Macros/KartaVR/Images/lg_green_lantern_5x9_quilted.0001.jpg
 
 
 
-![](https://lh4.googleusercontent.com/_jnCc_ja67nHXfWWZfgg1HfDVyzCBE4Rj2HEhgwpjXwufkhrKVDHbXtsnrGBdTw8kCedxAaaa9ecWK723yQJdSHukCymIgOyb-31aEU5pri5r4diZuNWIwdDr2wjQ7VzlqAsSJsw2wDc_lVrTLkfXGOB-B4NOyVpVDxoUJi0xk4stVFboqgHOm4jU6NplQ)
+![[Pipeline Guide.img/lg_green_lantern_5x9_quilted.0001.jpg]]
 
 
 
@@ -10478,7 +10478,7 @@ Click on the "KartaVR Examples | Comps" entry in the main atoms list area. Then 
 
 
 
-![](https://lh3.googleusercontent.com/AgXtfErTy-VC45PTDfQpJxCOpSPSrc_Rt4-4s-T23cpVscWHDbthyZo0mbsemaTUpe9Bou0X_CgAxxHNZstP3BHzPLAX1tgmLAGWbPsurKOqp9ReAEZwYXb2Rql8tmU88Rx-WPZPT-FEPmi2nx1VvmYQuVBWYY7QEeIl4unc0ESVK73CCaHK_UvZ7hcWRA)
+![[Pipeline Guide.img/KartaVR Example Comps.png]]
 
 
 
@@ -10496,7 +10496,7 @@ Parallel I/O node graph construction approaches are different from most conventi
 
 
 
-![](https://lh6.googleusercontent.com/dOiZO78BQmQuagImfis3KZEKRVWQ6Nak026nyWMuLO5pttVOf82pKgMLkI0C3RS1Qwc0WAlCeLSvl2Ca4K6e8x4mEtSd3wbNSeqrSS8c724BxUFaRQ4giXFjuLX819-mnMg714coyrbvNC66A6xzmUPoC2M2kqwVjQRRxgheZs9rBJMf_hUb23eGUT0-Og)
+![[Pipeline Guide.img/Parallel IO.jpg]]
 
 
 
@@ -10627,7 +10627,7 @@ The Vonk "vTextSubFormat" fuse node is used to add the relative PathMap for the 
 
 
 
-![](https://lh4.googleusercontent.com/MJvin6w-p9THXjf-dmgkJvG_9DySJKZKYOMUw_MP8F9X_7oS7jxz-Dc2bchjFX5DBqpkszAEIC-QK8rPCH4nlAps6E7VwUGvB6g01Pp77kjy45_pDIBFQXHlsayKduQOE0F5USTJi7h5J_hz2Zf1RguyLdd_ZYQ7Qg8txVDcQ2OK7YXqE6MbjHFkIaywjA)
+![[Pipeline Guide.img/pioSaver.png]]
 
 # Fusion Native Lens Distortion Correction
 
@@ -10639,7 +10639,7 @@ The built-into Fusion LensDistort node has existed for ages and it allows you to
 
 
 
-![](https://lh4.googleusercontent.com/ZUJqbtlYCxpuHNUsNsaxn8L6rz8fBLo5FZ_kE5hgYTzDkCDl8AdcyCwJfoQdu-ffh_RibxJ9RLjm5Vdlj6VQdTSuE4a8H2QiSt4wJlfzYxW6jAR6LLKAD35uY6FzjuqRVpTaIPGye4FC9Da3dKlhQ_ovPpTVEy1GwS-rihdmfoBZsl5F358XAuV-AifllQ)
+![[Pipeline Guide.img/Lens Distort Node.jpg]]
 
 
 
@@ -10675,7 +10675,7 @@ If you need to level/rotate a Top/Bottom 360VR stereo video, you can use a combi
 
 
 
-![](https://lh3.googleusercontent.com/bm3QIINOuM0hdR5rofwAADe9KuKKUx-jUwxgG2Su2T8sIl_ZhuL3vmxTAgab1jBPv_8VXHjVEPV9UNyrKfm7yNo6o9k4SPv45Z1c9E6ZGaUOKGRnyV3S32o2CTHPUxEb28vfpXvXoVdtCYvW37hkVUAJlGH4EkUTgn1f-GDjUIuQVYeEqnO-VkyII4f0Cw)
+![[Pipeline Guide.img/PanoMap Stereo Rotations.jpg]]
 
 
 
@@ -10691,7 +10691,7 @@ A reframed video conversion is also great if you are looking to get a "Tiny Plan
 
 
 
-![](https://lh4.googleusercontent.com/1mhn4jRhvMQHLsmJQkXdKQGzwj0qQyvMPLqm5bjg0ZmLQo-ChHptCel2RtGfhYlTRcLSdWD_AqluUWxp6r7IyvAw98sl9sz1Om36fRQ3X628oq2kXjHXo3wevvjA9ZAMLd3DOF3Q7O_AD8CcOZrOaxCvqSE1reEsioB7eheMsYguiQUddNo1z34GzKbWXQ)
+![[Pipeline Guide.img/reframe a view.jpg]]
 
 # Resolve Edit Page PanoMap Effects Templates
 
@@ -10701,7 +10701,7 @@ One macro node is named "PanoMapMono" for monoscopic 360° video usage.
 
 The other macro node is named "PanoMapStereo". The node allows you to work in the Edit page and apply view rotations to stereoscopic 3D Top/Bottom and Side-by-Side formatted 360° video content. This macro has integrated Splitter/Combiner nodes that are expression linked.
 
-![](https://lh4.googleusercontent.com/B3-l1Wdg_Xcw70mZvOch3PRQgo92a8LyverDI-xTFIUwBv1Yo8jXS2p887UdLN76kD9Qj-gfnGRW_MIjgEypWY5OfeAzYnY0PlKhAHTv5nESyrtyJL8mlgfhuvD9AFzPZ0oJ-xn3u1tK9fMywIMkMwdeDosyMvDxv3F4dCkcsVhkdORZehw5n6VPFCu22Q)
+![[Pipeline Guide.img/Panomap effects Templates.jpg]]
 
 To use the two effects template files:
 
@@ -10745,11 +10745,11 @@ Möbius transformations make it possible to apply zoom, rotation, and translatio
 
 This is a spherical image before a mobius zoom is applied:
 
-![](https://lh6.googleusercontent.com/BZBx85hPl-mMIH5Q4gbgUCCFWl641E0p-4O2RKlieDcmf_yyy70VoW37BjoqLacNwTD7GMKISDiCRFOjaxTWlDbYLA_rDaLDydmV6P_UQEWL-pf_6hBt_MzFaTV0aseRdWZlGE6KQ8NXT6rN1gm4oehT2ZK1-FMCa-8Iezwcj-voX32BisVDcL8EcT_6sQ)
+![[Pipeline Guide.img/Mobius_SRC.0024.jpg]]
 
 The next image shows the same scene with a mobius zoom effect used to pull the camera upwards, away from the nadir zone at the bottom of the panorama:
 
-![](https://lh3.googleusercontent.com/HNVjfqK8qZ4SyYvcqzyJqYBCoXVWF_1Ex-tDQncz8sQFnrNNbyREz6Fjue77sgAxAQYKi00lMwfvrPomRdp6X6ZeGVeZe3GWRGwf-DzeUjqB5CaCKTBBsEjSyKU6i_zqXXEChR29vL763ENpelqXwVUAfSc8VwIHLV71BEgaOJXXqUXU6vrXyCDjdu_bWQ)
+![[Pipeline Guide.img/Mobius_DEST.0024.jpg]]
 
 When the mobius transformed media is displayed in a panoramic image viewer you will see what looks vaguely like a tiny planet result but the media input is still 360°x180° content which allows you to freely look around the scene with a VR HMD on.
 
@@ -10783,11 +10783,11 @@ The following resources are required to use the Python based source code in this
 
 Mobius Spherical Zooming
 
-![](https://lh3.googleusercontent.com/BRLwai35imfZCzvx9018oxYsVNYbJjAp_0OAX_TKz9sy0lWNBCreQ2Ksjfas6DrOc-aqvhHvwt5XQTF1F0Y5VXyuoH4tmJcL4NcL_8UDSJB1C4ct7aeTJ19hFlfqf-Ov6mvasBCP4j2DONMQV0cZlRC8K2SAw3tXd5L5wJydH5zR1JbGx7vCQ8MY7CqC5w)
+![[Pipeline Guide.img/scaled_test_image.png]]
 
 Mobius Spherical Rotations
 
-![](https://lh4.googleusercontent.com/4HHORqETu1E7gUxsEiqjzSBrDmnH_4byldmuh0ejMWVTrwYKXIrHdsq7jfIdPOOZEugcyWzuOxa8ibLtv0h0JlbDbSjH3gMOqwCngPV8EXZoDO0h_dLZPFyI4lR9DZIMRjDOuu5UoOrj92MrmKihOIacZxLYki9vk-KQGQg4DUWt2W--c0Kcdbs7U02Keg)
+![[Pipeline Guide.img/rotated_test_image.png]]
 
 ## Python CLI Usage Instructions
 
@@ -10835,7 +10835,7 @@ The Resolve Studio/Fusion Studio native "LatLong Patcher" tool, when operating i
 
 That 90° FOV cubic view image is then warped into a LatLong image projection.
 
-![](https://lh4.googleusercontent.com/s-Rh06_Y-v8xj1PQnOoBcKtxiW1sLgrej3qjFQmkkt7IISJcX0-BfduxzjGIaJ513Aj_6iJJRODTsmj9l7s6b3sssdMSi9oSUO8reqXqcwXXOj7j-jzKoK8Rz59j9lGttsTnOcUdCtgWxGBz0M0Frsymud1M0ySLrZ97HwTndrJ-ajDF-wasY8Awn2Xixg)
+![[Pipeline Guide.img/LatLong Patcher Node.jpg]]
 
 The source image fed into a "LatLong Patcher" node, (when this patcher tool is set to the "Apply" Mode), is typically a "MediaIn" or "Loader" node that has a 1:1 aspect ratio. This imagery should be as close as possible to an idealized 90° FOV (Field of View) that corresponds to the "front" face of a cubic panoramic frame format. You can use a crop node to reformat a larger, or wider aspect ratio down to the correct 1:1 ratio that is required.
 
@@ -11088,7 +11088,7 @@ To encode an image sequence into a movie, start up the Compressor program. Then 
 
 
 
-![](https://lh3.googleusercontent.com/_8_ExzXq94OLPw8mMgjIjFOsJyRK7mYawoX4Ll-e27Qs6g1ifk1T5s-w5xSC5gDJC8sOxQRkCjzR7-XhZe_BM0czcQLHi9tFt_Gg-B2lefVncxRsHGjcpWVl18gcDEVAgWuPG9hNC6w9eG3joRJal_6FDGG7yeu-nE4qDa-AZkBgS_BuwVV7b2wh8z6EdQ)
+![[Pipeline Guide.img/Compressor Add Iage Sequence.png]]
 
 
 
@@ -11346,7 +11346,7 @@ Fulldome is the term often associated with video-based planetarium style hemisph
 
 
 
-![](https://lh6.googleusercontent.com/g7QjXwABXG7wAEVi-ECp0zW_dSZ99M38ZGRZTk_kC0bv34BgbJfOhG2fcGxf6G1yNoNcf4crXtJDGJ-96ABWF_Yq-NGXHMoPW9NqQOYfBLUMLkezjpqEBhpZ5mcLpZRIUu55dKkPMh4jMy3ucCFJkysYfpjtDTRyED6WiAM3HDIpobYOZ-O4ikXe3lqQhQ)
+![[Pipeline Guide.img/Untitled_5.jpg]]
 
 
 
@@ -11940,7 +11940,7 @@ If you don't know the current IP address for your computer you can check in your
 
 # Mac Network Preferences
 
-![](https://lh6.googleusercontent.com/Cgh9rgxYZso7aj0HxD3dq_MsUAAHqUzOMj8rVaaLp-yOV1LpLKCDTqpbbmaxavWA0jJcS80_aMqkUEd79mld3TlqBWyg6hlF0OZyOQushPXtRoeLkDGDwOfcDc5X8-fVTAo4AvCKoBVlH5S4O664dz0QbP9j_qW1CBWMaq7Oo_vgqbIADoIQHfD2vcLLBQ)
+![[Pipeline Guide.img/mac-network-control-panel.png]]
 
 
 
@@ -11958,7 +11958,7 @@ You will also see information about this network adapter at the top of the netwo
 
 
 
-![](https://lh3.googleusercontent.com/njir5SmasBe0kLmlLhW0kgbX7_pCpQveJ0KC_gwJvUTTLdhWQO2ljXfk8eA0945UBK09_-dk_9wHq8d-g2ff0mf-3a2pJwF-xQjeRAu0P2uUlCfkwKp8ZVW0nhBC3Koplj7AhvqxT1VePacYnzg6rQOBkM4qzeRJ7nuzuxs5zgQcq40zpU1-8dOeKGoYFQ)
+![[Pipeline Guide.img/windows-network-settings.png]]
 
 
 
@@ -11978,7 +11978,7 @@ Open the triangle shaped menu at the top right of the screen and select the Sett
 
 
 
-![](https://lh6.googleusercontent.com/rLCRJvR1T4fOm6UxCmLgJRvBS7sEDGyzJwHWREhP5smmtQrsmulGLAz88LPXwuGfl7GMRaH5G8j61fiQ8HHKKoMAPHBf_wyzkpDgNekdBTP6awp2KBk5gfbd77q1C7e_40Bg3EKbgOTkq9go8-3LUQwxvZgbI80Ovwt2hgsfKLecIwZvKZyMtfg8htNP8Q)
+![[Pipeline Guide.img/linux-menu.png]]
 
 
 
@@ -11986,7 +11986,7 @@ Look in the "All Settings" window for the Hardware section. Then click on the Ne
 
 
 
-![](https://lh4.googleusercontent.com/YS0d8p3ZOP57C3DQmn6bmeSv3CXCm6EzXny1TfQWg0YKmc9ZBKvOLd6LsHvYpvWXlQsXYtWC-t5YGV6rt_htA8tWEQWkNmyZfkFk8y1YoCnUz_OPwoC6ahYPGQ6iMb90rTnizP-y1tXZqdCF7SJRssXuPguG2dl56sPKerqG7k3UOkhGKIoqf2x2Gp0ceg)
+![[Pipeline Guide.img/linux-all-settings.png]]
 
 
 
@@ -12006,7 +12006,7 @@ If you have multiple network adapters on your Linux system the active interface 
 
 
 
-![](https://lh3.googleusercontent.com/SGBKRDsEOhqnymUCEFteb74bB6QNzq88M9u5aFDKnDZ5gJ2utg09Tpdjo8j2_2KqXWpeQjtIEIafBasnaH3yl-JcePqxsgJxS7WOaGj-BW7mb03TLF_LLmSmD82_42HXqsKjYz76IK14VVNCtpahPYLs0GjNd3E69iVY8N5t2AvFULiZYhJutrG1Jz7lhQ)
+![[Pipeline Guide.img/linux-network-settings.png]]
 
 # Finding your External IP Address Using your Web Browser
 
@@ -12122,7 +12122,7 @@ Step 2. Launch MAMP for the first time. An easy to use GUI will appear.
 
 
 
-![](https://lh6.googleusercontent.com/gXkE3HDNpWQ5HK8aWDE1R5B6rmrbR1Tbp6mJzd7nvPjiqu-eKSjk4FDNXn-gZH3jRiceXFjXZDRz18kIjyzufKXD9iNrRKM_-jbsX1czv0qxOElC_s1yuKie0CTnmZYxE8cn0DdCL5ZQvLe07FqdCOrw0B_8bgvBtFud12FDYCumjhYuFCQer2D8qclvLQ)
+![[Pipeline Guide.img/mamp-window.png]]
 
 
 
@@ -12146,7 +12146,7 @@ Turning on these two controls means you can easily use MAMP when you want to vie
 
 
 
-![](https://lh6.googleusercontent.com/0oENRaSwWyzeKFSUkJq8ssyXbVUiOes7yVP-Ompgn1yNo7O537n5_YrpJuKIwda76MdfKL3dOw5GlDTn2YqG1gm__jOqIcq82ZocTs4QrWjThZtlh1f1Q3MR-UkXqnKzTngphtiuOApilecNb9zFXvPkbV2XQMAZt_JyjKb9cOL_wKApPWgr3xxkNC4nVQ)
+![[Pipeline Guide.img/mamp-preferences.png]]
 
 
 
@@ -12158,7 +12158,7 @@ Step 4. Click on the Ports tab in the MAMP preferences window. The Ports tab all
 
 
 
-![](https://lh3.googleusercontent.com/pcFjkuz3kNC27UxwmtI3a6IB7zd5kDT9-hZjTrW7ynNl1BMoB26D_JAJ_I8-Kjj8RShMOEFx0VNdRF1_5NFWxNUEuRCS0FzLkU0-VbxfBEKsAuHvInp_zKYr8RYV9YlvknVkLS74Squm5ywZ6i9AW2pWjFJKk9pL1eD_yUHxRRPoUTiWyc2vh9vYLAFRWw)
+![[Pipeline Guide.img/mamp-preferences-ports.png]]
 
 
 
@@ -12180,7 +12180,7 @@ This tab allows you to change the "Document Root" folder that is shared by the A
 
 
 
-![](https://lh5.googleusercontent.com/5ZF1wDvwEjFo_bQz64SEERQ_NGBOpzaMHzrISVYHtq6Bqh2a5Y6IaFhvSq7iU5RErg3ymnd3OjPsQ3DSm-_ZMxgw_5lp2CnrRL5Lazb4gyFGJTz-2Gnbje1vYZw2QfXftkC57_w_MDugyInIeK2KQ_A41QJeuMhXi7fspOkpNLGwRTTY5t3krEYWddx35A)
+![[Pipeline Guide.img/mamp-preferences-webserver.png]]
 
 Unless you have a very specific technical reason to adjust the "Document Root" setting in MAMP it is a good idea to leave this text field at the default value in the MAMP preferences dialog.
 
@@ -12381,13 +12381,13 @@ dialog --pause "Wake on LAN Timer" 10 30 180
 
 
 
-![](https://lh3.googleusercontent.com/D8ANbBbErtxQofEbwU-pkrYd07Fr5vHKeIAjw3VRDnDcMrl5ylb2HTICqxFOd9bm0qYw0mB7lUjvalUtfxgKInzXp6EZnDMosKhvA4KiNCom-EmAl94PTiLVEMN9N-uw3UCePt-cM1FBASEEz_JEVa1BcC8UmwXcLe0RAhUsIgvtmncJiYb1OdIaLPGbig)
+![[Pipeline Guide.img/pause.png]]
 
 
 
 A Dialog text-based GUI example that runs the PING command-line utility:
 
-![](https://lh6.googleusercontent.com/AAe7wXJRGX9UPeSZWXZ-X6FIjsSRtYfy29DmwnvNZKQYe0JW1L1ANRIBB0CWJgsJiZqWe8K7uwD3xO6REkQGeO04cWcas-PfsVoBe5AWVrSG7NtIhRth-pq8X3FwlXD6oNtmanRJcG3xEGf4119st32q2Hi-nGaB9WsNz2ikrxD3-RlrXPT6rAC7DtR0RA)![](https://lh6.googleusercontent.com/gi4WEzuKLQmQ0SR66yyYgc0Fx8o1f1T6zTynD-NpOUu6TZByxOqB2lI1ZfB5QGDeGxaBb9mXPomS3VwNUNOQQ9RmmccKM-_aasecAcD0v-WPahKOXHT7dsnvhiXKpRMkOzmuuq94S0JPfl_1tHQHE6Q8W_-9VONqPi7JMnqCqSOQSIil3b0xGmMqCNiD9w)![](https://lh4.googleusercontent.com/4eJIaYXysPwZI7TdISQqMaW5GUEFGqvftvfsLK8CfvsZGuNsAKN9fIwbemE4k8bUbllYGREj8PWQcx4dH2Ew1xLX8nAlRZmpu2n5iayJzFmMJIMxJM9Obirf0j2wblnSFVESwhpmy9RyNXUEtMIFUNzLeaZBRNi6N40pmO1xT6SeSZ2QzQwvewVNin2jkg)
+![[Pipeline Guide.img/pingtest-1.png]]![[Pipeline Guide.img/pingtest-2.png]]![[Pipeline Guide.img/pingtest-3.png]]
 
 
 
@@ -12551,15 +12551,15 @@ Notepad++ Related Docs:
 
 ## The Dark Mode Customized UI
 
-![](https://lh6.googleusercontent.com/UpfS3QxpIgShnAG077tFBCKi_YsJ3OXYO9ii_dbC9ZleAPfc89wdPLVo3mq710Dx9Yy-Jypszgk1JagX3--zYtK1or4lcJKTJjQutYmevmavCXu3im6Gl87zupUiX-ENuNN1KzZMfyQX0VUocf_cYD4JAhuEBW4PPOKSMz3EJoXq8b2kH8VjYD9tljpJAQ)
+![[Pipeline Guide.img/NPP Fusion UI.png]]
 
 
 
-## The Language Menu![](https://lh6.googleusercontent.com/Mnq_ZAa4Jxmp8mOjAkl8QSjg4DsZ09Fq0v_ufCOHlPsnhCn3T5P-JYsDIO1h7JbP9hXn62iRujEjOpyi-G5i8MFcXebjcmyhOYgT59mPKQfrcWBWGRs3syu4zqk1z6Rc3tOixcXz51MXZGaT5_x78s2M7OAH4UYDQS8zcHzV9HnKDaelPzfPUkwOoynD9Q)
+## The Language Menu![[Pipeline Guide.img/NPP Language Menu.png]]
 
 
 
-## The Run Menu![](https://lh4.googleusercontent.com/rxf_omXlUMmgRr7wEmjFP-VRz7VdiY5Mcbc62o8nN32OiW19pfFwls8zd9F37Ck4O3JIRk00-GKugZatKQtRWuEMrFsJd__ckmnjyYQTvt7Ef5GNi7A2p2kjHYPIfTjyzWsIOGXw4trTTID-cv830o9ketnbemIDjCoQ_Ww91dtTHIxUkMw2JdQLkasFoA)
+## The Run Menu![[Pipeline Guide.img/NPP Run Menu.png]]
 
 ## Right-Click Contextual Menu Items:
 
@@ -12567,19 +12567,19 @@ Notepad++ Related Docs:
 
 ### Edit Sub-Menu
 
-![](https://lh6.googleusercontent.com/alkUHtlxJuquEiIcJeLBoALeQZ8DLcFfzIeeLGdxgOlhe3Orjo184c6EyWHXrWDr4Zj_YYqrSMPHXsaNgr5MXMdF8B0bGuxZFtxh5BMIovrOKQ84y7m9_OIALginMws3oXN5R6wIjTqdx7Bc-u0I-k5rjBRu54jZ22THQC2ZIXwfoor6hQ5Q_9wPSZXRyQ)
+![[Pipeline Guide.img/NPP Right Click Edit.png]]
 
 
 
 ### Search Sub-Menu
 
-![](https://lh5.googleusercontent.com/KhXReynjob19jQJIsyNwI6gcmTx7bhnG-oCAzMMDqOeBzH9ou_2gzHcMbsnG2H43wk1mpEovktDXyP5UoOGmlbBBWm7AzOqwbMjp8qMS5FTDcPiS5ChGBdCKPcM662Aw4vCaDhEoj2KAjMAIZUiGQzTrReENEQLr_cHY4DA0bUQcvHeeNGWzjIN86Fifcg)
+![[Pipeline Guide.img/NPP Right Click Search.png]]
 
 
 
 ### Tools Sub-Menu
 
-![](https://lh5.googleusercontent.com/GbHsvBuSzDx2NZjqYBt6sHFi9h_ac4qS5QmS8vCQWoL9Z_ywE188TZG_uZAlTwHBCgXFAFltnX38Oj6BVUFjOifOI-9dX6gUNXGjRksZFOvuj9fhE7Y4JS724NNBasCASDvDr83-LDpRQ13PvzroJSJMf6naCvUBdT9rxj-EUejdbPDySXW6pn1pWJzdmw)
+![[Pipeline Guide.img/NPP Right Click Tools.png]]
 
 # View Code Snippets
 
@@ -12587,7 +12587,7 @@ This user interface has pre-made code snippets of UI Manager Lua, UI Manager Pyt
 
 
 
-![](https://lh4.googleusercontent.com/LlQd_XJj-Znc6puKUXWdbinTD4_Fnl4sx6a_ZzbpTadbjNKbkH50m1NblBQieWquPxo5ftT89JvQwcQPXDeHBpECHoG1_xA1CNhBwiu5E1zZqFzg7EVAiHEPYocQAgXGlxy-NrujHpdGa8uE-QXisXPZ9_BoW7kty8c0nAkOAZ-QAxcJ8yoJHHe4nj7W8A)
+![[Pipeline Guide.img/NPP View Code Snippets.png]]
 
 
 
@@ -13308,7 +13308,7 @@ BBEdit supports the use of custom shell scripts and Apple Scripts via the Script
 
 
 
-![](https://lh6.googleusercontent.com/jEl3Uz_eJAPxm0NspJ0Vue6m5scQ1hocnLBATlB1X7nqwPOoB1apEtcMY27o2YaVhp1giVGJKxDv6B7sFr-k1V48TRPfhUP5ck5XmMS-nxVBoB_tBaMNtnGUKkZooS5BTE_zK1YOncjiC-XQKfAwAnTTuXZcNNTVh1RcZ4g8tl4tzJhxBcP1HQ3ROa0LsA)
+![[Pipeline Guide.img/BBEdit Apple Scripts.png]]
 
 
 
@@ -13944,7 +13944,7 @@ The BBEdit preferences allow you to bind custom hotkeys to any menu item in the 
 
 
 
-![](https://lh4.googleusercontent.com/tkbzepXOP4LH2RzTZ6Vy0n13C-KQuUiwX1WrbpnNwqGhGc81Xi08um6lxE9mrZWOC-4JkeNtN1PGLVS5TH0CkYOd75Ohdz9rf0wqEO1xIUn7P316VQN-weAPEr2-YqSccCuTnCWLZ_T1ZpLwk09j2ska01k0Q7sUmp61m2-92Bxr4Vs95pBGhFpdHcr7WA)
+![[Pipeline Guide.img/BBEdit Hotkey Preferences.png]]
 
 
 
@@ -13979,7 +13979,7 @@ Keyboard Maestro offers a free trial version on their website you can use to eva
 
 
 
-![](https://lh6.googleusercontent.com/alGXFvC9RBM1rlxTUF_CFO5PzqD1W5MVerGMRnLu0mckkmyLc_iKqBY-Oi2hpRjR43s3nFFGbQtyNpH82rmFolBRZBJ2mNVB38oUpnmx38_tKvEayuORpunqrGVs4NAF3m4ukHyupHfFiG0RM2FSE8Z-AYJA-lKmB4bWQ2sBPE3Sb4ZkcsSpxCeM-s9UkQ)
+![[Pipeline Guide.img/Maestro website.jpg]]
 
 
 
@@ -14001,7 +14001,7 @@ The Reactor Package Manager is used to install the KartaLink collection of tools
 
 
 
-![](https://lh5.googleusercontent.com/lQgV2xyxSU9LGPVd5iYOve5mqXq10zz7XiIyehch_KkoKHccEzXP7hq6wafh-oRSx-KTGPZgTX7Xu1DNC1pGcwv7sOLTBVu2ZmUnvv1C4fnF5jasr6MP0NB2Xe2HkionmG-yj_dYhfZLOAiQY7-lOFmpHuLyYnGLcO8qklqSYvlarSHHfcFG2ZXHbyOX1w)
+![[Pipeline Guide.img/Keyboard Maestro Reactor.jpg]]
 
 
 
@@ -14009,7 +14009,7 @@ There are two versions of the Keyboard Maestro macros: A version that can be con
 
 
 
-![](https://lh4.googleusercontent.com/9jNZiKxFD9nTaZgb3gvZ6KH3x51P_OYqcJJBINULUYnE4pwvqakNEDnVwwOX2deM0RQuOd5hN8YBDmIAfOMUvPfzPXH8sQu21MKd7LL-WZIHKs2MInHjL4xBxC2EK1mqA7j3YD40N2UHcAksLYA89DbEyhayBNYSbq1_fZNVNtn3zIxEVph9C8HElJy6sQ)
+![[Pipeline Guide.img/maestro tools menu.jpg]]
 
 
 
@@ -14017,7 +14017,7 @@ The"kvrKeyboardMaestro" fuses have an "Open Keyboard Maestro" button that is fou
 
 
 
-![](https://lh6.googleusercontent.com/vdkuqtRoyP3Lm07bW_J7lhnnAAlWaSko80BzWulxH8aPe25Y6LDMvmEXIBAwg-5SUUAyjoruOQOFhxNT-HrZcUAjz9eVDob9GxBl13yZbsi8Ia0YuXForbJI_MHyEWOK7HBPNDtM_OhsTFpazkBNe9kdsO42g-7fhj3zVshRMueYs3BOrxn4WgPr-n92Dg)
+![[Pipeline Guide.img/maestro inspector controls.jpg]]
 
 
 
@@ -14025,9 +14025,9 @@ The Keyboard Maestro Editor is very flexible in how you build your automation ma
 
 
 
-![](https://lh3.googleusercontent.com/Y8W44scyNUUs7byNgcyFVdM_uN049OXrxYlGKhGDcAOjKAovxK0dEw90ig9XiBrzChlxQIa-E6EZ-H_v78x-tMs_0feZiXs3ZuG7e4zERpoOS57R-piuTPQsEHMTl-jHjupDoQhzywSahSdlPPau13WUiNYXhIkb_k1bjj63mOrlp2jPX76j-UgUdeMbBQ)
+![[Pipeline Guide.img/maestro editor.jpg]]
 
-![](https://lh4.googleusercontent.com/pH2I64gEudRhZQ-nc7uRBA0yz93XU6q1uHVAQHs2PSe4mrzdaGvfR3lkPeI0xl5Xh3Shh-HvQkZX1vooJxhjfFj-bB9q2xKcU_DjNvhQaMhV4ZV4Elp1-bvUJY0qQF5W2gFQtJN0h7rkdBpYN1EN0p-xm0yFSaqwS1Mkk_grDkTujNluPIAOvyOUsfjbdA)
+![[Pipeline Guide.img/maestro editor 2.jpg]]
 
 ### Usage:
 
@@ -14070,7 +14070,7 @@ Kartaverse's KartaLink tool collection includes a package named "KartaLink | App
 
 
 
-![](https://lh5.googleusercontent.com/BejQgfH3ipJ7LTVtU_zuXz-LstWH6CAY3HfqKXh9WLxGUHYOZTpUqMmfHvhzDLKQ3lCbFZVkyLrDzBOypq_MoLuFBQz8rVmwjUKzF2CwSyTO0J7IoRkmKp6a0DVQ_p3zLS4pEoHtip8scxU2cHxfSWqyOjsZbAJx3OcneoYTlOzR4jqRa2K0KQwUNmEMPQ)
+![[Pipeline Guide.img/kartalink reactor.jpg]]
 
 
 
@@ -14080,21 +14080,21 @@ In only a few moments you can start exploring Apple Script automation techniques
 
 
 
-![](https://lh3.googleusercontent.com/o8zDc8HwN_cqKc1mhps6-0NDdGer7s_2DyYI3fag3AhEZarILMYb6gbgo9u5o_ofDpd51zpDi1ManIAZ-Y42-Oq7UjKA6wlM13ixuGuonBopmXt8MaSdWr-DiBJMfgmdXtzbZJpOQbt6u3F4SUkzDBFpuLigF-p2qZgdqaDZstgfqQ59yHRD3Eg1jdHZLg)
+![[Pipeline Guide.img/kvrScript Node.jpg]]
 
 Apple Script allows you to automate tasks that can include sending SMS messages via the Apple Messages app.
 
-![](https://lh6.googleusercontent.com/79BsqnK4XwY0Kz1j9I9ob4ZW_onyqmkqxipvKv7RMkTt5AlYAjvxIo3Yso9vR2fEjyD7hAtX6WWbmwV5fpkS-P65yvFQMk8OWZUqpC58RTBVkTxGI45jzKNyNwB-z3YFmVLnC3Yd0aGUcXPhzqbNacLA1N3i2QHiltonbjjnUWaB4CTjiy32HU0vm3yIaQ)
+![[Pipeline Guide.img/Apple Script in Fusion.jpg]]
 
 It's now possible to have progress messages or other info passed from Resolve/Fusion to your cell phone via SMS when you need to find out what's happening on a rendering task.
 
 
 
-![](https://lh6.googleusercontent.com/bN5a3cq_87KEhrV2mOSbHrBbFAil5kh3jznWnqg69gNT40LU29Uio6X3ED695rBnTJCDw27As-JYd4i_QZawqmW7zASlykv6kImbFZClPYbLMY9OrxseANr6WSdWq9O1beDOs15C3dDFZx72awFCzp6zvyHcn95wbXk4FsSw-Iv9zIxb0mJQvJBYGKcmTg)
+![[Pipeline Guide.img/SMS Message Sent.jpg]]
 
 The Apple Script Editor dictionary allows you to learn more about the 3rd party scripting capabilities you can tap into on your mac.
 
-![](https://lh5.googleusercontent.com/KxffajaxOVzMwYGt3bB8LMwWObg7pq3r7mTbQBPtSTOhpojLXadoU-xpxYTMdFtbQ3bypcNn8kBf8zMPvGjNx-yB2lYigH8dR9y0bd_XXqxZifbmRT6TraqDwP_W5GogR9erUyQt16dNxRF3bV-yuN6wj0ChjGeDU1y8r0pLsLc4oTYlC2dbEvpz9cshbQ)
+![[Pipeline Guide.img/Open Apple Script Editor.jpg]]
 
 ## Apple Script Editor
 
@@ -14102,7 +14102,7 @@ If you want to learn more about Apple scriptable programs, open the Apple Script
 
 
 
-![](https://lh6.googleusercontent.com/IvcJhQ2q2NE86Fcxg4YJt2X2ELuvcC0auoCysEuO9zOJEMVYGKgL3sxEIvdTUmOMKobqJNnFZLaOG7Q3DSX8opGXW0aUiuXZlzG0jSQ23OAUaUW_8eBUqinJ832vpDzMWR6W0bIHt92JcJU5oSklqmE-fkBpsXbBRsxwsS2J6KOfQfkUfv6rJ6jzxzvdSw)
+![[Pipeline Guide.img/Script Editor Menu.png]]
 
 
 
@@ -14110,13 +14110,13 @@ The "Open Dictionary" window allows you to select Apple Scriptable programs and 
 
 
 
-![](https://lh5.googleusercontent.com/Wz9gh0l8SkPgiU_PMlGv8NiQdOKQFOfndOhbROGuAk3-0Amz5iuLIPl6meSCvBvKSP-isyc0bstBXgQFIGAxhZ1NGF7JlihQhLDX7k85j_95aKjJ8DtufPezqeaDoQQJ39bzL7gkY2pVAiQYHloYAUrIGnrel-jJpOEkO_F3rL5WcNcBCMgttauVlDp8Nw)
+![[Pipeline Guide.img/Script Editor Dictionary.png]]
 
 This is the Apple Script Dictionary output from the Panic Transmit file transfer program.
 
 
 
-![](https://lh6.googleusercontent.com/tIomqisYAzpmRnmDtSsAYhdzCAEXFPXLcUXFCA-FbR2mwoDmPPAXX8UFM7O4CruWWC9vcwR4p26DjTYSFx9PoMipX_ieXicP5FAmQ3orWYwzd3D38xiDQx1q0k4HiHtJ3SC8dPtbcxGFCZbPpxKewgS_PL3l6RsrBkCJrgv1FxcdykhW7Pd6tYQL2Cv9fw)
+![[Pipeline Guide.img/Apple Script Dictionary.jpg]]
 
 You could also use the "Record" button to save a series of interactions into the Apple Script Editor window. 
 
@@ -14124,7 +14124,7 @@ After you record a task in the Script Editor window, you can then copy/paste thi
 
 
 
-![](https://lh3.googleusercontent.com/ypd-JSyJGjB_lk7Tp56bkHf9-4-wH_rRS80CQRjQ22n899fGrLA32oxyLGO5mDthzN29TtQJw7jB36oUTKxItRMqb-CgCp_zeLLur7uc78wFNukx3HDQNFS-hqC4Zx40FQCSPe8kbWsg0--D2_Zlh5u_OXOYV0Z7aJgP_4pNuP63RYJWBrLXoY3Wv-vj7g)
+![[Pipeline Guide.img/Script Editor Record.png]]
 
 # Auto-IT on Windows
 
@@ -14257,7 +14257,7 @@ A DALL-E demo of the "[Girl with a Pearl Earring](https://openai.com/blog/dall-e
 
 ## Using OpenAI DALL·E With the Vonk Data Nodes in Fusion
 
-![](https://lh5.googleusercontent.com/sopmjSznX_JUtfVXKaoWezeLmoShKu5ZcXVy7Wlm1bK1kDRwr6_433C_tXQjrIemo2zbPYepnYM55wRd8X25dx0ekNEMKiaglBsXXcaenpymMTFUT6iJMTwCaZJwu-GR8tM2KE2g_KJJIpymJHaK8KCtO_X2NWObjY6sUZiVn15xPcU-sJVdrQ3vuSraGA)
+![[Pipeline Guide.img/Dall-E_Grid.0001.png]]
 
 ### Step 1. Account Registry
 
@@ -14269,7 +14269,7 @@ Click at the top right corner of the OpenAI webpage on your account name. Then s
 
 
 
-![](https://lh5.googleusercontent.com/nV5JOBz4QrbRJFvlxIuHb5_XtbMdY_pboWff3KI7TOT9tFv4HAdCN9I2q4XVm3diCFibPM0RZs7mxHvGFKanJsU-60OjOjuFLXKIuU4GiNCPn5wHm8sU-fUFaaNwfS1esBwFQU6-KOahjUY3iZaa-h_yul6sTFKzXMT_k5kS5VDgH9KqabGXucDI7HX9Hg)
+![[Pipeline Guide.img/1_API_keys.png]]
 
 
 
@@ -14277,7 +14277,7 @@ After you see the "API key generated" dialog, you will have to save a copy of th
 
 
 
-![](https://lh3.googleusercontent.com/PoGokJYEoH1j-b9yR0wBBSfsv4Nxj2zlfY5nwrjwTY8V7fmASvQ7Fmmx5p3bYvCIotxy8P_jkOISKWPgQZ-Qyv0Q3ZlRxbOQHWc0uSfOmdhcgZMqhVvTXQ7ZNe_Ss38mHq-Z9stmggiiulKk1XQOIID7C-cDgSZ6twEKmjhZ7VpjhbnVL5-eLvk86Gculw)
+![[Pipeline Guide.img/2_Generated_Key.png]]
 
 
 
@@ -14286,7 +14286,7 @@ On the API Keys view you will see a reduced detail summary of each API key that 
 
 
 
-![](https://lh3.googleusercontent.com/XKSzQB6U7yV0dcrvMb1i35IcVkr60ChJUOmNVa8VEAkH57HpX9NTtjB1x9Yj5zAGH7x9mM8bGoB1pjhk21ESh7_-XW2aW44QobosWOXx2NC-8LjFPAjuL-25NXtRPDWOOM9TvmDK7rUTBndhG6_Y2aN8cPrEfOu7rKh1WLWHrBeKUj58po5n-Ik666LsJw)
+![[Pipeline Guide.img/3_Keys_List.png]]
 
 ### Step 3. Environment Variable
 
@@ -14294,7 +14294,7 @@ Create a new environment variable to hold the API key. Our environment variable 
 
 
 
-![](https://lh5.googleusercontent.com/NoSNIIuo_ois9lAm0JUqBQxWIsDjxhpuGdI_hbtTLNgxzKDDxN9roUtzxITCPsL4VhH9cHTRe_LuigXD4MeT_U_zPLyb-nCYTBjZNeuVCFAROfe3Um5RZ5ybkA3PPx53Uy48hUk_lVBEzGlnoAGSIim3jkdqivySZq-kwRF4N_hu9uZz20ozeUR0YnPaBg)
+![[Pipeline Guide.img/4_Env_Var.png]]
 
 
 
@@ -14308,7 +14308,7 @@ Open the provided "Demo Vonk Dall-E.comp" example project in Fusion Studio.
 
 
 
-![](https://lh3.googleusercontent.com/3BYLiB_wpSwQ68G1eZaQDpB47JmzarfyGdnBtdnnX60FMuF07QBMzVoQEmb0Y-vXgpRHrPrSNcc5-NsbAH-s0guARJ-9y2ltDX40RTi_KKvkyyPIlAZ8SoIbojy6pp0cBWCMeesnEdjwY-iIkKH9O6O7t2iwzMosi4ixH2lbJ8tjYj4loBmdFP4RDHu4iw)
+![[Pipeline Guide.img/8_demo_comp.png]]
 
 
 
@@ -14467,7 +14467,7 @@ When you copy the URL part of the text output from the command prompt window ses
 
 
 
-![](https://lh5.googleusercontent.com/GAI8lqoioVGGYJcgMg83v_241tHSRYz_ObeLHdSd9n3HraMUC7P4IEml7iHCiZ2zwF0eQ6Dj4Pxd0p1KjrI_PVlSCVLJnLDslmlcc9qP27N507Px4SGLiAkmP41oz3b1HRZTkKyaXRgZrMDvn8PBocsFnGToUTLOFojym0xq-gsajH6H7rCJnPg_aIwMgw)![](https://lh5.googleusercontent.com/ESXRTIBiM-vhMlRrz3RIE-ZMC4ZUkKDFOZS3E18VVftTJVOaxB9WgSurQC-GsIoetfvWIJiyXNbpHD4kaGiBvXQdwWRgKgCGOSi1Hxn3TXdjiExzgatWSgAmE3RDPuw1fSh5PIkwbN6x3tLOyRsrMz4D9iqAIWm21-xWx-7BPSrG9_-8p1nw825lUysgzg)
+![[Pipeline Guide.img/9 results.png]]![[Pipeline Guide.img/10 results.png]]
 
 
 
@@ -14525,7 +14525,7 @@ If this is the case, you can quickly access this content using the "Script > Von
 
 
 
-![](https://lh3.googleusercontent.com/daAnSHCyFsM5QvN4odA9urOvx5YuQj_4KGlGBVGrP_o9_LJ1ZhDfX9fnR51seXbgbi7INdxz_QWaorI7dlcOsSulzjVkpePKZSiotsjn3oYg_7ULrsBawgpSKnF0tABOp4bTvCn-aw2HmFa8jHVNqYYCBipWpl0LXbLGM1QzN4xf_N_9MbuiATEAg-WBiw)
+![[Pipeline Guide.img/Vonk Show Temp Folder.png]]
 
 # Dall-E for Fusion
 
@@ -14537,7 +14537,7 @@ Under the hood this macro uses the Base64 request format option to communicate w
 
 
 
-![](https://lh3.googleusercontent.com/cA0i47Y5HSEDP_bHhVtTCTZzDIuq6JHdfpQh7R86zN8B32mJMBPWUKmQf3Xui-eb_DklrWGoG9nMB7xoRsY35fE3etAlwHwiaJjIAO7cj0x3mkSoSGOjMjiTHkxPSl_hNyL0Vj8IdsAe1xuzd_7SinTt7J8IB0kUObcZbAGTQcJRdCSKTbkgnUVSlite0g)
+![[Pipeline Guide.img/Dalle Macro.png]]
 
 
 
@@ -14559,7 +14559,7 @@ The "Show Temp Folder" button allows you to open the "Temp:/Vonk/Dall-E/" PathMa
 
 
 
-![](https://lh3.googleusercontent.com/-mzeSi5rn6eBMOg4PfChHgbZURrlD15U0NWYp9-i0pfWpD6XeBMfPwVTNjVTLtOOsQopkOvJ9X_f27CWafBguiuwz9VDH_6Zf3UXOo6jYPpzjzafpExJiX4yzJGm9R52Fk2WzAr2UtKxxtQUg_xcXnLdRcdy9kAQMlfvk9rOtUdicQf9Vfjwv5CJ3AaXfQ)
+![[Pipeline Guide.img/kvrDalle Macro.png]]
 
 ### Description
 
@@ -14612,7 +14612,7 @@ A Fuse-based implementation of Stable Diffusion bindings are under development f
 
 
 
-![](https://lh4.googleusercontent.com/iCRPMjWz5EXGZxrWOyzHMAQEMgu-jo4wV32NUrTuHhy5r5W8JKmYMFpY58GjXpXZVVpqYYPcFfYRIUy-DHXR_5-yNXFhxTTB0ahPQPBsOqjqPVIkfUDGTaCDyZPKGCuIjMfI4C18WvVtAZLrQAT9-uYbJbQ48D2H2zInot9cZWlV5OJRqrT_nvClDCkIIg)![](https://lh5.googleusercontent.com/A_06_JnqU6SeRB6pAKRfylVE5bRANpp9xOJTsRf0q0MTB45s4DanATJiPz25Yz3A0tt9apwW71Xc3pEGafHUJPRdvNrlxDb6v3mTXfwdIAzfYMcG_r6HV0lLYTPXyiuGZGhYd-1YFrwnsYaAdMsM6BGkU4yAjNOegbDxD3opnM5VqLBGTOrFxJ8HcoeImQ)![](https://lh4.googleusercontent.com/7Ld7PdwTT4Lv9TbJ9ZHGn-hX8aJRK8IPbRaf2NfMDep3yIY4NgHFT6IQity_aYuNDrbsSPU8UBbv15qec4TfjFvOf2K-XwQT-9LAltYEkImQUxu9P97RMjLcTXmrExc3IzxIrz8PEKaIzac8BvtBE0bUTiBK6TuIGJ2lHW7JRhCiNI0N7pYpQK1-0b2Pww)![](https://lh3.googleusercontent.com/jSY6awrAJdmd8Srj31exKivh_enPYNYr6A6TjKDTZoIDu5byG-XiGMrTgQRqbU8xV96Txl2ZvL0XtlxAPArcWzYfR-f_DO4j_wwvvxUhZnVtYEORRixan8uRs2q_OwvBo5go2NII7O_5BtusCxdyxLc5xry15C_fOW-8EeTdHc76pV6o12nd1S8zTcHYgA)![](https://lh5.googleusercontent.com/Bck9LCSzlCkJNuM6Q-k9KZ5aw4uBcm9pgbhbOJ4JH-KBG7jysyK72SmP_ah2ChdPYqCbIHO7zggf8R5uQ0Q8zHYRNWulnyb5DTcUW-UnnH2HFEfna9XLJdohAXx9NhoT3am1OTFPdGxkxJSFsuJYGskN1Gkyx7lUyXrfWjm-hEqnvB5imye1Pqrvl8sceA)![](https://lh6.googleusercontent.com/q8KU2gNc7Hc7xsYbLbl6jID3cTmUr7ZpfxrBCx_uB3CwKcYE4Ew_n0sf7F0i_l-lTRrvB0YcuaO5rE3sltkGE0Jw8cJTSwZJgd7jwXhk5zyC0MUwoYH6-w065h7v-gf_fKVe04FbYjIwW6FiS0uKd0HJq0NJUPxQs6F08BKDUlb4fzIo7NCZLMiSTRPyJQ)
+![[Pipeline Guide.img/kvrStableDiffusion Fuse 1.png]]![[Pipeline Guide.img/kvrStableDiffusion Fuse 2.png]]![[Pipeline Guide.img/kvrStableDiffusion Fuse 3.png]]![[Pipeline Guide.img/kvrStableDiffusion Fuse 4.png]]![[Pipeline Guide.img/kvrStableDiffusion Fuse 5.png]]![[Pipeline Guide.img/kvrStableDiffusion Fuse 6.png]]
 
 # OpenCV
 
@@ -14871,11 +14871,11 @@ The flex cables come in up to 30 cm long lengths while still being able to funct
 
 
 
-![](https://lh4.googleusercontent.com/8ZkIw-82C4-GJTFcBNZRfl4Zjr5GpiXhJsE03LQHp6r_hsbp_lwTFUlEZ3szM4I5sW2-Z8y2JRCj73gnHJgiqik7IjKafvPuVP9IxKlQO_G4-YMsU88uJCq6YGxy2n05VxlYJbMMzIT-Iv49ws1Y_6iQGzxNxgsD0wJ36Uj8xrrtv9pzYjs45mBe9-JuUQ)
+![[Pipeline Guide.img/Linkup Riser Cables 1.jpeg]]
 
 
 
-![](https://lh3.googleusercontent.com/A63nygORmwSEPk45b4qBPmeRN3xJy6lgsIXreYDNWZmZh-82pF5d79RsOO_0dtU10biix7kK2dP2C7FeHXF0p6EFGv34ryV70vUhapxhR-sMgbVqF82yGHs2H51LRaBghNF--bk4ZVl8Nq_20wBK5xJ3ksuIUZGE0Idc7oIhumgti2-7M2mAl8xoai5oaw)
+![[Pipeline Guide.img/LinkUp Riser Cables 2.jpeg]]
 
 
 
@@ -14895,7 +14895,7 @@ You can improve the stability of GPU rendering workflows by making small changes
 
 
 
-![](https://lh5.googleusercontent.com/5VTA7MtDFHYg-r7ZtLs54e5Xp2ctMM9Z3FElkiY6-MbBVRsxpJxEFr3uJ-m-7ZnF8lLX5GFO4hs8ZuM5qcE-xuJR-fJqyu5ZrEEXREoxC38Jw0_G_HTqlAqPd_mH826zpVeEz7z49omHYWSk2kwZijaX_YsJF79yqc9s-l8Uq4FOySTrV7EyeYXaVzqD7w)
+![[Pipeline Guide.img/MSI Afterburner.png]]
 
 
 
@@ -15129,17 +15129,17 @@ The disk throughput is quite phenomenal and it reduces the pain of working with 
 
 
 
-![](https://lh6.googleusercontent.com/_JE4BKzt0h6iVWuizzKLC7IBdGEVdf-V5SAo35OnjAhKDgDHYBpZ64mlJ142MKDqVUFJ-Z03fqToM3S_5I2OgDtLtliAKcNRG0nibwdbhKFPrW1gjw3juf81ZwacJMTZJr_rQRS0r6lJH5bIXeu5PdQUfU5a4iNkvCsedQD6fX0Jl4N1hS4QhzjCXSL1kw)
+![[Pipeline Guide.img/Highpoint_8X_NVME_Raid_Controller_Board.jpg]]
 
 
 
-![](https://lh5.googleusercontent.com/PUZyEWbO31xq9iSdE8i13jg9B4egxpAuRG0HtGIHHd0MFf1fQUT1PAJjgXfITVlKBnQme_wrYtWc5SGrTj0HtNk9bpv1Wz3NEV_UfeOH4o1rthArYxThFsqpqqAbUbqZWtw63zvoBnvsb3ZATPFU_lOlgcHb-v8Dm_Nah70CXVAkC_lFOJZNKJ-A96ZRJA)
+![[Pipeline Guide.img/Highpoint_8X_NVME_Raid_Controller_Heat_Sink.jpg]]
 
 
 
 # Networking Gear
 
-![](https://lh6.googleusercontent.com/sfSaxIDVIoMLe_VW5eN562l4aNxq1EMu675znfElfdwHH1gMsglYwyw7XKRi2qJS-KuKYiH2EkvNq0LcUGgTlCTThGADXYt_Dhp3pd9rid7z50lwOHfqJ1fBdadtr_rjVtwLg90TeK1fTPswZXonR_zw0dp2E6QEMXIcF36mHA7kgUc5KjzbpjN6Gm0ghw)
+![[Pipeline Guide.img/Netgear_24-Port_10G_Ethernet_Switch.jpg]]
 
 
 
@@ -15151,7 +15151,7 @@ Blackmagic Design has a wide range of control surfaces to meet the needs of vide
 
 
 
-![](https://lh5.googleusercontent.com/OVuB_ef3icIJG6zpZJxI40sfOlOB7dxMnzbtNxvTkeQmZzdSviGm3dTX_vJ7uG_r0fidXSyXNvdCygQGgqJ-CGiTwEFr4K5iynprMpuM-cWHD4yautzQCpL-d4hip5vXwxmTMf4XVodkpZUkF5fS40eMaqlHlY9H4NgwOMk_fDi5JA0LZug1QWtWeCFd2A)
+![[Pipeline Guide.img/Fairlight-Desktop-Audio-Editor-Top.jpg]]
 
 
 
@@ -15200,7 +15200,7 @@ For more information:
 
 
 
-![](https://lh4.googleusercontent.com/PLSqzdzFwyZurfLcfxTL2s1rutR4O1cPS7vxLSF4XQQvtLduxAhB7DnhXn9ls9LdKLvJLHdcBejBp93iUpimjjCw1NoDmPVMdG34_MbKoHCu9zq3EJlwZoNn6nhQQ-OmpB_Qq9XRxTFxaW6lNX-faOkNJIcWNzbo7VO4Apiq4PPGWHH0WumTxFK222hJCw)
+![[Pipeline Guide.img/Space Mouse.png]]
 
 
 
@@ -15225,7 +15225,7 @@ You can touch, pick up, carry and interact with the props, tools, and natural ob
 
 These images show the Meta Quest HMD's hand gesture training content:
 
-![](https://lh4.googleusercontent.com/-7DzF4Mj17OwPslCIXP2IRO-wofyhChPZ4C79W4nhnropvK1L1u_jILWVWU-hi3yvlL3iRZvcgxDvV4YpsKnhK1EfdK0rKs4ABzXIg3vfBYRwpJHYftPmNAGfaA_ujLHKBZ4dy3hi964eaX26evTFR7GztHoGbQXzl0MSIsCvrT9ypUVMDIX5kdPpIGxww)![](https://lh4.googleusercontent.com/vKjbOpEQEWNkPHFalwxUt2nf53bqAbhCfPAt5WwZjOeHJc2FZf-RqnYzFWJEoNFgmp6w_zWeEzTNPM8M5iW-QUbHQUjfEskO3nmwq33iHXBgLg9ocrzrFyLRLba3EzB_WH39W-eWG_QveawDr9axWo2PSqERAc4FQjLl7A3Knb52TRZdwoF18Yc2oHQQww)![](https://lh4.googleusercontent.com/KWdGU0QJhSWQ-1OVV3OpVwEC8bD8O36wS8Yu0b75cJnirHFpTcMkznwA793T4lsdB5CCdOpDgveZTU2jfaPOHpCNjTOpG5Jf2aMdUqUNQmI9qLPAfDKMoXhNMgoWhARMBqNEbFMFyz9zAaFLCd7qZklYso6MI5jr3wWtN1yZG8eEwxIPV_vcdFaQ0U8_pQ)
+![[Pipeline Guide.img/Untitled.gif]]![[Pipeline Guide.img/Untitled_1.gif]]![[Pipeline Guide.img/Untitled_2.gif]]
 
 
 
@@ -15435,7 +15435,7 @@ This will remove the installation media so the disk image is no longer accessibl
 
 
 
-![](https://lh6.googleusercontent.com/JIjYh9oDCZUPlLCsjruhpQUwcD4PVYi791jp68sUABiZiJ5SeKnRBwamxfEJSQqizq-RdOA1FHKlZsUgPdUKzNBJtGdtmtH592ru26xkn0eAnVxREwIB1IS6_Tmvsnbla5g0eaeDeDQR_pPj1BYuPWNGWqxaG5Hnmungg4C0lw23kDRPVrxZlejqMuSP)
+![[Pipeline Guide.img/Untitled_57.png]]
 
 # Let's Create a VirtualBox Disk Snapshot
 
@@ -15447,7 +15447,7 @@ From the VirtualBox Menu at the top of the Win10 VM window, select the "Machine 
 
 
 
-![](https://lh6.googleusercontent.com/a4oP6JlvYxmL48fSOtrOuTu_9pp09NehowLA137NDLNalXHRSpVmRIu796QSo_j7Iu5Bhs-QLN4CRNlLdBCRZHz2bSU0iIeAgbzAsExHxiqEICYVCmBjgfYdnYmWCP4T-vuOp7p7f3bNDHPPEE7v3ami0ngx67NQOF_I5KtATuui1jkZN3GHaylWrL9D)
+![[Pipeline Guide.img/Untitled_58.png]]
 
 ## Take Snapshot of Virtual Machine Dialog
 
@@ -15467,7 +15467,7 @@ Then click the "OK" button to close this window and save the snapshot to disk.
 
 
 
-![](https://lh3.googleusercontent.com/RVf-pzx9OInQsHGzDPPP9EEq2qbzp9c-YxrRTMmwoV_asSpwfBRVdXpOA4u6HMkm9kifrK5J4KdH8U-9YGZJgRiIyMbcNt5J6qv99nC5MNmhwvnlOAgZkcaVTcUEj9zfux2wWG2V0J8PVcy8bleqsSE5jgSrYUf1Tod3sJtRqloKdXjkuPNBBjdxcIKq)
+![[Pipeline Guide.img/Untitled_59.png]]
 
 
 
@@ -15475,7 +15475,7 @@ A new disk snapshot will be saved to the .vmdk file. This can be thought of as s
 
 
 
-![](https://lh6.googleusercontent.com/L_YKG7eFQ8fOCp5wcqu9464tx8xX3m-TNl-3wY7FaZt2krIfRHl9cNt87VeRis8XzcEblAQfmAVEaw_pFXYOnm89K3JHMIXoAreTcXWEDxINduHP3ThB1toFJ1UltXHZyyoXwfa8HgcFpgge3eMgDSMuNXLnJydVSb7c6ElC5rfZ66UG2LsHJFFKE1Vm)
+![[Pipeline Guide.img/Untitled_60.png]]
 
 # Backup a VMDK Disk Image to an External Disk or LTO Tape
 
@@ -15496,7 +15496,7 @@ $HOME/VirtualBox VMs/Win10/
 
 
 
-![](https://lh6.googleusercontent.com/HpiBfWfvDvy3KKyGZlR51d_7oHLqRng9VLyZe6F1sEzn7MW_SKmONEClaPGvLDtWoyAokMUWzZyvCm1ZVQWCTAD_ir3qt-S4gjuoyFJq_C6Cl7xz7tk3WfbYFnq7rk5cKyxT3AyshZRJKoiDIU9aCb2tZVZf8I3jxLIVGmsycNUkCtFuiCMEry8e7IgV)
+![[Pipeline Guide.img/Untitled_61.png]]
 
 
 
@@ -15506,7 +15506,7 @@ Enable the "Devices > Network > [x] Connect Network Adapter" option. This will a
 
 
 
-![](https://lh5.googleusercontent.com/akloRzZ5CxPPXfohumZU9qU-10FluOl4se7E6Psz8LVfFCI2AVRK203D4FR6P6pOzgJ_jlJ1YhGBKRKfo4J9WPbBzJGbQtC8PBoZ6Xj0d9Pde1lqKsZA_S4hHHZE-qltHz0NjGMwMOQWUIyKl3T8hFah1qvScZ00keGiUtAULujYc6SzbMmv7NA4O1lf)
+![[Pipeline Guide.img/Untitled_62.png]]
 
 # Enable the VirtualBox Seamless Desktop Mode
 
@@ -15518,7 +15518,7 @@ The "Host +L" hotkey for toggling On/OFF the "Seamless Mode" is typically config
 
 
 
-![](https://lh6.googleusercontent.com/1NcP6b2rwcYN0jMAl8240ltuvuASXA8_RIvCQAtCupHpPqrk_bD-budknXkfgFSCT5jDwxBTzJ9gPyZclCfcChNRQrGaoctUUAnviFh0N7yZcZDIwOTJ9K0kUcFErELpy4Yzpn9nPOsR8n7q5SBkiH-JGcQo0wRZhAG-Fa1jH1NuuiBD8af2Ldq52y6W)
+![[Pipeline Guide.img/Untitled_63.png]]
 
 
 
@@ -15528,7 +15528,7 @@ At the same time as the "Seamless Mode" is enabled in VirtualBox, it also helps 
 
 Use the VirtualBox "Machine > Take Snapshot…" menu item to save a disk snapshot of the current .vmdk file.
 
-## ![](https://lh5.googleusercontent.com/cGRnBjgQAllZ-ROrAfZfJOBy5ccTWGywFOrKiERtqD6ZUuuRQVuEb_OCdGTDbdTf0bYpIl_nPQvSZqw8hQ3Fqlgv-0k2uWnQBubIW83LeboE7SloG4LzERSwUaTcQUn6_BKBC31XrfaWVMlyscRRfMd1LJ4Y1imDDIZp_GrAmNP_bMHWRfObQJ8lhx5b)
+## ![[Pipeline Guide.img/Untitled_64.png]]
 
 # VirtualBox Shared Clipboard Copy/Paste Buffer
 
@@ -15536,7 +15536,7 @@ VirtualBox has a shared clipboard copy/paste feature that helps make the process
 
 At the top of the VirtualBox window, select the "Devices > Shared Clipboard > Bidirectional" menu item. This turns on two way copying between Linux and Windows.
 
-![](https://lh6.googleusercontent.com/XvoN9fu5Cfy6MIIOJrekV4j9XtaMhGBQoK30YBGPzTJOp68ZUH_RDhhDZuQBaFo9QCCjgeQc3EUJ4RsKcCHe4lU3DOg8mSpbB6pYQ-xpiLA8BH5zoDbX3QcTqekMptEJ4xN5NuJPt1I_j6DvY0zDXAzFVvBkluraILXKqwalQzammMNwABdCNai_rx7I)
+![[Pipeline Guide.img/Untitled_65.png]]
 
 
 
@@ -15564,7 +15564,7 @@ Step 2. In the VirtualBox software, where a "VirtualBox Manager" dialog shows al
 
 
 
-![](https://lh5.googleusercontent.com/TN-kfjqrPxWyWM_vAIoYIwFyEO6XMczVZWD5PshgMpebOlHl0KFel6eQ04kd4_fnRQC_b3rgMftp3d7TminC1ay1KD3bDwYPTT0B8McPu66c5Tozs6yAfCI1T6TjZ12gfWRWrMoGgdaGcIcjc4abpoDWAVPhKnUBJYxr1gO5O6XkddsDQ-O3hzv2QbKV)
+![[Pipeline Guide.img/Untitled_66.png]]
 
 
 
@@ -15573,7 +15573,7 @@ Step 3. This will open up the VirtualBox Settings dialog for that specific virtu
 
 
 
-![](https://lh4.googleusercontent.com/jxZuLlC9zfYyDUsmo13veGdQ0Lwx_ElcqBdC3jITC2IJYlat8WV5aZVx1fA0gjaAMh4zKLK01gKCuD7F6joIMvjoig8YVTkurXD1YQkP1GTt0V-uveCNGsDNhPGCWO1f6iesxWXcj67JzDQ28t12bGEf5j4oMab6X63fBXKOtZmp06QFAWnLhX3fJtVr)
+![[Pipeline Guide.img/Untitled_67.png]]
 
 
 
@@ -15585,7 +15585,7 @@ Click on the "Folder Path" pop-up menu, and choose the "Other…" option. Naviga
 
 
 
-![](https://lh3.googleusercontent.com/gpAsquXoWfm0jpTSmGMpp-4Q4AjXYnp5jZ1ev7wyzQcPzSaAz3Xnj54HV0GfMWBe8JB83EhV56ApG41c0AOjilZCWioxSU5ljCEIoRsPgm_xH7SCY6r-Scf2NPB6QbAmFzydz-HKB4V2J3taXCC-l71lUO6K-IruOS26Hhhm8SYpwGKMolQcOHA0JYqX)
+![[Pipeline Guide.img/Untitled_68.png]]
 
 
 
@@ -15612,7 +15612,7 @@ Step 6. Now you should be back in the "VirtualBox Manager" Window. Click on the 
 
 
 
-![](https://lh5.googleusercontent.com/pVi9zyHyLskRVec7Lg3NfbrSBl1XynBCKuT7r83pG0RbJ9vu-syI5D4srEYoLuX3QC3YeurMgN9Bq6CViLKSEZ7TGpr8RULRzQ_9wA_-3n-9vfmIPul0NCTZbNJzakBrIlaBS_0p4fSTkM2QdDgvOzTkUI4nbkiHVRjWw_GI70n9GXY_-N4-hhMQRFDo)
+![[Pipeline Guide.img/Untitled_69.png]]
 
 # VirtualBox Display Settings
 
@@ -15644,7 +15644,7 @@ We can also add any USB hardware we want to have permanently connected to the vi
 
 
 
-![](https://lh4.googleusercontent.com/D8uTFp8e-20GehURAu_7LT84x6puHTxQ0F73zyANFZ1fbEO57mMIZuD2uI_eXlI4XaWTrrhlS1IHIC-h_sERxdA5soAnFLEfRr-dF7VQXFP8FCuz-WL5vS_8zgn3ivtQvnZpgzRRhEWapQJ9bNUyYOElsXJ9FNS1n0vPqp7glcL8gIchNuOAbC1P4AVk)
+![[Pipeline Guide.img/Untitled_70.png]]
 
 
 
@@ -15666,7 +15666,7 @@ Then click the "Next" button to continue.
 
 
 
-![](https://lh4.googleusercontent.com/BxgafDlrezTJWYoPLSUzmrWpe-yGlK6c2YgJR6dEiLwCIQNAaGdyBp-OYxQq8dABHlKNe7mNGmxD8l6Huy7V7JacqMlykJ2dtNF6Nl6kuVehBHcGyKgkNaCidqaqSiIv5XA2qoimhhYwnWfL_bYoc0WHh-pBI_ujdy9lWLdWS3hAFnn1fz4Yu5HXwlS8)
+![[Pipeline Guide.img/Untitled_71.png]]
 
 ## Windows Setup
 
@@ -15674,7 +15674,7 @@ Click on the "Install Now" button to continue.
 
 
 
-## ![](https://lh3.googleusercontent.com/2UIqCD1Yf1wyBDrfP2LEhIJQE6ZzGm-JYkx25v5tJ82KL2SKQA5hvJ9j4zFrUv8RtQIfyRNixgyQtr3HBjXs0dBIQt_ZGQhCvHeMJCJ-5nFVyCP11hB-WROMJNPPke2naiEwBDcs7jBVuvsrLRDmX_JNq5Pl2OxUFp4sFp1rdgmZSf3P7MlLaxuJOCOX)
+## ![[Pipeline Guide.img/Untitled_72.png]]
 
 ## Activate Windows
 
@@ -15682,7 +15682,7 @@ Click on the "[x] I don't have a product key" checkbox.
 
 
 
-![](https://lh3.googleusercontent.com/OxqzzwGNA2Gnde-5wm3slHb91Iy6nZtpWyW8O88P0VDxLmXNm79UXGA3C-eOdK27jdn0YC5r1qmjqrXHN7QQeM_X1N6RymSxYYOU1Ws2o1ozDQ7z7NFmR29VN7AB5PXndECFVpIr8b6VusxQHQhJCOLR04x8Zc8GJLNwAHbwjUDTpI3b-MYCrgk_XgaT)
+![[Pipeline Guide.img/Untitled_73.png]]
 
 ## Select the operating system you want to install
 
@@ -15696,7 +15696,7 @@ Click the "Next" button.
 
 
 
-![](https://lh3.googleusercontent.com/2DkkRHnHFrfcBcApmHEZZknbPB91CkUsZVT0zaC4EqqOJhp6at08lo069ZyjPxp9p5X1Z7IA-iDcX-u-i4jQf-EsO9zpPqtZWoBe-Ea6T_wi5AGQaiFmuLczkYjcWDxrkA2CtrkMx2o6rlJzizqJuMJWakZnw1L-f9NCjyVpYGJXFS_fkoPOWVmxLTJv)
+![[Pipeline Guide.img/Untitled_74.png]]
 
 ## Applicable notices and license terms
 
@@ -15704,7 +15704,7 @@ Enable the "[x] I accept the license terms" checkbox. Then click the "Next" butt
 
 
 
-![](https://lh6.googleusercontent.com/CIDz4afkyX4TK3zhwGT0dCx2YyoPw5pKs2e15JWJqX2mjsHyWVZQzpFEqprk2DOnPokgdcd_zIl3L46hHWNZil_C9MgCPGxO-ZRiH6Mj1R4BPlw2azp1ip2PcLScvBbxUQbn63yqlNG9deZOoYQbu9LGOcBPFxnHjxEPy-ukP9ksg8ylhcMTOhVCQP3n)
+![[Pipeline Guide.img/Untitled_75.png]]
 
 ## What type of installation do you want?
 
@@ -15712,7 +15712,7 @@ Choose the "Custom install" option to continue.
 
 
 
-![](https://lh4.googleusercontent.com/kWmUpvldvypXO84-8WBWZf8V2i4NK_U4SdvKLpOs2PfALisU4rvCAOxtF8piu8mLAdsBhdBu6BC-im6LaAqhWFNyDIMSnDuDKzHa1yDlype6ni1fjvoW0-eGnA_N3LWWXdVa_5yddl1ZA7g_L4PUipJpg1uOiAHUdoLe5lq11iTYnjY4ODBwDRVGGxAi)
+![[Pipeline Guide.img/Untitled_76.png]]
 
 ## Where do you want to install Windows?
 
@@ -15720,7 +15720,7 @@ Click on the "*New" button that has the orange star icon next to it.
 
 
 
-![](https://lh4.googleusercontent.com/8GCTjXO47xoINdrh_rLAcvzzDX614tyJ0agAJlmv9f3W8dAEbiuqfk9xiT4P31BI2squg4l7wS-Jw_8LrDIeRBi1wjen8Dn4XLTARMgmGkfPdTnpYnLnSYSGziZJunak6-FzyH-oTtWrkSkxcBsJkEM4IkMVZg8AbT4cN8OnqGR_oOGIPriLEhkN5Fr8)
+![[Pipeline Guide.img/Untitled_77.png]]
 
 
 
@@ -15732,7 +15732,7 @@ Then click the "Next" button to continue.
 
 
 
-![](https://lh4.googleusercontent.com/bexi28S64p9vWUdi2ikc5xdx3deXPYYNy3HUVb5H6mTn89B_1TWmHoraY-XKOa5GDe8Sx6A2pRDHVOTp9BxJ9z6kpmsTy2pgpxA-5jzWPyNFO9I2PJgeyrkU0An9VxxZW04yuG2Py3mfT2U5NnX3qXhKzpIUcbe9y5goA9RulCAs1EdTS-lZq7Cgqts-)
+![[Pipeline Guide.img/Untitled_78.png]]
 
 ## Windows Setup
 
@@ -15744,7 +15744,7 @@ Click the "OK" button to continue.
 
 
 
-![](https://lh4.googleusercontent.com/XY9pOb3Cz1Mm38x3jYVBrvXkE6tmLxUPbYqd2eyaK1n0LbXImf0m9nyXVoBWPjHlCY6cHYXWGvmQlz73JPVbepm7aB0GzhBQxvAcfsgsEyNrSisOHCbyyzXJlCFoUbbS0m1Nxuffs0kFsFOcYIxR16ti6TZ6EtoG4VsN0aLKnq3IcXdGviYdfViFn5ug)
+![[Pipeline Guide.img/Untitled_79.png]]
 
 ## Where do you want to install Windows?
 
@@ -15752,7 +15752,7 @@ Click the "Next" button to continue.
 
 
 
-![](https://lh6.googleusercontent.com/KlNvgEEFjAHggajStxZWdDbGv-Gx3m6Zv4dTNGEDfdfz_rxbfQ6bM77z64rINtfL1QkGsfzklEMNUd23AWMyJIQlTg1rFJV6F3_SHgEdZ6H0_P8QELrv8H8NSKmP-xpyLw_Pou62f_d3WaWMUyfXzUdp4v1nSPgvUc4DNDrchifcgSaV1o9xTWcezCCH)
+![[Pipeline Guide.img/Untitled_80.png]]
 
 ## Installing Windows
 
@@ -15760,7 +15760,7 @@ An installation progress window will appear. At a certain point the installer wi
 
 
 
-![](https://lh5.googleusercontent.com/AhjVm3yCct-CkaMf_Kbeu8idIjMopDNOPpiXRn4uJkGKBzFI5DZiaWwkX_dThNPcKhnB8T4NgRuGGOdCqNvAvU7nw-NjAOjdmrquJ9JZLZSVpBPmTL5oT0nb0U4vcMpyPhFIFxL-O4jWaSocQtfkRq41ZymI8c7820ixNTwDt_l07EvYBFR_rqfE-bbD)
+![[Pipeline Guide.img/Untitled_81.png]]
 
 
 
@@ -15774,7 +15774,7 @@ By unchecking the checkbox control, VirtualBox will disable the network connecti
 
 
 
-![](https://lh6.googleusercontent.com/7SklkIPF3rY3Oce0-NFRkuPW-2qGOFMAifdJ25TXcOg11xvw6O-L0-Q_gPXye33EYiIx_fLbDc6OYrNY8mTvQWdI3fdOUQkGBk6Ix7NoWuVQbqw7-vksf1MIubwNRku7M_AaJfXBaruVZTaSQVIlr9svIXIiKWq82GvO52ChGEHj_zFmNqlNhHPkBKZj)
+![[Pipeline Guide.img/Untitled_82.png]]
 
 ## Let's start with region. Is this correct?
 
@@ -15782,7 +15782,7 @@ Select the "United Kingdom" option.
 
 
 
-![](https://lh3.googleusercontent.com/KBU7Qcd4F0KNgqH0Lo5sfNg47lPbxTm9bYFWsnQGXK2axKcTQUF0_joLkMIJbVaXAPgm7mwR5EqWTv9IYLBLWOuWSkfXGGJ5wSBrWW_JBp7Fmicr4iep69d7bSFcSk4gu0de6m8wyD89r387gWwBM19L6zb8gO5Q0SOeruZ9c921eHpZDvww0pQkM2ZL)
+![[Pipeline Guide.img/Untitled_83.png]]
 
 ## Is this the right keyboard layout?
 
@@ -15790,7 +15790,7 @@ Select the "US" entry from the list.
 
 
 
-![](https://lh5.googleusercontent.com/GV9jxGz9ph_q-TjN7eD_ZeaNMLEHt1o_VV7UlrvT89vTdhYmfMXw0D8SdFZ3PJXFA7J6MtNqNe-bPwl39GL0Rf218SaLFqmrYmUnBRaxo9Vf0RzzOXrAf3TgTWsZtoh4ZjIeRiTfAZV5GXeIaX8QtRmh2QCMgC8_EVAF9awY69Qkc2wVNAChUvKD8tn9)
+![[Pipeline Guide.img/Untitled_84.png]]
 
 ## Do you want to add a second keyboard layout?
 
@@ -15798,7 +15798,7 @@ Click the "Add layout" button.
 
 
 
-![](https://lh6.googleusercontent.com/JrPy65iw9OVpFQeIlp0TYPWLEdbPjyUCNtfAvQvziPvA8m7brP_YV-lsFa8x2ytXMeOnH5BbbzmvwpiH88zT7X0RlmUocHP4PqnGrNAod1Gnz01Xr_r2K4NcLKvUBg019cBJuZvxe6D7NBWZbkGwEhrKsOJkb88ehhjuh07hX3ee5Fm4_PlJNNpx4i7c)
+![[Pipeline Guide.img/Untitled_85.png]]
 
 
 
@@ -15808,7 +15808,7 @@ Select the "US" entry from the list.
 
 
 
-![](https://lh3.googleusercontent.com/5-eGsyAFvSQoOpJg9_VQUypLOSlg6PXVw-0QYKz0RlRPA3Ippvsjfd_kFFWVxR3y7lhGtQ-vvgRh0wMFDI_0RdPhb7tGZxfxSl690v3eskxOhta9SUza4Ho_sBVRmUfqHOsZiHtGYi2qUGKSn2HBMSHTQVqqxbOjb1PA9MLTwf1CA4VIYt5EKX_AesDO)
+![[Pipeline Guide.img/Untitled_86.png]]
 
 ## Let's connect you to a network
 
@@ -15816,7 +15816,7 @@ Click on the text "I don't have internet" to continue the Win10 install with no 
 
 
 
-![](https://lh5.googleusercontent.com/usLLjWjZJcvhCqYixHJHkx8VOeQlkxs4T6PH6xsgiIpZY_Eyh-uehLk1hXzEiBENDuGDtP2m9eBW7IUdbrEI5aA7oRdYGm9boMwmlhTScVzqgiQCNxIbqDTPuIkpquAQ5myUknnmIqNcvFrl6R-9FW61Jsx5WlAnml19GoYjAS4SBU0OYJnMwtfPbA_R)
+![[Pipeline Guide.img/Untitled_87.png]]
 
 ## There is more to discover when you connect to the Internet
 
@@ -15824,7 +15824,7 @@ Click on the text "Continue with limited setup" 
 
 
 
-![](https://lh5.googleusercontent.com/kByrtFZX2lxm4hcy-7Lsl-_YYQDAid8T3R_VaUjbVLetlVR26D0KqyAw1dSanvheVvZ8qB6EyWWOtanPbnBLvcntVC9e-aUp5_hhXLCD0aRQW-58508JSbQbMgd1547xLLtsos-vgjyP2FeR5B2sZpPm_jI4iy7C9JqLEBLj8VJbxZy2mVeX09Pwbxqh)
+![[Pipeline Guide.img/Untitled_88.png]]
 
 ## Who's going to use this PC?
 
@@ -15834,7 +15834,7 @@ Click the "Next" button.
 
 
 
-![](https://lh4.googleusercontent.com/yR5v2FUu1jXpRK9rkNE1C6nChLM4sAYkxJ8ukdtzhR26VaV8hsL4t_yfiPjoIKXMYpeqRXOctSSamnKJsqwOS-xPHpnF1mNRuuQrym36c9MMSvBoNDlzzs5Y2iO_SdI9KoA2oYO05MU75r_VT86pzIjgVS-igUUF7Sm64L22ZCYydG3H-tgAvtncMwWQ)
+![[Pipeline Guide.img/Untitled_89.png]]
 
 ## Create a really memorable password
 
@@ -15846,7 +15846,7 @@ Click the "Next" button.
 
 
 
-![](https://lh6.googleusercontent.com/9wxqMQ-0JhUzDwniJCM_nJVHGVgBYf95jlfkJLaBERabtz7POwzq2y4-ByMtC9MFFAHVUCgyrPR3Mhok0r4Do4PxdWn7z1u-CV4wEsAeZzi-HZNRAoodOIgfM_7DqyAIKrrspk_U_i_oVXPIW3Chup_W_s-iO_ayyOPGgRwGkHZNChl0V1-2dy20TjJs)
+![[Pipeline Guide.img/Untitled_90.png]]
 
 ## Confirm your password
 
@@ -15862,7 +15862,7 @@ Click the "Next" button.
 
 
 
-![](https://lh5.googleusercontent.com/wz0ODTKh4ph1aCFGYN_4yKmrmNu81lU5hTKXjquoB2Zuu2C_6SF3xVe_6x-iZn8tgolHL4dFYgmDujtRFgAEAEALHYnU2rPt1dReDwu9YxRJKm0PSbm6DubPqQLilHLrGwnXbs-l6yl-5xLiH6eiu2e6D-i_6a24V0HjODu--VkkH2ZJzHy0aVM0-R5i)
+![[Pipeline Guide.img/Untitled_91.png]]
 
 ## Create security questions for this account
 
@@ -15878,7 +15878,7 @@ Click the "Next" button.
 
 
 
-![](https://lh5.googleusercontent.com/aWMk4kmyzKct-H6eq_wK-nLYaZUFR2UUQP_SteD9SmxEvF_4RYEcqDXOzuM_EePBgrea8fJk_-9uNpdKmDW4NFeIqj4ocs9oP1VEXmG6uTQWx1Zj7dHfMuLTFPxiITeZzPhedtPOM6ge8wpcVO67Sr7ybrasfVVG3LyWQ56BHaRiz12cI0bqRW6qy8mu)
+![[Pipeline Guide.img/Untitled_92.png]]
 
 ## Let Microsoft and apps use your location
 
@@ -15890,7 +15890,7 @@ Click the "Accept" button.
 
 
 
-![](https://lh3.googleusercontent.com/FPTltsjOCD72GGF1c-kzO3zGwCpmi2xo9nI386P3bSKGMEpLFW0a069ZwnfFnkhY9CLToxSM1HUeaR0wCEO3aj2RubOvXNdBc-gvlhIDoQf20I6NQu6CMCEApdwe2acmBxgBZBkT0OfYR_hN3syOE0vYzRYXKUmxPIk-DmjoKLCLi6n0Qn5pA7Hbw7Dq)
+![[Pipeline Guide.img/Untitled_93.png]]
 
 ## Find my device
 
@@ -15902,7 +15902,7 @@ Then click the "Accept" button.
 
 
 
-![](https://lh6.googleusercontent.com/VsFHqbCi__znEsb9uULTAYt4_0mtnR6IUR0U2In5cBL2KghNtSqL2stnik1GU7qpBCMr5GriacBjNBnqXL_gEWBCOFZLIU8-8B2Qq6lLNPU_ylcQZXG03pflOOwqYIJ1oNJXEvMTVZZ21eRZdUiDmG30nhIpDNCO_fHdg6LD5KwZ6Jc8guz4aLlrQ7dm)
+![[Pipeline Guide.img/Untitled_94.png]]
 
 ## Send diagnostic data to Microsoft
 
@@ -15910,7 +15910,7 @@ Select the "Send Required diagnostic data" entry.
 
 
 
-![](https://lh3.googleusercontent.com/WmTHXeh1PZWjRQd8XJ7zPtZcb70W35YfSV2nJj-KWm0K5LlWgFrt01Gp8PY9ifRBdfUuLc1BafC8AU1AtFvx2UyH4Wsjc1c-mrLaXevVVJFgI3bNIYRXg1Ubs_xSRdfqppEoT0-HOmfQx6gOAVsQZqZzFNlHPFhjy8x3VxUH3Q8piLpvcfsRZpW-FqvC)
+![[Pipeline Guide.img/Untitled_95.png]]
 
 ## Improve inking & typing
 
@@ -15918,7 +15918,7 @@ Select the "No" option.
 
 
 
-![](https://lh4.googleusercontent.com/BXTRMvh1NHl7byBL1QnGIJBOnkxa-zWKwyQgg5CN48NquradlGmtAVilN1uOYA3wo0KwFLcWzZjMsjkTr96HPmwKn0JlZCAeDH6RKinxf6xR6VWc518miwrU9s-NI8gylHZzR0GT3oJbbEeyrHS6UDxDtD4AGbMNjH19wd0MZDvnZ68yd2EJYW0Y3IhJ)
+![[Pipeline Guide.img/Untitled_96.png]]
 
 ## Get tailored experiences with diagnostic data
 
@@ -15926,7 +15926,7 @@ Select the "No" option.
 
 
 
-![](https://lh6.googleusercontent.com/t-xu3nYgPm8Fe-R7uORAGIk6aPfMS-CtxH7YhzsBsJOpkfJHOFFrDjKLSeNjn6dEqZlZ5xT5Qwb8gSCWNDAgGJvlxue0r5TRtDgXtrpKQ5GCENTvpRTk5YRkyS4va0bFZF0jdnvTKk9uIUu-Sl0pJMakcZ-2JReT9yJ4GuTwRKoQh0COUcSfvNRPixmg)
+![[Pipeline Guide.img/Untitled_97.png]]
 
 ## Let apps use advertising ID
 
@@ -15934,7 +15934,7 @@ Select the "No" option.
 
 
 
-![](https://lh4.googleusercontent.com/pZ7SZb_Q_U3TTTTIr44K8T4c6zk2AsssZ1kBMO6Veg0dGGR9s9TXcMxBuIERNxnen7x-Ifw0Wi4KbHqQZ6z1yxiMM3tQ8jFCex-R1HcCyA2I-xBoD0LC-M3NHFY1yBPqki3FK6-tPPD4341WgXPsUI7LQLFebP9k1c18mVw7n1JJnO5erKG2RGMpvG2u)
+![[Pipeline Guide.img/Untitled_98.png]]
 
 ## Let Cortana help you get things done
 
@@ -15942,7 +15942,7 @@ Click the "Not now" button.
 
 
 
-![](https://lh3.googleusercontent.com/OQUoHl0X0Q35jBlHgK2gORloxuWTdoV9hDpTP3t6dmQmXSZBQo1wYCWIabLi4uY3L9rxwAkaw-cprmz0L7AlTPnIUDfkEmWsI9I5-GEIrbXXy5gDsb5OIWndf1Wp6fyVwVQyGSGIbRBrcNzoxN28UPDYDON4gyJyytp3DTZOVSsNXSeiFf3UVBESFRAg)
+![[Pipeline Guide.img/Untitled_99.png]]
 
 
 
@@ -15952,11 +15952,11 @@ Several Windows progress dialog messages will appear over the next few minutes. 
 
 
 
-![](https://lh4.googleusercontent.com/TyWWMu4Sep1o-Ualc_8cxSrrPAODayOYeNQRb4mT4rf7eR4BypfpG-iqCDEFwUbqvqRWwt2v5Q9T-mym-3UxkQbf2Zd0bXCFNrApQkTfJhWtkARtsmyKgwYceeR2bbVlqYCEX_Jmwe96BZcbHq4eAeP6xpDQlDwyX8__Ab9zopPcv35OgaVr_sYivACv)
+![[Pipeline Guide.img/Untitled_100.png]]
 
 
 
-![](https://lh5.googleusercontent.com/yAlT6XbhSu24wWG_FVI02Z1zyaf8p6kkrEf-QKTDIZKEB4gzLGbY0GK5R9RUDVPw_HmUK4cvl9yEzpuib7x8RUJc6iLw9Tzuq4pQsmvzTaC7rwZU0VfWe_2bHQQwcsIPQ3RIqajYUVFcJkwYwWl4tfH2agaA8iNAMWoDrN37oCYmbU9Cmwx8ctLN_9fM)
+![[Pipeline Guide.img/Untitled_101.png]]
 
 
 
@@ -15966,7 +15966,7 @@ When the Windows desktop pattern shows up, with the "Microsoft Edge" and "Recycl
 
 
 
-![](https://lh5.googleusercontent.com/xI6ih_QoH-Na1frWfC2gJDX2w-oLNR3bgLagRBxLzsOVIj-8v0k8t-OnCfP0tLmbBnAp90MaCIViwTkSNCkXkH0acsblPEJaSVKgOD2SSuJBct3xeBGWRIwPbSX0prmkksfFkM1Cmj9xTf-dE2jQSHKI3DgTh7JOEIIHJoV3426Q-vAvFINn9cEcfZP-)
+![[Pipeline Guide.img/Untitled_102.png]]
 
 
 
@@ -15982,7 +15982,7 @@ Switch the ribbon over to the "View" Tab. Then enable the "[x] File name extensi
 
 
 
-![](https://lh5.googleusercontent.com/_ajB_G1UnB10ry8CTTVcGO44-XbiE1KQzhR13ONUpjvQAUoB0bFNReO_7TF159sL3Mxo9MC7ITtMB-ZYc88M28UwGluecZg-sQsRU_qd-QEk0qoRqBOTNJgVdaOEd5rmNHcDEsL76jSFRh3QHUbalegq3Fkf9B_XkvbBBXQMzPSmqLY5flqc1og3cl4y)
+![[Pipeline Guide.img/Untitled_103.png]]
 
 
 
@@ -15998,7 +15998,7 @@ Option A: Click on the Start menu icon. In the search field type in "Group Polic
 
 
 
-![](https://lh6.googleusercontent.com/Yg1vjaPSNjW3kueHreJGOv1nYVQ7XDeB0tw-3hgxyZa0Z8ZXrnpV-N9qJTd0HzmMC-VmQVbIzSgRuqDEvVIiJz_8kHXymN7rgqvmCKUpvupBu_89ymEu8h6TXBOU2JP83-mzeHOE2yB_SwYs1oP1mRUA7omkCDIOOnCOa60uu_5M77_gWoHM9-50mTwS)
+![[Pipeline Guide.img/Untitled_104.png]]
 
 
 
@@ -16006,7 +16006,7 @@ Option B: Alternatively, open a  command prompt with the "Run as administrator"
 
 
 
-# ![](https://lh3.googleusercontent.com/sFPVAZ82fieOwgzLT6EOjvhCXAlY0RnyLYyUuGq4NAlAHHevc6v3ba_mR3I47WBBOZI7wdKK_u4bPDRP1VeTFRL1N3P7mDh_yFmHCZJqtwVOkcU9YRqCfSCsmm53oUS_Bfr8fBWlmOAbF6o8SuKaZVjf6YqtPynp9-oNqPhyoU5trnw3NDCuS3qrhA7F)
+# ![[Pipeline Guide.img/Untitled_105.png]]
 
 ## Group Policy | Reduce Notification Area Message Verbosity
 
@@ -16073,7 +16073,7 @@ Select the "Install Rocky Linux 8" menu item. Then press the "Enter" key on the 
 
 
 
-![](https://lh5.googleusercontent.com/qZjvKrmFPXhSro5JCBBpsMSVDKXeJ8Nx5ADkao9EmAJ3_sLogYd7-wGvT5dOLmclPK3jlSLOXDCNiw2Q6QQ_q9pWT16geSxYGepegFLjI6sNpUV_BXBeLntgRE328tmQYXug9DgsFhEir0PCbgvn04Epzc3VjTMiQZUC7tMphOGZT4f3Mu-2lo_Jh7Xn)
+![[Pipeline Guide.img/Untitled_106.png]]
 
 # Welcome to Rocky Linux 8
 
@@ -16089,7 +16089,7 @@ Click the "Continue" button to proceed to the next screen.
 
 
 
-![](https://lh3.googleusercontent.com/7vrGNwqP2LlE5TJae-Yvy8a6ZJ7FlT3ixR9w3EiRrQADo7BJVRJw7bLoiMqMVYK-nIZU2VkBWA7-z6ZjglQnECeAqmnNTGjB4cVfma50HOBngYd0XGwkKQoeNhBukwROskFV9J6E8gpB5k9ESGCiS4az66eNe34IJLzaGi__4K5OXDRQqxPSOAN8GuGy)
+![[Pipeline Guide.img/Untitled_107.png]]
 
 # Installation Summary
 
@@ -16101,7 +16101,7 @@ Note: There is a certain order-of-operations logic needed, where you have to def
 
 
 
-# ![](https://lh5.googleusercontent.com/opmkrcviOyxxylLMBFTmm0ny1SRRegd2lSaKxa1nnAsCWJWpPZIuzv8Bw6zpFjtESaFx0QJX1gOnn11kVwj4P02H_cV8RQHjWrvQlQoF8oP7Z7dq2HWc1-sQnmiL7UTUuwYQEEb_eknHuC5WFC1Fc17w5Th_QW-jkuFEziu6BOtlzGrTh97wejVoR7xJ)
+# ![[Pipeline Guide.img/Untitled_108.png]]
 
 # System
 
@@ -16117,7 +16117,7 @@ Let's disable KDUMP and get 160 MB of extra RAM back in the process. Uncheck the
 
 
 
-![](https://lh6.googleusercontent.com/imWYlED0fs5slTU-0DYCuLWTLB7LjEPhzRBWWxTHRnjFWxkfadl4XVUvRMtGpuygeeQu6pYE4vzpi5Yyql2EbMCkdEQITwZ9y_IsH4rLWDk6URfOov3i4eAP9oM0dPE4qExJ8qDxCUhiLLu26wWLsgtmUw0xtMXaxrU1KblVgQuCjjlt2OWrvhFrE3hh)
+![[Pipeline Guide.img/Untitled_109.png]]
 
 
 
@@ -16133,7 +16133,7 @@ Select your network interface at the top left part of the dialog. In my case I a
 
 The computer's name is defined with the "Host Name:" field at the bottom left corner of a dialog. I will give this system a host name of "R1" to represent render node 1 in my mini on-premise render cluster. Click the "Apply" button after entering a custom host name.
 
-![](https://lh6.googleusercontent.com/Qt8tBDabBVCm71OHcouk2iXbAR63xvHJq4j2515I12V5ag3k9etS7hMWTOXBFPBK5dwztmXdriQeVvnaqu3ORM_mk48bnuBw_IUuiaZ7jE0BUjgbq5lJnH670z0AcClPrs2Dt-dZD8_TvBrwDUtUj3y2XBACjdZaicTKJOeC_EpDaUPcYGq626a0FcRe)
+![[Pipeline Guide.img/Untitled_110.png]]
 
 
 
@@ -16571,7 +16571,7 @@ sudo nvidia-smi
 
 
 
-![](https://lh4.googleusercontent.com/FBZEPCT-13JedMgohbKLm2ZZkOY0HuAHOHja6IBjIOYTN5FfSMt3tLrGEGSLyscmutgCt-W64LZWkiYovd2m2LV9NfABu86zkS48C10Uk3XJLuTq1tErRw6asqD4kljGY8gSIazH6ggYv1X8Wd1kD72UzR1IvQigKNjvDt__hsDTFSNS0rFMoTSNLTM6)
+![[Pipeline Guide.img/Untitled_6.jpg]]
 
 
 
@@ -16581,7 +16581,7 @@ sudo nvidia-settings
 
 
 
-![](https://lh5.googleusercontent.com/_UnP-abSPnwEUBOmf_WIta31mLsk5D4qc3Yp8hllTeLJyJxJdV48Uk4Pev4rh8aaVV_NhQ-_6mJKWu1-t8dI0_lxshAqtM7_HN9hs42CDrWuPs-wCXZuAf86jcobSJiINsu6f1hKZxzqCfHn9uXR_QIqSIkRUNyco-a9O_KrYWAteWbLmHGdygcTWs1X)
+![[Pipeline Guide.img/Untitled_7.jpg]]
 
 ## X11 / XORG Graphics Preferences
 
@@ -16715,7 +16715,7 @@ If you are in a shared office like working environment it can be useful to have 
 
 
 
-![](https://lh3.googleusercontent.com/tbncMnCoTCaHA4Vp1B7War8fmbgtSBk0di5crc0HY2qszZp7d_TT5FWP1trgaqL6mmWC9UI_MlNbGrH1HJvfKkrACi4j_-WBhOOA6sRn7-ikD64J_kr39iq0wCW4-x7088IT1tnd3G9uQHc9cZBmMjOHLVO8Dqnkqtb2vGcA1MrEBg3l0UDAgI_lTlfC)
+![[Pipeline Guide.img/Untitled_111.png]]
 
 
 
@@ -16729,7 +16729,7 @@ It's possible to select a very permissive value of Screen Lock "OFF" which could
 
 
 
-![](https://lh4.googleusercontent.com/1Q6_6oxKfrDAc2Fk4P2_h6JSjHZ1PNzJkh-emmINgZPl_8djY_CpL7gAzka6IYVnXivq3VnjK3zJsT1gsiIklFj_290wlvYic4vWeEKC8CxykOj37i-GJVJbk6x9tlKFdyNDEXSFjnSfRCUR6Ywi0PDHvBPKvdr2qrH_V3VqIVR-mT6rzZ8a1oKFNz84)
+![[Pipeline Guide.img/Untitled_112.png]]
 
 
 
@@ -16741,7 +16741,7 @@ If you are in a co-working space or traditional VFX Studio or a Design Boutique 
 
 
 
-![](https://lh5.googleusercontent.com/JQ1f0YHmAMQFrgl-WQjTqrLYJH37AClahlWTdty0ZGfc8xA1_p0LDSgCtXbtZ1pyEsdmsp7a5Y8mIa5aYPSduLN27YKG4kmwJf_zl-IGw1rRZEdt8yur2pcE1LPM3GNdSwrsATXqBMmV1jv4yyjc8ztbBP05kaLSGDNy8i8_RxUMqhnJZFuAGZs7nbEp)
+![[Pipeline Guide.img/Untitled_113.png]]
 
 ## Details > Users Settings | Automatic Login
 
@@ -16769,7 +16769,7 @@ Then unlock the panel and turn on "Automatic Login".
 
 
 
-![](https://lh6.googleusercontent.com/lNB1VrQemZ3cN0GzlHwpsGqh4WPbYEU3UGvuGMynTRkfm7XPSnYCrCJnXT8Tcl1WI_nXnaE4_sfCKPUCHNPelLWLAsRyqM_8iA5Liblg8JHuNfxL6eqmQSYLnUOeFE6My7Sy4TLX4R9kDPOXL3P0xbo6xLol7wsQ0erxLy1vGIN7OEVSfbvZ2HsY4ExH)
+![[Pipeline Guide.img/Untitled_114.png]]
 
 # Linux Networking
 
@@ -17680,7 +17680,7 @@ A cross-platform compatible bootable Linux OS disk image cloning tool.
 
 
 
-# ![](https://lh4.googleusercontent.com/_WwS50-9D-7IWWCmlB2rbr1JNCR0Zdo1XIrq7AKPlXGptokvx28AIMuKGIrkp8EGUqOxT-xfT0V9-gzH5csdYlpa3PE_AZRog6N_Hx7Y63R0O1sewV1xrHDd75trU6iGdGMieIRzNoYJJ1eyrnypKhPOGd-TZiRiHFMZ9uLnKinCtU3wXvW0Xsy9kA1P9Q)Rescuezilla Bare Metal Disk Imaging, Backups and Restores
+# ![[Pipeline Guide.img/Balena Etcher.png]]Rescuezilla Bare Metal Disk Imaging, Backups and Restores
 
 ## Install Rescuezilla
 
@@ -17759,7 +17759,7 @@ Yes, it is also possible to carry out the same commands fully from a terminal se
 
 
 
-![](https://lh3.googleusercontent.com/EdTQuL1PKiStOZe4ADhavY2N7IfmLT9BoW6wN953Fbddku5dNgto-qmmLyxS9iV-9aYt_tytXfFvE7AaFQQr1N3o5ZMj1StvPVcYGD-aN0jeTGX9jNa8eIL1HaN4JDN-HW0h3I0TkB37S4E4RjRh92MVxC1uMVxY6C--YJevTbO-DeDH5XOCUePm7vViKg)
+![[Pipeline Guide.img/BootRepair.png]]
 
 # Installing the Canister LTO Backup Tool
 
@@ -17771,7 +17771,7 @@ Hedge Canister is a macOS based LTO tape backup program that makes creating long
 
 
 
-![](https://lh6.googleusercontent.com/TZFuwvZaaPsnEoAssyn_l5AL-XlMIXYENuDC8iGDbxhn0Sv9pm459iNHdEGebLCWvRC7imhU9FUoUswuf1vsYDQsqFZtr3pocWLRFXN8WonSP84febTZECJxeDW8wXL2mlo-DBRXXtrWtXoiNruaMvjQ1w1NPJUKlUEA-y6dKbWDhuhEQjZY5uQxG0DOYQ)
+![[Pipeline Guide.img/Canister LTO Backup.png]]
 
 
 
@@ -17779,7 +17779,7 @@ This is what a typical LTO SAS tape drive looks like. This unit is an HP Enterpr
 
 
 
-![](https://lh4.googleusercontent.com/UKoDrUz0FbQWOhCHBy6wtk1GnDYs-VJzGaXvl1tdvl1UaijI49J-d_veku-n_W3LH4PglS-Ot3ZWx1p945zFwKjsisifTqF2RFdOCBi0hiqj2lNmTWEJHlmv66W5QKCvFHb74iQaGxQ-YmVKLniEk2mdq3aPU0SYAgfldrZnerXQQmq_VmMm7nbGa_v2CQ)
+![[Pipeline Guide.img/Ultrium_Tape_Drive_1.jpg]]
 
 
 
@@ -17791,7 +17791,7 @@ If you need to connect a SAS based LTO tape drive to a macOS based host system y
 
 
 
-![](https://lh6.googleusercontent.com/m7HkLZsLE0nwXxDZ-P3SfeTkzX7J46riRxBU-mvl9Xha4jLTxXsMyqs4HSgg_ulzCw-d5s3mCv1c5jLxCqiRen4dhWXh7ZwxRatweqFn6ayQS-VyNNYB8_PQ9IQwhca5p0W33gZTBfD72pm211CXW6UX7Hlwz8UgGg5L5l1zyiNKI6xL3DH-f5g6brIOGw)
+![[Pipeline Guide.img/Ultrium_Tape_Drive_2.jpg]]
 
 
 
@@ -17799,7 +17799,7 @@ LTO Tapes have a long archival shelf-life if stored according to manufacturer's 
 
 
 
-![](https://lh5.googleusercontent.com/7RXRmPaG0G7KCrCbqlg9sGkkBesxMNyh2zughmyqNPpt5xxhODaLson26HEOy-6DMCdXIfXSfCAwFCthuF9Pwdv7INu9N09bsZ5Q9MYXvzm-NaSmAC13p4TZdn2PK2pJ7mYs06-vPqSllBIhZtvV_dWmGAZxIGPYNjXfRbZD2_4dsAJOy0BlAsNQsXTYbg)
+![[Pipeline Guide.img/LTO_Tapes_in_Boxes.jpg]]
 
 
 
