@@ -16,6 +16,7 @@ In the long run a MediaWiki like it was initiated by LearnNowFX would be a great
 
 > [!TODO]
 > Check out [jobindj/obsidian-publish-mkdocs](https://github.com/jobindj/obsidian-publish-mkdocs) and similar tools
+> Sphynx, MkDoc, ... MediaWiki to Markdown, Pandoc
 
 
 # Welcome to the Kernfusion (yet not a) Wiki!
