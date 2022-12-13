@@ -335,21 +335,21 @@ The Fusion render node program can also be launched directly from the command-pr
 If you launch Fusion Render Node from a Terminal/Command-Prompt window with the "-h" help flag added to the end of the line, you will see a list of the full commands that are available for your use:
 
 
-
+```
 "/Applications/Blackmagic Fusion 18 Render Node/Fusion Render Node.app/Contents/MacOS/Fusion Render Node" -h
 
 
 
 Fusion Render Node [<filename.comp> | <filename.dfq>] [/quiet] [/render [/frames <frameset>] [/start <frame>] [/end <frame>] [/step <step>] [/quit]] [/listen] [/join <host>] [/log <filename>] [/cleanlog] [/verbose] [/quietlicense] [/version] [/pri high|above|normal|below|idle] [/args [...]] [/execute <script string>]
-
+```
 
 
 When you render a Fusion .comp file via the command prompt, the program control can be managed 100% manually under human control using the following style of shell syntax:
 
 
-
+```
 "/Applications/Blackmagic Fusion 18 Render Node/Fusion Render Node.app/Contents/MacOS/Fusion Render Node" "/Users/vfx/Documents/MyProject/MyProject.comp" -render -verbose -quit
-
+```
 
 
 If you need a quick way to grab the filepath for your .comp document in the Finder (macOS) environment, you can right-click on the file with the ALT/Option key held down on the keyboard. A contextual menu item appears with a "Copy as Pathname" menu item. This will place the full absolute file path to the document in your MacOS copy/paste clipboard.
