@@ -13,15 +13,13 @@ All of this is in a very early stage / not much in here yet; so far I started wo
 
 ## Link Fuses into Fusion
 
-Not a must, but if you want to avoid to manually fix paths in comps and such you may want to set a 'Kernfusion:' path map to the folder you checked out the repository to.
-
 ### on macOS
 
 Set PROJECTS to whatever folder you want to clone the project into:
 
     PROJECTS="/Users/$(whoami)/Projects/"
     cd $PROJECTS
-    git clone https://github.com/nmbr73/Kernfusion
+    git clone "https://github.com/$(whoami)/Kernfusion"
 
     cd "/Users/$(whoami)/Library/Application Support/Blackmagic Design/Fusion/Fuses/"
     ln -s "$PROJECTS/Kernfusion/Fuses" Kernfusion
@@ -32,4 +30,9 @@ No idea. Did that once for the [Shadertoys](https://nmbr73.github.io/Shadertoys/
 
 ### on Linux
 
-Should be pretty much the same as on macOS ... kind of ... despite the paths.
+Should be pretty much the same as on macOS ... kind of ... despite the paths ... but if you are on Linux I guess you know what you are doing.
+
+### In Fusion
+
+Not a must, but if you want to avoid the need to manually fix paths in comps and such, then you may want to set a 'Kernfusion:' path map to the folder you checked out the repository to.
+
