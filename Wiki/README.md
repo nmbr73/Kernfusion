@@ -152,6 +152,17 @@ Sounds simple and perfect to build a documentation workflow ...
 ... but turns out to be a rabbit hole that I'm not sure I want to jump into.
 
 
+
+```mermaid
+flowchart TB
+    Scrivener -- MarkDown --> Obsidian
+    Obsidian -- MarkDown --> MkDocs
+    MkDocs -- HTML --> GitHub_Pages
+    Obsidian -- MarkDown --> Pandoc
+    Pandoc -- WikiMarkup --> MediaWiki
+```
+
+
 ## Markdown
 
 Is a simple, human readable text markup language. It allows for basic formatting like headlines, sections, code block, links, bullet list, etc. to be done in a text editor. This makes it not only easy to learn, but also easy to parse and process.
@@ -165,16 +176,16 @@ a [link](https://www.steakunderwater.com/).
 
 There are various flavors of Markdown (e.g. [CommonMark](https://commonmark.org), or [GiHub Flavored Markdown](https://github.github.com/gfm/)) with different features out in the wild.
 
-There is a [multimarkdown](https://fletcher.github.io/MultiMarkdown-6/) tool (`brew install multimarkdown`) that can be used to convert multimarkdown files into some other output formats (but probably pandoc is the better choice in this regard).
-
-
 ## MultiMarkDown
 
 [MultiMarkdown](https://fletcherpenney.net/multimarkdown/) is an extension (aka flavor) of Markdown adding support for features often needed for documentation purposes, such as math formulas, image attributes, definition lists, etc.
 
+There is a [multimarkdown](https://fletcher.github.io/MultiMarkdown-6/) tool (`brew install multimarkdown`) that can be used to convert multimarkdown files into some other output formats (but probably pandoc is the better choice in this regard).
+
 Scriviner includes MultiMarkdown support.
 
 Pandoc allows for MultiMarkdown import and export by specifying the format being `markdown_mmd`.
+
 
 ## YAML front matter
 
@@ -267,13 +278,3 @@ Yet nothing usable to be found here ... still nothing more than my personal note
 
 -->
 
-
-
-```mermaid
-flowchart TB
-    Scrivener -- MarkDown --> Obsidian
-    Obsidian -- MarkDown --> MkDocs
-    MkDocs -- HTML --> GitHub_Pages
-    Obsidian -- MarkDown --> Pandoc
-    Pandoc -- WikiMarkup --> MediaWiki
-```
