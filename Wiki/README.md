@@ -167,6 +167,7 @@ flowchart TB
 
 Is a simple, human readable text markup language. It allows for basic formatting like headlines, sections, code block, links, bullet list, etc. to be done in a text editor. This makes it not only easy to learn, but also easy to parse and process.
 
+**Example:**
 ```md
 # A headline
 
@@ -191,6 +192,7 @@ Pandoc allows for MultiMarkdown import and export by specifying the format being
 
 YAML is a format for structured data. A YAML front matter is a section at the beginning of a (i.e. MarkDown) file used to provide additional information (meta data) in YAML format.
 
+**Example:**
 ```md
 ---
 aliases:
@@ -201,12 +203,13 @@ tags: [example, yaml]
 Here comes the normal **MarkDown** document.
 ```
 
-Obsidian allows the use of [YAML front matter](https://help.obsidian.md/Advanced+topics/YAML+front+matter) (Tags and Aliases should be very helpful). Scrivener has does output some front matter (but not of much use for us here).
+Obsidian allows the use of [YAML front matter](https://help.obsidian.md/Advanced+topics/YAML+front+matter) (Tags and Aliases should be very helpful). Scrivener does output some front matter (title, author, and such - probably not of much use for us).
 
 ## Pandoc
 
 Pandoc is a tool to convert between various document formats. Install on macOS e.g. via `brew install pandoc`.
 
+**Example:**
 ```sh
 # Convert from Mardown to a Word document
 pandoc document.md -o document.doc
@@ -214,7 +217,7 @@ pandoc document.md -o document.doc
 
 Pandoc uses by default its own Markdown flavor called [Pandocs Markdown](https://pandoc.org/MANUAL.html#pandocs-markdown).
 
-Scriviner includes MultiMarkdown support.
+Scrivener includes MultiMarkdown support.
 
 > [!TODO] Check for interoperability options for Pandoc and Obsidian
 > - [Obsidian & Pandoc](https://medium.com/@nicfab/obsidian-part-3-pandoc-87459fda89a5).
