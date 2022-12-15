@@ -147,16 +147,9 @@ Scrivener's compile supports Multimarkdown and Pandoc output.
 Obsidian uses Markdown.
 MkDocs renders Markdown into a static HTML site.
 Pandoc renders Markdown into MediaWiki.
-Sounds perfect to build a documentation workflow ... and is a rabbit hole I'm not sure I want to jump into.
 
-```mermaid
-flowchart TB
-    Scrivener -- MarkDown --> Obsidian
-    Obsidian -- MarkDown --> MkDocs
-    MkDocs -- HTML --> GitHub_Pages
-    Obsidian -- MarkDown --> Pandoc
-    Pandoc -- WikiMarkup --> MediaWiki
-```
+Sounds simple and perfect to build a documentation workflow ...
+... but turns out to be a rabbit hole that I'm not sure I want to jump into.
 
 
 ## Markdown
@@ -166,7 +159,8 @@ Is a simple, human readable text markup language. It allows for basic formatting
 ```md
 # A headline
 
-Normal text with an *emphasized* word and a [link](https://www.steakunderwater.com/).
+Normal text with an *emphasized* word and
+a [link](https://www.steakunderwater.com/).
 ```
 
 There are various flavors of Markdown (e.g. [CommonMark](https://commonmark.org), or [GiHub Flavored Markdown](https://github.github.com/gfm/)) with different features out in the wild.
@@ -189,14 +183,14 @@ YAML is a format for structured data. A YAML front matter is a section at the be
 ```md
 ---
 aliases:
-- Front Metter Demo
+- Front Matter Demo
 tags: [example, yaml]
 ---
 
 Here comes the normal **MarkDown** document.
 ```
 
-Obsidian allows the use of [YAML front matter](https://help.obsidian.md/Advanced+topics/YAML+front+matter).
+Obsidian allows the use of [YAML front matter](https://help.obsidian.md/Advanced+topics/YAML+front+matter) (Tags and Aliases should be very helpful). Scrivener has does output some front matter (but not of much use for us here).
 
 ## Pandoc
 
@@ -272,3 +266,14 @@ Yet nothing usable to be found here ... still nothing more than my personal note
 * [[WebGL to DCTL|WebGL to DCTL]]
 
 -->
+
+
+
+```mermaid
+flowchart TB
+    Scrivener -- MarkDown --> Obsidian
+    Obsidian -- MarkDown --> MkDocs
+    MkDocs -- HTML --> GitHub_Pages
+    Obsidian -- MarkDown --> Pandoc
+    Pandoc -- WikiMarkup --> MediaWiki
+```
