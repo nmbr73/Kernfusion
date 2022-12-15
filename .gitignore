@@ -1,5 +1,21 @@
 Sources
 
+
+
+# ------------------------------------------------------
+# Applications
+# ------------------------------------------------------
+
+
+# Srivener
+*/*.scriv/Files/user.lock
+*/*.scriv/Files/binder.autosave
+*/*.scriv/Files/binder.backup
+*/*.scriv/Settings/ui.plist
+*/*.scriv/Settings/ui-common.xml
+
+
+
 # Ignore Fusion's automagically generated composition files
 Comp/*.autocomp
 

@@ -34,7 +34,7 @@ https://pkg.go.dev/code.sajari.com/docconv
 
 "Compile for: MultiMarkdown" and then "Duplicate & Edit Format..." the "Basic Pandoc".
 
-I named the new format "Extended Pandoc (nmbr73)"
+Named the new format "Pandoc (nmbr73)" (or whatever you want).
 
 Under 'Styles' add our 'Code Block (Lua)' style.
 
