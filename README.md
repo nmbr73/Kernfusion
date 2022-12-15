@@ -6,3 +6,6 @@ Tach, not much in here - until now this repo is more my own note taking place / 
 - [Wiki](https://nmbr73.github.io/Kernfusion/) ... not a wiki and in the making
 
 ... whatever
+
+
+To get started checkout the repository and then open `Wiki/` as an Obsidian.md vault.
