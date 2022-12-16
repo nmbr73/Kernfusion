@@ -43,10 +43,20 @@ fi
 pandoc --standalone --from=markdown --to plain --template=Tools/scrivconv/metadata.template.sh --output="$SRCIVENER_PATH/_frontmatter.sh" $SRCIVENER_EXPORT
 source $SRCIVENER_PATH/_frontmatter.sh
 
-echo "Title is:  '$METADATA_TITLE'"  # 'Welcome to the Kartaverse'
-echo "Author is: '$METADATA_AUTHOR'" # ''
+
+FIRST_HEADLINE=`pandoc --lua-filter=Tools/scrivconv/first_headline.filter.lua $SRCIVENER_EXPORT`
+IMAGE_REFERENCES=`pandoc --lua-filter=Tools/scrivconv/images.filter.lua $SRCIVENER_EXPORT`
+
+
+echo "METADATA_TITLE  = '$METADATA_TITLE'"  # 'Welcome to the Kartaverse'
+echo "METADATA_AUTHOR = '$METADATA_AUTHOR'" # ''
+echo "FIRST_HEADLINE  = '$FIRST_HEADLINE'"  # 'Immersive Pipeline Integration Guide'
 
 
 pandoc --from=markdown --to=native --output="$SRCIVENER_PATH/_native.lua" $SRCIVENER_EXPORT
-pandoc --from=markdown --to=Tools/scrivconv/obsidian.writer.lua --output="$SRCIVENER_PATH/_fixed.md" $SRCIVENER_EXPORT
 
+pandoc \
+  --wrap=none \
+  --from=markdown \
+  --to=Tools/scrivconv/obsidian.writer.lua \
+  --output="$SRCIVENER_PATH/_fixed.md" $SRCIVENER_EXPORT

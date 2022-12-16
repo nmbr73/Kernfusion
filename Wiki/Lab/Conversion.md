@@ -19,6 +19,8 @@ flowchart TB
 
 
 
+
+
 ## Multimarkdown or Pandoc
 
 - [Pandoc-vs-Multimarkdown](https://github.com/jgm/pandoc/wiki/Pandoc-vs-Multimarkdown)
@@ -28,6 +30,10 @@ flowchart TB
 
 https://pkg.go.dev/code.sajari.com/docconv
 
+
+## Obsidian to MkDocs via Pandoc
+
+Pandoc has a  [`--shift-heading-level-by`](https://pandoc.org/MANUAL#option--shift-heading-level-by) which could help when putting the filename as a top-level headline for the page ... or maybe better to just keep the heading level as the filename seems to be a h1 in Obsidian.
 
 
 ## Scrivener
@@ -69,6 +75,9 @@ Binder and styles are defined in XML. All the things are then tied together with
 
 It would make total sense to apply more semantic markup in Scrivener. I managed to define 'Styles' (for example for "Code Block (Lua)", "Code Block (Python)") and to create my own 'Format' (for Multimarkdown and Pandoc) to apply the respective Markdown formatting. But this process is pretty tedious and very limited in the resulting markup we can achieve with it.
 
+Internal links, 'Title' Style, and many more gets lost when exporting from Scrivener to (Pandoc) Markdown
+
+
 ## MkDocs
 
 [MkDocs](https://www.mkdocs.org) generates static HTML sites out of Markdown sources and a single configuration YAML file.
@@ -79,7 +88,12 @@ MkDocs uses Python-Markdown, which is almost completely compliant with the origi
 > - Could be an option to creating other output formats from an MkDocs source using pandoc: [mkdocs-combine](https://twardoch.github.io/mkdocs-combine/)
 
 
+
+
 ## Pandoc
+
+- Guter Artikel: https://ulriklyngs.com/post/2019/02/20/how-to-use-pandoc-filters-for-advanced-customisation-of-your-r-markdown-documents/
+- Auch umfangreich: https://jmablog.com/post/pandoc-filters/
 
 Pandoc uses by default its own [Pandocs Markdown](https://pandoc.org/MANUAL.html#pandocs-markdown) flavor.
 
@@ -90,6 +104,8 @@ Scrivener includes MultiMarkdown support.
 > - Maybe do my own [lua-filter](https://pandoc.org/lua-filters.html), and [custom-writer](https://pandoc.org/custom-writers.html) to read Obsidian Markdown and/or to create MkDocs markdown
 
 Pandoc could in particular be the tool of choice to make convert the Obsidian Markdown files into WikiMarkup, MkDocs Narkdown, etc.
+
+
 
 ## Obsidian
 

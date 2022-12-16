@@ -3,6 +3,8 @@ title: Welcome to the Kartaverse
 author:
 ---
 
+The Immersive
+
 # Immersive Pipeline Integration Guide
 
 Created: 2022-01-29 Last Updated: 2022-12-12 06:00 AM UTC -4
@@ -213,6 +215,24 @@ To install Vonk Ultra, click on the package named "Vonk Ultra", and then press t
 ![][image121]
 
 Once the Reactor installation process is complete, please relaunch Resolve or Fusion standalone. This will cause Fusion to scan for and then load the new fuses we just installed. Scanning for new fuses is a process only done when Fusion first starts up.
+
+The Kartaverse Packages
+
+Kartaverse is an extensive open-source media production pipeline that integrates seamlessly with a broad range of post-production tools used in VFX, VP, XR, 360VR, fulldome, volumetric video, computer vision, and machine learning workflows.
+
+The core technologies that are part of the Kartaverse v5 suite are namely:
+
+* KartaVR
+* KartaVP
+* KartaVision
+* KartaSonic
+* KartaLink
+* CompX
+* Vonk Ultra
+
+These modules are based upon the culmination of many years of research & development.
+
+Kartaverse is delivered via the web as free open-source software. It costs you nothing to download and use the Kartaverse tools for both personal and commercial usage. It even works fine with Resolve (Free) running as the host program. The main tool, KartaVR, is Apache 2.0 licensed. Several tools like Vonk Ultra are GPL v3 licensed.
 
 [image287]: image287.png {width=204 height=85}
 
