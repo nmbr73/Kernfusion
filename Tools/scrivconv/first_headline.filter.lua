@@ -1,8 +1,12 @@
 
--- would be the answert to:
--- https://stackoverflow.com/questions/42706333/set-html-title-from-the-first-header-with-pandoc?newreg=145a6a2856b34aaaa7c8a3d21363970f
+--[[
 
+    Print first headline and exit Pandoc.
 
+    see:
+    - https://stackoverflow.com/a/74830697/20797043)
+
+--]]
 
 local headline = ""
 
