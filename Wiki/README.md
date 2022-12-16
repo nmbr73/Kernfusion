@@ -96,9 +96,9 @@ Please organize / structure your articles with the different audiences in mind; 
 
 Depending on the source, we will have some material structured like a book - and people tend to build documentation this way. But whenever you ask yourself "how can I bring the files in the Obsidian folder into the right order", or "the order of the articles on the left hand side of MkDocs output is not correct", you are probably on the wrong track! A Wiki is a "network" of articles and not designed to be read from a beginning to an end.
 
-## Write with text semantics, not with text formatting in mind
+## Write with Style
 
-Make sure that you write your text to have a meaning, not a nice formatting. The formatting comes for free and is very flexible if you got the semantics right. If for example you write using a tool like Scrivener, then you are probably on the wrong track as soon as you set a font, its size, a color, or something similar. You almost always want to use a Style for that! So you can set and change the formatting of that Style for each output individually.
+Make sure that you write your text to have a meaning, not a nice formatting. The formatting comes for free and is very flexible if you got the semantics right. If for example you write using a tool like Scrivener, then you are probably on the wrong track as soon as you set a font, its size, a color, or something similar. You almost always want to use a "Style" for that! This way you can set and change the formatting of such elements easily and for each target output format individually.
 
 
 # Potential Sources

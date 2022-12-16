@@ -39,7 +39,7 @@ If you would like technical assistance with the Kartaverse, check out the projec
 
 Install Reactor Package Manager
 
-If you already use Blackmagic Design's Resolve, Resolve Studio, or Fusion Studio software then the singular most important tool you can choose to install is likely the free [Reactor Package Manager](https://www.steakunderwater.com/wesuckless/viewtopic.php?f=32&t=3067).
+If you already use Blackmagic Design's Resolve, Resolve Studio, or Fusion Studio software then the singular most important tool you can choose to install is likely the free [Reactor Package Manager](https://www.steakunderwater.com/wesuckless/viewtopic.php?f=32&t=3067). This is an example of an internal Link. And another Link for a target not exported.
 
 The Fusion community developed the Reactor software as a group effort to create a single-stop resource that hosts the largest collection of curated content for extending the capabilities of Resolve/Fusion. Reactor also includes a lot of content that was previously available only on the [VFXPedia](https://www.steakunderwater.com/VFXPedia/96.0.243.189/index4875.html?title=Main_Page) resource.
 

@@ -1,7 +1,19 @@
 
+--[[
 
+  Writer for use with Pandoc
 
--- > [!warning] Embed: [Reactor is released - GET IT NOW!](https://www.youtube.com/watch?v=mklCsf8yOUk)
+  To convert a Scrivener 'Basic Pandoc' Markdown compilation result into something
+  hopefully more digestable for Obsidian.md
+
+  Example:
+
+    pandoc --from=markdown --to=Tools/scrivconv.lua --output=<OUTPUT> <INPUT>
+
+  But not to be called directly - it's meant as a helper to be used by scrivcon.sh
+
+--]]
+
 
 function Writer (doc, opts)
 

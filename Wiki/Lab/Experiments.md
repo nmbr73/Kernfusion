@@ -14,10 +14,18 @@ pandoc --from=markdown --to=Tools/obsidian.lua --output=$OUTDIR/PandocOutput.md 
 
 # Kartaverse experiments
 
+In Scrivener compile your document to Markdown in 'Basic Pandoc' format (or a Pandoc format derived from it).
+
+Set the name to save to being '_export.md' within `Wiki/` as the target directory.
+
+Run the conversion from Scrivener's Pandoc export to Obsidian Markdown:
+
+<!--
 Images Used:
 ```sh
 pandoc --from=markdown --to=Tools/imagelist.lua Wiki/KartaExport.md/KartaExport.md --output=Wiki/KartaExport.md/KartaFix.md
 ```
+-->
 
 # Own ...
 
