@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ScrivenerProject Identifier="EA7C5590-B990-4DE1-838D-CE02CE80CCD5" Version="2.0" Creator="SCRMAC-3.2.3-14869" Device="MBP-2021" Author="" Modified="2022-12-15 23:04:20 +0100" ModID="00422066-4C0B-4AA7-B7CB-76C2B0FE6770">
+<ScrivenerProject Identifier="EA7C5590-B990-4DE1-838D-CE02CE80CCD5" Version="2.0" Creator="SCRMAC-3.2.3-14869" Device="MBP-2021" Author="" Modified="2022-12-16 00:41:09 +0100" ModID="53199FF1-13E1-44E8-8C69-9647A2F97903">
     <Binder>
         <BinderItem UUID="8F04373A-9B1A-4180-959C-204B3951B7E5" Type="DraftFolder" Created="2022-12-15 10:26:17 +0100" Modified="2022-12-15 10:31:54 +0100">
             <Title>Total ConFusion</Title>
@@ -164,12 +164,12 @@
     </StatusSettings>
     <ProjectTargets Notify="No">
         <DraftTarget Type="Words" CountIncludedOnly="Yes" CurrentCompileGroupOnly="No" Deadline="2022-12-15 10:26:17 +0100" IgnoreDeadline="Yes">0</DraftTarget>
-        <SessionTarget Type="Words" CountDraftOnly="Yes" AllowNegatives="Yes" NextResetDate="2022-12-16 00:00:00 +0100" ResetType="Time" ResetTime="00:00" DeterminedFromDeadline="No" WritingDays="" CanWriteOnDeadlineDate="No">0</SessionTarget>
-        <PreviousSession Words="478" Characters="2832" Date="2022-12-15 23:04:16 +0100"/>
+        <SessionTarget Type="Words" CountDraftOnly="Yes" AllowNegatives="Yes" NextResetDate="2022-12-17 00:00:00 +0100" ResetType="Time" ResetTime="00:00" DeterminedFromDeadline="No" WritingDays="" CanWriteOnDeadlineDate="No">0</SessionTarget>
+        <PreviousSession Words="0" Characters="0" Date="2022-12-16 00:41:04 +0100"/>
     </ProjectTargets>
-    <RecentWritingHistory Date="2022-12-15 10:26:17 +0100">
-        <DraftWordCount>478</DraftWordCount>
-        <DraftCharCount>2832</DraftCharCount>
+    <RecentWritingHistory Date="2022-12-16 00:00:00 +0100">
+        <DraftWordCount>0</DraftWordCount>
+        <DraftCharCount>0</DraftCharCount>
         <OtherWordCount>0</OtherWordCount>
         <OtherCharCount>0</OtherCharCount>
     </RecentWritingHistory>

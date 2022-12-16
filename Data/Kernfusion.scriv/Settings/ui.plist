@@ -54,11 +54,11 @@
 	<key>inspectorWidth</key>
 	<real>245</real>
 	<key>mainDocumentEditor.scrollRect</key>
-	<string>{{0, 29}, {620, 564}}</string>
+	<string>{{0, 0}, {606, 294}}</string>
 	<key>mainWindowFrame</key>
 	<string>478 368 1000 678 0 0 1728 1079 </string>
 	<key>supportingDocumentEditor.scrollRect</key>
-	<string>{{0, 0}, {620, 294}}</string>
+	<string>{{0, 0}, {606, 294}}</string>
 	<key>supportingDocumentViewIsCurrent</key>
 	<false/>
 </dict>
