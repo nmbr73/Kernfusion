@@ -124,3 +124,10 @@ Markdown: https://www.markdownguide.org/tools/obsidian/
 > - https://github.com/xpgo/obsidian-folder-note-plugin
 > - https://github.com/akosbalasko/zoottelkeeper-obsidian-plugin
 
+
+
+![[Scrivener_hierarchy01.png]]
+
+-----
+
+![[Scrivener_hierarchy02.png]]
