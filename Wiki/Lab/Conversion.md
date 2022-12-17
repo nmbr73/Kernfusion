@@ -126,8 +126,8 @@ Markdown: https://www.markdownguide.org/tools/obsidian/
 
 
 
-![[Scrivener_hierarchy01.png]]
+![[img/Scrivener_hierarchy01.png]]
 
 -----
 
-![[Scrivener_hierarchy02.png]]
+![[folder_images/Scrivener_hierarchy02.png]]
