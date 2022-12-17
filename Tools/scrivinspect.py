@@ -1,5 +1,10 @@
 #!/usr/bin/env python
 import untangle
+from pathlib import Path
+import sys
+
+
+
 
 class Styles:
 
@@ -48,8 +53,51 @@ class Styles:
 document = "/Users/nmbr73/Projects/Kernfusion/Data/Kernfusion.scriv"
 styles = Styles(document)
 
-print(styles)
+
+# print(styles)
 # print("id of name 'Heading 1' is " + styles.id('Heading 1') )
 # print("name of id '1F9E0BC5-2D32-4433-A8EC-FAAEA2139D61' is " + styles.name('1F9E0BC5-2D32-4433-A8EC-FAAEA2139D61') )
 # print("style names are " + ', '.join(styles.names()) )
 # print("style ids are " + ', '.join(styles.ids()) )
+
+
+# ------
+
+
+
+# CED2EBE9-61A8-48C9-8B54-D38683B18E14
+#
+#
+# pandoc -s --from=rtf --to=markdown --output="content.md"  --lua-filter=../Tools/scrivinspect/styles.filter.lua content.rtf
+# pandoc -s --from=rtf --to=native --output="content.native" --lua-filter=../Tools/scrivinspect/styles.filter.lua --metadata style0="HIERISDIeNULL" content.rtf
+
+import subprocess
+result = subprocess.run([
+     'pandoc', '-s', '--from=rtf', '--to=markdown',
+     '--lua-filter=/Users/nmbr73/Projects/Kernfusion/Tools/scrivinspect/styles.filter.lua'
+     'tmp/content.rtf'], capture_output=True, text=True).stdout
+print(result)
+sys.exit(0)
+
+path = Path(document).joinpath('Files','Data')
+# directories = [d.name for d in path.iterdir() if d.is_dir()]
+# print(directories)
+
+for child in path.iterdir():
+
+     if  not child.is_dir():
+          continue
+
+     print(f"DATA '{child.name}'")
+     styles = []
+
+     filepath = path.joinpath(child.name, 'content.styles')
+     if filepath.is_file():
+          with filepath.open() as file:
+               content = file.read()
+               styles = content.split(',')
+
+     print(styles)
+
+
+
