@@ -1,5 +1,14 @@
 # Source: https://github.com/jobindjohn/obsidian-publish-mkdocs
 site_name: Wiki of ConFusion
+site_url: http://confusion.nmbr73.net/
+repo_url: https://github.com/nmbr73/Kernfusion/
+repo_name: Kernfusion
+#edit_uri: blob/main/Wiki/ # does not work with index.md files
+#edit_uri: edit/main/Wiki/ # works only if signed in and granted access - otherwise you are directed to a sign-in page
+# nav:
+#   - Home: index.md
+#   - About: Tool.md
+#   - Bla: Video Village.md
 
 theme:
     name: 'material'

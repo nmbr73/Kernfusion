@@ -17,7 +17,8 @@ flowchart TB
 ```
 
 
-
+- Test: Internal link to an "index" file [[WebGL to DCTL]]
+- Test: Internal link to a file [[Fuse-Settings]]
 
 
 
@@ -88,6 +89,11 @@ MkDocs uses Python-Markdown, which is almost completely compliant with the origi
 > - Could be an option to creating other output formats from an MkDocs source using pandoc: [mkdocs-combine](https://twardoch.github.io/mkdocs-combine/)
 
 
+Currently the image paths are sometimes broken!?!
+
+- https://stackoverflow.com/questions/71074662/configuring-image-filepaths-correctly-in-mkdocs
+
+
 
 
 ## Pandoc
@@ -124,6 +130,9 @@ Markdown: https://www.markdownguide.org/tools/obsidian/
 > - https://github.com/xpgo/obsidian-folder-note-plugin
 > - https://github.com/akosbalasko/zoottelkeeper-obsidian-plugin
 
+Index files
+- https://github.com/aidenlx/alx-folder-note
+- https://forum.obsidian.md/t/folder-link-default-load-readme-md-file-just-like-github/41335
 
 
 ![[img/Scrivener_hierarchy01.png]]

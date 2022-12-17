@@ -27,4 +27,5 @@ jobs:
         run: |
           mv Wiki docs
           mv docs/README.md docs/index.md
+          python Tools/obsidian_to_mkdocs.py
           mkdocs gh-deploy --force
