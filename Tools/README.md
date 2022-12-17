@@ -7,4 +7,11 @@ python -m venv /Users/nmbr73/Projects/Kernfusion/venv
 source /Users/nmbr73/Projects/Kernfusion/venv/bin/activate
 
 # Install modules:
+pip install --upgrade pip
+pip install mkdocs-material
+pip install mkdocs-roamlinks-plugin
+pip install mkdocs-mermaid2-plugin
+pip install mkdocs-callouts
 ```
+
+
