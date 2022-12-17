@@ -1,59 +1,55 @@
 #!/usr/bin/env python
-
-
-# https://realpython.com/python-xml-parser/
-#
-# ... this article has lots of useful information on XML parsing in Python. I'm
-# giving the `xmlpulldom`, `untangle`, and maybe `xml2dict` or even `lxml` a try
-# here. But for the simple needs I have I assume that untangle does the job.
-#
-
-# https://github.com/ajparsons/scrivener-python
-#
-# ... Python implementation to access Scrivener projects. At least five years
-# old. Did not look into it yet, but seems to be only in an early prototype
-# phase.
-
-# http://s.joebush3d.com/scrivener-document-progress-in-python/
-#
-# ... someone extracting the labels from a Scrivener document. I wanted to (maybe)
-# make use of them - maybe put them into the Markdown (as a YAML front matter
-# probably)
-
-# https://github.com/drewolson/scrivener
-# https://github.com/drewolson/scrivener_ecto
-#
-# ... not looked into it yet - no idea if we are even talking about the same
-# Scrivener here :-D
-
-
-
-xml_filename = "/Users/nmbr73/Projects/Kernfusion/Data/Kernfusion.scriv/Files/styles.xml"
-
-
-# ------------
-
-from xml.dom.pulldom import parse
-
-if False:
-
-     event_stream = parse(xml_filename)
-     for event, node in event_stream:
-          print(event, node)
-
-
-# ------------
-
-# pip install untangle
-# https://untangle.readthedocs.io/en/latest/
-
 import untangle
 
-if True:
+class Styles:
 
-     with open(xml_filename) as file:
-          xml_document = untangle.parse(file)
+     def add_style(self, id, name):
+          self._id2name[id] = name
+          self._name2id[name] = id
 
-     for style in xml_document.Styles.children:
-          print(f"- {style['Name']} ({style['ID']})")
+     def name(self, id):
+          return self._id2name.get(id)
 
+     def names(self):
+          return self._name2id.keys()
+
+     def id(self, name):
+          return self._name2id.get(name)
+
+     def ids(self):
+          return self._id2name.keys()
+
+
+     def __init__(self,document):
+
+          self._id2name = {}
+          self._name2id = {}
+
+          with open(f"{document}/Files/styles.xml") as file:
+               xml = untangle.parse(file)
+
+          for style in xml.Styles.children:
+               # self.add_style(style['ID'], style['name'])
+               self._id2name[style['ID']] = style['Name']
+               self._name2id[style['Name']] = style['ID']
+
+
+     def __str__(self):
+          entries = []
+          for name, id in self._name2id.items():
+               entries.append(f"'{name}' = {id}")
+
+          return ", ".join(entries)
+
+
+
+
+
+document = "/Users/nmbr73/Projects/Kernfusion/Data/Kernfusion.scriv"
+styles = Styles(document)
+
+print(styles)
+# print("id of name 'Heading 1' is " + styles.id('Heading 1') )
+# print("name of id '1F9E0BC5-2D32-4433-A8EC-FAAEA2139D61' is " + styles.name('1F9E0BC5-2D32-4433-A8EC-FAAEA2139D61') )
+# print("style names are " + ', '.join(styles.names()) )
+# print("style ids are " + ', '.join(styles.ids()) )
