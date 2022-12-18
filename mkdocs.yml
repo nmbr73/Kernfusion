@@ -67,6 +67,8 @@ plugins:
 #  - mermaid2
   - search
   - callouts
+  - awesome-pages:
+      collapse_single_pages: true
 
 extra_javascript:
   - javascripts/mathjax.js

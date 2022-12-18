@@ -39,10 +39,8 @@ function Writer (doc, opts)
         --return pandoc.RawBlock('markdown_phpextra', pandoc.Str(obsidian_image) )
 
         local obsidian_image = '![[' .. img.src .. ']]'
-        -- print('IMAGE:(' .. img.src .. ')')
         return pandoc.RawInline('markdown', obsidian_image)
       end
-
     }
 
   -- Formats: https://pandoc.org/MANUAL.html
