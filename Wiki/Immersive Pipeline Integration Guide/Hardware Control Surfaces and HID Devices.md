@@ -1,3 +1,9 @@
+---
+tags: [export, export-scrivener, revise]
+prev: Display Solutions, GPUs, Video Cables, Converters_Adapters
+next: Installing Hardware Virtualization Tools
+---
+
 ### BMD Control Surfaces for Resolve/Fairlight
 
 BMD Control Surfaces for Resolve/Fairlight

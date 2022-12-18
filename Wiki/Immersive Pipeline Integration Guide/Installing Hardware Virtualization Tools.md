@@ -1,3 +1,9 @@
+---
+tags: [export, export-scrivener, revise]
+prev: Hardware Control Surfaces and HID Devices
+next: Installing Operating Systems From Scratch
+---
+
 If you need to run multiple operating systems on the same hardware you have multiple approaches that can be taken to solve this task. Virtualization is the creation of a "canister" like container that represents something that could be best described as a unique imaginary computer device that is simulated inside your active computer session. Each processor instruction call done inside the virtual machine is injected back into the real CPU processor using an approach called a hypervisor.
 
 This approach allows you to use disk images to store the operating system and files. The virtual machine can support input devices, USB, audio, monitor connections, remote screen sharing, networking with controllable data routing options. A unique ethernet MAC ID address is assigned for each virtual machine network interface.

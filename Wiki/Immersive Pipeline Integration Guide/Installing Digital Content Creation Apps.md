@@ -1,3 +1,9 @@
+---
+tags: [export, export-scrivener, revise]
+prev: Installing Common Utilities
+next: Photogrammetry Tools
+---
+
 An effective content creation pipeline is able to support a wide range of tools to allow artists to work effectively. Below is an ever-expanding list of popular design tools with detailed installation, software configuration, and automation/scripting notes being added over time.
 
 ### Install Blender 3 on Linux

@@ -1,3 +1,9 @@
+---
+tags: [export, export-scrivener, revise]
+prev: Choosing Your Installation Packages
+next: Kartaverse Learning Resources
+---
+
 The Kartaverse v5 release was developed using the following reference computer hardware:
 
 Windows 10 & 11 / Rocky Linux 8.5:

@@ -1,3 +1,9 @@
+---
+tags: [export, export-scrivener, revise]
+prev: Fulldome
+next: Installing a Local Content Staging Web Server
+---
+
 ### Pkgs.org
 
 Pkgs.org

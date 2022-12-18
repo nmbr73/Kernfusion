@@ -1,3 +1,9 @@
+---
+tags: [export, export-scrivener, revise]
+prev: Pixar Tractor Deployment
+next: Installing Digital Content Creation Apps
+---
+
 ### Install AnyDesk Screen Sharing on Linux
 
 Install AnyDesk Screen Sharing on Linux

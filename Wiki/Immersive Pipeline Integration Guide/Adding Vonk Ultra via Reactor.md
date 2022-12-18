@@ -1,3 +1,9 @@
+---
+tags: [export, export-scrivener, revise]
+prev: Adding KartaVR via Reactor
+next: The Kartaverse Packages
+---
+
 Vonk Ultra provides a wide range of "data node" fuses that allow you to create efficient node graphs in Fusion that directly work with text, numbers, CSV spreadsheets, JSON, XML, YAML, and many other types of data using modifier nodes. More information about [Vonk Ultra can be read in the documentation](https://docs.google.com/document/d/1U9WfdHlE1AZHdU6_ZQCB1I2nSa5I7TyHG2vKMi2I7v8/edit?usp=sharing).
 
 After you have the Reactor Package Manager window open again, you have the option to select the "Kartaverse \> Vonk Ultra" category on the left sidebar.

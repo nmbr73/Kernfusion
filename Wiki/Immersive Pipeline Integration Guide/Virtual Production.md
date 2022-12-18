@@ -1,3 +1,9 @@
+---
+tags: [export, export-scrivener, revise]
+prev: IP Based Video Workflows
+next: Fulldome
+---
+
 ### Virtual Production Software
 
 Virtual Production Software

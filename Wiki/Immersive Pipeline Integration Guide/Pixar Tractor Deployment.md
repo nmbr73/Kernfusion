@@ -1,3 +1,9 @@
+---
+tags: [export, export-scrivener, revise]
+prev: AWS Deadline Deployment
+next: Installing Common Utilities
+---
+
 Pixar's Tractor render management tool is often installed and used alongside Pixar's RenderMan production renderer on Linux based headless render nodes.
 
 <https://renderman.pixar.com/tractor>

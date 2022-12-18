@@ -1,3 +1,9 @@
+---
+tags: [export, export-scrivener, revise]
+prev: Installing Hardware Virtualization Tools
+next: Installing Data Backup and Disaster Recovery Tools
+---
+
 ### Installing Windows 10 Build 21H2
 
 Installing Windows 10 Build 21H2
@@ -337,9 +343,10 @@ A startup folder based approach is handy if you need to launch a program or comm
 
 The two most often used Windows startup folder locations are:
 
-C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\
+    C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup\
 
-C:\\Users\\vfx\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\
+
+    C:\Users\vfx\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\
 
 ### Install Rocky Linux 8.5 on a Bare Metal System
 
@@ -627,19 +634,16 @@ Select the boot drive in the BIOS that holds the Rocky Linux OS install. Press F
 
 Rocky Linux Deployment Essentials
 
-\# Add Gnome and enable a graphical desktop.
+    # Add Gnome and enable a graphical desktop.
+    sudo dnf groupinstall "Workstation"
+    sudo systemctl set-default graphical
 
-sudo dnf groupinstall "Workstation"
+    # Restart the system to autoload Gnome next.
+    sudo reboot
 
-sudo systemctl set-default graphical
+    # Turn on auto-login for the rackmounted servers
 
-\# Restart the system to autoload Gnome next.
-
-sudo reboot
-
-\# Turn on auto-login for the rackmounted servers
-
-\# This can be done only if the systems are in a secure access location, and you need startup items such as a graphical XPU GPU/CPU based userland application to run. Not all GPU tools can be launched as system services in 2022.
+    # This can be done only if the systems are in a secure access location, and you need startup items such as a graphical XPU GPU/CPU based userland application to run. Not all GPU tools can be launched as system services in 2022.
 
 #### Firefox
 
@@ -653,45 +657,36 @@ A menu bar should now be visible at the top of the Firefox window.
 
 Add 3rd Party Repositories
 
-\# Add the EPEL software repository.
+    # Add the EPEL software repository.
+    sudo dnf install epel-release
 
-sudo dnf install epel-release
+    # Import the signing key for the EPEL repository.
+    sudo rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
 
-\# Import the signing key for the EPEL repository.
+    # Add the EL Repo software repository.
+    sudo dnf install https://www.elrepo.org/elrepo-release-8.el8.elrepo.noarch.rpm
 
-sudo rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
+    # Add the kernel headers
+    sudo dnf --enablerepo=elrepo-kernel install kernel-ml kernel-ml-devel kernel-ml-headers -y --allowerasing
 
-\# Add the EL Repo software repository.
+    # Upgrade the Linux kernel from 4.x to 5.x
+    # sudo dnf upgrade --refresh -y
 
-sudo dnf install https://www.elrepo.org/elrepo-release-8.el8.elrepo.noarch.rpm
+    # Add the RPM Fusion repository free releases
+    sudo dnf install --nogpgcheck https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-8.noarch.rpm -y
 
-\# Add the kernel headers
-
-sudo dnf --enablerepo=elrepo-kernel install kernel-ml kernel-ml-devel kernel-ml-headers -y --allowerasing
-
-\# Upgrade the Linux kernel from 4.x to 5.x
-
-\# sudo dnf upgrade --refresh -y
-
-\# Add the RPM Fusion repository free releases
-
-sudo dnf install --nogpgcheck https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-8.noarch.rpm -y
-
-\# Add the RPM Fusion repository non-free releases
-
-sudo dnf install --nogpgcheck https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-8.noarch.rpm -y
+    # Add the RPM Fusion repository non-free releases
+    sudo dnf install --nogpgcheck https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-8.noarch.rpm -y
 
 #### Add Developer Tools
 
 Add Developer Tools
 
-\# Add C/C++ compiler tools
+    # Add C/C++ compiler tools
+    sudo dnf install gcc -y
 
-sudo dnf install gcc -y
-
-\# Add more compiler resources
-
-sudo dnf groupinstall "Development Tools" -y
+    # Add more compiler resources
+    sudo dnf groupinstall "Development Tools" -y
 
 #### Install NVIDIA Drivers on Linux
 
@@ -705,29 +700,25 @@ NVIDIA Driver Install References
 
 Uninstall old NVIDIA drivers
 
-sudo dnf remove nvidia-driver
-
-sudo dnf module reset nvidia-driver
+    sudo dnf remove nvidia-driver
+    sudo dnf module reset nvidia-driver
 
 ##### Install NVIDIA Drivers
 
 Install NVIDIA Drivers
 
-\# Use the NVIDIA repo to source the GTX GPU drivers
+    # Use the NVIDIA repo to source the GTX GPU drivers
+    sudo dnf update -y
 
-sudo dnf update -y
+    sudo dnf config-manager --add-repo <https://developer.download.nvidia.com/compute/cuda/repos/rhel8/x86_64/cuda-rhel8.repo> -y
 
-sudo dnf config-manager --add-repo <https://developer.download.nvidia.com/compute/cuda/repos/rhel8/x86_64/cuda-rhel8.repo> -y
+    sudo dnf install kernel-devel-$(uname -r) kernel-headers-$(uname -r) --allowerasing -y
 
-sudo dnf install kernel-devel-$(uname -r) kernel-headers-$(uname -r) --allowerasing -y
+    sudo dnf install nvidia-driver nvidia-settings -y
+    sudo dnf install cuda-driver -y
 
-sudo dnf install nvidia-driver nvidia-settings -y
-
-sudo dnf install cuda-driver -y
-
-\# Restart the workstation
-
-sudo reboot now
+    # Restart the workstation
+    sudo reboot now
 
 ##### Troubleshooting Linux GPU Driver Issues
 
@@ -741,9 +732,7 @@ If the NVIDIA driver install has issues, one can change the "Run Level" to a tex
 
 -   To switch the display over to a "Run Level 6" graphical GNOME view press the "Control + Alt + F6" keyboard hotkey.
 
-\# Switch from a terminal session back to a gnome desktop session
-
-startx
+    \# Switch from a terminal session back to a gnome desktop session startx
 
 ##### NVIDIA Preferences
 
@@ -769,13 +758,11 @@ X11 / XORG Graphics Preferences
 
 When running the "nvidia-settings" program, you should save the edited xorg settings back to disk at the following file path: "/etc/X11/xorg.conf"
 
-\# Create a backup of the current xorg file
+    # Create a backup of the current xorg file
+    sudo cp /etc/X11/xorg.conf  /etc/X11/xorg.conf.bak
 
-sudo cp /etc/X11/xorg.conf /etc/X11/xorg.conf.bak
-
-\# Verify the XORG preference file was backed up successfully
-
-sudo ls -laX /etc/X11/xorg\*
+    # Verify the XORG preference file was backed up successfully
+    sudo ls -laX /etc/X11/xorg*
 
 #### Installing Linux Software
 
@@ -783,65 +770,50 @@ Installing Linux Software
 
 Make sure to check out the site "[pkgs.org](https://www.pkgs.org)" when hunting for the right package for your current Linux distro. This site is a super efficient time saver when you need to locate the exact version matched with the RedHat .rpm package equivalent to a Ubuntu/Debian .deb package that might be listed in the documentation for a tool you need to install.
 
-\# Add disk utilities
+    # Add disk utilities
+    sudo dnf install gparted sshpass -y
+    sudo dnf install sysbench hardinfo -y
 
-sudo dnf install gparted sshpass -y
+    # Add NFS storage support
+    sudo dnf install nfs-utils -y
 
-sudo dnf install sysbench hardinfo -y
+    # Add exfat and ntfs filesystem support
+    sudo dnf install exfatprogs -y
+    sudo dnf install exfat-utils -y
+    sudo dnf install fuse-exfat -y
+    sudo dnf install ntfs-3g -y
 
-\# Add NFS storage support
+    # Add media tools like vlc, ffmpeg, Imagemagick, and hugin
+    sudo dnf install vlc -y
+    sudo dnf install ffmpeg --skip-broken --allowerasing -y
+    sudo dnf install ImageMagick -y
 
-sudo dnf install nfs-utils -y
+    # Add network file transfer clients
+    sudo dnf install filezilla -y
 
-\# Add exfat and ntfs filesystem support
+    # Add the thunderbird email client
+    sudo dnf install thunderbird -y
 
-sudo dnf install exfatprogs -y
+    # Add sshpass which is a Bash scripting friendly remote access tool
+    sudo dnf install sshpass -y
 
-sudo dnf install exfat-utils -y
+    # Add dialog curl wget unzip zip unrar nano for shell scripting
 
-sudo dnf install fuse-exfat -y
+    # Add LuaJIT for scripting
+    sudo dnf install luajit -y
 
-sudo dnf install ntfs-3g -y
+    # Add xclip for clipboard copy/paste
 
-\# Add media tools like vlc, ffmpeg, Imagemagick, and hugin
+    # Add virtual environment tools:
+    # pip, py virtual environment, anaconda, rez
 
-sudo dnf install vlc -y
+    # Add nodejs, electron, shelljs, and moment
 
-sudo dnf install ffmpeg --skip-broken --allowerasing -y
+    # Add OpenCV, GluonCV, OpenMMLab, MediaPipe, PyTorch, OpenColorIO, OpenImageIO, and Jupyter Notebook
 
-sudo dnf install ImageMagick -y
+    # Add the NVIDIA GPU control software "Green With Envy" for memory timing, core clock speed, and fan control.
 
-\# Add network file transfer clients
-
-sudo dnf install filezilla -y
-
-\# Add the thunderbird email client
-
-sudo dnf install thunderbird -y
-
-\# Add sshpass which is a Bash scripting friendly remote access tool
-
-sudo dnf install sshpass -y
-
-\# Add dialog curl wget unzip zip unrar nano for shell scripting
-
-\# Add LuaJIT for scripting
-
-sudo dnf install luajit -y
-
-\# Add xclip for clipboard copy/paste
-
-\# Add virtual environment tools:
-
-\# pip, py virtual environment, anaconda, rez
-
-\# Add nodejs, electron, shelljs, and moment
-
-\# Add OpenCV, GluonCV, OpenMMLab, MediaPipe, PyTorch, OpenColorIO, OpenImageIO, and Jupyter Notebook
-
-\# Add the NVIDIA GPU control software "Green With Envy" for memory timing, core clock speed, and fan control.
-
-\# Add the Intel OpenCL ICD Driver.
+    # Add the Intel OpenCL ICD Driver.
 
 #### Rocky Linux Control Panels
 
@@ -897,43 +869,28 @@ Then unlock the panel and turn on "Automatic Login".
 
 Linux Networking
 
-\# Disable SE Linux
+    # Disable SE Linux
+    # Open the /etc/selinux/config file and set the SELINUX mode to disabled.
 
-\# Open the /etc/selinux/config file and set the SELINUX mode to disabled.
+    sudo nano /etc/selinux/config
 
-sudo nano /etc/selinux/config
+    # Disable the firewall
+    sudo systemctl disable firewalld
+    sudo systemctl stop firewalld
+    sudo systemctl status firewalld
 
-\# Disable the firewall
-
-sudo systemctl disable firewalld
-
-sudo systemctl stop firewalld
-
-sudo systemctl status firewalld
-
-\# Needs some work to update from Centos v7.9 to Rocky Linux v8.5
-
-{
-
-sudo systemctl enable rpcbind
-
-sudo systemctl enable nfs-server
-
-sudo systemctl enable nfs-lock
-
-sudo systemctl enable nfs-idmap
-
-sudo systemctl start rpcbind
-
-sudo systemctl start nfs-server
-
-sudo systemctl start nfs-lock
-
-sudo systemctl start nfs-idmap
-
-sudo systemctl restart nfs-server
-
-}
+    # Needs some work to update from Centos v7.9 to Rocky Linux v8.5
+    {
+    sudo systemctl enable rpcbind
+    sudo systemctl enable nfs-server
+    sudo systemctl enable nfs-lock
+    sudo systemctl enable nfs-idmap
+    sudo systemctl start rpcbind
+    sudo systemctl start nfs-server
+    sudo systemctl start nfs-lock
+    sudo systemctl start nfs-idmap
+    sudo systemctl restart nfs-server
+    }
 
 #### Gedit Text Editor
 
@@ -1007,75 +964,60 @@ Fix Folder Permissions:
 
 If you are using the Rocky Linux system as a single-user visual workstation the following two commands can help fix headaches while you finish installing your core tools. Once the software you use day-to-day is configured you can then roll the permissions back to "755" or whatever value you feel is appropriate.
 
-sudo chmod -R 777 \$HOME
-
-sudo chmod -R 777 /opt/
+    sudo chmod -R 777 $HOME
+    sudo chmod -R 777 /opt/
 
 #### Linux User Account Tweaks
 
 Linux User Account Tweaks
 
-\# Login via a localhost based SSH shell connection as the user "root"
+    # Login via a localhost based SSH shell connection as the user "root"
+    ssh root@localhost
 
-ssh root@localhost
+    # Login as the user "root"
+    sudo -u root -i
 
-\# Login as the user "root"
+    # Login as the user "vfx"
+    sudo -u vfx -i
 
-sudo -u root -i
+    # list the current folder path aka "put working directory":
+    pwd
 
-\# Login as the user "vfx"
+    # navigate to the "root" user's home folder
+    cd /root/
 
-sudo -u vfx -i
+    # Navigate to the "vfx" user's home folder
+    cd /home/vfx/
 
-\# list the current folder path aka "put working directory":
+    # Navigate to the current user's home folder (inside /home/) using the $HOME environment variable
+    cd $HOME/
 
-pwd
+    # list the current folder contents
+    ls
 
-\# navigate to the "root" user's home folder
+    # list folder contents
+    ls
 
-cd /root/
+    # Install a specific RPM package (in this case named "SomePackage.rpm") that is found in the current folder
+    sudo rpm -Uvh SomePackage.rpm
 
-\# Navigate to the "vfx" user's home folder
+    # Install all of the RPM file files in the current folder
+    sudo rpm -Uvh *.rpm
 
-cd /home/vfx/
+    # Alternative way to Install all of the RPM file files in the current folder
+    sudo rpm -i *.rpm
 
-\# Navigate to the current user's home folder (inside /home/) using the \$HOME environment variable
+    # Run "Visudo" to edit the Sudoers list so you can add new users to the list of admin accounts capable of running "sudo" in the terminal
+    sudo visudo
 
-cd \$HOME/
+    # Edit the Sudoer's list
+    # You need to start by pressing the "i" key to enable the VIM "insert mode" in the text editor to be able to add new lines of text to the document. Navigation is done by the up/down cursor keys. Add the following text, near the bottom part of the sudoers text file, to add a user account named "vfx" to the sudoers list:
 
-\# list the current folder contents
+    vfx            ALL = (ALL) ALL
 
-ls
+    # The Visudo utility is VIM text editor based, so you will need to use some funky keypresses to save and exit visudo...
 
-\# list folder contents
-
-ls
-
-\# Install a specific RPM package (in this case named "SomePackage.rpm") that is found in the current folder
-
-sudo rpm -Uvh SomePackage.rpm
-
-\# Install all of the RPM file files in the current folder
-
-sudo rpm -Uvh \*.rpm
-
-\# Alternative way to Install all of the RPM file files in the current folder
-
-sudo rpm -i \*.rpm
-
-\# Run "Visudo" to edit the Sudoers list so you can add new users to the list of admin accounts capable of running "sudo" in the terminal
-
-sudo visudo
-
-\# Edit the Sudoer's list
-
-\# You need to start by pressing the "i" key to enable the VIM "insert mode" in the text editor to be able to add new lines of text to the document. Navigation is done by the up/down cursor keys. Add the following text, near the bottom part of the sudoers text file, to add a user account named "vfx" to the sudoers list:
-
-vfx ALL = (ALL) ALL
-
-\# The Visudo utility is VIM text editor based, so you will need to use some funky keypresses to save and exit visudo...
-
-\# Press the "Esc (escape)" hotkey. Then type in ":wq" to write the changes to disk, and quit the active Visudo (VIM) editing session. Then press the "Enter" hotkey to return to the Terminal.
+    # Press the "Esc (escape)" hotkey. Then type in ":wq" to write the changes to disk, and quit the active Visudo (VIM) editing session. Then press the "Enter" hotkey to return to the Terminal.
 
 ### Install CentOS Linux 7.9 on a Bare Metal System
 
@@ -1133,59 +1075,47 @@ Enable the checkbox for the control labelled:
 
 Enable Automatic Login
 
-sudo nano /etc/gdm/custom.conf
+    sudo nano /etc/gdm/custom.conf
 
 Overwrite the custom.conf file contents with:
 
-\# GDM configuration storage
+    # GDM configuration storage
 
-\[daemon\]
+    [daemon]
+    AutomaticLogin=linuxconfig
+    AutomaticLoginEnable=True
 
-AutomaticLogin=linuxconfig
+    [security]
 
-AutomaticLoginEnable=True
+    [xdmcp]
 
-\[security\]
+    [chooser]
 
-\[xdmcp\]
-
-\[chooser\]
-
-\[debug\]
-
-\# Uncomment the line below to turn on debugging
-
-#Enable=true
+    [debug]
+    # Uncomment the line below to turn on debugging
+    #Enable=true
 
 #### Add 3rd Party Repositories {#ref12}
 
 Add 3rd Party Repositories
 
-\# Update CentOS:
+    # Update CentOS:
+    sudo yum update
 
-sudo yum update
+    # Add the EPEL repository:
+    sudo yum install epel-release
+    sudo yum update
 
-\# Add the EPEL repository:
+    # Add the Nux repository:
+    sudo rpm -v --import http://li.nux.ro/download/nux/RPM-GPG-KEY-nux.ro
+    sudo rpm -Uvh http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
 
-sudo yum install epel-release
+    # Add the elrepo repository for Linux hardware drivers:
+    sudo rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
+    sudo rpm -Uvh http://www.elrepo.org/elrepo-release-7.0-2.el7.elrepo.noarch.rpm
 
-sudo yum update
-
-\# Add the Nux repository:
-
-sudo rpm -v --import http://li.nux.ro/download/nux/RPM-GPG-KEY-nux.ro
-
-sudo rpm -Uvh http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
-
-\# Add the elrepo repository for Linux hardware drivers:
-
-sudo rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
-
-sudo rpm -Uvh http://www.elrepo.org/elrepo-release-7.0-2.el7.elrepo.noarch.rpm
-
-\# If you want to be able to read an ExFat formatted USB drive you will need to add:
-
-sudo yum install exfat-utils fuse-exfat
+    # If you want to be able to read an ExFat  formatted USB drive you will need to add:
+    sudo yum install exfat-utils fuse-exfat
 
 #### Adjust the Security Settings
 
@@ -1193,101 +1123,78 @@ Adjust the Security Settings
 
 If you are running a render node system inside a LAN you will likely want to adjust the firewall rules and disable SELinux.
 
-\# Open the "/etc/selinux/config" file:
+    # Open the "/etc/selinux/config" file:
+    sudo nano /etc/selinux/config
 
-sudo nano /etc/selinux/config
+    # Set the SELINUX mode to disabled by changing the following SELinux line in the config file to read:
+    SELINUX=disabled
 
-\# Set the SELINUX mode to disabled by changing the following SELinux line in the config file to read:
-
-SELINUX=disabled
-
-\# Disable the firewall:
-
-sudo systemctl disable firewalld
-
-sudo systemctl stop firewalld
-
-sudo systemctl status firewalld
+    # Disable the firewall:
+    sudo systemctl disable firewalld
+    sudo systemctl stop firewalld
+    sudo systemctl status firewalld
 
 #### Change the Host Name
 
 Change the Host Name
 
-\# Change the host name in Centos 7:
+    # Change the host name in Centos 7:
+    sudo gedit /etc/hostname
 
-sudo gedit /etc/hostname
+    # You can also update the host name using:
+    sudo gedit /etc/sysconfig/network
 
-\# You can also update the host name using:
+    # Look in the text file for the entry: 
+    localhost.localdomain
 
-sudo gedit /etc/sysconfig/network
+    # Change this line to edit the host name value to something like:
+    R1
 
-\# Look in the text file for the entry:
+    # Print the current host name:
+    echo The current host name is: uname -n
 
-localhost.localdomain
-
-\# Change this line to edit the host name value to something like:
-
-R1
-
-\# Print the current host name:
-
-echo The current host name is: uname -n
-
-\# Edit the hosts file:
-
-sudo gedit /etc/hosts
-
-127.0.0.1 R1 localhost
-
-::1 R1 localhost localhost.localdomain localhost6 localhost6.localdomain6
+    # Edit the hosts file:
+    sudo gedit /etc/hosts
+    127.0.0.1 R1 localhost
+    ::1       R1 localhost localhost.localdomain localhost6 localhost6.localdomain6
 
 #### Add Developer Tools {#ref13}
 
 Add Developer Tools
 
-\# Add the GCC compiler
+    # Add the GCC compiler
+    sudo yum install gcc
 
-sudo yum install gcc
+    # The NVIDIA installer requires the GCC compiler tools
+    sudo yum -y groupinstall "Development Tools"
 
-\# The NVIDIA installer requires the GCC compiler tools
+    # NVIDIA installer requires kernel source files
+    sudo yum install kernel-devel
 
-sudo yum -y groupinstall "Development Tools"
+    # Install more libraries to satisfy the NVIDIA installer
+    sudo yum install pkgconfig libglvnd-devel
 
-\# NVIDIA installer requires kernel source files
-
-sudo yum install kernel-devel
-
-\# Install more libraries to satisfy the NVIDIA installer
-
-sudo yum install pkgconfig libglvnd-devel
-
-\# The dkms package package will ensure continuous NVIDIA kernel module compilation and installation in the event of new Linux kernel update.
-
-sudo yum -y install dkms
+    # The dkms package package will ensure continuous NVIDIA kernel module compilation and installation in the event of new Linux kernel update.
+    sudo yum -y install dkms
 
 #### Install the Cinnamon Window Manager
 
 Install the Cinnamon Window Manager
 
-\# Install the GTK theme engine Murrine that is used by gedit, and the installers for Maya / V-Ray
+    # Install the GTK theme engine Murrine that is used by gedit, and the installers for Maya / V-Ray
+    sudo yum install gtk-murrine-engine
 
-sudo yum install gtk-murrine-engine
+    # Install lshw
+    sudo yum install lshw
 
-\# Install lshw
+    # Install Cinnamon
+    sudo yum --enablerepo=epel -y install cinnamon*
 
-sudo yum install lshw
+    # Add Cinnamon to your rc file
+    echo "exec /usr/bin/cinnamon-session" >> ~/.xinitrc
 
-\# Install Cinnamon
-
-sudo yum --enablerepo=epel -y install cinnamon\*
-
-\# Add Cinnamon to your rc file
-
-echo "exec /usr/bin/cinnamon-session" \>\> \~/.xinitrc
-
-\# Start the X Desktop session
-
-startx
+    # Start the X Desktop session
+    startx
 
 To change the active Linux window manager, you need to log out of the current user account session.
 
@@ -1303,125 +1210,98 @@ NVIDIA RTX 3090 Linux CentOS Driver webpage:
 
 <https://www.nvidia.com/Download/driverResults.aspx/172376/en-us>
 
-\# Direct Driver Download Link:
+    # Direct Driver Download Link:
+    cd $HOME
+    wget https://us.download.nvidia.com/XFree86/Linux-x86_64/460.73.01/NVIDIA-Linux-x86_64-460.73.01.run
 
-cd \$HOME
+    # The Nvidia drivers must be installed while the xorg server is stopped. Switch to text mode, or run this via ssh:
 
-wget https://us.download.nvidia.com/XFree86/Linux-x86_64/460.73.01/NVIDIA-Linux-x86_64-460.73.01.run
+    systemctl isolate multi-user.target
 
-\# The Nvidia drivers must be installed while the xorg server is stopped. Switch to text mode, or run this via ssh:
+    # Alternatively you can terminate the xserver session which is the hard core route
 
-systemctl isolate multi-user.target
+    sudo killall /usr/bin/X
 
-\# Alternatively you can terminate the xserver session which is the hard core route
+    # You can start linux in a text console using the Control + Alt + F2 hotkey after you have logged out of the user session
 
-sudo killall /usr/bin/X
+    # Install the drivers (the name of the executable would have to line up with the exact driver version you downloaded)
 
-\# You can start linux in a text console using the Control + Alt + F2 hotkey after you have logged out of the user session
+    cd $HOME
+    sudo sh ./NVIDIA-Linux-x86_64-460.73.01.run
 
-\# Install the drivers (the name of the executable would have to line up with the exact driver version you downloaded)
+    The NVIDIA installer options you want to select are:
 
-cd \$HOME
+    DMKS (yes)
 
-sudo sh ./NVIDIA-Linux-x86_64-460.73.01.run
+    The NVIDIA installer asks if you want to install 32 bit libraries (yes)
 
-The NVIDIA installer options you want to select are:
+    The NVIDIA installer asks about libglvnd (install and overwrite existing)
 
-DMKS (yes)
+    The NVIDIA installer asks about auto update X configuration file? (yes)
 
-The NVIDIA installer asks if you want to install 32 bit libraries (yes)
 
-The NVIDIA installer asks about libglvnd (install and overwrite existing)
+    If you are running the default Nouveau graphics drivers on CentOS when you run the NVIDIA installer, you will likely see a message that says:
 
-The NVIDIA installer asks about auto update X configuration file? (yes)
+    ERROR: The Nouveau kernel driver is currently in use by your system.  This driver is incompatible with the NVIDIA driver, and must be disabled before proceeding. Please consult the NVIDIA driver README and your Linux distribution's documentation for details on how to correctly disable the Nouveau kernel driver.
 
-If you are running the default Nouveau graphics drivers on CentOS when you run the NVIDIA installer, you will likely see a message that says:
+    # You can then disable nouveau driver by changing the configuration "/etc/default/grub" file. Add the entry "nouveau.modeset=0" to the line starting with GRUB_CMDLINE_LINUX. 
 
-ERROR: The Nouveau kernel driver is currently in use by your system. This driver is incompatible with the NVIDIA driver, and must be disabled before proceeding. Please consult the NVIDIA driver README and your Linux distribution's documentation for details on how to correctly disable the Nouveau kernel driver.
+    sudo nano /etc/default/grub
 
-\# You can then disable nouveau driver by changing the configuration "/etc/default/grub" file. Add the entry "nouveau.modeset=0" to the line starting with GRUB_CMDLINE_LINUX.
+    # Below you can find example of grub configuration file reflecting the previously suggested change: 
 
-sudo nano /etc/default/grub
+    GRUB_TIMEOUT=5
+    GRUB_DISTRIBUTOR="$(sed 's, release .*$,,g' /etc/system-release)"
+    GRUB_DEFAULT=saved
+    GRUB_DISABLE_SUBMENU=true
+    GRUB_TERMINAL_OUTPUT="console"
+    GRUB_CMDLINE_LINUX="rhgb quiet nouveau.modeset=0"
+    GRUB_DISABLE_RECOVERY="true"
 
-\# Below you can find example of grub configuration file reflecting the previously suggested change:
+    # You can optionally remove the "quiet" entry on "GRUB_CMDLINE_LINUX" to be able to see startup messages for issues like missing drive automounts.
 
-GRUB_TIMEOUT=5
+    # The GRUB changes ensure that the open-source nouveau graphics driver is disabled the next time you boot your CentOS 7 Linux system. Once ready execute the following command to apply the new GRUB configuration change: 
 
-GRUB_DISTRIBUTOR="$(sed 's, release .\*$,,g' /etc/system-release)"
+    # If you are running a legacy BIOS system:
+    sudo grub2-mkconfig -o /boot/grub2/grub.cfg
 
-GRUB_DEFAULT=saved
+    # If you are running an EFI based system:
+    sudo grub2-mkconfig -o /boot/efi/EFI/centos/grub.cfg
 
-GRUB_DISABLE_SUBMENU=true
+    # Reboot your CentOS 7 Linux System.
+    sudo reboot
 
-GRUB_TERMINAL_OUTPUT="console"
+    # Once the boot is finished confirm that the nouveau open-source graphics driver is no longer in use:
 
-GRUB_CMDLINE_LINUX="rhgb quiet nouveau.modeset=0"
+    lshw -numeric -C display
 
-GRUB_DISABLE_RECOVERY="true"
+    # WARNING: you should run this program as super-user.
+    #   *-display UNCLAIMED       
+    #        description: VGA compatible controller
+    #        product: GK208B [GeForce GT 710] [10DE:128B]
+    #        vendor: NVIDIA Corporation [10DE]
+    #        physical id: 0
+    #        bus info: pci@0000:01:00.0
+    #        version: a1
+    #        width: 64 bits
+    #        clock: 33MHz
+    #        capabilities: vga_controller bus_master cap_list
+    #        configuration: latency=0
+    #        resources: iomemory:6970-696f iomemory:6970-696f memory:ca000000-caffffff memory:69738000000-6973fffffff memory:69740000000-69741ffffff ioport:3000(size=128) memory:cb000000-cb07ffff
+    # WARNING: output may be incomplete or inaccurate, you should run this program as super-user.
 
-\# You can optionally remove the "quiet" entry on "GRUB_CMDLINE_LINUX" to be able to see startup messages for issues like missing drive automounts.
 
-\# The GRUB changes ensure that the open-source nouveau graphics driver is disabled the next time you boot your CentOS 7 Linux system. Once ready execute the following command to apply the new GRUB configuration change:
+    # Install the Mesa utils package if you want to be able to run the glxgears and glxinfo programs.
+    sudo yum install mesa-demos.x86_64
 
-\# If you are running a legacy BIOS system:
+    # If you would like to have OpenCL v1.2 you will need to add extra repos before you can install the following package
+    sudo yum install ocl-icd ocl-icd-devel
 
-sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+    # To make OpenCL run with programs like Blackmagic Fusion Studio happy, you might need to create this symlink
+    sudo ln -s /usr/lib64/libOpenCL.so.1 /usr/lib/libOpenCL.so
 
-\# If you are running an EFI based system:
-
-sudo grub2-mkconfig -o /boot/efi/EFI/centos/grub.cfg
-
-\# Reboot your CentOS 7 Linux System.
-
-sudo reboot
-
-\# Once the boot is finished confirm that the nouveau open-source graphics driver is no longer in use:
-
-lshw -numeric -C display
-
-\# WARNING: you should run this program as super-user.
-
-\# \*-display UNCLAIMED
-
-\# description: VGA compatible controller
-
-\# product: GK208B \[GeForce GT 710\] \[10DE:128B\]
-
-\# vendor: NVIDIA Corporation \[10DE\]
-
-\# physical id: 0
-
-\# bus info: pci@0000:01:00.0
-
-\# version: a1
-
-\# width: 64 bits
-
-\# clock: 33MHz
-
-\# capabilities: vga_controller bus_master cap_list
-
-\# configuration: latency=0
-
-\# resources: iomemory:6970-696f iomemory:6970-696f memory:ca000000-caffffff memory:69738000000-6973fffffff memory:69740000000-69741ffffff ioport:3000(size=128) memory:cb000000-cb07ffff
-
-\# WARNING: output may be incomplete or inaccurate, you should run this program as super-user.
-
-\# Install the Mesa utils package if you want to be able to run the glxgears and glxinfo programs.
-
-sudo yum install mesa-demos.x86_64
-
-\# If you would like to have OpenCL v1.2 you will need to add extra repos before you can install the following package
-
-sudo yum install ocl-icd ocl-icd-devel
-
-\# To make OpenCL run with programs like Blackmagic Fusion Studio happy, you might need to create this symlink
-
-sudo ln -s /usr/lib64/libOpenCL.so.1 /usr/lib/libOpenCL.so
-
-\# Get the OpenGL info (No info is shown when run via ssh with no display)
-
-glxinfo \| less
+    # Get the OpenGL info (No info is shown when run via ssh with no display)
+    glxinfo | less
 
 #### Green With Envy GPU Utility
 
@@ -1431,9 +1311,8 @@ The "Green with Envy" utility can be used to help control the GPU fan speed, and
 
 This utility works best in systems with only a single NVIDIA GPU installed. The Cinnamon window manager can sometimes freak out with Linux "kernel panic" system lockups if you have multiple GPUs active.
 
-\# Toggle the prefs for all GPUs connected:
-
-sudo nvidia-xconfig --enable-all-gpus
+    # Toggle the prefs for all GPUs connected:
+    sudo nvidia-xconfig --enable-all-gpus
 
 #### Gnome Settings
 
@@ -1456,9 +1335,8 @@ Go to "System Settings \> keyboard \> Shortcuts tab \> Custom Shortcuts"
 
 Click on the "+" button.
 
-Name: Terminal Shortcut
-
-Command: gnome-terminal
+    Name: Terminal Shortcut
+    Command: gnome-terminal
 
 Now a new shortcut is added with status "disabled". Click on the "disabled" word and assign your shortcut.
 
@@ -1470,84 +1348,59 @@ Common Linux Utilities
 
 At this point you could add several extra Linux utilities.
 
-\# As a quick tip, this is how you install an RPM package file via the terminal window:
+    # As a quick tip, this is how you install an RPM package file via the terminal window:
+    sudo rpm -ivh example.rpm
 
-sudo rpm -ivh example.rpm
+    # Add the nano text editor if it is missing on a minimal install of Centos 7
+    sudo yum -y install nano
 
-\# Add the nano text editor if it is missing on a minimal install of Centos 7
+    # Add disk management / filesytem packages
+    sudo yum install -y gparted nfs-utils exfat-utils.x86_64 fuse-exfat.x86_64 kmod-hfsplus.x86_64 kmod-hfs.x86_64
 
-sudo yum -y install nano
+    # Add network packages
+    sudo yum install -y sshpass filezilla tigervnc
 
-\# Add disk management / filesytem packages
+    # Add general utilities
+    sudo yum install -y sysbench hardinfo
+    sudo yum install -y ImageMagick hugin wget vlc mplayer
+    sudo yum install -y xclip unzip 
 
-sudo yum install -y gparted nfs-utils exfat-utils.x86_64 fuse-exfat.x86_64 kmod-hfsplus.x86_64 kmod-hfs.x86_64
+    # Add Redhat compatibility libraries
+    sudo yum install -y redhat-lsb-core
 
-\# Add network packages
+    # Add the X11 utils and fonts
+    sudo yum -y install libXp xorg-x11-fonts-ISO8859-1-100dpi xorg-x11-fonts-ISO8859-1-75dpi liberation-mono-fonts liberation-fonts-common liberation-sans-fonts liberation-serif-fonts
 
-sudo yum install -y sshpass filezilla tigervnc
+    # Add and enable the NFS server package
+    sudo yum install -y nfs-utils
+    sudo systemctl enable rpcbind
+    sudo systemctl enable nfs-server
+    sudo systemctl enable nfs-lock
+    sudo systemctl enable nfs-idmap
+    sudo systemctl start rpcbind
+    sudo systemctl start nfs-server
+    sudo systemctl start nfs-lock
+    sudo systemctl start nfs-idmap
+    sudo systemctl restart nfs-server
 
-\# Add general utilities
+    # Add libraries to support media tools
+    sudo yum install -y mesa-libGLw libXp gamin audiofile audiofile-devel e2fsprogs-libs tcsh xorg-x11-fonts-ISO8859-1-100dpi xorg-x11-fonts-ISO8859-1-75dpi liberation-mono-fonts liberation-fonts-common liberation-sans-fonts liberation-serif-fonts glx-utils libpng12 mesa-libGLU libXpm libtiff libXcomposite gstreamer1 gstreamer-plugins-base gstreamer1-plugins-base ffmpeg
 
-sudo yum install -y sysbench hardinfo
-
-sudo yum install -y ImageMagick hugin wget vlc mplayer
-
-sudo yum install -y xclip unzip
-
-\# Add Redhat compatibility libraries
-
-sudo yum install -y redhat-lsb-core
-
-\# Add the X11 utils and fonts
-
-sudo yum -y install libXp xorg-x11-fonts-ISO8859-1-100dpi xorg-x11-fonts-ISO8859-1-75dpi liberation-mono-fonts liberation-fonts-common liberation-sans-fonts liberation-serif-fonts
-
-\# Add and enable the NFS server package
-
-sudo yum install -y nfs-utils
-
-sudo systemctl enable rpcbind
-
-sudo systemctl enable nfs-server
-
-sudo systemctl enable nfs-lock
-
-sudo systemctl enable nfs-idmap
-
-sudo systemctl start rpcbind
-
-sudo systemctl start nfs-server
-
-sudo systemctl start nfs-lock
-
-sudo systemctl start nfs-idmap
-
-sudo systemctl restart nfs-server
-
-\# Add libraries to support media tools
-
-sudo yum install -y mesa-libGLw libXp gamin audiofile audiofile-devel e2fsprogs-libs tcsh xorg-x11-fonts-ISO8859-1-100dpi xorg-x11-fonts-ISO8859-1-75dpi liberation-mono-fonts liberation-fonts-common liberation-sans-fonts liberation-serif-fonts glx-utils libpng12 mesa-libGLU libXpm libtiff libXcomposite gstreamer1 gstreamer-plugins-base gstreamer1-plugins-base ffmpeg
-
-sudo yum install -y libXScrnSaver
+    sudo yum install -y libXScrnSaver
 
 #### Solve Package Manager Issues on CentOS
 
 Solve Package Manager Issues on CentOS
 
-\# Clean up after a cancelled yum -y install:
+    # Clean up after a cancelled yum -y install:
+    yum-complete-transaction --cleanup-only
 
-yum-complete-transaction --cleanup-only
+    # Check the repos folder
+    sudo nautilus /etc/yum.repos.d/
 
-\# Check the repos folder
+    # Clear the yum cache:
+    sudo nautilus /var/cache/yum/
 
-sudo nautilus /etc/yum.repos.d/
-
-\# Clear the yum cache:
-
-sudo nautilus /var/cache/yum/
-
-\# Clear any missing repo files
-
-sudo rpm -Va --nofiles --nodigest
-
-sudo yum -y update --skip-broken
+    # Clear any missing repo files
+    sudo rpm -Va --nofiles --nodigest
+    sudo yum -y update --skip-broken
