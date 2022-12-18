@@ -79,7 +79,7 @@ fi
 
 # ----------------------------------------------------------------------------
 
-OBSIDIAN_PATH="$SRCIVENER_PATH/$FIRST_HEADLINE"
+OBSIDIAN_PATH="$SRCIVENER_PATH/_$FIRST_HEADLINE"
 OBSIDIAN_FILE="$FIRST_HEADLINE.md"
 OBSIDIAN_EXPORT="$OBSIDIAN_PATH/$OBSIDIAN_FILE"
 
@@ -90,13 +90,14 @@ IMAGE_REFERENCES=`pandoc --lua-filter=Tools/scrivener_to_obsidian/images.filter.
 
 if [[ ! -z $IMAGE_REFERENCES ]]; then
 
-    mkdir -p "$OBSIDIAN_PATH/img"
+    #mkdir -p "$OBSIDIAN_PATH/img"
 
     SAVEIFS=$IFS
     IFS=$(echo -en "\n\b")
     for file in $IMAGE_REFERENCES
     do
-        cp "$SRCIVENER_PATH/$file" "$OBSIDIAN_PATH/img/"
+        # cp "$SRCIVENER_PATH/$file" "$OBSIDIAN_PATH/img/"
+        cp "$SRCIVENER_PATH/$file" "$OBSIDIAN_PATH/"
     done
     IFS=$SAVEIFS
 fi
