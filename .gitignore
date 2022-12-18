@@ -1,8 +1,8 @@
-Sources
 
-Wiki/_export.md
 docs/
 site/
+Sources/
+Wiki/_*/
 
 # ------------------------------------------------------
 # Applications
