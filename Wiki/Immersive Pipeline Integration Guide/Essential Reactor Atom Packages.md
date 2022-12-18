@@ -1,3 +1,9 @@
+---
+tags: [export, export-scrivener, revise]
+prev: Install Reactor Package Manager
+next: Adding KartaVR via Reactor
+---
+
 There are currently (as of 2022-11-08) a total of 356 atom packages in the Reactor Package Manager. This means there is likely something interesting for just about any type of Resolve/Fusion user's tastes.
 
 If you are regularly creating visual effects in Fusion Studio then the following Reactor atom packages are likely something you would deem essential to maintain your productivity and sanity:

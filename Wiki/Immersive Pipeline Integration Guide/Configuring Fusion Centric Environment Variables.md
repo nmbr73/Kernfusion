@@ -1,3 +1,9 @@
+---
+tags: [export, export-scrivener, revise]
+prev: Working With Environment Variables
+next: AWS Deadline Deployment
+---
+
 Common Environment variables in a fully configured Fusion Studio deployment typically include:
 
 -   PATH

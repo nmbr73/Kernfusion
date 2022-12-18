@@ -1,3 +1,9 @@
+---
+tags: [export, export-scrivener, revise]
+prev: Using BBEdit on macOS
+next: Computer Vision and Machine Learning Tools
+---
+
 ### Keyboard Maestro on macOS
 
 Keyboard Maestro on macOS

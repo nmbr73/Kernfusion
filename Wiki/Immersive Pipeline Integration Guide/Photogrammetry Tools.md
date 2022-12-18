@@ -1,3 +1,9 @@
+---
+tags: [export, export-scrivener, revise]
+prev: Installing Digital Content Creation Apps
+next: Spatial Audio Tools
+---
+
 ### Agisoft Metashape Deployment
 
 Agisoft Metashape Deployment

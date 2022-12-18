@@ -1,3 +1,9 @@
+---
+tags: [export, export-scrivener, revise]
+prev: Kartaverse Development Reference Hardware
+next: Fusion Render Node Customization
+---
+
 -   [Kartaverse Google Group](https://groups.google.com/g/kartaverse)
 -   [KartaVR Documentation](https://andrewhazelden.com/projects/kartavr/docs/)
 -   [KartaVR Facebook Group](https://www.facebook.com/groups/582228925914491/) (Paused)

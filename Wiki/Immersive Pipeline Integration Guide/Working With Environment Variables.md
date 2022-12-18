@@ -1,3 +1,9 @@
+---
+tags: [export, export-scrivener, revise]
+prev: Installing the BMD Resolve _ Fusion Software
+next: Configuring Fusion Centric Environment Variables
+---
+
 An environment variable can be thought of as a system wide preference that any program that is started is able to read. An environment variable is a technique that system administrators will often use to customize the operating environment that software runs inside of on a workstation or render node.
 
 This concept of customizing environment variables allows you to pass a common set of preferences to multiple executable programs in a consistent way. It helps inform software of the custom values you might want to define system wide and avoids using hard-coded fixed settings in each application.

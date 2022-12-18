@@ -1,3 +1,11 @@
+---
+title: Installing the BMD Resolve / Fusion Software
+alias: Installing the BMD Resolve / Fusion Software
+tags: [export, export-scrivener, revise]
+prev: Automated Reactor PathMaps in Resolve Studio and Fusion Studio
+next: Working With Environment Variables
+---
+
 Blackmagic Design's Resolve software is a powerful editing and color correction environment. Resolve is a mainstay at many high-end post-production facilities in the film & TV sector.
 
 Blackmagic Design's Fusion Studio software is a node-based compositing environment that allows for the creation of high-quality visual effects shots. Fusion provides artists with a very capable 2.5D compositing environment, and supports the design of complex animated 2D/3D motion graphics with a high level of node-based proceduralism. Fusion also enables 360VR content creation, and more.

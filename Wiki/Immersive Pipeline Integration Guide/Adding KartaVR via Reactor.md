@@ -1,3 +1,9 @@
+---
+tags: [export, export-scrivener, revise]
+prev: Essential Reactor Atom Packages
+next: Adding Vonk Ultra via Reactor
+---
+
 In order to install KartaVR you need to have Resolve/Fusion and the Reactor Package Manager installed beforehand. To add the KartaVR packages to a new workstation, first start by launching the Reactor Package Manager window.
 
 In Fusion Studio you can do this by opening the root-level "Reactor" menu, then select the "Open Reactor" menu item.

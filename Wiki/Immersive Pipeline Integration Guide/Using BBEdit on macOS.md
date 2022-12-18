@@ -1,3 +1,9 @@
+---
+tags: [export, export-scrivener, revise]
+prev: Using Notepad++ for Fusion on Windows
+next: Automation Tools
+---
+
 BBEdit is a very capable programmer's text editor on macOS that is quick to load, easy to customize, and minimalistic in its usage of screen space.
 
 <http://www.barebones.com/products/bbedit/index.html>

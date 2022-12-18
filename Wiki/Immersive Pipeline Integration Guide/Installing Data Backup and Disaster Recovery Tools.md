@@ -1,3 +1,9 @@
+---
+tags: [export, export-scrivener, revise]
+prev: Installing Operating Systems From Scratch
+next: System Admin Resources
+---
+
 ### Balena Etcher
 
 Balena Etcher

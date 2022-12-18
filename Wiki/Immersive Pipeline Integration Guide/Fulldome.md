@@ -1,3 +1,9 @@
+---
+tags: [export, export-scrivener, revise]
+prev: Virtual Production
+next: Software Packaging and Deployment Tools
+---
+
 Fulldome is the term often associated with video-based planetarium style hemispherical "dome" theaters.
 
 ![[image166.jpg]]

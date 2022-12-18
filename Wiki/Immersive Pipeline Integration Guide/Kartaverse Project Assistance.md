@@ -1,3 +1,9 @@
+---
+tags: [export, export-scrivener, revise]
+prev: The Kartaverse Packages
+next: The Karta Development Journey
+---
+
 If you want to assist the Kartaverse effort, the best way to help is to provide access to camera original "raw" unprocessed footage from a wide range of digital cinema cameras, DSLR/mirrorless cameras, flagship multi-lens mobile phones, drones, 360VR camera rigs, structured light depth sensors, lightfield cameras, and LIDAR scanners with permissive licensing. Anything you can share helps greatly.
 
 Having new, modern, example footage to work with helps the whole Kartaverse community as it pushes forward the ongoing development of new tools, techniques and workflows.

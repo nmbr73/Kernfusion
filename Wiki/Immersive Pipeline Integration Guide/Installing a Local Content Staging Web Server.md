@@ -1,3 +1,9 @@
+---
+tags: [export, export-scrivener, revise]
+prev: Software Packaging and Deployment Tools
+next: Using Notepad++ for Fusion on Windows
+---
+
 A local content staging server allows you to create new revisions to a website without breaking the existing live website.
 
 If you want to work with large media files and develop content that will eventually be played back from a web server it is very important to do extensive local testing with a copy of your website content and web server tools.

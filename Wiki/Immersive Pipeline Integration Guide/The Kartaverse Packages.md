@@ -1,3 +1,9 @@
+---
+tags: [export, export-scrivener, revise]
+prev: Adding Vonk Ultra via Reactor
+next: Kartaverse Project Assistance
+---
+
 Kartaverse is an extensive open-source media production pipeline that integrates seamlessly with a broad range of post-production tools used in VFX, VP, XR, 360VR, fulldome, volumetric video, computer vision, and machine learning workflows.
 
 The core technologies that are part of the Kartaverse v5 suite are namely:

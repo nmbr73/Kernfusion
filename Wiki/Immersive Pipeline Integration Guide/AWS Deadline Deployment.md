@@ -1,3 +1,9 @@
+---
+tags: [export, export-scrivener, revise]
+prev: Configuring Fusion Centric Environment Variables
+next: Pixar Tractor Deployment
+---
+
 ![[image364.png]]
 
 Deadline is a render manager and job scheduling tool that is distributed by Amazon AWS Thinkbox. Deadline has Win/Linux/macOS cross platform support and can run on-premise or in the cloud via Amazon AWS EC2.

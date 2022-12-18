@@ -1,3 +1,9 @@
+---
+tags: [export, export-scrivener, revise]
+prev: Installing a Local Content Staging Web Server
+next: Using BBEdit on macOS
+---
+
 There is a highly-customized Resolve/Fusion IDE usage centric version of Notepad++ available from Reactor. It is a 32-bit build of Notepad++ that has the TextFX module installed.
 
 Please hold off doing an automatic-update the moment Notepad++ launches as there are not likely too many features missing from this release that you require. If you accidentally hit the auto-update button you will likely download, and roll-back to a 100% stock build of Notepad++ if you immediately hit the update button. Resist the urge....

@@ -1,3 +1,9 @@
+---
+tags: [export, export-scrivener, revise]
+prev: Spatial Audio Tools
+next: ACES Color Management
+---
+
 HDRI (High Dynamic Range Imagery) is able to represent a wider range of visual information through the storage and use of floating point values.
 
 These RGB formatted high-dynamic range pixel samples exceed the typical 8-bit style 0-255 / 0-1 range of color information stored in a JPEG, BMP, or MP4 like file format that is often shown on a traditional computer monitor or mobile phone screen.

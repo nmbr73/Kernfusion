@@ -1,3 +1,9 @@
+---
+tags: [export, export-scrivener, revise]
+prev: Immersive Pipeline Integration Guide
+next: Overview
+---
+
 Welcome to the Kartaverse
 
 *Contributed by* [*Andrew Hazelden*](https://ca.linkedin.com/in/andrewhazelden)

@@ -1,3 +1,9 @@
+---
+tags: [export, export-scrivener, revise]
+prev: Kartaverse Learning Resources
+next: Configuring Fusion Render Node PathMaps
+---
+
 It is important to customize the Fusion Render node program's PathMap settings if you would like your render farm to be able to access the same Reactor content that you have installed in Resolve/Fusion on your laptop/desktop/workstation. This is especially true after fuses are installed using the Reactor Package Manager.
 
 If you rely on fuses, OFX plugins, or FusionSDK C++ compiled plugins, you need to pre-install the 3rd party addons on each render node in your render farm. If you send a Fusion composite to a render farm node that lacks a required plugin it will generate an error during the batch rendering process.

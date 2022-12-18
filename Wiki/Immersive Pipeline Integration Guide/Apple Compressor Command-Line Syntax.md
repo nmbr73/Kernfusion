@@ -1,3 +1,9 @@
+---
+tags: [export, export-scrivener, revise]
+prev: FFMpeg Command-Line Syntax
+next: IP Based Video Workflows
+---
+
 Apple's Compressor program supports command line job submission. This allows for high-quality ProRes 4444XQ video encodes to be done in an automated fashion on a tiny video encoding system like a macMini that could be placed in the corner of a machine room.
 
 Compressor Learning Resources:

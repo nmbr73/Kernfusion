@@ -1,3 +1,9 @@
+---
+tags: [export, export-scrivener, revise]
+prev: The Karta Development Journey
+next: Kartaverse Development Reference Hardware
+---
+
 The Kartaverse package installation approach is very flexible. Reactor makes it possible to do a minimal installation of only the KartaVR features you need. This is a good choice when getting started so you don't become overwhelmed by choice.
 
 ![[image143.png]]

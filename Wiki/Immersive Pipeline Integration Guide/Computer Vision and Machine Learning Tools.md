@@ -1,3 +1,9 @@
+---
+tags: [export, export-scrivener, revise]
+prev: Automation Tools
+next: Display Solutions, GPUs, Video Cables, Converters_Adapters
+---
+
 ### Python Virtual Environment Basics
 
 Python Virtual Environment Basics
@@ -330,25 +336,20 @@ Installing GluonCV for Windows
 
 Step 1. Perform a base install of GluonCV via Python PIP Package Manager
 
-REM Update Python pip package manager
+    REM Update Python pip package manager
+    python.exe -m pip install --upgrade pip
 
-python.exe -m pip install --upgrade pip
+    REM Nvidia driver 512.96
+    REM Cuda 11.7 is written below as "cu117" when adding mxnet
 
-REM Nvidia driver 512.96
+    REM Add mxnet
+    pip install --upgrade mxnet-cu117
 
-REM Cuda 11.7 is written below as "cu117" when adding mxnet
+    REM Add PyTorch
+    pip install torch==1.12.1 torchvision==0.7.0
 
-REM Add mxnet
-
-pip install --upgrade mxnet-cu117
-
-REM Add PyTorch
-
-pip install torch==1.12.1 torchvision==0.7.0
-
-REM Update GluonCV
-
-pip install --upgrade gluoncv
+    REM Update GluonCV
+    pip install --upgrade gluoncv
 
 Step 2. Start working your way through the GluonCV models and tutorials materials to get comfortable with the library.
 
@@ -384,31 +385,23 @@ Using Imagemagick to Burn in Text Overlays
 
 Here is an Imagemagick shell scripting example that creates a desktop wallpaper image that has a text caption rendered from a text file named "desktop_caption.txt". The output is saved to an image named "Desktop.png":
 
-#!/usr/bin/env bash
+    #!/usr/bin/env bash
+    # Desktop Pattern Generator
 
-\# Desktop Pattern Generator
+    echo "Desktop Pattern Generator"
 
-echo "Desktop Pattern Generator"
+    HOST='R01'
+    IPADDRESS='10.20.30.1'
+    MACADDRESS='00:25:90:59:5b:16'
+    NETSPEED='1000T'
+    HARDDISK='70 GB HD / 34 GB Free'
+    OSVERSION='Ubuntu 14.04.05 LTS'
 
-HOST='R01'
+    # Generate a text string and write it to disk
+    printf "${HOST} / ${IPADDRESS}\n${MACADDRESS} ${NETSPEED}\n${HARDDISK}\n${OSVERSION}"> $TMPDIR/desktop_caption.txt
 
-IPADDRESS='10.20.30.1'
-
-MACADDRESS='00:25:90:59:5b:16'
-
-NETSPEED='1000T'
-
-HARDDISK='70 GB HD / 34 GB Free'
-
-OSVERSION='Ubuntu 14.04.05 LTS'
-
-\# Generate a text string and write it to disk
-
-printf "\${HOST} / $\{IPADDRESS\}\\n${MACADDRESS} $\{NETSPEED\}\\n${HARDDISK}\\n\${OSVERSION}"\> \$TMPDIR/desktop_caption.txt
-
-\# Create the rendered image from the text file
-
-convert -size 320x100 -density 72 -pointsize 18 -interline-spacing 0 -background black -fill white -font Arial caption:@$TMPDIR/desktop\_caption.txt "$HOME/Pictures/Desktop.png"
+    # Create the rendered image from the text file
+    convert -size 320x100 -density 72 -pointsize 18 -interline-spacing 0 -background black -fill white -font Arial caption:@$TMPDIR/desktop_caption.txt "$HOME/Pictures/Desktop.png"
 
 Using ImageMagick in 360VR workflows
 

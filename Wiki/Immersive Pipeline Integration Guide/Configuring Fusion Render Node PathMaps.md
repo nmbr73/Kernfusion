@@ -1,3 +1,9 @@
+---
+tags: [export, export-scrivener, revise]
+prev: Fusion Render Node Customization
+next: Automated Reactor PathMaps in Resolve Studio and Fusion Studio
+---
+
 1\. Open the Fusion Render Node program and select the "Preferences..." menu item.
 
 ![[image49.png]]
