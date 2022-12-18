@@ -96,10 +96,15 @@ OBSIDIAN_PATH="$SRCIVENER_BASE/_$FIRST_HEADLINE"
 OBSIDIAN_FILE="$FIRST_HEADLINE.md"
 OBSIDIAN_EXPORT="$OBSIDIAN_PATH/$OBSIDIAN_FILE"
 
+IMAGES_FOLDER="$FIRST_HEADLINE.img"
+IMAGES_PATH="$OBSIDIAN_PATH/$IMAGES_FOLDER"
+
 if [[ ! -z $DEBUG ]]; then
     echo "OBSIDIAN_PATH    = '$OBSIDIAN_PATH'" # ''
     echo "OBSIDIAN_FILE    = '$OBSIDIAN_FILE'" # ''
     echo "OBSIDIAN_EXPORT  = '$OBSIDIAN_EXPORT'" # ''
+    echo "IMAGES_FOLDER    = '$IMAGES_FOLDER'" # ''
+    echo "IMAGES_PATH      = '$IMAGES_PATH'" # ''
 fi
 
 mkdir -p "$OBSIDIAN_PATH"
@@ -107,19 +112,21 @@ mkdir -p "$OBSIDIAN_PATH"
 IMAGE_REFERENCES=`pandoc --lua-filter=Tools/scrivener_to_obsidian/images.filter.lua $SRCIVENER_EXPORT`
 
 if [[ ! -z $DEBUG ]]; then
-    echo $IMAGE_REFERENCES > "$SRCIVENER_TMPPATH/_40_images.sh"
+    echo $IMAGE_REFERENCES > "$SRCIVENER_TMPPATH/_40_images.txt"
 fi
 
+echo "... copy images"
 if [[ ! -z $IMAGE_REFERENCES ]]; then
 
-    #mkdir -p "$OBSIDIAN_PATH/img"
+    if [[ ! -z $IMAGES_PATH ]]; then
+        mkdir -p "$IMAGES_PATH"
+    fi
 
     SAVEIFS=$IFS
     IFS=$(echo -en "\n\b")
     for file in $IMAGE_REFERENCES
     do
-        # cp "$SRCIVENER_PATH/$file" "$OBSIDIAN_PATH/img/"
-        cp "$SRCIVENER_PATH/$file" "$OBSIDIAN_PATH/"
+        cp "$SRCIVENER_PATH/$file" "$IMAGES_PATH/"
     done
     IFS=$SAVEIFS
 fi
@@ -128,7 +135,9 @@ fi
 # ----------------------------------------------------------------------------
 # Run the (to be) Obsidian writer
 
+echo "... run pandoc obsidian.writer"
 pandoc \
+  -V images_folder="$IMAGES_FOLDER" \
   --wrap=none \
   --from=markdown \
   --to=Tools/scrivener_to_obsidian/obsidian.writer.lua \
@@ -138,10 +147,13 @@ if [[ ! -z $DEBUG ]]; then
     cp "$OBSIDIAN_EXPORT" "$SRCIVENER_TMPPATH/_50_pandoc_output.md"
 fi
 
+echo "... scrivener_to_obsidian.py"
 python Tools/scrivener_to_obsidian.py "$OBSIDIAN_EXPORT"
 
+echo "... move conversion to Wiki"
 mv "$OBSIDIAN_PATH" "Wiki/"
 
+echo "done"
 # Now check the output in Wiki/
 # test with obsidian_to_mkdocs.sh
 # to then do a mkdocs serve to have a look
