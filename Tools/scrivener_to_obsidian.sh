@@ -1,27 +1,25 @@
 #!/bin/bash
 
-SRCIVENER_EXPORT="temp/scrivener_export.md"
+#SRCIVENER_EXPORT="temp/scrivener_export.md"
 DEBUG="uncommment for debug mode"
 
-# SRCIVENER_EXPORT=$1
+SRCIVENER_EXPORT=$1
 
-# if [[ -z $SRCIVENER_EXPORT ]]; then
-#     echo "pass path to a Scriver pandoc export as 1st arg!"
-#     echo "... or just 'test'"
-#     exit 10
-# fi
+if [[ -z $SRCIVENER_EXPORT ]]; then
+    echo "pass path to a Scriver pandoc export as 1st arg!"
+    echo "... or just 'test'"
+    exit 10
+fi
 
+if [ $SRCIVENER_EXPORT == "test" ]; then
 
-# if [ $SRCIVENER_EXPORT == "test" ]; then
+    if [ ! -d "temp/scrivener_example.md" ]; then
+        cp -rp Data/example.export/scrivener_example.md Wiki/scrivener_example.md
+    fi
 
-#     if [ ! -d "temp/scrivener_export.md" ]; then
-#         cp -rp Data/example.export/scrivener_export.md Wiki/scrivener_export.md
-#     fi
+    SRCIVENER_EXPORT="temp/scrivener_example.md"
 
-#     SRCIVENER_EXPORT="temp/scrivener_export.md"
-
-#     # SRCIVENER_EXPORT="Wiki/_export.md/_export.md"
-# fi
+fi
 
 
 SRCIVENER_PATH=`dirname $SRCIVENER_EXPORT`
@@ -47,7 +45,11 @@ SRCIVENER_TMPPATH="temp"
 # echo "SRCIVENER_FILE   = '$SRCIVENER_FILE'"    # 'scrivener_export.md'
 # echo "SRCIVENER_BASE   = '$SRCIVENER_TMPPATH'" # 'temp'
 
-
+if [ ! -d $SRCIVENER_TMPPATH]; then
+    echo "make sure to call this script from the repo base dir"
+    echo "and to create a 'temp' folder in there!"
+    exit 30
+fi
 
 # ----------------------------------------------------------------------------
 # Write Original, AST, ... for debugging

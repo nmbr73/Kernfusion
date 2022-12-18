@@ -1,6 +1,5 @@
 nav:
-  - ...
-  - Immersive Pipeline Integration Guide.md
+  - Immersive Pipeline Integration Guide: index.md
   - About.md
   - Overview.md
   - Install Reactor Package Manager.md
@@ -46,3 +45,4 @@ nav:
   - Installing Data Backup and Disaster Recovery Tools.md
   - System Admin Resources.md
   - Closing Thoughts.md
+  - ...

@@ -1,6 +1,5 @@
 nav:
-  - ...
-  - Vonk Ultra.md
+  - Vonk Ultra: index.md
   - Software Required.md
   - Acknowledgements.md
   - Install Vonk.md
@@ -10,3 +9,4 @@ nav:
   - Vonk Scripts.md
   - Vonk Node Reference Guide.md
   - Vonk Node Cookbook.md
+  - ...

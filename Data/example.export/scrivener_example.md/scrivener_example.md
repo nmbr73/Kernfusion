@@ -1,9 +1,9 @@
 ---
-title: Welcome to the Kartaverse  
+title: Welcome to the Export Example
 author:
 ---
 
-# Immersive Pipeline Integration Guide
+# Export Example
 
 Created: 2022-01-29 Last Updated: 2022-12-12 06:00 AM UTC -4
 
@@ -19,7 +19,7 @@ About
 
 As a technical writer and pipeline TD in the visual effects sector, I am pleased to be able to share a new workflow guide. In time, I hope the learning content might be deemed an essential read for those interested in accelerating immersive media post-production workflows using Blackmagic Design's Resolve Studio and Fusion Studio software as the central hub-like toolset.
 
-The free guide has over 512 pages of content that covers the primary steps required to get a working content creation pipeline established from scratch for artists working at a freelancer, or small boutique studio scale of operation. 
+The free guide has over 512 pages of content that covers the primary steps required to get a working content creation pipeline established from scratch for artists working at a freelancer, or small boutique studio scale of operation.
 
 I'll be the first to admit that the document is a long read but you will be rewarded with a wide range of insights into topics you've likely not explored in-depth before. Enjoy!
 
@@ -59,15 +59,15 @@ So far the Reactor Package Manager has been installed over 190,000 times since 2
 
 [![][image90]](https://www.steakunderwater.com/wesuckless/download/file.php?id=4862)
 
-To start using Reactor, first you need to download the [Reactor-Installer.lua](https://www.steakunderwater.com/wesuckless/download/file.php?id=4862) script to your computer. 
+To start using Reactor, first you need to download the [Reactor-Installer.lua](https://www.steakunderwater.com/wesuckless/download/file.php?id=4862) script to your computer.
 
 ![][image261]
 
-Start up a new Resolve (Free), Resolve Studio, or Fusion Studio session. Open the Console window. Then simply drag the installer script from your desktop into the Fusion Console tab to run it. 
+Start up a new Resolve (Free), Resolve Studio, or Fusion Studio session. Open the Console window. Then simply drag the installer script from your desktop into the Fusion Console tab to run it.
 
 Note: If you are in the Fusion page or using Fusion Studio you can press the "Shift + 0" shortcut to display the Console window.
 
-If for some reason the drag-and-drop approach to launching the Reactor installer fails to work... Alternatively, you can also copy/paste the text contents of the script into the Console text entry area. 
+If for some reason the drag-and-drop approach to launching the Reactor installer fails to work... Alternatively, you can also copy/paste the text contents of the script into the Console text entry area.
 
 ![][image267]
 
@@ -79,7 +79,7 @@ When the Reactor Installer starts you are presented with the following dialog. I
 
 Custom Install Path Button
 
-When installing Reactor you also have the option to choose a "Custom Install Path". This button allows you to select a custom location you would like to have the Reactor content installed to. This could be a location like your user account's home folder, or another hard drive on your system, or a mapped network drive mount point for shared usage of Reactor content. 
+When installing Reactor you also have the option to choose a "Custom Install Path". This button allows you to select a custom location you would like to have the Reactor content installed to. This could be a location like your user account's home folder, or another hard drive on your system, or a mapped network drive mount point for shared usage of Reactor content.
 
 You can change the installed Reactor location later on by modifying the Fusion "PathMap" preferences and pointing the "Reactor:" PathMap at a new folder path.
 
@@ -126,7 +126,7 @@ If you are regularly creating visual effects in Fusion Studio then the following
 
 Adding KartaVR via Reactor
 
-In order to install KartaVR you need to have Resolve/Fusion and the Reactor Package Manager installed beforehand. To add the KartaVR packages to a new workstation, first start by launching the Reactor Package Manager window. 
+In order to install KartaVR you need to have Resolve/Fusion and the Reactor Package Manager installed beforehand. To add the KartaVR packages to a new workstation, first start by launching the Reactor Package Manager window.
 
 In Fusion Studio you can do this by opening the root-level "Reactor" menu, then select the "Open Reactor" menu item.
 
@@ -136,7 +136,7 @@ In Resolve Studio you can do this by opening the root-level "Workspaces" menu, t
 
 ![][image371]
 
-When the Reactor Package Manager window loads initially you will see a list of all the atom packages that are able to be installed using this user interface. 
+When the Reactor Package Manager window loads initially you will see a list of all the atom packages that are able to be installed using this user interface.
 
 Note: The content that is listed in the Reactor window comes from the [Reactor GitLab repository](https://gitlab.com/WeSuckLess/Reactor). If you have an outgoing firewall, or your country/company/ISP (internet service provider) has network filtering rules that block access to GitLab you will have to use another approach to install the Reactor content on your system.
 
@@ -148,13 +148,13 @@ Then select the "Kartaverse \> KartaVR" sub-category on the left sidebar to shor
 
 ![][image311]
 
-Click on the package name "KartaVR" in the main part of the Reactor window, and then press the "Install" button. 
+Click on the package name "KartaVR" in the main part of the Reactor window, and then press the "Install" button.
 
 A progress dialog is displayed that shows each of the files as they are downloaded from the Reactor GitLab repository via cURL and installed into the "Reactor:/Deploy/" PathMap location on your hard disk.
 
 ![][image41]
 
-Several "Install Script Confirmation" dialogs will be displayed during the Reactor installation process. The dialog is asking for your input. 
+Several "Install Script Confirmation" dialogs will be displayed during the Reactor installation process. The dialog is asking for your input.
 
 You can press the "OK" button if you would like to set up several preferences automatically during the install of the Reactor "Bin" category content like the FFmpeg utility. Alternatively, you can press the "Cancel Installation" button and that specific "Install Script" item will be skipped.
 
@@ -170,7 +170,7 @@ Adding Vonk Ultra via Reactor
 
 Vonk Ultra provides a wide range of "data node" fuses that allow you to create efficient node graphs in Fusion that directly work with text, numbers, CSV spreadsheets, JSON, XML, YAML, and many other types of data using modifier nodes. More information about [Vonk Ultra can be read in the documentation](https://docs.google.com/document/d/1U9WfdHlE1AZHdU6_ZQCB1I2nSa5I7TyHG2vKMi2I7v8/edit?usp=sharing).
 
-After you have the Reactor Package Manager window open again, you have the option to select the "Kartaverse \> Vonk Ultra" category on the left sidebar. 
+After you have the Reactor Package Manager window open again, you have the option to select the "Kartaverse \> Vonk Ultra" category on the left sidebar.
 
 To install Vonk Ultra, click on the package named "Vonk Ultra", and then press the "Install" button. This will automatically install each of the required Vonk sub-packages in a single step.
 
@@ -200,9 +200,9 @@ Kartaverse Project Assistance
 
 If you want to assist the Kartaverse effort, the best way to help is to provide access to camera original "raw" unprocessed footage from a wide range of digital cinema cameras, DSLR/mirrorless cameras, flagship multi-lens mobile phones, drones, 360VR camera rigs, structured light depth sensors, lightfield cameras, and LIDAR scanners with permissive licensing. Anything you can share helps greatly.
 
-Having new, modern, example footage to work with helps the whole Kartaverse community as it pushes forward the ongoing development of new tools, techniques and workflows. 
+Having new, modern, example footage to work with helps the whole Kartaverse community as it pushes forward the ongoing development of new tools, techniques and workflows.
 
-It is important, if possible, that the sample footage is shared with permissive license terms that would allow the media to be used under a [Creative Commons Attribution-ShareAlike 4.0 International](http://creativecommons.org/licenses/by-sa/4.0/) license. This media usage policy allows new example project files to be created and shared broadly with the community for learning purposes. 
+It is important, if possible, that the sample footage is shared with permissive license terms that would allow the media to be used under a [Creative Commons Attribution-ShareAlike 4.0 International](http://creativecommons.org/licenses/by-sa/4.0/) license. This media usage policy allows new example project files to be created and shared broadly with the community for learning purposes.
 
 If you have access to sample footage that you are willing to share and are the copyright holder, [please email me](mailto:andrew@andrewhazelden.com). Thanks!
 
@@ -275,7 +275,7 @@ Workflow Guides
 
 Fusion Render Node Customization
 
-It is important to customize the Fusion Render node program's PathMap settings if you would like your render farm  to be able to access the same Reactor content that you have installed in Resolve/Fusion on your laptop/desktop/workstation. This is especially true after fuses are installed using the Reactor Package Manager. 
+It is important to customize the Fusion Render node program's PathMap settings if you would like your render farm  to be able to access the same Reactor content that you have installed in Resolve/Fusion on your laptop/desktop/workstation. This is especially true after fuses are installed using the Reactor Package Manager.
 
 If you rely on fuses, OFX plugins, or FusionSDK C++ compiled plugins, you need to pre-install the 3rd party addons on each render node in your render farm. If you send a Fusion composite to a render farm node that lacks a required plugin it will generate an error during the batch rendering process.
 
@@ -283,9 +283,9 @@ Something that can help reduce the pain of setting up and syncing Reactor conten
 
 An extra step that can often be overlooked is the requirement to configure a custom "LuaModules:" PathMap entry in the Fusion Render Node app preferences to avoid Fusion Render Manager errors when batch rendering comps that use fuses like the Vonk data nodes or Cryptomatte.
 
-Note: The example below shows the PathMaps used for locally installed Reactor content that was added to a Reactor default "AllData:" folder based install. 
+Note: The example below shows the PathMaps used for locally installed Reactor content that was added to a Reactor default "AllData:" folder based install.
 
-You can point the "Reactor:" PathMap at any folder path you need to as long as it is not a UNC path, and it doesn't have high-ASCII or Unicode multi-byte extended characters in the filepath. 
+You can point the "Reactor:" PathMap at any folder path you need to as long as it is not a UNC path, and it doesn't have high-ASCII or Unicode multi-byte extended characters in the filepath.
 
 Make sure to have a trailing slash on the final absolute filepath used to define the PathMap entry for your version of the "From: Reactor:'' and "To: /Volumes/Some/Random/Pipeline/Folder/Path/Reactor/" install location.
 
@@ -351,7 +351,7 @@ Blackmagic Design's Fusion Studio software is a node-based compositing environme
 
 Download Resolve/Fusion Studio from BMD's Website
 
-If you want to install the absolutely latest release of Resolve or Fusion you should go directly to the BMD Support Center Website to access the installers: 
+If you want to install the absolutely latest release of Resolve or Fusion you should go directly to the BMD Support Center Website to access the installers:
 
 <https://www.blackmagicdesign.com/support/family/davinci-resolve-and-fusion>
 
@@ -361,7 +361,7 @@ Alternatively, the Steak Underwater Fusion community forum has a concise list of
 
 Resolve (Free)
 
-If you are looking for "Resolve (free)" it is listed in the BMD support center as simply "Resolve". Resolve (Free)'s software license terms allow for both personal and commercial use of the software at no cost. 
+If you are looking for "Resolve (free)" it is listed in the BMD support center as simply "Resolve". Resolve (Free)'s software license terms allow for both personal and commercial use of the software at no cost.
 
 Resolve (free) 18.1 Linux Download
 
@@ -381,15 +381,15 @@ Blackmagic Design provides access to a version of the Fusion compositing environ
 
 ![][image228]
 
-The Fusion page environment allows video editors to create their own title templates in Fusion and use them on the Edit page. The Fusion page node-based environment makes it a quick job to perform basic visual effects compositing tasks inside a larger Resolve project. 
+The Fusion page environment allows video editors to create their own title templates in Fusion and use them on the Edit page. The Fusion page node-based environment makes it a quick job to perform basic visual effects compositing tasks inside a larger Resolve project.
 
 The Fusion page availability in Resolve (Free) led to the retirement of the earlier Fusion (Free) Standalone product at Fusion v9. If you want access to a standalone version of Fusion that is only found in the Fusion Studio product.
 
 The Fusion page adds a new analogy of a "MediaIn" and "MediaOut" node which interfaces with the Media Pool/Edit/Delivery pages, in addition to the traditional "Loader" and "Saver" nodes used in Fusion for working with image sequences like OpenEXR format media.
 
-The primary limitation of the free version of Resolve is that it can export footage at up to 3840x2160px resolution. This resolution limit is enforced as a maximum of 3840 px on the horizontal axis, and a maximum of 2160px on the vertical axis. A variety of advanced features like optical flow support, HMD previewing, and several other Fusion nodes are held back until you upgrade to Resolve Studio or Fusion Studio. 
+The primary limitation of the free version of Resolve is that it can export footage at up to 3840x2160px resolution. This resolution limit is enforced as a maximum of 3840 px on the horizontal axis, and a maximum of 2160px on the vertical axis. A variety of advanced features like optical flow support, HMD previewing, and several other Fusion nodes are held back until you upgrade to Resolve Studio or Fusion Studio.
 
-All in all, most people can get quite far in their everyday workflows in Resolve (Free). 
+All in all, most people can get quite far in their everyday workflows in Resolve (Free).
 
 If you are a freelancer doing multi-pass compositing with 4K UHD resolution EXR footage you can be very productive using merely the Resolve (Free) Fusion page environment. This is an optimal configuration to use while you are quickly mastering new skills and learning what is possible with the toolset.
 
@@ -397,7 +397,7 @@ Resolve Studio (Paid)
 
 ![][image287-1]
 
-The paid version of Resolve is known as "Resolve Studio". 
+The paid version of Resolve is known as "Resolve Studio".
 
 There is a separate installer for Resolve Studio that is available on the BMD Support Center website. This is a separate download from the previous free version of Resolve that you might already have installed while you were evaluating the software. The two Resolve installers place the files at the same location on your hard disk so only one of them can exist at a time.
 
@@ -439,7 +439,7 @@ Fusion Studio 18.1 macOS Download
 
 Fusion Studio Improvements over the Resolve (Free) Fusion page
 
-Fusion Studio provides a dedicated, full-screen, standalone environment for compositing without the overhead of having all of Resolve loaded into memory at the same time. 
+Fusion Studio provides a dedicated, full-screen, standalone environment for compositing without the overhead of having all of Resolve loaded into memory at the same time.
 
 Fusion Studio also saves your project files into .comp format documents. The .comp file format holds plain text encoded Lua table data which is easier to manage and backup inside of a larger visual effects production pipeline.
 
@@ -458,7 +458,7 @@ The Fusion Render Node program is available if you have a Fusion Studio license 
 ![][image93]
 
 
-When getting started, the Fusion Render Node program is typically controlled from inside a Fusion Studio based artist session using the "Fusion Render Manager". 
+When getting started, the Fusion Render Node program is typically controlled from inside a Fusion Studio based artist session using the "Fusion Render Manager".
 
 The Fusion render node program can also be launched directly from the command-prompt with CLI arguments, or you can control the render node software from an external render manager program of your choice.
 
@@ -484,11 +484,11 @@ On Windows 10/11 you have a similar feature that lets you right-click on a file,
 
 External Render Manager Usage
 
-If you have a team of artists who rely on Fusion Render Node, as part of a larger post-production workflow, you will likely experience productivity benefits from adopting a 3rd party render manager like the [Amazon AWS Thinkbox Deadline](https://aws.amazon.com/thinkbox-deadline/) or [Pixar Tractor](https://renderman.pixar.com/tractor) software. 
+If you have a team of artists who rely on Fusion Render Node, as part of a larger post-production workflow, you will likely experience productivity benefits from adopting a 3rd party render manager like the [Amazon AWS Thinkbox Deadline](https://aws.amazon.com/thinkbox-deadline/) or [Pixar Tractor](https://renderman.pixar.com/tractor) software.
 
 Having an external render management tool, that was made by a 3rd party company, allows you to combine Fusion based comp rendering jobs alongside your existing 3D rendering workloads coming from a 3D department.
 
-Using a render manager like Deadline makes it easy to control the order of operations for a group of tasks, called a "[job batch](https://www.awsthinkbox.com/blog/job-batches-a-guide)", when they are computed on a render farm. This is often called a linked "dependent task". 
+Using a render manager like Deadline makes it easy to control the order of operations for a group of tasks, called a "[job batch](https://www.awsthinkbox.com/blog/job-batches-a-guide)", when they are computed on a render farm. This is often called a linked "dependent task".
 
 Having a dependent job submitted to Deadline, in a single step, reduces the amount of manual "render wrangling" a human operator has to do when supervising complex jobs running on a large farm.
 
@@ -520,7 +520,7 @@ Fusion Studio Standalone on Linux Preferences
 * Fusion Studio \> Preferences \> Tweaks \> OpenGL \> \[x\] Use float16 textures
 * Fusion Studio \> Preferences \> Script \> Options \> Script editor:
     * /usr/bin/gedit
-* Fusion Studio \> Preferences \> Script \> Python Version: 
+* Fusion Studio \> Preferences \> Script \> Python Version:
     * Python 2.7
     * Python 3.10
 
@@ -546,7 +546,7 @@ Resolve Studio on Linux Preferences
     * Mount: /home/vfx/Documents/BlackmagicDesign/DaVinci Resolve/ResolveCache
 * Fusion Settings \> Script \> Options \> Script editor:
     * /usr/bin/gedit
-* Fusion Settings \> Script \> Python Version: 
+* Fusion Settings \> Script \> Python Version:
     * Python 2.7
     * Python 3.10
 * Fusion \> Fusion Settings \> General \> \[x\] Summarize Load Errors
@@ -561,7 +561,7 @@ Loading Imagery
 
 Imagery is imported into Fusion using Loader or MediaIn nodes.
 
-Imagery is exported from Fusion using Saver or MediaOut nodes. 
+Imagery is exported from Fusion using Saver or MediaOut nodes.
 
 If your Fusion timeline is set to have a single frame range (the start frame and end frame values are the same) you will be rendering a still image with your Saver node. If your Fusion timeline has a start frame and end frame range with different values, you will be exporting an image sequence.
 
@@ -657,7 +657,7 @@ When you use the left mouse button to click on the "Prx" button you can toggle t
 
 ![][image389]
 
-When the proxy mode is enabled, the viewer windows are rendered at a reduced resolution compared to your final output setting. This makes Fusion's viewer windows more responsive and interactive which is quite noticeable when you start to adjust nodes and update the node settings on footage over 2K in resolution. 
+When the proxy mode is enabled, the viewer windows are rendered at a reduced resolution compared to your final output setting. This makes Fusion's viewer windows more responsive and interactive which is quite noticeable when you start to adjust nodes and update the node settings on footage over 2K in resolution.
 
 Using proxies as you develop a new comp is a very effective way to improve the rendering speed in your Viewer windows which is an essential workflow technique when working with high resolution media or on demanding composites that are slow to render.
 
@@ -695,9 +695,9 @@ The Lua and Python scripting documentation for the Resolve API is located on-dis
 
 ![][image255]
 
-Note: The "[README.txt](https://www.steakunderwater.com/wesuckless/viewtopic.php?p=36549#p36549)" file in the Workflow Integrations folder also includes an aside that talks briefly about UI Manager. This readme document acts as the only official notes published by Blackmagic Design about the existence of the UI Manager GUI creation toolkit. 
+Note: The "[README.txt](https://www.steakunderwater.com/wesuckless/viewtopic.php?p=36549#p36549)" file in the Workflow Integrations folder also includes an aside that talks briefly about UI Manager. This readme document acts as the only official notes published by Blackmagic Design about the existence of the UI Manager GUI creation toolkit.
 
-In part, this sparse documentation situation is due to the fact that the Fusion 8 Scripting Guide PDF was published prior to the addition of the UI Manager library in Resolve/Fusion. 
+In part, this sparse documentation situation is due to the fact that the Fusion 8 Scripting Guide PDF was published prior to the addition of the UI Manager library in Resolve/Fusion.
 
 This "README.txt" file is located on-disk at:
 
@@ -727,7 +727,7 @@ It is also possible to configure a relative filepath system called a "PathMap'' 
 
 Fusion Class Browser Script
 
-There is a 3rd Party Scripting API browser tool distributed in the Reactor Package Manager called the "Fusion Class Browser" that is helpful for learning more about undocumented scripting API features. 
+There is a 3rd Party Scripting API browser tool distributed in the Reactor Package Manager called the "Fusion Class Browser" that is helpful for learning more about undocumented scripting API features.
 
 This screenshot shows the results from examining the available Fairlight API functions using the Fusion Class Browser script.
 
@@ -735,7 +735,7 @@ This screenshot shows the results from examining the available Fairlight API fun
 
 UI Manager Scripting Examples
 
-The Steakunderwater Fusion community forum's "[Building GUIs With Fusion's UI Manager](https://www.steakunderwater.com/wesuckless/viewtopic.php?p=10463#p10463)" scripting thread provides example Lua and Python code to get you started. 
+The Steakunderwater Fusion community forum's "[Building GUIs With Fusion's UI Manager](https://www.steakunderwater.com/wesuckless/viewtopic.php?p=10463#p10463)" scripting thread provides example Lua and Python code to get you started.
 
 There is a companion "UI Manager Lua & Python Examples" package in the Reactor Package Manager that simplifies the steps needed to download and install the collection of example script resources.
 
@@ -745,7 +745,7 @@ ScriptLib Files
 
 Fusion has a .scriptlib file based-approach that can be used to run Lua code when a fresh Fusion session is started, or a new comp is created. Scriptlib files also allow the addition of new 3rd party Lua functions and global variables that are then available in all other Lua scripts you might run, and in fresh Fusion Console window sessions.
 
-The Reactor Package Manager provides a "Resolve Essentials" atom package that improves the QoL (Quality of Life) for Resolve based scripting enthusiasts. This package also restores a missing scriptlib file that comes included with Fusion Studio but not with Resolve Studio. 
+The Reactor Package Manager provides a "Resolve Essentials" atom package that improves the QoL (Quality of Life) for Resolve based scripting enthusiasts. This package also restores a missing scriptlib file that comes included with Fusion Studio but not with Resolve Studio.
 
 This resource is copied into the scripts PathMap-based folder location of:
 
@@ -757,7 +757,7 @@ Reactor:/Deploy/Scripts/bmd.scriptlib
 
 Actions/Event Callbacks
 
-Resolve's Fusion page has an action/event callback system that is implemented via .fu and .zfu files. These documents are placed in the "Config:/" PathMap folder. 
+Resolve's Fusion page has an action/event callback system that is implemented via .fu and .zfu files. These documents are placed in the "Config:/" PathMap folder.
 
 A .fu file is a configuration document that is stored in a Lua table based text file. A .zfu file is a zip archive that holds a .fu file and any extra supporting resources like companion scripts or PNG formatted icons at the base level of the zip file with no encapsulating folders.
 
@@ -773,7 +773,7 @@ The UI Manager example scripts include a minimal prototype of a QT-based Action/
 
 GPU Accelerated Effects
 
-The Edit/Color/Fusion pages all support the use of OFX plugins. 
+The Edit/Color/Fusion pages all support the use of OFX plugins.
 
 There is a customized version of the OFX plugin development documentation available in Resolve's Developer folder.
 
@@ -797,7 +797,7 @@ You are able to refine an Edit page effect using the controls provided by the Fu
 
 ![][image232]
 
-Switching from the Edit page into the Fusion page in this fashion provides access to Fusion's traditional Spline and Keyframe editor views. 
+Switching from the Edit page into the Fusion page in this fashion provides access to Fusion's traditional Spline and Keyframe editor views.
 
 These animation editing controls in Fusion are more full-featured for adjusting keyframes and spline curve tangents than is possible with traditional ResolveFX/OFX Plugins that are animated on the Edit page.
 
@@ -805,7 +805,7 @@ These animation editing controls in Fusion are more full-featured for adjusting 
 
 Fusion SDK
 
-The Fusion page also has a Fusion SDK which is a C++ API. This development kit allows the creation of 2D Effects, 3D workspace based content, Renderer3D node based plugin rendering engines, the addition of new Loader/Saver node file formats, and more to be created. 
+The Fusion page also has a Fusion SDK which is a C++ API. This development kit allows the creation of 2D Effects, 3D workspace based content, Renderer3D node based plugin rendering engines, the addition of new Loader/Saver node file formats, and more to be created.
 
 The FusionSDK C++ files are available by request to developers at zero cost but require the signing of an NDA (Non-Disclosure Agreement) with the BMD Developer program.
 
@@ -813,7 +813,7 @@ I'd suggest you try contacting BMD's support team about this topic, or if you ha
 
 Fuse SDK
 
-The Fusion page has a Fuse API which allows DCTL (DaVinci Color Transform Language) based hardware accelerated graphics operations to be done inside a Lua scripted node that works seamlessly in a cross-platform way across Metal, OpenCL, and CUDA based GPUs. 
+The Fusion page has a Fuse API which allows DCTL (DaVinci Color Transform Language) based hardware accelerated graphics operations to be done inside a Lua scripted node that works seamlessly in a cross-platform way across Metal, OpenCL, and CUDA based GPUs.
 
 The Fuse API also supports [LuaJIT](https://luajit.org/luajit.html) based code to be used to do operations like render vector shapes, process image metadata, add custom image importer/exporter support, or apply effects. This Fuse API is the Fusion equivalent of Nuke Blink Scripting.
 
@@ -823,19 +823,19 @@ BMD released a new Fuse SDK PDF guide this year which is an excellent document f
 
 Macros
 
-A macro in the Fusion page is basically a grouped set of Fusion stock nodes that are collected inside a collapsible folder group. 
+A macro in the Fusion page is basically a grouped set of Fusion stock nodes that are collected inside a collapsible folder group.
 
-When a macro is created using a grouped object it can have an internal registry-based node identifier type of either a "MacroOperator" or a "GroupOperator". 
+When a macro is created using a grouped object it can have an internal registry-based node identifier type of either a "MacroOperator" or a "GroupOperator".
 
 A macro is saved to disk as a plain text document that represents an ASCII-encoded Lua table structure on-disk. The macro file is saved with the file extension .setting.
 
-When making macros to share with other users, it is important to know that a GroupOperator node can be easily re-expanded and edited later in the Nodes view. 
+When making macros to share with other users, it is important to know that a GroupOperator node can be easily re-expanded and edited later in the Nodes view.
 
 A MacroOperator is harder to inspect as it needs you to copy the node into a programmer's plain text editor to revise its settings by hand.
 
 When you have a MacroOperator open in a text editor, you can find & replace the word "MacroOperator" with "GroupOperator". This will allow you to visually expand that node's group in the Nodes view.
 
-When creating macros, expressions can be added, along with intool scripts, and custom UserControl based GUIs. This allows for the construction of unique purpose built nodes that can work in both the Fusion and Edit pages. 
+When creating macros, expressions can be added, along with intool scripts, and custom UserControl based GUIs. This allows for the construction of unique purpose built nodes that can work in both the Fusion and Edit pages.
 
 There is an introductory "[Macro Building Essentials](https://www.steakunderwater.com/wesuckless/viewtopic.php?p=11590#p11590)" thread on the Steakunderwater forum that helps artists create their own macros in only a short period of time.
 
@@ -843,7 +843,7 @@ There is an introductory "[Macro Building Essentials](https://www.steakunderwate
 
 Building GUIs With Fusion's UI Manager
 
-Resolve/Fusion supports the use of a native Lua and Python based GUI building system called the UI Manager library. This library is used whenever you need to create your own custom graphical user interface in a Fusion based Lua or Python script. 
+Resolve/Fusion supports the use of a native Lua and Python based GUI building system called the UI Manager library. This library is used whenever you need to create your own custom graphical user interface in a Fusion based Lua or Python script.
 
 The UI Manager allows you to add object oriented windows, buttons, text fields, sliders, tree list views, and controls that are accessible inside your script code. The UI Manager library is QT window manager based, and it is designed to replace Fusion 7's older IUP and AskUser dialog approaches when creating script based GUIs.
 
@@ -871,9 +871,9 @@ As you start to construct new user interfaces in Resolve/Fusion, you can add the
 
 What is an ID Tag?
 
-In the UI Manager an important concept to understand at this point is that an ID tag string is placed inside the \{ \} curly braces on every control in the GUI layout. 
+In the UI Manager an important concept to understand at this point is that an ID tag string is placed inside the \{ \} curly braces on every control in the GUI layout.
 
-The ID tag setting could be just a single letter in quotes or it could be a longer text string (written without spaces) that is used to define the name that Lua uses to access that specific GUI element from code. 
+The ID tag setting could be just a single letter in quotes or it could be a longer text string (written without spaces) that is used to define the name that Lua uses to access that specific GUI element from code.
 
 ID = 'myCustomName',
 
@@ -885,7 +885,7 @@ The AddWindow() command is used to create a new UI Manager window. This window h
 
 ![][image72]
 
-The following code snippet shows the bare minimum of code you need to add to a Lua script in order to create a new UI Manager based window that has a GUI element inside of it. 
+The following code snippet shows the bare minimum of code you need to add to a Lua script in order to create a new UI Manager based window that has a GUI element inside of it.
 
 In this piece of sample code a new window is created that has the title "My First Window". The label GUI element is added to the view that displays the textual message "This is a Label". You can close the new view by clicking on the standard window close box.
 
@@ -897,7 +897,7 @@ local disp = bmd.UIDispatcher(ui)
 
 local width,height = 400,200
 
- 
+
 
 win = disp:AddWindow(\{
 
@@ -909,13 +909,13 @@ Geometry = \{ 100, 100, width, height \},
 
 Spacing = 10,
 
- 
+
 
 ui:VGroup\{
 
 ID = 'root',
 
-   
+
 
 -- Add your GUI elements here:
 
@@ -925,7 +925,7 @@ ui:Label\{ ID = 'L', Text = 'This is a Label'\},
 
 \})
 
- 
+
 
 -- The window was closed
 
@@ -935,13 +935,13 @@ disp:ExitLoop()
 
 end
 
- 
+
 
 -- Add your GUI element based event functions here:
 
 itm = win:GetItems()
 
- 
+
 
 win:Show()
 
@@ -1000,7 +1000,7 @@ ui.HGap(0, 1.0),
 
 ui:Button\{\}
 
-The ui:Button\{\} control will create a simple rectangular shaped clickable button. 
+The ui:Button\{\} control will create a simple rectangular shaped clickable button.
 
 ![][image306]
 
@@ -1024,7 +1024,7 @@ print('Hello World!')
 
 end
 
-Inside of the win.On.MyButton.Clicked() function you are free to write in any Lua code you want. 
+Inside of the win.On.MyButton.Clicked() function you are free to write in any Lua code you want.
 
 You can also rename the button's label once it has been clicked by assigning a new text string to the button label .Text attribute. The new string text that you can assign to the button label doesn't have to be a hard quoted object. It could be a string that is sourced at run-time from a dynamic element coming right from the active Fusion comp like the name of the active node selection, the current composite's filename, or it could come from any Lua variable you want to assign.
 
@@ -1044,7 +1044,7 @@ local disp = bmd.UIDispatcher(ui)
 
 local width,height = 400,200
 
- 
+
 
 win = disp:AddWindow(\{
 
@@ -1056,13 +1056,13 @@ Geometry = \{ 100, 100, width, height \},
 
 Spacing = 10,
 
- 
+
 
 ui:VGroup\{
 
 ID = 'root',
 
-   
+
 
 -- Add your GUI elements here:
 
@@ -1078,7 +1078,7 @@ ui:Button\{ID = 'MyButton', Text = 'The Button Label'\},
 
 \})
 
- 
+
 
 -- The window was closed
 
@@ -1088,13 +1088,13 @@ disp:ExitLoop()
 
 end
 
- 
+
 
 -- Add your GUI element based event functions here:
 
 itm = win:GetItems()
 
- 
+
 
 function win.On.MyButton.Clicked(ev)
 
@@ -1104,7 +1104,7 @@ disp:ExitLoop()
 
 end
 
- 
+
 
 win:Show()
 
@@ -1174,7 +1174,7 @@ The ui:CheckBox\{\} control will add a checkbox to the window layout. This contr
 
 ![][image290]
 
-You can assign a label to the new checkBox by adding an attribute like: 
+You can assign a label to the new checkBox by adding an attribute like:
 
 Text = 'The Checkbox Label'.
 
@@ -1186,7 +1186,7 @@ local disp = bmd.UIDispatcher(ui)
 
 local width,height = 400,200
 
- 
+
 
 win = disp:AddWindow(\{
 
@@ -1198,7 +1198,7 @@ Geometry = \{ 100, 100, width, height \},
 
 Spacing = 10,
 
- 
+
 
 ui:VGroup\{
 
@@ -1206,7 +1206,7 @@ ID = 'root',
 
 Margin = 50,
 
-   
+
 
 -- Add your GUI elements here:
 
@@ -1216,7 +1216,7 @@ ui:CheckBox\{ID = 'MyCheckbox', Text = 'The Checkbox Label'\},
 
 \})
 
- 
+
 
 -- The window was closed
 
@@ -1226,13 +1226,13 @@ disp:ExitLoop()
 
 end
 
- 
+
 
 -- Add your GUI element based event functions here:
 
 itm = win:GetItems()
 
- 
+
 
 function win.On.MyCheckbox.Clicked(ev)
 
@@ -1240,7 +1240,7 @@ print('\[Checkbox\] ' .. tostring(itm.MyCheckbox.Checked))
 
 end
 
- 
+
 
 win:Show()
 
@@ -1320,7 +1320,7 @@ local disp = bmd.UIDispatcher(ui)
 
 local width,height = 400,200
 
- 
+
 
 win = disp:AddWindow(\{
 
@@ -1332,13 +1332,13 @@ Geometry = \{100, 100, width, height\},
 
 Spacing = 10,
 
- 
+
 
 ui:VGroup\{
 
 ID = 'root',
 
-   
+
 
 -- Add your GUI elements here:
 
@@ -1348,7 +1348,7 @@ ui:ColorPicker\{ID = 'Color'\},
 
 \})
 
- 
+
 
 -- The window was closed
 
@@ -1358,13 +1358,13 @@ disp:ExitLoop()
 
 end
 
- 
+
 
 -- Add your GUI element based event functions here:
 
 itm = win:GetItems()
 
- 
+
 
 win:Show()
 
@@ -1374,7 +1374,7 @@ win:Hide()
 
 ui:ComboBox\{\}
 
-The ui:ComboBox\{\} control allows you to show a ComboControl / Options Menu style of menu that allows you to select an individual menu item from a list of entries. 
+The ui:ComboBox\{\} control allows you to show a ComboControl / Options Menu style of menu that allows you to select an individual menu item from a list of entries.
 
 ![][image330]
 
@@ -1396,7 +1396,7 @@ local disp = bmd.UIDispatcher(ui)
 
 local width,height = 400,100
 
- 
+
 
 win = disp:AddWindow(\{
 
@@ -1408,13 +1408,13 @@ Geometry = \{100, 100, width, height\},
 
 Spacing = 10,
 
- 
+
 
 ui:VGroup\{
 
 ID = 'root',
 
-   
+
 
 -- Add your GUI elements here:
 
@@ -1424,7 +1424,7 @@ ui:ComboBox\{ID = 'MyCombo', Text = 'Combo Menu'\},
 
 \})
 
- 
+
 
 -- The window was closed
 
@@ -1434,13 +1434,13 @@ disp:ExitLoop()
 
 end
 
- 
+
 
 -- Add your GUI element based event functions here:
 
 itm = win:GetItems()
 
- 
+
 
 -- Add the items to the ComboBox menu
 
@@ -1456,7 +1456,7 @@ itm.MyCombo:AddItem('Mango')
 
 itm.MyCombo:AddItem('Kiwi')
 
- 
+
 
 -- This function is run when a user picks a different setting in the ComboBox control
 
@@ -1502,7 +1502,7 @@ end
 
 end
 
- 
+
 
 win:Show()
 
@@ -1604,7 +1604,7 @@ local disp = bmd.UIDispatcher(ui)
 
 local width,height = 400,75
 
- 
+
 
 win = disp:AddWindow(\{
 
@@ -1616,13 +1616,13 @@ Geometry = \{100, 100, width, height\},
 
 Spacing = 10,
 
- 
+
 
 ui:VGroup\{
 
 ID = 'root',
 
- 
+
 
 -- Add your GUI elements here:
 
@@ -1632,7 +1632,7 @@ ui:DoubleSpinBox\{ID='MySpinner'\},
 
 \})
 
- 
+
 
 -- The window was closed
 
@@ -1642,13 +1642,13 @@ disp:ExitLoop()
 
 end
 
- 
+
 
 -- Add your GUI element based event functions here:
 
 itm = win:GetItems()
 
- 
+
 
 function win.On.MySpinner.ValueChanged(ev)
 
@@ -1656,7 +1656,7 @@ print('\[DoubleSpinBox Value\] '.. itm.MySpinner.Value)
 
 end
 
- 
+
 
 win:Show()
 
@@ -1722,7 +1722,7 @@ local disp = bmd.UIDispatcher(ui)
 
 local width,height = 400,200
 
- 
+
 
 win = disp:AddWindow(\{
 
@@ -1734,13 +1734,13 @@ Geometry = \{100, 100, width, height\},
 
 Spacing = 10,
 
- 
+
 
 ui:VGroup\{
 
 ID = 'root',
 
- 
+
 
 -- Add your GUI elements here:
 
@@ -1750,7 +1750,7 @@ ui:Label\{ID = 'L', Text = 'This is a Label', Alignment = \{ AlignHCenter = true
 
 \})
 
- 
+
 
 -- The window was closed
 
@@ -1760,13 +1760,13 @@ disp:ExitLoop()
 
 end
 
- 
+
 
 -- Add your GUI element based event functions here:
 
 itm = win:GetItems()
 
- 
+
 
 win:Show()
 
@@ -1824,7 +1824,7 @@ local disp = bmd.UIDispatcher(ui)
 
 local width,height = 400,100
 
- 
+
 
 win = disp:AddWindow(\{
 
@@ -1836,19 +1836,19 @@ Geometry = \{100, 100, width, height\},
 
 Spacing = 10,
 
- 
+
 
 ui:HGroup\{
 
 ID = 'root',
 
-   
+
 
 -- Add your GUI elements here:
 
 ui:Slider\{ID = 'MySlider'\},
 
-   
+
 
 ui:Label\{ID = 'MyLabel', Text = 'Value: ',\},
 
@@ -1856,7 +1856,7 @@ ui:Label\{ID = 'MyLabel', Text = 'Value: ',\},
 
 \})
 
- 
+
 
 -- The window was closed
 
@@ -1866,13 +1866,13 @@ disp:ExitLoop()
 
 end
 
- 
+
 
 -- Add your GUI element based event functions here:
 
 itm = win:GetItems()
 
- 
+
 
 itm.MySlider.Value = 25
 
@@ -1880,7 +1880,7 @@ itm.MySlider.Minimum = 0
 
 itm.MySlider.Maximum = 100
 
- 
+
 
 function win.On.MySlider.ValueChanged(ev)
 
@@ -1888,7 +1888,7 @@ itm.MyLabel.Text = 'Slider Value: ' .. tostring(ev.Value)
 
 end
 
- 
+
 
 win:Show()
 
@@ -1964,7 +1964,7 @@ local disp = bmd.UIDispatcher(ui)
 
 local width,height = 400,200
 
- 
+
 
 win = disp:AddWindow(\{
 
@@ -1976,7 +1976,7 @@ Geometry = \{ 100, 100, width, height \},
 
 Spacing = 10,
 
- 
+
 
 ui:VGroup\{
 
@@ -1984,13 +1984,13 @@ ID = 'root',
 
 Margin = 50,
 
-   
+
 
 -- Add your GUI elements here:
 
 ui:LineEdit\{ID='MyLineTxt', Text = 'Hello Fusioneers!', PlaceholderText = 'Please Enter a few words.',\},
 
-   
+
 
 ui:Button\{ID = 'PrintButton', Text = 'Print Text'\},
 
@@ -1998,7 +1998,7 @@ ui:Button\{ID = 'PrintButton', Text = 'Print Text'\},
 
 \})
 
- 
+
 
 -- The window was closed
 
@@ -2008,13 +2008,13 @@ disp:ExitLoop()
 
 end
 
- 
+
 
 -- Add your GUI element based event functions here:
 
 itm = win:GetItems()
 
- 
+
 
 function win.On.PrintButton.Clicked(ev)
 
@@ -2022,7 +2022,7 @@ print(itm.MyLineTxt.Text)
 
 end
 
- 
+
 
 function win.On.MyLineTxt.TextChanged(ev)
 
@@ -2030,7 +2030,7 @@ print(itm.MyLineTxt.Text)
 
 end
 
- 
+
 
 win:Show()
 
@@ -2118,7 +2118,7 @@ local disp = bmd.UIDispatcher(ui)
 
 local width,height = 600,800
 
- 
+
 
 win = disp:AddWindow(\{
 
@@ -2130,7 +2130,7 @@ Geometry = \{ 100, 100, width, height \},
 
 Spacing = 10,
 
- 
+
 
 ui:VGroup\{
 
@@ -2138,7 +2138,7 @@ ID = 'root',
 
 Margin = 50,
 
-   
+
 
 -- Add your GUI elements here:
 
@@ -2148,7 +2148,7 @@ ui:TextEdit\{ID='MyTxt', Text = 'Hello', PlaceholderText = 'Please Enter a few w
 
 \})
 
- 
+
 
 -- The window was closed
 
@@ -2158,13 +2158,13 @@ disp:ExitLoop()
 
 end
 
- 
+
 
 -- Add your GUI element based event functions here:
 
 itm = win:GetItems()
 
- 
+
 
 function win.On.MyTxt.TextChanged(ev)
 
@@ -2172,7 +2172,7 @@ print(itm.MyTxt.PlainText)
 
 end
 
- 
+
 
 win:Show()
 
@@ -2192,7 +2192,7 @@ ui.VGroup(\{ "ID": "root",\},\[
 
 \# Add your GUI elements here:
 
-ui.TextEdit(\{ 
+ui.TextEdit(\{
 
 "ID": "MyTxt",
 
@@ -2246,9 +2246,9 @@ You can detect a single click on a row using "function win.On.Tree.ItemClicked(e
 
 You can detect a double click on a row using "function win.On.Tree.ItemDoubleClicked(ev)".
 
-Inside the single click or double click events you can read the row name text that was clicked with "ev.item.Text\[1\]". The index value in the \[\] brackets is the specific column heading text you want to display. 
+Inside the single click or double click events you can read the row name text that was clicked with "ev.item.Text\[1\]". The index value in the \[\] brackets is the specific column heading text you want to display.
 
-You can edit the contents of a specific tree view cell that was clicked on using "ev.column" to access an individual cell: 
+You can edit the contents of a specific tree view cell that was clicked on using "ev.column" to access an individual cell:
 
 -- A Tree view cell was clicked on
 
@@ -2282,7 +2282,7 @@ local disp = bmd.UIDispatcher(ui)
 
 local width,height = 430,700
 
- 
+
 
 win = disp:AddWindow(\{
 
@@ -2294,19 +2294,19 @@ Geometry = \{ 100, 100, width, height \},
 
 Spacing = 0,
 
- 
+
 
 ui:VGroup\{
 
 ID = 'root',
 
-ui:Tree\{ID = 'Tree', SortingEnabled=true, Events = \{ItemDoubleClicked=true, ItemClicked=true\}, \},  
+ui:Tree\{ID = 'Tree', SortingEnabled=true, Events = \{ItemDoubleClicked=true, ItemClicked=true\}, \},
 
 \},
 
 \})
 
- 
+
 
 -- The window was closed
 
@@ -2316,13 +2316,13 @@ disp:ExitLoop()
 
 end
 
- 
+
 
 -- Add your GUI element based event functions here:
 
 itm = win:GetItems()
 
- 
+
 
 -- Add a header row.
 
@@ -2342,13 +2342,13 @@ hdr.Text\[5\] = 'Column E'
 
 itm.Tree:SetHeaderItem(hdr)
 
- 
+
 
 -- Number of columns in the Tree list
 
 itm.Tree.ColumnCount = 5
 
- 
+
 
 -- Resize the Columns
 
@@ -2364,7 +2364,7 @@ itm.Tree.ColumnWidth\[4\] = 75
 
 itm.Tree.ColumnWidth\[5\] = 75
 
- 
+
 
 -- Add an new row entries to the list
 
@@ -2382,7 +2382,7 @@ itRow.Text\[2\] = string.format('B %02d', row);
 
 itRow.Text\[3\] = string.format('C %02d', row);
 
-itRow.Text\[4\] = string.format('D %02d', row);  
+itRow.Text\[4\] = string.format('D %02d', row);
 
 itRow.Text\[5\] = string.format('E %02d', row);
 
@@ -2390,7 +2390,7 @@ itm.Tree:AddTopLevelItem(itRow)
 
 end
 
- 
+
 
 -- A Tree view row was clicked on
 
@@ -2398,7 +2398,7 @@ function win.On.Tree.ItemClicked(ev)
 
 print('\[Single Clicked\] ' .. tostring(ev.item.Text\[0\]))
 
- 
+
 
 -- You can use the ev.column value to edit a specific ui:Tree cell label
 
@@ -2406,7 +2406,7 @@ ev.item.Text\[ev.column\] = '\*CLICK\*'
 
 end
 
- 
+
 
 -- A Tree view row was double clicked on
 
@@ -2416,7 +2416,7 @@ print('\[Double Clicked\] ' .. tostring(ev.item.Text\[0\]))
 
 end
 
- 
+
 
 win:Show()
 
@@ -2516,7 +2516,7 @@ itRow = itm\["Tree"\].NewItem()
 
 itRow.Text\[0\] = "Row \{0:02d\}".format(row)
 
-	
+
 
 itRow.Text\[1\] = "A \{0:02d\}".format(row)
 
@@ -2554,7 +2554,7 @@ dlg.Hide()
 
 AddConfig
 
-AddConfig() is a function that is often used to capture window closing hotkeys events. 
+AddConfig() is a function that is often used to capture window closing hotkeys events.
 
 This approach stops Fusion from closing your foreground composite document each time a user presses Escape, Control+W/Command+W, or Control+F4/Command+F4 when the user expects the hotkey will be used to actually close a UI Manager GUI window instead.
 
@@ -2669,7 +2669,7 @@ Target = 'HotkeysWin',
 
 Defaults = true,
 
-		
+
 
 CONTROL\_W = 'Execute\{cmd = \[\[app.UIManager:QueueEvent(obj, "Close", \{\})\]\]\}',
 
@@ -2953,7 +2953,7 @@ Spacing = 10,
 
 Margin = 50,
 
-	
+
 
 ui:VGroup\{
 
@@ -2979,7 +2979,7 @@ Weight = 0.25,
 
 ui:Label\{
 
-ID='FileTxt', 
+ID='FileTxt',
 
 Text = 'Please Enter a file path.',
 
@@ -2989,7 +2989,7 @@ Weight = 1.5,
 
 ui:Button\{
 
-ID = 'FileButton', 
+ID = 'FileButton',
 
 Text = 'Select a File',
 
@@ -3025,7 +3025,7 @@ Weight = 1.5,
 
 ui:Button\{
 
-ID = 'FolderButton', 
+ID = 'FolderButton',
 
 Text = 'Select a Folder',
 
@@ -3073,7 +3073,7 @@ print('Open Folder Button Clicked')
 
 selectedPath = tostring(fu:RequestDir('Scripts:/Comp'))
 
-	
+
 
 print('\[Folder\] ', selectedPath)
 
