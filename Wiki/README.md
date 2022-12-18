@@ -42,6 +42,8 @@ This folder is an [Obsidian](https://obsidian.md) vault, which - for the time be
 
 If you only want to use the documentation, then (for the time being) you can just access its latest version on [confusion.nmbr73.net](http://confusion.nmbr73.net/). But this documentation won't be all too useful unless there are people who volunteer to complement and update it. Find here what's needed to get involved ...
 
+### Tools installation
+
 Tools you should have in your belt are at least Git, GitHub, and Obsidian for editing the documentation; you may want to install Python, VSCode, and maybe Lua if you are interested in working on the scripts.
 
 > [!example]- Tool installation on macOS
@@ -73,6 +75,67 @@ Download Obsidian from [obsidian.md](https://obsidian.md) (or install via [`brew
 You should then see the exact documentation you are currently reading in Obsidian:
 
 ![[Screenshot of the Wiki as an Obsidian Vault.png]]
+
+### Editing in Obsidian
+
+...
+
+### Git to apply your edits
+
+Git and GitHub are used not only for versioning, but also in the sense of a collaboration tool. The `main`branch will soon be "protected" against direct modifications. This means: Even if you just want to edit some text or fix some types you (currently) must use Git and its key functionalities like branches and synchronization with remotes. But knowing a little bit of Git is totally worth it in so many situations so you should definitely give it a try ...
+
+> [!TODO]- Correct and complement the Git description
+> It's meant to be a very(!) short "howto", to quickly lookup the commands, but by no means an introduction to Git. Still it needs some rework.
+
+Before working on Kernfusion:
+```sh
+git switch main
+git fetch
+git branch <NAME>
+git switch <NAME>
+git push --set-upstream origin <NAME>
+```
+
+
+Do create a snapshots of your local changes whenever you finished a peace of work:
+```sh
+git status # to see your changes
+git add . # to add all your changes
+git commit -m <DESCRIPTION> # comit these changes your local repo
+```
+
+This is to build up a documented version history.
+
+
+Push your changes on your branch to the origin’s main from time to time
+```sh
+git pull # get any changes, that might have been made to your branch
+git push 
+```
+
+Incorporate changes that may have happened to main in the meantime into your branch:
+```sh
+git switch <NAME>
+git merge origin/main
+git push origin <NAME>
+
+# or rebase?
+# git fetch
+# git rebase origin/main
+```
+
+Create request to pull you brache’s changes into the main branch:
+```sh
+ #…
+```
+
+Cleanup when your done with that branch of work:
+```sh
+git switch main
+git branch --delete <NAME>
+```
+
+
 
 ## Authoring
 
