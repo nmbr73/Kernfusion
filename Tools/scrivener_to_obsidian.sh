@@ -1,23 +1,27 @@
 #!/bin/bash
 
-SRCIVENER_EXPORT=$1
+SRCIVENER_EXPORT="temp/scrivener_export.md"
+DEBUG="uncommment for debug mode"
+
+# SRCIVENER_EXPORT=$1
+
+# if [[ -z $SRCIVENER_EXPORT ]]; then
+#     echo "pass path to a Scriver pandoc export as 1st arg!"
+#     echo "... or just 'test'"
+#     exit 10
+# fi
 
 
-if [[ -z $SRCIVENER_EXPORT ]]; then
-    echo "pass path to a Scriver pandoc export as 1st arg!"
-    echo "... or just 'test'"
-    exit 10
-fi
+# if [ $SRCIVENER_EXPORT == "test" ]; then
 
+#     if [ ! -d "temp/scrivener_export.md" ]; then
+#         cp -rp Data/example.export/scrivener_export.md Wiki/scrivener_export.md
+#     fi
 
-if [ $SRCIVENER_EXPORT == "test" ]; then
+#     SRCIVENER_EXPORT="temp/scrivener_export.md"
 
-    if [ ! -d "Wiki/_export.md" ]; then
-        cp -rp Data/example.export/_export.md Wiki/
-    fi
-
-    SRCIVENER_EXPORT="Wiki/_export.md/_export.md"
-fi
+#     # SRCIVENER_EXPORT="Wiki/_export.md/_export.md"
+# fi
 
 
 SRCIVENER_PATH=`dirname $SRCIVENER_EXPORT`
@@ -35,26 +39,33 @@ if [ ! -f $SRCIVENER_EXPORT ]; then
     exit 20
 fi
 
-# echo "SRCIVENER_EXPORT = '$SRCIVENER_EXPORT'" # 'Wiki/_export.md/_export.md'
-# echo "SRCIVENER_PATH   = '$SRCIVENER_PATH'"   # 'Wiki/_export.md'
-# echo "SRCIVENER_BASE   = '$SRCIVENER_BASE'"   # 'Wiki'
-# echo "SRCIVENER_FILE   = '$SRCIVENER_FILE'"   # '_export.md'
+SRCIVENER_TMPPATH="temp"
+
+# echo "SRCIVENER_EXPORT = '$SRCIVENER_EXPORT'"  # 'temp/scrivener_export.md/scrivener_export.md'
+# echo "SRCIVENER_PATH   = '$SRCIVENER_PATH'"    # 'temp/scrivener_export.md'
+# echo "SRCIVENER_BASE   = '$SRCIVENER_BASE'"    # 'temp'
+# echo "SRCIVENER_FILE   = '$SRCIVENER_FILE'"    # 'scrivener_export.md'
+# echo "SRCIVENER_BASE   = '$SRCIVENER_TMPPATH'" # 'temp'
 
 
 
 # ----------------------------------------------------------------------------
-# Write AST
+# Write Original, AST, ... for debugging
 
-# pandoc --from=markdown --to=native --output="$SRCIVENER_PATH/_native.lua" $SRCIVENER_EXPORT
-
-
+if [[ -z $DEBUG ]]; then
+  cp "$SRCIVENER_EXPORT" "$SRCIVENER_TMPPATH/_original.md"
+  pandoc --from=markdown --to=native --output="$SRCIVENER_TMPPATH/_native.lua" $SRCIVENER_EXPORT
+fi
 
 # ----------------------------------------------------------------------------
-# Store frtont matter in environment variables
+# Store front matter in environment variables
 
-pandoc --standalone --from=markdown --to plain --template=Tools/scrivener_to_obsidian/metadata.template.sh --output="$SRCIVENER_PATH/_frontmatter.sh" $SRCIVENER_EXPORT
-source $SRCIVENER_PATH/_frontmatter.sh
-rm -f $SRCIVENER_PATH/_frontmatter.sh
+pandoc --standalone --from=markdown --to plain --template=Tools/scrivener_to_obsidian/metadata.template.sh --output="$SRCIVENER_TMPPATH/_frontmatter.sh" $SRCIVENER_EXPORT
+source "$SRCIVENER_TMPPATH/_frontmatter.sh"
+
+if [[ ! -z $DEBUG ]]; then
+  rm -f "$SRCIVENER_TMPPATH/_frontmatter.sh"
+fi
 
 echo "METADATA_TITLE  = '$METADATA_TITLE'"  # 'Welcome to the Kartaverse'
 echo "METADATA_AUTHOR = '$METADATA_AUTHOR'" # ''
@@ -112,5 +123,9 @@ pandoc \
   --to=Tools/scrivener_to_obsidian/obsidian.writer.lua \
   --output="$OBSIDIAN_EXPORT" $SRCIVENER_EXPORT
 
-python Tools/scrivener_to_obsidian/split.py "$OBSIDIAN_EXPORT"
+if [[ -z $DEBUG ]]; then
+    cp "$OBSIDIAN_EXPORT" "$SRCIVENER_TMPPATH/_pandoc.md"
+fi
+
+python Tools/scrivener_to_obsidian.py "$OBSIDIAN_EXPORT"
 

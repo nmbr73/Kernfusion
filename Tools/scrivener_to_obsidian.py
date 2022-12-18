@@ -53,7 +53,7 @@ for part in parts:
     })
 
 
-nav = ["nav:", "  - ..."]
+nav = ["nav:"]
 
 for i, page in enumerate(pages):
 
@@ -86,6 +86,8 @@ for i, page in enumerate(pages):
 
     with outfile.open('w') as file:
         file.write(body)
+
+nav.append("  - ...")
 
 outfile = outdir.joinpath('.pages')
 with outfile.open('w') as file:
