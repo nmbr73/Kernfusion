@@ -21,6 +21,7 @@ parts[0] = f"{infile.stem}\n\n" + parts[0]
 pages = []
 
 for part in parts:
+
     part = part.strip()
     pos = part.find("\n")
     if pos == -1:
@@ -35,23 +36,56 @@ for part in parts:
         part = part[len(title):].strip()
 
 
-    fname = title
+    name = title
 
-    if fname.find("/") != -1:
-        fname = fname.replace("/","_")
-        pages.append(f"{title}: {fname}.md")
+    if name.find("/") != -1:
+        name = name.replace("/","_")
+        #pages.append(f"{title}: {fname}.md")
+    #else:
+        #pages.append(fname+".md")
+
+    #outfile = outdir.joinpath(fname+'.md')
+
+    pages.append({
+        'title' : title,
+        'name'  : name,
+        'body'  : part,
+    })
+
+
+nav = ["nav:", "  - ..."]
+
+for i, page in enumerate(pages):
+
+    front_matter = []
+
+    name = page['name']
+    title = page['title']
+    body = page['body']
+
+    if name == title:
+        nav.append(f"  - {name}.md")
     else:
-        pages.append(fname+".md")
+        nav.append(f"  - {title}: {name}.md")
+        front_matter.append(f"title: {title}") # for MkDocs
+        front_matter.append(f"alias: {title}") # for Obsidian
 
-    outfile = outdir.joinpath(fname+'.md')
+    if i>0:
+        front_matter.append(f"prev: {pages[i-1]['name']}")
+
+    if i+1<len(pages):
+        front_matter.append(f"next: {pages[i+1]['name']}")
+
+    if front_matter:
+        body = "---\n" + "\n".join(front_matter) + "\n---\n\n" + body
+
+    outfile = outdir.joinpath(name+'.md')
 
     with outfile.open('w') as file:
-        file.write(part)
-
-nav = "nav:\n  - ...\n  - " + "\n  - ".join(pages) + "\n"
+        file.write(body)
 
 outfile = outdir.joinpath('.pages')
 with outfile.open('w') as file:
-    file.write(nav)
+    file.write("\n".join(nav))
 
 
