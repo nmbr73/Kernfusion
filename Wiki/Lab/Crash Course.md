@@ -2,6 +2,9 @@ You'll find tons of excellent and thorough documentation on the different format
 
 ## Pandoc
 
+> [!summary]- Currently used to convert Scrivener exports
+>  Not making much use of it - finding the first headline, finding all images, and (main part und really helpful) changing the formatting of image links. But Pandoc seems pretty versatile and powerful and could be of use for many other situations. And my usage so far shows a template, a filter and a writer.
+
 Pandoc is a tool for transforming documents from one format to another, e.g. from Word to HTML. Install on macOS e.g. via `brew install pandoc`.
 
 **Example:**
@@ -29,8 +32,12 @@ This simple concept allows for lots of conversions from many document formats in
 - The list of supported **input/output formats** are listed under the `--from`/`--to` [General Options](https://pandoc.org/MANUAL.html#general-options).
 - The **AST format** is described by the [Text-Pandoc-Definition](https://hackage.haskell.org/package/pandoc-types-1.22.2.1/docs/Text-Pandoc-Definition.html). You can use `--to=native` to get the internal Haskell representation of an input document.
 - **Filtering** can be described in JSON or implemented in miscellaneous script languages (see: [filters](https://pandoc.org/filters.html)), but preferably Pandoc's integrated Lua interpreter can be used to realize [Pandoc Lua Filters](https://pandoc.org/lua-filters.html).
+- **Templates** ...
 	
 ...
+
+Pandoc has for example a  [`--shift-heading-level-by`](https://pandoc.org/MANUAL#option--shift-heading-level-by) option which lets you increase or decrease the level of all headers in a document. 
+
 
 ## Markdown
 
@@ -48,6 +55,9 @@ There are various flavors of Markdown (e.g. [CommonMark](https://commonmark.org)
 
 ## MultiMarkDown
 
+> [!warning]- Not used.
+> Seemed at a first glance to be a good alternative to Pandoc's markdown flavour. But turned out to have no advantages.
+
 [MultiMarkdown](https://fletcherpenney.net/multimarkdown/) is an extension (aka flavor) of Markdown adding support for features often needed for documentation purposes, such as math formulas, image attributes, definition lists, etc.
 
 There is a [multimarkdown](https://fletcher.github.io/MultiMarkdown-6/) tool (`brew install multimarkdown`) that can be used to convert multimarkdown files into some other output formats (but probably pandoc is the better choice in this regard).
@@ -55,6 +65,11 @@ There is a [multimarkdown](https://fletcher.github.io/MultiMarkdown-6/) tool (`b
 Scriviner includes MultiMarkdown support.
 
 Pandoc allows for MultiMarkdown import and export by specifying the format being `markdown_mmd`.
+
+Further reading:
+- [Pandoc-vs-Multimarkdown](https://github.com/jgm/pandoc/wiki/Pandoc-vs-Multimarkdown)
+- [Why I switched from MultiMarkdown to Pandoc](https://dtucker.co.uk/lifehack/why-i-switched-from-multimarkdown-to-pandoc.html)
+
 
 ## YAML front matter
 

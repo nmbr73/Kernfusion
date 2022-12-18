@@ -1,31 +1,65 @@
 
 
-## Convert the demo Scrivener document
-
-Open `Data/Kernfusion.scriv` in Scrivener.
-Compile for "MultiMarkdown" using "Extended Pandoc (nmbr73)" from the "Project Formats".
-Save as `Wiki/Lab/inout/ScrivenerOutput.md`.
+## Scrivener to Obsidian
 
 ```sh
-OUTDIR="Wiki/Lab/inout/ScrivenerOutput.md"
-pandoc --from=markdown --to=native --output=$OUTDIR/NativeOutput.lua $OUTDIR/ScrivenerOutput.md
-pandoc --from=markdown --to=Tools/obsidian.lua --output=$OUTDIR/PandocOutput.md $OUTDIR/ScrivenerOutput.md
+
+# setup
+cd Kernfusion
+mkdir -p temp
+source venv/bin/activate
+
+BRANCH="$(whoami)_export"
+git switch main
+git pull
+git branch $BRANCH
+git switch $BRANCH
+git push origin branch
+
+
+# In Scrivener compile some document.
+# Forman should me a paddoc markdown
+# format - but you must make sure that
+# "layouts assigned for section types"
+# or whatsoever (did not really get this)
+# preserve headlines and text. Save for
+# example es temp/scrivener_export.md
+
+
+
+# process for obsidian
+./Tools/scrivener_to_obsidian.sh temp/scrivener_example.md
+
+
+# You can now review and edit the output
+# in Obsidian. But make sure to not run
+# scrivener_to_obsidian.sh for the same
+# export again because this will delete
+# all your changes!
+
+
+# process for mkdoks
+./Tools/obsidian_to_mkdocs.sh
+
+# review on http://localhost:8000/
+mkdocs serve
+
+
+
+# If everything looks good remove the
+# trailing slash from the folder that
+# had been created in 'Wiki/'. Now you
+# can push your newly generated articles
+# to the remote:
+
+git add .
+git commit -m 'Scrivener export added'
+git push
 ```
 
-## Kartaverse experiments
 
-In Scrivener compile your document to Markdown in 'Basic Pandoc' format (or a Pandoc format derived from it).
 
-Set the name to save to being '_export.md' within `Wiki/` as the target directory.
 
-Run the conversion from Scrivener's Pandoc export to Obsidian Markdown:
-
-<!--
-Images Used:
-```sh
-pandoc --from=markdown --to=Tools/imagelist.lua Wiki/KartaExport.md/KartaExport.md --output=Wiki/KartaExport.md/KartaFix.md
-```
--->
 
 ## Own ...
 
