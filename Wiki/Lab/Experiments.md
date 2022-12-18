@@ -1,6 +1,6 @@
 
 
-# Convert the demo Scrivener document
+## Convert the demo Scrivener document
 
 Open `Data/Kernfusion.scriv` in Scrivener.
 Compile for "MultiMarkdown" using "Extended Pandoc (nmbr73)" from the "Project Formats".
@@ -12,7 +12,7 @@ pandoc --from=markdown --to=native --output=$OUTDIR/NativeOutput.lua $OUTDIR/Scr
 pandoc --from=markdown --to=Tools/obsidian.lua --output=$OUTDIR/PandocOutput.md $OUTDIR/ScrivenerOutput.md
 ```
 
-# Kartaverse experiments
+## Kartaverse experiments
 
 In Scrivener compile your document to Markdown in 'Basic Pandoc' format (or a Pandoc format derived from it).
 
@@ -27,7 +27,7 @@ pandoc --from=markdown --to=Tools/imagelist.lua Wiki/KartaExport.md/KartaExport.
 ```
 -->
 
-# Own ...
+## Own ...
 
 > [!warning] Embed: [Reactor is released - GET IT NOW!](https://www.youtube.com/watch?v=mklCsf8yOUk)
 

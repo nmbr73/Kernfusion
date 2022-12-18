@@ -7,7 +7,7 @@ The Fusion community developed the Reactor software as a group effort to create 
 
 
 
-# Install Reactor Package Manager
+## Install Reactor Package Manager
 
 > [!SUMMARY]
 > See the [Reactor Release Announcement](https://www.steakunderwater.com/wesuckless/viewtopic.php?t=1814) WSL post for the most recent instructions on on how to download and install Reactor.
@@ -20,7 +20,7 @@ The Fusion community developed the Reactor software as a group effort to create 
 
 So far the Reactor Package Manager has been installed over 190,000 times since 2018!
 
-## Download and run the Installer
+### Download and run the Installer
 
 To start using Reactor, first you need to download the [Reactor-Installer.lua](https://www.steakunderwater.com/wesuckless/download/file.php?id=4862) script to your computer. 
 
@@ -45,7 +45,7 @@ When the Reactor Installer starts you are presented with the following dialog. I
 > You can change the installed Reactor location later on by modifying the Fusion "PathMap" preferences and pointing the "Reactor:" PathMap at a new folder path.
 
  
-## Reactor Installation Status
+### Reactor Installation Status
 
 Reactor shows a progress bar while the installation process is underway.
 
@@ -53,7 +53,7 @@ Reactor shows a progress bar while the installation process is underway.
 
 When the Reactor installation is complete an Explorer (Win), Finder (macOS), or Nautilus (Linux) folder browsing window is displayed. This shows you the location on-disk where new Reactor content is downloaded to. This folder in Fusion terms is called the "Reactor:" PathMap location.
 
-# Open Reactor Package Manager
+## Open Reactor Package Manager
 
 In Fusion Studio you can do this by opening the root-level "Reactor" menu, then select the "Open Reactor" menu item.
 ![[Reactor - Open Reactor in Fusion.png]]
@@ -67,7 +67,7 @@ When the Reactor Package Manager window loads initially you will see a list of a
 
 Note: The content that is listed in the Reactor window comes from the [Reactor GitLab repository](https://gitlab.com/WeSuckLess/Reactor). If you have an outgoing firewall, or your country/company/ISP (internet service provider) has network filtering rules that block access to GitLab you will have to use another approach to install the Reactor content on your system.
 
-## Where to go from here?
+### Where to go from here?
 
 There are currently (as of 2022-11-08) a total of 356 atom packages in the Reactor Package Manager. This means there is likely something interesting for just about any type of Resolve/Fusion user's tastes. You may start having a first look at some [[Essential Reactor Atom Packages]]
 

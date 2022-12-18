@@ -52,7 +52,7 @@ fi
 # ----------------------------------------------------------------------------
 # Store frtont matter in environment variables
 
-pandoc --standalone --from=markdown --to plain --template=Tools/scrivconv/metadata.template.sh --output="$SRCIVENER_PATH/_frontmatter.sh" $SRCIVENER_EXPORT
+pandoc --standalone --from=markdown --to plain --template=Tools/scrivener_to_obsidian/metadata.template.sh --output="$SRCIVENER_PATH/_frontmatter.sh" $SRCIVENER_EXPORT
 source $SRCIVENER_PATH/_frontmatter.sh
 rm -f $SRCIVENER_PATH/_frontmatter.sh
 
@@ -64,7 +64,7 @@ echo "METADATA_AUTHOR = '$METADATA_AUTHOR'" # ''
 # ----------------------------------------------------------------------------
 # Get first headline from the document
 
-FIRST_HEADLINE=`pandoc --lua-filter=Tools/scrivconv/first_headline.filter.lua $SRCIVENER_EXPORT`
+FIRST_HEADLINE=`pandoc --lua-filter=Tools/scrivener_to_obsidian/first_headline.filter.lua $SRCIVENER_EXPORT`
 
 echo "FIRST_HEADLINE  = '$FIRST_HEADLINE'"  # 'Immersive Pipeline Integration Guide'
 
@@ -79,24 +79,25 @@ fi
 
 # ----------------------------------------------------------------------------
 
-OBSIDIAN_PATH="$SRCIVENER_PATH/$FIRST_HEADLINE"
+OBSIDIAN_PATH="$SRCIVENER_PATH/_$FIRST_HEADLINE"
 OBSIDIAN_FILE="$FIRST_HEADLINE.md"
 OBSIDIAN_EXPORT="$OBSIDIAN_PATH/$OBSIDIAN_FILE"
 
 mkdir -p "$OBSIDIAN_PATH"
 
-IMAGE_REFERENCES=`pandoc --lua-filter=Tools/scrivconv/images.filter.lua $SRCIVENER_EXPORT`
+IMAGE_REFERENCES=`pandoc --lua-filter=Tools/scrivener_to_obsidian/images.filter.lua $SRCIVENER_EXPORT`
 
 
 if [[ ! -z $IMAGE_REFERENCES ]]; then
 
-    mkdir -p "$OBSIDIAN_PATH/img"
+    #mkdir -p "$OBSIDIAN_PATH/img"
 
     SAVEIFS=$IFS
     IFS=$(echo -en "\n\b")
     for file in $IMAGE_REFERENCES
     do
-        cp "$SRCIVENER_PATH/$file" "$OBSIDIAN_PATH/img/"
+        # cp "$SRCIVENER_PATH/$file" "$OBSIDIAN_PATH/img/"
+        cp "$SRCIVENER_PATH/$file" "$OBSIDIAN_PATH/"
     done
     IFS=$SAVEIFS
 fi
@@ -108,6 +109,8 @@ fi
 pandoc \
   --wrap=none \
   --from=markdown \
-  --to=Tools/scrivconv/obsidian.writer.lua \
+  --to=Tools/scrivener_to_obsidian/obsidian.writer.lua \
   --output="$OBSIDIAN_EXPORT" $SRCIVENER_EXPORT
+
+python Tools/scrivener_to_obsidian/split.py "$OBSIDIAN_EXPORT"
 

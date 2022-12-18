@@ -20,6 +20,7 @@ pip install mkdocs-material
 pip install mkdocs-roamlinks-plugin
 pip install mkdocs-mermaid2-plugin
 pip install mkdocs-callouts
+pip install mkdocs-awesome-pages-plugin
 ```
 
 

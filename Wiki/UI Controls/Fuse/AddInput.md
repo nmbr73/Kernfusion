@@ -9,9 +9,9 @@ with
 * identifier: a string used for scripting, i.e. when saving the controls value to a lua file
 * attributes: a table with attributes determining the controls type and properties
 
-# Attributes
+## Attributes
 
-## Mandatory Attribute
+### Mandatory Attribute
 
 * `INPID_InputControl` ist a string specifying the type of control to add and must be one of the following:
   * ButtonControl
@@ -31,7 +31,7 @@ with
   * SliderControl
   * TextEditControl
 
-## Common Attributes
+### Common Attributes
 
 * `LINKID_DataType` as string that specifies the data type of the control. Set this according to the INPID_InputControl used; e.g., Number for a SliderControl, or Text for a FileControl. Use Image to specify an image input channel for the tool.
   * `FuID`
@@ -46,22 +46,22 @@ with
 * `ICD_Width`(float): The width of the control; e.g. a 0.5 makes the control half of its normal size.
 
 
-## Input Control Types 
+### Input Control Types 
 
 When calling `AddInput()` use one of the following for `INPID_InputControl`:
 
 
 
-### ComboControl
+#### ComboControl
 
 Creates a drop down menu. Selected entry is represented by a number (starting with 0 for the first entry).
 
-#### Attributes
+##### Attributes
 
 * `CC_LabelPosition` ("Vertical"|"Horizontal"): Position of the label for this control (default is "Horizontal"). 
 * `CCS_AddString`
 
-#### Example
+##### Example
 
 ```lua
 InCombo = self:AddInput("Select one", "MySelectOneCombo", {
@@ -79,7 +79,7 @@ InCombo = self:AddInput("Select one", "MySelectOneCombo", {
 ```
 
 
-## Preview Control Types
+### Preview Control Types
 
 Values for `INPID_PreviewControl` are:
 

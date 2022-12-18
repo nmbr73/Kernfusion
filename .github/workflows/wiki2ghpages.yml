@@ -23,9 +23,8 @@ jobs:
           pip install mkdocs-roamlinks-plugin
           pip install mkdocs-mermaid2-plugin
           pip install mkdocs-callouts
+          pip install mkdocs-awesome-pages-plugin
       - name: Run mkdocs
         run: |
           mv Wiki docs
-          mv docs/README.md docs/index.md
-          python Tools/obsidian_to_mkdocs.py
           mkdocs gh-deploy --force
