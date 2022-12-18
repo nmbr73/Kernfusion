@@ -24,19 +24,12 @@ flowchart TB
 [[Kartaverse/README|Kartaverse]]
 [[Kartaverse]]
 
-## Multimarkdown or Pandoc
 
-- [Pandoc-vs-Multimarkdown](https://github.com/jgm/pandoc/wiki/Pandoc-vs-Multimarkdown)
-- [Why I switched from MultiMarkdown to Pandoc](https://dtucker.co.uk/lifehack/why-i-switched-from-multimarkdown-to-pandoc.html)
 
 ## TODO: docconv
 
 https://pkg.go.dev/code.sajari.com/docconv
 
-
-## Obsidian to MkDocs via Pandoc
-
-Pandoc has a  [`--shift-heading-level-by`](https://pandoc.org/MANUAL#option--shift-heading-level-by) which could help when putting the filename as a top-level headline for the page ... or maybe better to just keep the heading level as the filename seems to be a h1 in Obsidian.
 
 
 ## Scrivener
