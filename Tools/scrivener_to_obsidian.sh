@@ -112,3 +112,5 @@ pandoc \
   --to=Tools/scrivener_to_obsidian/obsidian.writer.lua \
   --output="$OBSIDIAN_EXPORT" $SRCIVENER_EXPORT
 
+python Tools/scrivener_to_obsidian/split.py "$OBSIDIAN_EXPORT"
+
