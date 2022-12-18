@@ -2,7 +2,7 @@ Blackmagic Fusion is a state of the art compositing software that is used by Hol
   
 Fusion is used for 3D and 2D compositing and Visual FX, Virtual Reality Production, Motion Graphics and more.  
 
-# Getting Started with Fusion
+## Getting Started with Fusion
 
   
 It's recommend to start with the [Tutorial](https://youtu.be/nWk6kY6wleU) on the [Official Blackmagic Design YouTube Channel](https://www.youtube.com/channel/UCufB8sMVyP9JEScMjLz74YA).  
@@ -11,9 +11,9 @@ After that you can check out the YouTube channels on our [[Resources]] page.
   
 If you are coming from an After Effects or Nuke environment, check out our [[After Effects to Fusion]] and [[Nuke to Fusion]] Pages.  
 
-## Fusion Communities
+### Fusion Communities
 
-### We Suck Less
+#### We Suck Less
 
 There is a wonderful Fusion users community over at the [Steak Under Water](https://www.steakunderwater.com/wesuckless) website.  
   
@@ -21,13 +21,13 @@ This forum is full of very knowledgeable and friendly Fusion users that might ha
   
 so if you have any questions that you want to ask, then this will be the best place to ask.  
 
-### The Blackmagic Design Forum
+#### The Blackmagic Design Forum
   
 This is the [Official Forum](https://forum.blackmagicdesign.com/) that is managed by the developers of Fusion,  
   
 it isn't as active as WSL but it can be a great place to grab the attention of the developers to report bugs or issues with the software.  
 
-## Reactor
+### Reactor
 
 This is an amazing extension manager for Fusion.  
   

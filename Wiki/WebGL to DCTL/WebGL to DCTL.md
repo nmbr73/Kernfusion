@@ -1,14 +1,15 @@
 ---
-tags: [category, webgl2dctl]
+alias: WebGL to DCTL
 ---
 
-Collecting here the information found on our journey converting GLSL shaders to DCTL. For example one could write an article on [[swizzling]], [[sign()]], or [[Mathematical Functions]] ...
+Collecting here the information found on our journey converting GLSL shaders to DCTL. For example one could write an article on [[swizzling]], [[sign()]], or [[Math Functions|Mathematical Functions]] ...
 
-[[Conversion]]<br />
-[[Math Functions|Mathematical Functions]]<br />
-[[User Interface|Extending the Graphical User Interface]]<br />
-[[Fuse Settings]]<br />
-[[AddInput]]<br />
-[[Script/Libraries]]<br />
+[[Conversion]]
+[[Math Functions|Mathematical Functions]]
+User Interface|Extending the Graphical User Interface
+Fuse Settings
+[[AddInput]]
+Script/Libraries
 
-[[Links]]
+
+

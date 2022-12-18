@@ -19,8 +19,10 @@ flowchart TB
 
 - Test: Internal link to an "index" file [[WebGL to DCTL]]
 - Test: Internal link to a file [[Fuse-Settings]]
+[[Foundations/README|Foundations]]
 
-
+[[Kartaverse/README|Kartaverse]]
+[[Kartaverse]]
 
 ## Multimarkdown or Pandoc
 
@@ -135,8 +137,8 @@ Index files
 - https://forum.obsidian.md/t/folder-link-default-load-readme-md-file-just-like-github/41335
 
 
-![[img/Scrivener_hierarchy01.png]]
+![[Scrivener_hierarchy01.png]]
 
 -----
 
-![[folder_images/Scrivener_hierarchy02.png]]
+![[Scrivener_hierarchy02.png]]

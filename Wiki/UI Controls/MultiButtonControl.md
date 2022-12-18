@@ -38,7 +38,7 @@ A multi button control (`INPID_InputControl='MultiButtonControl'`) displays one 
   })
 ```
 
-# Attributes
+## Attributes
 
 Besides of the general [AddInput attributes](AddInput_Attributes), there are the following control specific properties:
 
@@ -91,10 +91,10 @@ Button level attributes:
 
 
 
-# Examples
+## Examples
 - [Docs/MultiButtonControl.fuse](https://github.com/nmbr73/Kernfusion/blob/main/Fuses/Docs/MultiButtonControl.fuse)
 
-# Notes
+## Notes
 
 The MultiButtonControl (see [VFXPedia](https://www.steakunderwater.com/VFXPedia/96.0.243.189/index4dea.html?title=Eyeon:Script/Reference/Applications/Fuse/Classes/Input/MultiButtonControl); usage example in [OpenCL Fuses: Position and Time](http://www.bryanray.name/wordpress/opencl-fuses-position-and-time/)) does not work as expected since quite a while. This [bug with adding a control to a Fusion tool](https://forum.blackmagicdesign.com/viewtopic.php?f=21&t=72828&p=405807&hilit=MultiButton#p405699) when it comes to multi buttons has been reported on the BMD forum in 2018 already, as well as it had been put on the [The most friendly feature request list for Fusion16](https://forum.blackmagicdesign.com/viewtopic.php?f=22&t=89684&p=500691&hilit=MultiButton#p500691). It's already been a pity that things like 'TriState' have never been implemented and adding icons is restricted to the C++ API, but with this bug the MultiButtonControl looks like just an ordinary ComboBoxControl. The solution to this is pretty simple but not easy to find: you add a `MBTNC_ForceButtons = true` and the options are shown as buttons again.
 
