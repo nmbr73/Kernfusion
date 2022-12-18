@@ -63,12 +63,15 @@ for i, page in enumerate(pages):
     title = page['title']
     body = page['body']
 
+
     if name == title:
         nav.append(f"  - {name}.md")
     else:
         nav.append(f"  - {title}: {name}.md")
         front_matter.append(f"title: {title}") # for MkDocs
         front_matter.append(f"alias: {title}") # for Obsidian
+
+    front_matter.append("tags: [export, export-scrivener, revise]")
 
     if i>0:
         front_matter.append(f"prev: {pages[i-1]['name']}")
