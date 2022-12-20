@@ -13,6 +13,16 @@ for filepath in basepath.rglob("*"):
     if not filepath.is_dir():
         continue
 
+    if filepath.name == "img":
+        continue
+
+    if filepath.name == filepath.parent.name + ".img":
+        continue
+
+    if "_" + filepath.name == filepath.parent.name + ".img":
+        continue
+
+
     pagespath = filepath.joinpath('.pages')
     if pagespath.is_file():
         continue
@@ -22,7 +32,7 @@ for filepath in basepath.rglob("*"):
 
     if not indexpath.is_file():
         with indexpath.open('w') as f:
-            f.write( "> [!warning] Empty subpage!\n>\n> This subpage has no content associated to it! "
+            f.write( "> [!failure] Empty subpage!\n>\n> This subpage has no content associated to it! "
                 f"You should definitely consider creating an `{indexpath}` file to fix it!")
         pagescontent = f"nav:\n  - {filepath.name} 💥: {filepath.name}.md\n  - ...\n"
 
