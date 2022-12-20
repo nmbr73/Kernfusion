@@ -19,10 +19,15 @@ flowchart TB
 
 - Test: Internal link to an "index" file [[WebGL to DCTL]]
 - Test: Internal link to a file [[Fuse-Settings]]
-[[Foundations/README|Foundations]]
 
-[[Kartaverse/README|Kartaverse]]
-[[Kartaverse]]
+## Issues 
+
+Kartaverse Workflows / Creating Volumetric NeRFs /Equipment Needed to Explore Instant NGP
+The Git Client image is 'image35'
+
+Kataverse Workflows / KickAss ShaderZ for Fusion / Natural
+The kas_DarkBlueIceShard image is 'image35'
+
 
 
 

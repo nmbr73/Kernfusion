@@ -17,6 +17,19 @@
 
 function Writer (doc, opts)
 
+    local images_folder = PANDOC_WRITER_OPTIONS.variables["images_folder"]
+
+    if images_folder == nil then
+      images_folder = ""
+    end
+
+    if images_folder ~= "" and string.sub(images_folder, -1) ~= "/" then
+      images_folder = images_folder .. "/"
+    end
+
+    -- print("    images_folder='"..images_folder.."'")
+
+
     local filter = {
 
       Image = function (img)
@@ -38,7 +51,8 @@ function Writer (doc, opts)
         --obsidian_image=pandoc.Str(obsidian_image)
         --return pandoc.RawBlock('markdown_phpextra', pandoc.Str(obsidian_image) )
 
-        local obsidian_image = '![[' .. img.src .. ']]'
+
+        local obsidian_image = '![[' .. images_folder .. img.src .. ']]'
         return pandoc.RawInline('markdown', obsidian_image)
       end
     }

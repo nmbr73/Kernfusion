@@ -135,6 +135,22 @@ git switch main
 git branch --delete <NAME>
 ```
 
+### File and directory structure
+
+> [!summary] tl;dr
+> - Group articles, but don't try to put them in a linear order
+> - Obsidian tags are considered to be categories
+> - All pages in a folder are considered subpages
+> - A folder subpage is a Markdown file in that folder with the folders name
+> - The `Wiki/` folder and only the `Wiki/` folder must have a `README.md`
+> - Do not name any file `index.md`
+> - `.pages` files are meant be eliminated (remember: don't put articles in a linear order)
+
+Intention is to build up a collection of articles to eventually transfer them into a Wiki (most probably based on [MediaWiki](https://www.mediawiki.org/wiki/MediaWiki)) some day. A Wiki has no "linear" structure, but is more a network of linked articles. This being said, it should be avoided to try to bring them into an order: Each article is just a file and files may happen to be sorted alphabetically in the file system - but that's just a random order and might be completely different for the left sidebar of the static website and definitely will be different in a Wiki.
+
+Still there is a way for a rough structuring of Wiki articles by assigning them a *[category](https://www.mediawiki.org/wiki/Help:Categories)*. As an article can belong to multiple categories, Obsidian's tags mechanism should be well suited to mimic categories.
+
+Another way to organise articles in a (Media)Wiki are *[subpages](https://www.mediawiki.org/wiki/Help:Subpages)*. In this repository subpages are realised by folders. To provide the text the folder itself should be associated with, every folder must contain a Markdown file with its filename matching the folders name.
 
 
 ## Authoring

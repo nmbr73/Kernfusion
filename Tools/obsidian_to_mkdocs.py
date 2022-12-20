@@ -2,76 +2,39 @@
 from pathlib import Path
 import sys
 
-# Currently it's just a hack
-
-# rename 'WebGL to DCTL/WebGL to DCTL.md' to 'WebGL to DCTL/index.md'
-# replace '[[WebGL to DCTL]]' with '[[WebGL to DCTL/index.md|WebGL to DCTL]]'
-# replace '[[WebGL to DCTL|...]]' with '[[WebGL to DCTL/index.md|...]]'
-
-
 
 basepath = Path.cwd().joinpath('docs')
-print(f"path={basepath}")
 
-files = []
+for filepath in basepath.rglob("*"):
 
-replace = {}
+    # Check for directories, if they have a .pages file,
+    # otherwise create one
 
-for filepath in basepath.rglob("*.md"):
-
-    if filepath.is_dir():
-        print(f"{filepath} is a directory!")
+    if not filepath.is_dir():
         continue
 
-    if filepath.parent == basepath:
+    if filepath.name == "img":
         continue
 
-    if filepath.stem == filepath.parent.name:
-        filepath.rename( filepath.parent.joinpath('index.md') )
-        replace[filepath.stem] = filepath.parent.relative_to(basepath)
-
-
-
-
-
-for filepath in basepath.rglob("*.md"):
-
-    if filepath.is_dir():
+    if filepath.name == filepath.parent.name + ".img":
         continue
 
-    content = None
-    with filepath.open() as file:
-        content = file.read()
-
-    if not content:
-        print(f"{filepath} is empty?!?")
+    if "_" + filepath.name == filepath.parent.name + ".img":
         continue
 
-    modified = content
 
-    for match, path in replace.items():
-        modified = modified \
-            .replace(f"[[{match}|",f"[[{match}/index.md|") \
-            .replace(f"[[{match}]]",f"[[{match}/index.md|{match}]]")
+    pagespath = filepath.joinpath('.pages')
+    if pagespath.is_file():
+        continue
 
-    if filepath.name == "index.md" and filepath.parent != basepath:
+    indexpath = filepath.joinpath(filepath.name + ".md")
+    pagescontent = f"nav:\n  - {filepath.name}.md\n  - ...\n"
 
-        front_matter = ''
-        page_body = modified
+    if not indexpath.is_file():
+        with indexpath.open('w') as f:
+            f.write( "> [!failure] Empty subpage!\n>\n> This subpage has no content associated to it! "
+                f"You should definitely consider creating an `{indexpath}` file to fix it!")
+        pagescontent = f"nav:\n  - {filepath.name} 💥: {filepath.name}.md\n  - ...\n"
 
-        if modified.startswith("---\n"):
-            end = modified.find("\n---\n",4)
-
-
-            if end != -1:
-                end += len("\n---\n")
-                front_matter = modified[0:end]
-                page_body = modified[end:]
-
-        modified = front_matter + f"\n# {filepath.parent.name}\n\n" + page_body
-
-
-    if content != modified:
-        with filepath.open('w') as file:
-            file.write(modified)
-
+    with pagespath.open('w') as f:
+        f.write( pagescontent )
