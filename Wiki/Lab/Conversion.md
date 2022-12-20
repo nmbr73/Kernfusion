@@ -22,11 +22,11 @@ flowchart TB
 
 ## Issues 
 
-Kartaverse Workflows / Creating Volumetric NeRFs /Equipment Needed to Explore Instant NGP
-The Git Client image is 'image35'
+Kartaverse Workflows / Creating Volumetric NeRFs /Equipment Needed to Explore Instant NGP:
+The "Git Client" image is 'image35'
 
-Kataverse Workflows / KickAss ShaderZ for Fusion / Natural
-The kas_DarkBlueIceShard image is 'image35'
+Kataverse Workflows / KickAss ShaderZ for Fusion / Natural:
+The "kas_DarkBlueIceShard" image is 'image35'
 
 
 
