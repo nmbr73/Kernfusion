@@ -58,7 +58,9 @@ if not pages:
     sys.exit(40)
 
 
-nav = ["nav:", f"  - Export::{pages[0]['title']}: README.md"]
+nav = ["nav:", f"  - {pages[0]['title']} 📚: index.md"]
+
+toc = []
 
 for i, page in enumerate(pages):
 
@@ -68,14 +70,16 @@ for i, page in enumerate(pages):
     title = page['title']
     body  = page['body']
 
-    if name == "README":
+    if name == "index":
         print("whhooaaa!")
         sys.exit(42)
 
     if name == title:
         nav.append(f"  - {name}.md")
+        toc.append(f"- [[{name}]]")
     else:
         nav.append(f"  - {title}: {name}.md")
+        toc.append(f"- [[{name}|{title}]]")
         front_matter.append(f"title: {title}") # for MkDocs
         front_matter.append(f"alias: {title}") # for Obsidian
 
@@ -107,7 +111,19 @@ outfile = outdir.joinpath('.pages')
 with outfile.open('w') as file:
     file.write("\n".join(nav))
 
-outfile = outdir.joinpath('README.md')
+outfile = outdir.joinpath('index.md')
 with outfile.open('w') as file:
-    file.write("This will become the readme maybe")
+    file.write("""
+> [!warning] Dissolve content into independent articles!
+>
+> In this folder you will find an export generated from a Scrivener source.
+> Scrivener being an authoring software for writing book type content, the
+> different files will come originally meant to be read in some linear order.
+> Please help to put re-organize and re-write them into separate articles, each
+> working kind of independently from the others. Remove finished files from
+> the `.pages` file.
 
+## Original Table of Contents
+
+""")
+    file.write("\n".join(toc) + "\n")
