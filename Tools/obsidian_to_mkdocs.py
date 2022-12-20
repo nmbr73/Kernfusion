@@ -7,6 +7,9 @@ basepath = Path.cwd().joinpath('docs')
 
 for filepath in basepath.rglob("*"):
 
+    # Check for directories, if they have a .pages file,
+    # otherwise create one
+
     if not filepath.is_dir():
         continue
 
@@ -14,13 +17,14 @@ for filepath in basepath.rglob("*"):
     if pagespath.is_file():
         continue
 
-    pagescontent = ["nav:"]
+    indexpath = filepath.joinpath(filepath.name + ".md")
+    pagescontent = f"nav:\n  - {filepath.name}.md\n  - ...\n"
 
-    pagescontent.append("  - ...")
+    if not indexpath.is_file():
+        with indexpath.open('w') as f:
+            f.write( "> [!warning] Empty subpage!\n>\n> This subpage has no content associated to it! "
+                f"You should definitely consider creating an `{indexpath}` file to fix it!")
+        pagescontent = f"nav:\n  - {filepath.name} 💥: {filepath.name}.md\n  - ...\n"
 
-    if pagescontent:
-        pagescontent.append("")
-        with pagespath.open('w') as f:
-            f.write("\n".join(pagescontent))
-
-
+    with pagespath.open('w') as f:
+        f.write( pagescontent )

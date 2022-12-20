@@ -19,9 +19,9 @@ flowchart TB
 
 - Test: Internal link to an "index" file [[WebGL to DCTL]]
 - Test: Internal link to a file [[Fuse-Settings]]
-[[Foundations/README|Foundations]]
 
-[[Kartaverse/README|Kartaverse]]
+
+
 [[Kartaverse]]
 
 
