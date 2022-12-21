@@ -1,0 +1,1971 @@
+----------------------------------
+Changing file 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+I: name 'image50' already used for a different image in 'Step 4. Clone the Instant NGP Repository (1B83AE44-0A2E-4577-859D-373B03B34A76)'
+A: rename 'image50' to 'image50__fix1'
+
+
+----------------------------------
+Changing file 'HDRI (543742C5-1B82-4174-9BC7-48B488A7598A)'
+I: name 'image50' already used for a different image in 'Step 4. Clone the Instant NGP Repository (1B83AE44-0A2E-4577-859D-373B03B34A76)'
+A: rename 'image50' to 'image50__fix2'
+
+
+----------------------------------
+Changing file 'Step 2. Install Visual Studio + CMake  (C7272844-8D0A-4B36-86A7-C64E4CECE58D)'
+I: name 'image13' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image13' to 'image13__fix1'
+I: name 'image34' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image34' to 'image34__fix1'
+I: name 'image23' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image23' to 'image23__fix1'
+
+
+----------------------------------
+Changing file 'Equipment Needed to Explore Instant NGP (BF561C3D-6414-4827-A377-5B4184269990)'
+I: name 'image1' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image1' to 'image1__fix1'
+- 'image72' is a duplicate of image1 in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image72' to 'image1'
+
+
+----------------------------------
+Changing file 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+I: name 'image2' already used for a different image in 'Step 4. Open the document in a programmer's text editing tool like NotePad++.  (684FA4D3-49BE-494F-8E2A-4C25B4B1C0A3)'
+A: rename 'image2' to 'image2__fix1'
+I: name 'image18' already used for a different image in 'Metadata Nodes (82E756C1-92EF-49A6-B692-C978CE924F6A)'
+A: rename 'image18' to 'image18__fix1'
+I: name 'image17' already used for a different image in 'Step 4. Open the document in a programmer's text editing tool like NotePad++.  (684FA4D3-49BE-494F-8E2A-4C25B4B1C0A3)'
+A: rename 'image17' to 'image17__fix1'
+I: name 'image1' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image1' to 'image1__fix2'
+I: name 'image23' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image23' to 'image23__fix2'
+I: name 'image22' already used for a different image in 'Equipment Needed to Explore Instant NGP (BF561C3D-6414-4827-A377-5B4184269990)'
+A: rename 'image22' to 'image22__fix1'
+I: name 'image35' already used for a different image in 'Equipment Needed to Explore Instant NGP (BF561C3D-6414-4827-A377-5B4184269990)'
+A: rename 'image35' to 'image35__fix1'
+
+
+----------------------------------
+Changing file 'Software Required (B8E38E06-797C-40C6-A124-99ED562773B8)'
+- 'image284' is a duplicate of image53 in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image284' to 'image53'
+- 'image170' is a duplicate of image65 in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image170' to 'image65'
+
+
+----------------------------------
+Changing file 'Build the TestBed Program (654479E8-DE69-4464-A92A-37ED1010BA02)'
+I: name 'image53' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image53' to 'image53__fix1'
+I: name 'image58' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image58' to 'image58__fix1'
+
+
+----------------------------------
+Changing file 'Step 2. Add a YouTube 360 Stereoscopic 3D downloaded video file to your Fusion composite using either a Loader Node (in Fusion Studio), or a MediaIn node (in Resolve's Fusion Page).  (814A214F-7358-4575-87BB-B447E1ED6358)'
+I: name 'image7' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image7' to 'image7__fix1'
+
+
+----------------------------------
+Changing file 'Running Houdini's Provided Copy of USDVIEW (B8DD54C7-3796-4E8F-BBC2-E9246D3F42D2)'
+I: name 'file.php' already used for a different image in 'Part 3 - Fusion Studio (E7547A9B-4D83-4A36-84F2-B9C8D0897BAB)'
+A: rename 'file.php' to 'file.php__fix1'
+I: name 'file.php' already used for a different image in 'Part 3 - Fusion Studio (E7547A9B-4D83-4A36-84F2-B9C8D0897BAB)'
+A: rename 'file.php' to 'file.php__fix2'
+
+
+----------------------------------
+Changing file 'Substance Material Export (A21F74AC-40E1-495E-8B16-62CDFC679BF7)'
+I: name 'image18' already used for a different image in 'Metadata Nodes (82E756C1-92EF-49A6-B692-C978CE924F6A)'
+A: rename 'image18' to 'image18__fix2'
+I: name 'image19' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image19' to 'image19__fix1'
+
+
+----------------------------------
+Changing file 'Let's create a new notebook (36972544-EB16-4C71-917B-FE95D29B5CC3)'
+I: name 'image9' already used for a different image in 'Step 2. Install Visual Studio + CMake  (C7272844-8D0A-4B36-86A7-C64E4CECE58D)'
+A: rename 'image9' to 'image9__fix1'
+I: name 'image8' already used for a different image in 'Step 5. You can render this footage back to an image sequence or movie file on disk using either a MediaOut node (in Resolve), or a Saver node (in Fusion Standalone). (D34A6E2C-3C52-4399-AB14-AA783928F917)'
+A: rename 'image8' to 'image8__fix1'
+I: name 'image7' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image7' to 'image7__fix2'
+
+
+----------------------------------
+Changing file 'Base64 Nodes (1B137A5D-A33D-48BB-A34B-71DF3CD08F28)'
+I: name 'image34' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image34' to 'image34__fix2'
+
+
+----------------------------------
+Changing file 'Import PBR Metal Roughness Textures Script (50DB6A27-750F-4A97-ACEA-354F6D00F67E)'
+I: name 'image1' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image1' to 'image1__fix3'
+I: name 'image2' already used for a different image in 'Step 4. Open the document in a programmer's text editing tool like NotePad++.  (684FA4D3-49BE-494F-8E2A-4C25B4B1C0A3)'
+A: rename 'image2' to 'image2__fix2'
+I: name 'image3' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image3' to 'image3__fix1'
+I: name 'image4' already used for a different image in 'Step 5. You can render this footage back to an image sequence or movie file on disk using either a MediaOut node (in Resolve), or a Saver node (in Fusion Standalone). (D34A6E2C-3C52-4399-AB14-AA783928F917)'
+A: rename 'image4' to 'image4__fix1'
+I: name 'image5' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image5' to 'image5__fix1'
+I: name 'image6' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image6' to 'image6__fix1'
+
+
+----------------------------------
+Changing file 'Maya Import Stage (02811ACB-E958-46F2-8063-0AD0E3547FA3)'
+I: name 'file.php' already used for a different image in 'Part 3 - Fusion Studio (E7547A9B-4D83-4A36-84F2-B9C8D0897BAB)'
+A: rename 'file.php' to 'file.php__fix3'
+
+
+----------------------------------
+Changing file 'Step 2. Change the Exposure (723D5EC0-467B-4617-9CF7-4F999176F67E)'
+I: name 'image55' already used for a different image in 'Fusion Select Tool (FEF433B7-F53F-4C52-9990-16995B93BF2E)'
+A: rename 'image55' to 'image55__fix1'
+
+
+----------------------------------
+Changing file 'JSON Nodes (7B3B3A2B-C415-4456-A5EB-899F3AA974BE)'
+I: name 'image49' already used for a different image in 'Step 4. Clone the Instant NGP Repository (1B83AE44-0A2E-4577-859D-373B03B34A76)'
+A: rename 'image49' to 'image49__fix1'
+I: name 'image104' already used for a different image in 'Step 2. Install Visual Studio + CMake  (C7272844-8D0A-4B36-86A7-C64E4CECE58D)'
+A: rename 'image104' to 'image104__fix1'
+I: name 'image113' already used for a different image in 'Equipment Needed to Explore Instant NGP (BF561C3D-6414-4827-A377-5B4184269990)'
+A: rename 'image113' to 'image113__fix1'
+
+
+----------------------------------
+Changing file 'Step 5. (FF7FFD69-61C3-4E57-A02C-5378CB8BF7C2)'
+I: name 'image12' already used for a different image in 'Armadillo Model (B50522B7-4ACD-456D-A5EC-AAA468C1AC2C)'
+A: rename 'image12' to 'image12__fix1'
+I: name 'image34' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image34' to 'image34__fix3'
+I: name 'image9' already used for a different image in 'Step 2. Install Visual Studio + CMake  (C7272844-8D0A-4B36-86A7-C64E4CECE58D)'
+A: rename 'image9' to 'image9__fix2'
+I: name 'image25' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image25' to 'image25__fix1'
+
+
+----------------------------------
+Changing file 'KickAss ShaderZ for Fusion (27F9ACBE-5A05-43B9-A3D1-FBB8F027910F)'
+I: name 'image1' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image1' to 'image1__fix4'
+
+
+----------------------------------
+Changing file 'Fusion Lens Distort Node (E2FFFAAF-7A81-4FF1-A401-F2BE98FF00ED)'
+I: name 'image31' already used for a different image in 'Step 2. Install Visual Studio + CMake  (C7272844-8D0A-4B36-86A7-C64E4CECE58D)'
+A: rename 'image31' to 'image31__fix1'
+
+
+----------------------------------
+Changing file 'Installing SlashCommands (84C6FD9D-5457-41D3-8E2A-4B8B0D4C2689)'
+I: name 'image44' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image44' to 'image44__fix1'
+
+
+----------------------------------
+Changing file 'Marching Cubes Mesh Output (FE692135-306F-427C-B060-BA01B2B46823)'
+I: name 'image4' already used for a different image in 'Step 5. You can render this footage back to an image sequence or movie file on disk using either a MediaOut node (in Resolve), or a Saver node (in Fusion Standalone). (D34A6E2C-3C52-4399-AB14-AA783928F917)'
+A: rename 'image4' to 'image4__fix2'
+I: name 'image51' already used for a different image in 'HDRI (543742C5-1B82-4174-9BC7-48B488A7598A)'
+A: rename 'image51' to 'image51__fix1'
+
+
+----------------------------------
+Changing file 'Fusion Effects Tab (3A5DBDA5-377A-4B5B-9036-0D900932D814)'
+I: name 'image54' already used for a different image in 'Step 2. Change the Exposure (723D5EC0-467B-4617-9CF7-4F999176F67E)'
+A: rename 'image54' to 'image54__fix1'
+
+
+----------------------------------
+Changing file 'Crop aabb (280CB801-8CA3-44CF-A148-F7A4CE9FED74)'
+I: name 'image26' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image26' to 'image26__fix1'
+I: name 'image54' already used for a different image in 'Step 2. Change the Exposure (723D5EC0-467B-4617-9CF7-4F999176F67E)'
+A: rename 'image54' to 'image54__fix2'
+
+
+----------------------------------
+Changing file 'Check if a File Exists (CB5A0B45-A2B8-44FA-B0F6-A5BE1D24ADAC)'
+I: name 'image31' already used for a different image in 'Step 2. Install Visual Studio + CMake  (C7272844-8D0A-4B36-86A7-C64E4CECE58D)'
+A: rename 'image31' to 'image31__fix2'
+
+
+----------------------------------
+Changing file 'Accessing the KKD Nodes (20AF04D4-CB49-4315-8CD0-D4F81578FFF7)'
+I: name 'image97' already used for a different image in 'Step 2. Install Visual Studio + CMake  (C7272844-8D0A-4B36-86A7-C64E4CECE58D)'
+A: rename 'image97' to 'image97__fix1'
+
+
+----------------------------------
+Changing file 'The Interconnected Nature of Framebuffer Bit-depths and ST Map Resolution (3560FEBD-4B9F-464D-8F26-459FBBAF7763)'
+I: name 'image51' already used for a different image in 'HDRI (543742C5-1B82-4174-9BC7-48B488A7598A)'
+A: rename 'image51' to 'image51__fix2'
+I: name 'image11' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image11' to 'image11__fix1'
+
+
+----------------------------------
+Changing file 'Step 4. Change the Camera Response Curve (0530F6C0-E7AF-446B-8E8F-9446BAF84C8B)'
+I: name 'image12' already used for a different image in 'Armadillo Model (B50522B7-4ACD-456D-A5EC-AAA468C1AC2C)'
+A: rename 'image12' to 'image12__fix2'
+I: name 'image2' already used for a different image in 'Step 4. Open the document in a programmer's text editing tool like NotePad++.  (684FA4D3-49BE-494F-8E2A-4C25B4B1C0A3)'
+A: rename 'image2' to 'image2__fix3'
+I: name 'image64' already used for a different image in 'Step 2. Install Visual Studio + CMake  (C7272844-8D0A-4B36-86A7-C64E4CECE58D)'
+A: rename 'image64' to 'image64__fix1'
+I: name 'image20' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image20' to 'image20__fix1'
+
+
+----------------------------------
+Changing file 'Camera (F6CB2FF2-214B-46A2-8716-142AAC6A4B7F)'
+I: name 'image11' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image11' to 'image11__fix2'
+
+
+----------------------------------
+Changing file 'Step 3. (B8932309-0CE2-49CE-8402-C5F50D19D74A)'
+I: name 'image28' already used for a different image in 'Step 4. Clone the Instant NGP Repository (1B83AE44-0A2E-4577-859D-373B03B34A76)'
+A: rename 'image28' to 'image28__fix1'
+
+
+----------------------------------
+Changing file 'Loading Imagery (70555854-F288-4EC5-8F1C-92D27C2A2125)'
+I: name 'image50' already used for a different image in 'Step 4. Clone the Instant NGP Repository (1B83AE44-0A2E-4577-859D-373B03B34A76)'
+A: rename 'image50' to 'image50__fix3'
+
+
+----------------------------------
+Changing file 'Filesystem Nodes (9CB783C4-9864-4390-8998-D1422DAD840A)'
+I: name 'image22' already used for a different image in 'Equipment Needed to Explore Instant NGP (BF561C3D-6414-4827-A377-5B4184269990)'
+A: rename 'image22' to 'image22__fix2'
+I: name 'image11' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image11' to 'image11__fix3'
+I: name 'image74' already used for a different image in 'Step 4. Clone the Instant NGP Repository (1B83AE44-0A2E-4577-859D-373B03B34A76)'
+A: rename 'image74' to 'image74__fix1'
+I: name 'image255' already used for a different image in 'GUI Toolkits (17476731-139D-4C77-A4EB-C4FAAECAF3D7)'
+A: rename 'image255' to 'image255__fix1'
+I: name 'image4' already used for a different image in 'Step 5. You can render this footage back to an image sequence or movie file on disk using either a MediaOut node (in Resolve), or a Saver node (in Fusion Standalone). (D34A6E2C-3C52-4399-AB14-AA783928F917)'
+A: rename 'image4' to 'image4__fix3'
+I: name 'image35' already used for a different image in 'Equipment Needed to Explore Instant NGP (BF561C3D-6414-4827-A377-5B4184269990)'
+A: rename 'image35' to 'image35__fix2'
+
+
+----------------------------------
+Changing file 'YouTube 3x2 Cubic Face Layout - Monoscopic 2D (2347E874-B76C-4920-A1BA-1A104A3408AA)'
+I: name 'image22' already used for a different image in 'Equipment Needed to Explore Instant NGP (BF561C3D-6414-4827-A377-5B4184269990)'
+A: rename 'image22' to 'image22__fix3'
+
+
+----------------------------------
+Changing file 'Add the Python Code (B4D11523-2989-46D9-8377-554C6B2989FB)'
+I: name 'image3' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image3' to 'image3__fix2'
+I: name 'image1' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image1' to 'image1__fix5'
+I: name 'image4' already used for a different image in 'Step 5. You can render this footage back to an image sequence or movie file on disk using either a MediaOut node (in Resolve), or a Saver node (in Fusion Standalone). (D34A6E2C-3C52-4399-AB14-AA783928F917)'
+A: rename 'image4' to 'image4__fix4'
+I: name 'image2' already used for a different image in 'Step 4. Open the document in a programmer's text editing tool like NotePad++.  (684FA4D3-49BE-494F-8E2A-4C25B4B1C0A3)'
+A: rename 'image2' to 'image2__fix4'
+I: name 'image10' already used for a different image in 'Step 3. Copy the COLMAP generated "Transform.json" file from inside the "C:\instant-ngp\" folder into "C:\instant-ngp\data\nerf\lion\" folder.  (0AF228DE-5632-4AC9-B531-B079DB282F05)'
+A: rename 'image10' to 'image10__fix1'
+
+
+----------------------------------
+Changing file 'Step 2. Run COLMAP using the included "colmap2nerf.py" script. After a few minutes this script will generate a ready to use camera alignment JSON file. (87EAC3D9-61F2-4420-8837-EB022D90A3D8)'
+I: name 'image44' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image44' to 'image44__fix2'
+
+
+----------------------------------
+Changing file 'NeuralFoam OFX Plugin (3043C2ED-E20A-4A1E-9756-3FEC386F1955)'
+I: name 'image2' already used for a different image in 'Step 4. Open the document in a programmer's text editing tool like NotePad++.  (684FA4D3-49BE-494F-8E2A-4C25B4B1C0A3)'
+A: rename 'image2' to 'image2__fix5'
+
+
+----------------------------------
+Changing file 'Part 1 - Compiling your own OpenUSD Plugins (1711C41E-E4CB-413E-94AB-AF99D900224E)'
+I: name 'file.php' already used for a different image in 'Part 3 - Fusion Studio (E7547A9B-4D83-4A36-84F2-B9C8D0897BAB)'
+A: rename 'file.php' to 'file.php__fix4'
+
+
+----------------------------------
+Changing file 'Install COLMAP (8C110D19-09B0-4908-9AC8-A199855B4B66)'
+I: name 'image8' already used for a different image in 'Step 5. You can render this footage back to an image sequence or movie file on disk using either a MediaOut node (in Resolve), or a Saver node (in Fusion Standalone). (D34A6E2C-3C52-4399-AB14-AA783928F917)'
+A: rename 'image8' to 'image8__fix2'
+I: name 'image24' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image24' to 'image24__fix1'
+I: name 'image70' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image70' to 'image70__fix1'
+I: name 'image18' already used for a different image in 'Metadata Nodes (82E756C1-92EF-49A6-B692-C978CE924F6A)'
+A: rename 'image18' to 'image18__fix3'
+I: name 'image52' already used for a different image in 'HDRI (543742C5-1B82-4174-9BC7-48B488A7598A)'
+A: rename 'image52' to 'image52__fix1'
+I: name 'image20' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image20' to 'image20__fix2'
+
+
+----------------------------------
+Changing file 'Jupyter Notebook for Resolve/Fusion (2E39ADCC-0130-4BE8-B25E-7F28BED4E3E7)'
+I: name 'image6' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image6' to 'image6__fix2'
+
+
+----------------------------------
+Changing file 'Sample Media (910A9641-95D3-4024-BBEB-6940285C2DC5)'
+I: 'image22' already seen as image22__fix3 in 'YouTube 3x2 Cubic Face Layout - Monoscopic 2D (2347E874-B76C-4920-A1BA-1A104A3408AA)'
+A: rename 'image22' to 'image22__fix3'
+
+
+----------------------------------
+Changing file 'Step 3. With the Fusion Nodes view active in the foreground, press the "Shift + Space" hotkey on your keyboard. (38F50A37-89F9-499F-8703-4B83D3A658F8)'
+I: name 'image14' already used for a different image in 'Step 2. Install Visual Studio + CMake  (C7272844-8D0A-4B36-86A7-C64E4CECE58D)'
+A: rename 'image14' to 'image14__fix1'
+I: name 'image13' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image13' to 'image13__fix2'
+I: name 'image18' already used for a different image in 'Metadata Nodes (82E756C1-92EF-49A6-B692-C978CE924F6A)'
+A: rename 'image18' to 'image18__fix4'
+
+
+----------------------------------
+Changing file 'JSON Config File (EBBAD8F8-5AD4-461D-BC64-8C767A59AFD8)'
+I: name 'image4' already used for a different image in 'Step 5. You can render this footage back to an image sequence or movie file on disk using either a MediaOut node (in Resolve), or a Saver node (in Fusion Standalone). (D34A6E2C-3C52-4399-AB14-AA783928F917)'
+A: rename 'image4' to 'image4__fix5'
+
+
+----------------------------------
+Changing file 'Number Nodes (55EE0D8B-0397-4A80-B381-274D0B9F6D8E)'
+I: name 'image28' already used for a different image in 'Step 4. Clone the Instant NGP Repository (1B83AE44-0A2E-4577-859D-373B03B34A76)'
+A: rename 'image28' to 'image28__fix2'
+I: name 'image73' already used for a different image in 'Build the TestBed Program (654479E8-DE69-4464-A92A-37ED1010BA02)'
+A: rename 'image73' to 'image73__fix1'
+I: name 'image62' already used for a different image in 'Equipment Needed to Explore Instant NGP (BF561C3D-6414-4827-A377-5B4184269990)'
+A: rename 'image62' to 'image62__fix1'
+I: name 'image83' already used for a different image in 'Step 2. Install Visual Studio + CMake  (C7272844-8D0A-4B36-86A7-C64E4CECE58D)'
+A: rename 'image83' to 'image83__fix1'
+I: name 'image85' already used for a different image in 'Step 2. Run COLMAP using the included "colmap2nerf.py" script. After a few minutes this script will generate a ready to use camera alignment JSON file. (87EAC3D9-61F2-4420-8837-EB022D90A3D8)'
+A: rename 'image85' to 'image85__fix1'
+I: name 'image374' already used for a different image in 'ui:LineEdit{} (D4F15A02-1E36-4B93-BCC2-03696F291234)'
+A: rename 'image374' to 'image374__fix1'
+I: name 'image92' already used for a different image in 'Step 4. Clone the Instant NGP Repository (1B83AE44-0A2E-4577-859D-373B03B34A76)'
+A: rename 'image92' to 'image92__fix1'
+I: name 'image25' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image25' to 'image25__fix2'
+I: name 'image82' already used for a different image in 'Equipment Needed to Explore Instant NGP (BF561C3D-6414-4827-A377-5B4184269990)'
+A: rename 'image82' to 'image82__fix1'
+I: name 'image8' already used for a different image in 'Step 5. You can render this footage back to an image sequence or movie file on disk using either a MediaOut node (in Resolve), or a Saver node (in Fusion Standalone). (D34A6E2C-3C52-4399-AB14-AA783928F917)'
+A: rename 'image8' to 'image8__fix3'
+I: name 'image70' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image70' to 'image70__fix2'
+I: name 'image56' already used for a different image in 'Step 2. Install Visual Studio + CMake  (C7272844-8D0A-4B36-86A7-C64E4CECE58D)'
+A: rename 'image56' to 'image56__fix1'
+I: name 'image81' already used for a different image in 'Build the TestBed Program (654479E8-DE69-4464-A92A-37ED1010BA02)'
+A: rename 'image81' to 'image81__fix1'
+I: name 'image77' already used for a different image in 'Step 4. Clone the Instant NGP Repository (1B83AE44-0A2E-4577-859D-373B03B34A76)'
+A: rename 'image77' to 'image77__fix1'
+I: name 'image54' already used for a different image in 'Step 2. Change the Exposure (723D5EC0-467B-4617-9CF7-4F999176F67E)'
+A: rename 'image54' to 'image54__fix3'
+I: name 'image93' already used for a different image in 'Step 4. Clone the Instant NGP Repository (1B83AE44-0A2E-4577-859D-373B03B34A76)'
+A: rename 'image93' to 'image93__fix1'
+
+
+----------------------------------
+Changing file 'Industrial (FB0CCB95-04D8-4873-B3C8-88EBEF4FCF16)'
+I: name 'image21' already used for a different image in 'YouTube 2x3 Cubic Face Layout - Stereo 3D Side By Side (7445E818-5DB6-42C3-9F35-E05678A4DF8B)'
+A: rename 'image21' to 'image21__fix1'
+I: name 'image22' already used for a different image in 'Equipment Needed to Explore Instant NGP (BF561C3D-6414-4827-A377-5B4184269990)'
+A: rename 'image22' to 'image22__fix4'
+I: name 'image23' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image23' to 'image23__fix3'
+I: name 'image24' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image24' to 'image24__fix2'
+I: name 'image25' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image25' to 'image25__fix3'
+I: name 'image26' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image26' to 'image26__fix2'
+I: name 'image28' already used for a different image in 'Step 4. Clone the Instant NGP Repository (1B83AE44-0A2E-4577-859D-373B03B34A76)'
+A: rename 'image28' to 'image28__fix3'
+I: name 'image30' already used for a different image in 'Number Nodes (55EE0D8B-0397-4A80-B381-274D0B9F6D8E)'
+A: rename 'image30' to 'image30__fix1'
+I: name 'image31' already used for a different image in 'Step 2. Install Visual Studio + CMake  (C7272844-8D0A-4B36-86A7-C64E4CECE58D)'
+A: rename 'image31' to 'image31__fix3'
+I: name 'image32' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image32' to 'image32__fix1'
+I: name 'image33' already used for a different image in 'Step 2. Install Visual Studio + CMake  (C7272844-8D0A-4B36-86A7-C64E4CECE58D)'
+A: rename 'image33' to 'image33__fix1'
+I: name 'image34' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image34' to 'image34__fix4'
+
+
+----------------------------------
+Changing file 'NeuralFoam for SynthEyes Pro (C0D217CA-BB27-4179-B699-4DDA80F58DC5)'
+I: name 'image6' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image6' to 'image6__fix3'
+
+
+----------------------------------
+Changing file 'Sample Media (051C4DE1-1094-4197-8D03-FF5ABDD0467D)'
+I: name 'image9' already used for a different image in 'Step 2. Install Visual Studio + CMake  (C7272844-8D0A-4B36-86A7-C64E4CECE58D)'
+A: rename 'image9' to 'image9__fix3'
+
+
+----------------------------------
+Changing file 'Step 12. Double-check your Katana environment variables to make sure they exist for your active session: (F26E88D9-CA47-4EA0-BD03-EC809BBE7306)'
+I: name 'file.php' already used for a different image in 'Part 3 - Fusion Studio (E7547A9B-4D83-4A36-84F2-B9C8D0897BAB)'
+A: rename 'file.php' to 'file.php__fix5'
+I: name 'file.php' already used for a different image in 'Part 3 - Fusion Studio (E7547A9B-4D83-4A36-84F2-B9C8D0897BAB)'
+A: rename 'file.php' to 'file.php__fix6'
+
+
+----------------------------------
+Changing file 'Point Nodes (913775BE-9F32-4CD6-AD8D-6EFCB39499E8)'
+I: name 'image98' already used for a different image in 'Build the TestBed Program (654479E8-DE69-4464-A92A-37ED1010BA02)'
+A: rename 'image98' to 'image98__fix1'
+I: name 'image1' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image1' to 'image1__fix6'
+I: name 'image29' already used for a different image in 'Industrial (FB0CCB95-04D8-4873-B3C8-88EBEF4FCF16)'
+A: rename 'image29' to 'image29__fix1'
+I: name 'image84' already used for a different image in 'Equipment Needed to Explore Instant NGP (BF561C3D-6414-4827-A377-5B4184269990)'
+A: rename 'image84' to 'image84__fix1'
+I: name 'image71' already used for a different image in 'Using Instant NGP (20E6434A-504F-4D10-B995-330103201025)'
+A: rename 'image71' to 'image71__fix1'
+I: name 'image110' already used for a different image in 'Step 4. Open the document in a programmer's text editing tool like NotePad++.  (684FA4D3-49BE-494F-8E2A-4C25B4B1C0A3)'
+A: rename 'image110' to 'image110__fix1'
+
+
+----------------------------------
+Changing file 'Step 4. (BC081412-72FE-4ABC-988E-B74416961A9E)'
+I: name 'image33' already used for a different image in 'Step 2. Install Visual Studio + CMake  (C7272844-8D0A-4B36-86A7-C64E4CECE58D)'
+A: rename 'image33' to 'image33__fix2'
+I: name 'image14' already used for a different image in 'Step 2. Install Visual Studio + CMake  (C7272844-8D0A-4B36-86A7-C64E4CECE58D)'
+A: rename 'image14' to 'image14__fix2'
+I: name 'image29' already used for a different image in 'Industrial (FB0CCB95-04D8-4873-B3C8-88EBEF4FCF16)'
+A: rename 'image29' to 'image29__fix2'
+I: name 'image21' already used for a different image in 'YouTube 2x3 Cubic Face Layout - Stereo 3D Side By Side (7445E818-5DB6-42C3-9F35-E05678A4DF8B)'
+A: rename 'image21' to 'image21__fix2'
+I: name 'image27' already used for a different image in 'Industrial (FB0CCB95-04D8-4873-B3C8-88EBEF4FCF16)'
+A: rename 'image27' to 'image27__fix1'
+I: name 'image16' already used for a different image in 'Sample Media (910A9641-95D3-4024-BBEB-6940285C2DC5)'
+A: rename 'image16' to 'image16__fix1'
+I: name 'image31' already used for a different image in 'Step 2. Install Visual Studio + CMake  (C7272844-8D0A-4B36-86A7-C64E4CECE58D)'
+A: rename 'image31' to 'image31__fix4'
+I: name 'image19' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image19' to 'image19__fix2'
+
+
+----------------------------------
+Changing file 'Step 1. Environment variables are added to your Windows PC using the "System" Control Panel. (BC915EDA-8B07-497A-8843-E84AF9F9350D)'
+I: name 'image2' already used for a different image in 'Step 4. Open the document in a programmer's text editing tool like NotePad++.  (684FA4D3-49BE-494F-8E2A-4C25B4B1C0A3)'
+A: rename 'image2' to 'image2__fix6'
+I: name 'image4' already used for a different image in 'Step 5. You can render this footage back to an image sequence or movie file on disk using either a MediaOut node (in Resolve), or a Saver node (in Fusion Standalone). (D34A6E2C-3C52-4399-AB14-AA783928F917)'
+A: rename 'image4' to 'image4__fix6'
+
+
+----------------------------------
+Changing file 'GUI Controls (BEB9ACEC-9323-4B70-A7BF-93B29CE21BE2)'
+I: name 'image9' already used for a different image in 'Step 2. Install Visual Studio + CMake  (C7272844-8D0A-4B36-86A7-C64E4CECE58D)'
+A: rename 'image9' to 'image9__fix4'
+I: name 'image10' already used for a different image in 'Step 3. Copy the COLMAP generated "Transform.json" file from inside the "C:\instant-ngp\" folder into "C:\instant-ngp\data\nerf\lion\" folder.  (0AF228DE-5632-4AC9-B531-B079DB282F05)'
+A: rename 'image10' to 'image10__fix2'
+I: name 'image11' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image11' to 'image11__fix4'
+I: name 'image12' already used for a different image in 'Armadillo Model (B50522B7-4ACD-456D-A5EC-AAA468C1AC2C)'
+A: rename 'image12' to 'image12__fix3'
+I: name 'image13' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image13' to 'image13__fix3'
+I: name 'image14' already used for a different image in 'Step 2. Install Visual Studio + CMake  (C7272844-8D0A-4B36-86A7-C64E4CECE58D)'
+A: rename 'image14' to 'image14__fix3'
+I: name 'image15' already used for a different image in 'Creating Volumetric NeRFs (9C1F3E40-6582-4BB7-9B88-FDD6F481A9BA)'
+A: rename 'image15' to 'image15__fix1'
+I: name 'image16' already used for a different image in 'Sample Media (910A9641-95D3-4024-BBEB-6940285C2DC5)'
+A: rename 'image16' to 'image16__fix2'
+I: name 'image17' already used for a different image in 'Step 4. Open the document in a programmer's text editing tool like NotePad++.  (684FA4D3-49BE-494F-8E2A-4C25B4B1C0A3)'
+A: rename 'image17' to 'image17__fix2'
+
+
+----------------------------------
+Changing file 'Example NeRF Instant NGP Dataset (A05AF8A7-0861-499F-B9A9-B1E5895E5A5A)'
+I: name 'image99' already used for a different image in 'Number Nodes (55EE0D8B-0397-4A80-B381-274D0B9F6D8E)'
+A: rename 'image99' to 'image99__fix1'
+
+
+----------------------------------
+Changing file 'File and Folder Browsing Dialogs (5D0F27E5-5DA3-4795-B36F-1F3B0DB552FE)'
+I: name 'image43' already used for a different image in 'Filesystem Nodes (9CB783C4-9864-4390-8998-D1422DAD840A)'
+A: rename 'image43' to 'image43__fix1'
+
+
+----------------------------------
+Changing file 'ShaderZ Texture Inputs (BEFC45FC-B1D6-4EE3-8603-CF1FBE7E598E)'
+I: name 'image53' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image53' to 'image53__fix2'
+
+
+----------------------------------
+Changing file 'ui:CheckBox{} (48355CA1-6304-4BB3-A777-EF39AADE590B)'
+I: name 'image290' already used for a different image in 'Number Nodes (55EE0D8B-0397-4A80-B381-274D0B9F6D8E)'
+A: rename 'image290' to 'image290__fix1'
+
+
+----------------------------------
+Changing file 'Nodes, Connections, and Attributes (8930651C-9341-42FA-811B-5D1EB43A630E)'
+I: 'image2' already seen as image2__fix1 in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image2' to 'image2__fix1'
+I: 'image18' already seen as image18__fix1 in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image18' to 'image18__fix1'
+I: 'image17' already seen as image17__fix1 in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image17' to 'image17__fix1'
+I: 'image1' already seen as image1__fix2 in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image1' to 'image1__fix2'
+I: 'image23' already seen as image23__fix2 in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image23' to 'image23__fix2'
+I: 'image22' already seen as image22__fix1 in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image22' to 'image22__fix1'
+
+
+----------------------------------
+Changing file 'Fusion Texture Node (B8164CE8-00BF-4613-B7EC-6F236613EDC7)'
+I: name 'image28' already used for a different image in 'Step 4. Clone the Instant NGP Repository (1B83AE44-0A2E-4577-859D-373B03B34A76)'
+A: rename 'image28' to 'image28__fix4'
+
+
+----------------------------------
+Changing file 'Image Nodes (268125DE-0155-4A10-927A-5A6BCFE11859)'
+I: name 'image42' already used for a different image in 'Install COLMAP (8C110D19-09B0-4908-9AC8-A199855B4B66)'
+A: rename 'image42' to 'image42__fix1'
+I: name 'image250' already used for a different image in 'File and Folder Browsing Dialogs (5D0F27E5-5DA3-4795-B36F-1F3B0DB552FE)'
+A: rename 'image250' to 'image250__fix1'
+I: name 'image66' already used for a different image in 'Build the TestBed Program (654479E8-DE69-4464-A92A-37ED1010BA02)'
+A: rename 'image66' to 'image66__fix1'
+
+
+----------------------------------
+Changing file 'TouchDesigner ST Map Based Real-Time 360VR Video Stitching (A2B0D0CE-74BD-4A34-A7D8-E772BBF287CB)'
+I: name 'image68' already used for a different image in 'JSON Nodes (7B3B3A2B-C415-4456-A5EB-899F3AA974BE)'
+A: rename 'image68' to 'image68__fix1'
+
+
+----------------------------------
+Changing file 'Step 5. Open the Panorama Editor (60AFA7AC-0A60-4E82-83CC-182FE6279ACC)'
+I: name 'image43' already used for a different image in 'Filesystem Nodes (9CB783C4-9864-4390-8998-D1422DAD840A)'
+A: rename 'image43' to 'image43__fix2'
+I: name 'image36' already used for a different image in 'Step 2. Install Visual Studio + CMake  (C7272844-8D0A-4B36-86A7-C64E4CECE58D)'
+A: rename 'image36' to 'image36__fix1'
+I: name 'image46' already used for a different image in 'Rendering (5D438B1F-4555-430C-A3EA-F855D4C50286)'
+A: rename 'image46' to 'image46__fix1'
+I: name 'image9' already used for a different image in 'Step 2. Install Visual Studio + CMake  (C7272844-8D0A-4B36-86A7-C64E4CECE58D)'
+A: rename 'image9' to 'image9__fix5'
+I: name 'image22' already used for a different image in 'Equipment Needed to Explore Instant NGP (BF561C3D-6414-4827-A377-5B4184269990)'
+A: rename 'image22' to 'image22__fix5'
+I: name 'image4' already used for a different image in 'Step 5. You can render this footage back to an image sequence or movie file on disk using either a MediaOut node (in Resolve), or a Saver node (in Fusion Standalone). (D34A6E2C-3C52-4399-AB14-AA783928F917)'
+A: rename 'image4' to 'image4__fix7'
+I: name 'image5' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image5' to 'image5__fix2'
+I: name 'image29' already used for a different image in 'Industrial (FB0CCB95-04D8-4873-B3C8-88EBEF4FCF16)'
+A: rename 'image29' to 'image29__fix3'
+I: name 'image62' already used for a different image in 'Equipment Needed to Explore Instant NGP (BF561C3D-6414-4827-A377-5B4184269990)'
+A: rename 'image62' to 'image62__fix2'
+I: name 'image41' already used for a different image in 'Step 4. Clone the Instant NGP Repository (1B83AE44-0A2E-4577-859D-373B03B34A76)'
+A: rename 'image41' to 'image41__fix1'
+
+
+----------------------------------
+Changing file 'Create a Frame-Based Number Cycle Using Modulus (A7479266-1B32-49AC-96AE-B29066333D79)'
+I: name 'image57' already used for a different image in 'Step 4. Clone the Instant NGP Repository (1B83AE44-0A2E-4577-859D-373B03B34A76)'
+A: rename 'image57' to 'image57__fix1'
+
+
+----------------------------------
+Changing file 'Step 1. Install Python (DE661752-687C-42D6-9B42-A1B676A9E8FA)'
+I: name 'image87' already used for a different image in 'Filesystem Nodes (9CB783C4-9864-4390-8998-D1422DAD840A)'
+A: rename 'image87' to 'image87__fix1'
+I: name 'image5' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image5' to 'image5__fix3'
+I: name 'image100' already used for a different image in 'Number Nodes (55EE0D8B-0397-4A80-B381-274D0B9F6D8E)'
+A: rename 'image100' to 'image100__fix1'
+I: 'image100' already seen as image100__fix1 in 'Step 1. Install Python (DE661752-687C-42D6-9B42-A1B676A9E8FA)'
+A: renaming 'image100' to 'image100__fix1' has already been done
+I: name 'image37' already used for a different image in 'Step 2. Change the Exposure (723D5EC0-467B-4617-9CF7-4F999176F67E)'
+A: rename 'image37' to 'image37__fix1'
+I: name 'image76' already used for a different image in 'Point Nodes (913775BE-9F32-4CD6-AD8D-6EFCB39499E8)'
+A: rename 'image76' to 'image76__fix1'
+
+
+----------------------------------
+Changing file 'Step 3. With the Fusion Nodes view active in the foreground, press the "Shift + Space" hotkey on your keyboard.  (EA509FFF-CE20-404F-9724-E80DE8822751)'
+I: name 'image15' already used for a different image in 'Creating Volumetric NeRFs (9C1F3E40-6582-4BB7-9B88-FDD6F481A9BA)'
+A: rename 'image15' to 'image15__fix2'
+I: name 'image5' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image5' to 'image5__fix4'
+I: name 'image2' already used for a different image in 'Step 4. Open the document in a programmer's text editing tool like NotePad++.  (684FA4D3-49BE-494F-8E2A-4C25B4B1C0A3)'
+A: rename 'image2' to 'image2__fix7'
+
+
+----------------------------------
+Changing file 'Step 5. You can render this footage back to an image sequence or movie file on disk using either a MediaOut node (in Resolve), or a Saver node (in Fusion Standalone). (F263E9A8-5597-4C97-8FCA-FCA0CA432BFA)'
+I: name 'image11' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image11' to 'image11__fix5'
+I: name 'image17' already used for a different image in 'Step 4. Open the document in a programmer's text editing tool like NotePad++.  (684FA4D3-49BE-494F-8E2A-4C25B4B1C0A3)'
+A: rename 'image17' to 'image17__fix3'
+
+
+----------------------------------
+Changing file 'Step 5 Now when you start up Fusion Studio, if the program crashes a crash dump report is generated on the Windows platform, and is written automatically to the %temp% folder. This path is represented on disk as: (0B230B50-3EE8-4BEA-BFAA-67E56A9C54EF)'
+I: name 'image1' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image1' to 'image1__fix7'
+
+
+----------------------------------
+Changing file 'Natural (B2CE39F2-23C6-4C02-9D98-E5BB258E9130)'
+I: name 'image35' already used for a different image in 'Equipment Needed to Explore Instant NGP (BF561C3D-6414-4827-A377-5B4184269990)'
+A: rename 'image35' to 'image35__fix3'
+I: name 'image36' already used for a different image in 'Step 2. Install Visual Studio + CMake  (C7272844-8D0A-4B36-86A7-C64E4CECE58D)'
+A: rename 'image36' to 'image36__fix2'
+I: name 'image37' already used for a different image in 'Step 2. Change the Exposure (723D5EC0-467B-4617-9CF7-4F999176F67E)'
+A: rename 'image37' to 'image37__fix2'
+I: name 'image38' already used for a different image in 'Step 4. Clone the Instant NGP Repository (1B83AE44-0A2E-4577-859D-373B03B34A76)'
+A: rename 'image38' to 'image38__fix1'
+I: name 'image39' already used for a different image in 'Marching Cubes Mesh Output (FE692135-306F-427C-B060-BA01B2B46823)'
+A: rename 'image39' to 'image39__fix1'
+I: name 'image40' already used for a different image in 'Step 1. Download the "Nerf_instant_ngp_lion.zip" example project near the top of this guide. (BE7BF4A0-7181-488B-909C-EFD0B572A750)'
+A: rename 'image40' to 'image40__fix1'
+I: name 'image41' already used for a different image in 'Step 4. Clone the Instant NGP Repository (1B83AE44-0A2E-4577-859D-373B03B34A76)'
+A: rename 'image41' to 'image41__fix2'
+I: name 'image42' already used for a different image in 'Install COLMAP (8C110D19-09B0-4908-9AC8-A199855B4B66)'
+A: rename 'image42' to 'image42__fix2'
+I: name 'image43' already used for a different image in 'Filesystem Nodes (9CB783C4-9864-4390-8998-D1422DAD840A)'
+A: rename 'image43' to 'image43__fix3'
+I: name 'image44' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image44' to 'image44__fix3'
+
+
+----------------------------------
+Changing file 'History of trainable encoding parameters (516A3A2B-F539-4E28-87A8-A4B16C97933A)'
+I: name 'image30' already used for a different image in 'Number Nodes (55EE0D8B-0397-4A80-B381-274D0B9F6D8E)'
+A: rename 'image30' to 'image30__fix2'
+
+
+----------------------------------
+Changing file 'The Easy Approach to CSV Parsing (1E46C74E-8123-41C4-B084-A4EA4833CAA7)'
+I: name 'image61' already used for a different image in 'Script Paths (45F39C10-2DCE-48F2-95EF-30F7E2878A40)'
+A: rename 'image61' to 'image61__fix1'
+
+
+----------------------------------
+Changing file 'Blender Compositor ST Map Workflows (1F6215DA-083F-42D6-9588-10E78E53E697)'
+I: name 'image59' already used for a different image in 'Image Nodes (268125DE-0155-4A10-927A-5A6BCFE11859)'
+A: rename 'image59' to 'image59__fix1'
+
+
+----------------------------------
+Changing file 'Step 4. After rebooting your system, you can check if the "FUSION_EXCEPTION_HANDLER" environment variable is present and active by opening the Command Prompt and entering: (6AF4F436-19BB-4E1E-B80C-408D7422C2E3)'
+I: name 'image7' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image7' to 'image7__fix3'
+
+
+----------------------------------
+Changing file 'Really, you should get Notepad++ Installed ASAP! (EE5DCA88-2471-4FDB-BEC1-62E9C9080292)'
+I: name 'image21' already used for a different image in 'YouTube 2x3 Cubic Face Layout - Stereo 3D Side By Side (7445E818-5DB6-42C3-9F35-E05678A4DF8B)'
+A: rename 'image21' to 'image21__fix3'
+
+
+----------------------------------
+Changing file 'ScriptVal Nodes (6B0926FD-77B3-464D-9D0B-D2091A013E22)'
+I: name 'image344' already used for a different image in 'UI Manager Scripting Examples (529466EF-7D67-4E3F-91FC-78D3D1E65226)'
+A: rename 'image344' to 'image344__fix1'
+I: name 'image106' already used for a different image in 'Equipment Needed to Explore Instant NGP (BF561C3D-6414-4827-A377-5B4184269990)'
+A: rename 'image106' to 'image106__fix1'
+I: name 'image157' already used for a different image in 'Software Required (B8E38E06-797C-40C6-A124-99ED562773B8)'
+A: rename 'image157' to 'image157__fix1'
+I: name 'image15' already used for a different image in 'Creating Volumetric NeRFs (9C1F3E40-6582-4BB7-9B88-FDD6F481A9BA)'
+A: rename 'image15' to 'image15__fix3'
+I: name 'image21' already used for a different image in 'YouTube 2x3 Cubic Face Layout - Stereo 3D Side By Side (7445E818-5DB6-42C3-9F35-E05678A4DF8B)'
+A: rename 'image21' to 'image21__fix4'
+I: name 'image33' already used for a different image in 'Step 2. Install Visual Studio + CMake  (C7272844-8D0A-4B36-86A7-C64E4CECE58D)'
+A: rename 'image33' to 'image33__fix3'
+I: name 'image7' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image7' to 'image7__fix4'
+I: name 'image3' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image3' to 'image3__fix3'
+I: name 'image102' already used for a different image in 'Step 2. Install Visual Studio + CMake  (C7272844-8D0A-4B36-86A7-C64E4CECE58D)'
+A: rename 'image102' to 'image102__fix1'
+I: name 'image50' already used for a different image in 'Step 4. Clone the Instant NGP Repository (1B83AE44-0A2E-4577-859D-373B03B34A76)'
+A: rename 'image50' to 'image50__fix4'
+I: name 'image105' already used for a different image in 'Step 2. Install Visual Studio + CMake  (C7272844-8D0A-4B36-86A7-C64E4CECE58D)'
+A: rename 'image105' to 'image105__fix1'
+
+
+----------------------------------
+Changing file 'Closing Notes (ACAC8DEA-ACB7-4C16-9C7F-28E2B913F43B)'
+I: name 'image40' already used for a different image in 'Step 1. Download the "Nerf_instant_ngp_lion.zip" example project near the top of this guide. (BE7BF4A0-7181-488B-909C-EFD0B572A750)'
+A: rename 'image40' to 'image40__fix2'
+I: name 'image6' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image6' to 'image6__fix4'
+
+
+----------------------------------
+Changing file 'Using SlashCommands (B7BA1565-64DC-43E1-AC8A-EE5DE875B650)'
+I: name 'image328' already used for a different image in 'ui:Tree{} (EBABDE6E-3FC5-4487-ACB8-BDF3C2B50514)'
+A: rename 'image328' to 'image328__fix1'
+
+
+----------------------------------
+Changing file 'Step 10. Next, you need to download the PIXAR "Kitchen_set" example USD scene.  (6CD31890-EB6D-4169-B435-E146E2D558AB)'
+I: name 'file.php' already used for a different image in 'Part 3 - Fusion Studio (E7547A9B-4D83-4A36-84F2-B9C8D0897BAB)'
+A: rename 'file.php' to 'file.php__fix7'
+I: name 'file.php' already used for a different image in 'Part 3 - Fusion Studio (E7547A9B-4D83-4A36-84F2-B9C8D0897BAB)'
+A: rename 'file.php' to 'file.php__fix8'
+I: name 'file.php' already used for a different image in 'Part 3 - Fusion Studio (E7547A9B-4D83-4A36-84F2-B9C8D0897BAB)'
+A: rename 'file.php' to 'file.php__fix9'
+I: name 'file.php' already used for a different image in 'Part 3 - Fusion Studio (E7547A9B-4D83-4A36-84F2-B9C8D0897BAB)'
+A: rename 'file.php' to 'file.php__fix10'
+I: name 'file.php' already used for a different image in 'Part 3 - Fusion Studio (E7547A9B-4D83-4A36-84F2-B9C8D0897BAB)'
+A: rename 'file.php' to 'file.php__fix11'
+I: name 'file.php' already used for a different image in 'Part 3 - Fusion Studio (E7547A9B-4D83-4A36-84F2-B9C8D0897BAB)'
+A: rename 'file.php' to 'file.php__fix12'
+I: name 'file.php' already used for a different image in 'Part 3 - Fusion Studio (E7547A9B-4D83-4A36-84F2-B9C8D0897BAB)'
+A: rename 'file.php' to 'file.php__fix13'
+I: name 'file.php' already used for a different image in 'Part 3 - Fusion Studio (E7547A9B-4D83-4A36-84F2-B9C8D0897BAB)'
+A: rename 'file.php' to 'file.php__fix14'
+
+
+----------------------------------
+Changing file 'Step 1. Create a new Fusion composite. (8B89FB0E-80C3-4EC1-AB2D-1FF3ACFBCB7C)'
+I: name 'image20' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image20' to 'image20__fix3'
+
+
+----------------------------------
+Changing file 'Step 4. In the Fusion Nodes view you need to connect your YouTube 360 footage's MediaIn/Loader node output connection to the "MeshUV2Equirectangular" node's input connection. (EB03816B-92EA-41BD-9B66-D5451A579B3A)'
+I: name 'image1' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image1' to 'image1__fix8'
+I: name 'image6' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image6' to 'image6__fix5'
+
+
+----------------------------------
+Changing file 'Step 2. In the "New System Variable" dialog enter the "Variable name:" as "FUSION_EXCEPTION_HANDLER". Then enter the "Variable value:" as "true". Click the "OK" button to save this new environment variable entry. (C0775CFA-4883-479A-A128-B33E7DC1D9FD)'
+I: name 'image5' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image5' to 'image5__fix5'
+
+
+----------------------------------
+Changing file 'ui:ColorPicker{} (421DCDF6-8D09-4CB1-87AE-918ADA1C04F6)'
+I: name 'image81' already used for a different image in 'Build the TestBed Program (654479E8-DE69-4464-A92A-37ED1010BA02)'
+A: rename 'image81' to 'image81__fix2'
+
+
+----------------------------------
+Changing file 'Step 6. (E5DC36D1-7C9D-417C-8F70-0DBF1E74C6B0)'
+I: name 'image8' already used for a different image in 'Step 5. You can render this footage back to an image sequence or movie file on disk using either a MediaOut node (in Resolve), or a Saver node (in Fusion Standalone). (D34A6E2C-3C52-4399-AB14-AA783928F917)'
+A: rename 'image8' to 'image8__fix4'
+I: name 'image4' already used for a different image in 'Step 5. You can render this footage back to an image sequence or movie file on disk using either a MediaOut node (in Resolve), or a Saver node (in Fusion Standalone). (D34A6E2C-3C52-4399-AB14-AA783928F917)'
+A: rename 'image4' to 'image4__fix8'
+I: name 'image10' already used for a different image in 'Step 3. Copy the COLMAP generated "Transform.json" file from inside the "C:\instant-ngp\" folder into "C:\instant-ngp\data\nerf\lion\" folder.  (0AF228DE-5632-4AC9-B531-B079DB282F05)'
+A: rename 'image10' to 'image10__fix3'
+
+
+----------------------------------
+Changing file 'Fusion STMapper Fuse (C67886DD-A3BA-48A9-AEA2-598809B8CBBD)'
+I: name 'image42' already used for a different image in 'Install COLMAP (8C110D19-09B0-4908-9AC8-A199855B4B66)'
+A: rename 'image42' to 'image42__fix3'
+I: name 'image17' already used for a different image in 'Step 4. Open the document in a programmer's text editing tool like NotePad++.  (684FA4D3-49BE-494F-8E2A-4C25B4B1C0A3)'
+A: rename 'image17' to 'image17__fix4'
+I: name 'image33' already used for a different image in 'Step 2. Install Visual Studio + CMake  (C7272844-8D0A-4B36-86A7-C64E4CECE58D)'
+A: rename 'image33' to 'image33__fix4'
+I: name 'image60' already used for a different image in 'Step 2. Install Visual Studio + CMake  (C7272844-8D0A-4B36-86A7-C64E4CECE58D)'
+A: rename 'image60' to 'image60__fix1'
+I: name 'image38' already used for a different image in 'Step 4. Clone the Instant NGP Repository (1B83AE44-0A2E-4577-859D-373B03B34A76)'
+A: rename 'image38' to 'image38__fix2'
+
+
+----------------------------------
+Changing file 'Tool Script Usage (8EA8AA16-4AFF-43B8-AF14-5E3925B92289)'
+I: name 'image7' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image7' to 'image7__fix5'
+I: name 'image8' already used for a different image in 'Step 5. You can render this footage back to an image sequence or movie file on disk using either a MediaOut node (in Resolve), or a Saver node (in Fusion Standalone). (D34A6E2C-3C52-4399-AB14-AA783928F917)'
+A: rename 'image8' to 'image8__fix5'
+I: 'image6' already seen as image6__fix1 in 'Import PBR Metal Roughness Textures Script (50DB6A27-750F-4A97-ACEA-354F6D00F67E)'
+A: rename 'image6' to 'image6__fix1'
+
+
+----------------------------------
+Changing file 'YouTube 360 to Equirectangular Conversions (A9B7A140-0840-4C5F-9E8C-DA712AA32194)'
+I: name 'image3' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image3' to 'image3__fix4'
+
+
+----------------------------------
+Changing file 'Step 3. Install NVIDIA CUDA Toolkit and OptiX (EFD5818F-EE9E-4F78-A18D-937245F12E77)'
+I: name 'image107' already used for a different image in 'ScriptVal Nodes (6B0926FD-77B3-464D-9D0B-D2091A013E22)'
+A: rename 'image107' to 'image107__fix1'
+I: name 'image16' already used for a different image in 'Sample Media (910A9641-95D3-4024-BBEB-6940285C2DC5)'
+A: rename 'image16' to 'image16__fix3'
+I: name 'image68' already used for a different image in 'JSON Nodes (7B3B3A2B-C415-4456-A5EB-899F3AA974BE)'
+A: rename 'image68' to 'image68__fix2'
+I: name 'image89' already used for a different image in 'Number Nodes (55EE0D8B-0397-4A80-B381-274D0B9F6D8E)'
+A: rename 'image89' to 'image89__fix1'
+I: name 'image7' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image7' to 'image7__fix6'
+I: name 'image47' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image47' to 'image47__fix1'
+I: name 'image94' already used for a different image in '3D Nodes (241D8C46-CA8E-4AAB-BB3B-FCA129F2D2A3)'
+A: rename 'image94' to 'image94__fix1'
+I: name 'image27' already used for a different image in 'Industrial (FB0CCB95-04D8-4873-B3C8-88EBEF4FCF16)'
+A: rename 'image27' to 'image27__fix2'
+I: name 'image59' already used for a different image in 'Image Nodes (268125DE-0155-4A10-927A-5A6BCFE11859)'
+A: rename 'image59' to 'image59__fix2'
+I: name 'image25' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image25' to 'image25__fix4'
+I: name 'image103' already used for a different image in 'Using SlashFor to Batch Edit Nodes in a Comp (2EC7DFA0-EE90-4343-B52F-12A80C484744)'
+A: rename 'image103' to 'image103__fix1'
+I: name 'image65' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image65' to 'image65__fix1'
+
+
+----------------------------------
+Changing file 'Check Your Camera Transforms for NaNs (1411EBC7-B3CF-4277-9BF2-7D87EEF08D2A)'
+I: name 'image29' already used for a different image in 'Industrial (FB0CCB95-04D8-4873-B3C8-88EBEF4FCF16)'
+A: rename 'image29' to 'image29__fix4'
+I: name 'image69' already used for a different image in 'ScriptVal Nodes (6B0926FD-77B3-464D-9D0B-D2091A013E22)'
+A: rename 'image69' to 'image69__fix1'
+
+
+----------------------------------
+Changing file 'Fusion CustomTool Node (01D5F40F-4F93-4F89-96C9-6E76A83C8DDB)'
+I: name 'image63' already used for a different image in 'Equipment Needed to Explore Instant NGP (BF561C3D-6414-4827-A377-5B4184269990)'
+A: rename 'image63' to 'image63__fix1'
+I: name 'image14' already used for a different image in 'Step 2. Install Visual Studio + CMake  (C7272844-8D0A-4B36-86A7-C64E4CECE58D)'
+A: rename 'image14' to 'image14__fix4'
+I: name 'image3' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image3' to 'image3__fix5'
+
+
+----------------------------------
+Changing file 'Matrix Nodes (2B838FA9-2A8A-4177-9A50-FA8EAE547967)'
+I: name 'image58' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image58' to 'image58__fix2'
+I: name 'image6' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image6' to 'image6__fix6'
+I: name 'image12' already used for a different image in 'Armadillo Model (B50522B7-4ACD-456D-A5EC-AAA468C1AC2C)'
+A: rename 'image12' to 'image12__fix4'
+I: name 'image88' already used for a different image in 'Step 3. Install NVIDIA CUDA Toolkit and OptiX (EFD5818F-EE9E-4F78-A18D-937245F12E77)'
+A: rename 'image88' to 'image88__fix1'
+I: name 'image24' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image24' to 'image24__fix3'
+I: name 'image14' already used for a different image in 'Step 2. Install Visual Studio + CMake  (C7272844-8D0A-4B36-86A7-C64E4CECE58D)'
+A: rename 'image14' to 'image14__fix5'
+I: name 'image26' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image26' to 'image26__fix3'
+
+
+----------------------------------
+Changing file 'Software Required (138B858C-076E-4102-8B71-BA57690DEA34)'
+I: name 'image36' already used for a different image in 'Step 2. Install Visual Studio + CMake  (C7272844-8D0A-4B36-86A7-C64E4CECE58D)'
+A: rename 'image36' to 'image36__fix3'
+I: name 'image30' already used for a different image in 'Number Nodes (55EE0D8B-0397-4A80-B381-274D0B9F6D8E)'
+A: rename 'image30' to 'image30__fix3'
+
+
+----------------------------------
+Changing file 'Software Interface (EB6D42B7-AFD9-43AE-88DF-5363FD48D75B)'
+I: name 'image3' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image3' to 'image3__fix6'
+I: name 'image5' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image5' to 'image5__fix6'
+I: name 'image1' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image1' to 'image1__fix9'
+
+
+----------------------------------
+Changing file 'Step 1. Rename the PTGui Project File (76845574-8C35-4A45-A4DE-CA829B6BD88E)'
+I: name 'image30' already used for a different image in 'Number Nodes (55EE0D8B-0397-4A80-B381-274D0B9F6D8E)'
+A: rename 'image30' to 'image30__fix4'
+I: name 'image45' already used for a different image in 'Step 3. Copy the COLMAP generated "Transform.json" file from inside the "C:\instant-ngp\" folder into "C:\instant-ngp\data\nerf\lion\" folder.  (0AF228DE-5632-4AC9-B531-B079DB282F05)'
+A: rename 'image45' to 'image45__fix1'
+
+
+----------------------------------
+Changing file 'Color Nodes (9AC99DCA-9B19-4E90-B88A-E22BC987D11B)'
+I: name 'image20' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image20' to 'image20__fix4'
+I: name 'image5' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image5' to 'image5__fix7'
+I: name 'image38' already used for a different image in 'Step 4. Clone the Instant NGP Repository (1B83AE44-0A2E-4577-859D-373B03B34A76)'
+A: rename 'image38' to 'image38__fix3'
+
+
+----------------------------------
+Changing file 'Array Nodes (F5C7EBAA-93AE-4CCF-91AC-9B8C3E9455F3)'
+I: name 'image17' already used for a different image in 'Step 4. Open the document in a programmer's text editing tool like NotePad++.  (684FA4D3-49BE-494F-8E2A-4C25B4B1C0A3)'
+A: rename 'image17' to 'image17__fix5'
+I: name 'image306' already used for a different image in 'ui:Button{} (30E43D0A-6F8F-4FCB-B926-E34A637F3D49)'
+A: rename 'image306' to 'image306__fix1'
+I: name 'image111' already used for a different image in 'Step 4. Clone the Instant NGP Repository (1B83AE44-0A2E-4577-859D-373B03B34A76)'
+A: rename 'image111' to 'image111__fix1'
+I: name 'image63' already used for a different image in 'Equipment Needed to Explore Instant NGP (BF561C3D-6414-4827-A377-5B4184269990)'
+A: rename 'image63' to 'image63__fix2'
+
+
+----------------------------------
+Changing file 'Step 17. With OpenUSD installed on your system the /opt/r_usd/USD/bin/ folder will have the following USD tools you can run from the CLI (command-line): (B2A0C25C-BBE4-4532-891C-1E161A56C452)'
+I: name 'file.php' already used for a different image in 'Part 3 - Fusion Studio (E7547A9B-4D83-4A36-84F2-B9C8D0897BAB)'
+A: rename 'file.php' to 'file.php__fix15'
+- 'icon_e_smile' is a duplicate of image1__fix3 in 'Import PBR Metal Roughness Textures Script (50DB6A27-750F-4A97-ACEA-354F6D00F67E)'
+A: rename 'icon_e_smile' to 'image1__fix3'
+
+
+----------------------------------
+Changing file 'Connect in VR to your Desktop PC (7446EBA4-A46F-4A5F-BE96-281EFADBF6C0)'
+I: name 'image10' already used for a different image in 'Step 3. Copy the COLMAP generated "Transform.json" file from inside the "C:\instant-ngp\" folder into "C:\instant-ngp\data\nerf\lion\" folder.  (0AF228DE-5632-4AC9-B531-B079DB282F05)'
+A: rename 'image10' to 'image10__fix4'
+
+
+----------------------------------
+Changing file 'Step 9. If you plan to use your compiled copy of the OpenUSD plugins in a single-user artist/TD environment you could edit your $HOME/.bash_profile to add entries like the example below.  (9B58F684-6917-4580-9B46-54BB955E8334)'
+I: name 'file.php' already used for a different image in 'Part 3 - Fusion Studio (E7547A9B-4D83-4A36-84F2-B9C8D0897BAB)'
+A: rename 'file.php' to 'file.php__fix16'
+I: name 'file.php' already used for a different image in 'Part 3 - Fusion Studio (E7547A9B-4D83-4A36-84F2-B9C8D0897BAB)'
+A: rename 'file.php' to 'file.php__fix17'
+
+
+----------------------------------
+Changing file 'Vector Nodes (E490531A-50B9-4B9B-A405-B454A59C9811)'
+I: name 'image48' already used for a different image in 'Training (18722AC0-A2DB-40B4-BA5D-A45BE1607A10)'
+A: rename 'image48' to 'image48__fix1'
+I: name 'image47' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image47' to 'image47__fix2'
+I: name 'image39' already used for a different image in 'Marching Cubes Mesh Output (FE692135-306F-427C-B060-BA01B2B46823)'
+A: rename 'image39' to 'image39__fix2'
+I: name 'image60' already used for a different image in 'Step 2. Install Visual Studio + CMake  (C7272844-8D0A-4B36-86A7-C64E4CECE58D)'
+A: rename 'image60' to 'image60__fix2'
+I: name 'image67' already used for a different image in 'Build the TestBed Program (654479E8-DE69-4464-A92A-37ED1010BA02)'
+A: rename 'image67' to 'image67__fix1'
+I: name 'image36' already used for a different image in 'Step 2. Install Visual Studio + CMake  (C7272844-8D0A-4B36-86A7-C64E4CECE58D)'
+A: rename 'image36' to 'image36__fix4'
+I: name 'image53' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image53' to 'image53__fix3'
+
+
+----------------------------------
+Changing file 'Snapshot (AC3B1997-CD81-47DE-B824-9FC4D803042B)'
+I: name 'image61' already used for a different image in 'Script Paths (45F39C10-2DCE-48F2-95EF-30F7E2878A40)'
+A: rename 'image61' to 'image61__fix2'
+
+
+----------------------------------
+Changing file 'Set Clip Version (CCC3C0A8-8B2B-4A9C-A974-EC2BAB635C18)'
+I: name 'image45' already used for a different image in 'Step 3. Copy the COLMAP generated "Transform.json" file from inside the "C:\instant-ngp\" folder into "C:\instant-ngp\data\nerf\lion\" folder.  (0AF228DE-5632-4AC9-B531-B079DB282F05)'
+A: rename 'image45' to 'image45__fix2'
+
+
+----------------------------------
+Changing file 'Utility (AC19F3C0-90B2-4A0D-80E9-9744C348D165)'
+I: name 'image45' already used for a different image in 'Step 3. Copy the COLMAP generated "Transform.json" file from inside the "C:\instant-ngp\" folder into "C:\instant-ngp\data\nerf\lion\" folder.  (0AF228DE-5632-4AC9-B531-B079DB282F05)'
+A: rename 'image45' to 'image45__fix3'
+I: name 'image46' already used for a different image in 'Rendering (5D438B1F-4555-430C-A3EA-F855D4C50286)'
+A: rename 'image46' to 'image46__fix2'
+I: name 'image47' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image47' to 'image47__fix3'
+I: name 'image48' already used for a different image in 'Training (18722AC0-A2DB-40B4-BA5D-A45BE1607A10)'
+A: rename 'image48' to 'image48__fix2'
+I: name 'image49' already used for a different image in 'Step 4. Clone the Instant NGP Repository (1B83AE44-0A2E-4577-859D-373B03B34A76)'
+A: rename 'image49' to 'image49__fix2'
+
+
+----------------------------------
+Changing file 'Creating 3D Materials from Live Web Images (95D21066-F543-451B-949E-E083CE7BF8A2)'
+I: name 'image10' already used for a different image in 'Step 3. Copy the COLMAP generated "Transform.json" file from inside the "C:\instant-ngp\" folder into "C:\instant-ngp\data\nerf\lion\" folder.  (0AF228DE-5632-4AC9-B531-B079DB282F05)'
+A: rename 'image10' to 'image10__fix5'
+I: name 'image108' already used for a different image in 'Step 4. Clone the Instant NGP Repository (1B83AE44-0A2E-4577-859D-373B03B34A76)'
+A: rename 'image108' to 'image108__fix1'
+
+
+----------------------------------
+Changing file 'ui:ComboBox{} (9CF81797-B093-4443-9439-498FB0E6AFA1)'
+I: name 'image330' already used for a different image in 'ScriptVal Nodes (6B0926FD-77B3-464D-9D0B-D2091A013E22)'
+A: rename 'image330' to 'image330__fix1'
+
+
+----------------------------------
+Changing file 'Step 2.  (77890CEA-FD1A-41B0-8E19-039587190DBA)'
+I: name 'image13' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image13' to 'image13__fix4'
+
+
+----------------------------------
+Changing file 'Install the Oculus Drivers for Windows (246F3C15-AD98-46B3-90AB-3442A951DAB2)'
+I: name 'image17' already used for a different image in 'Step 4. Open the document in a programmer's text editing tool like NotePad++.  (684FA4D3-49BE-494F-8E2A-4C25B4B1C0A3)'
+A: rename 'image17' to 'image17__fix6'
+I: name 'image18' already used for a different image in 'Metadata Nodes (82E756C1-92EF-49A6-B692-C978CE924F6A)'
+A: rename 'image18' to 'image18__fix5'
+I: name 'image5' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image5' to 'image5__fix8'
+I: name 'image9' already used for a different image in 'Step 2. Install Visual Studio + CMake  (C7272844-8D0A-4B36-86A7-C64E4CECE58D)'
+A: rename 'image9' to 'image9__fix6'
+I: name 'image15' already used for a different image in 'Creating Volumetric NeRFs (9C1F3E40-6582-4BB7-9B88-FDD6F481A9BA)'
+A: rename 'image15' to 'image15__fix4'
+I: name 'image7' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image7' to 'image7__fix7'
+I: name 'image19' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image19' to 'image19__fix3'
+I: name 'image6' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image6' to 'image6__fix7'
+I: name 'image16' already used for a different image in 'Sample Media (910A9641-95D3-4024-BBEB-6940285C2DC5)'
+A: rename 'image16' to 'image16__fix4'
+
+
+----------------------------------
+Changing file 'KickAss ShaderZ Menu (A41E5332-2174-4F14-975C-9B688F55EDFE)'
+I: name 'image56' already used for a different image in 'Step 2. Install Visual Studio + CMake  (C7272844-8D0A-4B36-86A7-C64E4CECE58D)'
+A: rename 'image56' to 'image56__fix2'
+
+
+----------------------------------
+Changing file 'Step 8. Render the PTGui Project (60EDA7F3-8EEB-45CC-8AAF-13FA2B6B7753)'
+I: name 'image52' already used for a different image in 'HDRI (543742C5-1B82-4174-9BC7-48B488A7598A)'
+A: rename 'image52' to 'image52__fix2'
+I: name 'image61' already used for a different image in 'Script Paths (45F39C10-2DCE-48F2-95EF-30F7E2878A40)'
+A: rename 'image61' to 'image61__fix3'
+I: name 'image67' already used for a different image in 'Build the TestBed Program (654479E8-DE69-4464-A92A-37ED1010BA02)'
+A: rename 'image67' to 'image67__fix2'
+
+
+----------------------------------
+Changing file 'Pair your Quest HMD (0CB51CE0-9347-4E2C-8139-4BA7CDB5094F)'
+I: name 'image1' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image1' to 'image1__fix10'
+
+
+----------------------------------
+Changing file 'Configure OpenXR on Windows (B4888B25-3AF4-4C47-AA4E-A4E49100A737)'
+I: name 'image13' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image13' to 'image13__fix5'
+I: name 'image8' already used for a different image in 'Step 5. You can render this footage back to an image sequence or movie file on disk using either a MediaOut node (in Resolve), or a Saver node (in Fusion Standalone). (D34A6E2C-3C52-4399-AB14-AA783928F917)'
+A: rename 'image8' to 'image8__fix6'
+
+
+----------------------------------
+Changing file 'KKD Node Reference Guide (B47769B6-C7AF-4363-894A-219133FF0F65)'
+I: name 'image172' already used for a different image in 'Point Nodes (913775BE-9F32-4CD6-AD8D-6EFCB39499E8)'
+A: rename 'image172' to 'image172__fix1'
+I: name 'image269' already used for a different image in 'The Low Level Approach to CSV Parsing (3258DA10-06A3-4D8F-B5D8-FB9B732E1BC0)'
+A: rename 'image269' to 'image269__fix1'
+I: name 'image38' already used for a different image in 'Step 4. Clone the Instant NGP Repository (1B83AE44-0A2E-4577-859D-373B03B34A76)'
+A: rename 'image38' to 'image38__fix4'
+I: name 'image280' already used for a different image in 'Number Nodes (55EE0D8B-0397-4A80-B381-274D0B9F6D8E)'
+A: rename 'image280' to 'image280__fix1'
+I: name 'image234' already used for a different image in 'ScriptVal Nodes (6B0926FD-77B3-464D-9D0B-D2091A013E22)'
+A: rename 'image234' to 'image234__fix1'
+I: name 'image112' already used for a different image in 'Marching Cubes Mesh Output (FE692135-306F-427C-B060-BA01B2B46823)'
+A: rename 'image112' to 'image112__fix1'
+I: name 'image55' already used for a different image in 'Fusion Select Tool (FEF433B7-F53F-4C52-9990-16995B93BF2E)'
+A: rename 'image55' to 'image55__fix2'
+I: name 'image44' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image44' to 'image44__fix4'
+I: name 'image261' already used for a different image in 'ScriptVal Nodes (6B0926FD-77B3-464D-9D0B-D2091A013E22)'
+A: rename 'image261' to 'image261__fix1'
+I: name 'image156' already used for a different image in 'Number Nodes (55EE0D8B-0397-4A80-B381-274D0B9F6D8E)'
+A: rename 'image156' to 'image156__fix1'
+I: name 'image193' already used for a different image in 'Image Nodes (268125DE-0155-4A10-927A-5A6BCFE11859)'
+A: rename 'image193' to 'image193__fix1'
+I: name 'image84' already used for a different image in 'Equipment Needed to Explore Instant NGP (BF561C3D-6414-4827-A377-5B4184269990)'
+A: rename 'image84' to 'image84__fix2'
+I: name 'image20' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image20' to 'image20__fix5'
+I: name 'image26' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image26' to 'image26__fix4'
+I: name 'image56' already used for a different image in 'Step 2. Install Visual Studio + CMake  (C7272844-8D0A-4B36-86A7-C64E4CECE58D)'
+A: rename 'image56' to 'image56__fix3'
+I: name 'image162' already used for a different image in 'Filesystem Nodes (9CB783C4-9864-4390-8998-D1422DAD840A)'
+A: rename 'image162' to 'image162__fix1'
+I: name 'image142' already used for a different image in '3D Nodes (241D8C46-CA8E-4AAB-BB3B-FCA129F2D2A3)'
+A: rename 'image142' to 'image142__fix1'
+I: name 'image73' already used for a different image in 'Build the TestBed Program (654479E8-DE69-4464-A92A-37ED1010BA02)'
+A: rename 'image73' to 'image73__fix2'
+I: name 'image149' already used for a different image in 'Creating 3D Materials from Live Web Images (95D21066-F543-451B-949E-E083CE7BF8A2)'
+A: rename 'image149' to 'image149__fix1'
+I: name 'image48' already used for a different image in 'Training (18722AC0-A2DB-40B4-BA5D-A45BE1607A10)'
+A: rename 'image48' to 'image48__fix3'
+I: name 'image244' already used for a different image in 'Matrix Nodes (2B838FA9-2A8A-4177-9A50-FA8EAE547967)'
+A: rename 'image244' to 'image244__fix1'
+I: name 'image35' already used for a different image in 'Equipment Needed to Explore Instant NGP (BF561C3D-6414-4827-A377-5B4184269990)'
+A: rename 'image35' to 'image35__fix4'
+I: name 'image65' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image65' to 'image65__fix2'
+I: name 'image214' already used for a different image in 'Number Nodes (55EE0D8B-0397-4A80-B381-274D0B9F6D8E)'
+A: rename 'image214' to 'image214__fix1'
+I: name 'image164' already used for a different image in 'Array Nodes (F5C7EBAA-93AE-4CCF-91AC-9B8C3E9455F3)'
+A: rename 'image164' to 'image164__fix1'
+I: name 'image260' already used for a different image in 'Number Nodes (55EE0D8B-0397-4A80-B381-274D0B9F6D8E)'
+A: rename 'image260' to 'image260__fix1'
+I: name 'image190' already used for a different image in 'Number Nodes (55EE0D8B-0397-4A80-B381-274D0B9F6D8E)'
+A: rename 'image190' to 'image190__fix1'
+I: name 'image110' already used for a different image in 'Step 4. Open the document in a programmer's text editing tool like NotePad++.  (684FA4D3-49BE-494F-8E2A-4C25B4B1C0A3)'
+A: rename 'image110' to 'image110__fix2'
+I: name 'image43' already used for a different image in 'Filesystem Nodes (9CB783C4-9864-4390-8998-D1422DAD840A)'
+A: rename 'image43' to 'image43__fix4'
+I: name 'image91' already used for a different image in 'Number Nodes (55EE0D8B-0397-4A80-B381-274D0B9F6D8E)'
+A: rename 'image91' to 'image91__fix1'
+I: name 'image83' already used for a different image in 'Step 2. Install Visual Studio + CMake  (C7272844-8D0A-4B36-86A7-C64E4CECE58D)'
+A: rename 'image83' to 'image83__fix2'
+I: name 'image180' already used for a different image in 'Base64 Nodes (1B137A5D-A33D-48BB-A34B-71DF3CD08F28)'
+A: rename 'image180' to 'image180__fix1'
+I: name 'image25' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image25' to 'image25__fix5'
+I: name 'image282' already used for a different image in 'ScriptVal Nodes (6B0926FD-77B3-464D-9D0B-D2091A013E22)'
+A: rename 'image282' to 'image282__fix1'
+I: name 'image227' already used for a different image in 'Image Nodes (268125DE-0155-4A10-927A-5A6BCFE11859)'
+A: rename 'image227' to 'image227__fix1'
+I: name 'image263' already used for a different image in 'ui:Label{} (AF0250FA-DBCE-4FE5-BD44-1979FAAAF575)'
+A: rename 'image263' to 'image263__fix1'
+I: name 'image10' already used for a different image in 'Step 3. Copy the COLMAP generated "Transform.json" file from inside the "C:\instant-ngp\" folder into "C:\instant-ngp\data\nerf\lion\" folder.  (0AF228DE-5632-4AC9-B531-B079DB282F05)'
+A: rename 'image10' to 'image10__fix6'
+I: name 'image114' already used for a different image in 'Step 1. Install Python (DE661752-687C-42D6-9B42-A1B676A9E8FA)'
+A: rename 'image114' to 'image114__fix1'
+I: name 'image96' already used for a different image in 'Matrix Nodes (2B838FA9-2A8A-4177-9A50-FA8EAE547967)'
+A: rename 'image96' to 'image96__fix1'
+I: name 'image255' already used for a different image in 'GUI Toolkits (17476731-139D-4C77-A4EB-C4FAAECAF3D7)'
+A: rename 'image255' to 'image255__fix2'
+I: name 'image154' already used for a different image in 'Image Nodes (268125DE-0155-4A10-927A-5A6BCFE11859)'
+A: rename 'image154' to 'image154__fix1'
+I: name 'image24' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image24' to 'image24__fix4'
+I: name 'image205' already used for a different image in 'Metadata Nodes (82E756C1-92EF-49A6-B692-C978CE924F6A)'
+A: rename 'image205' to 'image205__fix1'
+I: name 'image111' already used for a different image in 'Step 4. Clone the Instant NGP Repository (1B83AE44-0A2E-4577-859D-373B03B34A76)'
+A: rename 'image111' to 'image111__fix2'
+I: name 'image270' already used for a different image in 'Using SlashFor to Batch Edit Nodes in a Comp (2EC7DFA0-EE90-4343-B52F-12A80C484744)'
+A: rename 'image270' to 'image270__fix1'
+I: name 'image143' already used for a different image in 'ScriptVal Nodes (6B0926FD-77B3-464D-9D0B-D2091A013E22)'
+A: rename 'image143' to 'image143__fix1'
+I: name 'image116' already used for a different image in 'Array Nodes (F5C7EBAA-93AE-4CCF-91AC-9B8C3E9455F3)'
+A: rename 'image116' to 'image116__fix1'
+I: name 'image32' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image32' to 'image32__fix2'
+I: name 'image155' already used for a different image in 'Number Nodes (55EE0D8B-0397-4A80-B381-274D0B9F6D8E)'
+A: rename 'image155' to 'image155__fix1'
+I: 'image270' already seen as image270__fix1 in 'KKD Node Reference Guide (B47769B6-C7AF-4363-894A-219133FF0F65)'
+A: renaming 'image270' to 'image270__fix1' has already been done
+I: name 'image78' already used for a different image in 'Step 2. Install Visual Studio + CMake  (C7272844-8D0A-4B36-86A7-C64E4CECE58D)'
+A: rename 'image78' to 'image78__fix1'
+I: name 'image217' already used for a different image in 'Number Nodes (55EE0D8B-0397-4A80-B381-274D0B9F6D8E)'
+A: rename 'image217' to 'image217__fix1'
+I: name 'image160' already used for a different image in 'Filesystem Nodes (9CB783C4-9864-4390-8998-D1422DAD840A)'
+A: rename 'image160' to 'image160__fix1'
+I: name 'image189' already used for a different image in 'Filesystem Nodes (9CB783C4-9864-4390-8998-D1422DAD840A)'
+A: rename 'image189' to 'image189__fix1'
+I: name 'image23' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image23' to 'image23__fix4'
+I: name 'image50' already used for a different image in 'Step 4. Clone the Instant NGP Repository (1B83AE44-0A2E-4577-859D-373B03B34A76)'
+A: rename 'image50' to 'image50__fix5'
+I: name 'image64' already used for a different image in 'Step 2. Install Visual Studio + CMake  (C7272844-8D0A-4B36-86A7-C64E4CECE58D)'
+A: rename 'image64' to 'image64__fix2'
+I: name 'image178' already used for a different image in 'Image Nodes (268125DE-0155-4A10-927A-5A6BCFE11859)'
+A: rename 'image178' to 'image178__fix1'
+I: name 'image251' already used for a different image in 'The Low Level Approach to CSV Parsing (3258DA10-06A3-4D8F-B5D8-FB9B732E1BC0)'
+A: rename 'image251' to 'image251__fix1'
+I: name 'image86' already used for a different image in 'Step 2. Install Visual Studio + CMake  (C7272844-8D0A-4B36-86A7-C64E4CECE58D)'
+A: rename 'image86' to 'image86__fix1'
+I: name 'image5' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image5' to 'image5__fix9'
+I: name 'image132' already used for a different image in 'Matrix Nodes (2B838FA9-2A8A-4177-9A50-FA8EAE547967)'
+A: rename 'image132' to 'image132__fix1'
+I: name 'image49' already used for a different image in 'Step 4. Clone the Instant NGP Repository (1B83AE44-0A2E-4577-859D-373B03B34A76)'
+A: rename 'image49' to 'image49__fix3'
+I: name 'image213' already used for a different image in 'ScriptVal Nodes (6B0926FD-77B3-464D-9D0B-D2091A013E22)'
+A: rename 'image213' to 'image213__fix1'
+I: name 'image171' already used for a different image in 'Array Nodes (F5C7EBAA-93AE-4CCF-91AC-9B8C3E9455F3)'
+A: rename 'image171' to 'image171__fix1'
+I: name 'image54' already used for a different image in 'Step 2. Change the Exposure (723D5EC0-467B-4617-9CF7-4F999176F67E)'
+A: rename 'image54' to 'image54__fix4'
+I: name 'image18' already used for a different image in 'Metadata Nodes (82E756C1-92EF-49A6-B692-C978CE924F6A)'
+A: rename 'image18' to 'image18__fix6'
+I: name 'image181' already used for a different image in 'Vector Nodes (E490531A-50B9-4B9B-A405-B454A59C9811)'
+A: rename 'image181' to 'image181__fix1'
+I: name 'image1' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image1' to 'image1__fix11'
+I: name 'image37' already used for a different image in 'Step 2. Change the Exposure (723D5EC0-467B-4617-9CF7-4F999176F67E)'
+A: rename 'image37' to 'image37__fix3'
+I: name 'image89' already used for a different image in 'Number Nodes (55EE0D8B-0397-4A80-B381-274D0B9F6D8E)'
+A: rename 'image89' to 'image89__fix2'
+I: name 'image103' already used for a different image in 'Using SlashFor to Batch Edit Nodes in a Comp (2EC7DFA0-EE90-4343-B52F-12A80C484744)'
+A: rename 'image103' to 'image103__fix2'
+I: name 'image275' already used for a different image in 'Vonk Open Sub-Folder (77C067B3-6092-454E-A4F6-EB9F28254197)'
+A: rename 'image275' to 'image275__fix1'
+I: name 'image15' already used for a different image in 'Creating Volumetric NeRFs (9C1F3E40-6582-4BB7-9B88-FDD6F481A9BA)'
+A: rename 'image15' to 'image15__fix5'
+I: name 'image279' already used for a different image in 'Base64 Nodes (1B137A5D-A33D-48BB-A34B-71DF3CD08F28)'
+A: rename 'image279' to 'image279__fix1'
+I: name 'image283' already used for a different image in 'Check if a File Exists (CB5A0B45-A2B8-44FA-B0F6-A5BE1D24ADAC)'
+A: rename 'image283' to 'image283__fix1'
+I: name 'image101' already used for a different image in 'Step 2. Run COLMAP using the included "colmap2nerf.py" script. After a few minutes this script will generate a ready to use camera alignment JSON file. (87EAC3D9-61F2-4420-8837-EB022D90A3D8)'
+A: rename 'image101' to 'image101__fix1'
+I: name 'image79' already used for a different image in 'Step 4. Open the document in a programmer's text editing tool like NotePad++.  (684FA4D3-49BE-494F-8E2A-4C25B4B1C0A3)'
+A: rename 'image79' to 'image79__fix1'
+I: name 'image173' already used for a different image in 'Base64 Nodes (1B137A5D-A33D-48BB-A34B-71DF3CD08F28)'
+A: rename 'image173' to 'image173__fix1'
+I: name 'image212' already used for a different image in 'Matrix Nodes (2B838FA9-2A8A-4177-9A50-FA8EAE547967)'
+A: rename 'image212' to 'image212__fix1'
+I: name 'image203' already used for a different image in 'Number Nodes (55EE0D8B-0397-4A80-B381-274D0B9F6D8E)'
+A: rename 'image203' to 'image203__fix1'
+I: name 'image33' already used for a different image in 'Step 2. Install Visual Studio + CMake  (C7272844-8D0A-4B36-86A7-C64E4CECE58D)'
+A: rename 'image33' to 'image33__fix5'
+I: name 'image76' already used for a different image in 'Point Nodes (913775BE-9F32-4CD6-AD8D-6EFCB39499E8)'
+A: rename 'image76' to 'image76__fix2'
+I: name 'image179' already used for a different image in '3D Nodes (241D8C46-CA8E-4AAB-BB3B-FCA129F2D2A3)'
+A: rename 'image179' to 'image179__fix1'
+I: name 'image41' already used for a different image in 'Step 4. Clone the Instant NGP Repository (1B83AE44-0A2E-4577-859D-373B03B34A76)'
+A: rename 'image41' to 'image41__fix3'
+I: name 'image66' already used for a different image in 'Build the TestBed Program (654479E8-DE69-4464-A92A-37ED1010BA02)'
+A: rename 'image66' to 'image66__fix2'
+I: name 'image3' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image3' to 'image3__fix7'
+I: name 'image106' already used for a different image in 'Equipment Needed to Explore Instant NGP (BF561C3D-6414-4827-A377-5B4184269990)'
+A: rename 'image106' to 'image106__fix2'
+I: name 'image197' already used for a different image in 'Point Nodes (913775BE-9F32-4CD6-AD8D-6EFCB39499E8)'
+A: rename 'image197' to 'image197__fix1'
+I: name 'image140' already used for a different image in 'ScriptVal Nodes (6B0926FD-77B3-464D-9D0B-D2091A013E22)'
+A: rename 'image140' to 'image140__fix1'
+I: name 'image123' already used for a different image in 'Number Nodes (55EE0D8B-0397-4A80-B381-274D0B9F6D8E)'
+A: rename 'image123' to 'image123__fix1'
+I: name 'image27' already used for a different image in 'Industrial (FB0CCB95-04D8-4873-B3C8-88EBEF4FCF16)'
+A: rename 'image27' to 'image27__fix3'
+I: name 'image183' already used for a different image in 'Filesystem Nodes (9CB783C4-9864-4390-8998-D1422DAD840A)'
+A: rename 'image183' to 'image183__fix1'
+I: name 'image163' already used for a different image in 'ScriptVal Nodes (6B0926FD-77B3-464D-9D0B-D2091A013E22)'
+A: rename 'image163' to 'image163__fix1'
+I: name 'image152' already used for a different image in 'Number Nodes (55EE0D8B-0397-4A80-B381-274D0B9F6D8E)'
+A: rename 'image152' to 'image152__fix1'
+I: name 'image29' already used for a different image in 'Industrial (FB0CCB95-04D8-4873-B3C8-88EBEF4FCF16)'
+A: rename 'image29' to 'image29__fix5'
+I: name 'image69' already used for a different image in 'ScriptVal Nodes (6B0926FD-77B3-464D-9D0B-D2091A013E22)'
+A: rename 'image69' to 'image69__fix2'
+I: name 'image259' already used for a different image in 'Point Nodes (913775BE-9F32-4CD6-AD8D-6EFCB39499E8)'
+A: rename 'image259' to 'image259__fix1'
+I: name 'image192' already used for a different image in 'Number Nodes (55EE0D8B-0397-4A80-B381-274D0B9F6D8E)'
+A: rename 'image192' to 'image192__fix1'
+I: name 'image88' already used for a different image in 'Step 3. Install NVIDIA CUDA Toolkit and OptiX (EFD5818F-EE9E-4F78-A18D-937245F12E77)'
+A: rename 'image88' to 'image88__fix2'
+I: name 'image166' already used for a different image in 'Number Nodes (55EE0D8B-0397-4A80-B381-274D0B9F6D8E)'
+A: rename 'image166' to 'image166__fix1'
+I: name 'image102' already used for a different image in 'Step 2. Install Visual Studio + CMake  (C7272844-8D0A-4B36-86A7-C64E4CECE58D)'
+A: rename 'image102' to 'image102__fix2'
+I: name 'image274' already used for a different image in 'Base64 Nodes (1B137A5D-A33D-48BB-A34B-71DF3CD08F28)'
+A: rename 'image274' to 'image274__fix1'
+I: name 'image16' already used for a different image in 'Sample Media (910A9641-95D3-4024-BBEB-6940285C2DC5)'
+A: rename 'image16' to 'image16__fix5'
+I: name 'image28' already used for a different image in 'Step 4. Clone the Instant NGP Repository (1B83AE44-0A2E-4577-859D-373B03B34A76)'
+A: rename 'image28' to 'image28__fix5'
+I: name 'image9' already used for a different image in 'Step 2. Install Visual Studio + CMake  (C7272844-8D0A-4B36-86A7-C64E4CECE58D)'
+A: rename 'image9' to 'image9__fix7'
+I: name 'image87' already used for a different image in 'Filesystem Nodes (9CB783C4-9864-4390-8998-D1422DAD840A)'
+A: rename 'image87' to 'image87__fix2'
+I: name 'image145' already used for a different image in 'ScriptVal Nodes (6B0926FD-77B3-464D-9D0B-D2091A013E22)'
+A: rename 'image145' to 'image145__fix1'
+I: name 'image6' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image6' to 'image6__fix8'
+I: name 'image57' already used for a different image in 'Step 4. Clone the Instant NGP Repository (1B83AE44-0A2E-4577-859D-373B03B34A76)'
+A: rename 'image57' to 'image57__fix2'
+I: name 'image67' already used for a different image in 'Build the TestBed Program (654479E8-DE69-4464-A92A-37ED1010BA02)'
+A: rename 'image67' to 'image67__fix3'
+I: name 'image147' already used for a different image in 'ScriptVal Nodes (6B0926FD-77B3-464D-9D0B-D2091A013E22)'
+A: rename 'image147' to 'image147__fix1'
+I: name 'image94' already used for a different image in '3D Nodes (241D8C46-CA8E-4AAB-BB3B-FCA129F2D2A3)'
+A: rename 'image94' to 'image94__fix2'
+I: name 'image127' already used for a different image in 'Metadata Nodes (82E756C1-92EF-49A6-B692-C978CE924F6A)'
+A: rename 'image127' to 'image127__fix1'
+I: name 'image11' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image11' to 'image11__fix6'
+I: name 'image232' already used for a different image in 'ScriptVal Nodes (6B0926FD-77B3-464D-9D0B-D2091A013E22)'
+A: rename 'image232' to 'image232__fix1'
+I: name 'image139' already used for a different image in 'ScriptVal Nodes (6B0926FD-77B3-464D-9D0B-D2091A013E22)'
+A: rename 'image139' to 'image139__fix1'
+I: name 'image182' already used for a different image in 'Number Nodes (55EE0D8B-0397-4A80-B381-274D0B9F6D8E)'
+A: rename 'image182' to 'image182__fix1'
+I: name 'image184' already used for a different image in 'ScriptVal Nodes (6B0926FD-77B3-464D-9D0B-D2091A013E22)'
+A: rename 'image184' to 'image184__fix1'
+I: name 'image92' already used for a different image in 'Step 4. Clone the Instant NGP Repository (1B83AE44-0A2E-4577-859D-373B03B34A76)'
+A: rename 'image92' to 'image92__fix2'
+I: name 'image17' already used for a different image in 'Step 4. Open the document in a programmer's text editing tool like NotePad++.  (684FA4D3-49BE-494F-8E2A-4C25B4B1C0A3)'
+A: rename 'image17' to 'image17__fix7'
+I: name 'image281' already used for a different image in 'Filesystem Nodes (9CB783C4-9864-4390-8998-D1422DAD840A)'
+A: rename 'image281' to 'image281__fix1'
+I: name 'image8' already used for a different image in 'Step 5. You can render this footage back to an image sequence or movie file on disk using either a MediaOut node (in Resolve), or a Saver node (in Fusion Standalone). (D34A6E2C-3C52-4399-AB14-AA783928F917)'
+A: rename 'image8' to 'image8__fix7'
+I: name 'image175' already used for a different image in 'Number Nodes (55EE0D8B-0397-4A80-B381-274D0B9F6D8E)'
+A: rename 'image175' to 'image175__fix1'
+I: name 'image53' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image53' to 'image53__fix4'
+I: name 'image31' already used for a different image in 'Step 2. Install Visual Studio + CMake  (C7272844-8D0A-4B36-86A7-C64E4CECE58D)'
+A: rename 'image31' to 'image31__fix5'
+I: name 'image258' already used for a different image in 'Number Nodes (55EE0D8B-0397-4A80-B381-274D0B9F6D8E)'
+A: rename 'image258' to 'image258__fix1'
+I: name 'image188' already used for a different image in 'Number Nodes (55EE0D8B-0397-4A80-B381-274D0B9F6D8E)'
+A: rename 'image188' to 'image188__fix1'
+I: name 'image45' already used for a different image in 'Step 3. Copy the COLMAP generated "Transform.json" file from inside the "C:\instant-ngp\" folder into "C:\instant-ngp\data\nerf\lion\" folder.  (0AF228DE-5632-4AC9-B531-B079DB282F05)'
+A: rename 'image45' to 'image45__fix4'
+I: name 'image115' already used for a different image in 'Creating 3D Materials from Live Web Images (95D21066-F543-451B-949E-E083CE7BF8A2)'
+A: rename 'image115' to 'image115__fix1'
+I: name 'image224' already used for a different image in 'ScriptVal Nodes (6B0926FD-77B3-464D-9D0B-D2091A013E22)'
+A: rename 'image224' to 'image224__fix1'
+I: name 'image265' already used for a different image in 'Array Nodes (F5C7EBAA-93AE-4CCF-91AC-9B8C3E9455F3)'
+A: rename 'image265' to 'image265__fix1'
+I: name 'image158' already used for a different image in 'Filesystem Nodes (9CB783C4-9864-4390-8998-D1422DAD840A)'
+A: rename 'image158' to 'image158__fix1'
+I: name 'image4' already used for a different image in 'Step 5. You can render this footage back to an image sequence or movie file on disk using either a MediaOut node (in Resolve), or a Saver node (in Fusion Standalone). (D34A6E2C-3C52-4399-AB14-AA783928F917)'
+A: rename 'image4' to 'image4__fix9'
+I: name 'image131' already used for a different image in 'ScriptVal Nodes (6B0926FD-77B3-464D-9D0B-D2091A013E22)'
+A: rename 'image131' to 'image131__fix1'
+I: name 'image130' already used for a different image in 'ScriptVal Nodes (6B0926FD-77B3-464D-9D0B-D2091A013E22)'
+A: rename 'image130' to 'image130__fix1'
+I: name 'image120' already used for a different image in 'Number Nodes (55EE0D8B-0397-4A80-B381-274D0B9F6D8E)'
+A: rename 'image120' to 'image120__fix1'
+I: name 'image59' already used for a different image in 'Image Nodes (268125DE-0155-4A10-927A-5A6BCFE11859)'
+A: rename 'image59' to 'image59__fix3'
+I: name 'image262' already used for a different image in 'Vonk Essentials (05C9A8A6-334A-461B-900F-4460ABC527CA)'
+A: rename 'image262' to 'image262__fix1'
+I: name 'image34' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image34' to 'image34__fix5'
+I: name 'image204' already used for a different image in 'Matrix Nodes (2B838FA9-2A8A-4177-9A50-FA8EAE547967)'
+A: rename 'image204' to 'image204__fix1'
+I: name 'image229' already used for a different image in 'Number Nodes (55EE0D8B-0397-4A80-B381-274D0B9F6D8E)'
+A: rename 'image229' to 'image229__fix1'
+I: name 'image245' already used for a different image in 'JSON Nodes (7B3B3A2B-C415-4456-A5EB-899F3AA974BE)'
+A: rename 'image245' to 'image245__fix1'
+I: name 'image80' already used for a different image in 'Equipment Needed to Explore Instant NGP (BF561C3D-6414-4827-A377-5B4184269990)'
+A: rename 'image80' to 'image80__fix1'
+I: name 'image117' already used for a different image in 'Array Nodes (F5C7EBAA-93AE-4CCF-91AC-9B8C3E9455F3)'
+A: rename 'image117' to 'image117__fix1'
+I: name 'image104' already used for a different image in 'Step 2. Install Visual Studio + CMake  (C7272844-8D0A-4B36-86A7-C64E4CECE58D)'
+A: rename 'image104' to 'image104__fix2'
+I: name 'image148' already used for a different image in 'Array Nodes (F5C7EBAA-93AE-4CCF-91AC-9B8C3E9455F3)'
+A: rename 'image148' to 'image148__fix1'
+I: name 'image271' already used for a different image in 'ui:TextEdit{} (B1988488-B68A-4708-8A87-0BF933A13A24)'
+A: rename 'image271' to 'image271__fix1'
+I: name 'image226' already used for a different image in 'ScriptVal Nodes (6B0926FD-77B3-464D-9D0B-D2091A013E22)'
+A: rename 'image226' to 'image226__fix1'
+I: name 'image42' already used for a different image in 'Install COLMAP (8C110D19-09B0-4908-9AC8-A199855B4B66)'
+A: rename 'image42' to 'image42__fix4'
+I: name 'image75' already used for a different image in 'Number Nodes (55EE0D8B-0397-4A80-B381-274D0B9F6D8E)'
+A: rename 'image75' to 'image75__fix1'
+I: name 'image74' already used for a different image in 'Step 4. Clone the Instant NGP Repository (1B83AE44-0A2E-4577-859D-373B03B34A76)'
+A: rename 'image74' to 'image74__fix2'
+I: name 'image187' already used for a different image in 'Point Nodes (913775BE-9F32-4CD6-AD8D-6EFCB39499E8)'
+A: rename 'image187' to 'image187__fix1'
+I: name 'image144' already used for a different image in 'Number Nodes (55EE0D8B-0397-4A80-B381-274D0B9F6D8E)'
+A: rename 'image144' to 'image144__fix1'
+I: name 'image82' already used for a different image in 'Equipment Needed to Explore Instant NGP (BF561C3D-6414-4827-A377-5B4184269990)'
+A: rename 'image82' to 'image82__fix2'
+I: name 'image252' already used for a different image in 'Number Nodes (55EE0D8B-0397-4A80-B381-274D0B9F6D8E)'
+A: rename 'image252' to 'image252__fix1'
+I: name 'image266' already used for a different image in 'Creating 3D Materials from Live Web Images (95D21066-F543-451B-949E-E083CE7BF8A2)'
+A: rename 'image266' to 'image266__fix1'
+I: name 'image98' already used for a different image in 'Build the TestBed Program (654479E8-DE69-4464-A92A-37ED1010BA02)'
+A: rename 'image98' to 'image98__fix2'
+I: name 'image276' already used for a different image in 'Number Nodes (55EE0D8B-0397-4A80-B381-274D0B9F6D8E)'
+A: rename 'image276' to 'image276__fix1'
+I: name 'image22' already used for a different image in 'Equipment Needed to Explore Instant NGP (BF561C3D-6414-4827-A377-5B4184269990)'
+A: rename 'image22' to 'image22__fix6'
+I: name 'image105' already used for a different image in 'Step 2. Install Visual Studio + CMake  (C7272844-8D0A-4B36-86A7-C64E4CECE58D)'
+A: rename 'image105' to 'image105__fix2'
+I: name 'image62' already used for a different image in 'Equipment Needed to Explore Instant NGP (BF561C3D-6414-4827-A377-5B4184269990)'
+A: rename 'image62' to 'image62__fix3'
+I: name 'image107' already used for a different image in 'ScriptVal Nodes (6B0926FD-77B3-464D-9D0B-D2091A013E22)'
+A: rename 'image107' to 'image107__fix2'
+I: name 'image119' already used for a different image in 'Array Nodes (F5C7EBAA-93AE-4CCF-91AC-9B8C3E9455F3)'
+A: rename 'image119' to 'image119__fix1'
+I: name 'image135' already used for a different image in 'Creating 3D Materials from Live Web Images (95D21066-F543-451B-949E-E083CE7BF8A2)'
+A: rename 'image135' to 'image135__fix1'
+I: name 'image108' already used for a different image in 'Step 4. Clone the Instant NGP Repository (1B83AE44-0A2E-4577-859D-373B03B34A76)'
+A: rename 'image108' to 'image108__fix2'
+I: name 'image7' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image7' to 'image7__fix8'
+I: name 'image68' already used for a different image in 'JSON Nodes (7B3B3A2B-C415-4456-A5EB-899F3AA974BE)'
+A: rename 'image68' to 'image68__fix3'
+I: name 'image12' already used for a different image in 'Armadillo Model (B50522B7-4ACD-456D-A5EC-AAA468C1AC2C)'
+A: rename 'image12' to 'image12__fix5'
+I: name 'image90' already used for a different image in 'Number Nodes (55EE0D8B-0397-4A80-B381-274D0B9F6D8E)'
+A: rename 'image90' to 'image90__fix1'
+I: name 'image71' already used for a different image in 'Using Instant NGP (20E6434A-504F-4D10-B995-330103201025)'
+A: rename 'image71' to 'image71__fix2'
+I: name 'image236' already used for a different image in 'Number Nodes (55EE0D8B-0397-4A80-B381-274D0B9F6D8E)'
+A: rename 'image236' to 'image236__fix1'
+I: name 'image273' already used for a different image in 'ScriptVal Nodes (6B0926FD-77B3-464D-9D0B-D2091A013E22)'
+A: rename 'image273' to 'image273__fix1'
+I: name 'image206' already used for a different image in 'Point Nodes (913775BE-9F32-4CD6-AD8D-6EFCB39499E8)'
+A: rename 'image206' to 'image206__fix1'
+I: name 'image99' already used for a different image in 'Number Nodes (55EE0D8B-0397-4A80-B381-274D0B9F6D8E)'
+A: rename 'image99' to 'image99__fix2'
+I: name 'image228' already used for a different image in 'ScriptVal Nodes (6B0926FD-77B3-464D-9D0B-D2091A013E22)'
+A: rename 'image228' to 'image228__fix1'
+I: name 'image21' already used for a different image in 'YouTube 2x3 Cubic Face Layout - Stereo 3D Side By Side (7445E818-5DB6-42C3-9F35-E05678A4DF8B)'
+A: rename 'image21' to 'image21__fix5'
+I: name 'image100' already used for a different image in 'Number Nodes (55EE0D8B-0397-4A80-B381-274D0B9F6D8E)'
+A: rename 'image100' to 'image100__fix2'
+I: name 'image169' already used for a different image in 'Install Vonk (65BCC479-E58A-4779-B408-C34106D7CF9C)'
+A: rename 'image169' to 'image169__fix1'
+I: name 'image210' already used for a different image in 'JSON Nodes (7B3B3A2B-C415-4456-A5EB-899F3AA974BE)'
+A: rename 'image210' to 'image210__fix1'
+I: name 'image219' already used for a different image in 'Number Nodes (55EE0D8B-0397-4A80-B381-274D0B9F6D8E)'
+A: rename 'image219' to 'image219__fix1'
+I: name 'image2' already used for a different image in 'Step 4. Open the document in a programmer's text editing tool like NotePad++.  (684FA4D3-49BE-494F-8E2A-4C25B4B1C0A3)'
+A: rename 'image2' to 'image2__fix8'
+I: name 'image240' already used for a different image in 'Matrix Nodes (2B838FA9-2A8A-4177-9A50-FA8EAE547967)'
+A: rename 'image240' to 'image240__fix1'
+I: name 'image241' already used for a different image in 'Creating 3D Materials from Live Web Images (95D21066-F543-451B-949E-E083CE7BF8A2)'
+A: rename 'image241' to 'image241__fix1'
+I: name 'image93' already used for a different image in 'Step 4. Clone the Instant NGP Repository (1B83AE44-0A2E-4577-859D-373B03B34A76)'
+A: rename 'image93' to 'image93__fix2'
+I: name 'image40' already used for a different image in 'Step 1. Download the "Nerf_instant_ngp_lion.zip" example project near the top of this guide. (BE7BF4A0-7181-488B-909C-EFD0B572A750)'
+A: rename 'image40' to 'image40__fix3'
+I: name 'image186' already used for a different image in 'Tool Scripts (25357581-3F42-418F-B79A-DE8165E21425)'
+A: rename 'image186' to 'image186__fix1'
+I: name 'image85' already used for a different image in 'Step 2. Run COLMAP using the included "colmap2nerf.py" script. After a few minutes this script will generate a ready to use camera alignment JSON file. (87EAC3D9-61F2-4420-8837-EB022D90A3D8)'
+A: rename 'image85' to 'image85__fix2'
+I: name 'image13' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image13' to 'image13__fix6'
+I: name 'image113' already used for a different image in 'Equipment Needed to Explore Instant NGP (BF561C3D-6414-4827-A377-5B4184269990)'
+A: rename 'image113' to 'image113__fix2'
+I: name 'image72' already used for a different image in 'Vonk Essentials (05C9A8A6-334A-461B-900F-4460ABC527CA)'
+A: rename 'image72' to 'image72__fix1'
+I: name 'image242' already used for a different image in 'Vector Nodes (E490531A-50B9-4B9B-A405-B454A59C9811)'
+A: rename 'image242' to 'image242__fix1'
+I: name 'image134' already used for a different image in 'Vector Nodes (E490531A-50B9-4B9B-A405-B454A59C9811)'
+A: rename 'image134' to 'image134__fix1'
+I: name 'image168' already used for a different image in 'Point Nodes (913775BE-9F32-4CD6-AD8D-6EFCB39499E8)'
+A: rename 'image168' to 'image168__fix1'
+I: name 'image225' already used for a different image in 'Image Nodes (268125DE-0155-4A10-927A-5A6BCFE11859)'
+A: rename 'image225' to 'image225__fix1'
+I: name 'image233' already used for a different image in 'Number Nodes (55EE0D8B-0397-4A80-B381-274D0B9F6D8E)'
+A: rename 'image233' to 'image233__fix1'
+I: name 'image51' already used for a different image in 'HDRI (543742C5-1B82-4174-9BC7-48B488A7598A)'
+A: rename 'image51' to 'image51__fix3'
+I: name 'image52' already used for a different image in 'HDRI (543742C5-1B82-4174-9BC7-48B488A7598A)'
+A: rename 'image52' to 'image52__fix3'
+I: name 'image174' already used for a different image in 'Image Nodes (268125DE-0155-4A10-927A-5A6BCFE11859)'
+A: rename 'image174' to 'image174__fix1'
+I: name 'image264' already used for a different image in 'Matrix Nodes (2B838FA9-2A8A-4177-9A50-FA8EAE547967)'
+A: rename 'image264' to 'image264__fix1'
+I: name 'image30' already used for a different image in 'Number Nodes (55EE0D8B-0397-4A80-B381-274D0B9F6D8E)'
+A: rename 'image30' to 'image30__fix5'
+I: name 'image250' already used for a different image in 'File and Folder Browsing Dialogs (5D0F27E5-5DA3-4795-B36F-1F3B0DB552FE)'
+A: rename 'image250' to 'image250__fix2'
+I: name 'image47' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image47' to 'image47__fix4'
+I: name 'image58' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image58' to 'image58__fix3'
+
+
+----------------------------------
+Changing file 'ui:Slider{} (D74509DB-4F5C-4B93-931D-4742BFEB7E3F)'
+I: name 'image201' already used for a different image in 'KKD Node Reference Guide (B47769B6-C7AF-4363-894A-219133FF0F65)'
+A: rename 'image201' to 'image201__fix1'
+
+
+----------------------------------
+Changing file 'KKD Modifier Reference Guide (AD0BD2C8-7045-415F-836C-189466CD7BB7)'
+I: name 'image46' already used for a different image in 'Rendering (5D438B1F-4555-430C-A3EA-F855D4C50286)'
+A: rename 'image46' to 'image46__fix3'
+I: name 'image200' already used for a different image in 'Matrix Nodes (2B838FA9-2A8A-4177-9A50-FA8EAE547967)'
+A: rename 'image200' to 'image200__fix1'
+I: name 'image36' already used for a different image in 'Step 2. Install Visual Studio + CMake  (C7272844-8D0A-4B36-86A7-C64E4CECE58D)'
+A: rename 'image36' to 'image36__fix5'
+I: name 'image19' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image19' to 'image19__fix4'
+I: name 'image60' already used for a different image in 'Step 2. Install Visual Studio + CMake  (C7272844-8D0A-4B36-86A7-C64E4CECE58D)'
+A: rename 'image60' to 'image60__fix3'
+I: name 'image198' already used for a different image in 'Array Nodes (F5C7EBAA-93AE-4CCF-91AC-9B8C3E9455F3)'
+A: rename 'image198' to 'image198__fix1'
+I: name 'image278' already used for a different image in 'Point Nodes (913775BE-9F32-4CD6-AD8D-6EFCB39499E8)'
+A: rename 'image278' to 'image278__fix1'
+I: name 'image77' already used for a different image in 'Step 4. Clone the Instant NGP Repository (1B83AE44-0A2E-4577-859D-373B03B34A76)'
+A: rename 'image77' to 'image77__fix2'
+I: name 'image216' already used for a different image in 'ScriptVal Nodes (6B0926FD-77B3-464D-9D0B-D2091A013E22)'
+A: rename 'image216' to 'image216__fix1'
+I: name 'image63' already used for a different image in 'Equipment Needed to Explore Instant NGP (BF561C3D-6414-4827-A377-5B4184269990)'
+A: rename 'image63' to 'image63__fix3'
+I: name 'image191' already used for a different image in 'Number Nodes (55EE0D8B-0397-4A80-B381-274D0B9F6D8E)'
+A: rename 'image191' to 'image191__fix1'
+I: name 'image246' already used for a different image in 'Point Nodes (913775BE-9F32-4CD6-AD8D-6EFCB39499E8)'
+A: rename 'image246' to 'image246__fix1'
+I: name 'image14' already used for a different image in 'Step 2. Install Visual Studio + CMake  (C7272844-8D0A-4B36-86A7-C64E4CECE58D)'
+A: rename 'image14' to 'image14__fix6'
+I: name 'image237' already used for a different image in 'Number Nodes (55EE0D8B-0397-4A80-B381-274D0B9F6D8E)'
+A: rename 'image237' to 'image237__fix1'
+I: name 'image220' already used for a different image in 'Point Nodes (913775BE-9F32-4CD6-AD8D-6EFCB39499E8)'
+A: rename 'image220' to 'image220__fix1'
+I: name 'image39' already used for a different image in 'Marching Cubes Mesh Output (FE692135-306F-427C-B060-BA01B2B46823)'
+A: rename 'image39' to 'image39__fix3'
+I: name 'image124' already used for a different image in 'Matrix Nodes (2B838FA9-2A8A-4177-9A50-FA8EAE547967)'
+A: rename 'image124' to 'image124__fix1'
+I: name 'image81' already used for a different image in 'Build the TestBed Program (654479E8-DE69-4464-A92A-37ED1010BA02)'
+A: rename 'image81' to 'image81__fix3'
+I: name 'image153' already used for a different image in 'ui:DoubleSpinBox{} (FC226D4C-954F-48E5-85AC-DEE79ECE86FD)'
+A: rename 'image153' to 'image153__fix1'
+I: name 'image70' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image70' to 'image70__fix3'
+I: name 'image195' already used for a different image in 'Point Nodes (913775BE-9F32-4CD6-AD8D-6EFCB39499E8)'
+A: rename 'image195' to 'image195__fix1'
+
+
+----------------------------------
+Changing file 'Set Clip Version (FC1717B4-99EB-4162-8D53-592E618B5DDD)'
+I: name 'image248' already used for a different image in 'KKD Node Reference Guide (B47769B6-C7AF-4363-894A-219133FF0F65)'
+A: rename 'image248' to 'image248__fix1'
+
+
+----------------------------------
+Changing file 'Content Browser  (92CE849B-8B6D-4F54-85C5-33A372F74CA2)'
+I: name 'image20' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image20' to 'image20__fix6'
+
+
+----------------------------------
+Changing file 'Part 2 - Houdini 18 (391E8164-171D-4D10-A07E-21295E274D36)'
+I: name 'file.php' already used for a different image in 'Part 3 - Fusion Studio (E7547A9B-4D83-4A36-84F2-B9C8D0897BAB)'
+A: rename 'file.php' to 'file.php__fix18'
+
+
+----------------------------------
+Changing file 'AddWindow() (1939CA12-124B-49B1-A4F3-2C4FC896932D)'
+I: name 'image72' already used for a different image in 'Vonk Essentials (05C9A8A6-334A-461B-900F-4460ABC527CA)'
+A: rename 'image72' to 'image72__fix2'
+
+
+----------------------------------
+Changing file 'Configuring Fusion Render Node PathMaps (CB730DAD-D0CA-492C-AD02-A6C1024C39FD)'
+I: name 'image49' already used for a different image in 'Step 4. Clone the Instant NGP Repository (1B83AE44-0A2E-4577-859D-373B03B34A76)'
+A: rename 'image49' to 'image49__fix4'
+I: name 'image269' already used for a different image in 'The Low Level Approach to CSV Parsing (3258DA10-06A3-4D8F-B5D8-FB9B732E1BC0)'
+A: rename 'image269' to 'image269__fix2'
+
+
+----------------------------------
+Changing file 'Text Nodes (A94FEDA4-F573-4431-87C9-5FBAE2D7706B)'
+I: name 'image196' already used for a different image in 'KKD Node Reference Guide (B47769B6-C7AF-4363-894A-219133FF0F65)'
+A: rename 'image196' to 'image196__fix1'
+I: name 'image207' already used for a different image in 'KKD Node Reference Guide (B47769B6-C7AF-4363-894A-219133FF0F65)'
+A: rename 'image207' to 'image207__fix1'
+I: name 'image199' already used for a different image in 'KKD Node Reference Guide (B47769B6-C7AF-4363-894A-219133FF0F65)'
+A: rename 'image199' to 'image199__fix1'
+I: name 'image150' already used for a different image in 'KKD Node Reference Guide (B47769B6-C7AF-4363-894A-219133FF0F65)'
+A: rename 'image150' to 'image150__fix1'
+I: name 'image9' already used for a different image in 'Step 2. Install Visual Studio + CMake  (C7272844-8D0A-4B36-86A7-C64E4CECE58D)'
+A: rename 'image9' to 'image9__fix8'
+I: name 'image114' already used for a different image in 'Step 1. Install Python (DE661752-687C-42D6-9B42-A1B676A9E8FA)'
+A: rename 'image114' to 'image114__fix2'
+I: name 'image221' already used for a different image in 'KKD Node Reference Guide (B47769B6-C7AF-4363-894A-219133FF0F65)'
+A: rename 'image221' to 'image221__fix1'
+I: name 'image263' already used for a different image in 'ui:Label{} (AF0250FA-DBCE-4FE5-BD44-1979FAAAF575)'
+A: rename 'image263' to 'image263__fix2'
+I: name 'image238' already used for a different image in 'KKD Node Reference Guide (B47769B6-C7AF-4363-894A-219133FF0F65)'
+A: rename 'image238' to 'image238__fix1'
+I: name 'image272' already used for a different image in 'KKD Node Reference Guide (B47769B6-C7AF-4363-894A-219133FF0F65)'
+A: rename 'image272' to 'image272__fix1'
+I: name 'image65' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image65' to 'image65__fix3'
+I: name 'image161' already used for a different image in 'KKD Node Reference Guide (B47769B6-C7AF-4363-894A-219133FF0F65)'
+A: rename 'image161' to 'image161__fix1'
+I: name 'image40' already used for a different image in 'Step 1. Download the "Nerf_instant_ngp_lion.zip" example project near the top of this guide. (BE7BF4A0-7181-488B-909C-EFD0B572A750)'
+A: rename 'image40' to 'image40__fix4'
+I: name 'image46' already used for a different image in 'Rendering (5D438B1F-4555-430C-A3EA-F855D4C50286)'
+A: rename 'image46' to 'image46__fix4'
+I: name 'image256' already used for a different image in 'KKD Node Reference Guide (B47769B6-C7AF-4363-894A-219133FF0F65)'
+A: rename 'image256' to 'image256__fix1'
+I: name 'image201' already used for a different image in 'KKD Node Reference Guide (B47769B6-C7AF-4363-894A-219133FF0F65)'
+A: rename 'image201' to 'image201__fix2'
+I: name 'image41' already used for a different image in 'Step 4. Clone the Instant NGP Repository (1B83AE44-0A2E-4577-859D-373B03B34A76)'
+A: rename 'image41' to 'image41__fix4'
+I: name 'image230' already used for a different image in 'KKD Node Reference Guide (B47769B6-C7AF-4363-894A-219133FF0F65)'
+A: rename 'image230' to 'image230__fix1'
+I: name 'image141' already used for a different image in 'KKD Node Reference Guide (B47769B6-C7AF-4363-894A-219133FF0F65)'
+A: rename 'image141' to 'image141__fix1'
+I: name 'image185' already used for a different image in 'KKD Node Reference Guide (B47769B6-C7AF-4363-894A-219133FF0F65)'
+A: rename 'image185' to 'image185__fix1'
+I: name 'image176' already used for a different image in 'KKD Node Reference Guide (B47769B6-C7AF-4363-894A-219133FF0F65)'
+A: rename 'image176' to 'image176__fix1'
+I: name 'image159' already used for a different image in 'KKD Modifier Reference Guide (AD0BD2C8-7045-415F-836C-189466CD7BB7)'
+A: rename 'image159' to 'image159__fix1'
+I: name 'image268' already used for a different image in 'KKD Modifier Reference Guide (AD0BD2C8-7045-415F-836C-189466CD7BB7)'
+A: rename 'image268' to 'image268__fix1'
+I: name 'image52' already used for a different image in 'HDRI (543742C5-1B82-4174-9BC7-48B488A7598A)'
+A: rename 'image52' to 'image52__fix4'
+I: name 'image138' already used for a different image in 'KKD Node Reference Guide (B47769B6-C7AF-4363-894A-219133FF0F65)'
+A: rename 'image138' to 'image138__fix1'
+I: name 'image267' already used for a different image in 'KKD Node Reference Guide (B47769B6-C7AF-4363-894A-219133FF0F65)'
+A: rename 'image267' to 'image267__fix1'
+I: name 'image270' already used for a different image in 'Using SlashFor to Batch Edit Nodes in a Comp (2EC7DFA0-EE90-4343-B52F-12A80C484744)'
+A: rename 'image270' to 'image270__fix2'
+I: name 'image86' already used for a different image in 'Step 2. Install Visual Studio + CMake  (C7272844-8D0A-4B36-86A7-C64E4CECE58D)'
+A: rename 'image86' to 'image86__fix2'
+I: name 'image112' already used for a different image in 'Marching Cubes Mesh Output (FE692135-306F-427C-B060-BA01B2B46823)'
+A: rename 'image112' to 'image112__fix2'
+I: name 'image253' already used for a different image in 'KKD Node Reference Guide (B47769B6-C7AF-4363-894A-219133FF0F65)'
+A: rename 'image253' to 'image253__fix1'
+I: name 'image218' already used for a different image in 'KKD Node Reference Guide (B47769B6-C7AF-4363-894A-219133FF0F65)'
+A: rename 'image218' to 'image218__fix1'
+I: name 'image79' already used for a different image in 'Step 4. Open the document in a programmer's text editing tool like NotePad++.  (684FA4D3-49BE-494F-8E2A-4C25B4B1C0A3)'
+A: rename 'image79' to 'image79__fix2'
+I: name 'image109' already used for a different image in 'KKD Node Reference Guide (B47769B6-C7AF-4363-894A-219133FF0F65)'
+A: rename 'image109' to 'image109__fix1'
+I: name 'image277' already used for a different image in 'KKD Node Reference Guide (B47769B6-C7AF-4363-894A-219133FF0F65)'
+A: rename 'image277' to 'image277__fix1'
+I: name 'image118' already used for a different image in 'KKD Node Reference Guide (B47769B6-C7AF-4363-894A-219133FF0F65)'
+A: rename 'image118' to 'image118__fix1'
+I: name 'image101' already used for a different image in 'Step 2. Run COLMAP using the included "colmap2nerf.py" script. After a few minutes this script will generate a ready to use camera alignment JSON file. (87EAC3D9-61F2-4420-8837-EB022D90A3D8)'
+A: rename 'image101' to 'image101__fix2'
+I: name 'image137' already used for a different image in 'KKD Node Reference Guide (B47769B6-C7AF-4363-894A-219133FF0F65)'
+A: rename 'image137' to 'image137__fix1'
+I: name 'image97' already used for a different image in 'Step 2. Install Visual Studio + CMake  (C7272844-8D0A-4B36-86A7-C64E4CECE58D)'
+A: rename 'image97' to 'image97__fix2'
+I: name 'image247' already used for a different image in 'KKD Node Reference Guide (B47769B6-C7AF-4363-894A-219133FF0F65)'
+A: rename 'image247' to 'image247__fix1'
+I: name 'image177' already used for a different image in 'Accessing the KKD Nodes (20AF04D4-CB49-4315-8CD0-D4F81578FFF7)'
+A: rename 'image177' to 'image177__fix1'
+I: name 'image95' already used for a different image in 'KKD Node Reference Guide (B47769B6-C7AF-4363-894A-219133FF0F65)'
+A: rename 'image95' to 'image95__fix1'
+I: name 'image13' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image13' to 'image13__fix7'
+I: name 'image257' already used for a different image in 'KKD Node Reference Guide (B47769B6-C7AF-4363-894A-219133FF0F65)'
+A: rename 'image257' to 'image257__fix1'
+I: name 'image287' already used for a different image in 'Immersive Pipeline Integration Guide (A452378A-58F1-4B8C-A635-D5699038DA36)'
+A: rename 'image287' to 'image287__fix1'
+I: name 'image126' already used for a different image in 'KKD Node Reference Guide (B47769B6-C7AF-4363-894A-219133FF0F65)'
+A: rename 'image126' to 'image126__fix1'
+I: name 'image2' already used for a different image in 'Step 4. Open the document in a programmer's text editing tool like NotePad++.  (684FA4D3-49BE-494F-8E2A-4C25B4B1C0A3)'
+A: rename 'image2' to 'image2__fix9'
+I: name 'image129' already used for a different image in 'KKD Node Reference Guide (B47769B6-C7AF-4363-894A-219133FF0F65)'
+A: rename 'image129' to 'image129__fix1'
+I: name 'image208' already used for a different image in 'KKD Node Reference Guide (B47769B6-C7AF-4363-894A-219133FF0F65)'
+A: rename 'image208' to 'image208__fix1'
+I: name 'image215' already used for a different image in 'KKD Node Reference Guide (B47769B6-C7AF-4363-894A-219133FF0F65)'
+A: rename 'image215' to 'image215__fix1'
+I: name 'image128' already used for a different image in 'KKD Node Reference Guide (B47769B6-C7AF-4363-894A-219133FF0F65)'
+A: rename 'image128' to 'image128__fix1'
+I: name 'image45' already used for a different image in 'Step 3. Copy the COLMAP generated "Transform.json" file from inside the "C:\instant-ngp\" folder into "C:\instant-ngp\data\nerf\lion\" folder.  (0AF228DE-5632-4AC9-B531-B079DB282F05)'
+A: rename 'image45' to 'image45__fix5'
+I: name 'image235' already used for a different image in 'KKD Node Reference Guide (B47769B6-C7AF-4363-894A-219133FF0F65)'
+A: rename 'image235' to 'image235__fix1'
+I: name 'image271' already used for a different image in 'ui:TextEdit{} (B1988488-B68A-4708-8A87-0BF933A13A24)'
+A: rename 'image271' to 'image271__fix2'
+I: name 'image254' already used for a different image in 'KKD Node Reference Guide (B47769B6-C7AF-4363-894A-219133FF0F65)'
+A: rename 'image254' to 'image254__fix1'
+I: name 'image153' already used for a different image in 'ui:DoubleSpinBox{} (FC226D4C-954F-48E5-85AC-DEE79ECE86FD)'
+A: rename 'image153' to 'image153__fix2'
+
+
+----------------------------------
+Changing file 'Command Line Usage (60D30BE4-43A5-40E7-BBFB-24824CC9F043)'
+I: name 'image236' already used for a different image in 'Number Nodes (55EE0D8B-0397-4A80-B381-274D0B9F6D8E)'
+A: rename 'image236' to 'image236__fix2'
+I: name 'image308' already used for a different image in 'Number Nodes (55EE0D8B-0397-4A80-B381-274D0B9F6D8E)'
+A: rename 'image308' to 'image308__fix1'
+
+
+----------------------------------
+Changing file 'Read a JSON File (253FCCD6-0428-430B-9C98-E8F04DB87A75)'
+I: name 'image78' already used for a different image in 'Step 2. Install Visual Studio + CMake  (C7272844-8D0A-4B36-86A7-C64E4CECE58D)'
+A: rename 'image78' to 'image78__fix2'
+I: name 'image223' already used for a different image in 'KKD Node Reference Guide (B47769B6-C7AF-4363-894A-219133FF0F65)'
+A: rename 'image223' to 'image223__fix1'
+I: name 'image231' already used for a different image in 'KKD Node Reference Guide (B47769B6-C7AF-4363-894A-219133FF0F65)'
+A: rename 'image231' to 'image231__fix1'
+I: name 'image249' already used for a different image in 'Accessing the KKD Nodes (20AF04D4-CB49-4315-8CD0-D4F81578FFF7)'
+A: rename 'image249' to 'image249__fix1'
+I: name 'image399' already used for a different image in 'Immersive Pipeline Integration Guide (A452378A-58F1-4B8C-A635-D5699038DA36)'
+A: rename 'image399' to 'image399__fix1'
+I: name 'image55' already used for a different image in 'Fusion Select Tool (FEF433B7-F53F-4C52-9990-16995B93BF2E)'
+A: rename 'image55' to 'image55__fix3'
+I: name 'image121' already used for a different image in 'KKD Node Reference Guide (B47769B6-C7AF-4363-894A-219133FF0F65)'
+A: rename 'image121' to 'image121__fix1'
+I: name 'image125' already used for a different image in 'KKD Node Reference Guide (B47769B6-C7AF-4363-894A-219133FF0F65)'
+A: rename 'image125' to 'image125__fix1'
+I: name 'image239' already used for a different image in 'KKD Node Reference Guide (B47769B6-C7AF-4363-894A-219133FF0F65)'
+A: rename 'image239' to 'image239__fix1'
+
+
+----------------------------------
+Changing file 'Further CSV Usage Concepts (42CE2F87-0691-4DA0-9A6C-CA9110C4785D)'
+I: name 'image103' already used for a different image in 'Using SlashFor to Batch Edit Nodes in a Comp (2EC7DFA0-EE90-4343-B52F-12A80C484744)'
+A: rename 'image103' to 'image103__fix3'
+I: name 'image133' already used for a different image in 'KKD Node Reference Guide (B47769B6-C7AF-4363-894A-219133FF0F65)'
+A: rename 'image133' to 'image133__fix1'
+
+
+----------------------------------
+Changing file 'Editing PTGui JSON Project Files (5097ED08-C1EA-435D-929A-9D2A4C700463)'
+I: name 'image57' already used for a different image in 'Step 4. Clone the Instant NGP Repository (1B83AE44-0A2E-4577-859D-373B03B34A76)'
+A: rename 'image57' to 'image57__fix3'
+I: name 'image49' already used for a different image in 'Step 4. Clone the Instant NGP Repository (1B83AE44-0A2E-4577-859D-373B03B34A76)'
+A: rename 'image49' to 'image49__fix5'
+
+
+----------------------------------
+Changing file 'Step 4. In the Fusion Nodes view you need to connect your YouTube 360 footage's MediaIn/Loader node output connection to the "MeshUV2EquirectangularStereo" node's input connection. (9A02BDDE-113B-4B7D-8DFB-DE4959A31F35)'
+I: name 'image10' already used for a different image in 'Step 3. Copy the COLMAP generated "Transform.json" file from inside the "C:\instant-ngp\" folder into "C:\instant-ngp\data\nerf\lion\" folder.  (0AF228DE-5632-4AC9-B531-B079DB282F05)'
+A: rename 'image10' to 'image10__fix7'
+I: name 'image19' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image19' to 'image19__fix5'
+
+
+----------------------------------
+Changing file 'Screenshots (9E86EA0C-9BA0-4DAE-8F37-44BBBF3031E2)'
+I: name 'file.php' already used for a different image in 'Part 3 - Fusion Studio (E7547A9B-4D83-4A36-84F2-B9C8D0897BAB)'
+A: rename 'file.php' to 'file.php__fix19'
+I: name 'file.php' already used for a different image in 'Part 3 - Fusion Studio (E7547A9B-4D83-4A36-84F2-B9C8D0897BAB)'
+A: rename 'file.php' to 'file.php__fix20'
+
+
+----------------------------------
+Changing file 'Customize the Control Range (523B2BEB-3274-4448-AEBF-F2CBE55E5ECF)'
+I: name 'image51' already used for a different image in 'HDRI (543742C5-1B82-4174-9BC7-48B488A7598A)'
+A: rename 'image51' to 'image51__fix4'
+I: name 'image80' already used for a different image in 'Equipment Needed to Explore Instant NGP (BF561C3D-6414-4827-A377-5B4184269990)'
+A: rename 'image80' to 'image80__fix2'
+
+
+----------------------------------
+Changing file 'Vonk Mission Control (75168EFA-2FB9-488F-B4AE-9732FCAEA8DE)'
+I: name 'image64' already used for a different image in 'Step 2. Install Visual Studio + CMake  (C7272844-8D0A-4B36-86A7-C64E4CECE58D)'
+A: rename 'image64' to 'image64__fix3'
+I: name 'image122' already used for a different image in 'KKD Node Reference Guide (B47769B6-C7AF-4363-894A-219133FF0F65)'
+A: rename 'image122' to 'image122__fix1'
+
+
+----------------------------------
+Changing file 'Adding Data Nodes to a Composite (3B33AA59-C417-40E9-9490-76A4537CC142)'
+I: name 'image211' already used for a different image in 'KKD Node Reference Guide (B47769B6-C7AF-4363-894A-219133FF0F65)'
+A: rename 'image211' to 'image211__fix1'
+I: name 'image27' already used for a different image in 'Industrial (FB0CCB95-04D8-4873-B3C8-88EBEF4FCF16)'
+A: rename 'image27' to 'image27__fix4'
+
+
+----------------------------------
+Changing file 'Working With Text Data (38D20104-D5B9-40D0-801F-4C203210ED86)'
+I: name 'image167' already used for a different image in 'KKD Node Reference Guide (B47769B6-C7AF-4363-894A-219133FF0F65)'
+A: rename 'image167' to 'image167__fix1'
+I: 'image31' already seen as image31__fix2 in 'Check if a File Exists (CB5A0B45-A2B8-44FA-B0F6-A5BE1D24ADAC)'
+A: rename 'image31' to 'image31__fix2'
+
+
+----------------------------------
+Changing file 'Render Mode (18C3329D-A5F6-4D02-B079-99DA0E3C5601)'
+I: name 'image90' already used for a different image in 'Number Nodes (55EE0D8B-0397-4A80-B381-274D0B9F6D8E)'
+A: rename 'image90' to 'image90__fix2'
+I: name 'image109' already used for a different image in 'KKD Node Reference Guide (B47769B6-C7AF-4363-894A-219133FF0F65)'
+A: rename 'image109' to 'image109__fix2'
+I: name 'image6' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image6' to 'image6__fix9'
+
+
+----------------------------------
+Changing file 'Software Required (7C7DE6BF-E6CD-4477-AFB7-D54208C592D6)'
+I: 'image23' already seen as image157 in 'Software Required (B8E38E06-797C-40C6-A124-99ED562773B8)'
+A: rename 'image23' to 'image157'
+- 'image411' is a duplicate of image65 in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image411' to 'image65'
+- 'image170' is a duplicate of image53 in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image170' to 'image53'
+I: 'image32' already seen as image34 in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image32' to 'image34'
+- 'image285' is a duplicate of image1 in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image285' to 'image1'
+
+
+----------------------------------
+Changing file 'Fusion Export Stage (2E4AA18F-C180-457B-9723-B3D3FA1AD40F)'
+I: name 'file.php' already used for a different image in 'Part 3 - Fusion Studio (E7547A9B-4D83-4A36-84F2-B9C8D0897BAB)'
+A: rename 'file.php' to 'file.php__fix21'
+
+
+----------------------------------
+Changing file 'After Effects ST Map Based 360VR Video Stitching (9AF93F3D-D7AA-4857-9D73-C23DEEAC0C16)'
+I: name 'image32' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image32' to 'image32__fix3'
+
+
+----------------------------------
+Changing file 'Create an IFL (Image File List) (7EF2FBEF-E0B6-4194-892F-E77CF6EED413)'
+I: name 'image209' already used for a different image in 'KKD Node Reference Guide (B47769B6-C7AF-4363-894A-219133FF0F65)'
+A: rename 'image209' to 'image209__fix1'
+I: name 'image222' already used for a different image in 'KKD Node Reference Guide (B47769B6-C7AF-4363-894A-219133FF0F65)'
+A: rename 'image222' to 'image222__fix1'
+I: name 'image16' already used for a different image in 'Sample Media (910A9641-95D3-4024-BBEB-6940285C2DC5)'
+A: rename 'image16' to 'image16__fix6'
+
+
+----------------------------------
+Changing file 'Camera Path (330EE7C4-6B60-4CE4-88BB-D2D9E8D7D9F9)'
+I: name 'image32' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image32' to 'image32__fix4'
+I: name 'image19' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image19' to 'image19__fix6'
+
+
+----------------------------------
+Changing file 'RE:Map Plugin (80256BF7-B8BF-4A82-A566-8FACCFA95005)'
+I: name 'image7' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image7' to 'image7__fix9'
+
+
+----------------------------------
+Changing file 'Step 1. (A6EA18E0-764F-48AD-B5B7-5F15592F5CAC)'
+I: name 'image15' already used for a different image in 'Creating Volumetric NeRFs (9C1F3E40-6582-4BB7-9B88-FDD6F481A9BA)'
+A: rename 'image15' to 'image15__fix6'
+
+
+----------------------------------
+Changing file 'KKD Example Comps (725993A1-EC11-4677-AAF8-C72A6E324D33)'
+I: name 'image194' already used for a different image in 'Number Nodes (55EE0D8B-0397-4A80-B381-274D0B9F6D8E)'
+A: rename 'image194' to 'image194__fix1'
+I: name 'image136' already used for a different image in 'Number Nodes (55EE0D8B-0397-4A80-B381-274D0B9F6D8E)'
+A: rename 'image136' to 'image136__fix1'
+I: name 'image202' already used for a different image in 'Text Nodes (A94FEDA4-F573-4431-87C9-5FBAE2D7706B)'
+A: rename 'image202' to 'image202__fix1'
+I: name 'image243' already used for a different image in 'Create an IFL (Image File List) (7EF2FBEF-E0B6-4194-892F-E77CF6EED413)'
+A: rename 'image243' to 'image243__fix1'
+
+
+----------------------------------
+Changing file 'SlashCommands (3602595F-405F-4C51-BFF6-4857163FD9EE)'
+I: 'image185' already seen as image185__fix1 in 'Text Nodes (A94FEDA4-F573-4431-87C9-5FBAE2D7706B)'
+A: rename 'image185' to 'image185__fix1'
+
+
+----------------------------------
+Changing file 'Forcing a crash log from Fusion Console: (6BD5B351-C5AC-4BEE-997F-2C3F8B11C327)'
+I: name 'image3' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image3' to 'image3__fix8'
+I: name 'image6' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image6' to 'image6__fix10'
+
+
+----------------------------------
+Changing file 'Overview (2C819C50-B02C-4A14-A8E6-420C867EEA68)'
+I: name 'image8' already used for a different image in 'Step 5. You can render this footage back to an image sequence or movie file on disk using either a MediaOut node (in Resolve), or a Saver node (in Fusion Standalone). (D34A6E2C-3C52-4399-AB14-AA783928F917)'
+A: rename 'image8' to 'image8__fix8'
+I: name 'image10' already used for a different image in 'Step 3. Copy the COLMAP generated "Transform.json" file from inside the "C:\instant-ngp\" folder into "C:\instant-ngp\data\nerf\lion\" folder.  (0AF228DE-5632-4AC9-B531-B079DB282F05)'
+A: rename 'image10' to 'image10__fix8'
+
+
+----------------------------------
+Changing file 'Overview (CE3256C0-A6FA-4F69-8C1E-D19401B82BB4)'
+I: 'image5' already seen as image87__fix1 in 'Step 1. Install Python (DE661752-687C-42D6-9B42-A1B676A9E8FA)'
+A: rename 'image5' to 'image87__fix1'
+
+
+----------------------------------
+Changing file 'Step 6. Open the Create Panorama tab. (330B2B8D-54E3-4C2F-A9F8-0B260A1C4A51)'
+I: name 'image15' already used for a different image in 'Creating Volumetric NeRFs (9C1F3E40-6582-4BB7-9B88-FDD6F481A9BA)'
+A: rename 'image15' to 'image15__fix7'
+I: name 'image48' already used for a different image in 'Training (18722AC0-A2DB-40B4-BA5D-A45BE1607A10)'
+A: rename 'image48' to 'image48__fix4'
+I: name 'image16' already used for a different image in 'Sample Media (910A9641-95D3-4024-BBEB-6940285C2DC5)'
+A: rename 'image16' to 'image16__fix7'
+I: name 'image66' already used for a different image in 'Build the TestBed Program (654479E8-DE69-4464-A92A-37ED1010BA02)'
+A: rename 'image66' to 'image66__fix3'
+I: name 'image27' already used for a different image in 'Industrial (FB0CCB95-04D8-4873-B3C8-88EBEF4FCF16)'
+A: rename 'image27' to 'image27__fix5'
+I: name 'image26' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image26' to 'image26__fix5'
+
+
+----------------------------------
+Changing file 'Actions/Event Callbacks (49F995DD-D801-4646-B365-9EA88EFFD4FB)'
+I: name 'image80' already used for a different image in 'Equipment Needed to Explore Instant NGP (BF561C3D-6414-4827-A377-5B4184269990)'
+A: rename 'image80' to 'image80__fix3'
+
+
+----------------------------------
+Changing file 'Fox Scene (502CB954-3F12-401F-8F61-19DE5B342E7D)'
+I: name 'image91' already used for a different image in 'Number Nodes (55EE0D8B-0397-4A80-B381-274D0B9F6D8E)'
+A: rename 'image91' to 'image91__fix2'
+I: name 'image96' already used for a different image in 'Matrix Nodes (2B838FA9-2A8A-4177-9A50-FA8EAE547967)'
+A: rename 'image96' to 'image96__fix2'
+
+
+----------------------------------
+Changing file 'Step 2. Add a YouTube 360 downloaded video file to your Fusion composite using either a Loader Node (in Fusion Studio), or a MediaIn node (in Resolve's Fusion Page).  (C4CD2881-7F4A-4FA3-95E9-12AC4A75A29B)'
+I: name 'image12' already used for a different image in 'Armadillo Model (B50522B7-4ACD-456D-A5EC-AAA468C1AC2C)'
+A: rename 'image12' to 'image12__fix6'
+
+
+----------------------------------
+Changing file 'Save Selection to Macro (CC38C6C7-8572-4FBA-ADDF-3440CF250A9D)'
+I: name 'image57' already used for a different image in 'Step 4. Clone the Instant NGP Repository (1B83AE44-0A2E-4577-859D-373B03B34A76)'
+A: rename 'image57' to 'image57__fix4'
+I: name 'image58' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image58' to 'image58__fix4'
+I: name 'image1' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image1' to 'image1__fix12'
+
+
+----------------------------------
+Changing file 'Uprezzed Photo (8ED6F81E-14AF-47B7-9CF0-B0317AF883F7)'
+I: name 'image55' already used for a different image in 'Fusion Select Tool (FEF433B7-F53F-4C52-9990-16995B93BF2E)'
+A: rename 'image55' to 'image55__fix4'
+I: name 'image43' already used for a different image in 'Filesystem Nodes (9CB783C4-9864-4390-8998-D1422DAD840A)'
+A: rename 'image43' to 'image43__fix5'
+
+
+----------------------------------
+Changing file 'Install KKD (AD3FF244-7711-434E-9518-09929D163F39)'
+I: 'image146' already seen as image373 in 'Install Vonk (65BCC479-E58A-4779-B408-C34106D7CF9C)'
+A: rename 'image146' to 'image373'
+I: name 'image165' already used for a different image in 'Image Nodes (268125DE-0155-4A10-927A-5A6BCFE11859)'
+A: rename 'image165' to 'image165__fix1'
+
+
+----------------------------------
+Changing file 'Step 3. Changing the Camera Curve (1D88985B-057B-4399-A3F6-4ECD8103E6AF)'
+I: name 'image39' already used for a different image in 'Marching Cubes Mesh Output (FE692135-306F-427C-B060-BA01B2B46823)'
+A: rename 'image39' to 'image39__fix4'
+I: name 'image18' already used for a different image in 'Metadata Nodes (82E756C1-92EF-49A6-B692-C978CE924F6A)'
+A: rename 'image18' to 'image18__fix7'
+I: name 'image35' already used for a different image in 'Equipment Needed to Explore Instant NGP (BF561C3D-6414-4827-A377-5B4184269990)'
+A: rename 'image35' to 'image35__fix5'
+I: name 'image56' already used for a different image in 'Step 2. Install Visual Studio + CMake  (C7272844-8D0A-4B36-86A7-C64E4CECE58D)'
+A: rename 'image56' to 'image56__fix4'
+
+
+----------------------------------
+Changing file 'Distributed NeRF Rendering for Live-Action Virtual Production Background Environments  (34301A6D-293C-49CE-8426-3BEA94B1FC39)'
+I: name 'image3' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image3' to 'image3__fix9'
+I: name 'image5' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image5' to 'image5__fix10'
+I: name 'image4' already used for a different image in 'Step 5. You can render this footage back to an image sequence or movie file on disk using either a MediaOut node (in Resolve), or a Saver node (in Fusion Standalone). (D34A6E2C-3C52-4399-AB14-AA783928F917)'
+A: rename 'image4' to 'image4__fix10'
+I: name 'image1' already used for a different image in 'Software Required (B161F72B-FDE8-446E-85DF-A80C2DDD0EA8)'
+A: rename 'image1' to 'image1__fix13'
+I: name 'image2' already used for a different image in 'Step 4. Open the document in a programmer's text editing tool like NotePad++.  (684FA4D3-49BE-494F-8E2A-4C25B4B1C0A3)'
+A: rename 'image2' to 'image2__fix10'
+
+
+----------------------------------
+Changing file 'Resolve Studio FuScript Linking Tips (08634C0D-8038-4CB6-900C-C8349AA6C941)'
+I: 'image35' already seen as image35__fix1 in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image35' to 'image35__fix1'
+
+
+----------------------------------
+Changing file 'Step 1. Create a new Fusion composite. (87DD2AEF-3094-4EE2-878E-2FBD8629C7F4)'
+I: 'image20' already seen as image20__fix3 in 'Step 1. Create a new Fusion composite. (8B89FB0E-80C3-4EC1-AB2D-1FF3ACFBCB7C)'
+A: rename 'image20' to 'image20__fix3'
+
+
+----------------------------------
+Changing file 'Blackmagic Resolve/Fusion (6DE3B675-BA64-4868-8A08-83E70D6CC0B2)'
+I: name 'image69' already used for a different image in 'ScriptVal Nodes (6B0926FD-77B3-464D-9D0B-D2091A013E22)'
+A: rename 'image69' to 'image69__fix3'
+I: name 'image24' already used for a different image in 'Part 1 (8A1D1F65-0F27-4EE3-8218-FE5C69DF9A9B)'
+A: rename 'image24' to 'image24__fix5'
+I: name 'image21' already used for a different image in 'YouTube 2x3 Cubic Face Layout - Stereo 3D Side By Side (7445E818-5DB6-42C3-9F35-E05678A4DF8B)'
+A: rename 'image21' to 'image21__fix6'
+
