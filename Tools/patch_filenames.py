@@ -93,6 +93,20 @@ for contentfilepath in scrivpath.joinpath("Files","Data").rglob("*/content.rtf")
 # 19 times a name occurred again because it actually was just the exact same image being reused.
 # but 0 images had to be renamed to make the names unique, which led to 0 files being modified.
 
+# cp: temp/workflows_export.md/image1.png: No such file or directory
+# cp: temp/workflows_export.md/image2__DOCFIX7.png: No such file or directory
+# cp: temp/workflows_export.md/image18__DOCFIX5.png: No such file or directory
+# cp: temp/workflows_export.md/image17__DOCFIX3.png: No such file or directory
+# cp: temp/workflows_export.md/image1__DOCFIX7.png: No such file or directory
+# cp: temp/workflows_export.md/image23__DOCFIX4.png: No such file or directory
+# cp: temp/workflows_export.md/image22__DOCFIX6.png: No such file or directory
+# cp: temp/workflows_export.md/image35__DOCFIX6.png: No such file or directory
+# cp: temp/workflows_export.md/image22__DOCFIX4.png: No such file or directory
+# cp: temp/workflows_export.md/image20__DOCFIX7.png: No such file or directory
+# cp: temp/workflows_export.md/image5__DOCFIX10.png: No such file or directory
+# cp: temp/workflows_export.md/image1__DOCFIX3.png: No such file or directory
+# cp: temp/workflows_export.md/image6__DOCFIX6.png: No such file or directory
+
 
 print(f"scanning '{scrivpath.name}', {numimages} images were found in {numfiles} files.")
 print(f"{numsamefiles} times a name occurred again because it actually was just the exact same image being reused.")
