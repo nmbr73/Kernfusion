@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ScrivenerProject Identifier="EA7C5590-B990-4DE1-838D-CE02CE80CCD5" Version="2.0" Creator="SCRMAC-3.2.3-14869" Device="MBP-2021" Author="" Modified="2022-12-16 18:51:36 +0100" ModID="ED4C8F0C-661E-4A09-A184-58847CFFA4DA">
+<ScrivenerProject Identifier="EA7C5590-B990-4DE1-838D-CE02CE80CCD5" Version="2.0" Creator="SCRMAC-3.2.3-14869" Device="MBP-2021" Author="" Modified="2022-12-20 21:30:50 +0100" ModID="911DDF06-5674-4E57-B105-716B4C39D99C">
     <Binder>
         <BinderItem UUID="8F04373A-9B1A-4180-959C-204B3951B7E5" Type="DraftFolder" Created="2022-12-15 10:26:17 +0100" Modified="2022-12-15 10:31:54 +0100">
             <Title>Total ConFusion</Title>
@@ -7,14 +7,14 @@
                 <IncludeInCompile>Yes</IncludeInCompile>
             </MetaData>
             <Children>
-                <BinderItem UUID="59587C22-40EF-4FD1-8674-595E763625CB" Type="Text" Created="2022-12-15 10:28:09 +0100" Modified="2022-12-16 18:47:23 +0100">
+                <BinderItem UUID="59587C22-40EF-4FD1-8674-595E763625CB" Type="Text" Created="2022-12-15 10:28:09 +0100" Modified="2022-12-20 20:28:00 +0100">
                     <Title>Minimal Document</Title>
                     <MetaData>
                         <LabelID>6</LabelID>
                         <IncludeInCompile>Yes</IncludeInCompile>
                     </MetaData>
                     <TextSettings>
-                        <TextSelection>449,0</TextSelection>
+                        <TextSelection>1077,0</TextSelection>
                     </TextSettings>
                     <Bookmarks>
                         <Bookmark BinderUUID="86ED98A2-516E-4517-A3F7-8448A2E1E249"/>
@@ -35,19 +35,19 @@
                                 <IncludeInCompile>Yes</IncludeInCompile>
                             </MetaData>
                             <TextSettings>
-                                <TextSelection>401,0</TextSelection>
+                                <TextSelection>253,0</TextSelection>
                             </TextSettings>
                             <Bookmarks>
                                 <Bookmark BinderUUID="59587C22-40EF-4FD1-8674-595E763625CB"/>
                             </Bookmarks>
                         </BinderItem>
-                        <BinderItem UUID="88CE8E1E-983B-478D-97B9-7F176D86F8A7" Type="Text" Created="2022-12-15 10:34:30 +0100" Modified="2022-12-15 11:08:26 +0100">
+                        <BinderItem UUID="88CE8E1E-983B-478D-97B9-7F176D86F8A7" Type="Text" Created="2022-12-15 10:34:30 +0100" Modified="2022-12-20 21:19:24 +0100">
                             <Title>Images, Captions and YouTube Videos</Title>
                             <MetaData>
                                 <IncludeInCompile>Yes</IncludeInCompile>
                             </MetaData>
                             <TextSettings>
-                                <TextSelection>346,0</TextSelection>
+                                <TextSelection>829,0</TextSelection>
                             </TextSettings>
                             <Bookmarks>
                                 <Bookmark BinderUUID="59587C22-40EF-4FD1-8674-595E763625CB"/>
@@ -76,13 +76,13 @@
                                 <TextSelection>4,0</TextSelection>
                             </TextSettings>
                         </BinderItem>
-                        <BinderItem UUID="ED3C8C24-F5EA-4FAD-A274-7ECAD05BC91A" Type="Text" Created="2022-12-15 11:21:15 +0100" Modified="2022-12-15 11:21:27 +0100">
+                        <BinderItem UUID="ED3C8C24-F5EA-4FAD-A274-7ECAD05BC91A" Type="Text" Created="2022-12-15 11:21:15 +0100" Modified="2022-12-20 21:30:50 +0100">
                             <Title>Empty</Title>
                             <MetaData>
                                 <IncludeInCompile>Yes</IncludeInCompile>
                             </MetaData>
                             <TextSettings>
-                                <TextSelection>0,0</TextSelection>
+                                <TextSelection>1,0</TextSelection>
                             </TextSettings>
                         </BinderItem>
                         <BinderItem UUID="86ED98A2-516E-4517-A3F7-8448A2E1E249" Type="Text" Created="2022-12-15 11:20:14 +0100" Modified="2022-12-16 18:46:10 +0100">
@@ -167,12 +167,12 @@
     </StatusSettings>
     <ProjectTargets Notify="No">
         <DraftTarget Type="Words" CountIncludedOnly="Yes" CurrentCompileGroupOnly="No" Deadline="2022-12-15 10:26:17 +0100" IgnoreDeadline="Yes">0</DraftTarget>
-        <SessionTarget Type="Words" CountDraftOnly="Yes" AllowNegatives="Yes" NextResetDate="2022-12-17 00:00:00 +0100" ResetType="Time" ResetTime="00:00" DeterminedFromDeadline="No" WritingDays="" CanWriteOnDeadlineDate="No">0</SessionTarget>
-        <PreviousSession Words="98" Characters="643" Date="2022-12-16 18:51:10 +0100"/>
+        <SessionTarget Type="Words" CountDraftOnly="Yes" AllowNegatives="Yes" NextResetDate="2022-12-21 00:00:00 +0100" ResetType="Time" ResetTime="00:00" DeterminedFromDeadline="No" WritingDays="" CanWriteOnDeadlineDate="No">0</SessionTarget>
+        <PreviousSession Words="40" Characters="211" Date="2022-12-20 21:14:00 +0100"/>
     </ProjectTargets>
-    <RecentWritingHistory Date="2022-12-16 00:00:00 +0100">
-        <DraftWordCount>98</DraftWordCount>
-        <DraftCharCount>643</DraftCharCount>
+    <RecentWritingHistory Date="2022-12-20 00:00:00 +0100">
+        <DraftWordCount>40</DraftWordCount>
+        <DraftCharCount>211</DraftCharCount>
         <OtherWordCount>0</OtherWordCount>
         <OtherCharCount>0</OtherCharCount>
     </RecentWritingHistory>
