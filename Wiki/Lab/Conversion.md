@@ -7,6 +7,15 @@ Sounds simple and perfect to build a documentation workflow ...
 ... but turns out to be a rabbit hole that I'm not sure I want to jump into.
 
 
+# Imagetest
+
+![[Tuttle or Buttle.jpg]]
+
+![[Tuttle or Buttle.jpg|800x100]]
+
+
+
+
 ```mermaid
 flowchart TB
     Scrivener -- MarkDown --> Obsidian
@@ -140,3 +149,4 @@ Index files
 -----
 
 ![[Scrivener_hierarchy02.png]]
+
