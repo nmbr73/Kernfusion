@@ -17,11 +17,6 @@ pip install mkdocs-roamlinks-plugin
 pip install mkdocs-mermaid2-plugin
 pip install mkdocs-callouts
 pip install mkdocs-awesome-pages-plugin
-
-
-# brew install mkdocs
-# pip install -r requirements.txt
-Python 3.10.9
 ```
 
 ## Resources
