@@ -28,7 +28,7 @@ Data/Kernfusion.scriv/Settings/ui.plist
 Comp/*.autocomp
 
 # Ignore Obsidian-Files
-Wiki/.obsidian/*
+Wiki/.obsidian/workspace.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
