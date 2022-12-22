@@ -1,24 +1,20 @@
 #!/bin/bash
 
-
-
-source venv/bin/activate
+echo "copy some stuff and such ..."
 
 if [[ ! -d Wiki ]]; then
     echo "outch"
     exit 10
 fi
 
-# source venv/bin/activate
 
 rm -rf site
 rm -rf docs
 cp -rp Wiki docs
-
-python Tools/obsidian_to_mkdocs.py
-
 mkdir -p docs/stylesheets/
 cp Tools/obsidian_to_mkdocs/docs/stylesheets/* docs/stylesheets/
+
+python Tools/obsidian_to_mkdocs.py
 
 
 ACTION=$1
@@ -34,6 +30,8 @@ case $ACTION in
     ;;
 
   deploy)
+    # call 'deploy' in a github action
+    echo "deploy to github pages"
     mkdocs gh-deploy --force
     ;;
 
@@ -41,3 +39,6 @@ case $ACTION in
     # echo "unknown"
     ;;
 esac
+
+
+echo "obsidian_to_mkdocs done"
