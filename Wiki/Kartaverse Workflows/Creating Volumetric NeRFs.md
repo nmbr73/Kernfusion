@@ -1,19 +1,17 @@
 ---
-tags: [export, export-scrivener, revise]
-xself: 'Creating Volumetric NeRFs'
-xhead: 'Kartaverse Workflows'
-xtail: 'KickAss ShaderZ for Fusion'
-xprev: 'Kartaverse Workflows'
-xnext: 'Creating ST Maps'
+author: Andrew Hazelden
+tags:
+- Kartaverse
+- Workflow
+- export
+- export-scrivener
+# - revise
+# xself: 'Creating Volumetric NeRFs'
+# xhead: 'Kartaverse Workflows'
+# xtail: 'KickAss ShaderZ for Fusion'
+# xprev: 'Kartaverse Workflows'
+# xnext: 'Creating ST Maps'
 ---
-
-Kartaverse Workflows \| Creating Volumetric NeRFs
-
-Created 2022-05-09 Last Updated 2022-05-20 07.50 PM UTC -4
-
-By [Andrew Hazelden \<andrew@andrewhazelden.com\>](mailto:andrew@andrewhazelden.com)
-
-Overview
 
 The motivation for writing this content is to illustrate and describe approaches that can be used to create volumetric NeRF representations of environments. NeRF stands for a neural radiance field which is an alternative way to describe a scene compared to datatypes like meshes, point clouds, voxels, lightfields, or MultiSphere/MultiPlane media.
 
@@ -23,70 +21,59 @@ Previously this NeRF performance bottleneck issue was a significant blockage for
 
 ![[Kartaverse Workflows.img/image15.png]]
 
-### NeRF Video Snapshots
-
-NeRF Video Snapshots
+## NeRF Video Snapshots
 
 Here are several short video clips that give an impression of what it's like to explore a NeRF scene using the Instant NGP repository's TestBed program.
 
-NeRF Instant NGP \| TestBed \| Lion Orbit
-
 This video shows an orbit of the camera around a lion sculpture.
 
-<https://www.youtube.com/watch?v=1ZSDicjkfEU>
-
-NeRF Instant NGP \| TestBed \| 3D Cropping
+> [!youtube] Embed: [NeRF Instant NGP \| TestBed \| Lion Orbit](https://www.youtube.com/watch?v=1ZSDicjkfEU)
 
 This video shows the effect of the "Crop aabb" control. It allows you to perform 3D bounding box region cropping operations of the NeRF scene.
 
-<https://www.youtube.com/watch?v=GTcMiNRqo94>
-
-NeRF Instant NGP \| TestBed \| Cloudy Neural Foam Artifacts on Scene Boundary
+> [!youtube] Embed: [NeRF Instant NGP \| TestBed \| 3D Cropping](https://www.youtube.com/watch?v=GTcMiNRqo94)
 
 When you zoom out to the edge boundary zone of a NeRF scene you start to see floaty blobs that look a bit like fluffy/cloudy artifacts. Although it's not an officially used NeRF term, as far as I know, I like to call these glitches "Neural Foam" artifacts.
 
-<https://youtu.be/hrljDbeGjBE>
-
-NeRF Instant NGP \| TestBed \| Model Training
+> [!youtube] Embed: [NeRF Instant NGP \| TestBed \| Cloudy Neural Foam Artifacts on Scene Boundary](https://youtu.be/hrljDbeGjBE)
 
 The NVIDIA Instant NGP library is very fast at performing NeRF model training and refinement. This clip captures the viewport from the moment the TestBed program is launched until the lion sample scene is refined to a point that is enjoyable to explore interactively in 3D.
 
-<https://youtu.be/QIjBP-DEtZU>
+> [!youtube] Embed: [NeRF Instant NGP \| TestBed \| Model Training](https://youtu.be/QIjBP-DEtZU)
 
-### Equipment Needed to Explore Instant NGP
 
-Equipment Needed to Explore Instant NGP
 
-Hardware Required
+## Equipment Needed to Explore Instant NGP
+
+### Hardware Required
 
 -   Windows or Linux based PC
 -   64 GB+ System RAM
 -   NVIDIA RTX 2000 or 3000 Series GPU
 
-Software Required
+### Software Required
 
 To run NeRF based workflows on your system you will need the following tools:
 
--   ![[Kartaverse Workflows.img/image82.png]] [Python 3.10.4](https://www.python.org/downloads/release/python-3104/)
--   ![[Kartaverse Workflows.img/image84.png]] [Microsoft Visual Studio 2019 Community Edition](https://visualstudio.microsoft.com/vs/older-downloads/)
--   ![[Kartaverse Workflows.img/image35.png]] [Git Client](https://git-scm.com/downloads)
--   ![[Kartaverse Workflows.img/image22.png]] [NVIDIA GPU Driver](https://www.nvidia.com/Download/index.aspx?lang=en-us)
--   ![[Kartaverse Workflows.img/image22.png]] [NVIDIA CUDA Toolkit 11.6](https://developer.nvidia.com/cuda-downloads?target_os=Windows&target_arch=x86_64&target_version=10&target_type=exe_local)
--   ![[Kartaverse Workflows.img/image22.png]] [NVIDA OptiX 7.3](https://developer.nvidia.com/designworks/optix/download)
--   ![[Kartaverse Workflows.img/image22.png]] [NVIDIA Instant NGP](https://github.com/NVlabs/instant-ngp)
--   ![[Kartaverse Workflows.img/image62.png]] [CMake v3.23.1](https://cmake.org/download/)
--   ![[Kartaverse Workflows.img/image1__fix1.png]][Colmap 3.7](https://colmap.github.io/)
--   ![[Kartaverse Workflows.img/image80.png]][openCV-Python](https://pypi.org/project/opencv-python/)
--   ![[Kartaverse Workflows.img/image106.png]][Numpy](https://pypi.org/project/numpy/)
--   ![[Kartaverse Workflows.img/image63.png]] [OpenEXR](https://www.openexr.com/)
--   ![[Kartaverse Workflows.img/image113.png]][NotePad++](https://notepad-plus-plus.org/)
--   ![[Kartaverse Workflows.img/image1.png]] [FFMpeg](https://ffmpeg.org/)
+-   ![[Kartaverse Workflows.img/image82.png|22]] [Python 3.10.4](https://www.python.org/downloads/release/python-3104/)
+-   ![[Kartaverse Workflows.img/image84.png|22]] [Microsoft Visual Studio 2019 Community Edition](https://visualstudio.microsoft.com/vs/older-downloads/)
+-   ![[Kartaverse Workflows.img/image35.png|22]] [Git Client](https://git-scm.com/downloads)
+-   ![[Kartaverse Workflows.img/image22.png|22]] [NVIDIA GPU Driver](https://www.nvidia.com/Download/index.aspx?lang=en-us)
+-   ![[Kartaverse Workflows.img/image22.png|22]] [NVIDIA CUDA Toolkit 11.6](https://developer.nvidia.com/cuda-downloads?target_os=Windows&target_arch=x86_64&target_version=10&target_type=exe_local)
+-   ![[Kartaverse Workflows.img/image22.png|22]] [NVIDA OptiX 7.3](https://developer.nvidia.com/designworks/optix/download)
+-   ![[Kartaverse Workflows.img/image22.png|22]] [NVIDIA Instant NGP](https://github.com/NVlabs/instant-ngp)
+-   ![[Kartaverse Workflows.img/image62.png|22]] [CMake v3.23.1](https://cmake.org/download/)
+-   ![[Kartaverse Workflows.img/image1__fix1.png|22]][Colmap 3.7](https://colmap.github.io/)
+-   ![[Kartaverse Workflows.img/image80.png|22]][openCV-Python](https://pypi.org/project/opencv-python/)
+-   ![[Kartaverse Workflows.img/image106.png|22]][Numpy](https://pypi.org/project/numpy/)
+-   ![[Kartaverse Workflows.img/image63.png|22]] [OpenEXR](https://www.openexr.com/)
+-   ![[Kartaverse Workflows.img/image113.png|22]][NotePad++](https://notepad-plus-plus.org/)
+-   ![[Kartaverse Workflows.img/image1.png|22]] [FFMpeg](https://ffmpeg.org/)
 
-Note: I'm avoiding discussing the topic of virtual environments like [Conda](https://docs.conda.io/en/latest/) in this guide in an effort to keep things focused primarily on the NeRF centric steps required. If you are comfortable with Conda or other virtual environments like [Rez](https://github.com/nerdvegas/rez), feel free to bring that knowledge to play when you follow along at home. 😀
+> [!note] Use of Conda, Rez, whatever...
+> I'm avoiding discussing the topic of virtual environments like [Conda](https://docs.conda.io/en/latest/) in this guide in an effort to keep things focused primarily on the NeRF centric steps required. If you are comfortable with Conda or other virtual environments like [Rez](https://github.com/nerdvegas/rez), feel free to bring that knowledge to play when you follow along at home. 😀
 
-### Example NeRF Instant NGP Dataset
-
-Example NeRF Instant NGP Dataset
+## Example NeRF Instant NGP Dataset
 
 Lion Sculpture @ Sir Sandford Fleming Park, Nova Scotia aka. "The Dingle" Park
 
@@ -94,13 +81,11 @@ Lion Sculpture @ Sir Sandford Fleming Park, Nova Scotia aka. "The Dingle" Park
 
 ![[Kartaverse Workflows.img/image99__fix1.png]]
 
-### Build Environment
+## Build Instant NGP
 
-Build Environment
+The following sections decribe how to setup an environment to build Instant NGP
 
 ### Step 1. Install Python
-
-Step 1. Install Python
 
 Download and install the 64-bit version of [Python 3.10.4](https://www.python.org/downloads/release/python-3104/) by clicking on the "Windows Installer (64-bit) link on the Python Release page.
 
@@ -126,13 +111,17 @@ In the command prompt window run the Python 3 version of the pip installer to ad
 
 Numpy is installed using the command prompt window by typing in:
 
+```sh
 pip3 install numpy
+```
 
 ![[Kartaverse Workflows.img/image100__fix1.png]]
 
 Then OpenCV is installed using the command prompt window by typing in:
 
+```sh
 pip3 install opencv-python
+```
 
 ![[Kartaverse Workflows.img/image100__fix1.png]]
 
@@ -169,8 +158,6 @@ pip3 install OpenEXR-1.3.2-cp310-cp310-win_amd64.whl
 ![[Kartaverse Workflows.img/image76__fix1.png]]
 
 ### Step 2. Install Visual Studio + CMake
-
-Step 2. Install Visual Studio + CMake
 
 Download [Microsoft Visual Studio 2019 Community Edition](https://visualstudio.microsoft.com/vs/older-downloads/). This is a C++ development environment that lets us compile programs. The community edition release is free to download and use at home.
 
@@ -258,8 +245,6 @@ The CMake installer provides a command line program, along with a visual user in
 
 ### Step 3. Install NVIDIA CUDA Toolkit and OptiX
 
-Step 3. Install NVIDIA CUDA Toolkit and OptiX
-
 Next we need to download the [NVIDIA CUDA Toolkit 11.6](https://developer.nvidia.com/cuda-downloads?target_os=Windows&target_arch=x86_64&target_version=10&target_type=exe_local) and [NVIDA OptiX 7.3](https://developer.nvidia.com/designworks/optix/download) installers. You will need to register for a free NVIDIA Developer Program account to download the Optix library.
 
 The CUDA Toolkit is used to create compiled software that is able to take advantage of NVIDIA CUDA based GPU acceleration.
@@ -330,8 +315,6 @@ When the OptiX SDK installation process completes you can exit the installer by 
 
 ### Step 4. Clone the Instant NGP Repository
 
-Step 4. Clone the Instant NGP Repository
-
 [Git](https://en.wikipedia.org/wiki/Git) is a technology that is frequently used to interface with online source code repositories like GitHub and GitLab. Git based software tools help with essential version control tasks during software development which is something that allows a team of programmers to work together effectively on the same project.
 
 This step in the tutorial assumes you don't already have a favourite git client like [Git-Tower](https://www.git-tower.com/windows), or [GitKraken](https://www.gitkraken.com/), etc. installed on your system.
@@ -377,14 +360,12 @@ Let's try out the git program for the first time! We are now ready to launch a W
 ![[Kartaverse Workflows.img/image50.png]]
 
 With the command prompt window open, lets type in:
-
+```powershell
 cd \\
-
 git clone --recursive https://github.com/nvlabs/instant-ngp
-
 cd instant-ngp
-
 dir /w
+```
 
 These commands will launch the git utility and it should automatically download the current version of the [NVIDIA Instant NGP (Neural graphics primitives)](https://github.com/nvlabs/instant-ngp) source code from the GitHub website and save it to the root folder on the C:\\ drive at the folder path of "C:\\instant-ngp\\".
 
@@ -396,8 +377,9 @@ Git Usage Note: You have the freedom to customize this git cloning download path
 
 Git Troubleshooting Tip: If you see an error message about git not being found in your system's PATH variable, you can double check things by typing the following text into the command prompt window. This will list the current contents of the PATH environment variable:
 
+```powershell
 echo %PATH%
-
+```
 Hopefully in this long list of folders that is separated by semi-colon characters you will spot an entry for "C:\\Program Files\\Git\\cmd"
 
 Git Troubleshooting Tip: We needed to use the Command Prompt with Administrative permissions in order to be able to download the Instant NGP files into the root folder on the C:\\ drive. If you do not have administrator permissions you could still follow this tutorial but instead would have to download the files to a location like a folder inside your user account's home folder.
@@ -408,11 +390,7 @@ With the git downloading phase complete you should be able to navigate using the
 
 ### Step 5. Building Instant NGP
 
-Step 5. Building Instant NGP
-
 #### Install COLMAP
-
-Install COLMAP
 
 [COLMAP](https://colmap.github.io/) is a free cross-platform open-source camera alignment and photogrammetry (image based modelling) toolset. COLMAP is used by the Instant NGP python scripts to prepare the NeRF camera data before the training task is started.
 
@@ -464,8 +442,6 @@ Environment Variables Tip 2: An environment variable can be thought of as a syst
 
 #### Build the TestBed Program
 
-Build the TestBed Program
-
 Instant NGP uses a visual interface called TestBed to allow you to create scenes using NeRF (neural radiance field) rendering techniques. We need to compile thisTestBed program and at the same time adjust the CUDA parameters used at compile time to match the capabilities of our currently installed NVIDIA CUDA based GPU.
 
 Step 1. Start by opening a Visual Studio "Developer Command Prompt". This window will have the compiler specific environment variables tuned for using Visual Studio 2019's development tools.
@@ -478,11 +454,14 @@ Click on the "Run as administrator" link.
 
 Step 2. It is important to define the CUDA architecture before you build the testbed program. This will affect the maximum "aabb_scale" number you will be able to run in your transform.json file. For an RTX Series 3000 GPU the environment variable can be defined in the "Command Prompt" window using:
 
+```powershell
 set TCNN_CUDA_ARCHITECTURES=86
-
+```
 The result of setting this environment variable value can be verified by typing in:
 
+```powershell
 echo %TCNN_CUDA_ARCHITECTURES%
+```
 
 ![[Kartaverse Workflows.img/image53__fix1.png]]
 
@@ -494,12 +473,11 @@ Step 3. When compiling software you can adjust how many CPU cores are used for t
 
 The code below uses the CMake utility to create a new makefile for Instant NGP. This will add in the computer specific settings in the makefile so they match the file paths for the supporting resources and libraries you've already installed. After the makefile is created the source code is compiled.
 
-cd C:\\instant-ngp
-
+```powershell
+cd C:\instant-ngp
 cmake . -B build
-
 cmake --build build --config RelWithDebInfo -j 64
-
+```
 If this task is completed successfully, you should now have a ready-to-run copy of the NeRF testbed program after a few minutes of compiling.🥳🎉🎁
 
 ![[Kartaverse Workflows.img/image58__fix1.png]]
@@ -516,19 +494,17 @@ If the fates have smiled favourably on your freshly prepared compiler toolchain 
 
 ![[Kartaverse Workflows.img/image98.png]]
 
-### Using Instant NGP
-
-Using Instant NGP
+## Using Instant NGP
 
 Instant NGP is launched from the command line. It is possible to see a list of the available parameters by running the program with the "help" flag added from the command prompt which is done with the addition of "-h":
 
-C:\\instant-ngp\\build\\testbed.exe -h
-
+```powershell
+C:\instant-ngp\build\testbed.exe -h
+```
 ![[Kartaverse Workflows.img/image71.png]]
 
 ### TestBed Command-Line Syntax
 
-TestBed Command-Line Syntax
 
     C:\instant-ngp\build\testbed {OPTIONS}
 
@@ -559,15 +535,13 @@ TestBed Command-Line Syntax
 
 ### Explore the Built-in Demo Scenes
 
-Explore the Built-in Demo Scenes
 
-cd C:\\instant-ngp\\
-
+```powershell
+cd C:\instant-ngp\
+```
 The first scene that every new Instant NGP user needs to try out if this is their first time exploring realtime NeRF rendered visuals has to be the "fox demo".
 
 #### Fox Scene
-
-Fox Scene
 
 ![[Kartaverse Workflows.img/image75.jpg]]
 
@@ -585,29 +559,30 @@ A visual IMGUI based immediate mode user interface will appear and you can start
 
 If you want to peek inside the fox scene's "images" folder to see the individual camera views that were used to train the testbed player in only a few moments, navigate using the Windows Explorer folder browsing view to:
 
-C:\\instant-ngp\\data\\nerf\\fox\\images
-
+```powershell
+C:\instant-ngp\data\nerf\fox\images
+```
 You will find 50 JPEG format photos that were photographed in a vertical portrait mode at 1080 x 1920 px resolution.
 
 #### Armadillo Model
-
-Armadillo Model
 
 ![[Kartaverse Workflows.img/image12.png]]
 
 A Wavefront OBJ format polygon model of an armadillo character is calculated as an [SDF (Signed Distance Function)](https://en.wikipedia.org/wiki/Signed_distance_function) that can be viewed as a NeRF using:
 
-C:\\instant-ngp\\build\\testbed --scene data/sdf/armadillo.obj
+```powershell
+C:\instant-ngp\build\testbed --scene data/sdf/armadillo.obj
+```
 
 #### Uprezzed Photo
-
-Uprezzed Photo
 
 ![[Kartaverse Workflows.img/image55__fix4.png]]
 
 An uprezzed version of an old black and white Albert Einstein photo can be viewed as a NeRF using:
 
-C:\\instant-ngp\\build\\testbed --scene data/image/albert.exr
+```powershell
+C:\instant-ngp\build\testbed --scene data/image/albert.exr
+```
 
 When you pan in and then zoom around in the NeRF rendered photo, the testbed window will display a view that looks like this:
 
@@ -617,29 +592,28 @@ This example uses an EXR format image as the source media so you had to install 
 
 ### Prepare your first Instant NGP Scene
 
-Prepare your first Instant NGP Scene
-
 Troubleshooting Image Filenames: A handy tip when creating your own NeRF scenes is to use simple filenames for your imagery. It is best to avoid complex long filenames as it will reduce the occurrence of frustrating issues later on.
 
-#### Step 1. Download the "Nerf_instant_ngp_lion.zip" example project near the top of this guide.
+#### Step 1. Download the "Nerf_instant_ngp_lion.zip" example project
 
-Step 1. Download the "[Nerf_instant_ngp_lion.zip](https://www.andrewhazelden.com/projects/kartaverse/downloads/nerf_instant_ngp_lion.zip)" example project near the top of this guide.
+Download the "[Nerf_instant_ngp_lion.zip](https://www.andrewhazelden.com/projects/kartaverse/downloads/nerf_instant_ngp_lion.zip)" example project near the top of this guide.
 
 Extract the "lion" folder from this zip archive and copy it to "C:\\instant-ngp\\data\\nerf\\lion\\".
 
 ![[Kartaverse Workflows.img/image40.png]]
 
-#### Step 2. Run COLMAP using the included "colmap2nerf.py" script. After a few minutes this script will generate a ready to use camera alignment JSON file.
+#### Step 2. Run COLMAP using the included "colmap2nerf.py" script.
 
-Step 2. Run COLMAP using the included "colmap2nerf.py" script. After a few minutes this script will generate a ready to use camera alignment JSON file.
+Run COLMAP using the included "colmap2nerf.py" script. After a few minutes this script will generate a ready to use camera alignment JSON file.
 
-cd C:\\instant-ngp\\
-
-python C:\\instant-ngp\\scripts\\colmap2nerf.py --colmap_matcher exhaustive --run_colmap --aabb_scale 16 --images data\\nerf\\lion\\images
-
+```powershell
+cd C:\instant-ngp\
+python C:\instant-ngp\scripts\colmap2nerf.py --colmap_matcher exhaustive --run_colmap --aabb_scale 16 --images data\\nerf\\lion\\images
+```
 You will be asked a yes/no question when the COLMAP script starts. Press the letter "Y" to continue:
-
+```
 warning! folders 'colmap_sparse' and 'colmap_text' will be deleted/replaced. continue? (Y/n) Y
+```
 
 ![[Kartaverse Workflows.img/image85.png]]
 
@@ -681,9 +655,9 @@ import numpy as np
 
 ModuleNotFoundError: No module named 'numpy'
 
-#### Step 3. Copy the COLMAP generated "Transform.json" file from inside the "C:`\instant`{=tex}-ngp\" folder into"C:`\instant`{=tex}-ngp`\data`{=tex}`\nerf`{=tex}`\lion`{=tex}\" folder.
+#### Step 3. Copy the COLMAP generated "Transform.json" file
 
-Step 3. Copy the COLMAP generated "Transform.json" file from inside the "C:\\instant-ngp\\" folder into "C:\\instant-ngp\\data\\nerf\\lion\\" folder.
+Copy the COLMAP generated "Transform.json" file from inside the "C:\\instant-ngp\\" folder into "C:\\instant-ngp\\data\\nerf\\lion\\" folder.
 
 ![[Kartaverse Workflows.img/image10.png]]
 
@@ -691,9 +665,9 @@ This places the json document side-by-side in the current project, next to the i
 
 ![[Kartaverse Workflows.img/image45.png]]
 
-#### Step 4. Open the document in a programmer's text editing tool like NotePad++.
+#### Step 4. Open the document in a programmer's text editing tool
 
-Step 4. Open the document in a programmer's text editing tool like [NotePad++](https://notepad-plus-plus.org/).
+Open the document in a programmer's text editing tool like [NotePad++](https://notepad-plus-plus.org/).
 
 We need to edit the "Transform.json" text file to remove any filepath prefixes that might have been entered in the JSON document for each image resource. This edit can be carried out using a plain old-fashion "Find & Replace" text substitution approach.
 
@@ -723,9 +697,7 @@ COLMAP JSON Troubleshooting: If you forget to edit the Transforms.json file to m
 
 ![[Kartaverse Workflows.img/image110.png]]
 
-#### Really, you should get Notepad++ Installed ASAP!
-
-Really, you should get Notepad++ Installed ASAP!
+##### Really, you should get Notepad++ Installed ASAP!
 
 If you only have Microsoft's Notepad or Wordpad text editing programs installed on your Windows based PC, it is seriously worth mentioning that the free Notepad++ program does a great job at this type of JSON editing task.
 
@@ -735,9 +707,7 @@ If you want to experience a really nicely optimized & very refined version of No
 
 ![[Kartaverse Workflows.img/image21__fix3.png]]
 
-#### Check Your Camera Transforms for NaNs
-
-Check Your Camera Transforms for NaNs
+##### Check Your Camera Transforms for NaNs
 
 When you are looking at the JSON file, do take a moment to page down visually through the transform matrix entries in the text file. You want to see if any floating point "[NaN](https://en.wikipedia.org/wiki/NaN)" values are present.
 
@@ -749,9 +719,10 @@ Assuming there are no NaN values present in the JSON file, carry on to the next 
 
 Step 5. The COLMAP camera locator based lion NeRF scene can be viewed using the testbed executable with the following command prompt based entries:
 
-cd C:\\instant-ngp\\
-
-C:\\instant-ngp\\build\\testbed --scene data/nerf/lion --mode=nerf
+```powershell
+cd C:\instant-ngp\
+C:\instant-ngp\build\testbed --scene data/nerf/lion --mode=nerf
+```
 
 ![[Kartaverse Workflows.img/image29__fix4.png]]
 
@@ -759,25 +730,24 @@ At this point you should be experiencing a lion sculpture in NeRF like style! Af
 
 ![[Kartaverse Workflows.img/image69__fix1.png]]
 
-TestBed Troubleshooting Tip: If you get an error message when launching the TestBed program that says:
+> [!tip] TestBed Troubleshooting Tip
+> 
+> If you get an error message when launching the TestBed program that says:
+>
+> ```
+> Could not free memory: C:\\instant-ngp\\dependencies\\tiny-cuda-nn\\include\\tiny-cuda-nn/gpu_memory.h:454 cudaDeviceSynchronize() failed with error operation not permitted when stream is capturing
+> ```
+> This error typically indicates that you needed to adjust the "TCNN_CUDA_ARCHITECTURES" environment variable back in the earlier "Step 5.2 Building Instant NGP" step of this guide.
+>
+> If you've done this process already and still get the error you can open the "Transform.json" document up in your text editor and lower the "aabb_scale" value which acts like a NeRF scene resolution parameter.
+>
+> Valid settings for the "aabb_scale" parameter are base 2 numbers such as 16, 8, 4, or 2. In this situation 16 is the best quality you can define at this time, and 2 is a much lower detail representation of the scene that might work on your GPU if you have less GPU VRAM available.
 
-Could not free memory: C:\\instant-ngp\\dependencies\\tiny-cuda-nn\\include\\tiny-cuda-nn/gpu_memory.h:454 cudaDeviceSynchronize() failed with error operation not permitted when stream is capturing
-
-This error typically indicates that you needed to adjust the "TCNN_CUDA_ARCHITECTURES" environment variable back in the earlier "Step 5.2 Building Instant NGP" step of this guide.
-
-If you've done this process already and still get the error you can open the "Transform.json" document up in your text editor and lower the "aabb_scale" value which acts like a NeRF scene resolution parameter.
-
-Valid settings for the "aabb_scale" parameter are base 2 numbers such as 16, 8, 4, or 2. In this situation 16 is the best quality you can define at this time, and 2 is a much lower detail representation of the scene that might work on your GPU if you have less GPU VRAM available.
-
-### Using the TestBed Program
-
-Using the TestBed Program
+## Using the TestBed Program
 
 The TestBed UI is an immediate mode GUI that allows interactive control over the NeRF scene training and rendering process.
 
-#### Camera Path
-
-Camera Path
+### Camera Path
 
 The camera path controls allow you to keyframe animate a motion path through the scene. This data can be saved to disk and used to create a high quality command-line rendered animation of the NeRF scene.
 
@@ -787,23 +757,17 @@ After you click the "Add from Cam" button you can start to make an animated came
 
 ![[Kartaverse Workflows.img/image19__fix6.png]]
 
-#### Training
-
-Training
+### Training
 
 The training section allows you to keep an eye on the scene's training progress.
 
 ![[Kartaverse Workflows.img/image48.png]]
 
-#### Rendering
-
-Rendering
+### Rendering
 
 ![[Kartaverse Workflows.img/image46.png]]
 
-#### Render Mode
-
-Render Mode
+### Render Mode
 
 The "Render Mode" control allows you to toggle the type of render element you are viewing.
 
@@ -823,9 +787,7 @@ The "Tonemap curve" allows you to perform HDRI like image range remapping. This 
 
 The "Exposure" control allows you to adjust the overall scene brightness.
 
-#### Crop aabb
-
-Crop aabb
+### Crop aabb
 
 The Crop controls allow you to define a 3D scene bounding-box that is used to clip off outside data. This can be used to isolate a cubic region around a model and remove all distracting data outside this region.
 
@@ -835,9 +797,7 @@ This is what it looks like if you crop the scene down to just a single object us
 
 ![[Kartaverse Workflows.img/image54__fix2.png]]
 
-#### Camera
-
-Camera
+### Camera
 
 The "Depth of field" control is used to simulate lens defocus blur. This out of focus region effect is also called "[bokeh blur](https://en.wikipedia.org/wiki/Bokeh)" in photographic terms.
 
@@ -847,17 +807,13 @@ The "Zoom" control defaults to a value of 1.0. If you change this control it fee
 
 ![[Kartaverse Workflows.img/image11__fix2.png]]
 
-#### Snapshot
-
-Snapshot
+### Snapshot
 
 The snapshot controls allow you to export to disk the fully trained scene in its current state. You can also re-import training data from a prior session.
 
 ![[Kartaverse Workflows.img/image61__fix2.png]]
 
-#### Marching Cubes Mesh Output
-
-Marching Cubes Mesh Output
+### Marching Cubes Mesh Output
 
 This section of controls allows you to create a polygon mesh representation of the NeRF scene density.
 
@@ -875,32 +831,22 @@ Meshing Tip: If you increase the "Res" setting to a value higher than your GPU's
 
 ![[Kartaverse Workflows.img/image51__fix1.png]]
 
-#### History of trainable encoding parameters
-
-History of trainable encoding parameters
+### History of trainable encoding parameters
 
 This control is a diagnostic element you can learn more about as you go deeper into exploring the testbed utility on more scenes.
 
 ![[Kartaverse Workflows.img/image30__fix2.png]]
 
-#### Instant NGP Web Resources
-
-Instant NGP Web Resources
+### Instant NGP Web Resources
 
 The following web pages were of great help as I prepared this guide.
 
 TBH, if you get stuck on anything shown in this tutorial, you will likely find the answers you need to solve the problem branched off from the content on the following webpages:
 
-[YouTube \| NVIDIA Instant NeRF: NVIDIA Research Turns 2D Photos Into 3D Scenes in the Blink of an AI](https://www.youtube.com/watch?v=DJ2hcC1orc4)
-
-<https://blogs.nvidia.com/blog/2022/03/25/instant-nerf-research-3d-ai/>
-
-<https://nvlabs.github.io/instant-ngp/>
-
-<https://github.com/NVlabs/instant-ngp>
-
-<https://github.com/NVlabs/instant-ngp/issues/455>
-
-<https://github.com/NVlabs/instant-ngp/issues/219#issuecomment-1055141789>
-
-<https://github.com/bycloudai/instant-ngp-Windows>
+- [YouTube \| NVIDIA Instant NeRF: NVIDIA Research Turns 2D Photos Into 3D Scenes in the Blink of an AI](https://www.youtube.com/watch?v=DJ2hcC1orc4)
+- [NVIDIA Research Turns 2D Photos Into 3D Scenes in the Blink of an AI](https://blogs.nvidia.com/blog/2022/03/25/instant-nerf-research-3d-ai/)
+- [Instant Neural Graphics Primitives with a Multiresolution Hash Encoding](https://nvlabs.github.io/instant-ngp/)
+- [Instant Neural Graphics Primitives](https://github.com/NVlabs/instant-ngp)
+- [Got cutlass error: Error Internal at: 346 #455](https://github.com/NVlabs/instant-ngp/issues/455)
+- https://github.com/NVlabs/instant-ngp/issues/219#issuecomment-1055141789
+- https://github.com/bycloudai/instant-ngp-Windows
