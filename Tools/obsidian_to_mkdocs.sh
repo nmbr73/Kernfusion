@@ -19,5 +19,8 @@ cp -rp Wiki docs
 
 python Tools/obsidian_to_mkdocs.py
 
+mkdir -p docs/stylesheets/
+cp Tools/obsidian_to_mkdocs/docs/stylesheets/* docs/stylesheets/
+
 #mkdocs build
 #mkdocs serve
