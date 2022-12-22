@@ -25,4 +25,6 @@ jobs:
           pip install mkdocs-callouts
           pip install mkdocs-awesome-pages-plugin
       - name: Run MkDocs to deploy content
-        run: python Tools/obsidian_to_mkdocs.py deploy
+        run: |
+          python Tools/obsidian_to_mkdocs.py
+          mkdocs gh-deploy --force
