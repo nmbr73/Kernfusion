@@ -1,0 +1,8 @@
+mkdocs==1.4.2
+mkdocs-awesome-pages-plugin==2.8.0
+mkdocs-callouts==1.8.1
+mkdocs-material==8.5.11
+mkdocs-material-extensions==1.1.1
+mkdocs-mermaid2-plugin==0.6.0
+mkdocs-roamlinks-plugin==0.2.0
+pymdown-extensions==9.9

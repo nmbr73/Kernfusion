@@ -1,30 +1,28 @@
 
 
 ```sh
+
+cd Kernfusion
+
 # Create virtual environment:
-python -m venv /Users/nmbr73/Projects/Kernfusion/venv
+python3 -m venv venv
 
 # Activate the virual environment:
-source /Users/nmbr73/Projects/Kernfusion/venv/bin/activate
-```
+source venv/bin/activate
 
+# Install MkDocs
 
-# MkDocs
-
-```sh
-brew install mkdocs
-
-# Install modules:
-pip install --upgrade pip
 pip install mkdocs-material
 pip install mkdocs-roamlinks-plugin
 pip install mkdocs-mermaid2-plugin
 pip install mkdocs-callouts
 pip install mkdocs-awesome-pages-plugin
+
+
+# brew install mkdocs
+# pip install -r requirements.txt
+Python 3.10.9
 ```
-
-
-# scrivinspect.py
 
 ## Resources
 
