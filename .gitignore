@@ -1,9 +1,9 @@
 
-docs/
-site/
-temp/
-Sources/
-Wiki/_*/
+/docs/
+/site/
+/temp/
+/Sources/
+/Wiki/_*/
 
 # ------------------------------------------------------
 # Applications

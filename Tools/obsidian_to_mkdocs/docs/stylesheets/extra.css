@@ -1,0 +1,22 @@
+
+/* https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#custom-colors */
+
+/*
+[data-md-color-scheme="wsl"] {
+
+  --md-primary-fg-color:               #191919; //title bar background
+  --md-primary-fg-color--light:        #292929;
+  --md-primary-fg-color--dark:         #090909;
+  --md-primary-bg-color:               #C88D53; // title bar title and images
+  --md-primary-bg-color--light:        #545454; // 'search' placeholder in ttlebar
+
+  --md-accent-fg-color:                #CAA033; // keyword found in serach
+  --md-accent-fg-color--transparent:   #2A2A2A; // diagram fill + selected search result
+  --md-accent-bg-color:                #0000ff;
+  --md-accent-bg-color--light:         #ffff00;
+
+}
+
+*/
+
+/* https://github.com/markusressel/MkDocs-Material-Dark-Theme/tree/master/docs/stylesheets */

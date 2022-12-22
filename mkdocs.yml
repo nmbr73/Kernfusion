@@ -25,6 +25,7 @@ theme:
 
     # Dark mode
     - media: "(prefers-color-scheme: dark)"
+      # scheme: wsl
       scheme: slate
       primary: pink
       accent: blue
@@ -52,7 +53,6 @@ markdown_extensions:
   - nl2br
   - admonition
   - pymdownx.details
-  #- pymdownx.superfences
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
@@ -64,7 +64,6 @@ markdown_extensions:
 plugins:
   - search
   - roamlinks
-#  - mermaid2
   - search
   - callouts
   - awesome-pages:
@@ -76,3 +75,5 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 #  - https://unpkg.com/mermaid/dist/mermaid.min.js
 
+#extra_css:
+#  - stylesheets/extra.css
