@@ -11,21 +11,18 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v2
-      - name: Setup python
+      - name: Setup a v3.x Python
         uses: actions/setup-python@v2
         with:
           python-version: 3.x
-      - name: Instal mkdocs and plugins
+      - name: Install MkDocs+plugins
         run: |
           pip install mkdocs-material
           pip install mkdocs-roamlinks-plugin
           pip install mkdocs-mermaid2-plugin
           pip install mkdocs-callouts
           pip install mkdocs-awesome-pages-plugin
-      - name: Run mkdocs
-        run: |
-          mv Wiki docs
-          python Tools/obsidian_to_mkdocs.py
-          mkdocs gh-deploy --force
+      - name: Run MkDocs to deploy content
+        run: python Tools/obsidian_to_mkdocs.py deploy

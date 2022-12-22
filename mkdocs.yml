@@ -61,6 +61,10 @@ markdown_extensions:
   - toc:
       permalink: true
 
+
+# https://github.com/Jackiexiao/mkdocs-roamlinks-plugin
+# https://github.com/lukasgeiter/mkdocs-awesome-pages-plugin
+
 plugins:
   - search
   - roamlinks
