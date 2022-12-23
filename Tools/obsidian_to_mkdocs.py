@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 from pathlib import Path
 import sys
-
+import re
 
 basepath = Path.cwd().joinpath('docs')
 
@@ -38,3 +38,36 @@ for filepath in basepath.rglob("*"):
 
     with pagespath.open('w') as f:
         f.write( pagescontent )
+
+
+
+# A hack for embedded YT videos - maybe I try a MkDocs+Obsidian PlugIn one day?!?
+# > [!youtube] Embed: [Costa Rica](https://www.youtube.com/watch?v=LXb3EKWsInQ)
+# https://youtu.be/
+
+pattern = re.compile(r'>\s+\[!youtube\]\s+([A-Za-z]+:{0,1}|)\s*\[([^\]]*)\]\(https://(www.youtube.com/watch\?v=|youtu.be/)([A-Za-z0-9\-]+)\)')
+
+
+def got_a_video(m):
+    # type = m.group(1).lower()
+    title = m.group(2)
+    video = m.group(4)
+    return f'<iframe width="560" height="315" src="https://www.youtube.com/embed/{video}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>{title}</iframe>'
+
+for filepath in basepath.rglob("*.md"):
+
+    if filepath.is_dir():
+        continue
+
+    with filepath.open() as f:
+        content = f.read()
+
+    modified = re.sub(pattern, got_a_video, content)
+
+    if content == modified:
+        continue
+
+    with filepath.open('w') as f:
+        f.write(modified)
+
+
