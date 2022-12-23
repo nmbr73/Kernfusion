@@ -1,5 +1,6 @@
 ---
-tags: [reference]
+tags:
+- Reference
 ---
 
 

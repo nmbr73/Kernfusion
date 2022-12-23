@@ -3,7 +3,8 @@ aliases:
 - Neural Radiance Fields
 - Neural Radiance Fields (NeRF)
 tags:
-- 3dscan
+- 3D-Scan
+- Technology
 ---
 
 

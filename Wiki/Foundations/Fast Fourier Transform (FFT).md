@@ -3,7 +3,7 @@ aliases:
 - Fast Fourier Transform
 - FFT
 tags:
-- theory
+- Theory
 ---
 
 The following YouTube video provides some digestible explanation and interesting background information on the Fast Fourier transform:
