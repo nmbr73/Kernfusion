@@ -11,10 +11,11 @@ fi
 rm -rf site
 rm -rf docs
 cp -rp Wiki docs
-mkdir -p docs/stylesheets/
-cp Tools/obsidian_to_mkdocs/docs/stylesheets/* docs/stylesheets/
 
 python Tools/obsidian_to_mkdocs.py
+
+mkdir -p docs/stylesheets/
+cp Tools/obsidian_to_mkdocs/docs/stylesheets/* docs/stylesheets/
 
 
 ACTION=$1
