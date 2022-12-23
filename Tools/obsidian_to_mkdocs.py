@@ -45,14 +45,23 @@ for filepath in basepath.rglob("*"):
 # > [!youtube] Embed: [Costa Rica](https://www.youtube.com/watch?v=LXb3EKWsInQ)
 # https://youtu.be/
 
-pattern = re.compile(r'>\s+\[!youtube\]\s+([A-Za-z]+:{0,1}|)\s*\[([^\]]*)\]\(https://(www.youtube.com/watch\?v=|youtu.be/)([A-Za-z0-9\-]+)\)')
+pattern_video = re.compile(r'>\s+\[!youtube\]\s+([A-Za-z]+:{0,1}|)\s*\[([^\]]*)\]\(https://(www.youtube.com/watch\?v=|youtu.be/)([A-Za-z0-9\-]+)\)')
 
+
+pattern_resizedimage = re.compile(r'!\[\[([^\|\]]+)\|([1-9][0-9]*)\]\]')
 
 def got_a_video(m):
     # type = m.group(1).lower()
     title = m.group(2)
     video = m.group(4)
     return f'<iframe width="560" height="315" src="https://www.youtube.com/embed/{video}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>{title}</iframe>'
+
+def got_a_resizedimage(m):
+    source = m.group(1)
+    size = m.group(2)
+    #print(f"'{source}','{size}'")
+    return f'<img src="../{source}" width="{size}" />'
+
 
 for filepath in basepath.rglob("*.md"):
 
@@ -62,7 +71,9 @@ for filepath in basepath.rglob("*.md"):
     with filepath.open() as f:
         content = f.read()
 
-    modified = re.sub(pattern, got_a_video, content)
+    modified = content
+    modified = re.sub(pattern_video, got_a_video, modified)
+    modified = re.sub(pattern_resizedimage, got_a_resizedimage, modified)
 
     if content == modified:
         continue

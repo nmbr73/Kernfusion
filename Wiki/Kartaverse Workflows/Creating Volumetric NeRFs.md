@@ -731,7 +731,7 @@ At this point you should be experiencing a lion sculpture in NeRF like style! Af
 ![[Kartaverse Workflows.img/image69__fix1.png]]
 
 > [!tip] TestBed Troubleshooting Tip
-> 
+>
 > If you get an error message when launching the TestBed program that says:
 >
 > ```
