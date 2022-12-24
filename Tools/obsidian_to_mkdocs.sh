@@ -11,6 +11,8 @@ fi
 rm -rf site
 rm -rf docs
 cp -rp Wiki docs
+rm -f  docs/Wiki/README.md
+rm -rf docs/.obsidian
 
 python Tools/obsidian_to_mkdocs.py
 

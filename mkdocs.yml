@@ -5,14 +5,66 @@ repo_url: https://github.com/nmbr73/Kernfusion/
 repo_name: Kernfusion
 edit_uri: blob/main/Wiki/ # does not work with index.md files
 #edit_uri: edit/main/Wiki/ # works only if signed in and granted access - otherwise you are directed to a sign-in page
+
+
 # nav:
 #   - Home: index.md
-#   - About: Tool.md
-#   - Bla: Video Village.md
+#   - About.md
+#   - ...
+
+
+# nav:
+#   - Home: index.html
+#   - Kartaverse Workflows:
+#     - Kartaverse Workflows/index.md
+#     - Kartaverse Workflows/Kartaverse Workflows.md
+#     - Kartaverse Workflows/Creating Volumetric NeRFs.md
+#     - Kartaverse Workflows/Creating ST Maps.md
+#     - Render Fusion Comps in Houdini TOPs.md
+#     - SketchFab in VR Via QuestLink.md
+#     - Troubleshooting Guide for Fusion Studio Freeze Ups.md
+#     - YouTube 360 to Equirectangular Conversions.md
+#     - Jupyter Notebook for Resolve/Fusion: Jupyter Notebook for Resolve_Fusion.md
+#     - Domemaster Photoshop Actions Pack.md
+#     - DEV OpenDisplayXR VDD (Virtual Device Driver).md
+#     - DEV The Ultimate Guide to OpenUSD Pipeline Development.md
+#     - DEV Building an Effective nVP (Neural Virtual Production) Sound Stage.md
+#     - KickAss ShaderZ for Fusion.md
+
+# nav:
+#     - Home: README.md
+#     - About: DCTL.md
+#     - Nochmal:
+#       - README.md
+#       - DCTL.md
+#     - Featured: Featured Articles.md
+#     - Woanders: Script/Script-Libraries.md
 
 theme:
-    name: 'material'
-    palette:
+  name: 'material'
+
+  features:
+    # - announce.dismiss
+    - content.code.annotate
+    # - content.tabs.link
+    - content.tooltips
+    # - header.autohide
+    # - navigation.expand
+    - navigation.indexes
+    # - navigation.instant
+    # - navigation.prune
+    - navigation.sections
+    # - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    # - toc.integrate
+
+  palette:
 
     # Light mode
     - media: "(prefers-color-scheme: light)"
@@ -37,27 +89,33 @@ theme:
 markdown_extensions:
   - footnotes
   # - attr_list
+
+  # https://facelessuser.github.io/pymdown-extensions/extensions/arithmatex/
   - pymdownx.arithmatex:
       generic: true
-  # - pymdownx.superfences
-  # - pymdownx.details
-  # - pymdownx.magiclink
   - pymdownx.tasklist:
       custom_checkbox: true
-  - def_list
-  - pymdownx.critic
-  - pymdownx.caret
-  - pymdownx.keys
-  - pymdownx.mark
-  - pymdownx.tilde
-  - nl2br
-  - admonition
-  - pymdownx.details
+  - def_list # syntax: https://squidfunk.github.io/mkdocs-material/reference/lists/#using-definition-lists
+  - nl2br # cause newlines to be treated as hard breaks; like StackOverflow and GitHub flavored Markdown do
+  - admonition # to render Obsidian Callouts
+  - pymdownx.tilde # subscript via ~
+  - pymdownx.caret  # superscript via ^
+  - pymdownx.keys # to display keyboard shortcuts ++ctrl+alt+del++
+  - pymdownx.mark # to mark text using ==some text==
+  - pymdownx.smartsymbols # to render -->, <--, =/=, (c), 1st, 1/4, etc.
+  - pymdownx.inlinehilite # `#!py3 code`
+#  - pymdownx.details
+#  - pymdownx.magiclink
+  - pymdownx.saneheaders # to force header to have a space after the '#''
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
   - toc:
       permalink: true
 
@@ -67,10 +125,10 @@ markdown_extensions:
 
 plugins:
   - search
-  - roamlinks
+  - roamlinks # to allow wiki-markup links [[...]] as used in Obsidian
   - search
   - callouts
-  - awesome-pages:
+  - awesome-pages: # allows .pages files in directories for navigation
       collapse_single_pages: true
 
 extra_javascript:
@@ -81,3 +139,27 @@ extra_javascript:
 
 #extra_css:
 #  - stylesheets/extra.css
+
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/nmbr73/Kernfusion
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/Zb48E4z3Pg
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/c/nmbr73/videos
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/nmbr73
+    - icon: fontawesome/brands/instagram
+      link: https://www.instagram.com/nmbr73/
+    - icon: fontawesome/brands/reddit
+      link: https://www.reddit.com/user/nmbr73
+    - icon: fontawesome/brands/twitch
+      link: https://www.twitch.tv/nmbr73
+    - icon: fontawesome/brands/tumblr
+      link: https://www.tumblr.com/nmbr73
+    - icon: fontawesome/brands/pinterest
+      link: https://www.pinterest.de/nmbr73/
+
+
