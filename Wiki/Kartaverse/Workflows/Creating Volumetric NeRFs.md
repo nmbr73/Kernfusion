@@ -19,7 +19,8 @@ This year NVIDIA released a project called Instant NGP (Neural Graphics Primitiv
 
 Previously this NeRF performance bottleneck issue was a significant blockage for the further adoption and refinements of NeRF concepts from both a technical and creative perspective.
 
-![[Kartaverse Workflows.img/image15.png]]
+![[Kartaverse/Workflows/img/image15.png]]
+
 
 ## NeRF Video Snapshots
 
@@ -55,20 +56,20 @@ The NVIDIA Instant NGP library is very fast at performing NeRF model training an
 
 To run NeRF based workflows on your system you will need the following tools:
 
--   ![[Kartaverse Workflows.img/image82.png|22]] [Python 3.10.4](https://www.python.org/downloads/release/python-3104/)
--   ![[Kartaverse Workflows.img/image84.png|22]] [Microsoft Visual Studio 2019 Community Edition](https://visualstudio.microsoft.com/vs/older-downloads/)
--   ![[Kartaverse Workflows.img/image35.png|22]] [Git Client](https://git-scm.com/downloads)
--   ![[Kartaverse Workflows.img/image22.png|22]] [NVIDIA GPU Driver](https://www.nvidia.com/Download/index.aspx?lang=en-us)
--   ![[Kartaverse Workflows.img/image22.png|22]] [NVIDIA CUDA Toolkit 11.6](https://developer.nvidia.com/cuda-downloads?target_os=Windows&target_arch=x86_64&target_version=10&target_type=exe_local)
--   ![[Kartaverse Workflows.img/image22.png|22]] [NVIDA OptiX 7.3](https://developer.nvidia.com/designworks/optix/download)
--   ![[Kartaverse Workflows.img/image22.png|22]] [NVIDIA Instant NGP](https://github.com/NVlabs/instant-ngp)
--   ![[Kartaverse Workflows.img/image62.png|22]] [CMake v3.23.1](https://cmake.org/download/)
--   ![[Kartaverse Workflows.img/image1__fix1.png|22]][Colmap 3.7](https://colmap.github.io/)
--   ![[Kartaverse Workflows.img/image80.png|22]][openCV-Python](https://pypi.org/project/opencv-python/)
--   ![[Kartaverse Workflows.img/image106.png|22]][Numpy](https://pypi.org/project/numpy/)
--   ![[Kartaverse Workflows.img/image63.png|22]] [OpenEXR](https://www.openexr.com/)
--   ![[Kartaverse Workflows.img/image113.png|22]][NotePad++](https://notepad-plus-plus.org/)
--   ![[Kartaverse Workflows.img/image1.png|22]] [FFMpeg](https://ffmpeg.org/)
+-   ![[Kartaverse/Workflows/img/image82.png|22]] [Python 3.10.4](https://www.python.org/downloads/release/python-3104/)
+-   ![[Kartaverse/Workflows/img/image84.png|22]] [Microsoft Visual Studio 2019 Community Edition](https://visualstudio.microsoft.com/vs/older-downloads/)
+-   ![[Kartaverse/Workflows/img/image35.png|22]] [Git Client](https://git-scm.com/downloads)
+-   ![[Kartaverse/Workflows/img/image22.png|22]] [NVIDIA GPU Driver](https://www.nvidia.com/Download/index.aspx?lang=en-us)
+-   ![[Kartaverse/Workflows/img/image22.png|22]] [NVIDIA CUDA Toolkit 11.6](https://developer.nvidia.com/cuda-downloads?target_os=Windows&target_arch=x86_64&target_version=10&target_type=exe_local)
+-   ![[Kartaverse/Workflows/img/image22.png|22]] [NVIDA OptiX 7.3](https://developer.nvidia.com/designworks/optix/download)
+-   ![[Kartaverse/Workflows/img/image22.png|22]] [NVIDIA Instant NGP](https://github.com/NVlabs/instant-ngp)
+-   ![[Kartaverse/Workflows/img/image62.png|22]] [CMake v3.23.1](https://cmake.org/download/)
+-   ![[Kartaverse/Workflows/img/image1__fix1.png|22]][Colmap 3.7](https://colmap.github.io/)
+-   ![[Kartaverse/Workflows/img/image80.png|22]][openCV-Python](https://pypi.org/project/opencv-python/)
+-   ![[Kartaverse/Workflows/img/image106.png|22]][Numpy](https://pypi.org/project/numpy/)
+-   ![[Kartaverse/Workflows/img/image63.png|22]] [OpenEXR](https://www.openexr.com/)
+-   ![[Kartaverse/Workflows/img/image113.png|22]][NotePad++](https://notepad-plus-plus.org/)
+-   ![[Kartaverse/Workflows/img/image1.png|22]] [FFMpeg](https://ffmpeg.org/)
 
 > [!note] Use of Conda, Rez, whatever...
 > I'm avoiding discussing the topic of virtual environments like [Conda](https://docs.conda.io/en/latest/) in this guide in an effort to keep things focused primarily on the NeRF centric steps required. If you are comfortable with Conda or other virtual environments like [Rez](https://github.com/nerdvegas/rez), feel free to bring that knowledge to play when you follow along at home. 😀
@@ -79,7 +80,7 @@ Lion Sculpture @ Sir Sandford Fleming Park, Nova Scotia aka. "The Dingle" Park
 
 [Nerf_instant_ngp_lion.zip](https://www.andrewhazelden.com/projects/kartaverse/downloads/nerf_instant_ngp_lion.zip) (118 MB / 36 images)
 
-![[Kartaverse Workflows.img/image99__fix1.png]]
+![[Kartaverse/Workflows/img/image99__fix1.png]]
 
 ## Build Instant NGP
 
@@ -89,23 +90,23 @@ The following sections decribe how to setup an environment to build Instant NGP
 
 Download and install the 64-bit version of [Python 3.10.4](https://www.python.org/downloads/release/python-3104/) by clicking on the "Windows Installer (64-bit) link on the Python Release page.
 
-![[Kartaverse Workflows.img/image114.png]]
+![[Kartaverse/Workflows/img/image114.png]]
 
 To make things simpler for command prompt usage, in the Python installer, enable the checkbox to add Python to the system PATH.
 
-![[Kartaverse Workflows.img/image87__fix1.png]]
+![[Kartaverse/Workflows/img/image87__fix1.png]]
 
 We also want to override the install folder so Python is installed to C:\\Python310\\. This is achieved by changing the "Customize install location" text field contents to "C:\\Python310\\".
 
 Click the "Install" button to complete the Python install process.
 
-![[Kartaverse Workflows.img/image5__fix3.png]]
+![[Kartaverse/Workflows/img/image5__fix3.png]]
 
 After Python 3.10.4 is installed, open a new Windows Command Prompt in administrator mode.
 
 This is done by clicking on the start menu. Then start typing in the word "command" and autocomplete should filter the list of programs down to Command Prompt. Select the "Run as administrator" entry on the right side of this view.
 
-![[Kartaverse Workflows.img/image50.png]]
+![[Kartaverse/Workflows/img/image50.png]]
 
 In the command prompt window run the Python 3 version of the pip installer to add Numpy and OpenCV support.
 
@@ -115,7 +116,7 @@ Numpy is installed using the command prompt window by typing in:
 pip3 install numpy
 ```
 
-![[Kartaverse Workflows.img/image100__fix1.png]]
+![[Kartaverse/Workflows/img/image100__fix1.png]]
 
 Then OpenCV is installed using the command prompt window by typing in:
 
@@ -123,7 +124,7 @@ Then OpenCV is installed using the command prompt window by typing in:
 pip3 install opencv-python
 ```
 
-![[Kartaverse Workflows.img/image100__fix1.png]]
+![[Kartaverse/Workflows/img/image100__fix1.png]]
 
 Command Prompt Tip: If you have copied a line of text you want to run into your clipboard copy buffer, in Windows 10, you can paste that text directly into the Command Prompt window by right-clicking in that view.
 
@@ -143,7 +144,7 @@ Then hit the Control+F shortcut to open your web-browser's "Find" dialog.
 
 Paste in the text from your clipboard and the webpage view will be paged down directly to that line. Click on that highlighted .whl file to download it.
 
-![[Kartaverse Workflows.img/image37__fix1.png]]
+![[Kartaverse/Workflows/img/image37__fix1.png]]
 
 Python PIP Tip: A .whl file is known as a Python "Wheel" package. This format is a convenient way to install extra Python libraries.
 
@@ -155,7 +156,7 @@ cd %HOMEPATH%\\Downloads
 
 pip3 install OpenEXR-1.3.2-cp310-cp310-win_amd64.whl
 
-![[Kartaverse Workflows.img/image76__fix1.png]]
+![[Kartaverse/Workflows/img/image76__fix1.png]]
 
 ### Step 2. Install Visual Studio + CMake
 
@@ -163,53 +164,53 @@ Download [Microsoft Visual Studio 2019 Community Edition](https://visualstudio.m
 
 To access the 2019 release of Visual Studio, expand the "2019" heading on the left side of the webpage. Then click the "Download" button.
 
-![[Kartaverse Workflows.img/image36.png]]
+![[Kartaverse/Workflows/img/image36.png]]
 
 Because Visual Studio is made by Microsoft, you will need to login to the site with a Microsoft/Skype ID credential to access this download. This page will likely want to use 2-factor authentication if you aren't already logged in beforehand.
 
-![[Kartaverse Workflows.img/image83.png]]
+![[Kartaverse/Workflows/img/image83.png]]
 
 The exact version of the download is currently listed as "Visual Studio Community 2019 (version 16.11)" as of 2022-05-12. We are going for an x64 (64-bit) .exe download of a Multi Language release.
 
 Clicking the "Download" button will download a 1.4 MB sized web-installer program that is named "vs_Community.exe".
 
-![[Kartaverse Workflows.img/image78.png]]
+![[Kartaverse/Workflows/img/image78.png]]
 
 When the vs_Community installer launches you will be presented with a dialog that lists Microsoft's license terms. Click the "Continue" button to proceed.
 
-![[Kartaverse Workflows.img/image104.png]]
+![[Kartaverse/Workflows/img/image104.png]]
 
 The installer will then download a list of available Visual Studio packages you can add to your system. This takes a few moments to complete on a fast internet connection.
 
-![[Kartaverse Workflows.img/image31.png]]
+![[Kartaverse/Workflows/img/image31.png]]
 
 We only need to choose one option in this screen for our project today. In the main part of the view click on the large tile on the lower right area that is labelled "Desktop development with C++". The default installation entries that are pre-selected are fine for our needs. Click the "Install" button to continue.
 
-![[Kartaverse Workflows.img/image64.png]]
+![[Kartaverse/Workflows/img/image64.png]]
 
 This Visual Studio Community 2019 install is estimated to use about 8 GB of disk space. It will take a while to finish. At this point in the tutorial you can take a short break while the progress bar is working its way across the screen towards 100% completion.
 
-![[Kartaverse Workflows.img/image13__fix1.png]]
+![[Kartaverse/Workflows/img/image13__fix1.png]]
 
 When this dialog appears on your screen you'll know that Visual Studio 2019 is fully installed.
 
-![[Kartaverse Workflows.img/image97.png]]
+![[Kartaverse/Workflows/img/image97.png]]
 
 A Microsoft login prompt window will appear which allows you to launch Visual Studio and keep it up-to-date. This dialog is asking for your Microsoft / Skype login credentials to go to the next step.
 
-![[Kartaverse Workflows.img/image56.png]]
+![[Kartaverse/Workflows/img/image56.png]]
 
 After you click the "Sign In" button a 2-factor login dialog will appear. Click the "Send code" button to have a numerical 2-factor code sent automatically to your registered email address.
 
-![[Kartaverse Workflows.img/image102.png]]
+![[Kartaverse/Workflows/img/image102.png]]
 
 The single-use code should arrive in your email inbox in a few seconds.
 
-![[Kartaverse Workflows.img/image33.png]]
+![[Kartaverse/Workflows/img/image33.png]]
 
 With all of that taken care of we are now brought to the Visual Studio 2019 landing page view for the program. Click on the top-right corner of the window's "X" icon to close the view. This should quit Visual Studio and let us carry on further with the next step.
 
-![[Kartaverse Workflows.img/image105.png]]
+![[Kartaverse/Workflows/img/image105.png]]
 
 With Visual Studio installed, the next stage of the compiling software puzzle is to add a free utility called CMake.The CMake tool helps create "makefiles" which are used to prepare the computer-specific parameters for each of the supporting resources and libraries that a compiler requires to convert source code into executable software.
 
@@ -219,27 +220,27 @@ To access this file, scroll down on the CMake Download page to the heading "Late
 
 The current file (as of 2022-05-12) is named "[cmake-3.23.1-windows-x86_64.msi](https://github.com/Kitware/CMake/releases/download/v3.23.1/cmake-3.23.1-windows-x86_64.msi)". The installer file is 27.9 MB in size.
 
-![[Kartaverse Workflows.img/image34__fix1.png]]
+![[Kartaverse/Workflows/img/image34__fix1.png]]
 
 Run the CMake installer. On the first screen click the "Next" button to continue.
 
-![[Kartaverse Workflows.img/image23__fix1.png]]
+![[Kartaverse/Workflows/img/image23__fix1.png]]
 
 On the "End-User License Agreement" screen you need to enable the "\[x\] I accept the terms in the License Agreement" checkbox. Click the "Next" button to continue.
 
-![[Kartaverse Workflows.img/image9.png]]
+![[Kartaverse/Workflows/img/image9.png]]
 
 On the "Install Options" screen if your computer is used by a single user, then you likely want to select the "(x) Add CMake to the system PATH for the current user" entry. Click the "Next" button to continue.
 
-![[Kartaverse Workflows.img/image14.png]]
+![[Kartaverse/Workflows/img/image14.png]]
 
 On the "Ready to install CMake" screen, click the "Install" button.
 
-![[Kartaverse Workflows.img/image60.png]]
+![[Kartaverse/Workflows/img/image60.png]]
 
 When the installer finishes we can exit it by clicking the "Finish" button.
 
-![[Kartaverse Workflows.img/image86.png]]
+![[Kartaverse/Workflows/img/image86.png]]
 
 The CMake installer provides a command line program, along with a visual user interface that can be launched from the start menu called "CMake (cmake-gui)".
 
@@ -255,39 +256,39 @@ Finally in the "Download Installer for Windows 10 x86-64" section of the page, s
 
 The file I downloaded was named "cuda_11.7.0_516.01_windows.exe". The specific version number will change over time. The installer download might take a few minutes to complete since it is 2.5 GB in size.
 
-![[Kartaverse Workflows.img/image107__fix1.png]]
+![[Kartaverse/Workflows/img/image107__fix1.png]]
 
 When you run the NVIDIA CUDA Toolkit installer you need to agree to the license terms to continue.
 
-![[Kartaverse Workflows.img/image88.png]]
+![[Kartaverse/Workflows/img/image88.png]]
 
 For most users the "Express (Recommended)" install option is the best choice. Click "Next" to continue.
 
 Note: The "Express (Recommended)" setting will also change the current NVIDIA display driver version. If you need to preserve your current display driver version then you might want to explore the "Custom (Advanced)" install option.
 
-![[Kartaverse Workflows.img/image16__fix3.png]]
+![[Kartaverse/Workflows/img/image16__fix3.png]]
 
 The NVIDIA CUDA Toolkit installation will start after a few moments.
 
-![[Kartaverse Workflows.img/image68__fix2.png]]
+![[Kartaverse/Workflows/img/image68__fix2.png]]
 
 A NVIDIA Nsight Visual Studio Edition Summary screen will appear. Clicking the "Next" button will advance the installer to the final screen.
 
-![[Kartaverse Workflows.img/image89__fix1.png]]
+![[Kartaverse/Workflows/img/image89__fix1.png]]
 
 At this point the NVIDIA CUDA Toolkit installer is finished and you can exit the program by clicking the "Close" button.
 
-![[Kartaverse Workflows.img/image7__fix6.png]]
+![[Kartaverse/Workflows/img/image7__fix6.png]]
 
 The OptiX library is used to allow the Visual Studio compiler to support building source code that relies on NVIDIA RTX GPU driven raytracing and interactive image denoising.
 
 On the "NVIDIA OptiX Downloads" page, scroll down to the "Optix SDK 7.4.0 - (Windows, Linux, and ARM)" section. Click on the green "Windows 10, 64-bit Accept & Download" button to continue.
 
-![[Kartaverse Workflows.img/image47__fix1.png]]
+![[Kartaverse/Workflows/img/image47__fix1.png]]
 
 As mentioned previously, you will need to register for a free NVIDIA Developer Program account to download the Optix library. This takes only a few moments to complete.
 
-![[Kartaverse Workflows.img/image94__fix1.png]]
+![[Kartaverse/Workflows/img/image94__fix1.png]]
 
 If you need to register for a new account click the "Join Now" button. Otherwise, if you have an existing account click the "Login" button to continue. NVIDIA uses a 2-factor login system for this site so you will have to check your email for the login code and click the "Verify Email Address" button to proceed.
 
@@ -295,23 +296,23 @@ The OptiX installer file "NVIDIA-OptiX-SDK-7.4.0-win64.exe" was a 53.5 MB downlo
 
 On the first screen of the installer you need to click the "Next" button to continue.
 
-![[Kartaverse Workflows.img/image27__fix2.png]]
+![[Kartaverse/Workflows/img/image27__fix2.png]]
 
 On the "License Agreement" screen you need to click "I Agree" to continue.
 
-![[Kartaverse Workflows.img/image59__fix2.png]]
+![[Kartaverse/Workflows/img/image59__fix2.png]]
 
 The next few screens just require you to keep on clicking "Next" unless you feel the need to customize the settings.
 
-![[Kartaverse Workflows.img/image25__fix4.png]]
+![[Kartaverse/Workflows/img/image25__fix4.png]]
 
 To start the installation process click the "Install" button.
 
-![[Kartaverse Workflows.img/image103__fix1.png]]
+![[Kartaverse/Workflows/img/image103__fix1.png]]
 
 When the OptiX SDK installation process completes you can exit the installer by clicking on the "Finish" button.
 
-![[Kartaverse Workflows.img/image65__fix1.png]]
+![[Kartaverse/Workflows/img/image65__fix1.png]]
 
 ### Step 4. Clone the Instant NGP Repository
 
@@ -321,43 +322,43 @@ This step in the tutorial assumes you don't already have a favourite git client 
 
 We are now going to install a free open-source, command prompt based, git program by downloading and installing the [Git Client](https://git-scm.com/downloads) tools. On the Git-SCM website's Download page, select the "Windows" option.
 
-![[Kartaverse Workflows.img/image57.png]]
+![[Kartaverse/Workflows/img/image57.png]]
 
 We are interested in downloading the Standalone Installer called "64-bit Git for Windows Setup". The installer is 47.3 MB in size and currently has the filename of "Git-2.36.1-64-bit.exe".
 
-![[Kartaverse Workflows.img/image38.png]]
+![[Kartaverse/Workflows/img/image38.png]]
 
 On the Git installer's "Information" screen you have to accept the GNU GPL license terms by hitting the "Next" button.
 
-![[Kartaverse Workflows.img/image108.png]]
+![[Kartaverse/Workflows/img/image108.png]]
 
 Most of the subsequent screens in the git installer can be navigated through without too much attention by leaving things pretty much at their default values and clicking the "Next" button each time.
 
-![[Kartaverse Workflows.img/image49.png]]
+![[Kartaverse/Workflows/img/image49.png]]
 
 You have the option of customizing the installed components.
 
-![[Kartaverse Workflows.img/image111.png]]
+![[Kartaverse/Workflows/img/image111.png]]
 
 You are able to configure the default text editor that is used by git. There are several options you can choose from the list.
 
-![[Kartaverse Workflows.img/image92.png]]
+![[Kartaverse/Workflows/img/image92.png]]
 
 As previously mentioned the default settings that are pre-selected for most of these screens are fine for the average user just getting started with git.
 
-![[Kartaverse Workflows.img/image74.png]]
+![[Kartaverse/Workflows/img/image74.png]]
 
 Since we want to be able to use the command line git utility from the Command Prompt window it is a good idea to select either the 2nd or 3rd options in the "Adjusting your PATH environment" screen.
 
 Personally, I think the 2nd option of "(x) Git from the command line and also from 3rd party software" is the most balanced and flexible choice for new users.
 
-![[Kartaverse Workflows.img/image41.png]]
+![[Kartaverse/Workflows/img/image41.png]]
 
 You can click the "Next" button on all remaining git installer screens to complete the process.
 
 Let's try out the git program for the first time! We are now ready to launch a Windows "Command Prompt" window with administrative permissions using the start menu.
 
-![[Kartaverse Workflows.img/image50.png]]
+![[Kartaverse/Workflows/img/image50.png]]
 
 With the command prompt window open, lets type in:
 ```powershell
@@ -369,9 +370,9 @@ dir /w
 
 These commands will launch the git utility and it should automatically download the current version of the [NVIDIA Instant NGP (Neural graphics primitives)](https://github.com/nvlabs/instant-ngp) source code from the GitHub website and save it to the root folder on the C:\\ drive at the folder path of "C:\\instant-ngp\\".
 
-![[Kartaverse Workflows.img/image28.png]]
+![[Kartaverse/Workflows/img/image28.png]]
 
-![[Kartaverse Workflows.img/image93.png]]
+![[Kartaverse/Workflows/img/image93.png]]
 
 Git Usage Note: You have the freedom to customize this git cloning download path but for convenience the shorter the filepath, the easier it is to access from a command prompt session when you go to run the testbed program later on. Also keep in mind that there is a limit to the length of a typical folder path on a default Windows system so if you download the files into a custom location of your own choosing and it happens to be a deeply nested hierarchy, you might be causing yourself trouble later on.
 
@@ -386,7 +387,7 @@ Git Troubleshooting Tip: We needed to use the Command Prompt with Administrative
 
 With the git downloading phase complete you should be able to navigate using the Windows Explore folder browsing view to open up the instant-npg folder. The path we installed the files to by default was "C:\\instant-ngp\\".
 
-![[Kartaverse Workflows.img/image77.png]]
+![[Kartaverse/Workflows/img/image77.png]]
 
 ### Step 5. Building Instant NGP
 
@@ -394,15 +395,15 @@ With the git downloading phase complete you should be able to navigate using the
 
 [COLMAP](https://colmap.github.io/) is a free cross-platform open-source camera alignment and photogrammetry (image based modelling) toolset. COLMAP is used by the Instant NGP python scripts to prepare the NeRF camera data before the training task is started.
 
-![[Kartaverse Workflows.img/image8__fix2.png]]
+![[Kartaverse/Workflows/img/image8__fix2.png]]
 
 Download [Colmap 3.7](https://github.com/colmap/colmap/releases) from the GitHub releases page as a pre-compiled Windows binary that has NVIDIA CUDA GPU acceleration enabled. This download is currently named "COLMAP-3.7-windows-cuda.zip" and is 129 MB in size.
 
-![[Kartaverse Workflows.img/image24__fix1.png]]
+![[Kartaverse/Workflows/img/image24__fix1.png]]
 
 Expand the zip archive and copy the expanded COLMAP folder to the root of your hard disk. Let's rename the COLMAP folder at the same time for easier command line usage. Change the folder name from "C:\\COLMAP-3.7-windows-cuda\\" to a shorter and simpler version by reducing the folder name down to merely "C:\\COLMAP-3.7\\".
 
-![[Kartaverse Workflows.img/image70__fix1.png]]
+![[Kartaverse/Workflows/img/image70__fix1.png]]
 
 ***Make sure to avoid installing COLMAP to a folder that has a space in the filepath or the Colmap unit tests will fail. This will occur if you placed COLMAP inside your home folder and your user account name has spaces between your first and last name. I repeat, spaces in the path will cause you headaches if you ignore this suggestion!***
 
@@ -414,15 +415,15 @@ Click on the Windows Start menu. Then begin typing in the words "View advanced s
 
 Click the "Open" text based link on the right-side of the view to launch this Control Panel.
 
-![[Kartaverse Workflows.img/image42.png]]
+![[Kartaverse/Workflows/img/image42.png]]
 
 In the System Properties window click on the "Environment Variables..." button. This dialog is where custom environment variables like the system PATH are configured.
 
-![[Kartaverse Workflows.img/image18__fix3.png]]
+![[Kartaverse/Workflows/img/image18__fix3.png]]
 
 In the "Environment Variables" window click on the "System Variables \> Path" entry. Then click the "Edit" button. This will allow us to customize a version of the PATH variable that is used for all user accounts and background system processes, too.
 
-![[Kartaverse Workflows.img/image52__fix1.png]]
+![[Kartaverse/Workflows/img/image52__fix1.png]]
 
 In the "Edit environment variable" window click the "New" button to add an additional entry. Type in "C:\\COLMAP-3.7\\bin\\".
 
@@ -434,7 +435,7 @@ If you wanted to get fancy one could spend more time down the road and customize
 
 Click the "OK" button to close this window. Then close the subsequent other Control Panel windows by clicking their "OK" buttons as well.
 
-![[Kartaverse Workflows.img/image20__fix2.png]]
+![[Kartaverse/Workflows/img/image20__fix2.png]]
 
 Environment Variables Tip 1: The "PATH" variable, which is written as %PATH% when accessed from the command prompt window, is used for several purposes. One of those use cases is to define which executable programs on your computer (.exe, .bat, etc files) can be run from a terminal session simply by typing in the program's base filename name without having to always write in the full folder path to the program. This saves a lot of time when a user frequently navigates a filesystem hierarchy in a text based command prompt/terminal window and runs a series of command line tools.
 
@@ -450,7 +451,7 @@ We do this step by clicking on the Start menu. Begin typing in the words "Develo
 
 Click on the "Run as administrator" link.
 
-![[Kartaverse Workflows.img/image66.png]]
+![[Kartaverse/Workflows/img/image66.png]]
 
 Step 2. It is important to define the CUDA architecture before you build the testbed program. This will affect the maximum "aabb_scale" number you will be able to run in your transform.json file. For an RTX Series 3000 GPU the environment variable can be defined in the "Command Prompt" window using:
 
@@ -463,7 +464,7 @@ The result of setting this environment variable value can be verified by typing 
 echo %TCNN_CUDA_ARCHITECTURES%
 ```
 
-![[Kartaverse Workflows.img/image53__fix1.png]]
+![[Kartaverse/Workflows/img/image53__fix1.png]]
 
 The echo command prints out the currently defined value for the environment variable you specify inside a pair of percent signs "%" which in the case of my screenshot is a value of "86".
 
@@ -480,19 +481,19 @@ cmake --build build --config RelWithDebInfo -j 64
 ```
 If this task is completed successfully, you should now have a ready-to-run copy of the NeRF testbed program after a few minutes of compiling.🥳🎉🎁
 
-![[Kartaverse Workflows.img/image58__fix1.png]]
+![[Kartaverse/Workflows/img/image58__fix1.png]]
 
-![[Kartaverse Workflows.img/image67.png]]
+![[Kartaverse/Workflows/img/image67.png]]
 
-![[Kartaverse Workflows.img/image73.png]]
+![[Kartaverse/Workflows/img/image73.png]]
 
-![[Kartaverse Workflows.img/image81.png]]
+![[Kartaverse/Workflows/img/image81.png]]
 
 Congratulations if by some miracle you have managed to make it this far in the tutorial in a single reading session. Bonus points if you followed along with all the steps in your first run through of this document. Needless to say, I'm impressed!
 
 If the fates have smiled favourably on your freshly prepared compiler toolchain you should be able to peek inside the folder "C:\\instant-ngp\\build". If things worked out well you will see the new executable that you just compiled on your own home computer/workstation system. The exe file is named "testbed.exe". Yay.
 
-![[Kartaverse Workflows.img/image98.png]]
+![[Kartaverse/Workflows/img/image98.png]]
 
 ## Using Instant NGP
 
@@ -501,7 +502,7 @@ Instant NGP is launched from the command line. It is possible to see a list of t
 ```powershell
 C:\instant-ngp\build\testbed.exe -h
 ```
-![[Kartaverse Workflows.img/image71.png]]
+![[Kartaverse/Workflows/img/image71.png]]
 
 ### TestBed Command-Line Syntax
 
@@ -543,7 +544,7 @@ The first scene that every new Instant NGP user needs to try out if this is thei
 
 #### Fox Scene
 
-![[Kartaverse Workflows.img/image75.jpg]]
+![[Kartaverse/Workflows/img/image75.jpg]]
 
 A scene of an old taxidermy style stuffed fox can be viewed as a NeRF using:
 
@@ -551,11 +552,11 @@ C:\\instant-ngp\\build\\testbed --scene data/nerf/fox
 
 In only a few moments the testbed program will launch.
 
-![[Kartaverse Workflows.img/image91__fix2.png]]
+![[Kartaverse/Workflows/img/image91__fix2.png]]
 
 A visual IMGUI based immediate mode user interface will appear and you can start panning the view to explore the 3D scene while the training process is carried out.
 
-![[Kartaverse Workflows.img/image96__fix2.png]]
+![[Kartaverse/Workflows/img/image96__fix2.png]]
 
 If you want to peek inside the fox scene's "images" folder to see the individual camera views that were used to train the testbed player in only a few moments, navigate using the Windows Explorer folder browsing view to:
 
@@ -566,7 +567,7 @@ You will find 50 JPEG format photos that were photographed in a vertical portrai
 
 #### Armadillo Model
 
-![[Kartaverse Workflows.img/image12.png]]
+![[Kartaverse/Workflows/img/image12.png]]
 
 A Wavefront OBJ format polygon model of an armadillo character is calculated as an [SDF (Signed Distance Function)](https://en.wikipedia.org/wiki/Signed_distance_function) that can be viewed as a NeRF using:
 
@@ -576,7 +577,7 @@ C:\instant-ngp\build\testbed --scene data/sdf/armadillo.obj
 
 #### Uprezzed Photo
 
-![[Kartaverse Workflows.img/image55__fix4.png]]
+![[Kartaverse/Workflows/img/image55__fix4.png]]
 
 An uprezzed version of an old black and white Albert Einstein photo can be viewed as a NeRF using:
 
@@ -586,7 +587,7 @@ C:\instant-ngp\build\testbed --scene data/image/albert.exr
 
 When you pan in and then zoom around in the NeRF rendered photo, the testbed window will display a view that looks like this:
 
-![[Kartaverse Workflows.img/image43__fix5.png]]
+![[Kartaverse/Workflows/img/image43__fix5.png]]
 
 This example uses an EXR format image as the source media so you had to install the Python centric OpenEXR library files in the earlier steps to be able to load this image successfully.
 
@@ -600,7 +601,7 @@ Download the "[Nerf_instant_ngp_lion.zip](https://www.andrewhazelden.com/project
 
 Extract the "lion" folder from this zip archive and copy it to "C:\\instant-ngp\\data\\nerf\\lion\\".
 
-![[Kartaverse Workflows.img/image40.png]]
+![[Kartaverse/Workflows/img/image40.png]]
 
 #### Step 2. Run COLMAP using the included "colmap2nerf.py" script.
 
@@ -615,13 +616,13 @@ You will be asked a yes/no question when the COLMAP script starts. Press the let
 warning! folders 'colmap_sparse' and 'colmap_text' will be deleted/replaced. continue? (Y/n) Y
 ```
 
-![[Kartaverse Workflows.img/image85.png]]
+![[Kartaverse/Workflows/img/image85.png]]
 
 You will see screens and screens of progress text scroll continuously in the Command Prompt window as each image is aligned and registered by the COLMAP program:
 
-![[Kartaverse Workflows.img/image101.png]]
+![[Kartaverse/Workflows/img/image101.png]]
 
-![[Kartaverse Workflows.img/image44__fix2.png]]
+![[Kartaverse/Workflows/img/image44__fix2.png]]
 
 If everything worked out you should see a final line in the command prompt window that mentions "writing transforms.json". This means success was had.
 
@@ -659,11 +660,11 @@ ModuleNotFoundError: No module named 'numpy'
 
 Copy the COLMAP generated "Transform.json" file from inside the "C:\\instant-ngp\\" folder into "C:\\instant-ngp\\data\\nerf\\lion\\" folder.
 
-![[Kartaverse Workflows.img/image10.png]]
+![[Kartaverse/Workflows/img/image10.png]]
 
 This places the json document side-by-side in the current project, next to the individual NeRF scene's "images" folder.
 
-![[Kartaverse Workflows.img/image45.png]]
+![[Kartaverse/Workflows/img/image45.png]]
 
 #### Step 4. Open the document in a programmer's text editing tool
 
@@ -671,7 +672,7 @@ Open the document in a programmer's text editing tool like [NotePad++](https://n
 
 We need to edit the "Transform.json" text file to remove any filepath prefixes that might have been entered in the JSON document for each image resource. This edit can be carried out using a plain old-fashion "Find & Replace" text substitution approach.
 
-![[Kartaverse Workflows.img/image2.png]]
+![[Kartaverse/Workflows/img/image2.png]]
 
 Open the Find & Replace dialog using the Control+F hotkey.
 
@@ -685,17 +686,17 @@ Then in the "Replace with:" text field, clear it out so it contains nothing ("")
 
 Press the "Replace All" button to carry out this editing task.
 
-![[Kartaverse Workflows.img/image17.png]]
+![[Kartaverse/Workflows/img/image17.png]]
 
 The final relative filepath, after editing, should look like this for an individual image in the JSON file:
 
 "file_path": "images/lion.0001.jpg",
 
-![[Kartaverse Workflows.img/image79.png]]
+![[Kartaverse/Workflows/img/image79.png]]
 
 COLMAP JSON Troubleshooting: If you forget to edit the Transforms.json file to make the image path relative you will likely see the following error when you carry on down to the next step and run the lion test scene in the testbed program:
 
-![[Kartaverse Workflows.img/image110.png]]
+![[Kartaverse/Workflows/img/image110.png]]
 
 ##### Really, you should get Notepad++ Installed ASAP!
 
@@ -705,7 +706,7 @@ Don't hesitate to go and install [NotePad++](https://notepad-plus-plus.org/) now
 
 If you want to experience a really nicely optimized & very refined version of Notepad++... and you happen to already use the Blackmagic Resolve/Fusion software, I'd encourage you to check out the Reactor Package Manager's "Bin" category. This version of "Notepad++ for Fusion" has all of the nice little thoughtful improvements you didn't know you were living without and missing in your life:
 
-![[Kartaverse Workflows.img/image21__fix3.png]]
+![[Kartaverse/Workflows/img/image21__fix3.png]]
 
 ##### Check Your Camera Transforms for NaNs
 
@@ -724,11 +725,11 @@ cd C:\instant-ngp\
 C:\instant-ngp\build\testbed --scene data/nerf/lion --mode=nerf
 ```
 
-![[Kartaverse Workflows.img/image29__fix4.png]]
+![[Kartaverse/Workflows/img/image29__fix4.png]]
 
 At this point you should be experiencing a lion sculpture in NeRF like style! After several seconds of training and refinement the view will become clearer. You can rotate the camera view around in the scene within limits and see the different angles on the sculpture.
 
-![[Kartaverse Workflows.img/image69__fix1.png]]
+![[Kartaverse/Workflows/img/image69__fix1.png]]
 
 > [!tip] TestBed Troubleshooting Tip
 >
@@ -751,21 +752,21 @@ The TestBed UI is an immediate mode GUI that allows interactive control over the
 
 The camera path controls allow you to keyframe animate a motion path through the scene. This data can be saved to disk and used to create a high quality command-line rendered animation of the NeRF scene.
 
-![[Kartaverse Workflows.img/image32__fix4.png]]
+![[Kartaverse/Workflows/img/image32__fix4.png]]
 
 After you click the "Add from Cam" button you can start to make an animated camera.
 
-![[Kartaverse Workflows.img/image19__fix6.png]]
+![[Kartaverse/Workflows/img/image19__fix6.png]]
 
 ### Training
 
 The training section allows you to keep an eye on the scene's training progress.
 
-![[Kartaverse Workflows.img/image48.png]]
+![[Kartaverse/Workflows/img/image48.png]]
 
 ### Rendering
 
-![[Kartaverse Workflows.img/image46.png]]
+![[Kartaverse/Workflows/img/image46.png]]
 
 ### Render Mode
 
@@ -773,15 +774,15 @@ The "Render Mode" control allows you to toggle the type of render element you ar
 
 The "Shade" control gives a regular RGB color rendered version of the scene that is photorealistic.
 
-![[Kartaverse Workflows.img/image90__fix2.png]]
+![[Kartaverse/Workflows/img/image90__fix2.png]]
 
 The "AO" control gives an ambient occlusion pass rendered version of the scene. AO is used to approximate the effects of indirect lighting in a CG scene. This is conceptually similar to the lighting conditions of an overcast day that has no direct lighting from the sun, which would otherwise cast hard shadows.
 
-![[Kartaverse Workflows.img/image109__fix2.png]]
+![[Kartaverse/Workflows/img/image109__fix2.png]]
 
 The "Depth" control gives a z-depth pass rendered version of the scene. The near-clipping plane distance is shaded as black (0 distance from the camera), and the far-clipping plane distance is shaded as while.
 
-![[Kartaverse Workflows.img/image6__fix9.png]]
+![[Kartaverse/Workflows/img/image6__fix9.png]]
 
 The "Tonemap curve" allows you to perform HDRI like image range remapping. This can allow you to compress the highlights and shadows in the scene.
 
@@ -791,11 +792,11 @@ The "Exposure" control allows you to adjust the overall scene brightness.
 
 The Crop controls allow you to define a 3D scene bounding-box that is used to clip off outside data. This can be used to isolate a cubic region around a model and remove all distracting data outside this region.
 
-![[Kartaverse Workflows.img/image26__fix1.png]]
+![[Kartaverse/Workflows/img/image26__fix1.png]]
 
 This is what it looks like if you crop the scene down to just a single object using a combination of the crop size and crop aabb controls:
 
-![[Kartaverse Workflows.img/image54__fix2.png]]
+![[Kartaverse/Workflows/img/image54__fix2.png]]
 
 ### Camera
 
@@ -805,37 +806,37 @@ The "Field of view" control is used to adjust the angle of view of the camera le
 
 The "Zoom" control defaults to a value of 1.0. If you change this control it feels just like you are using a zoom lens attached to the camera.
 
-![[Kartaverse Workflows.img/image11__fix2.png]]
+![[Kartaverse/Workflows/img/image11__fix2.png]]
 
 ### Snapshot
 
 The snapshot controls allow you to export to disk the fully trained scene in its current state. You can also re-import training data from a prior session.
 
-![[Kartaverse Workflows.img/image61__fix2.png]]
+![[Kartaverse/Workflows/img/image61__fix2.png]]
 
 ### Marching Cubes Mesh Output
 
 This section of controls allows you to create a polygon mesh representation of the NeRF scene density.
 
-![[Kartaverse Workflows.img/image39.png]]
+![[Kartaverse/Workflows/img/image39.png]]
 
 The polygon formatted model output quality is not quite refined yet from the testbed NeRF program to satisfy the most demanding of users with a professional VFX/animation/games background. In many ways the meshing algorithms used at the moment are still lacking in refinements compared to traditional high-quality photogrammetry generated meshes.
 
 On the flip side though, pure NeRF display mode rendered visuals like plant vegetation already have the capacity to look a lot better than most photogrammetry captured vegetation like dense leaves on a tree, or grass. So there is some balance between the two techniques already.
 
-![[Kartaverse Workflows.img/image112.png]]
+![[Kartaverse/Workflows/img/image112.png]]
 
-![[Kartaverse Workflows.img/image4__fix2.png]]
+![[Kartaverse/Workflows/img/image4__fix2.png]]
 
 Meshing Tip: If you increase the "Res" setting to a value higher than your GPU's VRAM can support then the current testbed session will likely exit abruptly. You will then be returned back to the Command Prompt session with the following error message:
 
-![[Kartaverse Workflows.img/image51__fix1.png]]
+![[Kartaverse/Workflows/img/image51__fix1.png]]
 
 ### History of trainable encoding parameters
 
 This control is a diagnostic element you can learn more about as you go deeper into exploring the testbed utility on more scenes.
 
-![[Kartaverse Workflows.img/image30__fix2.png]]
+![[Kartaverse/Workflows/img/image30__fix2.png]]
 
 ### Instant NGP Web Resources
 
