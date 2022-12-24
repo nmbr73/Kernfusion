@@ -85,6 +85,11 @@ theme:
         icon: material/toggle-switch
         name: Switch to light mode
 
+  # icon:
+  #     tag:
+  #       category_workflow: fontawesome/regular/timeline-arrow
+
+
 # Extensions
 markdown_extensions:
   - footnotes
@@ -125,11 +130,14 @@ markdown_extensions:
 
 plugins:
   - search
+  - tags:
+      tags_file: mediawiki_categories.md
   - roamlinks # to allow wiki-markup links [[...]] as used in Obsidian
   - search
   - callouts
   - awesome-pages: # allows .pages files in directories for navigation
       collapse_single_pages: true
+
 
 extra_javascript:
   - javascripts/mathjax.js
@@ -142,6 +150,8 @@ extra_javascript:
 
 
 extra:
+  # tags:
+  #   Workflow: category_workflow
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/nmbr73/Kernfusion
