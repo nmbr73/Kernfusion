@@ -1,14 +1,21 @@
 On macOS find the user specific extensions under
 
-````
-~/Library/Application Support/Blackmagic Design/
-````
+=== "macOS"
+    ```
+    ~/Library/Application Support/Blackmagic Design/
+    ```
 
-and for system wide files in
+    and for system wide files in
 
-```
-/Library/Application Support/Blackmagic Design
-```
+    ```
+    /Library/Application Support/Blackmagic Design
+    ```
+
+=== "Windows"
+    ```
+    ...
+    ```
+
 
 In the user folder ...
 

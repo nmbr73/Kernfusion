@@ -1,6 +1,6 @@
 ---
-name: 'Config/'
-tags: [reference]
+title: 'Config/'
+alias: 'Config/'
 ---
 
 Information and examples can be found here:

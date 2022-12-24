@@ -1,16 +1,18 @@
+---
+title: Kartaverse/Workflows
+aliases:
+- Kartaverse/Workflows
+- Kartaverse Workflows
 
-> [!warning] Dissolve content into independent articles!
->
-> In this folder you will find an export generated from a Scrivener source.
-> Scrivener being an authoring software for writing book type content, the
-> different files will come originally meant to be read in some linear order.
-> Please help to put re-organize and re-write them into separate articles, each
-> working kind of independently from the others. Remove finished files from
-> the `.pages` file.
+author: Andrew Hazelden
+tags:
+- Kartaverse
+- Workflow
+---
 
 ## Original Table of Contents
 
-- [[Kartaverse Workflows]]
+- [[Kartaverse Workflows/index|Kartaverse Workflows]]
 - [[Creating Volumetric NeRFs]]
 - [[Creating ST Maps]]
 - [[Render Fusion Comps in Houdini TOPs]]

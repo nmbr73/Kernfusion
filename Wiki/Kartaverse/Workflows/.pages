@@ -1,6 +1,5 @@
 nav:
-  - Kartaverse Workflows 📚: index.md
-  - Kartaverse Workflows.md
+  - index.md
   - Creating Volumetric NeRFs.md
   - Creating ST Maps.md
   - Render Fusion Comps in Houdini TOPs.md
@@ -13,4 +12,3 @@ nav:
   - DEV The Ultimate Guide to OpenUSD Pipeline Development.md
   - DEV Building an Effective nVP (Neural Virtual Production) Sound Stage.md
   - KickAss ShaderZ for Fusion.md
-  - ...

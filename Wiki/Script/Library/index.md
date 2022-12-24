@@ -1,6 +1,12 @@
 ---
-tags: [reference]
+title: Script/Library
+aliases:
+- Script/Library
+- Script Libraries
+- Library
+tags: [Reference]
 ---
+
 
 ## bit
 * [[Script/Library/bit/rol|rol]]

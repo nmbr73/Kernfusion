@@ -1,0 +1,13 @@
+nav:
+  - Home: index.md
+  - About.md
+  - Featured: Featured Articles.md
+  - External Links:
+    - WSL Forum: https://www.steakunderwater.com/wesuckless/index.php
+    - BMD Forum: https://forum.blackmagicdesign.com/index.php
+    - VFXpedia: https://www.steakunderwater.com/VFXPedia/96.0.243.189/index4875.html?title=Main_Page
+  - Content:
+    - Fusion and DaVinci Resolve
+    - Reactor
+    - Kartaverse
+#   - ...

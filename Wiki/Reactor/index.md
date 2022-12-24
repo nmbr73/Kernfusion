@@ -1,3 +1,9 @@
+---
+title: Reactor
+alias: Reactor
+---
+
+
 > [!SUMMARY] A package manager for Resolve/Fusion
 > Reactor is a community driven package manager that hosts the largest collection of curated content for extending the capabilities of Resolve/Fusion.
 
@@ -41,10 +47,10 @@ When the Reactor Installer starts you are presented with the following dialog. I
 
 > [!NOTE] Custom Install Path
 > When installing Reactor you also have the option to choose a "Custom Install Path". This button allows you to select a custom location you would like to have the Reactor content installed to. This could be a location like your user account's home folder, or another hard drive on your system, or a mapped network drive mount point for shared usage of Reactor content. 
-> 
+>
 > You can change the installed Reactor location later on by modifying the Fusion "PathMap" preferences and pointing the "Reactor:" PathMap at a new folder path.
 
- 
+
 ### Reactor Installation Status
 
 Reactor shows a progress bar while the installation process is underway.
@@ -62,7 +68,7 @@ In Fusion Studio you can do this by opening the root-level "Reactor" menu, then 
 In Resolve Studio you can do this by opening the root-level "Workspaces" menu, then navigating to the "Scripts > Comp > Reactor > Open Reactor…" menu item.
 
 ![[Reactor - Open Reactor in Resolve.png]]
-  
+
 When the Reactor Package Manager window loads initially you will see a list of all the atom packages that are able to be installed using this user interface. 
 
 Note: The content that is listed in the Reactor window comes from the [Reactor GitLab repository](https://gitlab.com/WeSuckLess/Reactor). If you have an outgoing firewall, or your country/company/ISP (internet service provider) has network filtering rules that block access to GitLab you will have to use another approach to install the Reactor content on your system.
