@@ -1,19 +1,18 @@
 ---
 title: Jupyter Notebook for Resolve/Fusion
 alias: Jupyter Notebook for Resolve/Fusion
-tags: [export, export-scrivener, revise]
-xself: 'Jupyter Notebook for Resolve_Fusion'
-xhead: 'Kartaverse Workflows'
-xtail: 'KickAss ShaderZ for Fusion'
-xprev: 'YouTube 360 to Equirectangular Conversions'
-xnext: 'Domemaster Photoshop Actions Pack'
+author: Andrew Hazelden
+tags:
+  - Kartaverse
+  - Workflow
+  - .scrivener-export
 ---
 
 Created 2022-09-14 Last Updated 2022-09-14 09.11 PM UTC -4
 
 By [Andrew Hazelden \<andrew@andrewhazelden.com\>](mailto:andrew@andrewhazelden.com)
 
-![[Kartaverse Workflows.img/image6__fix2.png]]
+![[image6__fix2.png]]
 
 ### Overview {#ref8}
 
@@ -25,9 +24,9 @@ This combination can be used to take post-production workflow automation to the 
 
 It is expected that you have Resolve Studio or Fusion Studio v18 installed, along with a 64-bit version of Python ranging from v3.6 - v3.10. On Windows, when you install Python3 x64, you need to enable the option to add Python to your System PATH environment variable.
 
-![[Kartaverse Workflows.img/image87__fix1.png]]
+![[image87__fix1.png]]
 
-For this WIP experiment we are importing and using the Python "imp" module to access the "Fusionscript.dll" library. In Python v3.12+ we will eventually need to switch over to using "importlib" instead of "imp" for compatibility.
+For this WIP experiment we are importing and using the Python "`imp`" module to access the "`Fusionscript.dll`" library. In Python v3.12+ we will eventually need to switch over to using "`importlib`" instead of "`imp`" for compatibility.
 
 As a troubleshooting step, make sure you've temporarily quit the Fusion Render Node program on your workstation. Also you need to ensure you have either Resolve Studio or Fusion Studio open but not both of them at the same time.
 
@@ -41,7 +40,7 @@ Let's add the Python virtualenv module to our systems.
 
 In a Terminal/Command Prompt session run:
 
-pip3 install virtualenv
+    pip3 install virtualenv
 
 ### Create the JupyterFusion environment
 
@@ -53,15 +52,13 @@ We are going to create a new virtual environment called "JupyterFusion" that is 
 
 From a macOS / Linux Terminal session run:
 
-cd \$HOME/
-
-virtualenv JupyterFusion
+    cd $HOME/
+    virtualenv JupyterFusion
 
 From a Windows Command Prompt session run:
 
-cd %USERPROFILE%\\
-
-virtualenv JupyterFusion
+    cd %USERPROFILE%\
+    virtualenv JupyterFusion
 
 ### Activate the Environment
 
@@ -71,15 +68,13 @@ The next step in using virtual environments is to navigate to the new folder and
 
 From a macOS / Linux Terminal session run:
 
-cd \$HOME/JupyterFusion/
-
-source bin/activate
+    cd $HOME/JupyterFusion/
+    source bin/activate
 
 From a Windows Command Prompt session run:
 
-cd %USERPROFILE%\\JupyterFusion\\
-
-Scripts\\activate.bat
+    cd %USERPROFILE%\JupyterFusion\
+    Scripts\activate.bat
 
 ### Install Jupyter
 
@@ -89,7 +84,7 @@ Now we are ready to install Jupyter Notebook in our new virtual environment.
 
 In a Terminal/Command Prompt session run:
 
-pip3 install jupyter
+    pip3 install jupyter
 
 ### Start Jupyter Notebook
 
@@ -99,19 +94,15 @@ Let's start up Jupyter for the first time. Jupyter has a web-based GUI that work
 
 From a macOS / Linux Terminal session run:
 
-mkdir -p \$HOME/JupyterFusion/notebooks
-
-cd \$HOME/JupyterFusion/notebooks
-
-jupyter notebook
+    mkdir -p $HOME/JupyterFusion/notebooks
+    cd $HOME/JupyterFusion/notebooks
+    jupyter notebook
 
 From a Windows Command Prompt session run:
 
-mkdir %USERPROFILE%\\JupyterFusion\\notebooks
-
-cd %USERPROFILE%\\JupyterFusion\\notebooks
-
-jupyter notebook
+    mkdir %USERPROFILE%\JupyterFusion\notebooks
+    cd %USERPROFILE%\JupyterFusion\notebooks
+    jupyter notebook
 
 Open your local web browser to:
 
@@ -123,19 +114,15 @@ The next time you want to access Jupyter you can type in the following syntax:
 
 From a macOS / Linux Terminal session run:
 
-source \$HOME/JupyterFusion/bin/activate
-
-cd \$HOME/JupyterFusion/notebooks
-
-jupyter notebook
+    source $HOME/JupyterFusion/bin/activate
+    cd $HOME/JupyterFusion/notebooks
+    jupyter notebook
 
 From a Windows Command Prompt session run:
 
-%USERPROFILE%\\JupyterFusion\\Scripts\\activate.bat
-
-cd %USERPROFILE%\\JupyterFusion\\notebooks
-
-jupyter notebook
+    %USERPROFILE%\JupyterFusion\Scripts\activate.bat
+    cd %USERPROFILE%\JupyterFusion\notebooks
+    jupyter notebook
 
 ### Let's create a new notebook
 
@@ -143,15 +130,15 @@ Let's create a new notebook
 
 In Jupyter Notebook's web based interface, click on the "New" button and select "Python 3 (ipykernel)". This will add a notebook we can use for Python3 scripting in Resolve/Fusion v18.
 
-![[Kartaverse Workflows.img/image9__fix1.png]]
+![[image9__fix1.png]]
 
 Click on the heading at the top left of the webpage labelled "Untitled".
 
-![[Kartaverse Workflows.img/image8__fix1.png]]
+![[image8__fix1.png]]
 
 This will display a Rename Notebook dialog that will allow us to rename the Jupyter notebook to "JupyterFusion".
 
-![[Kartaverse Workflows.img/image7__fix2.png]]
+![[image7__fix2.png]]
 
 Note: The toolbar pop-up menu item labelled "Code" can be changed to other options like "Markdown" to allow you to customize what can be added to the individual blocks of code.
 
@@ -163,289 +150,192 @@ Let's paste the following content below into the individual Jupyter Notebook cel
 
 Click in the first cell. Change the cell type from "Code" to "Markdown". Markdown is a documentation formatting system for making notes that have styled text.
 
-![[Kartaverse Workflows.img/image3__fix2.png]]
+![[image3__fix2.png]]
 
 Markdown Cell Content:
 
-\# Jupyter Fusion v0.1 2022-09-12
+    # Jupyter Fusion v0.1 2022-09-12
 
-A WIP example that shows how to connect a Jupyter Notebook session to Resolve Studio 18 or Fusion Studio 18.
+    A WIP example that shows how to connect a Jupyter Notebook session to Resolve Studio 18 or Fusion Studio 18.
 
-\*\*Tip:\*\* If you are running Resolve Studio, make sure to quit the "Fusion Studio" and "Fusion Render Node" processes on this workstation to avoid binding to those external applications.
+    **Tip:** If you are running Resolve Studio, make sure to quit the "Fusion Studio" and "Fusion Render Node" processes on this workstation to avoid binding to those external applications.
 
 Now we are going to use the "Insert \> Insert Cell Below" menu item each time we add another block of Python code.
 
-![[Kartaverse Workflows.img/image1__fix5.png]]
+![[image1__fix5.png]]
 
 The remaining cells of text are all "code" type content.
 
-![[Kartaverse Workflows.img/image4__fix4.png]]
+![[image4__fix4.png]]
 
 Code Cell Content:
 
-import sys, os
+    import sys, os
+    from pprint import pprint
 
-from pprint import pprint
+    try:
+        import imp
+    except DeprecationWarning:
+        # Python 3.12+ requires the use of importlib instead of imp
+        ;
 
-try:
+    def FuScriptLib():
+        lib_path = ""
+        if sys.platform.startswith("darwin"):
+            lib_path = "/Applications/DaVinci Resolve/DaVinci Resolve.app/Contents/Libraries/Fusion/fusionscript.so"
+            #lib_path = "/Applications/Blackmagic Fusion 18/Fusion.app/Contents/MacOS/fusionscript.so"
+            #lib_path = /Applications/Blackmagic Fusion 18 Render Node/Fusion Render Node.app/Contents/MacOS/fusionscript.so
+        elif sys.platform.startswith("win"):
+            lib_path = "C:\\Program Files\\Blackmagic Design\\DaVinci Resolve\\fusionscript.dll"
+            #lib_path = "C:\\Program Files\\Blackmagic Design\\Fusion 18\\fusionscript.dll"
+            #lib_path = "C:\\Program Files\\Blackmagic Design\\Fusion Render Node 18\\fusionscript.dll"
+        elif sys.platform.startswith("linux"):
+            lib_path = "/opt/resolve/libs/Fusion/fusionscript.so"
+            #lib_path = "/opt/BlackmagicDesign/Fusion18/fusionscript.so"
+            #lib_path = "/opt/BlackmagicDesign/FusionRenderNode18/fusionscript.so"
 
-import imp
+        if not os.path.isfile(lib_path):
+            print("[Fusion] [Library Does Not Exist on Disk]", lib_path)
 
-except DeprecationWarning:
+        try:
+            bmd = imp.load_dynamic("fusionscript", lib_path)
+        except DeprecationWarning:
+            # Python 3.12+ requires the use of importlib instead of imp
+            ;
 
-\# Python 3.12+ requires the use of importlib instead of imp
+        if bmd:
+            sys.modules[__name__] = bmd
+        else:
+            raise ImportError("[Fusion] Could not locate module dependencies")
 
-;
+        return bmd
+      
+    def Resolve():
+        app = FuScriptLib().scriptapp("Resolve")
+        return app
 
-def FuScriptLib():
+    def Fusion():
+        app = FuScriptLib().scriptapp("Fusion")
+        return app
 
-lib_path = ""
+    # Get the Resolve and Fusion objects
+    # res = Resolve()
+    fu = Fusion()
+    bmd = FuScriptLib()
 
-if sys.platform.startswith("darwin"):
-
-lib_path = "/Applications/DaVinci Resolve/DaVinci Resolve.app/Contents/Libraries/Fusion/fusionscript.so"
-
-#lib_path = "/Applications/Blackmagic Fusion 18/Fusion.app/Contents/MacOS/fusionscript.so"
-
-#lib_path = /Applications/Blackmagic Fusion 18 Render Node/Fusion Render Node.app/Contents/MacOS/fusionscript.so
-
-elif sys.platform.startswith("win"):
-
-lib_path = "C:\\\\Program Files\\\\Blackmagic Design\\\\DaVinci Resolve\\\\fusionscript.dll"
-
-#lib_path = "C:\\\\Program Files\\\\Blackmagic Design\\\\Fusion 18\\\\fusionscript.dll"
-
-#lib_path = "C:\\\\Program Files\\\\Blackmagic Design\\\\Fusion Render Node 18\\\\fusionscript.dll"
-
-elif sys.platform.startswith("linux"):
-
-lib_path = "/opt/resolve/libs/Fusion/fusionscript.so"
-
-#lib_path = "/opt/BlackmagicDesign/Fusion18/fusionscript.so"
-
-#lib_path = "/opt/BlackmagicDesign/FusionRenderNode18/fusionscript.so"
-
-if not os.path.isfile(lib_path):
-
-print("\[Fusion\] \[Library Does Not Exist on Disk\]", lib_path)
-
-try:
-
-bmd = imp.load_dynamic("fusionscript", lib_path)
-
-except DeprecationWarning:
-
-\# Python 3.12+ requires the use of importlib instead of imp
-
-;
-
-if bmd:
-
-sys.modules\[\_\_name\_\_\] = bmd
-
-else:
-
-raise ImportError("\[Fusion\] Could not locate module dependencies")
-
-return bmd
-
-def Resolve():
-
-app = FuScriptLib().scriptapp("Resolve")
-
-return app
-
-def Fusion():
-
-app = FuScriptLib().scriptapp("Fusion")
-
-return app
-
-\# Get the Resolve and Fusion objects
-
-\# res = Resolve()
-
-fu = Fusion()
-
-bmd = FuScriptLib()
-
-if fu is not None:
-
-\# Get the current comp object
-
-comp = fu.GetCurrentComp()
-
-else:
-
-print("\[Fusion\] Please open a comp and then run this script again.")
+    if fu is not None:
+        # Get the current comp object
+        comp = fu.GetCurrentComp()
+    else:
+        print("[Fusion] Please open a comp and then run this script again.")
 
 Code Cell Content:
 
-\# Display the fusion and comp object info
+    # Display the fusion and comp object info
+    print("\n\n[FusionScript]")
+    pprint(bmd)
 
-print("\\n\\n\[FusionScript\]")
+    print("\n\n[Fusion]")
+    if fu is not None:
+        pprint(fu.GetAttrs())
 
-pprint(bmd)
-
-print("\\n\\n\[Fusion\]")
-
-if fu is not None:
-
-pprint(fu.GetAttrs())
-
-print("\\n\\n\[Current Comp\]")
-
-if comp is not None:
-
-pprint(comp.GetAttrs())
-
-else:
-
-print("\[Fusion\] Please open a comp and then run this script again.")
+    print("\n\n[Current Comp]")
+    if comp is not None:
+        pprint(comp.GetAttrs())
+    else:
+        print("[Fusion] Please open a comp and then run this script again.")
 
 Code Cell Content:
 
-if comp is not None:
+    if comp is not None:
+        # Stop Loader/Saver node file dialogs from showing
+        comp.Lock()
 
-\# Stop Loader/Saver node file dialogs from showing
+        # Add a node to the comp
+        ldr = comp.AddTool("Loader")
+        ldr.Clip[1] = "Fusion:/Brushes/smile.tga"
 
-comp.Lock()
-
-\# Add a node to the comp
-
-ldr = comp.AddTool("Loader")
-
-ldr.Clip\[1\] = "Fusion:/Brushes/smile.tga"
-
-\# Allow Loader/Saver node file dialogs to show up again
-
-comp.Unlock()
+        # Allow Loader/Saver node file dialogs to show up again
+        comp.Unlock()
 
 Code Cell Content:
 
-if comp is not None:
+    if comp is not None:
+        # Display the Loader node details
+        print(ldr.Name, "=", ldr.Clip[1])
 
-\# Display the Loader node details
-
-print(ldr.Name, "=", ldr.Clip\[1\])
-
-\# Display the Loader node contents in the left viewer window
-
-comp.GetPreviewList()\["LeftView"\].ViewOn(ldr, 1)
+        # Display the Loader node contents in the left viewer window
+        comp.GetPreviewList()["LeftView"].ViewOn(ldr, 1)
 
 Let's press the "Save" button on the far left side of the Jupyter Notebook toolbar.
 
-![[Kartaverse Workflows.img/image2__fix4.png]]
+![[image2__fix4.png]]
 
 After pasting the code into the individual Jupyter Notebook cells, you will be able to run it by pressing the "Run" button in the toolbar. Each time you press the "Run" button a new block of code is highlighted and then executed. The console output results are listed below the cell.
 
 This is the output result I see on my macOS system:
 
-\[FusionScript\]
+    [FusionScript]
+    <module 'fusionscript' (/Applications/Blackmagic Fusion 18/Fusion.app/Contents/MacOS/fusionscript.so)>
 
-\<module 'fusionscript' (/Applications/Blackmagic Fusion 18/Fusion.app/Contents/MacOS/fusionscript.so)\>
 
-\[Fusion\]
+    [Fusion]
+    {'FUSIONB_IsManager': False,
+     'FUSIONB_IsRenderNode': False,
+     'FUSIONB_IsResolve': False,
+     'FUSIONH_CurrentComp': <BlackmagicFusion.PyRemoteObject object at 0x111af3990>,
+     'FUSIONI_NumProcessors': 8,
+     'FUSIONI_PhysicalRAMFreeMB': 5867,
+     'FUSIONI_PhysicalRAMTotalMB': 16384,
+     'FUSIONI_SerialHi': <snip>,
+     'FUSIONI_SerialLo': 0,
+     'FUSIONI_VersionHi': 1179648,
+     'FUSIONI_VersionLo': 65543,
+     'FUSIONI_VirtualRAMTotalMB': 16839,
+     'FUSIONI_VirtualRAMUsedMB': 10971,
+     'FUSIONS_FileName': '/Applications/Blackmagic Fusion '
+                         '18/Fusion.app/Contents/MacOS/Fusion',
+     'FUSIONS_GLDevice': 'AMD Radeon R9 M370X OpenGL Engine',
+     'FUSIONS_GLVendor': 'ATI Technologies Inc.',
+     'FUSIONS_GLVersion': '2.1 ATI-4.8.101',
+     'FUSIONS_MachineType': 'IA32',
+     'FUSIONS_Version': '18.0.1'}
 
-{'FUSIONB_IsManager': False,
 
-'FUSIONB_IsRenderNode': False,
+    [Current Comp]
+    {'COMPB_HiQ': True,
+     'COMPB_Locked': False,
+     'COMPB_LoopPlay': True,
+     'COMPB_Modified': True,
+     'COMPB_MotionBlur': True,
+     'COMPB_Proxy': False,
+     'COMPB_Rendering': False,
+     'COMPH_ActiveTool': None,
+     'COMPI_RenderFlags': 131072,
+     'COMPI_RenderStep': 1,
+     'COMPN_AudioOffset': 0.0,
+     'COMPN_AverageFrameTime': 0.0,
+     'COMPN_CurrentTime': 0.0,
+     'COMPN_ElapsedTime': 0.0,
+     'COMPN_GlobalEnd': 1000.0,
+     'COMPN_GlobalStart': 0.0,
+     'COMPN_LastFrameRendered': -2000000000.0,
+     'COMPN_LastFrameTime': 0.0,
+     'COMPN_RenderEnd': 1000.0,
+     'COMPN_RenderEndTime': 1000.0,
+     'COMPN_RenderStart': 0.0,
+     'COMPN_RenderStartTime': 0.0,
+     'COMPN_TimeRemaining': 0.0,
+     'COMPS_FileName': '',
+     'COMPS_LoopMode': 'loop',
+     'COMPS_Name': 'Composition1'}
 
-'FUSIONB_IsResolve': False,
 
-'FUSIONH_CurrentComp': \<BlackmagicFusion.PyRemoteObject object at 0x111af3990\>,
-
-'FUSIONI_NumProcessors': 8,
-
-'FUSIONI_PhysicalRAMFreeMB': 5867,
-
-'FUSIONI_PhysicalRAMTotalMB': 16384,
-
-'FUSIONI_SerialHi': \<snip\>,
-
-'FUSIONI_SerialLo': 0,
-
-'FUSIONI_VersionHi': 1179648,
-
-'FUSIONI_VersionLo': 65543,
-
-'FUSIONI_VirtualRAMTotalMB': 16839,
-
-'FUSIONI_VirtualRAMUsedMB': 10971,
-
-'FUSIONS_FileName': '/Applications/Blackmagic Fusion'
-
-'18/Fusion.app/Contents/MacOS/Fusion',
-
-'FUSIONS_GLDevice': 'AMD Radeon R9 M370X OpenGL Engine',
-
-'FUSIONS_GLVendor': 'ATI Technologies Inc.',
-
-'FUSIONS_GLVersion': '2.1 ATI-4.8.101',
-
-'FUSIONS_MachineType': 'IA32',
-
-'FUSIONS_Version': '18.0.1'}
-
-\[Current Comp\]
-
-{'COMPB_HiQ': True,
-
-'COMPB_Locked': False,
-
-'COMPB_LoopPlay': True,
-
-'COMPB_Modified': True,
-
-'COMPB_MotionBlur': True,
-
-'COMPB_Proxy': False,
-
-'COMPB_Rendering': False,
-
-'COMPH_ActiveTool': None,
-
-'COMPI_RenderFlags': 131072,
-
-'COMPI_RenderStep': 1,
-
-'COMPN_AudioOffset': 0.0,
-
-'COMPN_AverageFrameTime': 0.0,
-
-'COMPN_CurrentTime': 0.0,
-
-'COMPN_ElapsedTime': 0.0,
-
-'COMPN_GlobalEnd': 1000.0,
-
-'COMPN_GlobalStart': 0.0,
-
-'COMPN_LastFrameRendered': -2000000000.0,
-
-'COMPN_LastFrameTime': 0.0,
-
-'COMPN_RenderEnd': 1000.0,
-
-'COMPN_RenderEndTime': 1000.0,
-
-'COMPN_RenderStart': 0.0,
-
-'COMPN_RenderStartTime': 0.0,
-
-'COMPN_TimeRemaining': 0.0,
-
-'COMPS_FileName': '',
-
-'COMPS_LoopMode': 'loop',
-
-'COMPS_Name': 'Composition1'}
-
-Loader1 = Fusion:/Brushes/smile.tga
+    Loader1 = Fusion:/Brushes/smile.tga
 
 After running the Notebook, your Fusion compositing session should now look like this:
 
-![[Kartaverse Workflows.img/image10__fix1.png]]
+![[image10__fix1.png]]
 
 At this point you will be able to start modifying the Python code in the Notebook and customizing Jupyter to run your own scripts.
 

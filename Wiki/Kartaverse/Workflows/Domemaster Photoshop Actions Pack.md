@@ -1,10 +1,9 @@
 ---
-tags: [export, export-scrivener, revise]
-xself: 'Domemaster Photoshop Actions Pack'
-xhead: 'Kartaverse Workflows'
-xtail: 'KickAss ShaderZ for Fusion'
-xprev: 'Jupyter Notebook for Resolve_Fusion'
-xnext: 'DEV OpenDisplayXR VDD (Virtual Device Driver)'
+author: Andrew Hazelden
+tags:
+  - Kartaverse
+  - Workflow
+  - .scrivener-export
 ---
 
 **Domemaster Photoshop Actions Pack**
@@ -27,11 +26,11 @@ The Domemaster Photoshop Actions Pack is a collection of custom Adobe Photoshop 
 
 The actions provide tools for converting images from several common panoramic formats such as angular fisheye, equirectangular, and cube map panoramas, and general utilities for fulldome production.
 
-[![[Kartaverse Workflows.img/DomemasterPhotoshopActionsPackOverview.png]]](https://www.youtube.com/watch?v=VcfHzyIuR4E)
+[![[DomemasterPhotoshopActionsPackOverview.png]]](https://www.youtube.com/watch?v=VcfHzyIuR4E)
 
 *The Domemaster Photoshop Actions Pack is distributed under the GPL v3 license.*
 
-![[Kartaverse Workflows.img/photoshop-actions-list.png]]
+![[photoshop-actions-list.png]]
 
 ### Version History
 
@@ -206,7 +205,7 @@ The Domemaster Photoshop Actions Pack is compatible with Photoshop CS3 to CC on 
 
 Start by opening Adobe Photoshop. Navigate to the "Window" menu, and select the "Actions" menu item.
 
-![[Kartaverse Workflows.img/1install-window-actions-menu-item.png]]
+![[1install-window-actions-menu-item.png]]
 
 #### Step 2. Load the actions.
 
@@ -216,17 +215,17 @@ Click on the Actions tab pop-up menu located at the top right of the actions tab
 
 Select the "Load Actions" menu item.
 
-![[Kartaverse Workflows.img/2load-actions-menu-item.png]]
+![[2load-actions-menu-item.png]]
 
 In the Load dialogue window select the action files "Conversions.atn", "General Utilties.atn", "Masking and Selection.atn", "Transforms.atn", and "UV Pass.atn".
 
 Click the Load button to open the action files.
 
-![[Kartaverse Workflows.img/3load-actions-dialogue.png]]
+![[3load-actions-dialogue.png]]
 
 The Domemaster Photoshop Actions Pack files will be loaded into the Actions Tab.
 
-![[Kartaverse Workflows.img/4actions-loaded.png]]
+![[4actions-loaded.png]]
 
 #### Step 3. Switch to Button Mode
 
@@ -238,7 +237,7 @@ Click on the Actions tab pop-up menu located at the top right of the actions tab
 
 Select the first item in the menu labeled "Button Mode". Your view will switch from a long list into a colorful grid of labeled buttons.
 
-![[Kartaverse Workflows.img/5switch-to-button-mode.png]]
+![[5switch-to-button-mode.png]]
 
 To make it easier to find things, the actions groups are color coded:
 
@@ -288,17 +287,17 @@ This action will double the width of the image which is helpful for preparing si
 
 This action will rotate the Photoshop document by 90 degrees. This is useful for changing the orientation of the angular fisheye and equirectangular images prior to the conversion.
 
-![[Kartaverse Workflows.img/Rotate-90-Degrees-Action.jpg]]
+![[Rotate-90-Degrees-Action.jpg]]
 
-![[Kartaverse Workflows.img/Rotate-90-Degrees-Action2.jpg]]
+![[Rotate-90-Degrees-Action2.jpg]]
 
 **Rotate 180 Degrees**
 
 This action will rotate the Photoshop document by 180 degrees. This is useful for changing the up orientation of the angular fisheye and equirectangular images prior to the conversion.
 
-![[Kartaverse Workflows.img/Rotate-180-Degrees-Action.jpg]]
+![[Rotate-180-Degrees-Action.jpg]]
 
-![[Kartaverse Workflows.img/Rotate-180-Degrees-Action2.jpg]]
+![[Rotate-180-Degrees-Action2.jpg]]
 
 **Rotate 270 Degrees**
 
@@ -318,17 +317,17 @@ This action slides the image 1024 pixels to the right and wraps the right side o
 
 This is useful for changing the content in the center of an equirectangular image. This is also useful for fixing image seams and preparing tiling textures
 
-![[Kartaverse Workflows.img/Horizontal-Offset-1024-Pixels-Action.jpg]]
+![[Horizontal-Offset-1024-Pixels-Action.jpg]]
 
-![[Kartaverse Workflows.img/Horizontal-Offset-1024-Pixels-Action2.jpg]]
+![[Horizontal-Offset-1024-Pixels-Action2.jpg]]
 
 **Vertical Offset 1024 Pixels**
 
 This action slides the image upwards by 1024 pixels and wraps the top side of the image around to the bottom side. This is useful for fixing image seams and preparing tiling textures.
 
-![[Kartaverse Workflows.img/Vertical-Offset-1024-Pixels-Action.jpg]]
+![[Vertical-Offset-1024-Pixels-Action.jpg]]
 
-![[Kartaverse Workflows.img/Vertical-Offset-1024-Pixels-Action2.jpg]]
+![[Vertical-Offset-1024-Pixels-Action2.jpg]]
 
 **Horizontal and Vertical Offset 1024 Pixels**
 
@@ -338,7 +337,7 @@ If you are running this action on a 2K square resolution image it will shift the
 
 On a 4K square or 8K square resolution image you will need to run the action multiple time until the seam is shifted into the center of the document.
 
-![[Kartaverse Workflows.img/Horizontal-and-Vertical-Offset-1024-Pixels.jpg]]
+![[Horizontal-and-Vertical-Offset-1024-Pixels.jpg]]
 
 #### Conversions {#ref9}
 
@@ -356,7 +355,7 @@ The latest version of Photoshop CC (14.2.1+) has added support for 16-bit per ch
 
 *Note:* It is also possible to use the "Inverse Angular Fisheye" action a 2nd time to convert a "tiny planet" image back into a normal fisheye image.
 
-![[Kartaverse Workflows.img/Inverse-Angular-Fisheye.jpg]]
+![[Inverse-Angular-Fisheye.jpg]]
 
 **Angular Fisheye to Equirectangular**
 
@@ -368,7 +367,7 @@ The latest version of Photoshop CC (14.2.1+) has added support for 16-bit per ch
 
 Tip: If you see a visible seam artifact at the 0° mark after converting to/from an angular fisheye format you can try flattening the image before performing the conversions.
 
-![[Kartaverse Workflows.img/Angular-Fisheye-to-Equirectangular-Action.jpg]]
+![[Angular-Fisheye-to-Equirectangular-Action.jpg]]
 
 **Angular Fisheye to 2:1 Equirectangular**
 
@@ -380,7 +379,7 @@ The latest version of Photoshop CC (14.2.1+) has added support for 16-bit per ch
 
 Tip: If you see a visible seam artifact at the 0° mark after converting to/from an angular fisheye format you can try flattening the image before performing the conversions.
 
-![[Kartaverse Workflows.img/Angular-Fisheye-to-2to1-Equirectangular-Action.jpg]]
+![[Angular-Fisheye-to-2to1-Equirectangular-Action.jpg]]
 
 **180° Domemaster to 2:1 Equirectangular**
 
@@ -388,7 +387,7 @@ This action converts a 180° Domemaster angular fisheye image into a 360° x 180
 
 Since a domemaster frame only has a vertical coverage area of 90 degrees when converted into a spherical format, this image will have the bottom / empty half of the spherical frame filled with a black background color.
 
-![[Kartaverse Workflows.img/180-Domemaster-to-2to1-Equirectangular-Action.jpg]]
+![[180-Domemaster-to-2to1-Equirectangular-Action.jpg]]
 
 **Equirectangular to Angular Fisheye**
 
@@ -400,7 +399,7 @@ The latest version of Photoshop CC (14.2.1+) has added support for 16-bit per ch
 
 Tip: If you see a visible seam artifact at the 0° mark after converting to/from an angular fisheye format you can try flattening the image before performing the conversions.
 
-![[Kartaverse Workflows.img/Equirectangular-to-Angular-Fisheye-Action.jpg]]
+![[Equirectangular-to-Angular-Fisheye-Action.jpg]]
 
 **2:1 Equirectangular to Angular Fisheye**
 
@@ -412,7 +411,7 @@ The latest version of Photoshop CC (14.2.1+) has added support for 16-bit per ch
 
 Tip: If you see a visible seam artifact at the 0° mark after converting to/from an angular fisheye format you can try flattening the image before performing the conversions.
 
-![[Kartaverse Workflows.img/Equirectangular-to-Angular-Fisheye-Action.jpg]]
+![[Equirectangular-to-Angular-Fisheye-Action.jpg]]
 
 **2:1 Equirectangular to 180° Domemaster**
 
@@ -420,7 +419,7 @@ This action converts a 360° x 180° spherical panorama into a 180° domemaster 
 
 This is done with the help of the Photoshop rectangular to polar coordinates filter.
 
-![[Kartaverse Workflows.img/2to1-Equirectangular-to-180-Domemaster-Action.jpg]]
+![[2to1-Equirectangular-to-180-Domemaster-Action.jpg]]
 
 **3x2 Cube Map to Cube Map**
 
@@ -436,7 +435,7 @@ The converted cubic map faces are named:
   top
   bottom
 
-![[Kartaverse Workflows.img/3x2-cubemap-action.jpg]]
+![[3x2-cubemap-action.jpg]]
 
 **Vertical Cross to Cube Map**
 
@@ -452,7 +451,7 @@ The converted cubic map faces are named:
   top
   bottom
 
-![[Kartaverse Workflows.img/vertical-cross-cubemap-action.jpg]]
+![[vertical-cross-cubemap-action.jpg]]
 
 **Horizontal Cross to Cube Map**
 
@@ -468,7 +467,7 @@ The converted cubic map faces are named:
   top
   bottom
 
-![[Kartaverse Workflows.img/horizontal-cross-cubemap-action.jpg]]
+![[horizontal-cross-cubemap-action.jpg]]
 
 **Vertical Tee to Cube Map**
 
@@ -484,7 +483,7 @@ The converted cubic map faces are named:
   top
   bottom
 
-![[Kartaverse Workflows.img/vertical-tee-cubemap-action.jpg]]
+![[vertical-tee-cubemap-action.jpg]]
 
 **Horizontal Tee to Cube Map**
 
@@ -500,7 +499,7 @@ The converted cubic map faces are named:
   top
   bottom
 
-![[Kartaverse Workflows.img/horizontal-tee-cubemap-action.jpg]]
+![[horizontal-tee-cubemap-action.jpg]]
 
 **Vertical Strip to Cube Map**
 
@@ -518,7 +517,7 @@ The converted cubic map faces are named:
   top
   bottom
 
-![[Kartaverse Workflows.img/vertical-strip-cubemap-action.jpg]]
+![[vertical-strip-cubemap-action.jpg]]
 
 **Horizontal Strip to Cube Map**
 
@@ -536,7 +535,7 @@ The converted cubic map faces are named:
   top
   bottom
 
-![[Kartaverse Workflows.img/horizontal-strip-cubemap-action.jpg]]
+![[horizontal-strip-cubemap-action.jpg]]
 
 **Mental Ray Horizontal Strip to Cube Map**
 
@@ -564,7 +563,7 @@ The output from this action is a layered Photoshop document with cubic faces nam
   top
   bottom
 
-![[Kartaverse Workflows.img/mr-horizontal-strip-to-cubemap-action.jpg]]
+![[mr-horizontal-strip-to-cubemap-action.jpg]]
 
 **Gear VR Mono to Cube Map**
 
@@ -582,7 +581,7 @@ The converted cubic map faces are named:
   top
   bottom
 
-![[Kartaverse Workflows.img/gearvr-horizontal-strip-to-cubemap-action.jpg]]
+![[gearvr-horizontal-strip-to-cubemap-action.jpg]]
 
 **Revit Vertical Strip to Cube Map**
 
@@ -640,7 +639,7 @@ The converted cubic map faces are named:
 
 This converts a cube map format image into the 3x2 panorama format.
 
-![[Kartaverse Workflows.img/cubemap-3x2-cube-action.jpg]]
+![[cubemap-3x2-cube-action.jpg]]
 
 **Cube Map to Vertical Cross**
 
@@ -654,7 +653,7 @@ The converted vertical cross faces are located in the format:
   blank   bottom                blank
   blank   back (rotated 180°)   blank
 
-![[Kartaverse Workflows.img/cubemap-vertical-cross-action.jpg]]
+![[cubemap-vertical-cross-action.jpg]]
 
 **Cube Map to Horizontal Cross**
 
@@ -667,7 +666,7 @@ The converted horizontal cross faces are located in the format:
   left    front    right   back
   blank   bottom   blank   blank
 
-![[Kartaverse Workflows.img/cubemap-horizontal-cross-action.jpg]]
+![[cubemap-horizontal-cross-action.jpg]]
 
 **Cube Map to Vertical Tee**
 
@@ -681,7 +680,7 @@ The converted vertical tee faces are located in the format:
   blank   back (rotated 180°)   blank
   blank   top                   blank
 
-![[Kartaverse Workflows.img/cubemap-vertical-tee-action.jpg]]
+![[cubemap-vertical-tee-action.jpg]]
 
 **Cube Map to Horizontal Tee**
 
@@ -694,7 +693,7 @@ The converted horizontal tee faces are located in the format:
   front   right    back    left
   blank   bottom   blank   blank
 
-![[Kartaverse Workflows.img/cubemap-horizontal-tee-action.jpg]]
+![[cubemap-horizontal-tee-action.jpg]]
 
 **Cube Map to Vertical Strip**
 
@@ -710,7 +709,7 @@ The vertical strip faces are located in the format:
   top
   bottom
 
-![[Kartaverse Workflows.img/cubemap-vertical-strip-action.jpg]]
+![[cubemap-vertical-strip-action.jpg]]
 
 **Cube Map to Horizontal Strip**
 
@@ -721,7 +720,7 @@ The horizontal strip faces are located in the format:
 | :----- \| :----- \| :----- \| :----- \| :----- \| :----- \|
 | front \| right \| back \| left \| top \| bottom \|
 
-![[Kartaverse Workflows.img/cubemap-horizontal-strip-action.jpg]]
+![[cubemap-horizontal-strip-action.jpg]]
 
 **Cube Map to Revit Horizontal Strip**
 
@@ -750,7 +749,7 @@ The Revit vertical strip faces are located in the format:
 
 This converts a cube map format image into a single row panorama format.
 
-This converts a layered cubic map Photoshop document into a mental ray mib_lookup_cube1 horizontal strip format panorama.
+This converts a layered cubic map Photoshop document into a mental ray `mib_lookup_cube1` horizontal strip format panorama.
 
 The input image is expected to be in a 1:1 aspect ratio. If the input image is a layered 1024x1024 pixel image the output will be a 6,144x1024 pixel image with a 6:1 aspect ratio.
 
@@ -764,7 +763,7 @@ The input for this action is a layered Photoshop document with cubic faces named
   top
   bottom
 
-The output image is in the mental ray mib_lookup_cube1 horizontal strip image layout with the following cubic map face order:
+The output image is in the mental ray `mib_lookup_cube1` horizontal strip image layout with the following cubic map face order:
 
   left
   --------------------------
@@ -774,7 +773,7 @@ The output image is in the mental ray mib_lookup_cube1 horizontal strip image la
   back
   front
 
-![[Kartaverse Workflows.img/cubemap-to-mr-horizontal-strip-action.jpg]]
+![[cubemap-to-mr-horizontal-strip-action.jpg]]
 
 **Cube Map to Gear VR Mono**
 
@@ -785,7 +784,7 @@ The converted horizontal strip faces are located in the format:
 | :----- \| :----- \| :----- \| :----- \| :----- \| :----- \|
 | Left \| Right \| Top (rotated 180) \| Bottom (rotated 180) \| Back \| Front \|
 
-![[Kartaverse Workflows.img/cubemap-to-gearvr-horizontal-strip-action.jpg]]
+![[cubemap-to-gearvr-horizontal-strip-action.jpg]]
 
 **Cube Map to New Cube Map**
 
@@ -797,9 +796,9 @@ This action will rotate the cube map panorama by 90 degrees on the X-axis. This 
 
 Tip: If you want to rotate a cross style, tee style, 3x2 cubic map, or strip style pano you need to convert them to the layered "cube map" format first using the actions in the Conversions Actions tab group.
 
-![[Kartaverse Workflows.img/cubemap-rotate-x90-action.jpg]]
+![[cubemap-rotate-x90-action.jpg]]
 
-![[Kartaverse Workflows.img/cubemap-rotate-x90-layers.jpg]]
+![[cubemap-rotate-x90-layers.jpg]]
 
 **Cube Map Rotate Y:+90 Degrees**
 
@@ -807,9 +806,9 @@ This action will rotate the cube map panorama by 90 degrees on the Y-axis. The h
 
 Tip: If you want to rotate a cross style, tee style, 3x2 cubic map, or strip style pano you need to convert them to the layered "cube map" format first using the actions in the Conversions Actions tab group.
 
-![[Kartaverse Workflows.img/cubemap-rotate-y90-action.jpg]]
+![[cubemap-rotate-y90-action.jpg]]
 
-![[Kartaverse Workflows.img/cubemap-rotate-y90-layers.jpg]]
+![[cubemap-rotate-y90-layers.jpg]]
 
 **Cube Map Rotate Z:+90 Degrees**
 
@@ -817,9 +816,9 @@ This action will rotate the cube map panorama by 90 degrees on the Z-axis. This 
 
 Tip: If you want to rotate a cross style, tee style, 3x2 cubic map, or strip style pano you need to convert them to the layered "cube map" format first using the actions in the Conversions Actions tab group.
 
-![[Kartaverse Workflows.img/cubemap-rotate-z90-action.jpg]]
+![[cubemap-rotate-z90-action.jpg]]
 
-![[Kartaverse Workflows.img/cubemap-rotate-z90-layers.jpg]]
+![[cubemap-rotate-z90-layers.jpg]]
 
 **Stereo Side by Side Extract**
 
@@ -856,7 +855,7 @@ This action will crop the Photoshop document smaller based upon the currently se
 
 This action will select all of the pixels on the current image layer.
 
-![[Kartaverse Workflows.img/Select-All-Action.jpg]]
+![[Select-All-Action.jpg]]
 
 **Save Selection**
 
@@ -880,13 +879,13 @@ You can preview the effects of the selection region in the dialogue or use the "
 
 This action creates a circular layer mask that hides the area inside a circular region in the center of the current layer.
 
-![[Kartaverse Workflows.img/Inside-Circular-50-Percent-Mask-Action.jpg]]
+![[Inside-Circular-50-Percent-Mask-Action.jpg]]
 
 **Outside Circular 50% Mask**
 
 This action creates a circular layer mask that hides the area outside a circular region in the center of the current layer.
 
-![[Kartaverse Workflows.img/Outside-Circular-50-Percent-Mask-Action.jpg]]
+![[Outside-Circular-50-Percent-Mask-Action.jpg]]
 
 **Fisheye Alpha Channel**
 
@@ -894,7 +893,7 @@ This action creates a full frame circular alpha channel.
 
 A common use is to create a single circular alpha channel and then use the "load selection" action to repetitively make circular domemaster shaped boundary selections.
 
-![[Kartaverse Workflows.img/Fisheye-Alpha-Channel-Action.jpg]]
+![[Fisheye-Alpha-Channel-Action.jpg]]
 
 **Fisheye Layer Mask**
 
@@ -902,7 +901,7 @@ This action creates a full frame circular layer mask on the currently select lay
 
 To use this action you must convert all flattened background layers into floating layers. You can do this using the "Background to Layer" action.
 
-![[Kartaverse Workflows.img/Fisheye-Layer-Mask-Action.jpg]]
+![[Fisheye-Layer-Mask-Action.jpg]]
 
 **Layer Mask From Selection**
 
@@ -910,9 +909,9 @@ This action applies a new raster layer mask based upon the current selection. To
 
 Layer masks are a quick and easy way to temporarily hide content on an image layer.
 
-![[Kartaverse Workflows.img/Layer-Mask-From-Selection-Action.jpg]]
+![[Layer-Mask-From-Selection-Action.jpg]]
 
-![[Kartaverse Workflows.img/Layer-Mask-From-Selection-Action2.jpg]]
+![[Layer-Mask-From-Selection-Action2.jpg]]
 
 After you create a new layer mask you can edit the layer mask by opening the layers tab and clicking on the mask icon to the right of the layer icon. When the layer mask is selected you can paint the mask using the brush tool.
 
@@ -934,27 +933,27 @@ You can invert a layer mask by selecting the layer mask thumbnail icon and click
 
 This action creates a new layer mask based upon inverting the current selection. To use this action you must remove any existing "raster" layer masks from the current layer.
 
-![[Kartaverse Workflows.img/Layer-Mask-From-Inverse-Selection-Action.jpg]]
+![[Layer-Mask-From-Inverse-Selection-Action.jpg]]
 
-![[Kartaverse Workflows.img/Layer-Mask-From-Inverse-Selection-Action2.jpg]]
+![[Layer-Mask-From-Inverse-Selection-Action2.jpg]]
 
 **Enable Layer Mask**
 
 This action will enable the layer mask on the current layer. This is useful for comparing the effects of transparency on the current layer.
 
-![[Kartaverse Workflows.img/Enable-Layer-Mask-Action.jpg]]
+![[Enable-Layer-Mask-Action.jpg]]
 
 **Disable Layer Mask**
 
 This action temporarily disables the layer mask on the current layer. This is useful for comparing the effects of transparency on the current layer.
 
-![[Kartaverse Workflows.img/Disable-Layer-Mask-Action.jpg]]
+![[Disable-Layer-Mask-Action.jpg]]
 
 **Delete Layer Mask**
 
 This action deletes the layer mask on the current layer.
 
-![[Kartaverse Workflows.img/Delete-Layer-Mask-Action.jpg]]
+![[Delete-Layer-Mask-Action.jpg]]
 
 **Black Matting BG**
 
@@ -1002,9 +1001,9 @@ This creates a horizontal cross or horizontal tee style 4x3 alignment guide layo
 
 This action creates a 4x4 style alignment guide layout. This grid is extremely useful for making accurate selections in the image when the "Snap to Guides" command is turned on. You can use the grid to make sure the nadir point in the fulldome image is perfect centered.
 
-![[Kartaverse Workflows.img/4-x-4-Grid-Guide-Action.jpg]]
+![[4-x-4-Grid-Guide-Action.jpg]]
 
-![[Kartaverse Workflows.img/4-x-4-Grid-Guide-Action2.jpg]]
+![[4-x-4-Grid-Guide-Action2.jpg]]
 
 **6x1 Guide Grid**
 
@@ -1022,13 +1021,13 @@ This creates a side by side stereo format horizontal strip style 6x1 alignment g
 
 This action will remove all of the guides from the current Photoshop document.
 
-![[Kartaverse Workflows.img/Clear-Guides-Action.jpg]]
+![[Clear-Guides-Action.jpg]]
 
 **Invert Colors**
 
 This action will invert the image colors of the currently selected layer. This action can be used on color images, layer masks, and alpha channels.
 
-![[Kartaverse Workflows.img/Invert-Colors-Action.jpg]]
+![[Invert-Colors-Action.jpg]]
 
 My favorite use of this filter is to invert a grayscale layer mask. This will reverse the visible and hidden parts of the layer mask.
 
@@ -1040,7 +1039,7 @@ This action will convert a flattened image from the background layer mode into a
 
 The most common use for this action is to prepare an imported picture like a flat JPEG .jpg or Targa .tga file for custom layer masks.
 
-![[Kartaverse Workflows.img/Background-to-Layer-Action.jpg]]
+![[Background-to-Layer-Action.jpg]]
 
 **Merge Visible**
 

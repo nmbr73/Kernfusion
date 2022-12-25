@@ -83,17 +83,22 @@ for i, page in enumerate(pages):
         front_matter.append(f"title: {title}") # for MkDocs
         front_matter.append(f"alias: {title}") # for Obsidian
 
-    front_matter.append("tags: [export, export-scrivener, revise]")
+    front_matter.append("author: Andrew Hazelden")
 
-    front_matter.append(f"xself: '{name}'")
-    front_matter.append(f"xhead: '{pages[0]['name']}'")
-    front_matter.append(f"xtail: '{pages[-1]['name']}'")
+    front_matter.append("tags:")
+    front_matter.append("  - Kartaverse")
+    front_matter.append("  - Workflow")
+    front_matter.append("  - .scrivener-export")
 
-    if i>0:
-        front_matter.append(f"xprev: '{pages[i-1]['name']}'")
+    # front_matter.append(f"xself: '{name}'")
+    # front_matter.append(f"xhead: '{pages[0]['name']}'")
+    # front_matter.append(f"xtail: '{pages[-1]['name']}'")
 
-    if i+1<len(pages):
-        front_matter.append(f"xnext: '{pages[i+1]['name']}'")
+    # if i>0:
+    #     front_matter.append(f"xprev: '{pages[i-1]['name']}'")
+
+    # if i+1<len(pages):
+    #     front_matter.append(f"xnext: '{pages[i+1]['name']}'")
 
 
 

@@ -1,10 +1,9 @@
 ---
-tags: [export, export-scrivener, revise]
-xself: 'DEV Building an Effective nVP (Neural Virtual Production) Sound Stage'
-xhead: 'Kartaverse Workflows'
-xtail: 'KickAss ShaderZ for Fusion'
-xprev: 'DEV The Ultimate Guide to OpenUSD Pipeline Development'
-xnext: 'KickAss ShaderZ for Fusion'
+author: Andrew Hazelden
+tags:
+  - Kartaverse
+  - Workflow
+  - .scrivener-export
 ---
 
 **Kartaverse Workflows \| Building an Effective nVP (Neural Virtual Production) Sound Stage**
@@ -47,7 +46,7 @@ Distributed NeRF Rendering for Live-Action Virtual Production Background Environ
 
 If you review the [OpenXR-VR Virtual Device Driver Google Docs file](https://docs.google.com/document/d/1RRnaui-QQ689v6xH30GK36Hhf1yCRGcBldFwapOakWo/edit?usp=sharing), you will see a "Demo Apps" section that has notes that cover a novel "distributed NeRF rendering" pipeline, and how that can be achieved in a modular fashion, (with relatively low design complexity), to power near-infinite LED video wall size, for an nVP stage setup that supports an arbitrary geometric screen surface shape.
 
-![[Kartaverse Workflows.img/image3__fix9.png]]
+![[image3__fix9.png]]
 
 This approach empowers the construction of highly-scalable virtual production workflows that use NeRF techniques on large-scale [LED display panel based cylindrical VP](https://en.wikipedia.org/wiki/On-set_virtual_production) [sound stages](https://en.wikipedia.org/wiki/Sound_stage).
 
@@ -57,12 +56,12 @@ The key aspect is that the individual NeRF "worker nodes'' are used as multi-vie
 
 One worker node is configured to direct-drive high-resolution 24Hz - 120 Hz output. The generated frame-buffer data is routed via an [NewTek NDI](https://www.aja.com/products/bridge-ndi-3g) IP video stream or a [fibre-encoded SDI](https://www.blackmagicdesign.com/products/blackmagicfiberconverters) cable and either an [ATEM switcher](https://www.blackmagicdesign.com/products) or [SmartVideo Hub](https://www.blackmagicdesign.com/products/smartvideohub) connection to either individual [LED display](https://www.roevisual.com/uploads/files/Product%20File/Ruby/ruby-brochure-1.5f1.9b-aug-10-2022.pdf) panel's [LED video processor](https://www.bromptontech.com/product/s8/) unit.
 
-  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-        ![[Kartaverse Workflows.img/image5__fix10.png]]AJA NDI to SDI Encoder         ![[Kartaverse Workflows.img/image4__fix10.png]]BMD Smart Video Hub SDI Video Routing
-  ---------------------------------------------------------------------------------- --------------------------------------------------------------------------------------
-   ![[Kartaverse Workflows.img/image1__fix13.png]]Brompton Tessera S8 LED Processor           ![[Kartaverse Workflows.img/image2__fix10.png]]Roe Visual LED panel
+  -------------------------------------------------------------------------------------------------------------------------------
+        ![[img/image5__fix10.png]]AJA NDI to SDI Encoder         ![[img/image4__fix10.png]]BMD Smart Video Hub SDI Video Routing
+  ------------------------------------------------------------- -----------------------------------------------------------------
+   ![[image1__fix13.png]]Brompton Tessera S8 LED Processor           ![[image2__fix10.png]]Roe Visual LED panel
 
-  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  -------------------------------------------------------------------------------------------------------------------------------
 
 I feel this NeRF distributed rendering workflow best mirrors the concepts that Disguise, [Unreal + nDisplay](https://www.unrealengine.com/en-US/tech-blog/explore-ndisplay-technology-limitless-scaling-of-real-time-content), [Assimilate LiveFX](https://www.assimilateinc.com/products/livefx/), [Notch](https://www.notch.one), and [TouchDesigner](https://derivative.ca/download) [TouchEngine](https://derivative.ca/UserGuide/TouchEngine) all support for [OpenGL](https://en.wikipedia.org/wiki/OpenGL)/[DirectX](https://en.wikipedia.org/wiki/DirectX) rendered real-time "Machinima" content today.
 

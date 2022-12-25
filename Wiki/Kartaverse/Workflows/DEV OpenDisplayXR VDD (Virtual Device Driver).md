@@ -1,10 +1,9 @@
 ---
-tags: [export, export-scrivener, revise]
-xself: 'DEV OpenDisplayXR VDD (Virtual Device Driver)'
-xhead: 'Kartaverse Workflows'
-xtail: 'KickAss ShaderZ for Fusion'
-xprev: 'Domemaster Photoshop Actions Pack'
-xnext: 'DEV The Ultimate Guide to OpenUSD Pipeline Development'
+author: Andrew Hazelden
+tags:
+  - Kartaverse
+  - Workflow
+  - .scrivener-export
 ---
 
 **OpenDisplayXR VDD (Virtual Device Driver)**
@@ -208,11 +207,11 @@ The following screenshot shows Blackmagic Design's [Fusion Studio](https://www.b
 
 Blackmagic Design's [DaVinci Resolve Studio](https://www.blackmagicdesign.com/products/davinciresolve/) video editing and color correction software uses the same style of HMD connectivity settings as are present in the Fusion page.
 
-![[Kartaverse Workflows.img/image3__fix6.png]]![[Kartaverse Workflows.img/image5__fix6.png]]
+![[image3__fix6.png]]![[image5__fix6.png]]
 
 Node Based Workflows
 
-![[Kartaverse Workflows.img/image1__fix9.png]]
+![[image1__fix9.png]]
 
 This Blackmagic Design DaVinci Resolve v18.1 Fusion page node graph shows an initial proof-of-concept "OpenDisplayXR VDD" workflow. The comp imports Kartaverse Z360 (Color + depth) equirectangular image projection media as a Fusion 3D system processed content via the Renderer3D node. The WIP logic for the OpenDisplayXR VDD node was implemented via Vonk Data Nodes, and a custom Fuse that is capable of rendering DCTL fragment shaders, and returns the output to a C++ bridge shared library implemented with LuaJIT's FFI feature.
 
@@ -230,7 +229,7 @@ This unique, SynthEyes powered, multi-view camera tracking and neural rendering 
 
 SynthEyes already has an efficient UI that provides access to manual and supervised trackers, fine-grained editing of camera paths via spline editing controls, and the ability to intuitively control the scene origin, scale, and world Up-axis coordinate system.
 
-![[Kartaverse Workflows.img/image6__fix3.png]]
+![[image6__fix3.png]]
 
 SynthEyes is able to export a non-NeRF based output for use in all common DCC programs, as well as in [NLE packages like Resolve](https://www.youtube.com/watch?v=KIBeSmKekQ0).
 
@@ -253,7 +252,7 @@ The OpenDisplayXR SDK provided sizzle scripts are installed to:
 
 A C++ based [OFX plugin](http://openeffects.org) named "NeuralFoam Engine for Resolve" will be included with the finished OpenXR/OpenVR compatible Virtual Device Driver SDK.
 
-![[Kartaverse Workflows.img/image2__fix5.png]]
+![[image2__fix5.png]]
 
 The OpenFX node is a port of the [NVIDIA InstantNGP TestBed](https://docs.google.com/document/d/1vouz5gYpIw7bUBAGfAvPNcvNQoAfY_E7BhUJOGtV2cw/edit) executable with [OpenXR SDK support](https://github.com/KhronosGroup/OpenXR-SDK)included for direct 6DoF HMD connectivity.
 
@@ -313,4 +312,4 @@ A [JSON-based](https://en.wikipedia.org/wiki/JSON) configuration file is used to
 
 This is an early proof-of-concept JSON file to express the display device/input device centric syntax needed for a passive stereo 3D display that has three frame buffers: a left view, a centre view (monoscopic 2D), and a right eye view.
 
-![[Kartaverse Workflows.img/image4__fix5.png]]
+![[image4__fix5.png]]

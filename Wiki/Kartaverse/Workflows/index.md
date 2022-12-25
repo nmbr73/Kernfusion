@@ -1,18 +1,22 @@
 ---
-title: Kartaverse/Workflows
+title: Workflows
 aliases:
-- Kartaverse/Workflows
-- Kartaverse Workflows
-
+  - Workflows
+  - Kartaverse Workflows
 author: Andrew Hazelden
 tags:
-- Kartaverse
-- Workflow
+  - Kartaverse
+  - Workflow
+  - .scrivener-export
 ---
+
+> [!warning] This is an export from Scrivener that should be revised!
+>
+> In this folder you will find an export generated from a Scrivener source. Scrivener being an authoring software for writing book type content, the different files will come originally meant to be read in some linear order. Please help to re-organize and re-write them into separate articles, each working kind of independently from the others.
 
 ## Original Table of Contents
 
-- [[Kartaverse Workflows/index|Kartaverse Workflows]]
+- [[Kartaverse/Workflows/index|Kartaverse Workflows]]
 - [[Creating Volumetric NeRFs]]
 - [[Creating ST Maps]]
 - [[Render Fusion Comps in Houdini TOPs]]

@@ -1,10 +1,9 @@
 ---
-tags: [export, export-scrivener, revise]
-xself: 'DEV The Ultimate Guide to OpenUSD Pipeline Development'
-xhead: 'Kartaverse Workflows'
-xtail: 'KickAss ShaderZ for Fusion'
-xprev: 'DEV OpenDisplayXR VDD (Virtual Device Driver)'
-xnext: 'DEV Building an Effective nVP (Neural Virtual Production) Sound Stage'
+author: Andrew Hazelden
+tags:
+  - Kartaverse
+  - Workflow
+  - .scrivener-export
 ---
 
 The Ultimate Guide to OpenUSD Pipeline Development
@@ -25,7 +24,7 @@ Part 1 - Compiling your own OpenUSD Plugins
 
 Compiling USD from source is the first step a TD needs to start with on the long journey towards being able to use the Fusion SDK C++ files to try and create USDC (Binary Crate)/USDA (ASCII) centric USDMesh3D and USDExporter nodes that would run inside of Fusion v16.
 
-![[Kartaverse Workflows.img/filephp__fix4.png]]
+![[filephp__fix4.png]]
 
 #### It's USD Compile Time!
 
@@ -39,7 +38,7 @@ Step 1. It helps to have a full "Gnome Desktop" based group install present on t
 
 # YumGroupInstall.bsh
 
-**sudo** **yum** -y groupinstall "GNOME Desktop"
+    **sudo** **yum** -y groupinstall "GNOME Desktop" 
 
 **Note:** Compiling USD on a headless computer, and running with a CentOS minimal install can be frustrating to set up as it is initially missing a lot of libraries needed to compile a functioning copy of usdview.
 
@@ -49,9 +48,8 @@ Step 1. It helps to have a full "Gnome Desktop" based group install present on t
 
 # YumInstallPackages.bsh
 
-\# *YUM with devel files*
-
-**sudo** **yum install** -y alembic alembic-devel boost boost-devel boost-filesystem boost-system boost-thread **bzip2** bzip2-devel cmake curl glew glew-devel glfw glfw-devel hdf5 hdf5-devel jemalloc jemalloc-devel libpng libpng-devel libtiff libtiff-devel OpenColorIO OpenColorIO-devel OpenEXR OpenEXR-devel OpenImageIO OpenImageIO-devel PyOpenGL python-devel python-jinja2 python-pip qt-devel tbb tbb-devel **gcc** doxygen graphviz
+    # *YUM with devel files*
+    **sudo** **yum install** -y alembic alembic-devel boost boost-devel boost-filesystem boost-system boost-thread **bzip2** bzip2-devel cmake curl glew glew-devel glfw glfw-devel hdf5 hdf5-devel jemalloc jemalloc-devel libpng libpng-devel libtiff libtiff-devel OpenColorIO OpenColorIO-devel OpenEXR OpenEXR-devel OpenImageIO OpenImageIO-devel PyOpenGL python-devel python-jinja2 python-pip qt-devel tbb tbb-devel **gcc** doxygen graphviz
 
 #### Step 3. Upgrade your copy of Python PIP. Then use PIP to add PySide which is required by the PIXAR usdview program's UI.
 
@@ -59,11 +57,9 @@ Step 1. It helps to have a full "Gnome Desktop" based group install present on t
 
 # PIPupgrade.bsh
 
-\# *PIP*
-
-**sudo** pip **install** --upgrade pip
-
-**sudo** pip **install** pyside
+    # *PIP*
+    **sudo** pip **install** --upgrade pip
+    **sudo** pip **install** pyside
 
 #### Step 4. To help simplify the OpenUSD compiling process, let's define a set of environment variables that tell the compiler where to find the supporting libraries needed.
 
@@ -73,46 +69,79 @@ This BASH shell example assumes you also want to compile a build of the OpenUSD 
 
 # AddEnvVars.bsh
 
--   *Add these as temporary env vars* **{**
+-   *\# Add these as temporary env vars* **{**
 
-1.  ALEMBIC_INCLUDE_DIR=**/**usr**/**include
-2.  ALEMBIC_LIBRARIES=**/**usr**/**lib64**/**libAlembic.so
-3.  ALEMBIC_LIBRARY_DIR=**/**usr**/**lib64
-4.  BOOST_LIBRARYDIR=**/**usr**/**lib64
-5.  DOXYGEN_EXECUTABLE=**/**usr**/**bin**/**doxygen
-6.  DOT_EXECUTABLE=**/**usr**/**bin**/**dot
-7.  EMBREE_LIBRARY=**/**usr**/**lib64
-8.  EMBREE_INCLUDE_DIR=**/**usr**/**include
-9.  OIIO_INCLUDE_DIR=**/**usr**/**include
-10. OIIO_LIBRARIES=**/**usr**/**lib64**/**libOpenImageIO.so
-11. OPENEXR_Half_LIBRARY=**/**usr**/**lib64**/**libHalf.so
-12. OPENEXR_INCLUDE_DIR=**/**usr**/**include
-13. OPENEXR_LIB=**/**usr**/**lib**/**
-14. OPENEXR_LIBRARY_DIR=**/**usr**/**lib
-15. OPENSUBDIV_INCLUDE_DIR=**/**usr**/**include
-16. PXR_BUILD_ALEMBIC_PLUGIN=TRUE
-17. PXR_ENABLE_PTEX_SUPPORT=FALSE
-18. PXR_MALLOC_LIBRARY=**/**usr**/**lib64**/**libjemalloc.so
-19. TBB_ROOT_DIR=**/**usr**/**include**/**
-20. DEVKIT_LOCATION=\$HOME**/**devkitBase
-21. MAYA_LOCATION=**/**usr**/**autodesk**/**maya2019
-22. HOUDINI_ROOT=**/**opt**/**hfs17.5.229
-23. HOUDINI_BASE_DIR=**/**opt**/**hfs17.5.229
-24. HOUDINI_INCLUDE_DIRS=**/**opt**/**hfs17.5.229**/**toolkit**/**include
-25. HOUDINI_LIB_DIRS=**/**opt**/**hfs17.5.229**/**dsolib
-26. HOUDINI_VERSION=17.5.229
-27. KATANA_API_LOCATION=**/**opt**/**Katana3.2v1
-28. KATANA_API_INCLUDE_DIR=**/**opt**/**Katana3.2v1**/**plugin_apis**/**include
-29. KATANA_API_SOURCE_DIR=**/**opt**/**Katana3.2v1**/**plugin_apis**/**src
-30. *RENDERMAN_LOCATION=/opt/pixar/RenderManProServer-22.6*
-31. RENDERMAN_LOCATION=\$RMANTREE
-32. PXR_ENABLE_OSL_SUPPORT=FALSE **}**
+1.  **export** ALEMBIC_INCLUDE_DIR=**/**usr**/**include
+
+2.  **export** ALEMBIC_LIBRARIES=**/**usr**/**lib64**/**libAlembic.so
+
+3.  **export** ALEMBIC_LIBRARY_DIR=**/**usr**/**lib64
+
+4.  **export** BOOST_LIBRARYDIR=**/**usr**/**lib64
+
+5.  **export** DOXYGEN_EXECUTABLE=**/**usr**/**bin**/**doxygen
+
+6.  **export** DOT_EXECUTABLE=**/**usr**/**bin**/**dot
+
+7.  **export** EMBREE_LIBRARY=**/**usr**/**lib64
+
+8.  **export** EMBREE_INCLUDE_DIR=**/**usr**/**include
+
+9.  **export** OIIO_INCLUDE_DIR=**/**usr**/**include
+
+10. **export** OIIO_LIBRARIES=**/**usr**/**lib64**/**libOpenImageIO.so
+
+11. **export** OPENEXR_Half_LIBRARY=**/**usr**/**lib64**/**libHalf.so
+
+12. **export** OPENEXR_INCLUDE_DIR=**/**usr**/**include
+
+13. **export** OPENEXR_LIB=**/**usr**/**lib**/**
+
+14. **export** OPENEXR_LIBRARY_DIR=**/**usr**/**lib
+
+15. **export** OPENSUBDIV_INCLUDE_DIR=**/**usr**/**include
+
+16. **export** PXR_BUILD_ALEMBIC_PLUGIN=TRUE
+
+17. **export** PXR_ENABLE_PTEX_SUPPORT=FALSE
+
+18. **export** PXR_MALLOC_LIBRARY=**/**usr**/**lib64**/**libjemalloc.so
+
+19. **export** TBB_ROOT_DIR=**/**usr**/**include**/**
+
+20. **export** DEVKIT_LOCATION=$HOME**/**devkitBase
+
+21. **export** MAYA_LOCATION=**/**usr**/**autodesk**/**maya2019
+
+22. **export** HOUDINI_ROOT=**/**opt**/**hfs17.5.229
+
+23. **export** HOUDINI_BASE_DIR=**/**opt**/**hfs17.5.229
+
+24. **export** HOUDINI_INCLUDE_DIRS=**/**opt**/**hfs17.5.229**/**toolkit**/**include
+
+25. **export** HOUDINI_LIB_DIRS=**/**opt**/**hfs17.5.229**/**dsolib
+
+26. **export** HOUDINI_VERSION=17.5.229
+
+27. **export** KATANA_API_LOCATION=**/**opt**/**Katana3.2v1
+
+28. **export** KATANA_API_INCLUDE_DIR=**/**opt**/**Katana3.2v1**/**plugin_apis**/**include
+
+29. **export** KATANA_API_SOURCE_DIR=**/**opt**/**Katana3.2v1**/**plugin_apis**/**src
+
+30. *#export RENDERMAN_LOCATION=/opt/pixar/RenderManProServer-22.6*
+
+31. **export** RENDERMAN_LOCATION=$RMANTREE
+
+32. **export** PXR_ENABLE_OSL_SUPPORT=FALSE
+
+    **}**
 
 This snippet is handy if you want to print the active envrionment variables in your terminal session, and sort them alphabetically at the same time when you display the results:
 
 # ListEnvVars.bsh
 
-**env** **\|** **sort**
+    env | sort
 
 **Note:**We will leave the Houdini OpenUSD compiling process up to the makefiles that ship alongside of Houdini v17.5 or v18.
 
@@ -124,37 +153,23 @@ Below is a snippet of BASH terminal session output that documents what happens i
 
 # Houdini.env
 
-\# *USD for Houdini*
+    # *USD for Houdini*
+    HOUDINI_PATH=**/**opt**/**r_usd**/**third_party**/**houdini:**&**
+    HOUDINI_DSO_ERROR=1
 
-HOUDINI_PATH=**/**opt**/**r_usd**/**third_party**/**houdini:**&**
-
-HOUDINI_DSO_ERROR=1
-
-*#HOUDINI_DSO_PATH=@/plugin:/opt/r_usd/plugin:&*
-
-HOUDINI_DSO_PATH=**@/**plugin:**&**
-
-HOUDINI_SCRIPT_PATH=**@/**scripts:**/**opt**/**r_usd**/**lib:**&**
-
-HOUDINI_PYTHON_LIB=**/**usr**/**lib64**/**libpython2.7.so
-
- 
-
-**\[**vfx\*\*@*\*R01 \~**\]**\$ houdini
-
------------------------- 'houdini-bin' is dying
-
-------------------------------------------------------------------------
-
-houdini-bin crashed. FATAL ERROR: **\[**TF_DEBUG_ENVIRONMENT_SYMBOL**\]** multiple symbol definitions.  This is usually due to software misconfiguration.  Contact the build team **for** assistance. **(**duplicate 'TF_SCRIPT_MODULE_LOADER'**)**
-
-**in** \_Add at line 96 of **/**home**/**prisms**/**builder-new**/**WeeklyDevToolsHEAD**/**dev_tools**/**src**/**usd**/**usd-19.01**/**USD**/**pxr**/**base**/**lib**/**tf**/**debug.cpp
-
- 
-
-The stack can be found **in** R01:**/**var**/**tmp**/**st_houdini-bin.12529
-
-done.
+    *#HOUDINI_DSO_PATH=@/plugin:/opt/r_usd/plugin:&*
+    HOUDINI_DSO_PATH=**@/**plugin:**&**
+    HOUDINI_SCRIPT_PATH=**@/**scripts:**/**opt**/**r_usd**/**lib:**&**
+    HOUDINI_PYTHON_LIB=**/**usr**/**lib64**/**libpython2.7.so
+     
+    **[**vfx**@**R01 ~**]**$ houdini
+    ------------------------ 'houdini-bin' is dying 
+    ------------------------
+    houdini-bin crashed. FATAL ERROR: **[**TF_DEBUG_ENVIRONMENT_SYMBOL**]** multiple symbol definitions.  This is usually due to software misconfiguration.  Contact the build team **for** assistance. **(**duplicate 'TF_SCRIPT_MODULE_LOADER'**)**
+    **in** _Add at line 96 of **/**home**/**prisms**/**builder-new**/**WeeklyDevToolsHEAD**/**dev_tools**/**src**/**usd**/**usd-19.01**/**USD**/**pxr**/**base**/**lib**/**tf**/**debug.cpp
+     
+    The stack can be found **in** R01:**/**var**/**tmp**/**st_houdini-bin.12529
+    done.
 
  
 
@@ -166,13 +181,12 @@ done.
 
 You can download CMake from: <https://cmake.org/download/>
 
-After you install CMake v3.2.2+, you need to override the standard built-in version of CMake. There are several ways you could handle this. I was lazy and did a CMake local install in my home folder and then added CMake to my \$PATH environment variable via an edit to the $HOME/.bash\_profile/$HOME/.profile.
+After you install CMake v3.2.2+, you need to override the standard built-in version of CMake. There are several ways you could handle this. I was lazy and did a CMake local install in my home folder and then added CMake to my `$PATH` environment variable via an edit to the `$HOME/.bash_profile/$HOME/.profile`.
 
 # CMakePATH.bsh
 
-\# *Add CMake v3 to the \$PATH*
-
-**export** PATH=$HOME**/**cmake-3.15.3-Linux-x86\_64**/**bin:$PATH:$HOME**/**.local**/**bin:$HOME**/**bin
+    *# Add CMake v3 to the $PATH*
+    **export** PATH=$HOME**/**cmake-3.15.3-Linux-x86_64**/**bin:$PATH:$HOME**/**.local**/**bin:$HOME**/**bin
 
 #### Step 6. Once you have the right version of CMake present, you can then compile OSL.
 
@@ -182,17 +196,12 @@ Using OSL in your USDC and USDA files is exciting since you can see the results 
 
 # AddOSL.bsh
 
-\# *OSL for PRman in USDView*
-
-\# *OSL requires OpenEXR v2.0 but CentOS has OpenEXR v1.6.1 by default*
-
-**cd** \$HOME**/**
-
-**git clone** https:**//**github.com**/**imageworks**/**OpenShadingLanguage.git osl
-
-**cd** \$HOME**/**osl
-
-**make**
+    *# OSL for PRman in USDView*
+    # *OSL requires OpenEXR v2.0 but CentOS has OpenEXR v1.6.1 by default*
+    **cd** $HOME**/**
+    **git clone** https:**//**github.com**/**imageworks**/**OpenShadingLanguage.git osl
+    **cd** $HOME**/**osl
+    **make**
 
 #### Step 7. Clear out any of your old USD builds if you've done this process before, then re-create the build folder:
 
@@ -200,15 +209,12 @@ Using OSL in your USDC and USDA files is exciting since you can see the results 
 
 # ClearOldBuilds.bsh
 
-*\# Clear the old build*
+    # Clear the old build
+    **sudo** **rm** -rf **/**opt**/**r_usd**/**
 
-**sudo** **rm** -rf **/**opt**/**r_usd**/**
-
-\# *Create the output folder and make it writable during development*
-
-**sudo** **mkdir** -p **/**opt**/**r_usd**/**
-
-**sudo** **chmod** 777 **/**opt**/**r_usd**/**
+    # Create the output folder and make it writable during development
+    **sudo** **mkdir** -p **/**opt**/**r_usd**/**
+    **sudo** **chmod** 777 **/**opt**/**r_usd**/**
 
 #### Step 8. Run the PIXAR OpenUSD build script to create the exact deliverables you want:
 
@@ -216,47 +222,35 @@ Using OSL in your USDC and USDA files is exciting since you can see the results 
 
 RunBuildScript1.bsh
 
-\# *Run the USD build script*
-
-**cd** \$HOME**/**usd**/**build_scripts
-
- 
-
-\# *Create an initial USDView only build of OpenUSD (--prman enables RenderMan support)*
-
-python build_usd.py --no-tests --alembic --opencolorio --openimageio --python --usdview --prman **/**opt**/**r_usd**/**
+    *# Run the USD build script*
+    **cd** $HOME**/**usd**/**build_scripts
+     
+    # *Create an initial USDView only build of OpenUSD (--prman enables RenderMan support)*
+    python build_usd.py --no-tests --alembic --opencolorio --openimageio --python --usdview --prman **/**opt**/**r_usd**/**
 
 RunBuildScript2.bsh
 
-\# *Run the USD build script*
+    *# Run the USD build script*
+    **cd** $HOME**/**usd**/**build_scripts
 
-**cd** \$HOME**/**usd**/**build_scripts
-
-\# *Then create the Maya and Katana OpenUSD compiled plugins*
-
-python build_usd.py --no-tests --alembic --opencolorio --openimageio --python --maya --katana --usdview **/**opt**/**r_usd**/**
+    # *Then create the Maya and Katana OpenUSD compiled plugins*
+    python build_usd.py --no-tests --alembic --opencolorio --openimageio --python --maya --katana --usdview **/**opt**/**r_usd**/**
 
 RunBuildScript3.bsh
 
-\# *Run the USD build script*
-
-**cd** \$HOME**/**usd**/**build_scripts
-
- 
-
-\# *Optional create just the Katana OpenUSD compiled plugin:*
-
-python build_usd.py --katana --katana-api-location **/**opt**/**Katana3.2v1 **/**opt**/**r_usd**/**
+    *# Run the USD build script*
+    **cd** $HOME**/**usd**/**build_scripts
+     
+    # *Optional create just the Katana OpenUSD compiled plugin:*
+    python build_usd.py --katana --katana-api-location **/**opt**/**Katana3.2v1 **/**opt**/**r_usd**/**
 
 RunBuildScript4.bsh
 
-\# *Run the USD build script*
+    # Run the USD build script
+    **cd** $HOME**/**usd**/**build_scripts
 
-**cd** \$HOME**/**usd**/**build_scripts
-
-\# *Optional (but you don't want to do this yourself with the "raw" original makefiles found on the PIXAR OpenUSD Repo..) create the Houdini OpenUSD Compiled plugin*
-
-python build_usd.py --no-tests --alembic --opencolorio --openimageio --python --houdini --usdview **/**opt**/**r_usd**/**
+    # Optional (but you don't want to do this yourself with the "raw" original makefiles found on the PIXAR OpenUSD Repo..) create the Houdini OpenUSD Compiled plugin
+    python build_usd.py --no-tests --alembic --opencolorio --openimageio --python --houdini --usdview **/**opt**/**r_usd**/**
 
 Note: We are skipping the OpenUSD compile options for the following build_usd.py CLI (command-line) flag entries:
 
@@ -272,59 +266,61 @@ ExcludedBuildUSDFlags.bsh
 
 #### Step 9. If you plan to use your compiled copy of the OpenUSD plugins in a single-user artist/TD environment you could edit your \$HOME/.bash_profile to add entries like the example below.
 
-**Step 9.** If you plan to use your compiled copy of the OpenUSD plugins in a single-user artist/TD environment you could edit your \$HOME/.bash_profile to add entries like the example below.
+**Step 9.** If you plan to use your compiled copy of the OpenUSD plugins in a single-user artist/TD environment you could edit your `$HOME/.bash_profile` to add entries like the example below.
 
 An OpenUSD Centric .bash_profile Example
 
-![[Kartaverse Workflows.img/filephp__fix16.png]]
+![[filephp__fix16.png]]
 
 **.**bash_profile
 
--   *.bash_profile*  
--   *Get the aliases and functions*
+-   *\# .bash_profile*  
+-   *\# Get the aliases and functions*
 
-1.  **\[** -f \~**/**.bashrc **\]**; **then**
+1.  **if** **\[\*\* -f \~**/**.bashrc \*\*\]**; **then**
 
--   \~**/**.bashrc **fi**  
--   *User specific environment and startup programs*
+-           . \~**/**.bashrc **fi**  
 
-1.  PATH=$PATH:$HOME**/**.local**/**bin:\$HOME**/**bin  
+-   # *User specific environment and startup programs*
 
--   *RenderMan 22.6*
--   *export PATH="/opt/pixar/RenderManProServer-22.6/bin/:\$PATH"*
+1.  **export** PATH=$PATH:$HOME**/**.local**/**bin:\$HOME**/**bin  
 
-1.  RMANTREE="/opt/pixar/RenderManProServer-22.6/"
-2.  RMSTREE="/opt/pixar/RenderManForMaya-22.6/"
-3.  PIXAR_LICENSE_FILE=9010\*\*@*\*localhost
+-   # *RenderMan 22.6*
 
--   *RenderMan 22.6 for Katana 3.2*
+-   # *export PATH="/opt/pixar/RenderManProServer-22.6/bin/:\$PATH"*
 
-1.  DEFAULT_RENDERER=prman
-2.  KATANA_RESOURCES="/opt/pixar/RenderManForKatana-22.6-katana3.2/plugins/Resources/PRMan22/"
-3.  PATH="/opt/Katana3.2v1/:\$PATH"  
+1.  **export** RMANTREE="/opt/pixar/RenderManProServer-22.6/"
+2.  **export** RMSTREE="/opt/pixar/RenderManForMaya-22.6/"
+3.  **export** PIXAR_LICENSE_FILE=9010\*\*@*\*localhost
 
--   *USD*
+-   *\# RenderMan 22.6 for Katana 3.2*
 
-1.  PATH=\$PATH:**/**opt**/**r_usd**/**bin
-2.  PYTHONPATH=**/**opt**/**r_usd**/**lib**/**python
+1.  **export** DEFAULT_RENDERER=prman
+2.  **export** KATANA_RESOURCES="/opt/pixar/RenderManForKatana-22.6-katana3.2/plugins/Resources/PRMan22/"
+3.  **export** PATH="/opt/Katana3.2v1/:\$PATH"  
 
--   *USD for Katana*
+-   # *USD*
 
-1.  PYTHONPATH=\$PYTHONPATH:**/**opt**/**r_usd**/**lib**/**python
-2.  KATANA_RESOURCES=\$KATANA_RESOURCES:**/**opt**/**r_usd**/**third_party**/**katana**/**plugin
-3.  KATANA_POST_PYTHONPATH=\$KATANA_RESOURCES:**/**opt**/**r_usd**/**third_party**/**katana**/**lib
+1.  **export** PATH=\$PATH:**/**opt**/**r_usd**/**bin
+2.  **export** PYTHONPATH=**/**opt**/**r_usd**/**lib**/**python
 
--   *Houdini 17.5.229*
+-   # *USD for Katana*
 
-1.  */opt/hfs17.5*
-2.  *houdini_setup*
-3.  *\$HOME*
+1.  **export** PYTHONPATH=\$PYTHONPATH:**/**opt**/**r_usd**/**lib**/**python
+2.  **export** KATANA_RESOURCES=\$KATANA_RESOURCES:**/**opt**/**r_usd**/**third_party**/**katana**/**plugin
+3.  **export** KATANA_POST_PYTHONPATH=\$KATANA_RESOURCES:**/**opt**/**r_usd**/**third_party**/**katana**/**lib
+
+-   # *Houdini 17.5.229*
+
+1.  *#cd /opt/hfs17.5*
+2.  *#source houdini_setup*
+3.  *#cd \$HOME*
 
 If you are working in a multi-user environment you might want to consider switching over to a [REZ based configuration, build, and deployment system](https://github.com/nerdvegas/rez).
 
-And humorously, by random coincidence, REZ's official slogan is "Resolve it with rez" which seems in line with a WSL user's goal of eventually running OpenUSD inside of Resolve (and Fusion Standalone). ![[Kartaverse Workflows.img/icon_lol.png]]
+And humorously, by random coincidence, REZ's official slogan is "Resolve it with rez" which seems in line with a WSL user's goal of eventually running OpenUSD inside of Resolve (and Fusion Standalone). ![[icon_lol.png]]
 
-![[Kartaverse Workflows.img/filephp__fix17.png]]
+![[filephp__fix17.png]]
 
 #### Step 10. Next, you need to download the PIXAR "Kitchen_set" example USD scene.
 
@@ -332,45 +328,45 @@ And humorously, by random coincidence, REZ's official slogan is "Resolve it with
 
 PIXAR USD \> Assets \> Download Kitchen Set
 
-![[Kartaverse Workflows.img/filephp__fix7.png]]
+![[filephp__fix7.png]]
 
 After you expand the ZIP archive for the Kitchen_set.zip" example, you can then browse the very efficiently nested hierarchy of USD composed models:
 
 Exploring the Kitchen_set Example Assets
 
-![[Kartaverse Workflows.img/filephp__fix8.png]]
+![[filephp__fix8.png]]
 
 The USD scene is composed using the "Kitchen_set.usd" file.
 
-![[Kartaverse Workflows.img/filephp__fix9.png]]
+![[filephp__fix9.png]]
 
-The "Kitchen_set.usd" file is a USDA (ASCII) file that can be viewed in a programmer's plain text editor. References to the placed OpenSubdiv based polygon model assets are visible in each of the "add references = @./assets/Blah/Blah.usd@" like sections in the USDA file.
+The "`Kitchen_set.usd`" file is a USDA (ASCII) file that can be viewed in a programmer's plain text editor. References to the placed OpenSubdiv based polygon model assets are visible in each of the "`add references = @./assets/Blah/Blah.usd@`" like sections in the USDA file.
 
-![[Kartaverse Workflows.img/filephp__fix10.png]]
+![[filephp__fix10.png]]
 
 If you open up the "assets" folder, then open up the "Cheerio" folder you can inspect one of the OpenSubdiv based models in usdview to get an idea of the individual elements that are used in the scene.
 
-[![[Kartaverse Workflows.img/filephp__fix11.png]]](https://www.steakunderwater.com/wesuckless/download/file.php?id=5530&mode=view)
+[![[filephp__fix11.png]]](https://www.steakunderwater.com/wesuckless/download/file.php?id=5530&mode=view)
 
-The "Cheerio.usd" file is a USDA (ASCII) document that can be viewed in a programer's plain text editor. The "Cheerio.usd" file lists two model variants named "CheerioA" and "CheerioB". These variants are alternated between randomly when the bowl on the table in the full kitchen scene is filled via USD instancing of the cheerio model.
+The "`Cheerio.usd`" file is a USDA (ASCII) document that can be viewed in a programer's plain text editor. The "`Cheerio.usd`" file lists two model variants named "CheerioA" and "CheerioB". These variants are alternated between randomly when the bowl on the table in the full kitchen scene is filled via USD instancing of the cheerio model.
 
-![[Kartaverse Workflows.img/filephp__fix12.png]]
+![[filephp__fix12.png]]
 
 After the Cheerio model is loaded in "usdview", you can enable the "View \> Shading Mode \> WireframeOnShaded" menu item based rendering method to see a preview of the finished model. It helps if you also enable the OpenSubdiv based realtime mesh smoothing feature using the "View \> Complexity \> Very High" menu item, too.
 
-![[Kartaverse Workflows.img/filephp__fix13.png]]
+![[filephp__fix13.png]]
 
 Finally, we can view the "Kitchen_set/Kitchen_set.usd" file in our freshly compiled copy of usdview:
 
 KitchenSetInUSDView.bsh
 
-usdview '\$HOME/Downloads/Kitchen_set/Kitchen_set.usd'
+    usdview '$HOME/Downloads/Kitchen_set/Kitchen_set.usd' 
 
 This results in usdview launching and the OpenSubdiv based example scene being loaded:
 
 Displaying the PIXAR USD "Kitchen_set.usd" example in usdview
 
-![[Kartaverse Workflows.img/filephp__fix14.png]]
+![[filephp__fix14.png]]
 
 #### Step 11. Setup the OpenUSD plugin in your Maya 2019 Maya.env file:
 
@@ -378,25 +374,20 @@ Displaying the PIXAR USD "Kitchen_set.usd" example in usdview
 
 Maya.env
 
-\# *Suppress Arnold not found error message*
+    *# Suppress Arnold not found error message*
+    MAYA_NO_WARNING_FOR_MISSING_DEFAULT_RENDERER=1
 
-MAYA_NO_WARNING_FOR_MISSING_DEFAULT_RENDERER=1
+    # *Set the CIP disable flag*
+    MAYA_DISABLE_CIP=1
 
-\# *Set the CIP disable flag*
+    # *USD for Maya*
+    MAYA_PLUG_IN_PATH=$MAYA_PLUG_IN_PATH:**/**opt**/**r_usd**/**third_party**/**maya**/**plugin
 
-MAYA_DISABLE_CIP=1
+    XBMLANGPATH=$XBMLANGPATH**/%**B:**/**opt**/**r_usd**/**third_party**/**maya**/**lib**/**usd**/**usdMaya**/**resources**/%**B
 
-\# *USD for Maya*
-
-MAYA_PLUG_IN_PATH=\$MAYA_PLUG_IN_PATH:**/**opt**/**r_usd**/**third_party**/**maya**/**plugin
-
-XBMLANGPATH=\$XBMLANGPATH**/%**B:**/**opt**/**r_usd**/**third_party**/**maya**/**lib**/**usd**/**usdMaya**/**resources**/%**B
-
-MAYA_SCRIPT_PATH=\$MAYA_SCRIPT_PATH:**/**opt**/**r_usd**/**third_party**/**maya**/**lib**/**usd**/**usdMaya**/**resources**/**:**/**opt**/**r_usd**/**third_party**/**maya**/**plugin**/**pxrUsdPreviewSurface**/**resources
-
- 
-
-PYTHONPATH=\$PYTHONPATH:**/**opt**/**r_usd**/**lib**/**python
+    MAYA_SCRIPT_PATH=$MAYA_SCRIPT_PATH:**/**opt**/**r_usd**/**third_party**/**maya**/**lib**/**usd**/**usdMaya**/**resources**/**:**/**opt**/**r_usd**/**third_party**/**maya**/**plugin**/**pxrUsdPreviewSurface**/**resources
+     
+    PYTHONPATH=$PYTHONPATH:**/**opt**/**r_usd**/**lib**/**python
 
 #### Step 12. Double-check your Katana environment variables to make sure they exist for your active session:
 
@@ -404,19 +395,19 @@ PYTHONPATH=\$PYTHONPATH:**/**opt**/**r_usd**/**lib**/**python
 
 **.**profile
 
-**export** PYTHONPATH=\$PYTHONPATH:**/**opt**/**r_usd**/**lib**/**python
+    **export** PYTHONPATH=$PYTHONPATH:**/**opt**/**r_usd**/**lib**/**python
 
-**export** KATANA_RESOURCES=\$KATANA_RESOURCES:**/**opt**/**r_usd**/**third_party**/**katana**/**plugin
+    **export** KATANA_RESOURCES=$KATANA_RESOURCES:**/**opt**/**r_usd**/**third_party**/**katana**/**plugin
 
-**export** KATANA_POST_PYTHONPATH=\$KATANA_RESOURCES:**/**opt**/**r_usd**/**third_party**/**katana**/**lib
+    **export** KATANA_POST_PYTHONPATH=$KATANA_RESOURCES:**/**opt**/**r_usd**/**third_party**/**katana**/**lib
 
 When you start using OpenUSD inside of RenderMan for Katana, you will typically interact with the PxrUsdIn node in the Katana Node graph as the primary way to load all models, textures, and lights.
 
 Here are two screenshots that show Katana running with the PIXAR "Kitchen_set" example scene:
 
-![[Kartaverse Workflows.img/filephp__fix5.png]]
+![[filephp__fix5.png]]
 
-![[Kartaverse Workflows.img/filephp__fix6.png]]
+![[filephp__fix6.png]]
 
 #### Step 13. If you need them, here are the GitHub repo/webpage links for the main "extra" libraries you can compile when building your own full-featured PIXAR OpenUSD plugins.
 
@@ -492,43 +483,28 @@ Find RPMs:
 
 OpenSubdiv.bsh
 
-*\# OpenSubdiv*
-
-**mkdir** -p \$HOME**/**OpenSubdiv**/**build
-
-**cd** \$HOME**/**
-
-**git clone** https:**//**github.com**/**PixarAnimationStudios**/**OpenSubdiv
-
-**cd** \$HOME**/**OpenSubdiv**/**build
-
-cmake -D NO_PTEX=1 -D NO_DOC=1 \\
-
--D NO_OMP=1 -D NO_TBB=1 -D NO_CUDA=1 -D NO_OPENCL=1 -D NO_CLEW=1 \\
-
--D GLEW_LOCATION="/usr/include/GL" \\
-
--D GLFW_LOCATION="/usr/include/GLFW" \\
-
-..
-
-**sudo** cmake --build . --target **install** -- -j 63
+    *# OpenSubdiv*
+    **mkdir** -p $HOME**/**OpenSubdiv**/**build
+    **cd** $HOME**/**
+    **git clone** https:**//**github.com**/**PixarAnimationStudios**/**OpenSubdiv
+    **cd** $HOME**/**OpenSubdiv**/**build
+    cmake -D NO_PTEX=1 -D NO_DOC=1 \
+          -D NO_OMP=1 -D NO_TBB=1 -D NO_CUDA=1 -D NO_OPENCL=1 -D NO_CLEW=1 \
+          -D GLEW_LOCATION="/usr/include/GL" \
+          -D GLFW_LOCATION="/usr/include/GLFW" \
+          ..
+    **sudo** cmake --build . --target **install** -- -j 63
 
 **Walt Disney Animation Studios** [**PTEX**](https://github.com/wdas/ptex/)
 
 PTEX.bsh
 
-*#PTEX*
-
-**git clone** https:**//**github.com**/**wdas**/**ptex**/**
-
-**cd** \$HOME**/**ptex
-
-\# *...*
-
-\# *...*
-
-\# *...*
+    *#PTEX*
+    **git clone** https:**//**github.com**/**wdas**/**ptex**/**
+    **cd** $HOME**/**ptex
+    # *...*
+    # *...*
+    # *...*
 
 **Note:** If you don't have X11 installed you will likely get errors from: Q_WS_X11 LibXml2 LibXslt
 
@@ -536,15 +512,11 @@ PTEX.bsh
 
 Embree.bsh
 
-\# *Embree*
-
-**cd** \$HOME
-
-**wget** https:**//**github.com**/**embree**/**embree**/**releases**/**download**/**v3.5.2**/**embree-3.5.2.x86_64.rpm.tar.gz
-
-**tar** xzf embree-3.5.2.x86_64.rpm.tar.gz
-
-**sudo** rpm --install embree3-**\***.rpm
+    # *Embree*
+    **cd** $HOME
+    **wget** https:**//**github.com**/**embree**/**embree**/**releases**/**download**/**v3.5.2**/**embree-3.5.2.x86_64.rpm.tar.gz
+    **tar** xzf embree-3.5.2.x86_64.rpm.tar.gz
+    **sudo** rpm --install embree3-*****.rpm
 
 #### Step 15. It's a good idea to have a clear idea of the available flags you can specify in the CLI (command-line) when running the PIXAR OpenUSD build_usd.py compiling process on your own.
 
@@ -552,37 +524,67 @@ Embree.bsh
 
 **Code:** \[Select all\] \[Expand/Collapse\] [\[Download\]](https://www.steakunderwater.com/wesuckless/codeboxplus/download/26970-22) (build_usd.bsh)
 
-1.  build_scripts**\]**\$ python build_usd.py
-2.  build_usd.py **\[**-h**\]**
-3.  
-4.  **\|** -q**\]**
-5.  JOBS**\]**
-6.  BUILD**\]**
-7.  **\[**BUILD_ARGS **\[**BUILD_ARGS ...**\]\]\]**
-8.  FORCE_BUILD**\]** **\[**--force-all**\]**
-9.  GENERATOR**\]**
-10. SRC**\]**
-11. INST**\]**
-12. **\|** --build-monolithic**\]** **\[**--debug**\]**
-13. **\|** --no-tests**\]**
-14. **\|** --no-docs**\]**
-15. **\|** --no-python**\]**
-16. **\|** --usd-imaging **\|** --no-imaging**\]**
-17. **\|** --no-ptex**\]**
-18. **\|** --no-usdview**\]**
-19. **\|** --no-embree**\]**
-20. EMBREE_LOCATION**\]**
-21. **\|** --no-openimageio**\]**
-22. **\|** --no-opencolorio**\]**
-23. **\|** --no-alembic**\]**
-24. **\|** --no-hdf5**\]**
-25. **\|** --no-materialx**\]**
-26. **\|** --no-maya**\]**
-27. MAYA_LOCATION**\]**
-28. **\|** --no-katana**\]**
-29. KATANA_API_LOCATION**\]**
-30. **\|** --no-houdini**\]**
-31. HOUDINI_LOCATION**\]** install_dir
+1.  **\[**vfx**@**R01 build_scripts**\]**\$ python build_usd.py
+
+2.  usage: build_usd.py **\[**-h**\]**
+
+3.                      **\[**-n**\]**
+
+4.                      **\[**-v **\|\*\* -q\*\*\]**
+
+5.                      **\[**-j JOBS**\]**
+
+6.                      **\[**--build BUILD**\]**
+
+7.                      **\[**--build-args **\[**BUILD_ARGS **\[**BUILD_ARGS ...**\]\]\]**
+
+8.                      **\[**--force FORCE_BUILD**\]**                     **\[**--force-all**\]**
+
+9.                      **\[**--generator GENERATOR**\]**
+
+10.                    **[**--src SRC**]**
+
+11.                     **\[**--inst INST**\]**
+
+12.                     **\[**--build-shared **\|\*\* --build-monolithic\*\*\]** **\[**--debug**\]**
+
+13.                     **\[**--tests **\|\*\* --no-tests\*\*\]**
+
+14.                     **\[**--docs **\|\*\* --no-docs\*\*\]**
+
+15.                     **\[**--python **\|\*\* --no-python\*\*\]**
+
+16.                     **\[**--imaging **\|\*\* --usd-imaging **\|** --no-imaging\*\*\]**
+
+17.                     **\[**--ptex **\|\*\* --no-ptex\*\*\]**
+
+18.                    **\[**--usdview **\|\*\* --no-usdview\*\*\]**
+
+19.                     **\[**--embree **\|\*\* --no-embree\*\*\]**
+
+20.                     **\[**--embree-location EMBREE_LOCATION**\]**
+
+21.                     **\[**--openimageio **\|\*\* --no-openimageio\*\*\]**
+
+22.                     **\[**--opencolorio **\|\*\* --no-opencolorio\*\*\]**
+
+23.                     **\[**--alembic **\|\*\* --no-alembic\*\*\]**
+
+24.                   **\[**--hdf5 **\|\*\* --no-hdf5\*\*\]**
+
+25.                   **\[**--materialx **\|\*\* --no-materialx\*\*\]**
+
+26.                   **\[**--maya **\|\*\* --no-maya\*\*\]**
+
+27.                     **\[**--maya-location MAYA_LOCATION**\]**
+
+28.                     **\[**--katana **\|\*\* --no-katana\*\*\]**
+
+29.                     **\[**--katana-api-location KATANA_API_LOCATION**\]**
+
+30.                   **\[**--houdini **\|\*\* --no-houdini\*\*\]**
+
+31.                   **\[**--houdini-location HOUDINI_LOCATION**\]**                   install_dir
 
 #### Step 16. After the build_usd.py script has been used to create usdview and the 3rd party OpenUSD plugins are compiled successfully, you will see output like this in the terminal:
 
@@ -590,91 +592,56 @@ Embree.bsh
 
 BuildResults.bsh
 
-**\[**vfx\*\*@*\*R01 build_scripts**\]**\$ python build_usd.py **/**opt**/**r_usd**/**
+    **[**vfx**@**R01 build_scripts**]**$ python build_usd.py **/**opt**/**r_usd**/**
+     
+    Building with settings:
+      USD **source** directory          **/**home**/**vfx**/**USD
+      USD **install** directory         **/**opt**/**r_usd**/**
+      3rd-party **source** directory    **/**opt**/**r_usd**/**src
+      3rd-party **install** directory   **/**opt**/**r_usd**/**USD
+      Build directory               **/**opt**/**r_usd**/**build
+      CMake generator               Default
+      Downloader                    curl
+     
+      Building                      Shared libraries
+        Config                      Release
+        Imaging                     On
+        Ptex support:             Off
+        OpenImageIO support:      Off 
+        OpenColorIO support:      Off 
+      UsdImaging                  On
+        usdview:                  On
+      Python support              On
+      Documentation               Off
+      Tests                       Off
+      Alembic Plugin              Off
+        HDF5 support:             Off
+      MaterialX Plugin            Off
+      Maya Plugin                 Off
+      Katana Plugin               Off
+      Houdini Plugin              Off
 
- 
+      Dependencies                boost, TBB, OpenEXR, GLEW, OpenSubdiv
+    STATUS: Installing boost...
+    STATUS: Installing TBB...
+    STATUS: Installing OpenEXR...
+    STATUS: Installing GLEW...
+    STATUS: Installing OpenSubdiv...
+    STATUS: Installing USD...
 
-Building with settings:
+    Success**!** To use USD, please ensure that you have:
 
-USD **source** directory          **/**home**/**vfx**/**USD
+    The following **in** your PYTHONPATH environment variable:
+    **/**opt**/**r_usd**/**lib**/**python
 
-USD **install** directory         **/**opt**/**r_usd**/**
-
-3rd-party **source** directory    **/**opt**/**r_usd**/**src
-
-3rd-party **install** directory   **/**opt**/**r_usd**/**USD
-
-Build directory               **/**opt**/**r_usd**/**build
-
-CMake generator               Default
-
-Downloader                    curl
-
- 
-
-Building                      Shared libraries
-
-Config                      Release
-
-Imaging                     On
-
-Ptex support:             Off
-
-OpenImageIO support:      Off
-
-OpenColorIO support:      Off
-
-UsdImaging                  On
-
-usdview:                  On
-
-Python support              On
-
-Documentation               Off
-
-Tests                       Off
-
-Alembic Plugin              Off
-
-HDF5 support:             Off
-
-MaterialX Plugin            Off
-
-Maya Plugin                 Off
-
-Katana Plugin               Off
-
-Houdini Plugin              Off
-
-Dependencies                boost, TBB, OpenEXR, GLEW, OpenSubdiv
-
-STATUS: Installing boost...
-
-STATUS: Installing TBB...
-
-STATUS: Installing OpenEXR...
-
-STATUS: Installing GLEW...
-
-STATUS: Installing OpenSubdiv...
-
-STATUS: Installing USD...
-
-Success**!** To use USD, please ensure that you have:
-
-The following **in** your PYTHONPATH environment variable:
-
-**/**opt**/**r_usd**/**lib**/**python
-
-The following **in** your PATH environment variable:
-
-**/**opt**/**r_usd**/**bin
+    The following **in** your PATH environment variable:
+    **/**opt**/**r_usd**/**bin
 
 #### Step 17. With OpenUSD installed on your system the /opt/r_usd/USD/bin/ folder will have the following USD tools you can run from the CLI (command-line):
 
-**Step 17**. With OpenUSD installed on your system the /opt/r_usd/USD/bin/ folder will have the following USD tools you can run from the CLI (command-line):
+**Step 17**. With OpenUSD installed on your system the `/opt/r_usd/USD/bin/` folder will have the following USD tools you can run from the CLI (command-line):
 
-![[Kartaverse Workflows.img/filephp__fix15.png]]
+![[filephp__fix15.png]]
 
 -   cjpeg
 -   djpeg
@@ -719,7 +686,7 @@ You will also have the following Alembic tools you can use from the CLI (command
 -   abcstitcher
 -   Abctree
 
-Stay tuned for part 2. More to follow. ![[Kartaverse Workflows.img/image1__fix3.png]]
+Stay tuned for part 2. More to follow. ![[image1__fix3.png]]
 
 ### Part 2 - Houdini 18
 
@@ -727,7 +694,7 @@ Houdini v18 Released
 
 Houdini v18 shipped today with support for Windows/Linux/macOS systems. Now anyone can [download Houdini Apprentice](https://www.sidefx.com/buy/) for free from SideFX and try out the Solaris integration.
 
-![[Kartaverse Workflows.img/filephp__fix18.png]]
+![[filephp__fix18.png]]
 
 #### Screenshots
 
@@ -735,11 +702,11 @@ Houdini v18 shipped today with support for Windows/Linux/macOS systems. Now anyo
 
 Here's a quick screenshot of the PIXAR "Kitchen_set.usd" scene loaded up using a stock Houdini "File" node from inside a Geo node.
 
-![[Kartaverse Workflows.img/filephp__fix19.png]]
+![[filephp__fix19.png]]
 
 And here's a quick view of the Houdini Solaris "Stage" environment:
 
-![[Kartaverse Workflows.img/filephp__fix20.png]]
+![[filephp__fix20.png]]
 
 #### Houdini Bundled USD CLI Tools
 
@@ -794,9 +761,9 @@ If you haven't loaded Houdini 18's bin folder into your %PATH% environment varia
 
     "C:\Program Files\Side Effects Software\Houdini 18.0.287\bin\hython2.7.exe" "C:\Program Files\Side Effects Software\Houdini 18.0.287\bin\usdview" Kitchen_set.usd
 
-![[Kartaverse Workflows.img/filephp__fix1.png]]
+![[filephp__fix1.png]]
 
-![[Kartaverse Workflows.img/filephp__fix2.png]]
+![[filephp__fix2.png]]
 
 ### Part 3 - Fusion Studio
 
@@ -804,7 +771,7 @@ Part 3 - Fusion Studio
 
 The KartaVR "[Export Point Cloud](https://www.steakunderwater.com/wesuckless/viewtopic.php?p=27571#p27571)" script now supports Fusion PointCloud3D node data export to XYZ ASCII (.xyz), PLY ASCII (.ply), Maya ASCII (.ma), and PIXAR USDA ASCII (.usda) formats from Fusion.
 
-![[Kartaverse Workflows.img/filephp.png]]
+![[filephp.png]]
 
 #### Translating Fusion 3D System Nodes into the USD ASCII Format
 
@@ -812,7 +779,7 @@ The KartaVR "[Export Point Cloud](https://www.steakunderwater.com/wesuckless/vie
 
 The current version of the "Export Point Cloud" script that is in Reactor's "KartaVR/Scripts" category in the "KartaVR Scripts \| Virtual Production" atom package can now do PointCloud3D node based exports to a lot of formats, and also a whole lot more, too.
 
-![[Kartaverse Workflows.img/banana.png]]
+![[banana.png]]
 
 I'm excited about building out a more complete set of KartaVR based camera/point cloud/volumetric video/mesh sequence tools to help production artists start to embracing what PIXAR's USD technology can do for allowing seamless data interchange of both 3D scene graph information and volumetric assets.
 
@@ -992,13 +959,13 @@ AnimatedCamera.comp
 
 # Fusion Export Stage
 
-![[Kartaverse Workflows.img/filephp__fix21.png]]
+![[filephp__fix21.png]]
 
 ##### Maya Import Stage
 
 # Maya Import Stage
 
-![[Kartaverse Workflows.img/filephp__fix3.png]]
+![[filephp__fix3.png]]
 
 ### Part 4 - CompX
 
