@@ -64,7 +64,7 @@ def got_a_resizedimage(m):
     source = m.group(1)
     size = m.group(2)
     #print(f"'{source}','{size}'")
-    return f'<img src="../{source}" width="{size}" />'
+    return f'<img src="/{source}" width="{size}" />'
 
 
 for filepath in basepath.rglob("*.md"):

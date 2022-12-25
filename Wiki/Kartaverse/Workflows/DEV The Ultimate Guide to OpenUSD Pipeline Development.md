@@ -6,267 +6,249 @@ tags:
   - .scrivener-export
 ---
 
-The Ultimate Guide to OpenUSD Pipeline Development
+> [!summary] Overview
+> This guide is a companion resource for the [[DEV OpenDisplayXR VDD (Virtual Device Driver)]] and Kartaverse "KartaVP" open-source immersive content production pipeline projects.
+>
+> This document explains how to approach Pixar OpenUSD asset-based best practices, and how to use those concepts to help drive large-scale nVP (Neural Virtual Production) workflows in an efficient and performant fashion.
 
-### Overview {#ref11}
+## Part 1 - Compiling your own OpenUSD Plugins
 
-Overview
-
-This guide is a companion resource for the [OpenDisplayXR VDD (Virtual Device Driver)](#dev-opendisplayxr-vdd-virtual-device-driver) and Kartaverse "KartaVP" open-source immersive content production pipeline projects.
-
-This document explains how to approach Pixar OpenUSD asset-based best practices, and how to use those concepts to help drive large-scale nVP (Neural Virtual Production) workflows in an efficient and performant fashion.
-
-### Part 1 - Compiling your own OpenUSD Plugins
-
-Part 1 - Compiling your own OpenUSD Plugins
-
-**Note:** For this post, CentOS 7.x and the YUM package manager are going to be used for all the BASH CLI (command-line) shell examples.
+> [!note]
+> For this post, CentOS 7.x and the YUM package manager are going to be used for all the BASH CLI (command-line) shell examples.
 
 Compiling USD from source is the first step a TD needs to start with on the long journey towards being able to use the Fusion SDK C++ files to try and create USDC (Binary Crate)/USDA (ASCII) centric USDMesh3D and USDExporter nodes that would run inside of Fusion v16.
 
 ![[filephp__fix4.png]]
 
-#### It's USD Compile Time!
 
-# It's USD Compile Time!
+### It's USD Compile Time!
 
-Before we do any compiling we need to clone a copy of the [PIXAR OpenUSD GitHub repo](https://github.com/PixarAnimationStudios/USD) and save it in our \$HOME/usd/ folder.
+Before we do any compiling we need to clone a copy of the [PIXAR OpenUSD GitHub repo](https://github.com/PixarAnimationStudios/USD) and save it in our `$HOME/usd/` folder.
 
-#### Step 1. It helps to have a full "Gnome Desktop" based group install present on the system used to compile OpenUSD if you want to get going faster.
+#### Step 1. "Gnome Desktop" based group install to compile OpenUSD
 
-Step 1. It helps to have a full "Gnome Desktop" based group install present on the system used to compile OpenUSD if you want to get going faster.
+It helps to have a full "Gnome Desktop" based group install present on the system used to compile OpenUSD if you want to get going faster.
 
-# YumGroupInstall.bsh
+**YumGroupInstall.bsh**
+```bash
+sudo yum -y groupinstall "GNOME Desktop"
+```
 
-    **sudo** **yum** -y groupinstall "GNOME Desktop" 
+> [!note]
+>  Compiling USD on a headless computer, and running with a CentOS minimal install can be frustrating to set up as it is initially missing a lot of libraries needed to compile a functioning copy of usdview.
 
-**Note:** Compiling USD on a headless computer, and running with a CentOS minimal install can be frustrating to set up as it is initially missing a lot of libraries needed to compile a functioning copy of usdview.
+#### Step 2. Add supporting libs to your RedHat/CentOS
 
-#### Step 2. Add the required supporting libraries to your Redhat/CentOS distro using Yum:
+Add the required supporting libraries to your Redhat/CentOS distro using [Yum](https://en.wikipedia.org/wiki/Yum_%28software%29):
 
-**Step 2.** Add the required supporting libraries to your Redhat/CentOS distro using [Yum](https://en.wikipedia.org/wiki/Yum_%28software%29):
+**YumInstallPackages.bsh**
 
-# YumInstallPackages.bsh
+```bash
+# YUM with devel files
+sudo yum install -y alembic alembic-devel boost boost-devel boost-filesystem boost-system boost-thread bzip2 bzip2-devel cmake curl glew glew-devel glfw glfw-devel hdf5 hdf5-devel jemalloc jemalloc-devel libpng libpng-devel libtiff libtiff-devel OpenColorIO OpenColorIO-devel OpenEXR OpenEXR-devel OpenImageIO OpenImageIO-devel PyOpenGL python-devel python-jinja2 python-pip qt-devel tbb tbb-devel gcc doxygen graphviz
+```
 
-    # *YUM with devel files*
-    **sudo** **yum install** -y alembic alembic-devel boost boost-devel boost-filesystem boost-system boost-thread **bzip2** bzip2-devel cmake curl glew glew-devel glfw glfw-devel hdf5 hdf5-devel jemalloc jemalloc-devel libpng libpng-devel libtiff libtiff-devel OpenColorIO OpenColorIO-devel OpenEXR OpenEXR-devel OpenImageIO OpenImageIO-devel PyOpenGL python-devel python-jinja2 python-pip qt-devel tbb tbb-devel **gcc** doxygen graphviz
 
-#### Step 3. Upgrade your copy of Python PIP. Then use PIP to add PySide which is required by the PIXAR usdview program's UI.
+#### Step 3. Use PIP to add PySide for the PIXAR usdview's UI
 
-**Step 3.** Upgrade your copy of [Python PIP](https://pypi.org/project/pip/). Then use PIP to add [PySide](https://pyside.github.io/docs/pyside/) which is required by the PIXAR usdview program's UI.
+Upgrade your copy of [Python PIP](https://pypi.org/project/pip/). Then use PIP to add [PySide](https://pyside.github.io/docs/pyside/) which is required by the PIXAR usdview program's UI.
 
-# PIPupgrade.bsh
+**PIPupgrade.bsh**
 
-    # *PIP*
-    **sudo** pip **install** --upgrade pip
-    **sudo** pip **install** pyside
+```bash
+# PIP
+sudo pip install --upgrade pip
+sudo pip install pyside
+```
 
-#### Step 4. To help simplify the OpenUSD compiling process, let's define a set of environment variables that tell the compiler where to find the supporting libraries needed.
+#### Step 4. Environment variables for the supporting libs
 
-**Step 4.** To help simplify the OpenUSD compiling process, let's define a set of environment variables that tell the compiler where to find the supporting libraries needed.
+To help simplify the OpenUSD compiling process, let's define a set of environment variables that tell the compiler where to find the supporting libraries needed.
 
 This BASH shell example assumes you also want to compile a build of the OpenUSD plugins for Maya 2019, Katana v3.2, and RenderMan 22 on your system, and that you have the shipping version of Houdini installed.
 
-# AddEnvVars.bsh
+**AddEnvVars.bsh**
 
--   *\# Add these as temporary env vars* **{**
-
-1.  **export** ALEMBIC_INCLUDE_DIR=**/**usr**/**include
-
-2.  **export** ALEMBIC_LIBRARIES=**/**usr**/**lib64**/**libAlembic.so
-
-3.  **export** ALEMBIC_LIBRARY_DIR=**/**usr**/**lib64
-
-4.  **export** BOOST_LIBRARYDIR=**/**usr**/**lib64
-
-5.  **export** DOXYGEN_EXECUTABLE=**/**usr**/**bin**/**doxygen
-
-6.  **export** DOT_EXECUTABLE=**/**usr**/**bin**/**dot
-
-7.  **export** EMBREE_LIBRARY=**/**usr**/**lib64
-
-8.  **export** EMBREE_INCLUDE_DIR=**/**usr**/**include
-
-9.  **export** OIIO_INCLUDE_DIR=**/**usr**/**include
-
-10. **export** OIIO_LIBRARIES=**/**usr**/**lib64**/**libOpenImageIO.so
-
-11. **export** OPENEXR_Half_LIBRARY=**/**usr**/**lib64**/**libHalf.so
-
-12. **export** OPENEXR_INCLUDE_DIR=**/**usr**/**include
-
-13. **export** OPENEXR_LIB=**/**usr**/**lib**/**
-
-14. **export** OPENEXR_LIBRARY_DIR=**/**usr**/**lib
-
-15. **export** OPENSUBDIV_INCLUDE_DIR=**/**usr**/**include
-
-16. **export** PXR_BUILD_ALEMBIC_PLUGIN=TRUE
-
-17. **export** PXR_ENABLE_PTEX_SUPPORT=FALSE
-
-18. **export** PXR_MALLOC_LIBRARY=**/**usr**/**lib64**/**libjemalloc.so
-
-19. **export** TBB_ROOT_DIR=**/**usr**/**include**/**
-
-20. **export** DEVKIT_LOCATION=$HOME**/**devkitBase
-
-21. **export** MAYA_LOCATION=**/**usr**/**autodesk**/**maya2019
-
-22. **export** HOUDINI_ROOT=**/**opt**/**hfs17.5.229
-
-23. **export** HOUDINI_BASE_DIR=**/**opt**/**hfs17.5.229
-
-24. **export** HOUDINI_INCLUDE_DIRS=**/**opt**/**hfs17.5.229**/**toolkit**/**include
-
-25. **export** HOUDINI_LIB_DIRS=**/**opt**/**hfs17.5.229**/**dsolib
-
-26. **export** HOUDINI_VERSION=17.5.229
-
-27. **export** KATANA_API_LOCATION=**/**opt**/**Katana3.2v1
-
-28. **export** KATANA_API_INCLUDE_DIR=**/**opt**/**Katana3.2v1**/**plugin_apis**/**include
-
-29. **export** KATANA_API_SOURCE_DIR=**/**opt**/**Katana3.2v1**/**plugin_apis**/**src
-
-30. *#export RENDERMAN_LOCATION=/opt/pixar/RenderManProServer-22.6*
-
-31. **export** RENDERMAN_LOCATION=$RMANTREE
-
-32. **export** PXR_ENABLE_OSL_SUPPORT=FALSE
-
-    **}**
+```bash
+# Add these as temporary env vars
+{
+	export ALEMBIC_INCLUDE_DIR=/usr/include
+	export ALEMBIC_LIBRARIES=/usr/lib64/libAlembic.so
+	export ALEMBIC_LIBRARY_DIR=/usr/lib64
+	export BOOST_LIBRARYDIR=/usr/lib64
+	export DOXYGEN_EXECUTABLE=/usr/bin/doxygen
+	export DOT_EXECUTABLE=/usr/bin/dot
+	export EMBREE_LIBRARY=/usr/lib64
+	export EMBREE_INCLUDE_DIR=/usr/include
+	export OIIO_INCLUDE_DIR=/usr/include
+	export OIIO_LIBRARIES=/usr/lib64/libOpenImageIO.so
+	export OPENEXR_Half_LIBRARY=/usr/lib64/libHalf.so
+	export OPENEXR_INCLUDE_DIR=/usr/include
+	export OPENEXR_LIB=/usr/lib/
+	export OPENEXR_LIBRARY_DIR=/usr/lib
+	export OPENSUBDIV_INCLUDE_DIR=/usr/include
+	export PXR_BUILD_ALEMBIC_PLUGIN=TRUE
+	export PXR_ENABLE_PTEX_SUPPORT=FALSE
+	export PXR_MALLOC_LIBRARY=/usr/lib64/libjemalloc.so
+	export TBB_ROOT_DIR=/usr/include/
+	export DEVKIT_LOCATION=$HOME/devkitBase
+	export MAYA_LOCATION=/usr/autodesk/maya2019
+	export HOUDINI_ROOT=/opt/hfs17.5.229
+	export HOUDINI_BASE_DIR=/opt/hfs17.5.229
+	export HOUDINI_INCLUDE_DIRS=/opt/hfs17.5.229/toolkit/include
+	export HOUDINI_LIB_DIRS=/opt/hfs17.5.229/dsolib
+	export HOUDINI_VERSION=17.5.229
+	export KATANA_API_LOCATION=/opt/Katana3.2v1
+	export KATANA_API_INCLUDE_DIR=/opt/Katana3.2v1/plugin_apis/include
+	export KATANA_API_SOURCE_DIR=/opt/Katana3.2v1/plugin_apis/src
+	#export RENDERMAN_LOCATION=/opt/pixar/RenderManProServer-22.6
+	export RENDERMAN_LOCATION=$RMANTREE
+	export PXR_ENABLE_OSL_SUPPORT=FALSE
+	}
+```
 
 This snippet is handy if you want to print the active envrionment variables in your terminal session, and sort them alphabetically at the same time when you display the results:
 
-# ListEnvVars.bsh
+**ListEnvVars.bsh**
+```bash
+env | sort
+```
 
-    env | sort
+**Note:** We will leave the Houdini OpenUSD compiling process up to the makefiles that ship alongside of Houdini v17.5 or v18.
 
-**Note:**We will leave the Houdini OpenUSD compiling process up to the makefiles that ship alongside of Houdini v17.5 or v18.
-
-This is due to "Hython" dependency hell that can occur when you naively intermix an OpenUSD library compile (or add to the \$PATH env variable) parts of Hython and your operating system's version of Python.
+This is due to "Hython" dependency hell that can occur when you naively intermix an OpenUSD library compile (or add to the `$PATH` env variable) parts of Hython and your operating system's version of Python.
 
 Below is a snippet of BASH terminal session output that documents what happens if you compiled and then added the PIXAR OpenUSD public repository's "raw" library files to your Houdini.env entry and started up Houdini.
 
 **Short Summary:** You do need to use the Hython modified/custom patched version of the OpenUSD makefiles that come with Houdini's installer to avoid making Houdini unhappy...
 
-# Houdini.env
+**Houdini.env**
 
-    # *USD for Houdini*
-    HOUDINI_PATH=**/**opt**/**r_usd**/**third_party**/**houdini:**&**
-    HOUDINI_DSO_ERROR=1
+```
+# USD for Houdini
+HOUDINI_PATH=/opt/r_usd/third_party/houdini:&
+HOUDINI_DSO_ERROR=1
 
-    *#HOUDINI_DSO_PATH=@/plugin:/opt/r_usd/plugin:&*
-    HOUDINI_DSO_PATH=**@/**plugin:**&**
-    HOUDINI_SCRIPT_PATH=**@/**scripts:**/**opt**/**r_usd**/**lib:**&**
-    HOUDINI_PYTHON_LIB=**/**usr**/**lib64**/**libpython2.7.so
-     
-    **[**vfx**@**R01 ~**]**$ houdini
-    ------------------------ 'houdini-bin' is dying 
-    ------------------------
-    houdini-bin crashed. FATAL ERROR: **[**TF_DEBUG_ENVIRONMENT_SYMBOL**]** multiple symbol definitions.  This is usually due to software misconfiguration.  Contact the build team **for** assistance. **(**duplicate 'TF_SCRIPT_MODULE_LOADER'**)**
-    **in** _Add at line 96 of **/**home**/**prisms**/**builder-new**/**WeeklyDevToolsHEAD**/**dev_tools**/**src**/**usd**/**usd-19.01**/**USD**/**pxr**/**base**/**lib**/**tf**/**debug.cpp
-     
-    The stack can be found **in** R01:**/**var**/**tmp**/**st_houdini-bin.12529
-    done.
-
+#HOUDINI_DSO_PATH=@/plugin:/opt/r_usd/plugin:&
+HOUDINI_DSO_PATH=@/plugin:&
+HOUDINI_SCRIPT_PATH=@/scripts:/opt/r_usd/lib:&
+HOUDINI_PYTHON_LIB=/usr/lib64/libpython2.7.so
  
+[vfx@R01 ~]$ houdini
+------------------------ 'houdini-bin' is dying 
+------------------------
+houdini-bin crashed. FATAL ERROR: [TF_DEBUG_ENVIRONMENT_SYMBOL] multiple symbol definitions.  This is usually due to software misconfiguration.  Contact the build team for assistance. (duplicate 'TF_SCRIPT_MODULE_LOADER')
+in _Add at line 96 of /home/prisms/builder-new/WeeklyDevToolsHEAD/dev_tools/src/usd/usd-19.01/USD/pxr/base/lib/tf/debug.cpp
+ 
+The stack can be found in R01:/var/tmp/st_houdini-bin.12529
+done.
 
-------------------------------------------------------------------------
+------------------------------------------------------------------
+```
 
-#### Step 5. If you want to enable OSL support you need to have CMake v3.2.2+. By default, my copy of CentOS had CMake v2.8.12.2.
 
-**Step 5.** If you want to enable OSL support you need to have CMake v3.2.2+. By default, my copy of CentOS had CMake v2.8.12.2.
+#### Install CMake v3.2.2+ to allow enabling OSL support
 
-You can download CMake from: <https://cmake.org/download/>
+If you want to enable OSL support you need to have CMake v3.2.2+. By default, my copy of CentOS had CMake v2.8.12.2.
+
+You can download CMake from: https://cmake.org/download/
 
 After you install CMake v3.2.2+, you need to override the standard built-in version of CMake. There are several ways you could handle this. I was lazy and did a CMake local install in my home folder and then added CMake to my `$PATH` environment variable via an edit to the `$HOME/.bash_profile/$HOME/.profile`.
 
-# CMakePATH.bsh
+**CMakePATH.bsh**
+```bash
+# Add CMake v3 to the $PATH
+export PATH=$HOME/cmake-3.15.3-Linux-x86_64/bin:$PATH:$HOME/.local/bin:$HOME/bin
+```
 
-    *# Add CMake v3 to the $PATH*
-    **export** PATH=$HOME**/**cmake-3.15.3-Linux-x86_64**/**bin:$PATH:$HOME**/**.local**/**bin:$HOME**/**bin
 
-#### Step 6. Once you have the right version of CMake present, you can then compile OSL.
+#### Step 6. Compile OSL.
 
-**Step 6.** Once you have the right version of CMake present, you can then compile OSL.
+Once you have the right version of CMake present, you can then compile OSL.
 
 Using OSL in your USDC and USDA files is exciting since you can see the results inside of usdview if you compiled in support for the PIXAR PRman renderer, too.
 
-# AddOSL.bsh
+**AddOSL.bsh**
+```bash
+# OSL for PRman in USDView
+# OSL requires OpenEXR v2.0 but CentOS has OpenEXR v1.6.1 by default
+cd $HOME/
+git clone https://github.com/imageworks/OpenShadingLanguage.git osl
+cd $HOME/osl
+make
+```
 
-    *# OSL for PRman in USDView*
-    # *OSL requires OpenEXR v2.0 but CentOS has OpenEXR v1.6.1 by default*
-    **cd** $HOME**/**
-    **git clone** https:**//**github.com**/**imageworks**/**OpenShadingLanguage.git osl
-    **cd** $HOME**/**osl
-    **make**
 
-#### Step 7. Clear out any of your old USD builds if you've done this process before, then re-create the build folder:
+#### Step 7. Clear out any old USD builds
 
-**Step 7.** Clear out any of your old USD builds if you've done this process before, then re-create the build folder:
+Clear out any of your old USD builds if you've done this process before, then re-create the build folder:
 
-# ClearOldBuilds.bsh
+**ClearOldBuilds.bsh**
+```bash
+# Clear the old build
+sudo rm -rf /opt/r_usd/
 
-    # Clear the old build
-    **sudo** **rm** -rf **/**opt**/**r_usd**/**
+# Create the output folder and make it writable during development
+sudo mkdir -p /opt/r_usd/
+sudo chmod 777 /opt/r_usd/
+```
 
-    # Create the output folder and make it writable during development
-    **sudo** **mkdir** -p **/**opt**/**r_usd**/**
-    **sudo** **chmod** 777 **/**opt**/**r_usd**/**
+#### Step 8. Run OpenUSD build script
 
-#### Step 8. Run the PIXAR OpenUSD build script to create the exact deliverables you want:
+Run the PIXAR OpenUSD build script to create the exact deliverables you want:
 
-**Step 8.** Run the PIXAR OpenUSD build script to create the exact deliverables you want:
+**RunBuildScript1.bsh**
+```bash
+# Run the USD build script
+cd $HOME/usd/build_scripts
+ 
+# Create an initial USDView only build of OpenUSD (--prman enables RenderMan support)
+python build_usd.py --no-tests --alembic --opencolorio --openimageio --python --usdview --prman /opt/r_usd/
+```
+   
+**RunBuildScript2.bsh**
+```bash
+# Run the USD build script
+cd $HOME/usd/build_scripts
 
-RunBuildScript1.bsh
+# Then create the Maya and Katana OpenUSD compiled plugins
+python build_usd.py --no-tests --alembic --opencolorio --openimageio --python --maya --katana --usdview /opt/r_usd/
+```
 
-    *# Run the USD build script*
-    **cd** $HOME**/**usd**/**build_scripts
-     
-    # *Create an initial USDView only build of OpenUSD (--prman enables RenderMan support)*
-    python build_usd.py --no-tests --alembic --opencolorio --openimageio --python --usdview --prman **/**opt**/**r_usd**/**
+**RunBuildScript3.bsh**
+```bash
+# Run the USD build script
+cd $HOME/usd/build_scripts
+ 
+# Optional create just the Katana OpenUSD compiled plugin:
+python build_usd.py --katana --katana-api-location /opt/Katana3.2v1 /opt/r_usd/
+```
 
-RunBuildScript2.bsh
+**RunBuildScript4.bsh**
+```bash
+# Run the USD build script
+cd $HOME/usd/build_scripts
 
-    *# Run the USD build script*
-    **cd** $HOME**/**usd**/**build_scripts
+# Optional (but you don't want to do this yourself with the "raw" original makefiles found on the PIXAR OpenUSD Repo..) create the Houdini OpenUSD Compiled plugin
+python build_usd.py --no-tests --alembic --opencolorio --openimageio --python --houdini --usdview /opt/r_usd/
+```
 
-    # *Then create the Maya and Katana OpenUSD compiled plugins*
-    python build_usd.py --no-tests --alembic --opencolorio --openimageio --python --maya --katana --usdview **/**opt**/**r_usd**/**
+Note: We are skipping the OpenUSD compile options for the following `build_usd.py` CLI (command-line) flag entries:
 
-RunBuildScript3.bsh
-
-    *# Run the USD build script*
-    **cd** $HOME**/**usd**/**build_scripts
-     
-    # *Optional create just the Katana OpenUSD compiled plugin:*
-    python build_usd.py --katana --katana-api-location **/**opt**/**Katana3.2v1 **/**opt**/**r_usd**/**
-
-RunBuildScript4.bsh
-
-    # Run the USD build script
-    **cd** $HOME**/**usd**/**build_scripts
-
-    # Optional (but you don't want to do this yourself with the "raw" original makefiles found on the PIXAR OpenUSD Repo..) create the Houdini OpenUSD Compiled plugin
-    python build_usd.py --no-tests --alembic --opencolorio --openimageio --python --houdini --usdview **/**opt**/**r_usd**/**
-
-Note: We are skipping the OpenUSD compile options for the following build_usd.py CLI (command-line) flag entries:
-
-ExcludedBuildUSDFlags.bsh
-
+**ExcludedBuildUSDFlags.bsh**
+```bash
 1.  --houdini
 2.  --docs
 3.  --embree
 4.  --ptex
 5.  --hdf5
+```
 
 (hdf5 is the legacy Alembic format that was superseded by Alembic Ogawa.)
 
 #### Step 9. If you plan to use your compiled copy of the OpenUSD plugins in a single-user artist/TD environment you could edit your \$HOME/.bash_profile to add entries like the example below.
 
-**Step 9.** If you plan to use your compiled copy of the OpenUSD plugins in a single-user artist/TD environment you could edit your `$HOME/.bash_profile` to add entries like the example below.
+If you plan to use your compiled copy of the OpenUSD plugins in a single-user artist/TD environment you could edit your `$HOME/.bash_profile` to add entries like the example below.
 
 An OpenUSD Centric .bash_profile Example
 
