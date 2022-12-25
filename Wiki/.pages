@@ -2,7 +2,7 @@ nav:
   - Home: index.md
   - About.md
   - Featured: Featured Articles.md
-  - Categories: mediawiki_categories.md
+  - Categories.md
   - External Links:
     - WSL Forum: https://www.steakunderwater.com/wesuckless/index.php
     - BMD Forum: https://forum.blackmagicdesign.com/index.php

@@ -1,10 +1,14 @@
-# Source: https://github.com/jobindjohn/obsidian-publish-mkdocs
+
+
+# See for example https://github.com/jobindjohn/obsidian-publish-mkdocs on how to
+# publish Obsidian notes via MkDocs. See https://www.codeinsideout.com/blog/site-setup/create-site-project/#extend-the-theme
+# for further information on customizations.
+
 site_name: Wiki of ConFusion
 site_url: http://confusion.nmbr73.net/
 repo_url: https://github.com/nmbr73/Kernfusion/
 repo_name: Kernfusion
-edit_uri: blob/main/Wiki/ # does not work with index.md files
-#edit_uri: edit/main/Wiki/ # works only if signed in and granted access - otherwise you are directed to a sign-in page
+edit_uri: blob/main/Wiki/ # 'edit_uri: edit/main/Wiki/' works only if signed in and granted access
 
 
 # nav:
@@ -42,6 +46,7 @@ edit_uri: blob/main/Wiki/ # does not work with index.md files
 
 theme:
   name: 'material'
+  # name: bootstrap386
 
   features:
     # - announce.dismiss
@@ -85,10 +90,6 @@ theme:
         icon: material/toggle-switch
         name: Switch to light mode
 
-  # icon:
-  #     tag:
-  #       category_workflow: fontawesome/regular/timeline-arrow
-
 
 # Extensions
 markdown_extensions:
@@ -109,8 +110,8 @@ markdown_extensions:
   - pymdownx.mark # to mark text using ==some text==
   - pymdownx.smartsymbols # to render -->, <--, =/=, (c), 1st, 1/4, etc.
   - pymdownx.inlinehilite # `#!py3 code`
-#  - pymdownx.details
-#  - pymdownx.magiclink
+# - pymdownx.details
+# - pymdownx.magiclink
   - pymdownx.saneheaders # to force header to have a space after the '#''
   - pymdownx.superfences:
       custom_fences:
@@ -125,51 +126,53 @@ markdown_extensions:
       permalink: true
 
 
-# https://github.com/Jackiexiao/mkdocs-roamlinks-plugin
-# https://github.com/lukasgeiter/mkdocs-awesome-pages-plugin
-
 plugins:
   - search
-  - tags:
-      tags_file: mediawiki_categories.md
-  - roamlinks # to allow wiki-markup links [[...]] as used in Obsidian
-  - search
+  - roamlinks # to allow wiki-markup links [[...]] as used in Obsidian; https://github.com/Jackiexiao/mkdocs-roamlinks-plugin
   - callouts
-  - awesome-pages: # allows .pages files in directories for navigation
+  - awesome-pages: # allows .pages files in directories for navigation; https://github.com/lukasgeiter/mkdocs-awesome-pages-plugin
       collapse_single_pages: true
+  - tags:
+      tags_file: Categories.md
 
 
 extra_javascript:
   - javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-#  - https://unpkg.com/mermaid/dist/mermaid.min.js
 
-#extra_css:
-#  - stylesheets/extra.css
+extra_css:
+  - assets_wiki/stylesheets/extra.css
 
 
 extra:
-  # tags:
-  #   Workflow: category_workflow
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/nmbr73/Kernfusion
+      name: Kernfusion on GitHub
     - icon: fontawesome/brands/discord
       link: https://discord.gg/Zb48E4z3Pg
+      name: Fusion Developers Discord
     - icon: fontawesome/brands/youtube
       link: https://www.youtube.com/c/nmbr73/videos
+      name: nmbr73 on YouTube (place some reasonable link in here)
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/nmbr73
+      name: nmbr73 on Twitter (place some reasonable link in here)
     - icon: fontawesome/brands/instagram
       link: https://www.instagram.com/nmbr73/
+      name: nmbr73 on IG (place some reasonable link in here)
     - icon: fontawesome/brands/reddit
       link: https://www.reddit.com/user/nmbr73
+      name: nmbr73 on Reddit (place some reasonable link in here)
     - icon: fontawesome/brands/twitch
       link: https://www.twitch.tv/nmbr73
+      name: nmbr73 on Twitch (place some reasonable link in here)
     - icon: fontawesome/brands/tumblr
       link: https://www.tumblr.com/nmbr73
+      name: nmbr73 on tumblr (place some reasonable link in here)
     - icon: fontawesome/brands/pinterest
       link: https://www.pinterest.de/nmbr73/
+      name: nmbr73 on Pinterest (place some reasonable link in here)
 
 

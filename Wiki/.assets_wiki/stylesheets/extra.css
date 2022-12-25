@@ -1,4 +1,13 @@
 
+.md-tag {
+  border-radius: 5px !important ;
+  font-size: x-small !important ;
+  font-weight: normal !important ;
+  line-height: 1.0 !important ;
+  padding: 0.5 0 0.5 0  !important ;
+}
+
+
 /* https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#custom-colors */
 
 /*
