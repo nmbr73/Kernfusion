@@ -42,7 +42,6 @@ sudo yum -y groupinstall "GNOME Desktop"
 Add the required supporting libraries to your Redhat/CentOS distro using [Yum](https://en.wikipedia.org/wiki/Yum_%28software%29):
 
 **YumInstallPackages.bsh**
-
 ```bash
 # YUM with devel files
 sudo yum install -y \
@@ -73,7 +72,6 @@ sudo yum install -y \
 Upgrade your copy of [Python PIP](https://pypi.org/project/pip/). Then use PIP to add [PySide](https://pyside.github.io/docs/pyside/) which is required by the PIXAR usdview program's UI.
 
 **PIPupgrade.bsh**
-
 ```bash
 # PIP
 sudo pip install --upgrade pip
@@ -87,7 +85,6 @@ To help simplify the OpenUSD compiling process, let's define a set of environmen
 This BASH shell example assumes you also want to compile a build of the OpenUSD plugins for Maya 2019, Katana v3.2, and RenderMan 22 on your system, and that you have the shipping version of Houdini installed.
 
 **AddEnvVars.bsh**
-
 ```bash
 # Add these as temporary env vars
 {
@@ -142,7 +139,6 @@ Below is a snippet of BASH terminal session output that documents what happens i
 **Short Summary:** You do need to use the Hython modified/custom patched version of the OpenUSD makefiles that come with Houdini's installer to avoid making Houdini unhappy...
 
 **Houdini.env**
-
 ```
 # USD for Houdini
 HOUDINI_PATH=/opt/r_usd/third_party/houdini:&
@@ -154,7 +150,7 @@ HOUDINI_SCRIPT_PATH=@/scripts:/opt/r_usd/lib:&
 HOUDINI_PYTHON_LIB=/usr/lib64/libpython2.7.so
  
 [vfx@R01 ~]$ houdini
------------------------- 'houdini-bin' is dying 
+------------------------ 'houdini-bin' is dying
 ------------------------
 houdini-bin crashed. FATAL ERROR: [TF_DEBUG_ENVIRONMENT_SYMBOL] multiple symbol definitions.  This is usually due to software misconfiguration.  Contact the build team for assistance. (duplicate 'TF_SCRIPT_MODULE_LOADER')
 in _Add at line 96 of /home/prisms/builder-new/WeeklyDevToolsHEAD/dev_tools/src/usd/usd-19.01/USD/pxr/base/lib/tf/debug.cpp
@@ -166,7 +162,7 @@ done.
 ```
 
 
-### Install CMake v3.2.2+ to allow enabling OSL support
+### Step 5. Install CMake v3.2.2+ to allow enabling OSL support
 
 If you want to enable OSL support you need to have CMake v3.2.2+. By default, my copy of CentOS had CMake v2.8.12.2.
 
@@ -233,7 +229,7 @@ python build_usd.py \
   --prman \
   /opt/r_usd/
 ```
-   
+
 **RunBuildScript2.bsh**
 ```bash
 # Run the USD build script
@@ -297,11 +293,12 @@ Note: We are skipping the OpenUSD compile options for the following `build_usd.p
 
 (hdf5 is the legacy Alembic format that was superseded by Alembic Ogawa.)
 
+
 ### Step 9. Use OpenUSD plugins in single environments
 
 If you plan to use your compiled copy of the OpenUSD plugins in a single-user artist/TD environment you could edit your `$HOME/.bash_profile` to add entries like the example below.
 
-#### An OpenUSD Centric .bash_profile Example
+An OpenUSD Centric .bash_profile Example:
 
 ![[filephp__fix16.png]]
 
@@ -387,7 +384,7 @@ Finally, we can view the "`Kitchen_set/Kitchen_set.usd`" file in our freshly com
 
 **KitchenSetInUSDView.bsh**
 ```bash
-usdview '$HOME/Downloads/Kitchen_set/Kitchen_set.usd' 
+usdview '$HOME/Downloads/Kitchen_set/Kitchen_set.usd'
 ```
 
 This results in usdview launching and the OpenSubdiv based example scene being loaded:
@@ -418,7 +415,7 @@ PYTHONPATH=$PYTHONPATH:/opt/r_usd/lib/python
 
 
 
-### Step 12. Double-check Katana environment variables 
+### Step 12. Double-check Katana environment variables
 
 Double-check your Katana environment variables to make sure they exist for your active session:
 
@@ -443,49 +440,51 @@ Here are two screenshots that show Katana running with the PIXAR "Kitchen_set" e
 
 If you need them, here are the GitHub repo/webpage links for the main "extra" libraries you can compile when building your own full-featured PIXAR OpenUSD plugins.
 
-OpenUSD:
+#### OpenUSD
 - https://graphics.pixar.com/usd/docs/index.html
 - https://github.com/PixarAnimationStudios/USD
 
-Houdini OpenUSD:
+#### Houdini OpenUSD
 - [Houdini-USD-Plugins](https://graphics.pixar.com/usd/docs/Houdini-USD-Plugins.html)
 
-Katana OpenUSD:
+#### Katana OpenUSD
 - http://openusd.org/docs/Katana-USD-Plugins.html
 - Local Resource: `/opt/Katana3.2v1/docs/dev_guide/`
 
-Maya DevKit:
+#### Maya DevKit
  - http://openusd.org/docs/Maya-USD-Plugins.html
 - [Where is the Maya 2016 devkit](https://knowledge.autodesk.com/support/maya/learn-explore/caas/sfdcarticles/sfdcarticles/Where-is-the-Maya-2016-devkit.html)
   **Note:** Install the Maya devkit in the `$HOME` folder then set the two env vars "`DEVKIT_LOCATION`" and "`MAYA_LOCATION`".
 
-OpenSubdiv:
+#### OpenSubdiv
 - https://github.com/PixarAnimationStudios/OpenSubdiv
 
-PTEX:
+#### PTEX
 - https://github.com/wdas/ptex/
 
-Alembic:
+#### Alembic
 - https://github.com/alembic/alembic
 
-jemalloc:
+#### jemalloc
 - https://github.com/jemalloc/jemalloc
 
-Flex:
+#### Flex
 - https://github.com/westes/flex
 
-Bison:
+#### Bison
 - https://www.gnu.org/software/bison/
 
-Jinja2:
+#### Jinja2
 - http://jinja.pocoo.org/docs/dev/
 
-Argparse:
+#### Argparse
 - https://docs.python.org/3/library/argparse.html
 
-Find RPMs:
+#### Find RPMs
 - https://pkgs.org/
 - https://www.rpmfind.net/linux/RPM/index.html
+
+
 
 ### Step 14. CMake examples to build the common libraries
 
@@ -493,7 +492,7 @@ Here are cmake CLI (command-line) BASH examples that can be used to build the co
 
 #### Pixar [OpenSubdiv](https://github.com/PixarAnimationStudios/OpenSubdiv)
 
-**OpenSubdiv.bsh** 
+**OpenSubdiv.bsh**
 ```bash
 # OpenSubdiv
 mkdir -p $HOME/OpenSubdiv/build
@@ -523,7 +522,7 @@ cd $HOME/ptex
 
 **Note:** If you don't have X11 installed you will likely get errors from: Q_WS_X11 LibXml2 LibXslt
 
-##### Intel [Embree](https://github.com/embree/embree/)
+#### Intel [Embree](https://github.com/embree/embree/)
 
 **Embree.bsh**
 ```bash
@@ -533,7 +532,8 @@ wget https://github.com/embree/embree/releases/download/v3.5.2/embree-3.5.2.x86_
 tar xzf embree-3.5.2.x86_64.rpm.tar.gz
 sudo rpm --install embree3-*.rpm
 ```
-    
+
+
 ### Step 15. Flags for the `build_usd.py` based compile
 
 It's a good idea to have a clear idea of the available flags you can specify in the CLI (command-line) when running the PIXAR OpenUSD build_usd.py compiling process on your own.
@@ -544,10 +544,10 @@ It's a good idea to have a clear idea of the available flags you can specify in 
 vfx@R01 build_scripts]$ python build_usd.py
 ```
 ```
-usage: build_usd.py [-h] 
-                    [-n] 
-                    [-v | -q] 
-                    [-j JOBS] 
+usage: build_usd.py [-h]
+                    [-n]
+                    [-v | -q]
+                    [-j JOBS]
                     [--build BUILD]
                     [--build-args [BUILD_ARGS [BUILD_ARGS ...]]]
                     [--force FORCE_BUILD]
@@ -566,11 +566,11 @@ usage: build_usd.py [-h]
                     [--embree-location EMBREE_LOCATION]
                     [--openimageio | --no-openimageio]
                     [--opencolorio | --no-opencolorio]
-                    [--alembic | --no-alembic] 
+                    [--alembic | --no-alembic]
                     [--hdf5 | --no-hdf5]
                     [--materialx | --no-materialx]
                     [--maya | --no-maya]
-                    [--maya-location MAYA_LOCATION] 
+                    [--maya-location MAYA_LOCATION]
                     [--katana | --no-katana]
                     [--katana-api-location KATANA_API_LOCATION]
                     [--houdini | --no-houdini]
@@ -601,8 +601,8 @@ Building with settings:
     Config                      Release
     Imaging                     On
     Ptex support:             Off
-    OpenImageIO support:      Off 
-    OpenColorIO support:      Off 
+    OpenImageIO support:      Off
+    OpenColorIO support:      Off
   UsdImaging                  On
     usdview:                  On
   Python support              On
