@@ -75,7 +75,7 @@ Note: The content that is listed in the Reactor window comes from the [Reactor G
 
 ### Where to go from here?
 
-There are currently (as of 2022-11-08) a total of 356 atom packages in the Reactor Package Manager. This means there is likely something interesting for just about any type of Resolve/Fusion user's tastes. You may start having a first look at some [[Essential Reactor Atom Packages]]
+There are currently (as of 2022-11-08) a total of 356 atom packages in the Reactor Package Manager. This means there is likely something interesting for just about any type of Resolve/Fusion user's tastes. You may start having a first look at some [[Reactor/Essential Reactor Atom Packages/index]]
 
 
 

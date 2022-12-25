@@ -1,3 +1,6 @@
+---
+title: Folder 0
+---
 
 ## Folder
 
