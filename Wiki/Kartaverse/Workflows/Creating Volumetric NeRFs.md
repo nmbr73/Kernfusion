@@ -71,9 +71,9 @@ To run NeRF based workflows on your system you will need the following tools:
 
 Lion Sculpture @ Sir Sandford Fleming Park, Nova Scotia aka. "The Dingle" Park
 
-[Nerf_instant_ngp_lion.zip](https://www.andrewhazelden.com/projects/kartaverse/downloads/nerf_instant_ngp_lion.zip) (118 MB / 36 images)
 
-![[Kartaverse/Workflows/img/image99__fix1.png]]
+![[Kartaverse/Workflows/img/image99__fix1.png]] > [Nerf_instant_ngp_lion.zip](https://www.andrewhazelden.com/projects/kartaverse/downloads/nerf_instant_ngp_lion.zip) (118 MB / 36 images)
+ 
 
 ## Build Instant NGP
 
