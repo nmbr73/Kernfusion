@@ -14,7 +14,9 @@ cp -rp Wiki docs
 rm -f  docs/Wiki/README.md
 rm -rf docs/.obsidian
 
+python Tools/mk_pages.py
 python Tools/obsidian_to_mkdocs.py
+
 
 mv docs/.assets_wiki docs/assets_wiki
 # mkdir -p docs/stylesheets/
