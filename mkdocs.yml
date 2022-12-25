@@ -93,16 +93,16 @@ theme:
 
 # Extensions
 markdown_extensions:
+  - nl2br # cause newlines to be treated as hard breaks; like StackOverflow and GitHub flavored Markdown do
+  - def_list # syntax: https://squidfunk.github.io/mkdocs-material/reference/lists/#using-definition-lists
+  - attr_list # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#attribute-lists
+  - md_in_html
   - footnotes
-  # - attr_list
-
   # https://facelessuser.github.io/pymdown-extensions/extensions/arithmatex/
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.tasklist:
       custom_checkbox: true
-  - def_list # syntax: https://squidfunk.github.io/mkdocs-material/reference/lists/#using-definition-lists
-  - nl2br # cause newlines to be treated as hard breaks; like StackOverflow and GitHub flavored Markdown do
   - admonition # to render Obsidian Callouts
   - pymdownx.tilde # subscript via ~
   - pymdownx.caret  # superscript via ^

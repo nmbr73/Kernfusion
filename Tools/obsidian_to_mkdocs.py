@@ -43,14 +43,14 @@ for filepath in basepath.rglob("*"):
 
 
 
+
+# ----
+
 # A hack for embedded YT videos - maybe I try a MkDocs+Obsidian PlugIn one day?!?
 # > [!youtube] Embed: [Costa Rica](https://www.youtube.com/watch?v=LXb3EKWsInQ)
 # https://youtu.be/
 
 pattern_video = re.compile(r'>\s+\[!youtube\]\s+([A-Za-z]+:{0,1}|)\s*\[([^\]]*)\]\(https://(www.youtube.com/watch\?v=|youtu.be/)([A-Za-z0-9\-]+)\)')
-
-
-pattern_resizedimage = re.compile(r'!\[\[([^\|\]]+)\|([1-9][0-9]*)\]\]')
 
 def got_a_video(m):
     # type = m.group(1).lower()
@@ -60,12 +60,28 @@ def got_a_video(m):
     title = re.sub(r'\\\|','|',title)
     return f'<div style="text-align:center; font-size:smaller; "><iframe width="560" height="315" src="https://www.youtube.com/embed/{video}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>{title}</iframe><br />{title}</div>'
 
+# ----
+
+pattern_resizedimage = re.compile(r'!\[\[([^\|\]]+)\|([1-9][0-9]*)\]\]')
+
 def got_a_resizedimage(m):
     source = m.group(1)
     size = m.group(2)
-    #print(f"'{source}','{size}'")
-    return f'<img src="/{source}" width="{size}" />'
+    # TODO: Check if source (really) has an absolute path!
+    return '![](/'+source+'){ width="'+size+'" }'
 
+# ----
+# HACK: Convert '![[src]] > caption' to an image with caption
+# https://squidfunk.github.io/mkdocs-material/reference/images/#image-alignment
+
+pattern_imagewithcaption = re.compile(r'!\[\[([^\]]+)\]\]\s*>\s*([^\n]+)\n')
+
+def got_an_imagewithcaption(m):
+    image = m.group(1)
+    caption = m.group(2)
+    return f"\n<figure markdown>![](/{image})<figcaption>{caption}</figcaption></figure>\n"
+
+# ----
 
 for filepath in basepath.rglob("*.md"):
 
@@ -78,6 +94,7 @@ for filepath in basepath.rglob("*.md"):
     modified = content
     modified = re.sub(pattern_video, got_a_video, modified)
     modified = re.sub(pattern_resizedimage, got_a_resizedimage, modified)
+    modified = re.sub(pattern_imagewithcaption, got_an_imagewithcaption, modified)
 
     if content == modified:
         continue
