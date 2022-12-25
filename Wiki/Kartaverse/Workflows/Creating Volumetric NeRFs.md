@@ -119,6 +119,9 @@ pip3 install opencv-python
 
 ![[Kartaverse/Workflows/img/image100__fix1.png]]
 
+> [!wiki-todo] Wrong Screenshot
+> This is not an opencv-python install, but the numpy screenshot. Double checke: It has already been in the (Scrvener) source file.
+
 Command Prompt Tip: If you have copied a line of text you want to run into your clipboard copy buffer, in Windows 10, you can paste that text directly into the Command Prompt window by right-clicking in that view.
 
 Press enter to run the recently pasted in shell command.

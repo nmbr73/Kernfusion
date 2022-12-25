@@ -920,7 +920,7 @@ def Xform "AnimatedCamera3D" (
 		113: (-14.99
 ```
 
-> [!todo]
+> [!wiki-todo] Cut off file!?!
 > Seems that (maybe due to all the document imports and exports) the file `Camera3D.usda` got cut off at the end!?!
 
 The script has the ability to translate AlembicMesh3D node-based elements from your Fusion comp into Maya ASCII (.ma) "Reference Editor" based alembic references, and USDA formatted Xform assembly references which instance externally stored Alembic meshes in the USD scene:

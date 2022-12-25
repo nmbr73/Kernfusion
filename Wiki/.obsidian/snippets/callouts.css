@@ -6,3 +6,8 @@
     --callout-color: 255, 0, 0;
     --callout-icon: lucide-youtube;
 }
+
+.callout[data-callout="wiki-todo"] {
+    --callout-color: 255, 0, 0;
+    --callout-icon: lucide-file-warning;
+}
