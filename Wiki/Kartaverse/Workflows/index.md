@@ -25,7 +25,7 @@ tags:
 - [[YouTube 360 to Equirectangular Conversions]]
 - [[Jupyter Notebook for Resolve_Fusion|Jupyter Notebook for Resolve/Fusion]]
 - [[Domemaster Photoshop Actions Pack]]
-- [[DEV OpenDisplayXR VDD (Virtual Device Driver)]]
+- [[OpenDisplayXR VDD|DEV OpenDisplayXR/VDD (Virtual Device Driver)]]
 - [[DEV The Ultimate Guide to OpenUSD Pipeline Development]]
 - [[DEV Building an Effective nVP (Neural Virtual Production) Sound Stage]]
 - [[KickAss ShaderZ for Fusion]]

@@ -1,22 +1,22 @@
 ---
+title: OpenDisplayXR/VDD
+aliases:
+  - OpenDisplayXR/VDD
+  - OpenDisplayXR/VDD (Virtual Device Driver)
 author: Andrew Hazelden
 tags:
   - Kartaverse
   - Workflow
+  - Project
   - .scrivener-export
 ---
 
-**OpenDisplayXR VDD (Virtual Device Driver)**
-
+**OpenDisplayXR/VDD (Virtual Device Driver)**
 *"A Simulated OpenVR/OpenXR-Based Virtual Hardware Device"*
+Document source on [docs.google.com](https://docs.google.com/document/d/1RRnaui-QQ689v6xH30GK36Hhf1yCRGcBldFwapOakWo/edit#heading=h.66d3ujtd03lq)
+Project workspace https://github.com/OpenDisplayXR
 
-First Draft
-
-Created: 2022-12-02 Last Updated 2022-12-08 12:10 PM (UTC -4)
-
-### Project Objectives
-
-Project Objectives
+## Project Objectives
 
 Create a working group to develop a cross-platform compatible, hybrid [OpenVR](https://en.wikipedia.org/wiki/OpenVR)/[OpenXR](https://en.m.wikipedia.org/wiki/OpenXR) API-based virtual display driver solution for arbitrary multi-view display, and video projection hardware.
 
@@ -32,9 +32,7 @@ A virtual device driver rendering approach allows existing [DCC](https://en.m.wi
 
 This user-programmable image generation bridge layer offers more flexibility, that enables use cases like the ability to drive in real-time [passive 3D stereo-monitor](https://www.schneider-digital.com/de/produkte/passive-3d-stereo-monitore/#highlights) display solutions, immersive [caves](https://en.wikipedia.org/wiki/Cave_automatic_virtual_environment), [fulldome theatres](https://www.cosm.com/what-we-do/screens/), [projection mapping](https://www.barco.com/en/solutions/Projection-mapping), [virtual production LED stages](https://www.darkmatters.one) with composting-created [live-action stitched 360VR cylindrical video](https://www.youtube.com/watch?v=IAy_WXqRMX0) and [2D/2.5D/3D digital matte paintings](https://vimeo.com/71148018).
 
-### Modular VDD Microservices
-
-Modular VDD Microservices
+## Modular VDD Microservices
 
 A foundational, key design aspect of the "OpenDisplayXR VDD (Virtual Device Driver)" SDK rollout, is the consistent use of a [microservices architecture](https://en.wikipedia.org/wiki/Microservices). The use of microservices is applied equally to internal core operators and external user-added microservice features. All microservice plugins get bare-metal direct access to the rendering hardware and VDD-API-provided functions.
 
@@ -46,9 +44,7 @@ Background: The VDD API design choice to rely on [node-based](https://en.wikiped
 
 A fuse is created as a plain-text-based [LuaJIT](https://en.wikipedia.org/wiki/LuaJIT) plugin. Data nodes are interconnected in a [DAG](https://en.wikipedia.org/wiki/Directed_acyclic_graph) (Directed Acyclic Graph) like nodal environment, through the use of a wide range of node-based input and output connection data types that can be converted (and [typecasted](https://en.wikipedia.org/wiki/Type_conversion) on the fly) as needed.
 
-### Nodal Operator Types
-
-Nodal Operator Types
+## Nodal Operator Types
 
 The node-based content that defines a specific VDD setup, is exported to disk via a DOM (Document Object Model) approach into either a plain-text encoded JSON file, or a CompX-flavored OpenUSD ASCII (.usda) file.
 
@@ -67,9 +63,7 @@ The core operator types used in a typical multi-view OpenXR-OpenVR driven VDD pr
 
 End users are free to implement support for new class types in their own microservice plugins. Through the use of a JIT architecture, VDD supports the creation and use of arbitrary "data node" based input and output data types on-the-fly.
 
-### Microservices Package Manager
-
-Microservices Package Manager
+## Microservices Package Manager
 
 OpenDisplayXR has a custom LuaJIT-based package manager that is under development.
 
@@ -83,9 +77,7 @@ The design concepts of the VDD package manager implementation are inspired by th
 
 Reactor uses a modular .atom formatted Lua table structure to define installation bundles that are sourced from any number of user-configured, public or private GitLab/GitHub repos, or local/NAS based disk storage location.
 
-### Build a 6DoF RT Previsualization Station
-
-Build a 6DoF RT Previsualization Station
+## Build a 6DoF RT Previsualization Station
 
 Previsualization supervisors will enjoy the way VDD assists workstation-based previsualization tasks, like time-consuming "[techviz](https://en.wikipedia.org/wiki/Previsualization)". The Viz operational steps are accelerated by an order of magnitude by OpenDisplayXR. This efficiency is achieved, in-part through the removal of disk-based intermediate video/image files, media transcoding, which has the added bonus of reducing file server I/O operations, and significantly cuts down on unnecessary network bandwidth consumption.
 
@@ -93,23 +85,17 @@ The VDD interface has a unique capability to dramatically simplify the process o
 
 For in-office design review tasks, it is very effective to let OpenDisplayXR manage the visual image generating pipeline. A VDD can send multi-view media in a transparent fashion to large format passive stereo 3D monitoring solutions, like a [3D PluraView monitor](https://www.schneider-digital.com/de/produkte/passive-3d-stereo-monitore/). This class of passive display hardware makes it possible for 3 co-workers to wear light-weight polarizer glasses, at the same time, to collaborate and provide direct feedback on creative design or engineering tasks.
 
-### Plain-Text JSON-Based Settings
-
-Plain-Text JSON-Based Settings
+## Plain-Text JSON-Based Settings
 
 A single .json-based configuration file automatically configures all relevant parameters required to define a new hardware display product DCC integration. This makes it possible to rapidly test and iterate on new hardware setups without requiring the end user/integrator to maintain a complex build toolchain.
 
-### User Input
-
-User Input
+## User Input
 
 Optionally, any of the connected [HID](https://en.wikipedia.org/wiki/USB_human_interface_device_class) (Human Interface Devices) could be activated in the virtual device driver preferences so they are passed through the virtual VR/XR bridge interface to the host DCC package. This makes it possible for the HID hardware to appear as an emulated [VR controller](https://www.meta.com/quest/accessories/quest-touch-pro-controllers-and-charging-dock/) style of input device.
 
 When the alternative input device is configured as a simulated VR controller, input remapping techniques can change the nature of the input data stream, to establish constraints and range of motion limits, or to perform [3D coordinate system-based transforms](https://en.wikipedia.org/wiki/Anamorphosis) for planar 2D motion-based input devices like [graphics tablets](https://www.wacom.com/en-us) or mice.
 
-### Output Driver
-
-Output Driver
+## Output Driver
 
 An extensible "output driver" based plugin system allows live-rendered framebuffer data to pass with ultra-low latency from the virtual device driver interface into a post-processing stack that supports external libraries, and fragment shaders.
 
@@ -119,9 +105,7 @@ When running at a reduced frame rate, deferred rendering of [Stable Diffusion 2.
 
 An "output driver" concept enables a wide range of customer-created solutions to be achieved such as; Applying [WarpMesh](http://paulbourke.net/dome/warpingfisheye/) techniques for iDome projection, using [RTSP](https://en.wikipedia.org/wiki/Real_Time_Streaming_Protocol)/[HLS streaming video](https://en.wikipedia.org/wiki/HTTP_Live_Streaming) encoders, passing media to [NDI-based](https://en.wikipedia.org/wiki/Network_Device_Interface) IP video streaming connections, working with a frame server solution such as [Syphon](https://syphon.info/) or [Spout](https://spout.zeal.co) FFGL that utilise shared video memory techniques for [VJing](https://en.m.wikipedia.org/wiki/VJing) applications.
 
-### Temporal Feedback Loop Buffer
-
-Temporal Feedback Loop Buffer
+## Temporal Feedback Loop Buffer
 
 Customizable in-memory visual feedback loops can be used inside the VDD output driver module. This is a wonderful feature if you need to create MVS compatible "onion-skinning" animation overlays, or to generate temporally delayed fadeable motion trail "visual echos" effects with a subtractive luminance decay. A feedback loop is also interesting when used with highly-stylized audio-reactive multi-pass image distortion effects used in immersive VJing.
 
@@ -133,27 +117,19 @@ A good starting point is to try the visual feedback loop feature out, with a [Sh
 
 This combination of ML and fragment shader effects will very often result in the creation of artistically unique evolving 4D pipe-dream-esque imagery.
 
-### Live 360VR Media Reframing
-
-Live 360VR Media Reframing
+## Live 360VR Media Reframing
 
 For in-context immersive media review tasks, such as [LED fulldome](https://en.m.wikipedia.org/wiki/MSG_Sphere_at_The_Venetian) show [QA checks](https://en.m.wikipedia.org/wiki/QA/QC), it is helpful to pass the raw multi-view media directly to the external process via shared memory, or with the use of pixel streaming to an external 360VR immersive media playback tool.
 
-### Virtual Environment Simulation
-
-Virtual Environment Simulation
+## Virtual Environment Simulation
 
 Complex "nested-visual simulation" workflows can be satisfied using the generated pixel-streaming framebuffer content as a 2D texture map that is reapplied to a mesh within a game-engine centric [virtual production LED stage](https://en.m.wikipedia.org/wiki/On-set_virtual_production) techviz toolset. The 3rd party previz/techviz tools would apply the generated pixel-streamed data on the fly to a textured "screen surface" that is part of a 1:1 3D scale model of a simulated [sound stage](https://en.m.wikipedia.org/wiki/Sound_stage)/ LED dome theatre environment.
 
-### Scripted Actions & Callback Events
-
-Scripted Actions & Callback Events
+## Scripted Actions & Callback Events
 
 [Lua scripting](https://luajit.org/luajit.html) could be used in the virtual device driver HID settings to configure and apply scripted actions or replay pre-recorded "input motion" clips that are passed through as simulated HID control input data with [absolute coordinates](https://en.wikipedia.org/wiki/Cartesian_coordinate_system) or relative coordinate system offsets. The scripted action system could be triggered by any of the mappable Aux (Auxiliary) input controls on HID devices, or via OSC ([Open Sound Control](https://en.wikipedia.org/wiki/Open_Sound_Control)) based protocol signals via tools like [TouchOSC](https://hexler.net/touchosc) or [MIDI](https://en.wikipedia.org/wiki/MIDI) hardware.
 
-### Initial R&D Team
-
-Initial R&D Team
+## Initial R&D Team
 
 Developers
 
@@ -197,9 +173,7 @@ Industry Partners
 -   [Josef J. Schneider](https://www.linkedin.com/company/schneider-digital-josef-j-schneider-e-k-/), ([Schneider Digital](https://www.schneider-digital.com/de/)), Germany, Display Hardware Vendor
 -   [Lutz Moehr](https://www.linkedin.com/in/lutz-moehr-63a41b7/), ([Schneider Digital](https://www.schneider-digital.com/de/) and [3D-CC](http://3dcc.eu/introduction.html) / DNS Consult), Germany, Consultant / Networker / Event organizer
 
-### Software Interface
-
-Software Interface
+## Software Interface
 
 The virtual device driver is bound to the external DCC package using the conventional OpenVR/OpenXR support in the host toolset.
 
@@ -215,13 +189,9 @@ Node Based Workflows
 
 This Blackmagic Design DaVinci Resolve v18.1 Fusion page node graph shows an initial proof-of-concept "OpenDisplayXR VDD" workflow. The comp imports Kartaverse Z360 (Color + depth) equirectangular image projection media as a Fusion 3D system processed content via the Renderer3D node. The WIP logic for the OpenDisplayXR VDD node was implemented via Vonk Data Nodes, and a custom Fuse that is capable of rendering DCTL fragment shaders, and returns the output to a C++ bridge shared library implemented with LuaJIT's FFI feature.
 
-### Demo Apps
+## Demo Apps
 
-**Demo Apps**
-
-#### NeuralFoam for SynthEyes Pro
-
-# NeuralFoam for SynthEyes Pro
+### NeuralFoam for SynthEyes Pro
 
 Andersson Technologies production-proven "[SynthEyes Pro](https://www.ssontech.com/synsumm.html)" matchmoving software is now able to export directly to a NeuralFoam flavoured [OpenUSD ASCII](https://graphics.pixar.com/usd/release/usdfaq.html#so-what-file-formats-does-usd-support) (.usda) format for faster, more precise, and reliable, NeRF camera 4x4 transform matrix alignment.
 
@@ -242,13 +212,16 @@ Having both NeRF and conventional match moving/photogrammetry export paths in Sy
 A pre-existing [SynthEyes + Resolve based workflow tutorial](https://www.youtube.com/watch?v=KIBeSmKekQ0), by one of the VDD developers, is available. The video shows how quickly an aerial scene shot on a drone can be camera tracked, and then loaded directly as a node-based 3D composite in the Fusion page.
 
 The OpenDisplayXR SDK provided sizzle scripts are installed to:
+=== "macOS"
+```bash
+/Applications/SynthEyes/scripts/Virtual Production/neuralfoam.szl
+```
+=== "Windows"
+```powershell
+C:\Program Files\Andersson Technologies LLC\SynthEyes\scripts\Virtual Production\neuralfoam.szl
+```
 
-    /Applications/SynthEyes/scripts/Virtual Production/neuralfoam.szl (macOS)
-    C:\Program Files\Andersson Technologies LLC\SynthEyes\scripts\Virtual Production\neuralfoam.szl (Win)
-
-#### NeuralFoam OFX Plugin
-
-# NeuralFoam OFX Plugin
+### NeuralFoam OFX Plugin
 
 A C++ based [OFX plugin](http://openeffects.org) named "NeuralFoam Engine for Resolve" will be included with the finished OpenXR/OpenVR compatible Virtual Device Driver SDK.
 
@@ -258,9 +231,7 @@ The OpenFX node is a port of the [NVIDIA InstantNGP TestBed](https://docs.google
 
 Check out the guide "[Kartaverse Workflows \| Creating Volumetric NeRFs](https://docs.google.com/document/d/1vouz5gYpIw7bUBAGfAvPNcvNQoAfY_E7BhUJOGtV2cw/edit)" for more information about live-action based NeRF capture workflows, and how to build InstantNGP from source. A next-gen nVP workflow guide is available that acts as a semi-official overview of nVP concepts for LED volume creation. The document is titled "[Kartaverse Workflows \| Building an Effective nVP (Neural Virtual Production) Sound Stage](https://docs.google.com/document/d/1O2EmlJpP6y2zTzX750Ld-TxO0x9u06SfJbrr-mHs0rs/edit?usp=sharing)".
 
-#### NeuralFoam Worker CLI
-
-# NeuralFoam Worker CLI
+### NeuralFoam Worker CLI
 
 Additionally, a standalone CLI launched "NeuralFoam Worker Node" will be included with the OpenDisplayXR VDD SDK when it is released.
 
@@ -278,9 +249,7 @@ A local cluster of GPU powered worker nodes are synced to a line-level accurate 
 
 An OpenDisplayXR VDD hardware certified NeRF render node is useful in virtual production LED stage environments where large-scale neural radiance fields provide a compelling alternative to traditional "[machinima](https://en.m.wikipedia.org/wiki/Machinima)" style OpenGL/DirectX based graphics.
 
-#### NeRF NTB (Neural Texture Baker)
-
-# NeRF NTB (Neural Texture Baker)
+### NeRF NTB (Neural Texture Baker)
 
 A sample NeRF-based NTB (Neural Texture Baker) tool is planned for release with the official Open DisplayXR SDK.
 
@@ -304,9 +273,7 @@ A powerful token-based approach is offered to control the texture map output fil
 
 The content production pipeline-friendly [metadata passthrough](https://openexr.readthedocs.io/en/latest/OpenEXRCoreAPI.html?highlight=metadata) feature includes support for retaining the original VDD-captured [HID input data](https://en.wikipedia.org/wiki/USB_human_interface_device_class), a [DOM](https://en.wikipedia.org/wiki/Document_Object_Model)-encoded version of the current VDD [.json](https://en.wikipedia.org/wiki/JSON) settings and external side-car file metadata that holds values like [YAML](https://en.wikipedia.org/wiki/YAML)-encoded lens information from protocols like[Cooke /i Technology](https://cookeoptics.com/i-technology/) lenses, or [camera tracking](http://docs.vizrt.com/tracking-hub-guide/1.0/protocol.html) information.
 
-### JSON Config File
-
-JSON Config File
+## JSON Config File
 
 A [JSON-based](https://en.wikipedia.org/wiki/JSON) configuration file is used to define the display parameters for the connected output video streams.
 
