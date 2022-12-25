@@ -5,47 +5,51 @@ import re
 
 basepath = Path.cwd().joinpath('docs')
 
-for filepath in basepath.rglob("*"):
-
-    continue
-
-    # Check for directories, if they have a .pages file,
-    # otherwise create one
-
-    if not filepath.is_dir():
-        continue
-
-    if filepath.name == "img":
-        continue
-
-    if filepath.name == filepath.parent.name + ".img":
-        continue
-
-    if "_" + filepath.name == filepath.parent.name + ".img":
-        continue
+# for filepath in basepath.rglob("*"):
 
 
-    pagespath = filepath.joinpath('.pages')
-    if pagespath.is_file():
-        continue
+#     # Check for directories, if they have a .pages file,
+#     # otherwise create one
 
-    indexpath = filepath.joinpath(filepath.name + ".md")
-    pagescontent = f"nav:\n  - {filepath.name}.md\n  - ...\n"
+#     if not filepath.is_dir():
+#         continue
 
-    if not indexpath.is_file():
-        with indexpath.open('w') as f:
-            f.write( "> [!failure] Empty subpage!\n>\n> This subpage has no content associated to it! "
-                f"You should definitely consider creating an `{indexpath}` file to fix it!")
-        pagescontent = f"nav:\n  - {filepath.name} 💥: {filepath.name}.md\n  - ...\n"
+#     if filepath.name == "img":
+#         continue
 
-    with pagespath.open('w') as f:
-        f.write( pagescontent )
+#     if filepath.name == filepath.parent.name + ".img":
+#         continue
 
+#     if "_" + filepath.name == filepath.parent.name + ".img":
+#         continue
+
+
+#     pagespath = filepath.joinpath('.pages')
+#     if pagespath.is_file():
+#         continue
+
+#     indexpath = filepath.joinpath(filepath.name + ".md")
+#     pagescontent = f"nav:\n  - {filepath.name}.md\n  - ...\n"
+
+#     if not indexpath.is_file():
+#         with indexpath.open('w') as f:
+#             f.write( "> [!failure] Empty subpage!\n>\n> This subpage has no content associated to it! "
+#                 f"You should definitely consider creating an `{indexpath}` file to fix it!")
+#         pagescontent = f"nav:\n  - {filepath.name} 💥: {filepath.name}.md\n  - ...\n"
+
+#     with pagespath.open('w') as f:
+#         f.write( pagescontent )
 
 
 
-# ----
 
+
+
+# ----------------------------------------------------------------------------
+# HACK: I should not do this! Will look into MkDocs plug-ins and/or Markdown
+# extensions
+
+# ---
 # A hack for embedded YT videos - maybe I try a MkDocs+Obsidian PlugIn one day?!?
 # > [!youtube] Embed: [Costa Rica](https://www.youtube.com/watch?v=LXb3EKWsInQ)
 # https://youtu.be/
@@ -61,6 +65,7 @@ def got_a_video(m):
     return f'<div style="text-align:center; font-size:smaller; "><iframe width="560" height="315" src="https://www.youtube.com/embed/{video}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>{title}</iframe><br />{title}</div>'
 
 # ----
+# Obsidian ![[...|x]] images with (single) size x (no support for '|wxh' yet)
 
 pattern_resizedimage = re.compile(r'!\[\[([^\|\]]+)\|([1-9][0-9]*)\]\]')
 
@@ -71,7 +76,7 @@ def got_a_resizedimage(m):
     return '![](/'+source+'){ width="'+size+'" }'
 
 # ----
-# HACK: Convert '![[src]] > caption' to an image with caption
+# Convert '![[src]] > caption' to an image with caption
 # https://squidfunk.github.io/mkdocs-material/reference/images/#image-alignment
 
 pattern_imagewithcaption = re.compile(r'!\[\[([^\]]+)\]\]\s*>\s*([^\n]+)\n')
@@ -81,7 +86,7 @@ def got_an_imagewithcaption(m):
     caption = m.group(2)
     return f"\n<figure markdown>![](/{image})<figcaption>{caption}</figcaption></figure>\n"
 
-# ----
+# ---
 
 for filepath in basepath.rglob("*.md"):
 
@@ -101,5 +106,7 @@ for filepath in basepath.rglob("*.md"):
 
     with filepath.open('w') as f:
         f.write(modified)
+
+
 
 
