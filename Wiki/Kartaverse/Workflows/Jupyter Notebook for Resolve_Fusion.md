@@ -8,6 +8,9 @@ tags:
   - .scrivener-export
 ---
 
+> [!wiki-todo]- Scrivener Export - Reformatting Needed!
+> This article is an export of a Scrivener document. It will definitely need at least some reformatting to work in Obsidian and MkDocs. Delete this note once the article's formatting  has been fixed to some extent.
+
 Created 2022-09-14 Last Updated 2022-09-14 09.11 PM UTC -4
 
 By [Andrew Hazelden \<andrew@andrewhazelden.com\>](mailto:andrew@andrewhazelden.com)

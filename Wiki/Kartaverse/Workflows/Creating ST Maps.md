@@ -6,6 +6,9 @@ tags:
   - .scrivener-export
 ---
 
+> [!wiki-todo]- Scrivener Export - Reformatting Needed!
+> This article is an export of a Scrivener document. It will definitely need at least some reformatting to work in Obsidian and MkDocs. Delete this note once the article's formatting  has been fixed to some extent.
+
 KartaVR Workflows \| Creating ST Maps
 
 Created 2021-12-20 Last Updated 2022-01-03 12.06 PM UTC -4

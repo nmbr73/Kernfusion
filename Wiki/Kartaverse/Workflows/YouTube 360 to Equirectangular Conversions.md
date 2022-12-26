@@ -6,6 +6,9 @@ tags:
   - .scrivener-export
 ---
 
+> [!wiki-todo]- Scrivener Export - Reformatting Needed!
+> This article is an export of a Scrivener document. It will definitely need at least some reformatting to work in Obsidian and MkDocs. Delete this note once the article's formatting  has been fixed to some extent.
+
 # YouTube 360 to Equirectangular Conversions
 
 KartaVR has several different workflow paths that can be used to convert panoramic image projections. This guide will cover a technique called a "MeshUV" based conversion that relies on a Wavefront ".obj" based polygon mesh and UV layout to define the image projection transform.

@@ -6,6 +6,9 @@ tags:
   - .scrivener-export
 ---
 
+> [!wiki-todo]- Scrivener Export - Reformatting Needed!
+> This article is an export of a Scrivener document. It will definitely need at least some reformatting to work in Obsidian and MkDocs. Delete this note once the article's formatting  has been fixed to some extent.
+
 # Troubleshooting Guide for Fusion Studio Freeze Ups
 
 What follows is a handy set of tips that can be used by a comp TD to find the root cause of issues when a Fusion Studio .comp file crashes all the time. It can also help you track down if a GPU glitch is responsible for your Fusion freezes, etc...

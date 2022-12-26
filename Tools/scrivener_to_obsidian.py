@@ -100,7 +100,7 @@ for i, page in enumerate(pages):
     # if i+1<len(pages):
     #     front_matter.append(f"xnext: '{pages[i+1]['name']}'")
 
-
+    body = "\n\n> [!wiki-todo]- Scrivener Export - Reformatting Needed!\n> This article is an export of a Scrivener document. It will definitely need at least some reformatting to work in Obsidian and MkDocs. Delete this note once the article's formatting  has been fixed to some extent.\n\n" + body
 
     if front_matter:
         body = "---\n" + "\n".join(front_matter) + "\n---\n\n" + body

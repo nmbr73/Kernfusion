@@ -6,6 +6,9 @@ tags:
   - .scrivener-export
 ---
 
+> [!wiki-todo]- Scrivener Export - Reformatting Needed!
+> This article is an export of a Scrivener document. It will definitely need at least some reformatting to work in Obsidian and MkDocs. Delete this note once the article's formatting  has been fixed to some extent.
+
 # SketchFab in VR Via QuestLink
 
 If you have a SketchFab 3D scene you want to explore in VR, you might need to use your PC to do the actual rendering. In this case, the free Oculus Link drivers for Windows 10/11 allows you to connect your PC to a Meta Quest HMD via WiFi or a long USB-C cable.
