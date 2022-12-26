@@ -6,11 +6,11 @@ In order to install KartaVR you need to have Resolve/Fusion and the [[Reactor]] 
 
 In the Reactor window, double-click on the left side-bar category item labelled "Kartaverse" to expand this hierarchy.
 
-![[Kartaverse - Reactor Sidebar Category.png]]
+![[Kartaverse Reactor Category.png]]
 
 Then select the "Kartaverse > KartaVR" sub-category on the left sidebar to shorten the amount of content displayed in the part of the Reactor window where atom packages are listed.
 
-![[Kartaverse - Reactor KartaVR Category.png]]
+![[KartaVR Reactor Category.png]]
 
 Click on the package name "KartaVR" in the main part of the Reactor window, and then press the "Install" button. 
 
