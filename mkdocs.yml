@@ -91,9 +91,15 @@ theme:
         name: Switch to light mode
 
 
+# https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#superfences
+
 # Extensions
 markdown_extensions:
-  - nl2br # cause newlines to be treated as hard breaks; like StackOverflow and GitHub flavored Markdown do
+
+  - nl2br # needed by 'callouts' cause newlines to be treated as hard breaks; like StackOverflow and GitHub flavored Markdown do
+  - admonition # aka callouts; needed by 'callouts'
+  - pymdownx.details # needed by 'callouts'; html5 <details><summary> for collapsible element
+
   - def_list # syntax: https://squidfunk.github.io/mkdocs-material/reference/lists/#using-definition-lists
   - attr_list # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#attribute-lists
   - md_in_html
@@ -103,14 +109,14 @@ markdown_extensions:
       generic: true
   - pymdownx.tasklist:
       custom_checkbox: true
-  - admonition # to render Obsidian Callouts
   - pymdownx.tilde # subscript via ~
   - pymdownx.caret  # superscript via ^
   - pymdownx.keys # to display keyboard shortcuts ++ctrl+alt+del++
   - pymdownx.mark # to mark text using ==some text==
   - pymdownx.smartsymbols # to render -->, <--, =/=, (c), 1st, 1/4, etc.
-  - pymdownx.inlinehilite # `#!py3 code`
-# - pymdownx.details
+#  - pymdownx.inlinehilite # `#!py3 code`
+  - pymdownx.highlight:
+#      anchor_linenums: true
 # - pymdownx.magiclink
   - pymdownx.saneheaders # to force header to have a space after the '#''
   - pymdownx.superfences:
@@ -129,7 +135,7 @@ markdown_extensions:
 plugins:
   - search
   - roamlinks # to allow wiki-markup links [[...]] as used in Obsidian; https://github.com/Jackiexiao/mkdocs-roamlinks-plugin
-  - callouts
+  - callouts # converts Obsidian callouts into MkDocs admonitions; https://pypi.org/project/mkdocs-callouts/
   - awesome-pages: # allows .pages files in directories for navigation; https://github.com/lukasgeiter/mkdocs-awesome-pages-plugin
       collapse_single_pages: true
   - tags:

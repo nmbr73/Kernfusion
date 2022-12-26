@@ -99,7 +99,7 @@ for filepath in basepath.rglob("*.md"):
     modified = content
     modified = re.sub(pattern_video, got_a_video, modified)
     modified = re.sub(pattern_resizedimage, got_a_resizedimage, modified)
-    modified = re.sub(pattern_imagewithcaption, got_an_imagewithcaption, modified)
+#    modified = re.sub(pattern_imagewithcaption, got_an_imagewithcaption, modified)
 
     if content == modified:
         continue
