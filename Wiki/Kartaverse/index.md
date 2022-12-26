@@ -15,7 +15,7 @@ The core technologies that are part of the Kartaverse v5 suite are namely:
 -   KartaSonic
 -   [[KartaLink]]
 -   CompX
--   [[Vonk Ultra]]
+-   [[Vonk Ultra (old)]]
 
 These modules are based upon the culmination of many years of research & development.
 
@@ -103,7 +103,7 @@ Oculus Quest "Santa Cruz" HMD Dev Kit
 
 
 
-[[Vonk Ultra#Vonk Ultra Learning Resources]]
+[[Vonk Ultra (old)#Vonk Ultra Learning Resources]]
 
 
 ### Workflow Guides

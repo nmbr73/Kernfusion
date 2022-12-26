@@ -44,15 +44,15 @@ To carry out an ST Map based 360VR video stitching workflow you need to have at 
 -   ![[image58.png]] [KartaVR](http://www.andrewhazelden.com/projects/kartavr/docs/)
 -   ![[image50__fix1.png]][PTGui Pro v12](https://www.ptgui.com/download.html)
 -   ![[image25.png]] Derivative [TouchDesigner](https://derivative.ca/download)
--   ![[image65.png]]BMD [Resolve](https://www.blackmagicdesign.com/products/davinciresolve/) (Free) / [Resolve Studio](https://www.blackmagicdesign.com/products/davinciresolve/)
--   ![[image53.png]]BMD [Fusion Studio](https://www.blackmagicdesign.com/products/fusion/)
+-   ![[Kartaverse/Workflows/img/image65.png]]BMD [Resolve](https://www.blackmagicdesign.com/products/davinciresolve/) (Free) / [Resolve Studio](https://www.blackmagicdesign.com/products/davinciresolve/)
+-   ![[Kartaverse/Workflows/img/image53.png]]BMD [Fusion Studio](https://www.blackmagicdesign.com/products/fusion/)
 -   ![[image47.png]]Foundry [NukeX](https://www.foundry.com/products/nuke-family/nuke) + [Occula](https://www.foundry.com/products/ocula)
 -   ![[image44.png]] Autodesk [Flame](https://www.autodesk.com/products/flame/overview)
 -   ![[image19.png]]Adobe [Photoshop](https://www.adobe.com/products/photoshop.html) + [The Domemaster Photoshop Actions Pack](https://github.com/AndrewHazelden/Domemaster-Photoshop-Actions-Pack)
 -   ![[image13.png]] Adobe [After Effects](https://www.adobe.com/products/aftereffects.html) + [RE:Vision Effects RE:Map](https://revisionfx.com/products/remap/after-effects/) Plugin
 -   ![[image70.png]] [Blender Compositor](https://docs.blender.org/manual/en/latest/editors/compositor.html) (Free)
 -   ![[image23.png]][Natron Compositor](https://natrongithub.github.io/) (Free)
--   ![[image34.png]] [Imagemagick](https://imagemagick.org/index.php) (Free) + ![[image1.png]] [FFMpeg](https://ffmpeg.org/) (Free) Command-Line Tools
+-   ![[Kartaverse/Workflows/img/image34.png]] [Imagemagick](https://imagemagick.org/index.php) (Free) + ![[Kartaverse/Workflows/img/image1.png]] [FFMpeg](https://ffmpeg.org/) (Free) Command-Line Tools
 
 ### PTGui Pro Workflow
 
