@@ -4,8 +4,8 @@ Currently experimenting with integrating [[Kartaverse/Workflows/index|Kartaverse
 
 - [ ] Immersive Pipeline Integration Guide
 - [x] [[KartaVision]]
-- [x] [[Kartaverse/Vonk Ultra/index]]
-- [ ] Krokodove Essentials
+- [x] [[Kartaverse/Vonk Ultra/index|Vonk Ultra]]
+- [x] [[Kartaverse/Krokodove/index|Krokodove Essentials]] 
 - [x] [[Kartaverse/Workflows/index|Kartaverse Workflows]]
 
 **WSL-Posts worth it (and allowed) to be copied:**

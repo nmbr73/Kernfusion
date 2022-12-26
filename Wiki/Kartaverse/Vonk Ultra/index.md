@@ -11,7 +11,7 @@
 ## Original Table of Contents
 
 - [[Vonk Ultra]]
-- [[Software Required]]
+- [[Kartaverse/Vonk Ultra/Software Required]]
 - [[Acknowledgements]]
 - [[Install Vonk]]
 - [[Fusion Render Node Customization]]

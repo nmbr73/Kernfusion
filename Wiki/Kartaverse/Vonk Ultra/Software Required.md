@@ -12,7 +12,7 @@ tags:
 
 To run Vonk based workflows on your system you will need the following tools:
 
--   ![[image157.png]] [Reactor Package Manager](https://www.steakunderwater.com/wesuckless/viewtopic.php?f=32&t=3067) (Free)
+-   ![[Kartaverse/Vonk Ultra/img/image157.png]] [Reactor Package Manager](https://www.steakunderwater.com/wesuckless/viewtopic.php?f=32&t=3067) (Free)
 -   ![[Kartaverse/Vonk Ultra/img/image65.png]]BMD [Resolve](https://www.blackmagicdesign.com/products/davinciresolve/) (Free) / [Resolve Studio](https://www.blackmagicdesign.com/products/davinciresolve/)
 -   ![[Kartaverse/Vonk Ultra/img/image53.png]]BMD [Fusion Studio](https://www.blackmagicdesign.com/products/fusion/)
 -   ![[Kartaverse/Vonk Ultra/img/image34.png]] [Imagemagick](https://imagemagick.org/index.php) (Free) Optional
