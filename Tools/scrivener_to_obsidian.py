@@ -87,7 +87,7 @@ for i, page in enumerate(pages):
 
     front_matter.append("tags:")
     front_matter.append("  - Kartaverse")
-    front_matter.append("  - Workflow")
+    # front_matter.append("  - Workflow")
     front_matter.append("  - .scrivener-export")
 
     # front_matter.append(f"xself: '{name}'")
