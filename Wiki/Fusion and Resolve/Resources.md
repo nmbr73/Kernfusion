@@ -1,3 +1,7 @@
+---
+tags:
+  - Resource
+---
 
 ## Documentation
 
@@ -57,6 +61,7 @@ There are some really great blogs out there that can help you learn Fusion. Here
 ### Dedicated DaFusion channels ...
 
 * [Blackmagic Design](https://www.youtube.com/channel/UCufB8sMVyP9JEScMjLz74YA) 
+* [eyeonsoftware](https://www.youtube.com/user/eyeonsoftware/videos) with its last upload in 2014
 * [William Justice](https://www.youtube.com/channel/UCBHxgQI3JmCKhJuLLEQnnUA) does a lot of crazy stuff in particular with scripting in DaFusion
 * Chris Ridings' [Improving Resolve](https://www.youtube.com/channel/UCATpHEAIqyE2CBpl2Zf847g) is the de facto go to place when it comes to Fusion scripting
 * [Igor Riđanović](https://www.youtube.com/c/Hdhead) gets you into scripting DaVinci Resolve

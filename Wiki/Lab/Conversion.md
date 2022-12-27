@@ -47,6 +47,7 @@ https://pkg.go.dev/code.sajari.com/docconv
 
 ## Misc
 
+To maybe try some other directions: https://stackoverflow.com/questions/41183642/how-to-convert-github-wiki-into-github-pages ... but not so easy
 
 Embed Video:
 https://pypi.org/project/python-markdown-oembed/

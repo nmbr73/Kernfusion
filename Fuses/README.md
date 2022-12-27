@@ -26,7 +26,7 @@ Set PROJECTS to whatever folder you want to clone the project into:
 
 ### on Windows
 
-No idea. Did that once for the [Shadertoys](https://nmbr73.github.io/Shadertoys/) setup script, but I don't have a PC and softlinks seem to me pretty weird on Windows.
+No idea. Did that once for the [Shadertoys](https://nmbr73.github.io/Shadertoys/) setup script, but I don't have a Windows PC and soft links seem to me pretty weird on Windows.
 
 ### on Linux
 

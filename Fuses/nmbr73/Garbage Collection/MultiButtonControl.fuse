@@ -8,9 +8,9 @@
 
 FuRegisterClass("MultiButtonControlFuse_by_nmbr73", CT_SourceTool, {
     REGS_Name = "MultiButtonControl",
-	  REGS_Category = "Fuses\\Kernfusion\\Docs",
+	  REGS_Category = "Fuses\\Kernfusion\\nmbr73\\Garbage Collection",
     REGS_OpDescription = "MultiButtonControl not working as expected.",
-	  REGS_OpIconString = "docs",
+	  REGS_OpIconString = "garbage",
     REG_Source_GlobalCtrls = true,
     REG_Source_SizeCtrls = true,
     REG_Source_AspectCtrls = true,
