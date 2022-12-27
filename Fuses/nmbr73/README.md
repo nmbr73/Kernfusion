@@ -5,9 +5,8 @@ Not meant to provide any 'production ready' functionality or to be even used in 
 All of this is in a very early stage. So far I started working on ...
 
 - **[CubeMapLoader](CubeMapLoader.md)** to load a sequence of 6 images as a single texture
-- **[CubeMapUnfold](CubeMapUnfold.md)** DCTL non-sense (was just to develop and debug the the shader access to a cube map texture)
+- **[CubeMapUnfold](CubeMapUnfold.md)** DCTL non-sense (was just to develop and debug the shader access to a cube map texture)
 - **[CubeMapColorizer](CubeMapColorizer.md)** colorize the faces of a cube by different colors (via DCTL)
 - **[CubeMapEquirectangular](CubeMapEquirectangular.md)** DCTL based projection of a cubemap to a 2D image
-- **[Docs/](Docs/README.md)** examples for developing Fuses in Lua (nothing there yet)
-  - **[MultiButtonControls.fuse](Docs/MultiButtonControls.fuse)** example for the different [MultiButtonControl](https://github.com/nmbr73/Kernfusion/wiki/MultiButtonControl) types
+- Garbage/**[MultiButtonControls](Garbage%20Collection/MultiButtonControl.md)** example for the different MultiButtonControl types
 

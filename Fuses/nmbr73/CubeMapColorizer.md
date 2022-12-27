@@ -1,7 +1,7 @@
 # CubeMap Colorizer
 
 - [CubeMapColorizer.fuse](CubeMapColorizer.fuse) <br />*... can be downloaded and copied manually into your fuses folder if needed*
-- [CubeMapColorizer.comp](../Comp/CubeMapColorizer.comp) <br />*... needs the repository to be checked out as described in the [README](README.md)*
+- [CubeMapColorizer.comp](../../Comp/nmbr73/CubeMapColorizer.comp) <br />*... needs the repository to be checked out as described in the [README](../README.md)*
 
 
 Fuse to colorize horizontal cross image that is meant to be used as a cube map.

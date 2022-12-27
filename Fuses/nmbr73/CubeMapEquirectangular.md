@@ -1,7 +1,7 @@
 # Equirectangular Projection for CubeMaps
 
 - [CubeMapEquirectangular.fuse](CubeMapEquirectangular.fuse)[^Madsy] <br />*... can be downloaded and copied manually into your fuses folder if needed*
-- [CubeMapEquirectangular.comp](../Comp/CubeMapEquirectangular.comp) <br />*... needs the repository to be checked out as described in the [README](README.md)*
+- [CubeMapEquirectangular.comp](../../Comp/nmbr73/CubeMapEquirectangular.comp) <br />*... needs the repository to be checked out as described in the [README](../README.md)*
 
 
 

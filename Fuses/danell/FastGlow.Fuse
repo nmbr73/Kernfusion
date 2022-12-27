@@ -92,7 +92,7 @@ local fib = { 1.0, 2.0, 3.0, 5.0, 8.0, 13.0, 21.0, 34.0, 55.0, 89.0}
 local resIndep = 2160 -- The resolution used for resolution independence
 local left, bottom, right, top = 0,0,0,0
 
-FuRegisterClass("FastGlow", CT_Tool, {
+FuRegisterClass("FastGlow_danell", CT_Tool, {
     REGS_Name            = "Fast Glow",
     REGS_Category        = "Fuses\\Kernfusion\\Danell",
     REGS_OpIconString    = "FG",

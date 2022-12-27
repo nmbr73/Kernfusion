@@ -30,8 +30,8 @@ IN THE SOFTWARE.
 -------------------------------------------------------------------------------------------------------------------------------------------
 
 FuRegisterClass("Skybox_nmbr73", CT_SourceTool, {
-    REGS_Name = "Skybox",
-	  REGS_Category = "Fuses\\Kernfusion\\nmbr73\\WIP",
+    REGS_Name = "Skybox (WIP)",
+	  REGS_Category = "Fuses\\Kernfusion\\nmbr73",
     REGS_OpDescription = "...",
 	  REGS_OpIconString = "SBX",
     REG_Source_GlobalCtrls = true,

@@ -2,7 +2,13 @@
 
 Not much in here yet. Explanation will follow as soon as it's worth it; so maybe never.
 
-## Link Fuses into Fusion
+- [danell/](danell/README.md)
+- [nmbr73/](nmbr73/README.md)
+
+
+## Setup
+
+Link Fuses into Fusion
 
 ### on macOS
 

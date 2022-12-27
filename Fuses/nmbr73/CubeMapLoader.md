@@ -1,7 +1,7 @@
 # CubeMap Loader
 
 - [CubeMapLoader.fuse](CubeMapLoader.fuse) <br />*... can be downloaded and copied manually into your fuses folder if needed*
-- [CubeMapLoader.comp](../Comp/CubeMapLoader.comp) <br />*... needs the repository to be checked out as described in the [README](README.md)*
+- [CubeMapLoader.comp](../../Comp/nmbr73/CubeMapLoader.comp) <br />*... needs the repository to be checked out as described in the [README](../README.md)*
 
 
 Fuse to create a 2D representation of a cube map.
