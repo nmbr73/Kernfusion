@@ -9,7 +9,7 @@ tags:
   - .scrivener-export
 ---
 
-The [[Kartaverse/Krokodove/index|Krokodove (KKD)]] nodes (see the [[Node Reference Guide]]) are separated into the following categories and sub-categories based upon what data types they work with, and the function they perform:
+The [[Plugins/Krokodove/index|Krokodove (KKD)]] nodes (see the [[Node Reference Guide]]) are separated into the following categories and sub-categories based upon what data types they work with, and the function they perform:
 
 3D
 

@@ -9,7 +9,7 @@ tags:
   - .scrivener-export
 ---
 
-For context see [[Kartaverse/Krokodove/index|Krokodove (KKD)]].
+For context see [[Plugins/Krokodove/index|Krokodove (KKD)]].
 
 
 ## Beat

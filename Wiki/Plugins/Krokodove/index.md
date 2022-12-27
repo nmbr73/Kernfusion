@@ -3,14 +3,14 @@ title: Krokodove Essentials
 author: Andrew Hazelden
 ---
 
+Krokodove (KKD) is a cross-platform compatible plugin for Fusion Studio and DaVinci Resolve Studio. It includes 100+ free Fusion tools. Krokodove was created by Raf Schoenmaekers of [Komkom Doorn](http://komkomdoorn.com).
+
 >[!note] Acknowledgment & Resources
 > Documentation by [Andrew Hazelden \<andrew@andrewhazelden.com\>](mailto:andrew@andrewhazelden.com)
 > Krokodove plugin by [Raf Schoenmaekers info@komkomdoorn.com](mailto:info@komkomdoorn.com)
 > Krokodove Vimeo channel: <https://vimeo.com/channels/krokodove>
 > Krokodove email contact: <info@komkomdoorn.com>
 > License: Krokodove is distributed for free.
-
-Krokodove (KKD) is a cross-platform compatible plugin for Fusion Studio and DaVinci Resolve Studio. It includes 100+ free Fusion tools. Krokodove was created by Raf Schoenmaekers of [Komkom Doorn](http://komkomdoorn.com).
 
 The KKD shape tools allow you to create animatable vector artwork which is excellent for node-based motion graphics projects.
 
@@ -23,15 +23,15 @@ The KKD data tools support workflows similar to [Houdini CHOPS](https://www.side
 ## Software Required
 
 To run Krokodove on your system you will need ...
-- ![[Kartaverse/Krokodove/img/image157.png|16]] [Reactor Package Manager](https://www.steakunderwater.com/wesuckless/viewtopic.php?f=32&t=3067) (Free), and either
-- ![[Kartaverse/Krokodove/img/icon_fusion.png|22]]BMD [Fusion Studio](https://www.blackmagicdesign.com/products/fusion/) (Paid), or
-- ![[Kartaverse/Krokodove/img/icon_resolve.png|22]]BMD [Resolve Studio](https://www.blackmagicdesign.com/products/davinciresolve/) (Paid)
+- ![[Plugins/Krokodove/img/image157.png|16]] [Reactor Package Manager](https://www.steakunderwater.com/wesuckless/viewtopic.php?f=32&t=3067) (Free), and either
+- ![[icon_fusion.png|22]]BMD [Fusion Studio](https://www.blackmagicdesign.com/products/fusion/) (Paid), or
+- ![[icon_resolve.png|22]]BMD [Resolve Studio](https://www.blackmagicdesign.com/products/davinciresolve/) (Paid)
 
 ## Installation
 
 The Krokodove plugin can be installed using the [Reactor Package Manager](https://www.steakunderwater.com/wesuckless/viewtopic.php?f=32&t=3067) for Resolve Studio/Fusion Studio.
 
-![[Kartaverse/Krokodove/img/image373.png]]
+![[Plugins/Krokodove/img/image373.png]]
 
 After you have Reactor installed and open, select the "Tools --> Plugins" category on the left sidebar. Click on the package named "Krokodove for Fusion/Resolve Studio 17" and then press the "Install" button.
 
@@ -60,14 +60,14 @@ First you may want to look into the [[Example Compositions]] available via React
 ---------
 
 ## Original Table of Contents
-- <del>[[Kartaverse/Krokodove/index|Krokodove Essentials]]</del> (integrated into main aticle)
-- <del>[[Kartaverse/Krokodove/index|Overview]]</del> (integrated into main aticle)
-- <del>[[Kartaverse/Krokodove/index|Resources]]</del> (integrated into main aticle)
-- <del>[[Kartaverse/Krokodove/index|License]]</del> (integrated into main aticle)
-- <del>[[Kartaverse/Krokodove/index|Compatibility]]</del> (integrated into main aticle)
-- <del>[[Kartaverse/Krokodove/index|Software Required]]</del> (integrated into main aticle)
-- <del>[[Kartaverse/Krokodove/index|Install KKD]]</del> (integrated into main aticle)
-- <del>[[Kartaverse/Krokodove/index|Accessing the KKD Nodes]]</del> (integrated into main aticle)
+- <del>[[Plugins/Krokodove/index|Krokodove Essentials]]</del> (integrated into main aticle)
+- <del>[[Plugins/Krokodove/index|Overview]]</del> (integrated into main aticle)
+- <del>[[Plugins/Krokodove/index|Resources]]</del> (integrated into main aticle)
+- <del>[[Plugins/Krokodove/index|License]]</del> (integrated into main aticle)
+- <del>[[Plugins/Krokodove/index|Compatibility]]</del> (integrated into main aticle)
+- <del>[[Plugins/Krokodove/index|Software Required]]</del> (integrated into main aticle)
+- <del>[[Plugins/Krokodove/index|Install KKD]]</del> (integrated into main aticle)
+- <del>[[Plugins/Krokodove/index|Accessing the KKD Nodes]]</del> (integrated into main aticle)
 - [[Example Compositions|KKD Example Comps]]
 - [[Node Categories|KKD Node Categories]]
 - [[Node Reference Guide|KKD Node Reference Guide]]

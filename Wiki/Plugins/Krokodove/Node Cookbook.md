@@ -8,9 +8,9 @@ tags:
   - .scrivener-export
 ---
 
-A collection of Fusion node-graph recipes for common [[Kartaverse/Krokodove/index|KKD]] techniques.
+A collection of Fusion node-graph recipes for common [[Plugins/Krokodove/index|KKD]] techniques.
 
-> For context see [[Kartaverse/Krokodove/index|Krokodove (KKD)]].
+> For context see [[Plugins/Krokodove/index|Krokodove (KKD)]].
 > See also the [[Example Compositions]].
 > Useful references here are [[Node Reference Guide|KKD Node Reference Guide]], the [[Node Categories]], and the [[Modifier Reference Guide]].
 
