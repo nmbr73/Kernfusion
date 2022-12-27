@@ -30,7 +30,7 @@ IN THE SOFTWARE.
 
 FuRegisterClass("CubeMapSeqLoader_nmbr73", CT_SourceTool, {
     REGS_Name = "CubeMap Sequence",
-	  REGS_Category = "Fuses\\Kernfusion",
+	  REGS_Category = "Fuses\\Kernfusion\\nmbr73",
     REGS_OpDescription = "Load the six faces of a cube from a sequence of six image file. Output is a 2D horizontal cross cube map texture. Serves for example as an input fragment shaders that use a cube map. Use the CubeMap (3Cu) tool to test this Fuse.",
 	  REGS_OpIconString = "CMSL",
     REG_Source_GlobalCtrls = true,

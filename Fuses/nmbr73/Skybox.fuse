@@ -23,18 +23,17 @@ IN THE SOFTWARE.
 --]]--
 
 
-
 --- Work in Progress !!!
 --
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------
 
-FuRegisterClass("CubeMapColorizer_nmbr73", CT_SourceTool, {
-    REGS_Name = "CubeMap Colorizer",
-	  REGS_Category = "Fuses\\Kernfusion",
-    REGS_OpDescription = "Colorize the faces of a CubeMap. Helps to locate them in the output (for debugging).",
-	  REGS_OpIconString = "CMC",
+FuRegisterClass("Skybox_nmbr73", CT_SourceTool, {
+    REGS_Name = "Skybox",
+	  REGS_Category = "Fuses\\Kernfusion\\nmbr73\\WIP",
+    REGS_OpDescription = "...",
+	  REGS_OpIconString = "SBX",
     REG_Source_GlobalCtrls = true,
     REG_Source_SizeCtrls = true,
     REG_Source_AspectCtrls = true,
@@ -53,18 +52,28 @@ FuRegisterClass("CubeMapColorizer_nmbr73", CT_SourceTool, {
 
 ParametersCode =
 [[
-  float width;
-  float height;
-  float gain;
+  float in_width;
+  float in_height;
+
+  float out_width;
+  float out_height;
 ]]
 
 -------------------------------------------------------------------------------------------------------------------------------------------
 
 CompatibilityCode =
 [[
-
-#define set_color(T,X,Y,C)  _tex2DVec4Write((T), (X), (Y), (C));
-#define get_color(T,X,Y)    _tex2DVecN((T),(X),(Y),15);
+typedef float2 vec2;
+typedef float3 vec3;
+typedef float4 vec4;
+#define make_vec2(A,B)      make_float2(A,B)
+#define make_vec3(A,B,C)    make_float3(A,B,C)
+#define make_vec4(A,B,C,D)  make_float4(A,B,C,D)
+#define make_vec4_aw(V,F)   make_float4_aw(V,F)
+#define in
+#define out
+#define DEVICE  __DEVICE__
+#define write_color(T,X,Y,C) _tex2DVec4Write((T), (X), (Y), (C));
 
 
 __DEVICE__ float4 cubemap(__TEXTURE2D__ t, float3 xyz)
@@ -104,44 +113,18 @@ KernelCode =
 [[
 
 
-__KERNEL__ void CubeMapColorizerKernel(
-    __CONSTANTREF__ Params*   params,
-    __TEXTURE2D__             input,
-    __TEXTURE2D_WRITE__       output)
+__KERNEL__ void CubeMapUnfoldKernel(__CONSTANTREF__ Params*  params,  __TEXTURE2D__ iChannel0, __TEXTURE2D_WRITE__ dst)
 {
   DEFINE_KERNEL_ITERATORS_XY(x, y);
 
-  float w = params->width;
-  float h = params->height;
-
-  if (x >= w || y >= h)
+  if (x >= params->out_width || y >= params->out_height)
     return;
 
-  float u = x/w; // x normalized to 0...1
-  float v = y/h; // y normalized to 0...1
+  vec4 fragColor    = make_vec4(1.0f,1.0f,1.0f,0.5f); // red, green, blue, alpha
+  vec2 fragCoord    = make_vec2(x,y); // x, y coordinate of the pixel to render
+  vec3 iResolution  = make_vec3(params->out_width,params->out_height,1.0f); // width, height, aspect ratio
 
-  int col = int(floor(u / (1.0f / 4.0f))); // 0|1|2|3
-  int row = int(floor(v / (1.0f / 3.0f))); // 0|1|2
-
-  float4 color = get_color(input,u,v);
-  float4 tinge = to_float4(0.0f,0.0f,0.0f,color.w);
-
-  if (row == 1)
-    switch (col) {
-      case 0: tinge.x=1.0f; tinge.y=1.0f; break;  // yellow
-      case 1: tinge.z=1.0f; break;                // blue
-      case 2: tinge.x=1.0f; break;                // red
-      case 3: tinge.x=1.0f; tinge.z=1.0f; break;  // magenta
-    }
-  else if (col == 1)
-    switch (row) {
-      case 0: tinge.y=1.0f; tinge.z=1.0f; break;  // cyan
-      case 2: tinge.y=1.0f;  break;               // green
-    };
-
-  float4 colorized=mix(color,tinge,to_float4_s(params->gain));
-
-  set_color(output, x, y, colorized);
+  write_color(dst, x, y, fragColor)
 }
 
 
@@ -157,14 +140,7 @@ function Create()
 
   ----- In/Out
 
-  InImage = self:AddInput( "Input",  "image",  { LINKID_DataType = "Image", LINK_Main = 1, INP_Required = false  })
-
-  InGain = self:AddInput("Gain", "Gain", {
-      LINKID_DataType = "Number",
-      INPID_InputControl = "SliderControl",
-      INP_Default = 0.5,
-      })
-
+  InChannel0 = self:AddInput( "iChannel0",  "iChannel0",  { LINKID_DataType = "Image", LINK_Main = 1, INP_Required = false  })
 
   OutImage = self:AddOutput("Output", "Output", {
     LINKID_DataType = "Image",
@@ -186,84 +162,92 @@ end
 
 function Process(req)
 
-  local w  = Width
-  local h  = Height
-  local ax = XAspect
-  local ay = YAspect
-  local sd = SourceDepth
-
-  local input = InImage:GetValue(req)
-
-  if input ~= nil then
-    w   = input.Width
-    h   = input.Height
-    ax  = input.XAspect
-    ay  = input.YAspect
-    sd  = input.SourceDepth
-  end
-
-
-  local output   = Image({
+  local imgattrs = {
     IMG_Document = self.Comp,
     { IMG_Channel = "Red", },
     { IMG_Channel = "Green", },
     { IMG_Channel = "Blue", },
     { IMG_Channel = "Alpha", },
-    IMG_Width  = w,
-    IMG_Height = h,
-    IMG_XScale = ax,
-    IMG_YScale = ay,
+    IMG_Width  = Width,
+    IMG_Height = Height,
+    IMG_XScale = XAspect,
+    IMG_YScale = YAspect,
     IMG_Quality = not req:IsQuick(),
     IMG_MotionBlurQuality = not req:IsNoMotionBlur(),
     IMG_DeferAlloc = true,
     IMG_ProxyScale = ( (not req:IsStampOnly()) and 1 or nil),
-    IMG_Depth = ( (sd~=0) and sd or nil   )
-  })
+    IMG_Depth = ( (SourceDepth~=0) and SourceDepth or nil   )
+  }
 
-
-
-  output:Fill(Pixel({R=0,G=0,B=0,A=0}))
+  local dst   = Image(imgattrs)
+  local black = Pixel({R=0,G=0,B=0,A=0})
+  dst:Fill(black)
 
   if req:IsPreCalc() then
-    OutImage:Set(req, Image({IMG_Like = output, IMG_NoData = true}))
+    local out = Image({IMG_Like = dst, IMG_NoData = true})
+    OutImage:Set(req, out)
     return
   end
 
   local node = DVIPComputeNode(req,
-    "CubeMapColorizerKernel", CompatibilityCode..KernelCode,
+    "CubeMapUnfoldKernel", CompatibilityCode..KernelCode,
     "Params", ParametersCode
   )
 
-  -- External texture or create a new one
+  -- Extern texture or create a new one
 
-  if input==nil then
-    input = Image({IMG_Like = output})
-    input:Fill(Pixel({R=0,G=0,B=0,A=0}))
+  iChannel0 = InChannel0:GetValue(req)
+
+  if iChannel0==nil then
+    iChannel0 = Image(imgattrs)
+    iChannel0:Fill(black)
   end
 
   -- DCTL parameters
+
+  local framerate = self.Comp:GetPrefs("Comp.FrameFormat.Rate")
 
   local params = {}
 
   params = node:GetParamBlock(ParametersCode)
 
-  params.width  = output.Width
-  params.height = output.Height
-  params.gain = InGain:GetValue(req).Value
+  params.in_width = iChannel0.Width
+  params.in_height = iChannel0.Height
+
+  params.out_width  = dst.Width
+  params.out_height = dst.Height
+
+
 
   -- Set parameters and add I/O
 
   node:SetParamBlock(params)
   node:AddSampler("RowSampler", TEX_FILTER_MODE_LINEAR,TEX_ADDRESS_MODE_MIRROR, TEX_NORMALIZED_COORDS_TRUE)
-  node:AddInput("Image",input)
-  node:AddOutput("Output", output)
+  node:AddInput("iChannel0",iChannel0)
+  node:AddOutput("dst", dst)
 
   local ok = node:RunSession(req)
 
 	if (not ok) then
-		output = nil
+		dst = nil
     dump(node:GetErrorLog())
 	end
 
-  OutImage:Set(req,output)
+  OutImage:Set(req,dst)
 end
+
+
+
+-- // ------------------------------------------------------------------------
+-- // Callback
+-- // ------------------------------------------------------------------------
+
+-- function NotifyChanged(inp, param, time)
+-- 	if (param ~= nil) then
+-- 		if (param.Value == 1) then
+-- 			if (inp == ...) then
+--         ...
+-- 			end
+-- 		end
+-- 	end
+-- end

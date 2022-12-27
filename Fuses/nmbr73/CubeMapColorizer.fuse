@@ -23,17 +23,18 @@ IN THE SOFTWARE.
 --]]--
 
 
+
 --- Work in Progress !!!
 --
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------
 
-FuRegisterClass("CubeMapEquirectangular_nmbr73", CT_SourceTool, {
-    REGS_Name = "Equirectangular Projection",
-	  REGS_Category = "Fuses\\Kernfusion",
-    REGS_OpDescription = "Equirectangular (at least I think this is what it's called?!?) projection of a cube map.",
-	  REGS_OpIconString = "CMERP",
+FuRegisterClass("CubeMapColorizer_nmbr73", CT_SourceTool, {
+    REGS_Name = "CubeMap Colorizer",
+	  REGS_Category = "Fuses\\Kernfusion\\nmbr73",
+    REGS_OpDescription = "Colorize the faces of a CubeMap. Helps to locate them in the output (for debugging).",
+	  REGS_OpIconString = "CMC",
     REG_Source_GlobalCtrls = true,
     REG_Source_SizeCtrls = true,
     REG_Source_AspectCtrls = true,
@@ -54,11 +55,7 @@ ParametersCode =
 [[
   float width;
   float height;
-  float posx;
-  float posy;
-  float fovx;
-  float fovy;
-
+  float gain;
 ]]
 
 -------------------------------------------------------------------------------------------------------------------------------------------
@@ -69,17 +66,6 @@ CompatibilityCode =
 #define set_color(T,X,Y,C)  _tex2DVec4Write((T), (X), (Y), (C));
 #define get_color(T,X,Y)    _tex2DVecN((T),(X),(Y),15);
 
-#if defined(DEVICE_IS_OPENCL)
-  #define reflect(I,N) (I-2.0f*dot(N,I)*N)
-#endif
-
-#if defined(DEVICE_IS_METAL)
-  typedef float3x3 mat3;
-#else
-  typedef struct { float3 r0; float3 r1; float3 r2; } mat3;
-  #define fract(a) ((a)-_floor(a))
-#endif
-
 
 __DEVICE__ float4 cubemap(__TEXTURE2D__ t, float3 xyz)
 {
@@ -88,22 +74,22 @@ __DEVICE__ float4 cubemap(__TEXTURE2D__ t, float3 xyz)
   float az=_fabs(xyz.z);
 
   if (xyz.x>0.0f && ax>=ay && ax>=az) // +X, Face 0, right
-    return get_color(t, (-xyz.z/ax+1.0f)/8.0f+0.5f, (xyz.y/ax+1.0f)/6.0f+(1.0f/3.0f));
+    return _tex2DVecN(t,(-xyz.z/ax+1.0f)/8.0f + 0.5f,(xyz.y/ax+1.0f)/6.0f + (1.0f/3.0f),15);
 
   if (xyz.y>0.0f && ay>=ax && ay>=az) // +Y, Face 2, top
-    return get_color(t, (xyz.x/ay+1.0f)/8.0f+0.25f, (-xyz.z/ay+1.0f)/6.0f+(2.0f/3.0f));
+    return _tex2DVecN(t,(xyz.x/ay+1.0f)/8.0f + 0.25f,(-xyz.z/ay+1.0f)/6.0f + (2.0f/3.0f),15);
 
   if (xyz.z>0.0f && az>=ax && az>=ay) // +Z, Face 4, front
-    return get_color(t, (xyz.x/az+1.0f)/8.0f+0.25f, (xyz.y/az+1.0f)/6.0f+(1.0f/3.0f));
+    return _tex2DVecN(t,(xyz.x/az+1.0f)/8.0f + 0.25f,(xyz.y/az+1.0f)/6.0f + (1.0f/3.0f),15);
 
   if (xyz.x<0.0f && ax>=ay && ax>=az) // -X, Face 1, left
-    return get_color(t, (xyz.z/ax+1.0f)/8.0f, (xyz.y/ax+1.0f)/6.0f+(1.0f/3.0f));
+    return _tex2DVecN(t,(xyz.z/ax+1.0f)/8.0f,(xyz.y/ax+1.0f)/6.0f + (1.0f/3.0f),15);
 
   if (xyz.y<0.0f && ay>=ax && ay>=az) // -Y, Face 3, bottom
-    return get_color(t, (xyz.x/ay+1.0f)/8.0f+0.25f, (xyz.z/ay+1.0f)/6.0f);
+    return _tex2DVecN(t,(xyz.x/ay+1.0f)/8.0f + 0.25f,(xyz.z/ay+1.0f)/6.0f,15);
 
   if (xyz.z<0.0f && az>=ax && az>=ay) // -Z, Face 5, back
-    return get_color(t, (-xyz.x/az+1.0f)/8.0f+0.75f,(xyz.y/az+1.0f)/6.0f+(1.0f/3.0f));
+    return _tex2DVecN(t,(-xyz.x/az+1.0f)/8.0f + 0.75f,(xyz.y/az+1.0f)/6.0f + (1.0f/3.0f),15);
 
   return to_float4(1.0f,0.0f,0.0f,1.0f); // error
 }
@@ -118,47 +104,12 @@ KernelCode =
 [[
 
 
-#define PI 3.1415926f //const float PI = 3.1415926f;
-
-
-
-__DEVICE__ mat3 rotX(float theta) {
-
-  float s = _sinf(theta);
-  float c = _cosf(theta);
-
-  mat3 m =
-        mat3( 1, 0,  0,
-              0, c,  -s,
-              0, s,  c);
-  return m;
-}
-
-
-
-__DEVICE__ mat3 rotY(float theta) {
-
-  float s = _sinf(theta);
-  float c = _cosf(theta);
-
-  mat3 m =
-        mat3( c, 0, -s,
-              0, 1,  0,
-              s, 0,  c);
-    return m;
-}
-
-
-
-__KERNEL__ void CubeMapEquirectangularKernel(
+__KERNEL__ void CubeMapColorizerKernel(
     __CONSTANTREF__ Params*   params,
     __TEXTURE2D__             input,
-    __TEXTURE2D_WRITE__       output
-)
+    __TEXTURE2D_WRITE__       output)
 {
-  // Mapping from spherical coordinates to cartesian 3D coordinates, which is then used as normals/tcoords for a cube map. Use posX and posY to move around.
-
-   DEFINE_KERNEL_ITERATORS_XY(x, y);
+  DEFINE_KERNEL_ITERATORS_XY(x, y);
 
   float w = params->width;
   float h = params->height;
@@ -166,42 +117,34 @@ __KERNEL__ void CubeMapEquirectangularKernel(
   if (x >= w || y >= h)
     return;
 
-  float posU = params->posx; // [0,1]
-  float posV = params->posy; // [0,1]
+  float u = x/w; // x normalized to 0...1
+  float v = y/h; // y normalized to 0...1
 
-  float fovX = params->fovx * PI / 180.0f;   // deg2rad(FOVX);
-  float fovY = params->fovy * PI / 180.0f;   // deg2rad(FOVY);
+  int col = int(floor(u / (1.0f / 4.0f))); // 0|1|2|3
+  int row = int(floor(v / (1.0f / 3.0f))); // 0|1|2
 
-  // --------
+  float4 color = get_color(input,u,v);
+  float4 tinge = to_float4(0.0f,0.0f,0.0f,color.w);
 
+  if (row == 1)
+    switch (col) {
+      case 0: tinge.x=1.0f; tinge.y=1.0f; break;  // yellow
+      case 1: tinge.z=1.0f; break;                // blue
+      case 2: tinge.x=1.0f; break;                // red
+      case 3: tinge.x=1.0f; tinge.z=1.0f; break;  // magenta
+    }
+  else if (col == 1)
+    switch (row) {
+      case 0: tinge.y=1.0f; tinge.z=1.0f; break;  // cyan
+      case 2: tinge.y=1.0f;  break;               // green
+    };
 
-  float u = x / w;        // [0,1]
-  float v = 1.0f - y / h; // [0,1]
+  float4 colorized=mix(color,tinge,to_float4_s(params->gain));
 
-  //360 degrees around the x-axis, 180 degrees on the y-axis
-  //The frustum can be split into several parts:
-  //The very top is +y, the north pole, and the very bottom
-  //is -y, i.e the south pole.
-  //The middle consists of +z, -z, +x and -x, where -z
-  //is the center of the frustum, and the left and right
-  //frustum edges show +z, i.e what is behind you
-
-  float hOffset = (2.0f*PI - fovX)*0.5f;
-  float vOffset = (PI - fovY)*0.5f;
-  float hAngle = hOffset + u * fovX;
-  float vAngle = vOffset + v * fovY;
-  float3 n;
-  n.x = _sinf(vAngle) * _sinf(hAngle);
-  n.y = _cosf(vAngle);
-  n.z = _sinf(vAngle) * _cosf(hAngle);
-
-  //Normal pitch-yaw camera controlled with the mouse
-  n = rotY(posU * 2.0f * PI) * rotX(posV * 2.0f * PI) * n;
-
-
-
-  _tex2DVec4Write(output, x, y, cubemap(input,n));
+  set_color(output, x, y, colorized);
 }
+
+
 ]]
 -- /*
 
@@ -216,41 +159,12 @@ function Create()
 
   InImage = self:AddInput( "Input",  "image",  { LINKID_DataType = "Image", LINK_Main = 1, INP_Required = false  })
 
-  InPOSXSlider = self:AddInput("Position U", "u", {
-      LINKID_DataType    = "Number",
+  InGain = self:AddInput("Gain", "Gain", {
+      LINKID_DataType = "Number",
       INPID_InputControl = "SliderControl",
-      -- INP_MinScale       = -1.0,
-      INP_MinScale       = 0.0,
-      INP_MaxScale       = 1.0,
-      INP_Default        = 0.0,
-  })
+      INP_Default = 0.5,
+      })
 
-  InPOSYSlider = self:AddInput("Position V", "v", {
-      LINKID_DataType    = "Number",
-      INPID_InputControl = "SliderControl",
-      -- INP_MinScale       = -1.0,
-      INP_MinScale       = 0.0,
-      INP_MaxScale       = 1.0,
-      INP_Default        = 0.0,
-  })
-
-  InFOVXSlider = self:AddInput("Field of View X", "fovx", {
-      LINKID_DataType    = "Number",
-      INPID_InputControl = "SliderControl",
-      INP_MinScale       = 0.0,
-      -- INP_MaxScale       = 360.0,
-      INP_MaxScale       = 3 * 360,
-      INP_Default        = 360.0,
-  })
-
-  InFOVYSlider = self:AddInput("Field of View Y", "fovy", {
-      LINKID_DataType    = "Number",
-      INPID_InputControl = "SliderControl",
-      INP_MinScale       = 0.0,
-      -- INP_MaxScale       = 360.0,
-      INP_MaxScale       = 3 * 360,
-      INP_Default        = 180.0,
-  })
 
   OutImage = self:AddOutput("Output", "Output", {
     LINKID_DataType = "Image",
@@ -316,11 +230,11 @@ function Process(req)
   end
 
   local node = DVIPComputeNode(req,
-    "CubeMapEquirectangularKernel", CompatibilityCode..KernelCode,
+    "CubeMapColorizerKernel", CompatibilityCode..KernelCode,
     "Params", ParametersCode
   )
 
-  -- Extern texture or create a new one
+  -- External texture or create a new one
 
   if input==nil then
     input = Image({IMG_Like = output})
@@ -335,11 +249,7 @@ function Process(req)
 
   params.width  = output.Width
   params.height = output.Height
-
-  params.posx = InPOSXSlider:GetValue(req).Value
-  params.posy = InPOSYSlider:GetValue(req).Value
-  params.fovx = InFOVXSlider:GetValue(req).Value
-  params.fovy = InFOVYSlider:GetValue(req).Value
+  params.gain = InGain:GetValue(req).Value
 
   -- Set parameters and add I/O
 

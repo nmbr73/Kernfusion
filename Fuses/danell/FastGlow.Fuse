@@ -94,7 +94,7 @@ local left, bottom, right, top = 0,0,0,0
 
 FuRegisterClass("FastGlow", CT_Tool, {
     REGS_Name            = "Fast Glow",
-    REGS_Category        = "Fuses",
+    REGS_Category        = "Fuses\\Kernfusion\\Danell",
     REGS_OpIconString    = "FG",
     REGS_OpDescription   = "",
     REGS_Company         = "Ember Light",

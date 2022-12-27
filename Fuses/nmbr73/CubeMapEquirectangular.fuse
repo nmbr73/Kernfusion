@@ -1,0 +1,359 @@
+--[[--
+
+Copyright (c) 2021 nmbr73 (https://www.youtube.com/c/nmbr73/)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the “Software”), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+
+--]]--
+
+
+--- Work in Progress !!!
+--
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+FuRegisterClass("CubeMapEquirectangular_nmbr73", CT_SourceTool, {
+    REGS_Name = "Equirectangular Projection",
+	  REGS_Category = "Fuses\\Kernfusion\\nmbr73",
+    REGS_OpDescription = "Equirectangular (at least I think this is what it's called?!?) projection of a cube map.",
+	  REGS_OpIconString = "CMERP",
+    REG_Source_GlobalCtrls = true,
+    REG_Source_SizeCtrls = true,
+    REG_Source_AspectCtrls = true,
+    REG_Source_DepthCtrls = true,
+	  REG_TimeVariant = false,
+	  REGS_Company = "nmbr73",
+	  REGS_URL = "https://nmbr73.github.io/",
+	  REG_Version	= 000001,
+    REG_Fuse_NoEdit = false,
+    REG_Fuse_NoReload = false,
+    })
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+ParametersCode =
+[[
+  float width;
+  float height;
+  float posx;
+  float posy;
+  float fovx;
+  float fovy;
+
+]]
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+CompatibilityCode =
+[[
+
+#define set_color(T,X,Y,C)  _tex2DVec4Write((T), (X), (Y), (C));
+#define get_color(T,X,Y)    _tex2DVecN((T),(X),(Y),15);
+
+#if defined(DEVICE_IS_OPENCL)
+  #define reflect(I,N) (I-2.0f*dot(N,I)*N)
+#endif
+
+#if defined(DEVICE_IS_METAL)
+  typedef float3x3 mat3;
+#else
+  typedef struct { float3 r0; float3 r1; float3 r2; } mat3;
+  #define fract(a) ((a)-_floor(a))
+#endif
+
+
+__DEVICE__ float4 cubemap(__TEXTURE2D__ t, float3 xyz)
+{
+  float ax=_fabs(xyz.x);
+  float ay=_fabs(xyz.y);
+  float az=_fabs(xyz.z);
+
+  if (xyz.x>0.0f && ax>=ay && ax>=az) // +X, Face 0, right
+    return get_color(t, (-xyz.z/ax+1.0f)/8.0f+0.5f, (xyz.y/ax+1.0f)/6.0f+(1.0f/3.0f));
+
+  if (xyz.y>0.0f && ay>=ax && ay>=az) // +Y, Face 2, top
+    return get_color(t, (xyz.x/ay+1.0f)/8.0f+0.25f, (-xyz.z/ay+1.0f)/6.0f+(2.0f/3.0f));
+
+  if (xyz.z>0.0f && az>=ax && az>=ay) // +Z, Face 4, front
+    return get_color(t, (xyz.x/az+1.0f)/8.0f+0.25f, (xyz.y/az+1.0f)/6.0f+(1.0f/3.0f));
+
+  if (xyz.x<0.0f && ax>=ay && ax>=az) // -X, Face 1, left
+    return get_color(t, (xyz.z/ax+1.0f)/8.0f, (xyz.y/ax+1.0f)/6.0f+(1.0f/3.0f));
+
+  if (xyz.y<0.0f && ay>=ax && ay>=az) // -Y, Face 3, bottom
+    return get_color(t, (xyz.x/ay+1.0f)/8.0f+0.25f, (xyz.z/ay+1.0f)/6.0f);
+
+  if (xyz.z<0.0f && az>=ax && az>=ay) // -Z, Face 5, back
+    return get_color(t, (-xyz.x/az+1.0f)/8.0f+0.75f,(xyz.y/az+1.0f)/6.0f+(1.0f/3.0f));
+
+  return to_float4(1.0f,0.0f,0.0f,1.0f); // error
+}
+
+
+]]
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+
+KernelCode =
+[[
+
+
+#define PI 3.1415926f //const float PI = 3.1415926f;
+
+
+
+__DEVICE__ mat3 rotX(float theta) {
+
+  float s = _sinf(theta);
+  float c = _cosf(theta);
+
+  mat3 m =
+        mat3( 1, 0,  0,
+              0, c,  -s,
+              0, s,  c);
+  return m;
+}
+
+
+
+__DEVICE__ mat3 rotY(float theta) {
+
+  float s = _sinf(theta);
+  float c = _cosf(theta);
+
+  mat3 m =
+        mat3( c, 0, -s,
+              0, 1,  0,
+              s, 0,  c);
+    return m;
+}
+
+
+
+__KERNEL__ void CubeMapEquirectangularKernel(
+    __CONSTANTREF__ Params*   params,
+    __TEXTURE2D__             input,
+    __TEXTURE2D_WRITE__       output
+)
+{
+  // Mapping from spherical coordinates to cartesian 3D coordinates, which is then used as normals/tcoords for a cube map. Use posX and posY to move around.
+
+   DEFINE_KERNEL_ITERATORS_XY(x, y);
+
+  float w = params->width;
+  float h = params->height;
+
+  if (x >= w || y >= h)
+    return;
+
+  float posU = params->posx; // [0,1]
+  float posV = params->posy; // [0,1]
+
+  float fovX = params->fovx * PI / 180.0f;   // deg2rad(FOVX);
+  float fovY = params->fovy * PI / 180.0f;   // deg2rad(FOVY);
+
+  // --------
+
+
+  float u = x / w;        // [0,1]
+  float v = 1.0f - y / h; // [0,1]
+
+  //360 degrees around the x-axis, 180 degrees on the y-axis
+  //The frustum can be split into several parts:
+  //The very top is +y, the north pole, and the very bottom
+  //is -y, i.e the south pole.
+  //The middle consists of +z, -z, +x and -x, where -z
+  //is the center of the frustum, and the left and right
+  //frustum edges show +z, i.e what is behind you
+
+  float hOffset = (2.0f*PI - fovX)*0.5f;
+  float vOffset = (PI - fovY)*0.5f;
+  float hAngle = hOffset + u * fovX;
+  float vAngle = vOffset + v * fovY;
+  float3 n;
+  n.x = _sinf(vAngle) * _sinf(hAngle);
+  n.y = _cosf(vAngle);
+  n.z = _sinf(vAngle) * _cosf(hAngle);
+
+  //Normal pitch-yaw camera controlled with the mouse
+  n = rotY(posU * 2.0f * PI) * rotX(posV * 2.0f * PI) * n;
+
+
+
+  _tex2DVec4Write(output, x, y, cubemap(input,n));
+}
+]]
+-- /*
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+function Create()
+
+
+  ----- In/Out
+
+  InImage = self:AddInput( "Input",  "image",  { LINKID_DataType = "Image", LINK_Main = 1, INP_Required = false  })
+
+  InPOSXSlider = self:AddInput("Position U", "u", {
+      LINKID_DataType    = "Number",
+      INPID_InputControl = "SliderControl",
+      -- INP_MinScale       = -1.0,
+      INP_MinScale       = 0.0,
+      INP_MaxScale       = 1.0,
+      INP_Default        = 0.0,
+  })
+
+  InPOSYSlider = self:AddInput("Position V", "v", {
+      LINKID_DataType    = "Number",
+      INPID_InputControl = "SliderControl",
+      -- INP_MinScale       = -1.0,
+      INP_MinScale       = 0.0,
+      INP_MaxScale       = 1.0,
+      INP_Default        = 0.0,
+  })
+
+  InFOVXSlider = self:AddInput("Field of View X", "fovx", {
+      LINKID_DataType    = "Number",
+      INPID_InputControl = "SliderControl",
+      INP_MinScale       = 0.0,
+      -- INP_MaxScale       = 360.0,
+      INP_MaxScale       = 3 * 360,
+      INP_Default        = 360.0,
+  })
+
+  InFOVYSlider = self:AddInput("Field of View Y", "fovy", {
+      LINKID_DataType    = "Number",
+      INPID_InputControl = "SliderControl",
+      INP_MinScale       = 0.0,
+      -- INP_MaxScale       = 360.0,
+      INP_MaxScale       = 3 * 360,
+      INP_Default        = 180.0,
+  })
+
+  OutImage = self:AddOutput("Output", "Output", {
+    LINKID_DataType = "Image",
+    LINK_Main       = 1,
+  })
+
+  ----- Inspector Panel Controls
+
+  self:AddControlPage("Image")
+
+  InGlobalIn  = self:AddInput("Global In",  "GlobalIn",  { LINKID_DataType = "Number", })
+  InGlobalOut = self:AddInput("Global Out", "GlobalOut", { LINKID_DataType = "Number", })
+
+end
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+function Process(req)
+
+  local w  = Width
+  local h  = Height
+  local ax = XAspect
+  local ay = YAspect
+  local sd = SourceDepth
+
+  local input = InImage:GetValue(req)
+
+  if input ~= nil then
+    w   = input.Width
+    h   = input.Height
+    ax  = input.XAspect
+    ay  = input.YAspect
+    sd  = input.SourceDepth
+  end
+
+
+  local output   = Image({
+    IMG_Document = self.Comp,
+    { IMG_Channel = "Red", },
+    { IMG_Channel = "Green", },
+    { IMG_Channel = "Blue", },
+    { IMG_Channel = "Alpha", },
+    IMG_Width  = w,
+    IMG_Height = h,
+    IMG_XScale = ax,
+    IMG_YScale = ay,
+    IMG_Quality = not req:IsQuick(),
+    IMG_MotionBlurQuality = not req:IsNoMotionBlur(),
+    IMG_DeferAlloc = true,
+    IMG_ProxyScale = ( (not req:IsStampOnly()) and 1 or nil),
+    IMG_Depth = ( (sd~=0) and sd or nil   )
+  })
+
+
+
+  output:Fill(Pixel({R=0,G=0,B=0,A=0}))
+
+  if req:IsPreCalc() then
+    OutImage:Set(req, Image({IMG_Like = output, IMG_NoData = true}))
+    return
+  end
+
+  local node = DVIPComputeNode(req,
+    "CubeMapEquirectangularKernel", CompatibilityCode..KernelCode,
+    "Params", ParametersCode
+  )
+
+  -- Extern texture or create a new one
+
+  if input==nil then
+    input = Image({IMG_Like = output})
+    input:Fill(Pixel({R=0,G=0,B=0,A=0}))
+  end
+
+  -- DCTL parameters
+
+  local params = {}
+
+  params = node:GetParamBlock(ParametersCode)
+
+  params.width  = output.Width
+  params.height = output.Height
+
+  params.posx = InPOSXSlider:GetValue(req).Value
+  params.posy = InPOSYSlider:GetValue(req).Value
+  params.fovx = InFOVXSlider:GetValue(req).Value
+  params.fovy = InFOVYSlider:GetValue(req).Value
+
+  -- Set parameters and add I/O
+
+  node:SetParamBlock(params)
+  node:AddSampler("RowSampler", TEX_FILTER_MODE_LINEAR,TEX_ADDRESS_MODE_MIRROR, TEX_NORMALIZED_COORDS_TRUE)
+  node:AddInput("Image",input)
+  node:AddOutput("Output", output)
+
+  local ok = node:RunSession(req)
+
+	if (not ok) then
+		output = nil
+    dump(node:GetErrorLog())
+	end
+
+  OutImage:Set(req,output)
+end
