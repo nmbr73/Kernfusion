@@ -24,7 +24,7 @@ Install [Obsidina.md](https://obsidian.md):
 	```bash
 	brew install --cask obsidian
 	```
-=== "mcOS/Windows"
+=== "macOS/Windows"
 	Download and run the Installer from [Obsidina.md](https://obsidian.md).
 
 Open the `Wiki/` folder as a "Vault" in Obsidian.
