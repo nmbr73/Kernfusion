@@ -1,5 +1,7 @@
 # FastGlow
 
+- [FastGlow.fuse](FastGlow.fuse
+
 In my Glow fuse I'm using a way to quickly create a gaussian blur using 3 box blurs and doing 9 different sizes of blurs. In total this becomes 54 calls to the DCTL kernel (+ some more for other calculations).
 
 When the kernel is done running the image moves from the GPU to CPU/RAM. In my tests this is the biggest bottle neck, making the fuse waaay slower than if everything would be done in one kernel (6fps vs 24fps)
