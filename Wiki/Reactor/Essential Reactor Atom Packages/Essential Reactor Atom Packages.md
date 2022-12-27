@@ -1,10 +1,8 @@
 ---
-title: Essential Reactor Atom Packages
-alias: Essential Reactor Atom Packages
 author: Andrew Hazelden
 ---
 
-If you are regularly creating visual effects in Fusion Studio then the following Reactor atom packages are likely something you would deem essential to maintain your productivity and sanity:
+If you are regularly creating visual effects in [[Fusion]] Studio then the following [[Reactor]] [[Atom]] packages are likely something you would deem essential to maintain your productivity and sanity:
 
 -   Attribute Spreadsheet (Batch node editing)
 -   Append (Modify clip timings in a node-based fashion)

@@ -1,8 +1,7 @@
 ---
-title: Script/Library/bmd
 aliases:
-- Script/Library/bmd
-- Script/Library/eyeon
+  - Script/Library/bmd
+  - Script/Library/eyeon
 ---
 
 

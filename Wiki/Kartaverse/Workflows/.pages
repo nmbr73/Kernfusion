@@ -1,5 +1,5 @@
 nav:
-  - Kartaverse Workflows: index.md
+  - Kartaverse Workflows: Workflows.md
   - Creating Volumetric NeRFs.md
   - Creating ST Maps.md
   - Render Fusion Comps in Houdini TOPs.md

@@ -1,16 +1,8 @@
 nav:
-  - Krokodove Essentials 📚: index.md
-  - Krokodove Essentials.md
-  - Overview.md
-  - Resources.md
-  - License.md
-  - Compatibility.md
-  - Software Required.md
-  - Install KKD.md
-  - Accessing the KKD Nodes.md
-  - KKD Example Comps.md
-  - KKD Node Categories.md
-  - KKD Node Reference Guide.md
-  - KKD Modifier Reference Guide.md
-  - KKD Node Cookbook.md
+  - Krokodove Essentials: Krokodove.md
+  - KKD Example Comps: Example Compositions.md
+  - KKD Node Categories: Node Categories.md
+  - KKD Node Reference Guide: Node Reference Guide.md
+  - KKD Modifier Reference Guide: Modifier Reference Guide.md
+  - KKD Node Cookbook: Node Cookbook.md
   - ...

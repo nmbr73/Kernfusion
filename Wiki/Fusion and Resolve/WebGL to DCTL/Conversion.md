@@ -53,7 +53,7 @@ vec3 v = vec3(.2,.4,1.3);
 float3 v = to_float3(0.2f,0.4f,1.3f);
 ```
 
-One speciality with those vector types ist, that accessing multiple vector elements at ones (e.g. `float2 c=coords.xy`) must be resolved to single element access (the example could be converted to `float2 c = to_float2(coords.x,coords.y)`). See [[swizzling]] for further details and more examples.
+One speciality with those vector types ist, that accessing multiple vector elements at ones (e.g. `float2 c=coords.xy`) must be resolved to single element access (the example could be converted to `float2 c = to_float2(coords.x,coords.y)`). See [[Swizzling]] for further details and more examples.
 
 
 

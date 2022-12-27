@@ -1,8 +1,3 @@
----
-title: Fusion
-alias: Fusion
----
-
 Blackmagic Fusion is a state of the art compositing software that is used by Hollywood VFX artists, Professional content creators and Hobbyists alike.
 
 Fusion is used for 3D and 2D compositing and Visual FX, Virtual Reality Production, Motion Graphics and more.
@@ -12,7 +7,7 @@ Fusion is used for 3D and 2D compositing and Visual FX, Virtual Reality Producti
 
 It's recommend to start with the [Tutorial](https://youtu.be/nWk6kY6wleU) on the [Official Blackmagic Design YouTube Channel](https://www.youtube.com/channel/UCufB8sMVyP9JEScMjLz74YA).
 
-After that you can check out the YouTube channels on our [[Plugins/Krokodove/index|Krokodove]] page.
+After that you can check out the YouTube channels on our [[Krokodove]] page.
 
 If you are coming from an After Effects or Nuke environment, check out our [[After Effects to Fusion]] and [[Nuke to Fusion]] Pages.
 

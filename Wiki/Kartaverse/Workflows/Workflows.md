@@ -1,7 +1,5 @@
 ---
-title: Workflows
 aliases:
-  - Workflows
   - Kartaverse Workflows
 author: Andrew Hazelden
 tags:
@@ -16,7 +14,7 @@ tags:
 
 ## Original Table of Contents
 
-- [[Kartaverse/Workflows/index|Kartaverse Workflows]] (this page)
+- [[Workflows|Kartaverse Workflows]] (this page)
 - [[Creating Volumetric NeRFs|Creating Volumetric NeRFs]]
 - [[Creating ST Maps|Creating ST Maps]]
 - [[Render Fusion Comps in Houdini TOPs|Render Fusion Comps in Houdini TOPs]]

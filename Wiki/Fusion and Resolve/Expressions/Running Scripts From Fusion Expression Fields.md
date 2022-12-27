@@ -3,9 +3,9 @@ author: Andrew Hazelden
 source: https://www.steakunderwater.com/wesuckless/viewtopic.php?p=43229#p43229
 ---
 
-As you start to create more complex macros, you will eventually "hit the wall" of what is possible, if you are simply using expressions to apply math formulas, and read values from user controls and node input attributes. 
+As you start to create more complex macros, you will eventually "hit the wall" of what is possible, if you are simply using [[Expressions]] to apply math formulas, and read values from user controls and node input attributes. 
 
-If you start an expression code block with a ":" colon symbol, you are able to run inline chunks of LuaJIT code directly. When running Lua script based expressions, you do need to "return" a value at the end of the code block . This gives the input control that hosts the expression gets a final number/string value to work with when the code finishes.
+If you start an code block with a ":" colon symbol, you are able to run inline chunks of [[LuaJIT]] code directly. When running Lua script based expressions, you do need to "return" a value at the end of the code block . This gives the input control that hosts the expression gets a final number/string value to work with when the code finishes.
 
 Included below are several examples of what can be done with "simple expressions" that start with a colon symbol ":", and LuaJIT scripting.
 

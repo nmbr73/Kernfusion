@@ -1,24 +1,12 @@
 ---
 author: Andrew Hazelden
+aliases:
+  - Vonk
+  - Vonk Ultra Data Nodes
 tags:
   - Kartaverse
   - .scrivener-export
 ---
-
-
-
-> [!wiki-todo]- Scrivener Export - Reformatting Needed!
-> This article is an export of a Scrivener document. It will definitely need at least some reformatting to work in Obsidian and MkDocs. Delete this note once the article's formatting  has been fixed to some extent.
-
-# Vonk Ultra
-
-Kartaverse \| Vonk Ultra Data Nodes
-
-Created 2022-05-09 Last Updated 2022-11-02 10.26 AM UTC -4
-
-Docs By [Andrew Hazelden \<andrew@andrewhazelden.com\>](mailto:andrew@andrewhazelden.com)
-
-Overview
 
 Vonk Ultra is a collection of data nodes for Blackmagic Design Resolve/Fusion. Vonk can be thought of as node-based modifiers that live in the flow. These node-based operations provide a no-code alternative to using expressions or custom scripts. Data nodes are tools that allow you to interconnect nodes together by supporting more data types for the input and output connections such as numbers, text, spreadsheets, CSV, JSON, XML, YAML, metadata, arrays, matrices, and more.
 
@@ -37,3 +25,16 @@ The Vonk Ultra documentation (you are reading now) is accessible on [Google Docs
     Reactor:/Deploy/Docs/Kartaverse/Vonk Ultra/Vonk Ultra Data Nodes.pdf
 
 If you enjoy the Vonk data nodes, you might also like to check out a companion guide that explains how to automate Fusion and Resolve workflows with the help of Houdini's TOPS task operators.
+
+## Original Table of Contents
+
+- <del>[[Vonk Ultra]]</del>
+- [[Kartaverse/Vonk Ultra/Software Required]]
+- [[Acknowledgements]]
+- [[Install Vonk]]
+- [[Fusion Render Node Customization]]
+- [[Adding Data Nodes to a Composite]]
+- [[Vonk Essentials]]
+- [[Vonk Scripts]]
+- [[Vonk Node Reference Guide]]
+- [[Vonk Node Cookbook]]

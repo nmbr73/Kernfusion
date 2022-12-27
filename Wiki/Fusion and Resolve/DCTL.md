@@ -10,4 +10,4 @@ tags:
 The DaVinci Resolve Color Transformation Language (better known under its abbreviation DCTL) is ...
 
 See also:
-- [[Conversion]]
+- [[Fusion and Resolve/WebGL to DCTL/Conversion]]

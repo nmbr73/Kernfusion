@@ -1,6 +1,6 @@
 ---
-title: Expressions
-alias: Expressions
+aliases:
+  - Expression
 ---
 
 Expressions are [[Lua]] code. Create for example a [[Text+]] [[Node]]. In the [[Inspector panel]] of the Text+ open the context menu for the text field and select 'Expression'. As an expression copy'n'paste the following code ...

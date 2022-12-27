@@ -9,7 +9,7 @@ tags:
   - .scrivener-export
 ---
 
-There is a collection of [[Plugins/Krokodove/index|Krokodove (KKD)]] example `.comp` files that can also be installed using Reactor.
+There is a collection of [[Krokodove]] example `.comp` files that can also be installed using Reactor.
 
 ![[image194__fix1.png]]
 

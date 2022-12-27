@@ -1,10 +1,9 @@
 ---
-title: Script/Library
 aliases:
-- Script/Library
-- Script Libraries
-- Library
-tags: [Reference]
+  - Script/Library
+  - Script Libraries
+tags:
+  - Reference
 ---
 
 

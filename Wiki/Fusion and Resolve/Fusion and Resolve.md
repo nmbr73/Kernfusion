@@ -1,10 +1,9 @@
 ---
-title: Fusion & DaVinci Resolve
+title: Fusion & Resolve
 aliases:
+- Fusion & Resolve
 - Fusion & DaVinci Resolve
 - Fusion and DaVinci Resolve
-- Fusion & Resolve
-- Fusion and Resolve
 ---
 
 

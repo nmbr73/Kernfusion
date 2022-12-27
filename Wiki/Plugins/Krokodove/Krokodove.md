@@ -1,5 +1,8 @@
 ---
-title: Krokodove Essentials
+aliases:
+- KKD
+- Krokodove Essentials
+- Krokodove (KKD)
 author: Andrew Hazelden
 ---
 
@@ -60,14 +63,14 @@ First you may want to look into the [[Example Compositions]] available via React
 ---------
 
 ## Original Table of Contents
-- <del>[[Plugins/Krokodove/index|Krokodove Essentials]]</del> (integrated into main aticle)
-- <del>[[Plugins/Krokodove/index|Overview]]</del> (integrated into main aticle)
-- <del>[[Plugins/Krokodove/index|Resources]]</del> (integrated into main aticle)
-- <del>[[Plugins/Krokodove/index|License]]</del> (integrated into main aticle)
-- <del>[[Plugins/Krokodove/index|Compatibility]]</del> (integrated into main aticle)
-- <del>[[Plugins/Krokodove/index|Software Required]]</del> (integrated into main aticle)
-- <del>[[Plugins/Krokodove/index|Install KKD]]</del> (integrated into main aticle)
-- <del>[[Plugins/Krokodove/index|Accessing the KKD Nodes]]</del> (integrated into main aticle)
+- <del>[[Krokodove|Krokodove Essentials]]</del> (integrated into main aticle)
+- <del>[[Krokodove|Overview]]</del> (integrated into main aticle)
+- <del>[[Krokodove|Resources]]</del> (integrated into main aticle)
+- <del>[[Krokodove|License]]</del> (integrated into main aticle)
+- <del>[[Krokodove|Compatibility]]</del> (integrated into main aticle)
+- <del>[[Krokodove|Software Required]]</del> (integrated into main aticle)
+- <del>[[Krokodove|Install KKD]]</del> (integrated into main aticle)
+- <del>[[Krokodove|Accessing the KKD Nodes]]</del> (integrated into main aticle)
 - [[Example Compositions|KKD Example Comps]]
 - [[Node Categories|KKD Node Categories]]
 - [[Node Reference Guide|KKD Node Reference Guide]]

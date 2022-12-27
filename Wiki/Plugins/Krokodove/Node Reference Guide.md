@@ -9,7 +9,7 @@ tags:
   - .scrivener-export
 ---
 
-For context see [[Plugins/Krokodove/index|Krokodove (KKD)]].
+For context see [[Krokodove]].
 See also the [[Node Categories]] and the [[Node Cookbook]].
 
 

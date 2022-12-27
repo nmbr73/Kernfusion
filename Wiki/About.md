@@ -29,7 +29,7 @@ Therefore the attempt is to first collect some existing documentation and rearra
 
 The [Kernfusion](https://github.com/nmbr73/Kernfusion) repository is here to compile, sort, structure and reformat content from different sources. Besides some tooling and experiments, the [Wiki/](https://github.com/nmbr73/Kernfusion/tree/main/Wiki) folder is the place where things mainly happen.
 
-This folder is an [Obsidian](https://obsidian.md) vault, which - for the time being - seems to be well suited for the purpose: Obsidian is free and easy to use note taking app, and behind the scenes it is file based with all content in MarkDown format. MarkDown files, in turn, can be easily managed, read, converted and allow for collaborating and versioning via Git. Currently MkDocs is used to provide a *user friendly* output of the content on GitHub Pages. If - and only if - the repository's content evolves to something useful that's worth it to open up for editing by a broader community, it should be considered to abandon it - that is after exporting the repo's content some day as a basis for the to-be MediaWiki instance. But until then and unless this thing flies, a Git repo should perfectly do to get organized.
+This folder is an [Obsidian](https://obsidian.md) vault, which - for the time being - seems to be well suited for the purpose: Obsidian is a free and easy to use note taking app, and behind the scenes it is file based with all content in MarkDown format. MarkDown files, in turn, can be easily managed, read, converted and allow for collaborating and versioning via Git. Currently MkDocs is used to provide a *user friendly* output of the content on GitHub Pages. If - and only if - the repository's content evolves to something useful that's worth it to open up for editing by a broader community, it should be considered to abandon it - that is after exporting the repo's content some day as a basis for the to-be MediaWiki instance. But until then and unless this thing flies, a Git repo should perfectly do to get organized.
 
 
 ## Getting started
@@ -140,11 +140,17 @@ git branch --delete <NAME>
 > - Do not name any file `index.md`
 > - `.pages` files are meant be eliminated (remember: don't put articles in a linear order)
 
-Intention is to build up a collection of articles to eventually transfer them into a Wiki (most probably based on [MediaWiki](https://www.mediawiki.org/wiki/MediaWiki)) some day. A Wiki has no "linear" structure, but is more a network of linked articles. This being said, it should be avoided to try to bring them into an order: Each article is just a file and files may happen to be sorted alphabetically in the file system - but that's just a random order and might be completely different for the left sidebar of the static website and definitely will be different in a Wiki.
+Intention is to build up a collection of articles to eventually transfer them into a Wiki some day (most probably based on [MediaWiki](https://www.mediawiki.org/wiki/MediaWiki)).
+
+A Wiki has no "linear" structure, but is more a network of linked articles. This being said, it must be avoided to try to put the pages into an order - even though the file navigation panel (on the left in Obsidian, or the MkDocs's static output) may tempt you to do so. As a compensation for this, links must be embedded in a meaningful way whenever possible in order to let the information network emerge.
 
 Still there is a way for a rough structuring of Wiki articles by assigning them a *[category](https://www.mediawiki.org/wiki/Help:Categories)*. As an article can belong to multiple categories, Obsidian's tags mechanism should be well suited to mimic categories.
 
-Another way to organise articles in a (Media)Wiki are *[subpages](https://www.mediawiki.org/wiki/Help:Subpages)*. In this repository subpages are realised by folders. To provide the text the folder itself should be associated with, every folder must contain a Markdown file with its filename matching the folders name.
+Another way to organise articles in a (Media)Wiki are *[subpages](https://www.mediawiki.org/wiki/Help:Subpages)*. In this repository subpages are realized by folders. To provide the text the folder itself should be associated with, every folder must contain a Markdown file with its filename matching the folders name.
+
+> [!warning] index.md files
+> MkDocs can use `index.md` files as a folders page. But these are a pain to use, i.e. when setting links to such pages in Obsidian (we end up with tons of pages named 'index' and have to set alternative links texts for all of them). A usable compromise has still to be found here!
+
 
 
 ## Authoring
@@ -157,9 +163,9 @@ Topics of the articles should be all around visual effect tools in general and t
 
 Target audience of the articles is (maybe) ...
 
-- users / vfx artists, using the different tools
-- administrators / operators / engineers / pipeline TDs, provisioning and maintaining a vfx toolchain
-- developers, writing tools, coding scripts, implementing drivers and programming visual effects
+- users / vfx **artists**, using the different tools
+- administrators / operators / engineers / **pipeline TDs**, provisioning and maintaining a vfx toolchain
+- **developers**, writing tools, coding scripts, implementing drivers and programming visual effects
 
 ... with a focus on the latter two (in general very good and extensive manuals exist for the end-users of the tools) and blurred borders between the three.
 
@@ -169,10 +175,17 @@ Please organize / structure your articles with the different audiences in mind; 
 
 Depending on the source, we will have some material structured like a book - and people tend to build documentation this way. But whenever you ask yourself "how can I bring the files in the Obsidian folder into the right order", or "the order of the articles on the left hand side of MkDocs output is not correct", you are probably on the wrong track! A Wiki is a "network" of articles and not designed to be read from a beginning to an end.
 
+> [!warning] Content will be hardly be publishable as a book!
+>
+> It's really nice, to have manuals as a PDF or even an ePub. But, it must be clear that this will unfortunately hardly be possible with the approach pursued here. This is a serious disadvantage of which one must be aware.
+
 ### Write with Style
 
-Make sure that you write your text to have a meaning, not a nice formatting. The formatting comes for free and is very flexible if you got the semantics right. If for example you write using a tool like Scrivener, then you are probably on the wrong track as soon as you set a font, its size, a color, or something similar. You almost always want to use a "Style" for that! This way you can set and change the formatting of such elements easily and for each target output format individually.
+Make sure that you write your text to have a meaning, not a nice formatting. The formatting comes for free and is very flexible if you got the semantics right. If for example you write using tools like Word, Pages, Scrivener, or such, then you are probably on the wrong track as soon as you set a font, its size, a color, or something similar. You almost always want to use a "Style" for that! This way you can set and change the formatting of such elements easily and for each target output format individually.
 
+### Folders vs Tags (Subpages vs Categories)
+
+Subpages help to group articles that belong together. For example all [[Kartaverse]] core technologies are placed in a 'Kartaverse' folder. Categories are a different kind of grouping: Articles from very different subpages can belong to the same category and a single article can belong to multiple categories. There might be for example articles of a 'Reference' kind in very different folders (subpages). In some cases even both groupings can make sense: All the Kartaverse workflows are grouped by a 'Workflows' subpage in the Kartaverse and each such article is tagged as a 'Workflow' (each Kartaverse Workflow is a Workflow, but not every Workflow has to be a Kartaverse Workflow).
 
 ## Potential Sources
 

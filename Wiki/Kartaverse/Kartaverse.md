@@ -1,8 +1,3 @@
----
-title: Kartaverse
-alias: Kartaverse
----
-
 Kartaverse is an extensive open-source media production pipeline that integrates seamlessly with a broad range of post-production tools used in VFX, VP, XR, 360VR, fulldome, volumetric video, computer vision, and machine learning workflows.
 
 ## The Kartaverse Packages
@@ -108,7 +103,7 @@ Oculus Quest "Santa Cruz" HMD Dev Kit
 
 ### Workflow Guides
 
-See [[Kartaverse/Workflows/index|Kartaverse Workflows]]
+See [[Workflows|Kartaverse Workflows]]
 
 -   [KartaVR Compositing Examples](https://andrewhazelden.com/projects/kartavr/docs/examples.html)
 
