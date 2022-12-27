@@ -1,20 +1,19 @@
 ---
 author: Andrew Hazelden
+aliases:
+  - Krokodove Example Compositions
+  - Krokodove Example Comps
+  - KKD Example Comps
 tags:
   - Kartaverse
   - .scrivener-export
 ---
 
-
-
-> [!wiki-todo]- Scrivener Export - Reformatting Needed!
-> This article is an export of a Scrivener document. It will definitely need at least some reformatting to work in Obsidian and MkDocs. Delete this note once the article's formatting  has been fixed to some extent.
+There is a collection of [[Kartaverse/Krokodove/index|Krokodove (KKD)]] example `.comp` files that can also be installed using Reactor.
 
 ![[image194__fix1.png]]
 
-There is a collection of KKD example .comp files that can also be installed using Reactor.
-
-Select the "Comps \> Krokodove" category on the left sidebar. Click on the package named "Krokodove Showcase" and then press the "Install" button.
+Select the "Comps --> Krokodove" category on the left sidebar. Click on the package named "Krokodove Showcase" and then press the "Install" button.
 
 ![[image136__fix1.png]]
 
@@ -33,3 +32,5 @@ Inside this location you will have access to 35 example comps that use a variety
 Here is a screenshot of the "Reactor:/Deploy/Comps/Krokodove/Pack/Pack_A\_001.comp" project file:
 
 ![[image243__fix1.png]]
+
+For more practical examples see the [[Node Cookbook]].

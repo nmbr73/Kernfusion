@@ -1,16 +1,15 @@
 ---
 author: Andrew Hazelden
+aliases:
+  - Krokodove Node Categories
+  - KKD Node Categories
 tags:
   - Kartaverse
+  - Reference
   - .scrivener-export
 ---
 
-
-
-> [!wiki-todo]- Scrivener Export - Reformatting Needed!
-> This article is an export of a Scrivener document. It will definitely need at least some reformatting to work in Obsidian and MkDocs. Delete this note once the article's formatting  has been fixed to some extent.
-
-The Krokodove nodes are separated into the following categories and sub-categories based upon what data types they work with, and the function they perform:
+The [[Kartaverse/Krokodove/index|Krokodove (KKD)]] nodes (see the [[Node Reference Guide]]) are separated into the following categories and sub-categories based upon what data types they work with, and the function they perform:
 
 3D
 
