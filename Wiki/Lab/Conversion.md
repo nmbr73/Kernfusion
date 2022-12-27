@@ -45,6 +45,60 @@ The "kas_DarkBlueIceShard" image is 'image35'
 https://pkg.go.dev/code.sajari.com/docconv
 
 
+## Misc
+
+
+Embed Video:
+https://pypi.org/project/python-markdown-oembed/
+https://gist.github.com/dmitric/6266559
+
+Auch ein paar nette dabei:
+https://chrieke.medium.com/the-best-mkdocs-plugins-and-customizations-fc820eb19759
+
+Grundlagen:
+https://www.mkdocs.org/dev-guide/plugins/
+https://python-markdown.github.io/extensions/api/
+
+Die kaputten Links:
+https://github.com/Jackiexiao/mkdocs-roamlinks-plugin
+[[Lab/Folder Zero/index]]
+
+
+Und Bildgrößen müsste ich noch gucken - die aber vielleicht einfach als Extension?!?
+
+
+Okay, [MultiMarkdown](https://en.wikipedia.org/wiki/MultiMarkdown) still seems to be the best option. With and `.opml` (Titles only) I can restore the articles' order - format is simple and straight forward. Have to check what exacly happens
+
+
+https://www.youtube.com/watch?v=yTMo9WkOphE
+und hier ist was erklärt, das helfen könnte
+
+https://www.youtube.com/watch?v=xisfLmWGXqA und vielleicht hier
+
+https://medium.com/@TKalippke/all-you-have-to-do-is-type-yourself-494a2c0b2fd6
+
+mit docker verbasteln - als beispiel
+https://hub.docker.com/r/silentstorm/pandoc-mkdocs/
+
+
+-----
+
+Another test is [[Fusion and DaVinci Resolve/Fusion/index|Fusion]]
+
+$p(x|y) = \frac{p(y|x)p(x)}{p(y)}$, \(p(x|y) = \frac{p(y|x)p(x)}{p(y)}\).
+
+
+This is Lua's `#!lua if x ~= 42 then -- ...` inlined in text.
+
+And some ++cmd+opt+q++, ++ctrl+alt+del++ keystrokes,
+
+[[Config|Config/]]
+
+-----
+
+
+
+
 
 ## Scrivener
 

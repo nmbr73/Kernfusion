@@ -1,6 +1,6 @@
 
 
-## Scrivener to Obsidian
+## <del>Scrivener to Obsidian</del> (obsolete!)
 
 ```sh
 
