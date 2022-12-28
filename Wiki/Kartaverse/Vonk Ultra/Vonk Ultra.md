@@ -8,6 +8,11 @@ tags:
   - .scrivener-export
 ---
 
+Vonk Ultra provides a wide range of "data node" fuses that allow you to create efficient node graphs in Fusion that directly work with text, numbers, CSV spreadsheets, JSON, XML, YAML, and many other types of data using modifier nodes. Vonk Ultra can be installed via the [[Reactor]] package manager. More information can be read in the [Vonk Ultra documentation](https://docs.google.com/document/d/1U9WfdHlE1AZHdU6_ZQCB1I2nSa5I7TyHG2vKMi2I7v8/edit?usp=sharing). See also the [[Learning Resources|Vonk Ultra Learning Resources]].
+
+
+## Introduction
+
 Vonk Ultra is a collection of data nodes for Blackmagic Design Resolve/Fusion. Vonk can be thought of as node-based modifiers that live in the flow. These node-based operations provide a no-code alternative to using expressions or custom scripts. Data nodes are tools that allow you to interconnect nodes together by supporting more data types for the input and output connections such as numbers, text, spreadsheets, CSV, JSON, XML, YAML, metadata, arrays, matrices, and more.
 
 These data node-based techniques encourage a more seamless interchange of information between DCC tools by reducing the loss of important metadata, removing manual data entry steps that can be error-prone, and keep data flowing through a pipeline in a more organized and consistent way.
