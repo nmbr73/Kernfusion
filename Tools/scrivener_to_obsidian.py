@@ -76,7 +76,7 @@ for i, page in enumerate(pages):
 
     if name == title:
         nav.append(f"  - {name}.md")
-        toc.append(f"- [[{name}]]")
+        toc.append(f"- [[{name}|{title}]]") # should be shown by original title, even if it's moved later on
     else:
         nav.append(f"  - {title}: {name}.md")
         toc.append(f"- [[{name}|{title}]]")
