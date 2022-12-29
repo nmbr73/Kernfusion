@@ -8,4 +8,5 @@
 
 - [Fuses by TiDa](../../Fuses/tida/README.md)
 - [Comps by TiDa](../../Comp/tida/README.md)
+- [Macros by others](..//README.md)
 

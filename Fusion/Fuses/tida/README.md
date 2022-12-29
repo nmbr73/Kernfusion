@@ -5,5 +5,6 @@
 
 ## See also:
 
+- [Fuses by others](../README.md)
 - [Comps by TiDa](../../Comp/tida/README.md)
 - [Macros by TiDa](../../Macros/tida/README.md)

@@ -13,5 +13,5 @@ All of this is in a very early stage. So far I started working on ...
 
 ## See also:
 
-- [Compos by nmbr73](../../Comp/nmbr73/README.md)
-
+- [Fuses by others](../README.md)
+- [Comps by nmbr73](../../Comp/nmbr73/README.md)

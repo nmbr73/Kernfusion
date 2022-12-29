@@ -13,7 +13,7 @@
 ### [Comps](Comp/README.md)
 - **[TitleBurnEffect](Comp/tida/TitleBurnEffect.md)** by TiDa
 
-### [Macros](Fuses/README.md)
+### [Macros](Macros/README.md)
 - **[Bokeh_Image](Macros/tida/Bokeh_Image.md)** by TiDa
 - **[Bokeh_AChroma](Macros/tida/Bokeh_AChroma.md)** by TiDa
 

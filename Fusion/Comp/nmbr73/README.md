@@ -8,3 +8,4 @@
 ## See also:
 
 - [Fuses by nmbr73](../../Fuses/nmbr73/README.md)
+- [Comps by others](../README.md)
