@@ -18,13 +18,13 @@ Pressing the Shift + Space hotkey will display the "Select Tools" dialog. You ca
 
 It is helpful to know that the Vonk nodes all start with the letter "v" as a prefix. This helps cluster the nodes together alphabetically.
 
-![[image310.png]]
+![[Kartaverse/Vonk Ultra/img/image310.png]]
 
 Nodes View Contextual Menu
 
 The Vonk nodes can be browsed in a hierarchical fashion using the Nodes view. Right-click to display a contextual pop-up menu system. At the top of this menu is the "Add Tools \>" entry. Navigate to the "Kartaverse \> Vonk Ultra" sub-menus.
 
-![[image347.png]]
+![[Kartaverse/Vonk Ultra/img/image347.png]]
 
 Effects Library Tab
 

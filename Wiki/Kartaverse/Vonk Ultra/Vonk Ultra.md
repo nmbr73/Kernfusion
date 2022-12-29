@@ -37,7 +37,7 @@ If you enjoy the Vonk data nodes, you might also like to check out a companion g
 - [[Kartaverse/Vonk Ultra/Software Required]]
 - [[Acknowledgements]]
 - [[Install Vonk]]
-- [[Fusion Render Node Customization]]
+- [[Kartaverse/Vonk Ultra/Fusion Render Node Customization]]
 - [[Adding Data Nodes to a Composite]]
 - [[Vonk Essentials]]
 - [[Vonk Scripts]]

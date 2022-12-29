@@ -17,7 +17,7 @@ See also the [[Node Categories]] and the [[Node Cookbook]].
 
 Align an object relative to
 
-![[image172__fix1.png]]
+![[Plugins/Krokodove/img/image172__fix1.png]]
 
 
 
@@ -25,7 +25,7 @@ Align an object relative to
 
 Connect vertices...
 
-![[image269__fix1.png]]
+![[Plugins/Krokodove/img/image269__fix1.png]]
 
 
 
@@ -33,7 +33,7 @@ Connect vertices...
 
 Cuts off an object
 
-![[image38__fix4.png]]
+![[Plugins/Krokodove/img/image38__fix4.png]]
 
 
 
@@ -41,7 +41,7 @@ Cuts off an object
 
 Create duplicates, fully controlled by data channels.
 
-![[image280__fix1.png]]
+![[Plugins/Krokodove/img/image280__fix1.png]]
 
 
 
@@ -49,7 +49,7 @@ Create duplicates, fully controlled by data channels.
 
 Kills (part of) an object
 
-![[image126.png]]
+![[Plugins/Krokodove/img/image126.png]]
 
 
 
@@ -57,7 +57,7 @@ Kills (part of) an object
 
 Create duplicates, fully controlled by image maps.
 
-![[image234__fix1.png]]
+![[Plugins/Krokodove/img/image234__fix1.png]]
 
 
 
@@ -65,7 +65,7 @@ Create duplicates, fully controlled by image maps.
 
 Manipulates objects as a whole
 
-![[image112__fix1.png]]
+![[Plugins/Krokodove/img/image112__fix1.png]]
 
 
 
@@ -73,7 +73,7 @@ Manipulates objects as a whole
 
 Manipulate objects on a poly level.
 
-![[image55__fix2.png]]
+![[Plugins/Krokodove/img/image55__fix2.png]]
 
 
 
@@ -81,7 +81,7 @@ Manipulate objects on a poly level.
 
 A 3D retiming tool
 
-![[image44__fix4.png]]
+![[Plugins/Krokodove/img/image44__fix4.png]]
 
 
 
@@ -89,7 +89,7 @@ A 3D retiming tool
 
 Tools to manipulate an object
 
-![[image261__fix1.png]]
+![[Plugins/Krokodove/img/image261__fix1.png]]
 
 
 
@@ -97,7 +97,7 @@ Tools to manipulate an object
 
 Manipulate objects on a vertex level.
 
-![[image156__fix1.png]]![[image193__fix1.png]]
+![[Plugins/Krokodove/img/image156__fix1.png]]![[Plugins/Krokodove/img/image193__fix1.png]]
 
 
 
@@ -105,7 +105,7 @@ Manipulate objects on a vertex level.
 
 Creates a height field from a map
 
-![[image84__fix2.png]]![[image20__fix5.png]]![[image26__fix4.png]]![[image56__fix3.png]]
+![[Plugins/Krokodove/img/image84__fix2.png]]![[Plugins/Krokodove/img/image20__fix5.png]]![[Plugins/Krokodove/img/image26__fix4.png]]![[Plugins/Krokodove/img/image56__fix3.png]]
 
 
 
@@ -113,7 +113,7 @@ Creates a height field from a map
 
 Creates a foldable object
 
-![[image162__fix1.png]]![[image142__fix1.png]]![[image73__fix2.png]]![[image149__fix1.png]]
+![[Plugins/Krokodove/img/image162__fix1.png]]![[Plugins/Krokodove/img/image142__fix1.png]]![[Plugins/Krokodove/img/image73__fix2.png]]![[Plugins/Krokodove/img/image149__fix1.png]]
 
 
 
@@ -121,7 +121,7 @@ Creates a foldable object
 
 Creates a height field from a map
 
-![[image230.png]]![[image48__fix3.png]]
+![[Plugins/Krokodove/img/image230.png]]![[Plugins/Krokodove/img/image48__fix3.png]]
 
 
 
@@ -129,7 +129,7 @@ Creates a height field from a map
 
 Creates an object
 
-![[image199.png]]
+![[Plugins/Krokodove/img/image199.png]]
 
 
 
@@ -137,7 +137,7 @@ Creates an object
 
 Creates a 3D object from a shape
 
-![[image244__fix1.png]]
+![[Plugins/Krokodove/img/image244__fix1.png]]
 
 
 
@@ -145,7 +145,7 @@ Creates a 3D object from a shape
 
 Creates some tubes
 
-![[image35__fix4.png]]![[image196.png]]![[image65__fix2.png]]![[image214__fix1.png]]![[image164__fix1.png]]![[image260__fix1.png]]
+![[Plugins/Krokodove/img/image35__fix4.png]]![[Plugins/Krokodove/img/image196.png]]![[Plugins/Krokodove/img/image65__fix2.png]]![[Plugins/Krokodove/img/image214__fix1.png]]![[Plugins/Krokodove/img/image164__fix1.png]]![[Plugins/Krokodove/img/image260__fix1.png]]
 
 
 
@@ -153,7 +153,7 @@ Creates some tubes
 
 Creates a plane with based on world space coordinates
 
-![[image190__fix1.png]]
+![[Plugins/Krokodove/img/image190__fix1.png]]
 
 
 
@@ -161,7 +161,7 @@ Creates a plane with based on world space coordinates
 
 Region 3D Cube
 
-![[image110__fix2.png]]![[image43__fix4.png]]
+![[Plugins/Krokodove/img/image110__fix2.png]]![[Plugins/Krokodove/img/image43__fix4.png]]
 
 
 
@@ -169,7 +169,7 @@ Region 3D Cube
 
 Region 3D Image
 
-![[image91__fix1.png]]
+![[Plugins/Krokodove/img/image91__fix1.png]]
 
 
 
@@ -177,11 +177,11 @@ Region 3D Image
 
 Region 3D Merge
 
-![[image83__fix2.png]]
+![[Plugins/Krokodove/img/image83__fix2.png]]
 
 The "Combine" control can be set to "Union", "Intersect", "Add", "Subtract", or "Exclusive".
 
-![[image180__fix1.png]]
+![[Plugins/Krokodove/img/image180__fix1.png]]
 
 
 
@@ -189,7 +189,7 @@ The "Combine" control can be set to "Union", "Intersect", "Add", "Subtract", or 
 
 Region 3D Modify
 
-![[image25__fix5.png]]
+![[Plugins/Krokodove/img/image25__fix5.png]]
 
 
 
@@ -197,7 +197,7 @@ Region 3D Modify
 
 Region 3D Noise
 
-![[image282__fix1.png]]
+![[Plugins/Krokodove/img/image282__fix1.png]]
 
 
 
@@ -205,7 +205,7 @@ Region 3D Noise
 
 Region 3D Plane
 
-![[image227__fix1.png]]
+![[Plugins/Krokodove/img/image227__fix1.png]]
 
 
 
@@ -213,7 +213,7 @@ Region 3D Plane
 
 Region 3D Shape
 
-![[image263__fix1.png]]
+![[Plugins/Krokodove/img/image263__fix1.png]]
 
 The Mapping control can be set to "Planar", "Spherical", or "Cylindrical".
 
@@ -223,7 +223,7 @@ The Mapping control can be set to "Planar", "Spherical", or "Cylindrical".
 
 Region 3D Sphere
 
-![[image10__fix6.png]]
+![[Plugins/Krokodove/img/image10__fix6.png]]
 
 
 
@@ -231,13 +231,13 @@ Region 3D Sphere
 
 Region 3D Transform
 
-![[image114__fix1.png]]
+![[Plugins/Krokodove/img/image114__fix1.png]]
 
 The "Region Transform" control page has a single checkbox labelled "Invert".
 
 The "Transform" control page can be used to adjust the XYZ Position, Rotation, and Scale attributes.
 
-![[image96__fix1.png]]
+![[Plugins/Krokodove/img/image96__fix1.png]]
 
 
 
@@ -245,11 +245,11 @@ The "Transform" control page can be used to adjust the XYZ Position, Rotation, a
 
 Copy data channels
 
-![[image238.png]]
+![[Plugins/Krokodove/img/image238.png]]
 
 The "Type In" and "Type Out" controls can be set to "Any", "Bool", "Integer", "Float", "Vector2", "Vector3", or "Color".
 
-![[image255__fix2.png]]
+![[Plugins/Krokodove/img/image255__fix2.png]]
 
 
 
@@ -257,7 +257,7 @@ The "Type In" and "Type Out" controls can be set to "Any", "Bool", "Integer", "F
 
 Data Delete
 
-![[image154__fix1.png]]
+![[Plugins/Krokodove/img/image154__fix1.png]]
 
 
 
@@ -265,7 +265,7 @@ Data Delete
 
 Data Grow
 
-![[image24__fix4.png]]
+![[Plugins/Krokodove/img/image24__fix4.png]]
 
 
 
@@ -273,7 +273,7 @@ Data Grow
 
 Data Info
 
-![[image205__fix1.png]]
+![[Plugins/Krokodove/img/image205__fix1.png]]
 
 
 
@@ -281,11 +281,11 @@ Data Info
 
 Data Math
 
-![[image111__fix2.png]]
+![[Plugins/Krokodove/img/image111__fix2.png]]
 
 The Operation control can be set to "None", "Add", "Subtr", "Mult", "Div", "Power", or "Mod".
 
-![[image270__fix1.png]]
+![[Plugins/Krokodove/img/image270__fix1.png]]
 
 
 
@@ -293,11 +293,11 @@ The Operation control can be set to "None", "Add", "Subtr", "Mult", "Div", "Powe
 
 Data Merge
 
-![[image143__fix1.png]]
+![[Plugins/Krokodove/img/image143__fix1.png]]
 
 The data merge node has 8 initial input connections named "Data \[1-8\] (in)".
 
-![[image116__fix1.png]]
+![[Plugins/Krokodove/img/image116__fix1.png]]
 
 
 
@@ -305,7 +305,7 @@ The data merge node has 8 initial input connections named "Data \[1-8\] (in)".
 
 Data Remap
 
-![[image32__fix2.png]]
+![[Plugins/Krokodove/img/image32__fix2.png]]
 
 
 
@@ -313,11 +313,11 @@ Data Remap
 
 Data Select
 
-![[image155__fix1.png]]
+![[Plugins/Krokodove/img/image155__fix1.png]]
 
 The Operation control can be set to "None", "Add", "Subtr", "Mult", "Div", "Power", or "Mod".
 
-![[image270__fix1.png]]
+![[Plugins/Krokodove/img/image270__fix1.png]]
 
 
 
@@ -325,7 +325,7 @@ The Operation control can be set to "None", "Add", "Subtr", "Mult", "Div", "Powe
 
 Set Constant Data
 
-![[image78__fix1.png]]
+![[Plugins/Krokodove/img/image78__fix1.png]]
 
 
 
@@ -333,7 +333,7 @@ Set Constant Data
 
 Set Data Manually, one by one
 
-![[image217__fix1.png]]
+![[Plugins/Krokodove/img/image217__fix1.png]]
 
 
 
@@ -341,7 +341,7 @@ Set Data Manually, one by one
 
 Set data to follow a ramp or gradient between 2 values
 
-![[image235.png]]
+![[Plugins/Krokodove/img/image235.png]]
 
 
 
@@ -349,7 +349,7 @@ Set data to follow a ramp or gradient between 2 values
 
 Set/add random data
 
-![[image248.png]]
+![[Plugins/Krokodove/img/image248.png]]
 
 
 
@@ -357,11 +357,11 @@ Set/add random data
 
 Data Sorting
 
-![[image239.png]]
+![[Plugins/Krokodove/img/image239.png]]
 
 The "Vector Sort1" control can be set to "By X", "By Y", "By Z", or "Distance".
 
-![[image160__fix1.png]]
+![[Plugins/Krokodove/img/image160__fix1.png]]
 
 
 
@@ -369,7 +369,7 @@ The "Vector Sort1" control can be set to "By X", "By Y", "By Z", or "Distance".
 
 Data Tools
 
-![[image222.png]]
+![[Plugins/Krokodove/img/image222.png]]
 
 By default the "Limit Count Start" and "Limit Count End" controls have an initial control range of 0-100.
 
@@ -379,7 +379,7 @@ By default the "Limit Count Start" and "Limit Count End" controls have an initia
 
 Data Transform
 
-![[image189__fix1.png]]
+![[Plugins/Krokodove/img/image189__fix1.png]]
 
 
 
@@ -387,7 +387,7 @@ Data Transform
 
 Create data channels
 
-![[image23__fix4.png]]![[image50__fix5.png]]![[image161.png]]![[image64__fix2.png]]![[image178__fix1.png]]![[image251__fix1.png]]![[image86__fix1.png]]
+![[Plugins/Krokodove/img/image23__fix4.png]]![[Plugins/Krokodove/img/image50__fix5.png]]![[Plugins/Krokodove/img/image161.png]]![[Plugins/Krokodove/img/image64__fix2.png]]![[Plugins/Krokodove/img/image178__fix1.png]]![[Plugins/Krokodove/img/image251__fix1.png]]![[Plugins/Krokodove/img/image86__fix1.png]]
 
 
 
@@ -395,7 +395,7 @@ Create data channels
 
 Sample image and format data
 
-![[image5__fix9.png]]![[image132__fix1.png]]![[image49__fix3.png]]
+![[Plugins/Krokodove/img/image5__fix9.png]]![[Plugins/Krokodove/img/image132__fix1.png]]![[Plugins/Krokodove/img/image49__fix3.png]]
 
 
 
@@ -403,7 +403,7 @@ Sample image and format data
 
 Sample Image
 
-![[image213__fix1.png]]
+![[Plugins/Krokodove/img/image213__fix1.png]]
 
 
 
@@ -411,7 +411,7 @@ Sample Image
 
 Sample image using packing method
 
-![[image171__fix1.png]]
+![[Plugins/Krokodove/img/image171__fix1.png]]
 
 
 
@@ -419,7 +419,7 @@ Sample image using packing method
 
 Sample Region
 
-![[image54__fix4.png]]
+![[Plugins/Krokodove/img/image54__fix4.png]]
 
 The "Replace Type" control can be set to "Replace in Range" or "Replace All".
 
@@ -429,7 +429,7 @@ The "Replace Type" control can be set to "Replace in Range" or "Replace All".
 
 Load data
 
-![[image18__fix6.png]]
+![[Plugins/Krokodove/img/image18__fix6.png]]
 
 The "Channels Direction" control can be set to "By Row" or "By Column".
 The "First Row" control can be set to "Automatic", "Channel Names", or "Channel Data".
@@ -441,7 +441,7 @@ The "First Column" control can be set to "Automatic", "Channel Names", or "Chann
 
 Create a pattern
 
-![[image181__fix1.png]]
+![[Plugins/Krokodove/img/image181__fix1.png]]
 
 The "Pattern Type" control can be set to "Grid" or "Ring".
 The "Ring Count Type" control can be set to "By Number", "By Distance", or "By Angle".
@@ -452,11 +452,11 @@ The "Ring Count Type" control can be set to "By Number", "By Distance", or "By A
 
 Image analysis
 
-![[image1__fix11.png]]![[image37__fix3.png]]![[image89__fix2.png]]
+![[Plugins/Krokodove/img/image1__fix11.png]]![[Plugins/Krokodove/img/image37__fix3.png]]![[Plugins/Krokodove/img/image89__fix2.png]]
 
 The "Scale" control on the Guides control page can be set to "0.0 ... 1.0", "0 ... 255", "0 ... 1023", or "0 ... 65535".
 
-![[image201.png]]
+![[Plugins/Krokodove/img/image201.png]]
 
 
 
@@ -464,11 +464,11 @@ The "Scale" control on the Guides control page can be set to "0.0 ... 1.0", "0 .
 
 A mere re-packaging of two basic Fusion tools: color space swapping and blur
 
-![[image125.png]]
+![[Plugins/Krokodove/img/image125.png]]
 
 The "Blur Filter" control can be set to "Box", "Soften", "Bartlett", "Gaussian", or "Sharpen"
 
-![[image103__fix2.png]]
+![[Plugins/Krokodove/img/image103__fix2.png]]
 
 
 
@@ -476,7 +476,7 @@ The "Blur Filter" control can be set to "Box", "Soften", "Bartlett", "Gaussian",
 
 Bounding Box
 
-![[image275__fix1.png]]
+![[Plugins/Krokodove/img/image275__fix1.png]]
 
 The "Channel" control can be set to "Red", "Green", "Blue", "Alpha", or "Lumin.".
 The "Threshold" control has a default input control range of 0 - 1.
@@ -489,7 +489,7 @@ The "Extend" control has a default input control range of -0.05 to 0.1. The init
 
 Connect points with lines or splines
 
-![[image15__fix5.png]]![[image279__fix1.png]]![[image283__fix1.png]]
+![[Plugins/Krokodove/img/image15__fix5.png]]![[Plugins/Krokodove/img/image279__fix1.png]]![[Plugins/Krokodove/img/image283__fix1.png]]
 
 
 
@@ -497,32 +497,32 @@ Connect points with lines or splines
 
 Reduces the number of bits for each color channel and creates a 'logical noise' doing it
 
-![[image218.png]]
+![[Plugins/Krokodove/img/image218.png]]
 
 The "Dither method" control can be set to "None", "Ordered", "Simple error distribution", or "Floyd & Steinberg".
 
-![[image129.png]]
+![[Plugins/Krokodove/img/image129.png]]
 
 
 
 ## Extend
 
-![[image101__fix1.png]]
+![[Plugins/Krokodove/img/image101__fix1.png]]
 
 The "Direction" control can be set to "Horizontal" or "Vertical".
 The "Channel" control can be set to "Red", "Green", "Blue", "Alpha", "Lumin.", or "Each".
 
-![[image79__fix1.png]]
+![[Plugins/Krokodove/img/image79__fix1.png]]
 
 The "Hold" control can be set to "Within range", "Minimum", or "Maximum".
 
-![[image173__fix1.png]]
+![[Plugins/Krokodove/img/image173__fix1.png]]
 
 
 
 ## Find
 
-![[image212__fix1.png]]
+![[Plugins/Krokodove/img/image212__fix1.png]]
 
 The "Channel" control can be set to "Red", "Green", "Blue", "Alpha", or "Lumin.".
 The "Result" control can be set to "Analytic" or "Clean".
@@ -531,7 +531,7 @@ The "Result" control can be set to "Analytic" or "Clean".
 
 ## Flur
 
-![[image277.png]]
+![[Plugins/Krokodove/img/image277.png]]
 
 The "Shape" control can be set to "Square", "Round", or "Axial".
 
@@ -539,21 +539,21 @@ The "Shape" control can be set to "Square", "Round", or "Axial".
 
 ## Fragments
 
-![[image203__fix1.png]]
+![[Plugins/Krokodove/img/image203__fix1.png]]
 
 The "Channel" control can be set to "Red", "Green", "Blue", "Alpha", or "Lumin.".
 
-![[image33__fix5.png]]
+![[Plugins/Krokodove/img/image33__fix5.png]]
 
 The "Range Curve" control can be set to "Linear", "Ease In", "Ease Out", or "Ease In/Out".
 
-![[image109.png]]
+![[Plugins/Krokodove/img/image109.png]]
 
 
 
 ## Grow
 
-![[image215.png]]![[image76__fix2.png]]
+![[Plugins/Krokodove/img/image215.png]]![[Plugins/Krokodove/img/image76__fix2.png]]
 
 
 
@@ -561,19 +561,19 @@ The "Range Curve" control can be set to "Linear", "Ease In", "Ease Out", or "Eas
 
 Fill transparent parts by extending the edge color
 
-![[image179__fix1.png]]
+![[Plugins/Krokodove/img/image179__fix1.png]]
 
 
 
 ## Microwaves
 
-![[image41__fix3.png]]
+![[Plugins/Krokodove/img/image41__fix3.png]]
 
 
 
 ## Pack
 
-![[image137.png]]![[image66__fix2.png]]![[image3__fix7.png]]
+![[Plugins/Krokodove/img/image137.png]]![[Plugins/Krokodove/img/image66__fix2.png]]![[Plugins/Krokodove/img/image3__fix7.png]]
 
 
 
@@ -581,7 +581,7 @@ Fill transparent parts by extending the edge color
 
 Painterly effects
 
-![[image106__fix2.png]]
+![[Plugins/Krokodove/img/image106__fix2.png]]
 
 
 
@@ -589,7 +589,7 @@ Painterly effects
 
 Half-tone style rasterize
 
-![[image254.png]]![[image197__fix1.png]]![[image140__fix1.png]]
+![[Plugins/Krokodove/img/image254.png]]![[Plugins/Krokodove/img/image197__fix1.png]]![[Plugins/Krokodove/img/image140__fix1.png]]
 
 
 
@@ -597,43 +597,43 @@ Half-tone style rasterize
 
 Smart Field Strobe tries to detect motion and only removes fields where there is.
 
-![[image123__fix1.png]]![[image27__fix3.png]]
+![[Plugins/Krokodove/img/image123__fix1.png]]![[Plugins/Krokodove/img/image27__fix3.png]]
 
 
 
 ## Spiral
 
-![[image183__fix1.png]]![[image163__fix1.png]]![[image152__fix1.png]]
+![[Plugins/Krokodove/img/image183__fix1.png]]![[Plugins/Krokodove/img/image163__fix1.png]]![[Plugins/Krokodove/img/image152__fix1.png]]
 
 
 
 ## Switcher
 
-![[image29__fix5.png]]
+![[Plugins/Krokodove/img/image29__fix5.png]]
 
 
 
 ## Time Mapper
 
-![[image69__fix2.png]]
+![[Plugins/Krokodove/img/image69__fix2.png]]
 
 
 
 ## Wireless Link
 
-![[image259__fix1.png]]
+![[Plugins/Krokodove/img/image259__fix1.png]]
 
 
 
 ## Wireless Linky
 
-![[image192__fix1.png]]
+![[Plugins/Krokodove/img/image192__fix1.png]]
 
 
 
 ## Worm
 
-![[image88__fix2.png]]![[image166__fix1.png]]![[image102__fix2.png]]
+![[Plugins/Krokodove/img/image88__fix2.png]]![[Plugins/Krokodove/img/image166__fix1.png]]![[Plugins/Krokodove/img/image102__fix2.png]]
 
 
 
@@ -641,7 +641,7 @@ Smart Field Strobe tries to detect motion and only removes fields where there is
 
 Simple tool for easy fading to a certain color
 
-![[image274__fix1.png]]
+![[Plugins/Krokodove/img/image274__fix1.png]]
 
 
 
@@ -649,7 +649,7 @@ Simple tool for easy fading to a certain color
 
 A simple color correcting tool, operating in HLS color space
 
-![[image16__fix5.png]]
+![[Plugins/Krokodove/img/image16__fix5.png]]
 
 
 
@@ -657,11 +657,11 @@ A simple color correcting tool, operating in HLS color space
 
 Invert color, luminance or hue
 
-![[image28__fix5.png]]
+![[Plugins/Krokodove/img/image28__fix5.png]]
 
 The "Type" control can be set to "Color", "Luminance", or "Hue".
 
-![[image9__fix7.png]]
+![[Plugins/Krokodove/img/image9__fix7.png]]
 
 
 
@@ -669,19 +669,19 @@ The "Type" control can be set to "Color", "Luminance", or "Hue".
 
 Color matching
 
-![[image87__fix2.png]]
+![[Plugins/Krokodove/img/image87__fix2.png]]
 
 The "Number of colors" control can be set to "Single", "Low and High", or "Low, Mid && High".
 
-![[image145__fix1.png]]
+![[Plugins/Krokodove/img/image145__fix1.png]]
 
 The "Shadows match" control can be set to "Full color", "Color tint", or "Luminance".
 
-![[image6__fix8.png]]
+![[Plugins/Krokodove/img/image6__fix8.png]]
 
 The "Highlights match" control can be set to "Full color", "Color tint", or "Luminance".
 
-![[image57__fix2.png]]
+![[Plugins/Krokodove/img/image57__fix2.png]]
 
 
 
@@ -689,7 +689,7 @@ The "Highlights match" control can be set to "Full color", "Color tint", or "Lum
 
 This color correcting tool replaces a certain color range with another
 
-![[image67__fix3.png]]![[image147__fix1.png]]
+![[Plugins/Krokodove/img/image67__fix3.png]]![[Plugins/Krokodove/img/image147__fix1.png]]
 
 
 
@@ -697,7 +697,7 @@ This color correcting tool replaces a certain color range with another
 
 Clips the color in reference to the threshold
 
-![[image94__fix2.png]]
+![[Plugins/Krokodove/img/image94__fix2.png]]
 
 
 
@@ -705,7 +705,7 @@ Clips the color in reference to the threshold
 
 Create metaball like blob shapes
 
-![[image223.png]]![[image127__fix1.png]]
+![[Plugins/Krokodove/img/image223.png]]![[Plugins/Krokodove/img/image127__fix1.png]]
 
 
 
@@ -713,7 +713,7 @@ Create metaball like blob shapes
 
 Line patterns
 
-![[image208.png]]![[image11__fix6.png]]![[image232__fix1.png]]![[image256.png]]
+![[Plugins/Krokodove/img/image208.png]]![[Plugins/Krokodove/img/image11__fix6.png]]![[Plugins/Krokodove/img/image232__fix1.png]]![[Plugins/Krokodove/img/image256.png]]
 
 
 
@@ -723,7 +723,7 @@ Creation of a wild collection of patterns (assuming you think grids are wild)
 
 The "Type" control can be set to "Triangles", "Grid", or "Honeycomb".
 
-![[image121.png]]![[image139__fix1.png]]
+![[Plugins/Krokodove/img/image121.png]]![[Plugins/Krokodove/img/image139__fix1.png]]
 
 
 
@@ -731,13 +731,13 @@ The "Type" control can be set to "Triangles", "Grid", or "Honeycomb".
 
 Shape patterns; circles, squares, ...
 
-![[image182__fix1.png]]![[image184__fix1.png]]![[image92__fix2.png]]
+![[Plugins/Krokodove/img/image182__fix1.png]]![[Plugins/Krokodove/img/image184__fix1.png]]![[Plugins/Krokodove/img/image92__fix2.png]]
 
 
 
 ## Average
 
-![[image257.png]]
+![[Plugins/Krokodove/img/image257.png]]
 
 The "Main Time" control can be set to "Flow Time", or "Time Speed", or "Time Stretch".
 The "Non-existing frames" control can be set to "Black" or "Ignore".
@@ -746,62 +746,62 @@ The "Non-existing frames" control can be set to "Black" or "Ignore".
 
 ## Beams
 
-![[image17__fix7.png]]![[image281__fix1.png]]
+![[Plugins/Krokodove/img/image17__fix7.png]]![[Plugins/Krokodove/img/image281__fix1.png]]
 
 
 
 ## Bevel
 
-![[image8__fix7.png]]![[image175__fix1.png]]![[image53__fix4.png]]
+![[Plugins/Krokodove/img/image8__fix7.png]]![[Plugins/Krokodove/img/image175__fix1.png]]![[Plugins/Krokodove/img/image53__fix4.png]]
 
 
 
 ## Border
 
-![[image141.png]]
+![[Plugins/Krokodove/img/image141.png]]
 
 
 
 ## Canvas
 
-![[image167.png]]
+![[Plugins/Krokodove/img/image167.png]]
 
 
 
 ## Channel Shifter
 
-![[image253.png]]![[image31__fix5.png]]![[image258__fix1.png]]![[image188__fix1.png]]![[image45__fix4.png]]![[image115__fix1.png]]
+![[Plugins/Krokodove/img/image253.png]]![[Plugins/Krokodove/img/image31__fix5.png]]![[Plugins/Krokodove/img/image258__fix1.png]]![[Plugins/Krokodove/img/image188__fix1.png]]![[Plugins/Krokodove/img/image45__fix4.png]]![[Plugins/Krokodove/img/image115__fix1.png]]
 
 
 
 ## Clean Edges
 
-![[image224__fix1.png]]
+![[Plugins/Krokodove/img/image224__fix1.png]]
 
 
 
 ## Combine
 
-![[image265__fix1.png]]
+![[Plugins/Krokodove/img/image265__fix1.png]]
 
 
 
 ## Crop Monsieur
 
 Makes multiple copies of an image
-![[image158__fix1.png]]
+![[Plugins/Krokodove/img/image158__fix1.png]]
 
 
 
 ## Cut and Bleed
 
-![[image4__fix9.png]]
+![[Plugins/Krokodove/img/image4__fix9.png]]
 
 
 
 ## Deflicker
 
-![[image131__fix1.png]]![[image207.png]]
+![[Plugins/Krokodove/img/image131__fix1.png]]![[Plugins/Krokodove/img/image207.png]]
 
 The "Reference" control can be set to "Fixed Time", "Time Steps", "Average", or "External".
 
@@ -809,7 +809,7 @@ The "Reference" control can be set to "Fixed Time", "Time Steps", "Average", or 
 
 ## Duplicate
 
-![[image130__fix1.png]]![[image120__fix1.png]]![[image59__fix3.png]]
+![[Plugins/Krokodove/img/image130__fix1.png]]![[Plugins/Krokodove/img/image120__fix1.png]]![[Plugins/Krokodove/img/image59__fix3.png]]
 
 
 
@@ -817,13 +817,13 @@ The "Reference" control can be set to "Fixed Time", "Time Steps", "Average", or 
 
 Eats out the edges of an image
 
-![[image262__fix1.png]]
+![[Plugins/Krokodove/img/image262__fix1.png]]
 
 
 
 ## Extrude
 
-![[image34__fix5.png]]![[image204__fix1.png]]
+![[Plugins/Krokodove/img/image34__fix5.png]]![[Plugins/Krokodove/img/image204__fix1.png]]
 
 The "Perspective type" control can be set to "Parallel" or "Radial".
 The "Color type" control can be set to "Solid" or "Original".
@@ -832,37 +832,37 @@ The "Color type" control can be set to "Solid" or "Original".
 
 ## Map Filter
 
-![[image229__fix1.png]]
+![[Plugins/Krokodove/img/image229__fix1.png]]
 
 
 
 ## Matte Cleaner
 
-![[image245__fix1.png]]![[image80__fix1.png]]
+![[Plugins/Krokodove/img/image245__fix1.png]]![[Plugins/Krokodove/img/image80__fix1.png]]
 
 
 
 ## Merge and Bone
 
-![[image117__fix1.png]]![[image104__fix2.png]]![[image148__fix1.png]]
+![[Plugins/Krokodove/img/image117__fix1.png]]![[Plugins/Krokodove/img/image104__fix2.png]]![[Plugins/Krokodove/img/image148__fix1.png]]
 
 
 
 ## Noise
 
-![[image128.png]]
+![[Plugins/Krokodove/img/image128.png]]
 
 
 
 ## Pixel Region
 
-![[image231.png]]
+![[Plugins/Krokodove/img/image231.png]]
 
 
 
 ## Planes
 
-![[image271__fix1.png]]![[image226__fix1.png]]
+![[Plugins/Krokodove/img/image271__fix1.png]]![[Plugins/Krokodove/img/image226__fix1.png]]
 
 
 
@@ -870,35 +870,35 @@ The "Color type" control can be set to "Solid" or "Original".
 
 Put a plastic film over your image
 
-![[image42__fix4.png]]![[image75__fix1.png]]![[image74__fix2.png]]
+![[Plugins/Krokodove/img/image42__fix4.png]]![[Plugins/Krokodove/img/image75__fix1.png]]![[Plugins/Krokodove/img/image74__fix2.png]]
 
 
 
 ## Positioner
 
-![[image187__fix1.png]]
+![[Plugins/Krokodove/img/image187__fix1.png]]
 
 The "Type of positioner" control can be set to "One point", "Two point", "Three point", or "Four point".
 
-![[image144__fix1.png]]
+![[Plugins/Krokodove/img/image144__fix1.png]]
 
 
 
 ## Push
 
-![[image133.png]]
+![[Plugins/Krokodove/img/image133.png]]
 
 
 
 ## Reassemble
 
-![[image82__fix2.png]]
+![[Plugins/Krokodove/img/image82__fix2.png]]
 
 
 
 ## Rest
 
-![[image252__fix1.png]]
+![[Plugins/Krokodove/img/image252__fix1.png]]
 
 
 
@@ -906,7 +906,7 @@ The "Type of positioner" control can be set to "One point", "Two point", "Three 
 
 Create seamlessly looping sequences easily
 
-![[image266__fix1.png]]
+![[Plugins/Krokodove/img/image266__fix1.png]]
 
 The "Fade type" control can be set to either "Linear" or "Smooth".
 
@@ -916,13 +916,13 @@ The "Fade type" control can be set to either "Linear" or "Smooth".
 
 Smears the image horizontally or vertically
 
-![[image98__fix2.png]]![[image276__fix1.png]]
+![[Plugins/Krokodove/img/image98__fix2.png]]![[Plugins/Krokodove/img/image276__fix1.png]]
 
 
 
 ## Sort
 
-![[image22__fix6.png]]
+![[Plugins/Krokodove/img/image22__fix6.png]]
 
 
 
@@ -930,7 +930,7 @@ Smears the image horizontally or vertically
 
 Draws a nice, anti-aliased contour around an image
 
-![[image105__fix2.png]]
+![[Plugins/Krokodove/img/image105__fix2.png]]
 
 
 
@@ -938,7 +938,7 @@ Draws a nice, anti-aliased contour around an image
 
 Creation of gradients: linear, radial and spotlight shapes can be created an combined with the background image
 
-![[image62__fix3.png]]![[image107__fix2.png]]
+![[Plugins/Krokodove/img/image62__fix3.png]]![[Plugins/Krokodove/img/image107__fix2.png]]
 
 
 
@@ -946,25 +946,25 @@ Creation of gradients: linear, radial and spotlight shapes can be created an com
 
 Shade an image based on the normals
 
-![[image119__fix1.png]]
+![[Plugins/Krokodove/img/image119__fix1.png]]
 
 
 
 ## Vector Blur
 
-![[image135__fix1.png]]
+![[Plugins/Krokodove/img/image135__fix1.png]]
 
 
 
 ## Vector Field
 
-![[image108__fix2.png]]
+![[Plugins/Krokodove/img/image108__fix2.png]]
 
 
 
 ## Vector Motion
 
-![[image7__fix8.png]]
+![[Plugins/Krokodove/img/image7__fix8.png]]
 
 The "Motion analysis direction" control can be set to "Backward", "Both", or "Forward".
 
@@ -972,7 +972,7 @@ The "Motion analysis direction" control can be set to "Backward", "Both", or "Fo
 
 ## Vector Time
 
-![[image68__fix3.png]]
+![[Plugins/Krokodove/img/image68__fix3.png]]
 
 The "Adjust" control can be set to "Not", "Time Speed", "Time Stretch".
 
@@ -980,7 +980,7 @@ The "Adjust" control can be set to "Not", "Time Speed", "Time Stretch".
 
 ## Vector Visualization
 
-![[image247.png]]
+![[Plugins/Krokodove/img/image247.png]]
 
 The "Vizualize vector field" control can be set to "Grid" or "Edges".
 The "Line Color" control can be set to "Solid" or "Image".
@@ -996,13 +996,13 @@ The "Line Color" control can be set to "Solid" or "Image".
 
 ## Directional Scale
 
-![[image221.png]]
+![[Plugins/Krokodove/img/image221.png]]
 
 
 
 ## Kaleidoscope
 
-![[image12__fix5.png]]![[image90__fix1.png]]
+![[Plugins/Krokodove/img/image12__fix5.png]]![[Plugins/Krokodove/img/image90__fix1.png]]
 
 The "Type" control can be set to "Classic" or "Fancy".
 
@@ -1010,7 +1010,7 @@ The "Type" control can be set to "Classic" or "Fancy".
 
 ## Lens Distortion
 
-![[image118.png]]
+![[Plugins/Krokodove/img/image118.png]]
 
 The "Type" control can be set to "Distort" or "Restore".
 
@@ -1020,13 +1020,13 @@ If you have "K1" and "K2" lens distortion parameters provided by an external len
 
 ## Mirror
 
-![[image71__fix2.png]]
+![[Plugins/Krokodove/img/image71__fix2.png]]
 
 
 
 ## Morph
 
-![[image236__fix1.png]]
+![[Plugins/Krokodove/img/image236__fix1.png]]
 
 The "Warp Type" control can be set to "Field" or "Radial".
 
@@ -1034,19 +1034,19 @@ The "Warp Type" control can be set to "Field" or "Radial".
 
 ## Offset
 
-![[image185.png]]
+![[Plugins/Krokodove/img/image185.png]]
 
 
 
 ## Radial
 
-![[image273__fix1.png]]
+![[Plugins/Krokodove/img/image273__fix1.png]]
 
 
 
 ## Relative Transform
 
-![[image267.png]]
+![[Plugins/Krokodove/img/image267.png]]
 
 The "Center Type" control can be set to "Bounding Box" or "Weighted Pixels".
 The "Size Type" control can be set to "Size X and Size Y" or "Size and Aspect".
@@ -1055,19 +1055,19 @@ The "Size Type" control can be set to "Size X and Size Y" or "Size and Aspect".
 
 ## Remap
 
-![[image176.png]]
+![[Plugins/Krokodove/img/image176.png]]
 
 
 
 ## Segment Transform
 
-![[image138.png]]
+![[Plugins/Krokodove/img/image138.png]]
 
 
 
 ## Shear
 
-![[image206__fix1.png]]
+![[Plugins/Krokodove/img/image206__fix1.png]]
 
 The "Input Type" control can be set to "By value" or "By angle".
 
@@ -1075,7 +1075,7 @@ The "Input Type" control can be set to "By value" or "By angle".
 
 ## Shuffle
 
-![[image211.png]]
+![[Plugins/Krokodove/img/image211.png]]
 
 The "Type" control can be set to "Slide" or "Swap".
 
@@ -1083,21 +1083,21 @@ The "Type" control can be set to "Slide" or "Swap".
 
 ## Spherize
 
-![[image99__fix2.png]]
+![[Plugins/Krokodove/img/image99__fix2.png]]
 
 The "Type" control can be set to "Horizontal", "Vertical", "Sphere", or "Rectangle".
 
-![[image228__fix1.png]]
+![[Plugins/Krokodove/img/image228__fix1.png]]
 
 The "Algorithm" control can be set to "Spherize", "Soft in/out", "Smooth", or "Sinusoid".
 
-![[image21__fix5.png]]
+![[Plugins/Krokodove/img/image21__fix5.png]]
 
 
 
 ## Stretch
 
-![[image122.png]]
+![[Plugins/Krokodove/img/image122.png]]
 
 The "Type" control can be set to "Source and Destination", or "Source and Offset".
 
@@ -1105,7 +1105,7 @@ The "Type" control can be set to "Source and Destination", or "Source and Offset
 
 ## Transform
 
-![[image100__fix2.png]]
+![[Plugins/Krokodove/img/image100__fix2.png]]
 
 The "Size Type" control can be set to "Size X and Size Y" or "Size and Aspect".
 
@@ -1115,7 +1115,7 @@ The "Size Type" control can be set to "Size X and Size Y" or "Size and Aspect".
 
 Combines shapes by union, difference or intersection
 
-![[image169__fix1.png]]
+![[Plugins/Krokodove/img/image169__fix1.png]]
 
 The "Type" control can be set to "Intersect", "Union", "Difference", or "Xor".
 The "Fill Type" can be set to "Even Odd" or "Non Zero".
@@ -1126,7 +1126,7 @@ The "Fill Type" can be set to "Even Odd" or "Non Zero".
 
 Shape Kill
 
-![[image210__fix1.png]]
+![[Plugins/Krokodove/img/image210__fix1.png]]
 
 
 
@@ -1134,7 +1134,7 @@ Shape Kill
 
 Shape Merge
 
-![[image95.png]]
+![[Plugins/Krokodove/img/image95.png]]
 
 The sMerge node has two input connections named "Shape1" and "Shape2".
 
@@ -1144,7 +1144,7 @@ The sMerge node has two input connections named "Shape1" and "Shape2".
 
 Shape Offset
 
-![[image219__fix1.png]]
+![[Plugins/Krokodove/img/image219__fix1.png]]
 
 The "Join Type" control can be set to "Miter", "Bevel", or "Rounded".
 The "Sides" control can be set to "Both", "Inside", or "Outside".
@@ -1155,7 +1155,7 @@ The "Sides" control can be set to "Both", "Inside", or "Outside".
 
 Render out the shape to an image
 
-![[image2__fix8.png]]![[image151.png]]
+![[Plugins/Krokodove/img/image2__fix8.png]]![[Plugins/Krokodove/img/image151.png]]
 
 The "Winding" can be set to "Even/Odd" or "Non-Zero".
 The "Image" control page can be used to define the dimensions of the rendered image.
@@ -1166,7 +1166,7 @@ The "Image" control page can be used to define the dimensions of the rendered im
 
 Shape Resample
 
-![[image150.png]]
+![[Plugins/Krokodove/img/image150.png]]
 
 
 
@@ -1174,11 +1174,11 @@ Shape Resample
 
 Apply Shading to shape
 
-![[image240__fix1.png]]
+![[Plugins/Krokodove/img/image240__fix1.png]]
 
 The "Pen Line Type" control can be set to "Solid", "Dashed", "Dotted", or "Custom".
 
-![[image241__fix1.png]]
+![[Plugins/Krokodove/img/image241__fix1.png]]
 
 
 
@@ -1186,7 +1186,7 @@ The "Pen Line Type" control can be set to "Solid", "Dashed", "Dotted", or "Custo
 
 Shape Smooth
 
-![[image93__fix2.png]]
+![[Plugins/Krokodove/img/image93__fix2.png]]
 
 
 
@@ -1194,11 +1194,11 @@ Shape Smooth
 
 Shape Tools
 
-![[image40__fix3.png]]
+![[Plugins/Krokodove/img/image40__fix3.png]]
 
 The "Open Close" control can be set to "Keep", "Close All", "Open All", or "Swap".
 
-![[image186__fix1.png]]
+![[Plugins/Krokodove/img/image186__fix1.png]]
 
 
 
@@ -1206,7 +1206,7 @@ The "Open Close" control can be set to "Keep", "Close All", "Open All", or "Swap
 
 Shape Transform
 
-![[image85__fix2.png]]
+![[Plugins/Krokodove/img/image85__fix2.png]]
 
 
 
@@ -1214,7 +1214,7 @@ Shape Transform
 
 Shape Triangulate
 
-![[image13__fix6.png]]
+![[Plugins/Krokodove/img/image13__fix6.png]]
 
 The "Type" control can be set to "Type 1" or "Type 2".
 
@@ -1224,7 +1224,7 @@ The "Type" control can be set to "Type 1" or "Type 2".
 
 Shape WriteOn
 
-![[image113__fix2.png]]
+![[Plugins/Krokodove/img/image113__fix2.png]]
 
 The "Level" control can be set to "Global", "Shape", or "Element".
 
@@ -1234,7 +1234,7 @@ The "Level" control can be set to "Global", "Shape", or "Element".
 
 Shape ZigZag
 
-![[image72__fix1.png]]
+![[Plugins/Krokodove/img/image72__fix1.png]]
 
 The "Type" control can be set to "By Segment", or "By distance".
 
@@ -1244,7 +1244,7 @@ The "Type" control can be set to "By Segment", or "By distance".
 
 Shape Chart Create
 
-![[image242__fix1.png]]![[image134__fix1.png]]![[image168__fix1.png]]![[image225__fix1.png]]
+![[Plugins/Krokodove/img/image242__fix1.png]]![[Plugins/Krokodove/img/image134__fix1.png]]![[Plugins/Krokodove/img/image168__fix1.png]]![[Plugins/Krokodove/img/image225__fix1.png]]
 
 
 
@@ -1252,11 +1252,11 @@ Shape Chart Create
 
 Shape Primitive Create
 
-![[image233__fix1.png]]![[image51__fix3.png]]![[image209.png]]![[image52__fix3.png]]
+![[Plugins/Krokodove/img/image233__fix1.png]]![[Plugins/Krokodove/img/image51__fix3.png]]![[Plugins/Krokodove/img/image209.png]]![[Plugins/Krokodove/img/image52__fix3.png]]
 
 The "Shape Primitive Create" control page has a "Type" control that can be set to "Cross", "Polygon", "Rectangle", or "Star".
 
-![[image174__fix1.png]]
+![[Plugins/Krokodove/img/image174__fix1.png]]
 
 
 
@@ -1264,7 +1264,7 @@ The "Shape Primitive Create" control page has a "Type" control that can be set t
 
 Shape Spiral Create
 
-![[image264__fix1.png]]![[image272.png]]![[image30__fix5.png]]
+![[Plugins/Krokodove/img/image264__fix1.png]]![[Plugins/Krokodove/img/image272.png]]![[Plugins/Krokodove/img/image30__fix5.png]]
 
 The "Shape Spiral Create" control page has an "Angle End Type" control that can be set to "None", "Type 1", or "Type 2".
 
@@ -1274,4 +1274,4 @@ The "Shape Spiral Create" control page has an "Angle End Type" control that can 
 
 Shape Trace Create
 
-![[image250__fix2.png]]![[image47__fix4.png]]![[image58__fix3.png]]
+![[Plugins/Krokodove/img/image250__fix2.png]]![[Plugins/Krokodove/img/image47__fix4.png]]![[Plugins/Krokodove/img/image58__fix3.png]]

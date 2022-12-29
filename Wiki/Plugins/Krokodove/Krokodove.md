@@ -38,7 +38,7 @@ The Krokodove plugin can be installed using the [Reactor Package Manager](https:
 
 After you have Reactor installed and open, select the "Tools --> Plugins" category on the left sidebar. Click on the package named "Krokodove for Fusion/Resolve Studio 17" and then press the "Install" button.
 
-![[image165__fix1.png]]
+![[Plugins/Krokodove/img/image165__fix1.png]]
 
 Once the installation is complete, restart Resolve Studio or Fusion Studio standalone. This will load the KKD plugin.
 
@@ -46,15 +46,15 @@ Once the installation is complete, restart Resolve Studio or Fusion Studio stand
 
 Once Fusion Studio has finished loading you will have access to a new "Tools \> Krokodove" set of menu items.
 
-![[image249.png]]
+![[Plugins/Krokodove/img/image249.png]]
 
 You can also right-click in the Nodes view area, and select the "Add Tool \> Krokodove" contextual menu item to access the KKD tools.
 
-![[image177.png]]
+![[Plugins/Krokodove/img/image177.png]]
 
 In Resolve Studio you can access KKD nodes using the Effects Library tab at the top left of the user interface. Expand the "Tools \> Krokodove" hierarchy to view the nodes.
 
-![[image97__fix1.png]]
+![[Plugins/Krokodove/img/image97__fix1.png]]
 
 ## Where to go from here ...
 

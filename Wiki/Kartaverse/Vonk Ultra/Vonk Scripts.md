@@ -28,7 +28,7 @@ Vonk Open Sub-Folder
 
 The "Open" folder of scripts are used to quickly access Vonk resources.
 
-![[image275.png]]
+![[Kartaverse/Vonk Ultra/img/image275.png]]
 
 #### Show Comps Folder
 
@@ -76,7 +76,7 @@ The "Show Temp Folder" menu item opens up the "`Temp:/Vonk/`" folder in a Finder
 
 Vonk Tools Sub-Folder
 
-The "Tools" folder is used to carry out Vonk centric utility tasks.![[image324.png]]
+The "Tools" folder is used to carry out Vonk centric utility tasks.![[Kartaverse/Vonk Ultra/img/image324.png]]
 
 Create All Data Nodes
 
@@ -94,7 +94,7 @@ These nodes are accessible when you have a node selected in the Nodes view area.
 
 You can have one, or more nodes selected when running a Tool script. The Tool script will be launched individually for each item in the selection list. Inside a Tool script a global variable named "tool" will exist that provides the name of the active node.
 
-![[image186.png]]
+![[Kartaverse/Vonk Ultra/img/image186.png]]
 
 #### Render Selected
 

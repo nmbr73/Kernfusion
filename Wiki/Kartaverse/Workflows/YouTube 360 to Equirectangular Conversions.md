@@ -39,7 +39,7 @@ YouTube 2x3 Cubic Face Layout - Stereo 3D Side By Side
 
 (Macros:/KartaVR/Images/youtube_cubemap2x3.jpg)
 
-![[image21.png]]
+![[Kartaverse/Workflows/img/image21.png]]
 
 ### KartaVR Conversion OBJ Meshes
 
@@ -97,7 +97,7 @@ KartaVR provides a YouTube 360 "Monoscopic 2D" based still image that you can us
 
     Macros:/KartaVR/Images/youtube_cubemap3x2.jpg
 
-![[image16.png]]
+![[Kartaverse/Workflows/img/image16.png]]
 
 When you view this node's output in the left viewer window you will see the following output that has an arrangement of 3 horizontal cubemap faces by two vertical cubemap faces. This is often shortened down to being called a *3x2* (three by two) cubic face layout. The cubic faces are laid out in the order of Left, Front, Right, Bottom, Back, Top.
 
@@ -177,9 +177,9 @@ Looking at the screenshot below we can see how the YouTube 3x2 cubic face media 
 
 **Step 5.** You can render this footage back to an image sequence or movie file on disk using either a MediaOut node (in Resolve), or a Saver node (in Fusion Standalone).
 
-![[image8.png]]
+![[Kartaverse/Workflows/img/image8.png]]
 
-![[image4.png]]
+![[Kartaverse/Workflows/img/image4.png]]
 
 ### MeshUV2EquirectangularStereo Macro Usage
 
@@ -215,7 +215,7 @@ When you view this node's output in the left viewer window you will see the foll
 
 This view layout is often shortened down to being called a *2x3* stereo SBS (two by three stereo side-by-side) cubic face layout. The cubic faces are laid out in the order of Right, Top, Front, Back, Left, Bottom.
 
-![[image21.png]]
+![[Kartaverse/Workflows/img/image21.png]]
 
 #### Step 3. With the Fusion Nodes view active in the foreground, press the "Shift + Space" hotkey on your keyboard. {#ref6}
 

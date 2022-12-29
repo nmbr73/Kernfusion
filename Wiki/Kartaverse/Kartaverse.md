@@ -16,6 +16,8 @@ These modules are based upon the culmination of many years of research & develop
 
 Kartaverse is delivered via the web as free open-source software. It costs you nothing to download and use the Kartaverse tools for both personal and commercial usage. It even works fine with Resolve (Free) running as the host program. The main tool, KartaVR, is Apache 2.0 licensed. Several tools like Vonk Ultra are GPL v3 licensed.
 
+
+
 ## Kartaverse Project Assistance
 
 If you want to assist the Kartaverse effort, the best way to help is to provide access to camera original "raw" unprocessed footage from a wide range of digital cinema cameras, DSLR/mirrorless cameras, flagship multi-lens mobile phones, drones, 360VR camera rigs, structured light depth sensors, lightfield cameras, and LIDAR scanners with permissive licensing. Anything you can share helps greatly.
@@ -86,5 +88,8 @@ See [[Workflows|Kartaverse Workflows]]
 - [[Jupyter Notebook for Resolve_Fusion|Jupyter Notebook for Resolve/Fusion]]
 - [[SketchFab in VR Via QuestLink]]
 
+### Immersive Pipeline Integration Guide
+
+See [[Immersive Pipeline Integration Guide]]
 
 

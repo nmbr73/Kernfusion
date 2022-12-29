@@ -16,7 +16,7 @@ Vonk nodes are modifiers that live in the node-graph. You can connect Vonk nodes
 
 If you right-click on an attribute in the Inspector window, the "Connect To" contextual pop-up menu appears. This technique allows you to directly link an existing Vonk node's output connection to a specific channel attribute that doesn't have an input connection exposed in the node graph.
 
-![[image262.png]]
+![[Kartaverse/Vonk Ultra/img/image262.png]]
 
 When viewing Text or Number data types in the Fusion viewer windows, you may have to use the "Fit" or "100%" view resizing options to make the text visible. The text is anchored to the top left origin of the window.
 

@@ -43,13 +43,13 @@ Overview
 
 Part 2 will expand on the initial concepts presented, and explain at an overview level, how it is possible to create several more TOPs nodes that will remotely control a Fusion Studio compositing session using FuScript and the "fusion:DoAction()" and "comp:DoAction()" functions. This is an interesting concept as it allows you to run Fusion actions external to the app.
 
-![[image20.png]]
+![[Kartaverse/Workflows/img/image20.png]]
 
 The TOP nodes in this example use a Fusion Studio GUI session to create a new Fusion comp, add a NyanCat macro (provided by the Reactor package manager), add a Saver node and define the Clip Filename, then the .comp file is saved to disk.
 
 Next the composite is rendered in the background using the Fusion Render Node executable from the command-line via a Generic Generator TOPs node.
 
-![[image32.png]]
+![[Kartaverse/Workflows/img/image32.png]]
 
 Nodes, Connections, and Attributes
 
@@ -63,13 +63,13 @@ This specific subnet was customized to use "fusion:DoAction()" so it ran the Com
 
 To run an action inside of Fusion Studio the following custom TOPs subnet was created using a combination of an "[Attribute Create](https://www.sidefx.com/docs/houdini/nodes/top/attributecreate.html)" node to define our own set of ActionName and ActionParams attributes, along with a "[Generic Generator](https://www.sidefx.com/docs/houdini/nodes/top/genericgenerator.html)" node that makes use of these attributes when talking with Fusion Studio:
 
-![[image24.png]]
+![[Kartaverse/Workflows/img/image24.png]]
 
 The "Generic Generator" node is used to pass the previously defined \`@ActionName\` and \`@ActionParams\` attributes into the command-line based [FuScript executable session](https://www.steakunderwater.com/wesuckless/viewtopic.php?p=11964#p11964).
 
 [FuScript allows you to bind](https://www.steakunderwater.com/wesuckless/viewtopic.php?f=6&t=1411&p=11498#p11498) locally, or over a LAN network connection to BMD tools like Fusion Studio, Fusion Render Node, Fusion Render Manager, Resolve, and Generation.
 
-![[image3.png]]
+![[Kartaverse/Workflows/img/image3.png]]
 
 The AddSetting action was used to specify the name of a Fusion Macro .setting file that will be added to the current Fusion Studio session. PathMaps can be used in the Filename attribute here and they will be expanded by Fusion automatically to the full filepath required.
 
@@ -99,7 +99,7 @@ In this case the NyanCat macro will be shown on screen.
 
 Next the Execute action will be used to lock the comp viewer session so file dialogs won't be shown by running a snippet of Lua code inside of Fusion Studio. One small detail is that you need to grab the current comp context when using the Execute action or you will otherwise see an error printed out in the results.
 
-![[image11.png]]
+![[Kartaverse/Workflows/img/image11.png]]
 
 The AddTool action is used to add a Saver node to the comp. The previous step locked the viewer window so the Saver node's empty Filename field won't spawn a file dialog that would need direct user interaction to occur.
 
@@ -121,7 +121,7 @@ We are using the \`\$HIP\` environment variable again to tell Fusion Studio wher
 
 This composite saving task is done using the Comp_Save action along with manually defining the name parameter.
 
-![[image6.png]]
+![[Kartaverse/Workflows/img/image6.png]]
 
 In this next step, we are reusing the FusionRenderNode based command-line TOPs rendering approach that was first shown in Part 1 of the "Render Fusion Comps in Houdini TOPs" guide.
 
@@ -481,13 +481,13 @@ Overview
 
 Part 2 will expand on the initial concepts presented, and explain at an overview level, how it is possible to create several more TOPs nodes that will remotely control a Fusion Studio compositing session using FuScript and the "`fusion:DoAction()`" and "`comp:DoAction()`" functions. This is an interesting concept as it allows you to run Fusion actions external to the app.
 
-![[image20.png]]
+![[Kartaverse/Workflows/img/image20.png]]
 
 The TOP nodes in this example use a Fusion Studio GUI session to create a new Fusion comp, add a NyanCat macro (provided by the Reactor package manager), add a Saver node and define the Clip Filename, then the .comp file is saved to disk.
 
 Next the composite is rendered in the background using the Fusion Render Node executable from the command-line via a Generic Generator TOPs node.
 
-![[image32.png]]
+![[Kartaverse/Workflows/img/image32.png]]
 
 ##### Nodes, Connections, and Attributes
 
@@ -503,13 +503,13 @@ This specific subnet was customized to use "`fusion:DoAction()`" so it ran the `
 
 To run an action inside of Fusion Studio the following custom TOPs subnet was created using a combination of an "[Attribute Create](https://www.sidefx.com/docs/houdini/nodes/top/attributecreate.html)" node to define our own set of ActionName and ActionParams attributes, along with a "[Generic Generator](https://www.sidefx.com/docs/houdini/nodes/top/genericgenerator.html)" node that makes use of these attributes when talking with Fusion Studio:
 
-![[image24.png]]
+![[Kartaverse/Workflows/img/image24.png]]
 
 The "Generic Generator" node is used to pass the previously defined \`@ActionName\` and \`@ActionParams\` attributes into the command-line based [FuScript executable session](https://www.steakunderwater.com/wesuckless/viewtopic.php?p=11964#p11964).
 
 [FuScript allows you to bind](https://www.steakunderwater.com/wesuckless/viewtopic.php?f=6&t=1411&p=11498#p11498) locally, or over a LAN network connection to BMD tools like Fusion Studio, Fusion Render Node, Fusion Render Manager, Resolve, and Generation.
 
-![[image3.png]]
+![[Kartaverse/Workflows/img/image3.png]]
 
 The AddSetting action was used to specify the name of a Fusion Macro .setting file that will be added to the current Fusion Studio session. PathMaps can be used in the Filename attribute here and they will be expanded by Fusion automatically to the full filepath required.
 
@@ -539,7 +539,7 @@ In this case the NyanCat macro will be shown on screen.
 
 Next the Execute action will be used to lock the comp viewer session so file dialogs won't be shown by running a snippet of Lua code inside of Fusion Studio. One small detail is that you need to grab the current comp context when using the Execute action or you will otherwise see an error printed out in the results.
 
-![[image11.png]]
+![[Kartaverse/Workflows/img/image11.png]]
 
 The AddTool action is used to add a Saver node to the comp. The previous step locked the viewer window so the Saver node's empty Filename field won't spawn a file dialog that would need direct user interaction to occur.
 
@@ -561,7 +561,7 @@ We are using the \`\$HIP\` environment variable again to tell Fusion Studio wher
 
 This composite saving task is done using the Comp_Save action along with manually defining the name parameter.
 
-![[image6.png]]
+![[Kartaverse/Workflows/img/image6.png]]
 
 In this next step, we are reusing the FusionRenderNode based command-line TOPs rendering approach that was first shown in Part 1 of the "Render Fusion Comps in Houdini TOPs" guide.
 

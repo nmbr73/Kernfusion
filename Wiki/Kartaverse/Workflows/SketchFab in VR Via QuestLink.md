@@ -91,7 +91,7 @@ The Quest's control panel view has a handy "AirLink" button on the right side of
 
 With AirLink you can connect via a fast WiFi v6 link to Windows PCs on your local network that are running the Oculus Link software.
 
-![[image2.jpg]]
+![[Kartaverse/Workflows/img/image2.jpg]]
 
 ### Connect in VR to your Desktop PC
 
@@ -103,7 +103,7 @@ On the HMD you can press the "Desktop" icon in the toolbar to see a live screens
 
 With Google Chrome open, you can now press the "VR" button on a 3D model and beam that content directly to your Quest HMD. This is possible due to the magic of OpenXR running in a web browser session.
 
-![[image14.jpg]]
+![[Kartaverse/Workflows/img/image14.jpg]]
 
 The first time you view a webpage in VR with the HMD connected, you may be asked to allow VR devices to work with Chrome. Click "Allow" to continue.
 

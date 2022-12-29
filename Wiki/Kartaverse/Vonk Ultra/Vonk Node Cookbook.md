@@ -16,7 +16,7 @@ Iterating Over Files in a Directory
 
 A typical node graph that lists a folder's contents, and then iterates per-timeline-frame over the individual files in the list is built like this:
 
-![[image384.png]]
+![[Kartaverse/Vonk Ultra/img/image384.png]]
 
 The "vFileSystemListFiles" node generates a list of files. This multi-line block of text is fed into a "vTextReadLine" node that breaks the list down, into one line of data per frame.
 
@@ -57,13 +57,13 @@ The vFileSystemExists node is used to check if a file exists on disk. The false/
 
 The vNumberAdd node's "Term2" control is set to a value of "1". This addition process offsets the "Term1" input connection range of a 0-1 number returned by a false/true logical comparison into a 1-2 number range that is suitable for use with the vTextSwitch node.
 
-![[image283.png]]
+![[Kartaverse/Vonk Ultra/img/image283.png]]
 
 The vTextSwitch node's "Which" control performs the input switching action.
 
 The output from the vNumberAdd node is connected to the "Which" control by right-clicking on the attribute in the Inspector view. In the popup contextual menu item select the "Connect To \> vNumberAdd \> Output" entry.
 
-![[image293.png]]
+![[Kartaverse/Vonk Ultra/img/image293.png]]
 
 Finally, you can now connect any pair of TextCreate nodes you want to the vTextSwitch node's Input1 and Input2 connections. The Input1 node will be used for the file does not exist (Which = 1) logic state. The Input2 node will be used for the file exists (Which = 2) logic state.
 
@@ -106,7 +106,7 @@ If you wanted to, alternatively, you could use a vNumberCompReqTime node connect
 
 The vTextSubFormat node allows us to insert a token, in this case "{1}", to indicate the exact placement in the filename string we wish to add to the frame number component. The "{1}" token in the Format text field represents the text based input connection that is wired into the "Input1" slot on the vTextSubFormat node.
 
-![[image243.png]]
+![[Kartaverse/Vonk Ultra/img/image243.png]]
 
 The vTextAccumulator node is used to turn the single line text input into a multi-line block of text by iterating over the start frame to end frame range using temporal effects.
 
@@ -176,7 +176,7 @@ Node Settings:
 
 The Low Level Approach to CSV Parsing
 
-![[image251.png]]
+![[Kartaverse/Vonk Ultra/img/image251.png]]
 
 Node Connections:
 
@@ -199,7 +199,7 @@ An initial CSV header row might look a bit like this:
 
 The vNumberAdd node's Term2 control is used to shift the initial starting line for the vTextReadLine Index value. This makes it possible to "scroll" the first row read from the external datafile "downwards" past the typical CSV initial text header row entries to output the next data record row in the file.
 
-![[image342.png]]
+![[Kartaverse/Vonk Ultra/img/image342.png]]
 
 The vTextReadLine node is used to iterate line by line through the CSV file. This process is typically controlled by syncing the Fusion comp's timeline frame number as the incrementer used to access a specific index value.
 
@@ -231,7 +231,7 @@ In this case an "Index" value of 4 would grab the record "`2_Take_Off.0001.exr`"
 
 It is worth noting that the "Index" value starts counting upwards from a value of 1 (not zero). Sometimes you might have an off-by-one counting error in your logic if you forget this fact and come from a longtime C-code programming background.
 
-![[image333.png]]
+![[Kartaverse/Vonk Ultra/img/image333.png]]
 
 If you need to grab a Number based value from a CSV file, you can swap out the usage of a "vTextFromArray" node for a "vNumberFromArray" node. Or alternatively you could use a "vNumberFromText" node to convert the data type as needed.
 
@@ -318,7 +318,7 @@ The "vJSONCountElement1" node returns the total number of JSON array elements pr
 
 For this JSON file reading example there are 36 array values returned, which lines up precisely to 36 camera views.
 
-![[image292.png]]
+![[Kartaverse/Vonk Ultra/img/image292.png]]
 
 vNumberCompReqTime1
 
@@ -328,13 +328,13 @@ The "vNumberCompReqTime1" node returns the comp's current "request time" value w
 
 When the comp is rendered or viewed, the "vNumberCompReqTime1" node is able to cycle through the global time range of frame 1 to frame 36 to grab each JSON array "Index" item, one value at a time.
 
-![[image332.png]]
+![[Kartaverse/Vonk Ultra/img/image332.png]]
 
 vJSONGetElement1
 
 The "vJSONGetElement1" node is used to scan through a JSON array object and extract a single element from a series of objects. The "Index" control is animated via a Vonk data node connection to parse each of the elements present in the file automatically.
 
-![[image356.png]]
+![[Kartaverse/Vonk Ultra/img/image356.png]]
 
 The output from the "vJSONGetElement1" node looks like this:
 
@@ -344,7 +344,7 @@ vJSONGet2
 
 The "vJSONGet2" node is used to access the Key called "file_path". In our sample JSON file this will return a string that holds the name of a specific camera alignment image.
 
-![[image298.png]]
+![[Kartaverse/Vonk Ultra/img/image298.png]]
 
 vTextAccumulator1
 
@@ -417,11 +417,11 @@ JSON records can also hold a series of parameters in an array such as per-frame 
 
 Creating 3D Materials from Live Web Images
 
-![[image398.png]]
+![[Kartaverse/Vonk Ultra/img/image398.png]]
 
 An exciting element that can be added to data based graphics in Fusion are "live" internet sourced visuals. This includes just about any media resource you can connect to using an `http://`, `https://`, or `file://` based URL such as live frame-grabbed webcam imagery, traffic cam views, satellite weather graphics, or any other image resource from the web.
 
-![[image135.png]]
+![[Kartaverse/Vonk Ultra/img/image135.png]]
 
 An important step if you are connecting a vImageFromNet created image context to a 3D workspace based polygon model is to add a surface material to the mesh first. Otherwise Fusion might instant-quit on you if you try to direct-connect the 2D image texture straight onto the mesh node.
 
@@ -454,19 +454,19 @@ The "vImageFromNet" node carries out the actual image resource downloading proce
 
 Don't forget to customize the "File Type" setting on the node to give Fusion a hint of the actual image format you are downloading.
 
-![[image149.png]]
+![[Kartaverse/Vonk Ultra/img/image149.png]]
 
 The "Texture2D" node provides controls that help with texture placement such as UV coordinate driven scaling and UV translation.
 
-![[image341.png]]
+![[Kartaverse/Vonk Ultra/img/image341.png]]
 
 The Blinn node is a general purpose surface material.
 
-![[image312.png]]
+![[Kartaverse/Vonk Ultra/img/image312.png]]
 
 Fusion also supports the use of the CookTorrance (PBR) material, Phong material, Ward Material, and finally the Reflect material which is used for environmental reflections.
 
-![[image115.png]]
+![[Kartaverse/Vonk Ultra/img/image115.png]]
 
 If you require examples of how to render models using a PBR material shader you can start out with the CookTorrance node and the sample shaders provided by the Reactor Package Manager's "KickAss ShaderZ" collection.
 
@@ -474,7 +474,7 @@ If you require examples of how to render models using a PBR material shader you 
 
 If you need even more surface material features you could explore the (paid) [LearnNowFX AccuShaders PBR shading plugin](https://learnnowfx.com/accushader.html) for Resolve Studio/Fusion Studio v17.1+. If you are working on programmable shaders for Fusion Studio v9 on Windows then [Chad Capeland's CustomShader3D](https://indicated.gumroad.com/l/uPahJ) plugin might be of interest.
 
-![[image241.png]]
+![[Kartaverse/Vonk Ultra/img/image241.png]]
 
 The "Shape3D" node is used to create the stand-in geometry the texture is applied to. A variety of platonic solid geometry types are supported.
 
@@ -962,7 +962,7 @@ It is also possible to apply hard limits to the valid minimum/maximum number you
 
 Applying UserControls on a Node
 
-![[image336.png]]
+![[Kartaverse/Vonk Ultra/img/image336.png]]
 
 Listed below is a macro ".settings" snippet of code for a vNumberCreate node that has a UserControls based customization applied. The Number input is displayed as a SliderControl type, and the slider goes from 0 - 100. The number is set to increment as an integer, and the default for the control is 0.
 
@@ -1002,7 +1002,7 @@ This means the node graph can self-limit the minimum and maximum vNumber range a
 
 Taking this step to keep the numbers from overshooting a realistic value keeps macros and automated templates you build from breaking by accidental out-of-bounds user input.
 
-![[image352.png]]
+![[Kartaverse/Vonk Ultra/img/image352.png]]
 
 #### Vonk Known Issues
 
@@ -1147,7 +1147,7 @@ You will notice this issue has happened to you when you expand the GroupOperator
 
 A temporary workaround solution to this issue is to place a vTextWireless link node inside your macro. Expose the wireless node's "ImageControl" attribute in the Inspector GUI for the macro and use that as the way to make connections to data nodes packaged inside this Macro object.
 
-![[image395.png]]
+![[Kartaverse/Vonk Ultra/img/image395.png]]
 
 FWIW, if your end goal was to create a data node that could be used in a Resolve Edit page Effects Template, you are going to have to pass only image data on the macro's input and output connections in the end anyway. This means data nodes inside the macro group should be accessed via wireless links, or the Inspector view's right-click "ConnectTo" pop-up contextual menu by outside nodes.
 

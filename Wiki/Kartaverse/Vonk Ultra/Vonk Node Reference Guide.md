@@ -34,7 +34,7 @@ The Filename field contents can include relative PathMap values like "Comp:/" th
 
 If a sub-folder is specified in the filename field, and it is missing at render time, the sub-folders will be re-created automatically when the file is saved to disk. This is helpful if you want to use per--timeline-frame numbered folders in the output filepath.
 
-![[image94.png]]
+![[Kartaverse/Vonk Ultra/img/image94.png]]
 
 v3DSwitch
 
@@ -48,7 +48,7 @@ The "Show Which Input" checkbox is used to hide the Number datatype based input 
 
 The "Show Active Input" checkbox is used as a visualization and diagnostics mode. When enabled, this control automatically toggles the visibility off for the inactive connection wirelines fed into the switch node. This approach makes it possible to visually see in a quick glance the source comp branch that is selected as the input and used by the Which control. All other inputs will be turned into hidden wireless inputs when not in use.
 
-![[image142.png]]
+![[Kartaverse/Vonk Ultra/img/image142.png]]
 
 v3DProcessOpen
 
@@ -62,7 +62,7 @@ Typically a vTextSubFormat node is used to build the executable command line str
 
 If you need cross-platform support, you can use a vTextCreatePlatform or vTextCreatePlatformBrowse node to automatically define the per-OS specific elements like the executable program name and its file extension (.exe, .app, .bat, .sh, .command).
 
-![[image326.png]]
+![[Kartaverse/Vonk Ultra/img/image326.png]]
 
 v3DSlashCommand
 
@@ -78,7 +78,7 @@ The delay effect is measured in seconds. This node is implemented internally usi
 
 Among several use cases one can find for a tool that can momentarily pause rendering; it can be used to simulate a slow to render comp task when testing a render farm program. It also has applications when running a command line task via the Vonk 3DProcessOpen node the system requires a momentary pause to work reliably.
 
-![[image179.png]]
+![[Kartaverse/Vonk Ultra/img/image179.png]]
 
 ### Array Nodes
 
@@ -88,13 +88,13 @@ vArraySubReturn
 
 Concatenates an array
 
-![[image164.png]]
+![[Kartaverse/Vonk Ultra/img/image164.png]]
 
 vArrayKeys
 
 Returns the keys present in an array
 
-![[image119.png]]
+![[Kartaverse/Vonk Ultra/img/image119.png]]
 
 vArrayGetKey
 
@@ -106,7 +106,7 @@ vArrayGet
 
 Gets the value of a key in an array
 
-![[image370.png]]
+![[Kartaverse/Vonk Ultra/img/image370.png]]
 
 vArrayGetIndex
 
@@ -128,7 +128,7 @@ Casts metadata to an array
 
 This node translates metadata records into a JSON based array structure. This supports tasks like parsing EXR formatted image metadata to extract Cryptomatte matte manifest records.
 
-![[image265.png]]
+![[Kartaverse/Vonk Ultra/img/image265.png]]
 
 vArrayFromMediaIn
 
@@ -136,7 +136,7 @@ Casts a Resolve MediaIn MediaProps to an array
 
 This makes it possible to read MediaPool/Edit page timeline information provided by a MediaIn node.
 
-![[image372.png]]
+![[Kartaverse/Vonk Ultra/img/image372.png]]
 
 vArrayFromCSV
 
@@ -170,19 +170,19 @@ Technology Note: [YAML](https://yaml.org/) is used as part of Film & TV producti
 
 Blackmagic BRAW media filmed on a [BMD URSA Mini Pro 12K](https://www.blackmagicdesign.com/products/blackmagicursaminipro) camera with a Cooke Optics PL-mount lens is capable of holding this YAML metadata recorded lens information internally. This is useful for supporting better data interchange between VP (Virtual Production) onset ICVFX (In-Camera VFX) departments and subsequent post-production workflows carried out by external vendors.
 
-![[image116.png]]
+![[Kartaverse/Vonk Ultra/img/image116.png]]
 
 vArrayFromDataWindow
 
 Casts DataWindow to an array
 
-![[image349.png]]
+![[Kartaverse/Vonk Ultra/img/image349.png]]
 
 vArrayConcatenate
 
 Concatenates an array
 
-![[image148.png]]
+![[Kartaverse/Vonk Ultra/img/image148.png]]
 
 vArraySlice
 
@@ -194,13 +194,13 @@ vArraySize
 
 Gets the size of an array
 
-![[image171.png]]
+![[Kartaverse/Vonk Ultra/img/image171.png]]
 
 vArrayJoin
 
 Gets the value of a key in an array
 
-![[image365.png]]
+![[Kartaverse/Vonk Ultra/img/image365.png]]
 
 vArrayMatch
 
@@ -266,7 +266,7 @@ This node converts a block of ASCII text into a Base64 format.
 
 The "Text" input field is used to specify the source ASCII string to process.
 
-![[image274.png]]
+![[Kartaverse/Vonk Ultra/img/image274.png]]
 
 vBase64EncodeFromFile
 
@@ -276,7 +276,7 @@ This node converts the contents of an external file into a Base64 format. This c
 
 The "File" input field is used to specify the filepath to a document.
 
-![[image307.png]]
+![[Kartaverse/Vonk Ultra/img/image307.png]]
 
 vBase64DecodeImageFromFile
 
@@ -298,7 +298,7 @@ The "Text" field is used to specify a block of text that is currently Base64 enc
 
 The "Show Input" checkbox allows you to source the Text information from an external Text based data node connection.
 
-![[image279.png]]
+![[Kartaverse/Vonk Ultra/img/image279.png]]
 
 vBase64DecodeImageFromText
 
@@ -310,13 +310,13 @@ The "Text" field is used to specify a block of text that holds Base64 encoded im
 
 The "Show Input" checkbox allows you to source the Text information from an external Text based data node connection.
 
-![[image385.png]]
+![[Kartaverse/Vonk Ultra/img/image385.png]]
 
 vBase64ToHTML
 
 Converts a Base64 encoded PNG image into an inline HTML `<IMG>` embed.
 
-![[image180.png]]
+![[Kartaverse/Vonk Ultra/img/image180.png]]
 
 This node is useful to help prepare an inline Base64 encoded PNG image block. The most common use case for this node is to help fuse coders prepare new icons for use in a fuse's LabelControl element. This supports building Inspector view based icons for your custom fuses or macros.
 
@@ -341,7 +341,7 @@ The "`IC_ControlPage = -1,`" tag will move the UI element above the Control Page
 
 The end result from adding the Base64 icon to a LabelControl is the ability to create a more polished UI for your fuse:
 
-![[image173.png]]
+![[Kartaverse/Vonk Ultra/img/image173.png]]
 
 ### Metadata Nodes
 
@@ -365,7 +365,7 @@ Creates a Fusion image with metadata added from text
 
 This node is similar to the SetMetadata.fuse with the addition of input connections on the node that accepts a Text data type for the "Field Name", and "Field Value".
 
-![[image18.png]]
+![[Kartaverse/Vonk Ultra/img/image18.png]]
 
 A metadata example for Fusion Viewer based Stereo3D "Over/Under" image content is:
 
@@ -388,7 +388,7 @@ Creates a Fusion image with MediaIn MediaProps metadata
 
 This node is connected directly to a MediaIn node. It extracts the MediaProps record from a MediaIn node and places that data into the image's metadata Lua table.
 
-![[image205.png]]
+![[Kartaverse/Vonk Ultra/img/image205.png]]
 
 The MediaProps based Metadata Lua table output is formatted like:
 
@@ -425,7 +425,7 @@ The "Recursive" checkbox allows you to apply the access permission changes to it
 
 Note: This node works on macOS and Linux systems only due to the use of the UNIX "chmod" utility.
 
-![[image183.png]]
+![[Kartaverse/Vonk Ultra/img/image183.png]]
 
 vFileSystemCreateDir
 
@@ -451,7 +451,7 @@ This node allows you to define a "Source File" that will be copied to the disk-b
 
 The "Create Destination Directory" checkbox is useful if you need to dynamically create the output folder at the same time.
 
-![[image315.png]]
+![[Kartaverse/Vonk Ultra/img/image315.png]]
 
 vFileSystemFileExists
 
@@ -513,25 +513,25 @@ This node automatically converts a relative filepath into an absolute filepath o
 
 This is useful if you want to supply an executable program name, or a filename to an operation like the ProcessOpen node that carries out command-line tasks.
 
-![[image162.png]]
+![[Kartaverse/Vonk Ultra/img/image162.png]]
 
 vFileSystemRemoveDir
 
 Remove a directory
 
-![[image158.png]]
+![[Kartaverse/Vonk Ultra/img/image158.png]]
 
 vFileSystemRemoveFile
 
 Rename a file or folder
 
-![[image87.png]]
+![[Kartaverse/Vonk Ultra/img/image87.png]]
 
 vFileSystemRename
 
 Rename a file or folder
 
-![[image304.png]]
+![[Kartaverse/Vonk Ultra/img/image304.png]]
 
 vFileSystemSymlink
 
@@ -543,7 +543,7 @@ If you are working with locally stored and managed temp files on a render node, 
 
 Symlinks can be an attractive technique to use if you are copying a large quantity of files on disk, merely for the purpose of renaming the files temporarily in order to unify the naming convention of an image sequence. This happens when you are trying to manage original "camera named" footage into something tidy and symmetrical. This type of operation is typically done for convenience when doing data processing in a temp folder where you need to separate the intermediate files, and your output files from the source media.
 
-![[image281.png]]
+![[Kartaverse/Vonk Ultra/img/image281.png]]
 
 How to tell a file is a Symlink
 
@@ -562,7 +562,7 @@ Windows
 
 If you are looking at files on disk and trying to tell if it is a symlink or not, you can type "dir" into a Command Prompt window on Windows and you will see a file is indicated as a soft-link with the word "`<SYMLINK>`" in the directory contents listing output like this:
 
-![[image189.png]]
+![[Kartaverse/Vonk Ultra/img/image189.png]]
 
     dir
      Volume in drive C has no label.
@@ -578,19 +578,19 @@ If you are looking at files on disk and trying to tell if it is a symlink or not
 
 In the Windows Explorer folder browsing window a symlinked file has an "arrow icon" overlaid over the document icon as well:
 
-![[image311.png]]
+![[Kartaverse/Vonk Ultra/img/image311.png]]
 
 Windows and Symlink Based File Permissions
 
 If you want to create a symlink without using Administrator permissions on Windows systems, you need to open the Windows operating system "Settings \> Privacy & security \> For developers" preference to enable the "Developer Mode".
 
-![[image160.png]]
+![[Kartaverse/Vonk Ultra/img/image160.png]]
 
 vFileSystemTouch
 
 Touch a file/folder's creation and modification dates on macOS and Linux
 
-![[image323.png]]
+![[Kartaverse/Vonk Ultra/img/image323.png]]
 
 vFileSystemURLOpen
 
@@ -598,7 +598,7 @@ Opens a file
 
 This node opens a URL in an external web-browser. This is useful if you need to display reference material, or assist a user in checking out an asset from a web-based content management system.
 
-![[image300.png]]
+![[Kartaverse/Vonk Ultra/img/image300.png]]
 
 ### Image Nodes
 
@@ -608,7 +608,7 @@ vImageCreateLine
 
 Creates a Line Shape object
 
-![[image359.png]]
+![[Kartaverse/Vonk Ultra/img/image359.png]]
 
 vImageDelay
 
@@ -634,7 +634,7 @@ Saves an EXR image to disk
 
 The "Filename" control can be driven externally by a Text data type connection to the node.
 
-![[image227.png]]
+![[Kartaverse/Vonk Ultra/img/image227.png]]
 
 vImageFromColor
 
@@ -654,7 +654,7 @@ The "EXR Part Number" control allows you to select another part element from a m
 
 The "Time Mode" control allows you to adjust how the frame number for image sequences is processed.
 
-![[image380.png]]
+![[Kartaverse/Vonk Ultra/img/image380.png]]
 
 vImageFromClipboard
 
@@ -674,7 +674,7 @@ The "Input" control is used to define the image filename to load. It can be driv
 
 The "Time Mode" control allows you to adjust how the frame number for image sequences is processed.
 
-![[image178.png]]
+![[Kartaverse/Vonk Ultra/img/image178.png]]
 
 vImageFromNet
 
@@ -688,7 +688,7 @@ An example image you can use to test this node is an Eastern Canada weather sate
 
 <https://weather.gc.ca/data/satellite/goes_ecan_1070_100.jpg>
 
-![[image353.png]]
+![[Kartaverse/Vonk Ultra/img/image353.png]]
 
 vImageFromZip
 
@@ -710,7 +710,7 @@ This node is a version of the Cryptomatte fuse that supports an exposed Text dat
 
 This is handy if you want to use the Vonk JSON + Metadata + Array features to create technical animations that browse through every matte element stored in the image's manifest records.
 
-![[image154.png]]
+![[Kartaverse/Vonk Ultra/img/image154.png]]
 
 vImageProcessOpen
 
@@ -722,7 +722,7 @@ Typically a vTextSubFormat node is used to build the executable command line str
 
 If you need cross-platform support, you can use a vTextCreatePlatform or vTextCreatePlatformBrowse node to automatically define the per-OS specific elements like the executable program name and its file extension (.exe, .app, .bat, .sh, .command).
 
-![[image165.png]]
+![[Kartaverse/Vonk Ultra/img/image165.png]]
 
 vImageSlashCommand
 
@@ -744,13 +744,13 @@ The "Reverse X Order" and "Reverse Y Order" checkboxes are used to provide contr
 
 vImageHook
 
-![[image174.png]]
+![[Kartaverse/Vonk Ultra/img/image174.png]]
 
 vImageWireless
 
 The vImageWireless node allows you to connect to other image based nodes in your comp without drawing the connection wirelines visually in the Flow/Nodes view. This can be helpful if you need to reduce clutter.
 
-![[image317.png]]
+![[Kartaverse/Vonk Ultra/img/image317.png]]
 
 vImageSwitch
 
@@ -764,7 +764,7 @@ The "Show Which Input" checkbox is used to hide the Number datatype based input 
 
 The "Show Active Input" checkbox is used as a visualization and diagnostics mode. When enabled, this control automatically toggles the visibility off for the inactive connection wirelines fed into the switch node. This approach makes it possible to visually see in a quick glance the source comp branch that is selected as the input and used by the Which control. All other inputs will be turned into hidden wireless inputs when not in use.
 
-![[image225.png]]
+![[Kartaverse/Vonk Ultra/img/image225.png]]
 
 ### Number Nodes
 
@@ -792,7 +792,7 @@ vNumberDelay
 
 Creates a Delay while passing a Fusion Number object
 
-![[image190.png]]
+![[Kartaverse/Vonk Ultra/img/image190.png]]
 
 The delay effect is measured in seconds. This node is implemented internally using the "`bmd.wait()`" function.
 
@@ -833,7 +833,7 @@ You can see a list of running programs and their PID values in the terminal usin
 
 It is also possible to see programs and their PID values in the macOS "Activity Monitor.app" utility. In the top right corner of the Activity Monitor window you can type in the name of the program in the search field to filter the results in the view down to what matters.
 
-![[image348.png]]
+![[Kartaverse/Vonk Ultra/img/image348.png]]
 
 vNumberResolvePID
 
@@ -867,37 +867,37 @@ Returns the absolute value of a number
 
 This node is handy if you need to remove the negative sign (-) element from a value so you only have the positive component of the number remaining.
 
-![[image354.png]]
+![[Kartaverse/Vonk Ultra/img/image354.png]]
 
 vNumberMax
 
 Returns the maximum of two numbers
 
-![[image357.png]]
+![[Kartaverse/Vonk Ultra/img/image357.png]]
 
 vNumberStep
 
 Generates a step function by comparing two values
 
-![[image329.png]]
+![[Kartaverse/Vonk Ultra/img/image329.png]]
 
 vNumberSquareRoot
 
 Returns the square root of a number
 
-![[image276.png]]
+![[Kartaverse/Vonk Ultra/img/image276.png]]
 
 vNumberDivide
 
 Returns the quotient of two numbers
 
-![[image91.png]]
+![[Kartaverse/Vonk Ultra/img/image91.png]]
 
 vNumberMin
 
 Returns the minimum of two numbers
 
-![[image99.png]]
+![[Kartaverse/Vonk Ultra/img/image99.png]]
 
 vNumberModulus
 
@@ -919,19 +919,19 @@ vNumberClamp
 
 Clamps a number to specific boundaries
 
-![[image175.png]]
+![[Kartaverse/Vonk Ultra/img/image175.png]]
 
 vNumberFractional
 
 Returns the fractional part of a number
 
-![[image258.png]]
+![[Kartaverse/Vonk Ultra/img/image258.png]]
 
 vNumberSubtract
 
 Returns the difference of two numbers
 
-![[image260.png]]
+![[Kartaverse/Vonk Ultra/img/image260.png]]
 
 vNumberCeil
 
@@ -947,7 +947,7 @@ vNumberPower
 
 Returns the power of a number
 
-![[image229.png]]
+![[Kartaverse/Vonk Ultra/img/image229.png]]
 
 vNumberFloor
 
@@ -961,7 +961,7 @@ vNumberEase
 
 Performs a specific interpolation between two numbers during a defined time duration
 
-![[image369.png]]
+![[Kartaverse/Vonk Ultra/img/image369.png]]
 
 vNumberSign
 
@@ -969,31 +969,31 @@ Returns the sign of a number
 
 The output from the node will be either "-1", "0", or "1".
 
-![[image388.png]]
+![[Kartaverse/Vonk Ultra/img/image388.png]]
 
 vNumberIntegral
 
 Returns the integral part of a number
 
-![[image280.png]]
+![[Kartaverse/Vonk Ultra/img/image280.png]]
 
 vNumberSmoothstep
 
 Generates a smoothstep function
 
-![[image387.png]]
+![[Kartaverse/Vonk Ultra/img/image387.png]]
 
 vNumberMultiply
 
 Returns the product of two numbers
 
-![[image214.png]]
+![[Kartaverse/Vonk Ultra/img/image214.png]]
 
 vNumberMix
 
 Performs a linear interpolation between two numbers
 
-![[image322.png]]
+![[Kartaverse/Vonk Ultra/img/image322.png]]
 
 vNumberAdd
 
@@ -1005,13 +1005,13 @@ vNumberPartialPermutation
 
 Returns the sum of two numbers
 
-![[image396.png]]
+![[Kartaverse/Vonk Ultra/img/image396.png]]
 
 vNumberFactorial
 
 Returns the product of all positive integers less than or equal to InNumber
 
-![[image203.png]]
+![[Kartaverse/Vonk Ultra/img/image203.png]]
 
 vNumberCosine
 
@@ -1029,7 +1029,7 @@ vNumberSine
 
 Returns the sine for a number in radians
 
-![[image192.png]]
+![[Kartaverse/Vonk Ultra/img/image192.png]]
 
 vNumberArcCosine
 
@@ -1041,49 +1041,49 @@ vNumberHyperbolicSine
 
 Returns the hyperbolic sine of a number in radians
 
-![[image191.png]]
+![[Kartaverse/Vonk Ultra/img/image191.png]]
 
 vNumberHyperbolicTangent
 
 Returns the hyperbolic tangent of a number in radians
 
-![[image182.png]]
+![[Kartaverse/Vonk Ultra/img/image182.png]]
 
 vNumberHyperbolicCosine
 
 Returns the hyperbolic cosine for a number in radians
 
-![[image100.png]]
+![[Kartaverse/Vonk Ultra/img/image100.png]]
 
 vNumberDegreesToRadians
 
 Returns the radian value as a number in degrees
 
-![[image217.png]]
+![[Kartaverse/Vonk Ultra/img/image217.png]]
 
 vNumberTwoArgumentArcTangent
 
 Returns the arc tangent of y/x (in radians) but uses the signs of both parameters to find the quadrant of the result
 
-![[image288.png]]
+![[Kartaverse/Vonk Ultra/img/image288.png]]
 
 vNumberArcSine
 
 Returns the inverse sine for a number in radians
 
-![[image192.png]]
+![[Kartaverse/Vonk Ultra/img/image192.png]]
 
 vNumberRadiansToDegrees
 
 Returns the degree value as a number in radians
 
-![[image75.png]]
+![[Kartaverse/Vonk Ultra/img/image75.png]]
 
 vNumberTangent
 
 Returns the tangent for a number in radians
 
-![[image291.png]]
+![[Kartaverse/Vonk Ultra/img/image291.png]]
 
 vNumberFromArray
 
@@ -1091,7 +1091,7 @@ Creates a Number from an array
 
 The "Index" control allows you to select the array item (cell) to return as a number based value.
 
-![[image382.png]]
+![[Kartaverse/Vonk Ultra/img/image382.png]]
 
 vNumberAnd
 
@@ -1125,7 +1125,7 @@ Compares two numbers to see if they are equal
 
 A zero (false) or one (true) based number is returned from the comparator operation.
 
-![[image319.png]]
+![[Kartaverse/Vonk Ultra/img/image319.png]]
 
 vNumberNot
 
@@ -1147,7 +1147,7 @@ Compares two numbers to see if Term 1 is greater than or equal to Term 2
 
 A zero (false) or one (true) based number is returned from the comparator operation.
 
-![[image90.png]]
+![[Kartaverse/Vonk Ultra/img/image90.png]]
 
 vNumberLessEqual
 
@@ -1163,7 +1163,7 @@ Compares two numbers to see if Term 1 is less than Term 2
 
 A zero (false) or one (true) based number is returned from the comparator operation.
 
-![[image237.png]]
+![[Kartaverse/Vonk Ultra/img/image237.png]]
 
 vNumberCompCurrentTime
 
@@ -1197,7 +1197,7 @@ Returns the comp's Global End
 
 This is the last frame of the full Fusion timeline range. This number is not always set to the same range as the render end timeline control.
 
-![[image155.png]]
+![[Kartaverse/Vonk Ultra/img/image155.png]]
 
 vNumberCompRenderEnd
 
@@ -1235,7 +1235,7 @@ vNumberCompFPS
 
 Returns the comp's frame rate
 
-![[image379.png]]
+![[Kartaverse/Vonk Ultra/img/image379.png]]
 
 vNumberCompGlobalStart
 
@@ -1243,7 +1243,7 @@ Returns the comp's Global Start
 
 This is the first frame of the full Fusion timeline range. This number is not always set to the same range as the render start timeline control.
 
-![[image144.png]]
+![[Kartaverse/Vonk Ultra/img/image144.png]]
 
 vNumberFromText
 
@@ -1251,7 +1251,7 @@ Returns a number from a Fusion Text object
 
 This node converts an ASCII text based string that holds numerical content like "5" into an actual number data type that can have math operations performed on the value. This is a useful step if you need to connect a numerical value to an Inspector based attribute on another node.
 
-![[image123.png]]
+![[Kartaverse/Vonk Ultra/img/image123.png]]
 
 vNumberFromCSV
 
@@ -1263,7 +1263,7 @@ The "Column" control is used to increment through each set of comma separated en
 
 The "Ignore Header Row" checkbox will offset the first index position to start at line 2 in the CSV file. This will skip over a labelled header row in the source document to avoid that information being accessed as part of the ingested data.
 
-![[image188.png]]
+![[Kartaverse/Vonk Ultra/img/image188.png]]
 
 vNumberRange
 
@@ -1283,7 +1283,7 @@ Creates an integer Fusion Number object
 
 This node creates whole number based values with no floating point decimal based component. This node is an excellent choice if you want to drive the "Which" attribute on any of the Switch nodes available in Vonk.
 
-![[image89.png]]
+![[Kartaverse/Vonk Ultra/img/image89.png]]
 
 vNumberCreateArch
 
@@ -1295,7 +1295,7 @@ If the fuse is rendered on a 64-bit Intel/AMD CPU based system a value of 2 is r
 
 If the fuse is rendered on an ARM 64-bit system, like an Apple Silicon CPU, a value of 3 is returned.
 
-![[image383.png]]
+![[Kartaverse/Vonk Ultra/img/image383.png]]
 
 vNumberCreateBool
 
@@ -1331,7 +1331,7 @@ Creates a Fusion Number object
 
 This node uses a pseudo-random number generator to create a number that fits within the upper and lower range that is defined. If you animate the seed value, the number will change on each frame.
 
-![[image152.png]]
+![[Kartaverse/Vonk Ultra/img/image152.png]]
 
 vNumberCreate
 
@@ -1345,7 +1345,7 @@ vNumberFromVector
 
 Returns a number from a vector
 
-![[image233.png]]
+![[Kartaverse/Vonk Ultra/img/image233.png]]
 
 vNumberToMatrix
 
@@ -1377,7 +1377,7 @@ The "Show Which Input" checkbox is used to hide the Number datatype based input 
 
 The "Show Active Input" checkbox is used as a visualization and diagnostics mode. When enabled, this control automatically toggles the visibility off for the inactive connection wirelines fed into the switch node. This approach makes it possible to visually see in a quick glance the source comp branch that is selected as the input and used by the Which control. All other inputs will be turned into hidden wireless inputs when not in use.
 
-![[image156.png]]
+![[Kartaverse/Vonk Ultra/img/image156.png]]
 
 ### Point Nodes
 
@@ -1387,7 +1387,7 @@ vPointCreate
 
 Create a Fusion Point object
 
-![[image314.png]]
+![[Kartaverse/Vonk Ultra/img/image314.png]]
 
 vPointCreateImage
 
@@ -1402,7 +1402,7 @@ The "Add Metadata" checkbox creates image output metadata entries for the point 
 
 If you enable the viewer window's "Metadata" sub-viewer entry you can quickly see the information that is appended to the image output stream.
 
-![[image206.png]]
+![[Kartaverse/Vonk Ultra/img/image206.png]]
 
 ![[image409.png]]
 
@@ -1432,7 +1432,7 @@ vPointFromNumber
 
 Return a Fusion Point object from two numbers
 
-![[image172.png]]
+![[Kartaverse/Vonk Ultra/img/image172.png]]
 
 vPointToNumber
 
@@ -1440,19 +1440,19 @@ Return a pair of numbers from a Fusion Point object
 
 If you want a quick way to be able to view the individual number outputs from this node in the viewer window, try adding a pair of pipe-routers to the output connections.
 
-![[image364.png]]
+![[Kartaverse/Vonk Ultra/img/image364.png]]
 
 vPointCreateRandom
 
 Create a Fusion Point object with a random position
 
-![[image187.png]]
+![[Kartaverse/Vonk Ultra/img/image187.png]]
 
 vPointAbsolute
 
 Returns a Fusion Point object with an absolute value
 
-![[image313.png]]
+![[Kartaverse/Vonk Ultra/img/image313.png]]
 
 vPointMix
 
@@ -1464,19 +1464,19 @@ vPointPower
 
 Returns the power of a Fusion Point object
 
-![[image76.png]]
+![[Kartaverse/Vonk Ultra/img/image76.png]]
 
 vPointTimeStretch
 
 Time based operations on a Fusion Point object
 
-![[image195.png]]
+![[Kartaverse/Vonk Ultra/img/image195.png]]
 
 vPointTimeSpeed
 
 Time based operations on a Fusion Point object
 
-![[image197.png]]
+![[Kartaverse/Vonk Ultra/img/image197.png]]
 
 vPointDelay
 
@@ -1488,13 +1488,13 @@ vPointFromText
 
 Returns a Fusion Point object from two Text inputs
 
-![[image343.png]]
+![[Kartaverse/Vonk Ultra/img/image343.png]]
 
 vPointToText
 
 Return a pair of Text objects from a Fusion Point object
 
-![[image246.png]]
+![[Kartaverse/Vonk Ultra/img/image246.png]]
 
 vPointAdd
 
@@ -1526,7 +1526,7 @@ Returns the remainder of the division of a Fusion Point object that rounds the q
 
 The "Divisor X" and "Divisor Y" controls make it possible to create a looping effect that wraps the Point locator on each axis of motion so it stays within a range of 0 to (one less than the Divisor value).
 
-![[image278.png]]
+![[Kartaverse/Vonk Ultra/img/image278.png]]
 
 vPointMultiply
 
@@ -1534,7 +1534,7 @@ Returns the product of two Fusion Point objects
 
 This node can be used to apply a scale enlargement effect to the origin of the 1st point by the 2nd point's displacement distance.
 
-![[image168.png]]
+![[Kartaverse/Vonk Ultra/img/image168.png]]
 
 vPointSubtract
 
@@ -1542,7 +1542,7 @@ Returns the difference of two Fusion Point objects
 
 This node can be used to apply a negative offset to the origin of the 1st point by the 2nd point's displacement distance.
 
-![[image220.png]]
+![[Kartaverse/Vonk Ultra/img/image220.png]]
 
 vPointAngle
 
@@ -1558,17 +1558,17 @@ Measure the distance between two Fusion Point objects
 
 The output from this node is a Number datatype that reports the distance between Point1 and Point2.
 
-![[image295.png]]
+![[Kartaverse/Vonk Ultra/img/image295.png]]
 
 If you have an image loaded in the viewer window, and then select the vPointLength node to edit its attributes in the Inspector tab, you will see the Point1 and Point2 locator handle overlays onscreen.
 
-![[image397.png]]
+![[Kartaverse/Vonk Ultra/img/image397.png]]
 
 vPointSwitch
 
 Switch between Fusion Point objects
 
-![[image325.png]]
+![[Kartaverse/Vonk Ultra/img/image325.png]]
 
 vPointWireless
 
@@ -1597,7 +1597,7 @@ An example of Lua table formatted information is:
         bar = "World",
     }
 
-![[image390.png]]
+![[Kartaverse/Vonk Ultra/img/image390.png]]
 
 vScriptValFromApp
 
@@ -1615,7 +1615,7 @@ Sample "vScriptValFromApp" output from Fusion Studio:
 
 Sample "vScriptValFromApp" output from Resolve Studio:
 
-![[image297.png]]![[image106__fix1.png]]
+![[Kartaverse/Vonk Ultra/img/image297.png]]![[image106__fix1.png]]
 
 vScriptValFromArray
 
@@ -1633,13 +1633,13 @@ Casts a ScriptVal object into a JSON array
 
 This node takes a ScriptVal datatype as the input which is translated into a Text based JSON array output.
 
-![[image299.png]]
+![[Kartaverse/Vonk Ultra/img/image299.png]]
 
 vScriptValFromDate
 
 Create a Fusion ScriptVal object from the Lua os.date() table output
 
-![[image303.png]]
+![[Kartaverse/Vonk Ultra/img/image303.png]]
 
 vScriptValFromListFiles
 
@@ -1671,7 +1671,7 @@ Sample output from the "vScriptValFromListFonts" node when formatted as text bas
         "...",
     }
 
-![[image284.png]]
+![[Kartaverse/Vonk Ultra/img/image284.png]]
 
 vScriptValFontMetrics
 
@@ -1785,19 +1785,19 @@ The ScriptVal formatted Lua table output of an X/Y 2D Point looks like this:
         0.5
     }
 
-![[image228.png]]
+![[Kartaverse/Vonk Ultra/img/image228.png]]
 
 vScriptValToPoint
 
 Return a Fusion Point object from a ScriptVal
 
-![[image139.png]]
+![[Kartaverse/Vonk Ultra/img/image139.png]]
 
 vScriptValFromPingHosts
 
 Create a Fusion ScriptVal object from a Fusion ping hosts subnet scan
 
-![[image320.png]]
+![[Kartaverse/Vonk Ultra/img/image320.png]]
 
 vScriptValFromPrefs
 
@@ -1835,7 +1835,7 @@ Creates a ScriptVal object from XML
 
 This node accepts a text based input in an XML format. The result is translated into a ScriptVal object on the output.
 
-![[image184.png]]
+![[Kartaverse/Vonk Ultra/img/image184.png]]
 
 vScriptValFromCustomData
 
@@ -1923,7 +1923,7 @@ Convert a Fusion Text object into a ScriptVal
 
 This node expects a text formatted version of a Lua table structure as the input. The result is translated into a ScriptVal object on the output.
 
-![[image316.png]]
+![[Kartaverse/Vonk Ultra/img/image316.png]]
 
 vScriptValFromBinaryFile
 
@@ -1941,13 +1941,13 @@ The binary file data is Base64 encoded and placed in a Lua table structure. A sa
         Type = "File",
     }
 
-![[image400.png]]
+![[Kartaverse/Vonk Ultra/img/image400.png]]
 
 vScriptValToBinaryFile
 
 Writes a Fusion ScriptVal blob encoded object to a binary file
 
-![[image163.png]]
+![[Kartaverse/Vonk Ultra/img/image163.png]]
 
 vScriptValFromJSON
 
@@ -1957,7 +1957,7 @@ This node takes a Text datatype based JSON as the input which is translated into
 
 The "Sort List" checkbox will alphabetically sort the Lua table formatted results generated by the node.
 
-![[image232.png]]
+![[Kartaverse/Vonk Ultra/img/image232.png]]
 
 vScriptValToJSON
 
@@ -1967,7 +1967,7 @@ This node takes a ScriptVal datatype as the input which is translated into a JSO
 
 The "Sort List" checkbox will alphabetically sort the Lua table formatted results generated by the node.
 
-![[image392.png]]
+![[Kartaverse/Vonk Ultra/img/image392.png]]
 
 vScriptValToText
 
@@ -1981,7 +1981,7 @@ vScriptValGetToText
 
 Gets the value of a ScriptVal key
 
-![[image389.png]]
+![[Kartaverse/Vonk Ultra/img/image389.png]]
 
 vScriptValGetElementToText
 
@@ -2006,7 +2006,7 @@ The "Index" control is used to access individual entries from a ScriptVal array 
 
 The output from the vScriptValGetElementToText node is a text based data type. It is possible to translate the text based output from this node into numerical values via the vNumberFromText node.
 
-![[image350.png]]
+![[Kartaverse/Vonk Ultra/img/image350.png]]
 
 vScriptValGetToNumber
 
@@ -2022,7 +2022,7 @@ Gets the value of a ScriptVal key as a table
 
 The output from the vScriptValGetToTable node is a ScriptVal based data type.
 
-![[image402.png]]
+![[Kartaverse/Vonk Ultra/img/image402.png]]
 
 vScriptValGetElementToTable
 
@@ -2032,7 +2032,7 @@ The "Index" control is used to access individual entries from a ScriptVal array 
 
 The output from the vScriptValGetElementToTable node is a ScriptVal based data type.
 
-![[image143.png]]
+![[Kartaverse/Vonk Ultra/img/image143.png]]
 
 vScriptValKeysToText
 
@@ -2044,19 +2044,19 @@ vScriptValKeysToTable
 
 Returns the keys present in a ScriptVal object as a table
 
-![[image226.png]]
+![[Kartaverse/Vonk Ultra/img/image226.png]]
 
 vScriptValToNumber
 
 Convert a Fusion ScriptVal object into a Number
 
-![[image331.png]]
+![[Kartaverse/Vonk Ultra/img/image331.png]]
 
 vScriptValFromNumber
 
 Convert a Fusion Number object into a ScriptVal
 
-![[image302.png]]
+![[Kartaverse/Vonk Ultra/img/image302.png]]
 
 vScriptValRemoveElement
 
@@ -2070,13 +2070,13 @@ Extract a range of elements from a ScriptVal array as a table
 
 This node is useful for creating animated vector graphics that are revealed over time when your 2D point data is encoded into a ScriptVal Lua table structure that represents a polyline shape.
 
-![[image147.png]]
+![[Kartaverse/Vonk Ultra/img/image147.png]]
 
 vScriptValDoFile
 
 Return a ScriptVal object from running an external Lua script
 
-![[image261.png]]
+![[Kartaverse/Vonk Ultra/img/image261.png]]
 
 vScriptValDoString
 
@@ -2146,7 +2146,7 @@ vScriptValAccumulator
 
 Temporally concatenateScriptVal elements into one table
 
-![[image213.png]]
+![[Kartaverse/Vonk Ultra/img/image213.png]]
 
 This node can be thought of as a ScriptVal based merge node that works across a time range. It can be used to create Lua Table based array elements that are built over time from dynamically generated tables of data.
 
@@ -2166,13 +2166,13 @@ vScriptValTimeSpeed
 
 Time based operation on ScriptVal objects
 
-![[image273.png]]
+![[Kartaverse/Vonk Ultra/img/image273.png]]
 
 vScriptValTimeStretch
 
 Time based operation on ScriptVal objects
 
-![[image335.png]]
+![[Kartaverse/Vonk Ultra/img/image335.png]]
 
 vScriptValCount
 
@@ -2180,19 +2180,19 @@ Count the number of items in a Fusion ScriptVal object
 
 This node returns a number data type that indicates how many array elements exist at this level in a ScriptVal hierarchy. This return value could be used to drive a vTextAccumulator node's EndFrame attribute if you wanted to increment through each of the array elements.
 
-![[image358.png]]
+![[Kartaverse/Vonk Ultra/img/image358.png]]
 
 vScriptValDump
 
 Dump the contents of a Fusion ScriptVal object to the Console
 
-![[image376.png]]
+![[Kartaverse/Vonk Ultra/img/image376.png]]
 
 vScriptValMerge
 
 Dynamically join ScriptVal elements into one table
 
-![[image145.png]]
+![[Kartaverse/Vonk Ultra/img/image145.png]]
 
 vScriptValFromYAML
 
@@ -2216,7 +2216,7 @@ The "Show Which Input" checkbox is used to hide the Number datatype based input 
 
 The "Show Active Input" checkbox is used as a visualization and diagnostics mode. When enabled, this control automatically toggles the visibility off for the inactive connection wirelines fed into the switch node. This approach makes it possible to visually see in a quick glance the source comp branch that is selected as the input and used by the Which control. All other inputs will be turned into hidden wireless inputs when not in use.
 
-![[image361.png]]
+![[Kartaverse/Vonk Ultra/img/image361.png]]
 
 vScriptValWireless
 
@@ -2268,7 +2268,7 @@ The "File" text field is used to specify the filename of the JSON document to be
 
 The JSON file will be saved when the node is viewed/rendered. The contents of the JSON file is sourced from the text based input connection on the node.
 
-![[image210.png]]
+![[Kartaverse/Vonk Ultra/img/image210.png]]
 
 vJSONFromNet
 
@@ -2288,7 +2288,7 @@ The "Input" text field is used to specify the disk-based filename of the JSON do
 
 The JSON file will be loaded when the node is viewed/rendered. The contents of the JSON file is returned via a text based data type output connection on the node.
 
-![[image355.png]]
+![[Kartaverse/Vonk Ultra/img/image355.png]]
 
 vJSONGet
 
@@ -2302,7 +2302,7 @@ You can stack several vJSONGet nodes in a row to browse upwards in the hierarchy
 
 It is possible to translate this text based output from this node into numerical values via the vNumberFromText node. This is a useful step if you want to perform math operations downstream of this node, or if you need to connect a numerical value to an Inspector based attribute on another node.
 
-![[image245.png]]
+![[Kartaverse/Vonk Ultra/img/image245.png]]
 
 vJSONGetElement
 
@@ -2326,7 +2326,7 @@ The "Key" text-field lets you enter the name of the JSON element to be modified/
 
 The vJSONSet node makes it possible to create new JSON data structures that can be saved to disk using a vJSONToFile node.
 
-![[image68.png]]
+![[Kartaverse/Vonk Ultra/img/image68.png]]
 
 vJSONCountElement
 
@@ -2406,7 +2406,7 @@ A PID value is an integer style number that is used by the operating system to t
 
 Often PID values are the identifier used to tell an external program to gracefully quit. A PID number can also be used by the "renice" terminal utility to help balance the compute load on a system by scaling back the resource hogging level of a single dominant program that is reducing the overall interactivity of the host computer.
 
-![[image327.png]]
+![[Kartaverse/Vonk Ultra/img/image327.png]]
 
 vTextResolveProjectName
 
@@ -2498,7 +2498,7 @@ The "Remove Quotes" checkbox is used to strip out any quote symbols found in the
 
 This node works on Windows, macOS, and Linux.
 
-![[image345.png]]
+![[Kartaverse/Vonk Ultra/img/image345.png]]
 
 vTextNotEqual
 
@@ -2514,7 +2514,7 @@ Compares two strings to see if they are equal
 
 The result is a false/true based number result of 0-1.
 
-![[image393.png]]
+![[Kartaverse/Vonk Ultra/img/image393.png]]
 
 vTextTernary
 
@@ -2876,7 +2876,7 @@ If you need to access more complex automation techniques, or dynamically define 
     #!/bin/zsh
     say Hello Vonk World!
 
-![[image286.png]]
+![[Kartaverse/Vonk Ultra/img/image286.png]]
 
 vTextRenderComp
 
@@ -2900,7 +2900,7 @@ If "Comp Frame Range" is selected, the parent comp's Render Start - Render End f
 
 If "Custom Frame Range" is selected, a set of numerical input controls will be displayed. These controls allow you to manually drive the frame range used by the Fusion Render Node program on the fly.
 
-![[image305.png]]
+![[Kartaverse/Vonk Ultra/img/image305.png]]
 
 The "Render Node Version" control allows you to choose the exact Fusion Render Node executable version number you would like to launch when the .comp file is rendered. This allows you the flexibility to target a different Fusion Render node release than you are using to run the GUI session inside of Fusion Studio.
 
@@ -2964,7 +2964,7 @@ A positive number entered in the number input fields is used to define the remov
 
 This added complexity makes it easier to remove elements like a 3 letter file extension using the negative number input ability to trim off characters starting from the end (right side) of a variable length text string in a precise fashion.
 
-![[image362.png]]
+![[Kartaverse/Vonk Ultra/img/image362.png]]
 
 vTextSubStripLeft
 
@@ -3002,7 +3002,7 @@ If you had a string with an IPv4 style IP address in it like "192.168.1.1", you 
 
 The output would be formatted as: `{"size":4,"array":["192","168","1","1"]}`
 
-![[image202.png]]
+![[Kartaverse/Vonk Ultra/img/image202.png]]
 
 vTextDecodeUrl
 
@@ -3016,7 +3016,7 @@ Inverts the case of a Fusion Text object
 
 A Text based input of "Hello World!" would be converted to "hELLO wORLD!". Every uppercase letter in the output becomes lower case, and every lowercase letter becomes an uppercase letter.
 
-![[image381.png]]
+![[Kartaverse/Vonk Ultra/img/image381.png]]
 
 vTextCaseSentence
 
@@ -3024,7 +3024,7 @@ Converts the case of a Fusion Text object to sentence
 
 A Text based input of "hello world!" would be converted to "Hello world!" with the initial letter in each sentence having a capitalized letter.
 
-![[image363.png]]
+![[Kartaverse/Vonk Ultra/img/image363.png]]
 
 vTextCaseAlternate
 
@@ -3032,7 +3032,7 @@ Alternates the case of a Fusion Text object
 
 A Text based input of "hello world!" would be converted to "hElLo wOrLd!" where every 2nd letter is formatted as a capital letter.
 
-![[image391.png]]
+![[Kartaverse/Vonk Ultra/img/image391.png]]
 
 vTextCaseLower
 
@@ -3048,7 +3048,7 @@ Converts the case of a Fusion Text object to title
 
 A Text based input of "hello world!" would be converted to "Hello World!".
 
-![[image337.png]]
+![[Kartaverse/Vonk Ultra/img/image337.png]]
 
 vTextCaseRandom
 
@@ -3118,7 +3118,7 @@ vTextCreateMultilineCode
 
 Create a multi-line Fusion Text object with syntax highlighting
 
-![[image146.png]]
+![[Kartaverse/Vonk Ultra/img/image146.png]]
 
 vTextCreateArch
 
@@ -3126,7 +3126,7 @@ Creates a unique Fusion Text object per CPU architecture
 
 This node provides a series of text fields that allow you to enter three different string values. The correct string that matches the current CPU architecture will be returned when the comp is rendered.
 
-![[image378.png]]
+![[Kartaverse/Vonk Ultra/img/image378.png]]
 
 vTextCreatePlatform
 
@@ -3154,7 +3154,7 @@ Converts an ASCII code number to text
 
 The "Number" control is used to enter an ASCII code value. The result is a single character placed inside a text data type based output.
 
-![[image339.png]]
+![[Kartaverse/Vonk Ultra/img/image339.png]]
 
 vTextFromCSV
 
@@ -3210,7 +3210,7 @@ A per-frame (Universally Unique IDentifier) value is generated by this node. Thi
 
 A UUID value is formatted like: `11625315-7785-4eb4-8b2f-d6dca235c424`
 
-![[image301.png]]
+![[Kartaverse/Vonk Ultra/img/image301.png]]
 
 vTextToHex
 
@@ -3266,7 +3266,7 @@ The "Slash Direction" multi-button control allows you to choose if you want Wind
 
 The "Remove Duplicate Slashes" checkbox will replace any occurrence for two adjacent slashes with a single slash. This option is something you might not want to use if UNC file paths are common in filenames used in your pipeline.
 
-![[image367.png]]
+![[Kartaverse/Vonk Ultra/img/image367.png]]
 
 vTextParseFilename
 
@@ -3364,7 +3364,7 @@ The "Display Lines" control is used to adjust how many visible lines of text are
 
 The "Wrap Lines" checkbox makes it possible to enable/disable line wrapping in the Input field preview area.
 
-![[image321.png]]
+![[Kartaverse/Vonk Ultra/img/image321.png]]
 
 vTextWireless
 
@@ -3448,7 +3448,7 @@ vPointToVector
 
 Creates a vector from a point
 
-![[image294.png]]
+![[Kartaverse/Vonk Ultra/img/image294.png]]
 
 vVectorToPoint
 
@@ -3466,7 +3466,7 @@ vVectorCreate
 
 Creates a vector from an array
 
-![[image296.png]]
+![[Kartaverse/Vonk Ultra/img/image296.png]]
 
 vVectorLength
 
@@ -3482,7 +3482,7 @@ vMatrixDivide
 
 Divides two matrices
 
-![[image204.png]]
+![[Kartaverse/Vonk Ultra/img/image204.png]]
 
 vMatrixInvert
 
@@ -3494,19 +3494,19 @@ vMatrixDeterminant
 
 Calculates the determinant of a matrix
 
-![[image371.png]]
+![[Kartaverse/Vonk Ultra/img/image371.png]]
 
 vMatrixMultiply
 
 Multiplies two matrices
 
-![[image377.png]]
+![[Kartaverse/Vonk Ultra/img/image377.png]]
 
 vMatrixDivideNumber
 
 Divides a matrix by a number
 
-![[image212.png]]
+![[Kartaverse/Vonk Ultra/img/image212.png]]
 
 vMatrixFromArray
 
@@ -3536,13 +3536,13 @@ vMatrixTranspose
 
 Transposes a matrix
 
-![[image368.png]]
+![[Kartaverse/Vonk Ultra/img/image368.png]]
 
 vMatrixToRotation
 
 Decomposes a rotation from a matrix in [Euler angles](https://en.wikipedia.org/wiki/Euler_angles)
 
-![[image132.png]]
+![[Kartaverse/Vonk Ultra/img/image132.png]]
 
 vMatrixFromRotation
 
@@ -3554,31 +3554,31 @@ vMatrixToScale
 
 Decomposes scale from a matrix
 
-![[image124.png]]
+![[Kartaverse/Vonk Ultra/img/image124.png]]
 
 vMatrixFromTranslation
 
 Creates a translation matrix
 
-![[image124.png]]
+![[Kartaverse/Vonk Ultra/img/image124.png]]
 
 vEulerFromMatrix
 
 Converts a matrix to [Euler angles](https://en.wikipedia.org/wiki/Euler_angles)
 
-![[image244.png]]
+![[Kartaverse/Vonk Ultra/img/image244.png]]
 
 vMatrixFromScale
 
 Creates a scale matrix
 
-![[image96.png]]
+![[Kartaverse/Vonk Ultra/img/image96.png]]
 
 vMatrixSlice
 
 Slices a matrix
 
-![[image200.png]]
+![[Kartaverse/Vonk Ultra/img/image200.png]]
 
 vMatrixConcatenateHorizontal
 
@@ -3596,4 +3596,4 @@ vMatrixLink
 
 Links to a matrix
 
-![[image264.png]]
+![[Kartaverse/Vonk Ultra/img/image264.png]]

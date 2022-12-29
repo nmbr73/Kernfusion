@@ -240,7 +240,7 @@ kas_GlassQuartzScratched
 
 "kas_GlassQuartzScratched" is a semi-transparent glass material. A primitive attempt has been taken to simulate a faked purple color absorption effect on the material using a Falloff node.
 
-![[image27.png]]
+![[Kartaverse/Workflows/img/image27.png]]
 
 kas_Gold
 
@@ -491,13 +491,13 @@ kas_SimonsTownRocks
 
 "kas_SimonsTownRocks" is an HDRI image of a rocky coastal shoreline in Simon's Town, Cape Town, South Africa.
 
-![[image51.png]]
+![[Kartaverse/Workflows/img/image51.png]]
 
 kas_StNicholasChurch
 
 "kas_StNicholasChurch" is an HDRI image of the interior of the Dominican order's St. Nicholas Church in Gdańsk, Poland. The church was originally erected in 1227. The interior of the church currently features a baroque altar design with a black and golden colored theme.
 
-![[image52.png]]
+![[Kartaverse/Workflows/img/image52.png]]
 
 ### Copyright Credits
 
@@ -607,7 +607,7 @@ Note: Try to make sure to drag the nodes to an open space in the Nodes view so t
 
 Pressing the "Shift + Spacebar" hotkey when Fusion's Nodes view is in focus will display a "Select Tool" dialog. Typing in "kas\_" is a quick way to filter the list of available nodes down to the content provided by the "KickAss ShaderZ" collection.
 
-![[image55.png]]
+![[Kartaverse/Workflows/img/image55.png]]
 
 ### KickAss ShaderZ Menu
 
