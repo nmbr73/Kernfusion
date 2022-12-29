@@ -5,5 +5,5 @@
 
 ## See also:
 
-- [Comp by TiDa](../../Comp/tida/README.md)
+- [Comps by TiDa](../../Comp/tida/README.md)
 - [Macros by TiDa](../../Macros/tida/README.md)
