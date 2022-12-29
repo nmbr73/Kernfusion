@@ -1,9 +1,8 @@
 # Fuses, Macros & Compositions
 
+## Overview
 
-
-
-Fuses:
+### [Fuses](Fuses/README.md)
 - **[Bokeh](Fuses/tida/Bokeh.md)** by TiDa
 - **[FastGlow](Fuses/danell/FastGlow.md)** by Danell
 - **[CubeMapLoader](Fuses/nmbr73/CubeMapLoader.md)** by nmbr73
@@ -11,10 +10,10 @@ Fuses:
 - **[CubeMapColorizer](Fuses/nmbr73/CubeMapColorizer.md)** by nmbr73
 - **[CubeMapEquirectangular](Fuses/nmbr73/CubeMapEquirectangular.md)** by nmbr73
 
-Comps:
+### [Comps](Comp/README.md)
 - **[TitleBurnEffect](Comp/tida/TitleBurnEffect.md)** by TiDa
 
-Macros:
+### [Macros](Fuses/README.md)
 - **[Bokeh_Image](Macros/tida/Bokeh_Image.md)** by TiDa
 - **[Bokeh_AChroma](Macros/tida/Bokeh_AChroma.md)** by TiDa
 
