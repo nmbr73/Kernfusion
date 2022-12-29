@@ -15,8 +15,12 @@ See [DCTL Convolve Bokeh Fuse](https://www.steakunderwater.com/wesuckless/viewto
 
 See it in action:
 - [TitleBurnEffect](../../Comp/tida/TitleBurnEffect.md) example Comp
+
+See also:
 - [Bokeh_Image](../../Macros/tida/Bokeh_Image.md) Macro
 - [Bokeh_AChroma](../../Macros/tida/Bokeh_AChroma.md) Macro for Chromatic Aberration
+
+
 
 ## Description
 

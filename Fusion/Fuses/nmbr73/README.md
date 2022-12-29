@@ -10,3 +10,8 @@ All of this is in a very early stage. So far I started working on ...
 - **[CubeMapEquirectangular](CubeMapEquirectangular.md)** DCTL based projection of a cubemap to a 2D image
 - Garbage/**[MultiButtonControls](Garbage%20Collection/MultiButtonControl.md)** example for the different MultiButtonControl types
 
+
+## See also:
+
+- [Compositions by nmbr73](../Comp/nmbr73/README.md)
+
