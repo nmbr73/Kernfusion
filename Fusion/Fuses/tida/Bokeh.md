@@ -48,15 +48,24 @@ With a bokeh texture of 500x500 and a touch of Amplify, it will take some time t
 
 
 BokehFuse:
+
+<center><a href="http://www.youtube.com/watch?feature=player_embedded&v=LOMFJisTwBY" target="_blank"><img src="http://img.youtube.com/vi/LOMFJisTwBY/maxresdefault.jpg" alt="BokehFuse" width="80%" border="0" /><br /><img src="https://img.shields.io/youtube/views/LOMFJisTwBY?style=social" /></a></center>
+<!--
 <iframe width="560" height="315" src="https://www.youtube.com/embed/LOMFJisTwBY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+-->
 
 Bokeh and Depth:
+<center><a href="http://www.youtube.com/watch?feature=player_embedded&v=WFAx9-qSc9U" target="_blank"><img src="http://img.youtube.com/vi/WFAx9-qSc9U/maxresdefault.jpg" alt="Bokeh and Depth" width="80%" border="0" /><br /><img src="https://img.shields.io/youtube/views/WFAx9-qSc9U?style=social" /></a></center>
+<!--
 <iframe width="560" height="315" src="https://www.youtube.com/embed/WFAx9-qSc9U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 (Input: FastNoise, Text+, Ellipse)
+-->
 
 Bokeh and DepthToFocus Fuse:
+<center><a href="http://www.youtube.com/watch?feature=player_embedded&v=FCHLosfC9Ds" target="_blank"><img src="http://img.youtube.com/vi/FCHLosfC9Ds/maxresdefault.jpg" alt="Bokeh and DepthToFocus Fuse" width="80%" border="0" /><br /><img src="https://img.shields.io/youtube/views/FCHLosfC9Ds?style=social" /></a></center>
+<!--
 <iframe width="560" height="315" src="https://www.youtube.com/embed/FCHLosfC9Ds" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+-->
 
 Implemented micro-dithering to prevent some pattern formation when changing the size of bokeh. It will give an anti-aliasing effect while processing time is not influenced too much. Midgardsormr comments during his VariDilate Fuse development about solving rounding issues helped a lot.
 
