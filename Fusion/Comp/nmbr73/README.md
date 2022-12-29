@@ -7,4 +7,4 @@
 
 ## See also:
 
-- [Fuses by nmbr73](../Fuses/nmbr73/README.md)
+- [Fuses by nmbr73](../../Fuses/nmbr73/README.md)

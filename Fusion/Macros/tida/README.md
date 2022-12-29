@@ -6,6 +6,6 @@
 
 ## See also:
 
-- [Fuses by TiDa](../Fuses/tida/README.md)
-- [Compositions by TiDa](../Comp/tida/README.md)
+- [Fuses by TiDa](../../Fuses/tida/README.md)
+- [Comps by TiDa](../../Comp/tida/README.md)
 

@@ -5,5 +5,5 @@
 
 ## See also:
 
-- [Compositions by TiDa](../Comp/tida/README.md)
-- [Macros by TiDa](../Macros/tida/README.md)
+- [Comp by TiDa](../../Comp/tida/README.md)
+- [Macros by TiDa](../../Macros/tida/README.md)
