@@ -1,0 +1,280 @@
+{
+	Tools = ordered() {
+		Bokeh_AChroma = MacroOperator {
+			CtrlWZoom = false,
+			NameSet = true,
+			Inputs = ordered() {
+				Input1 = InstanceInput {
+					SourceOp = "Merge",
+					Source = "Background",
+					Name = "Input",
+				}
+			},
+			Outputs = {
+				Output1 = InstanceOutput {
+					SourceOp = "ChannelBooleansRGB",
+					Source = "Output",
+				}
+			},
+			ViewInfo = GroupInfo {
+				Pos = { 1058, 200.091 },
+				Flags = {
+					Expanded = true,
+					AllowPan = false,
+					AutoSnap = true,
+					RemoveRouters = true
+				},
+				Size = { 670, 148.281, 257.333, 24.2424 },
+				Direction = "Horizontal",
+				PipeStyle = "Direct",
+				Scale = 1,
+				Offset = { 0, 0 }
+			},
+			Tools = ordered() {
+				ChannelBooleansGB = ChannelBoolean {
+					NameSet = true,
+					Inputs = {
+						Operation = Input { Value = 1, },
+						ToAlpha = Input { Value = 4, },
+						Background = Input {
+							SourceOp = "Transform_B2",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Transform_G2",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { 326, 18.7577 } },
+				},
+				ChannelBooleans_R = ChannelBoolean {
+					NameSet = true,
+					Inputs = {
+						ToGreen = Input { Value = 15, },
+						ToBlue = Input { Value = 15, },
+						Background = Input {
+							SourceOp = "Merge",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { -55.643, 90.7166 } },
+				},
+				ChannelBooleansRGB = ChannelBoolean {
+					NameSet = true,
+					Inputs = {
+						Operation = Input { Value = 1, },
+						ToAlpha = Input { Value = 4, },
+						Background = Input {
+							SourceOp = "ChannelBooleansGB",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Transform_R2",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { 324.76, 89.0537 } },
+				},
+				ChannelBooleansG = ChannelBoolean {
+					NameSet = true,
+					Inputs = {
+						ToRed = Input { Value = 15, },
+						ToBlue = Input { Value = 15, },
+						Background = Input {
+							SourceOp = "Merge",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { -52, 51.3386 } },
+				},
+				ChannelBooleans_B = ChannelBoolean {
+					NameSet = true,
+					Inputs = {
+						ToRed = Input { Value = 15, },
+						ToGreen = Input { Value = 15, },
+						Background = Input {
+							SourceOp = "Merge",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { -51.334, 14.5146 } },
+				},
+				Merge = Merge {
+					NameSet = true,
+					Inputs = {
+						Edges = Input { Expression = "Bokeh_AChroma.CAEdges", },
+						PerformDepthMerge = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { -194.667, 8.79857 } },
+				},
+				Transform_R = Transform {
+					NameSet = true,
+					Inputs = {
+						Center = Input { Expression = "Point(0.5-(Transform_B.Center.X-0.5),0.5-(Transform_B.Center.Y-0.5))", },
+						Angle = Input { Expression = "-Transform_B.Angle*Bokeh_AChroma.Blend", },
+						Edges = Input {
+							Value = 3,
+							Expression = "Bokeh_AChroma.CAEdges",
+						},
+						Input = Input {
+							SourceOp = "ChannelBooleans_R",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { 59.8243, 90.3396 } },
+				},
+				Transform_G = Transform {
+					NameSet = true,
+					Inputs = {
+						UseSizeAndAspect = Input { Value = 0, },
+						Size = Input { Expression = "Transform_B.Size", },
+						XSize = Input {
+							Value = 1.02285,
+							Expression = "Transform_B.XSize*0.5+0.5",
+						},
+						YSize = Input {
+							Value = 1.02285,
+							Expression = "Transform_B.YSize*0.5+0.5",
+						},
+						Edges = Input {
+							Value = 3,
+							Expression = "Bokeh_AChroma.CAEdges",
+						},
+						Input = Input {
+							SourceOp = "ChannelBooleansG",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { 62.666, 50.3775 } },
+				},
+				Transform_B = Transform {
+					NameSet = true,
+					Inputs = {
+						Center = Input { Expression = "(Bokeh_AChroma.Offset-Point(0.5,0.5))*Bokeh_AChroma.Blend+Point(0.5,0.5)", },
+						UseSizeAndAspect = Input { Value = 0, },
+						XSize = Input { Expression = "(Bokeh_AChroma.ChromaticAberration-0.5)*Bokeh_AChroma.Blend+1.0", },
+						YSize = Input { Expression = "XSize*((Bokeh_AChroma.Aspect-0.5)*Bokeh_AChroma.Blend+1.0)", },
+						Angle = Input {
+							Value = 2.581,
+							Expression = "Bokeh_AChroma.CAAngle*Bokeh_AChroma.Blend",
+						},
+						Edges = Input {
+							Value = 3,
+							Expression = "Bokeh_AChroma.CAEdges",
+						},
+						ReferenceSize = Input { Value = 1, },
+						Input = Input {
+							SourceOp = "ChannelBooleans_B",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { 68.6664, 16.9386 } },
+				},
+				Transform_B2 = Transform {
+					CtrlWShown = false,
+					NameSet = true,
+					Inputs = {
+						Input = Input {
+							SourceOp = "Transform_B",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { 181.333, 19.3628 } },
+				},
+				Transform_G2 = Transform {
+					CtrlWShown = false,
+					NameSet = true,
+					Inputs = {
+						Input = Input {
+							SourceOp = "Transform_G",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { 180.666, 51.5896 } },
+				},
+				Transform_R2 = Transform {
+					CtrlWShown = false,
+					NameSet = true,
+					Inputs = {
+						Input = Input {
+							SourceOp = "Transform_R",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { 185.824, 90.3396 } },
+				}
+			},
+			UserControls = ordered() {
+				ChromaticAberration = {
+					INP_Integer = false,
+					LINKS_Name = "Size",
+					INPID_InputControl = "SliderControl",
+					INP_MinScale = 0,
+					LINKID_DataType = "Number",
+					INP_MaxScale = 1,
+					INP_Default = 0.5,
+				},
+				Aspect = {
+					INP_Integer = false,
+					INPID_InputControl = "SliderControl",
+					LINKID_DataType = "Number",
+					INP_MinScale = 0,
+					INP_Default = 0.5,
+					INP_MaxScale = 1,
+					LINKS_Name = "Aspect",
+				},
+				Offset = {
+					INP_DefaultX = 0.5,
+					INPID_PreviewControl = "CrosshairControl",
+					INP_DefaultY = 0.5,
+					LINKID_DataType = "Point",
+					INPID_InputControl = "OffsetControl",
+					CHC_Style = "NormalCross",
+					LINKS_Name = "Offset",
+				},
+				CAAngle = {
+					INP_Integer = false,
+					INPID_InputControl = "ScrewControl",
+					INP_MaxScale = 5,
+					INP_Default = 0,
+					INPID_PreviewControl = "AngleControl",
+					LINKID_DataType = "Number",
+					INP_MinScale = 0,
+					ACID_Center = "Offset",
+					LINKS_Name = "Angle",
+				},
+				CAEdges = {
+					{ MBTNCD_ButtonWidth = 0.5, MBTNC_AddButton = "Canvas" },
+					{ MBTNCD_ButtonWidth = 0.5, MBTNC_AddButton = "Wrap" },
+					{ MBTNCD_ButtonWidth = 0.5, MBTNC_AddButton = "Duplicate" },
+					{ MBTNCD_ButtonWidth = 0.5, MBTNC_AddButton = "Mirror" },
+					INP_MaxAllowed = 4,
+					INP_Integer = true,
+					INPID_InputControl = "MultiButtonControl",
+					INP_MinScale = 0,
+					MBTNC_ShowBasicButton = true,
+					INP_MaxScale = 4,
+					INP_Default = 3,
+					MBTNC_ForceButtons = true,
+					INP_DoNotifyChanged = true,
+					INP_External = false,
+					LINKID_DataType = "Number",
+					INP_MinAllowed = 0,
+					MBTNC_StretchToFit = true,
+					MBTNC_ShowToolTip = true,
+					LINKS_Name = "Edges",
+				},
+				Blend = {
+					INP_Integer = false,
+					INP_Default = 1,
+					INPID_InputControl = "SliderControl",
+					INP_MinScale = 0,
+					LINKID_DataType = "Number",
+					INP_MaxScale = 1,
+					LINKS_Name = "Blend",
+				}
+			}
+		}
+	},
+	ActiveTool = "Bokeh_AChroma"
+}

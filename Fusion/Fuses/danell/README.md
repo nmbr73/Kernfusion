@@ -1,4 +1,4 @@
-# Fuses by Danell
+# Fuses by Jacob Danell
 
 * [FastGlow](FastGlow.md)
 
