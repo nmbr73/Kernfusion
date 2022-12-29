@@ -1,5 +1,6 @@
 ---
-tags: [glossary]
+alias: Fuses
+tags: [Glossary]
 ---
 
 A ''Fuse'' is a script [[Plug-in|plug-in]] for Fusion that is written in the [[Lua]] scripting language.

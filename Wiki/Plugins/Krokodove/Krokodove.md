@@ -8,19 +8,21 @@ author: Andrew Hazelden
 
 Krokodove (KKD) is a cross-platform compatible plugin for Fusion Studio and DaVinci Resolve Studio. It includes 100+ free Fusion tools. Krokodove was created by Raf Schoenmaekers of [Komkom Doorn](http://komkomdoorn.com).
 
->[!note] Acknowledgment & Resources
-> Documentation by [Andrew Hazelden \<andrew@andrewhazelden.com\>](mailto:andrew@andrewhazelden.com)
-> Krokodove plugin by [Raf Schoenmaekers info@komkomdoorn.com](mailto:info@komkomdoorn.com)
-> Krokodove Vimeo channel: <https://vimeo.com/channels/krokodove>
-> Krokodove email contact: <info@komkomdoorn.com>
-> License: Krokodove is distributed for free.
+> [!warning] Compatibility
+> Please note that KKD is a compiled Fusion plugin that was created with the FusionSDK. The KKD tools will not work in Fusion Standalone (free) or Resolve (free). A paid copy of either Fusion Studio or DaVinci Resolve Studio is required to run this plugin.
 
-The KKD shape tools allow you to create animatable vector artwork which is excellent for node-based motion graphics projects.
+The KKD shape tools allow you to create animatable vector artwork which is excellent for node-based motion graphics projects. See the [Krokodove Showcase Vimeo Videos](https://vimeo.com/channels/krokodove) to get an idea of what's possible with Krokodove.
 
 The KKD data tools support workflows similar to [Houdini CHOPS](https://www.sidefx.com/docs/houdini/nodes/chop/index.html) (short for "Channel Operators"; see also [HoudiniChops](https://www.tokeru.com/cgwiki/index.php?title=HoudiniChops) in the [cgwiki](https://www.tokeru.com/cgwiki/index.php?title=Main_Page)) through the processing of lists, and sets of arrays.
 
-> [!warning] Compatibility
-> Please note that KKD is a compiled Fusion plugin that was created with the FusionSDK. The KKD tools will not work in Fusion Standalone (free) or Resolve (free). A paid copy of either Fusion Studio or DaVinci Resolve Studio is required to run this plugin.
+
+## Acknowledgment & Resources
+
+- Documentation by [Andrew Hazelden \<andrew@andrewhazelden.com\>](mailto:andrew@andrewhazelden.com)
+- Krokodove plugin by [Raf Schoenmaekers info@komkomdoorn.com](mailto:info@komkomdoorn.com)
+- Krokodove Vimeo channel: <https://vimeo.com/channels/krokodove>
+- Krokodove email contact: <info@komkomdoorn.com>
+- License: Krokodove is distributed for free.
 
 
 ## Software Required
