@@ -3,6 +3,7 @@
 SCRIPTPATH="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 SCRIPTNAME=`basename $0`
 SUPPLEMENTS="supplements"
+VAULTNAME="Wiki"
 
 set -o errexit
 set -o pipefail
@@ -11,35 +12,6 @@ set -o nounset
 if [[ "${TRACE-0}" == "1" ]]; then set -o xtrace; fi
 
 cd "$(dirname "$0")"
-
-# ----------------------------------------------------------------------------
-
-function mk_usage {
-  echo "
-Usage: $SCRIPTNAME (docs)
-
-  docs: for MkDocs; try '$SCRIPTNAME docs help'
-
-Nothing else implemented yet.
-Run as 'TRACE=1 ./mk' to debug."
-}
-
-# ----------------------------------------------------------------------------
-
-function mk_docs_usage {
-  echo "
-Usage: $SCRIPTNAME docs (clean|ceate|build|serve|deploy)
-
-  clean:  deletes 'docs' and 'site' folders
-  create: does a clean and then creates the 'docs' folder (most common)
-  build:  does a create and then builds the 'site' folder
-  serve:  does a create and then serves the docs on http://localhost:8000
-  deploy: does a create and then deploys to gh (call from a gh Action)
-
-Usualy you will want to have a './$SCRIPTNAME docs serve' running in one
-terminal and regularly call './$SCRIPTNAME docs create' in another to
-check your Wiki/ changes under http://localhost:8000"
-}
 
 # ----------------------------------------------------------------------------
 
@@ -52,8 +24,8 @@ function mk_docs_clean {
 
 function mk_docs_create {
 
-  cp -rp Wiki docs
-  rm -f  docs/Wiki/README.md
+  cp -rp "$VAULTNAME" docs
+  rm -f  "docs/$VAULTNAME/README.md"
   rm -rf docs/.obsidian
 
   if [[ ! -d "$SUPPLEMENTS" ]]; then
@@ -110,7 +82,18 @@ function mk_docs {
       ;;
 
     "help" | "-h" | "--help" | "h" | "-help")
-      mk_docs_usage
+      echo ""
+      echo "Usage: $SCRIPTNAME docs (clean|ceate|build|serve|deploy)"
+      echo ""
+      echo "  clean:  deletes 'docs' and 'site' folders"
+      echo "  create: does a clean and then creates the 'docs' folder (most common)"
+      echo "  build:  does a create and then builds the 'site' folder"
+      echo "  serve:  does a create and then serves the docs on http://localhost:8000"
+      echo "  deploy: does a create and then deploys to gh (call from a gh Action)"
+      echo ""
+      echo "Usualy you will want to have a './$SCRIPTNAME docs serve' running in one"
+      echo "terminal and regularly call './$SCRIPTNAME docs create' in another to"
+      echo "check your Wiki/ changes under http://localhost:8000"
       ;;
 
     *)
@@ -124,6 +107,43 @@ function mk_docs {
 
 # ----------------------------------------------------------------------------
 
+function make_sure_obsidian_is_running {
+  if ! pgrep Obsidian >/dev/null ; then
+    open -a 'Obsidian'
+    sleep 1
+  fi
+}
+
+function mk_edit {
+
+  local PAGE="${1-}"
+
+  case $PAGE in
+
+    "")
+      make_sure_obsidian_is_running
+      open "obsidian://open?vault=$VAULTNAME"
+      ;;
+
+    "help" | "-h" | "--help" | "h" | "-help")
+      echo ""
+      echo "Usage: $SCRIPTNAME edit [page]"
+      echo ""
+      echo "Open Obsidian to edit the Wiki."
+      echo ""
+      echo "Example:"
+      echo ""
+      echo "  ./$SCRIPTNAME edit 'pixar tractor deployment'"
+      ;;
+
+    *)
+      make_sure_obsidian_is_running
+      local URLENC=`printf "%s" "$PAGE" | xxd -p | tr -d \\n | sed 's/../%&/g'`
+      open "obsidian://open?vault=$VAULTNAME&file=$URLENC"
+      ;;
+  esac
+}
+
 main() {
 
   local COMMAND="${1-}"
@@ -131,11 +151,23 @@ main() {
   case $COMMAND in
 
     "docs")
-      mk_docs ${2-}
+      mk_docs "${2-}"
+      ;;
+
+    "edit")
+      mk_edit "${2-}"
       ;;
 
     "help" | "-h" | "--help" | "h" | "-help")
-      mk_usage
+      echo ""
+      echo "Usage: $SCRIPTNAME (docs|edit)"
+      echo ""
+      echo "  docs: for MkDocs; try '$SCRIPTNAME docs help'"
+      echo "  edit: to edit markdown file; try '$SCRIPTNAME docs help'"
+      echo ""
+      echo "Nothing else implemented yet."
+      echo "Try '$SCRIPTNAME (docs|edit) help' for command specific details."
+      echo "Run as 'TRACE=1 ./mk' to debug."
       ;;
 
     *)
