@@ -26,6 +26,6 @@ jobs:
           pip install mkdocs-awesome-pages-plugin
       - name: Run MkDocs to deploy content
         run: |
-          chmod a+x Tools/obsidian_to_mkdocs.sh
-          ./Tools/obsidian_to_mkdocs.sh deploy
+          chmod a+x mk
+          ./mk deploy
 
