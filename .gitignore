@@ -29,6 +29,7 @@ Comp/*.autocomp
 
 # Ignore Obsidian-Files
 Wiki/.obsidian/workspace.json
+Wiki/.obsidian/graph.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
