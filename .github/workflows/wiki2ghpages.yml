@@ -27,5 +27,5 @@ jobs:
       - name: Run MkDocs to deploy content
         run: |
           chmod a+x mk
-          ./mk deploy
+          ./mk docs deploy
 
