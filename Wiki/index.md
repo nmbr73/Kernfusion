@@ -19,13 +19,13 @@ Clone the repository:
 	git clone https://github.com/nmbr73/Kernfusion
 	```
 
-Install [Obsidina.md](https://obsidian.md):
+Install [Obsidian.md](https://obsidian.md):
 === "macOS (Homebrew)"
 	```bash
 	brew install --cask obsidian
 	```
 === "macOS/Windows"
-	Download and run the Installer from [Obsidina.md](https://obsidian.md).
+	Download and run the Installer from [Obsidian.md](https://obsidian.md).
 
 Open the `Wiki/` folder as a so called "Vault" in Obsidian.
 Use ++cmd+e++ (on a Mac) or ??? (on Windows) to switch between edit/previw mode.
