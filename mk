@@ -28,6 +28,8 @@ function mk_docs_create {
   rm -f  "docs/$VAULTNAME/README.md"
   rm -rf docs/.obsidian
 
+  cp -rp Fusion docs/Kernfusion
+
   if [[ ! -d "$SUPPLEMENTS" ]]; then
       echo "outch"
       exit 50
