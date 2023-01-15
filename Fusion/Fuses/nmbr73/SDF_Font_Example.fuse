@@ -1,0 +1,303 @@
+--[[--
+
+Copyright (c) 2021 nmbr73 (https://www.youtube.com/c/nmbr73/)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the “Software”), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+
+--]]--
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+FuRegisterClass("SDF_Font_Example_nmbr73", CT_SourceTool, {
+    REGS_Name = "SDF Font Example",
+	  REGS_Category = "Fuses\\Kernfusion\\nmbr73",
+    REGS_OpDescription = "Use a SDF font texture to display text.",
+	  REGS_OpIconString = "SDFF",
+    REG_Source_GlobalCtrls = true,
+    REG_Source_SizeCtrls = true,
+    REG_Source_AspectCtrls = true,
+    REG_Source_DepthCtrls = true,
+	  REG_TimeVariant = false,
+	  REGS_Company = "nmbr73",
+	  REGS_URL = "https://nmbr73.github.io/",
+	  REG_Version	= 000001,
+    REG_Fuse_NoEdit = false,
+    REG_Fuse_NoReload = false,
+    })
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+ParametersCode =
+[[
+  float width;
+  float height;
+]]
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+CompatibilityCode =
+[[
+
+#define texture(ch,uv) _tex2DVecN(ch, (uv).x, (uv).y, 15)
+
+#if defined(DEVICE_IS_METAL)
+  #define fract_f2(A) fract(A)
+#else
+  #define fract_f2(A) to_float2(fract((A).x),fract((A).y))
+#endif
+
+]]
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+
+KernelCode =
+[[
+
+#define _space 32
+
+#define _0 48
+#define _1 49
+#define _2 50
+#define _3 51
+#define _4 52
+#define _5 53
+#define _6 54
+#define _7 55
+#define _8 56
+#define _9 57
+
+#define _A 65
+#define _B 66
+#define _C 67
+#define _D 68
+#define _E 69
+#define _F 70
+#define _G 71
+#define _H 72
+#define _I 73
+#define _J 74
+#define _K 75
+#define _L 76
+#define _M 77
+#define _N 78
+#define _O 79
+#define _P 80
+#define _Q 81
+#define _R 82
+#define _S 83
+#define _T 84
+#define _U 85
+#define _V 86
+#define _W 87
+#define _X 88
+#define _Y 89
+#define _Z 90
+
+
+#define _a 97
+#define _b 98
+#define _c 99
+#define _d 100
+#define _e 101
+#define _f 102
+#define _g 103
+#define _h 104
+#define _i 105
+#define _j 106
+#define _k 107
+#define _l 108
+#define _m 109
+#define _n 110
+#define _o 111
+#define _p 112
+#define _q 113
+#define _r 114
+#define _s 115
+#define _t 116
+#define _u 117
+#define _v 118
+#define _w 119
+#define _x 120
+#define _y 121
+#define _z 122
+
+#define _slash 47
+
+
+__DEVICE__ float4 _char(float2 p, int c, __TEXTURE2D__ t)
+{
+  if (p.x<0.0f|| p.x>1.0f || p.y<0.0f|| p.y>1.0f) return to_float4(0,0,0,1e5);
+  return texture( t, p/16.0f + fract_f2( to_float2(c, 15-c/16) / 16.0f ) );
+}
+
+
+
+__KERNEL__ void SdfFontExampleKernel(
+    __CONSTANTREF__ Params*   params,
+    __TEXTURE2D__             input,
+    __TEXTURE2D_WRITE__       output)
+{
+  DEFINE_KERNEL_ITERATORS_XY(x, y);
+
+  float w = params->width;
+  float h = params->height;
+
+  if (x >= w || y >= h)
+    return;
+
+  float2 uv = to_float2(x/w,y/h);
+
+  float  printColor  = 0.0f;
+  float2 position    = to_float2(0.1f,0.4f);
+  float2 printCursor = ( uv - position)*5.0f;
+
+  #define C(c) printColor += _char(printCursor,c,input).x; printCursor.x -= 0.5f
+
+  // The following works on Metal; would allow to avoid all these
+  // defines; must be tested on CUDA/OpenLC:
+  // C('T');C('e');C('x');C('t');
+
+  C(_T);C(_e);C(_x);C(_t);
+
+  float4 fragColor = to_float4_s(printColor * 0.8f);
+  _tex2DVec4Write(output, x, y, fragColor);
+
+}
+
+
+]]
+-- /*
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+function Create()
+
+
+  ----- In/Out
+
+  InImage = self:AddInput( "Input",  "image",  { LINKID_DataType = "Image", LINK_Main = 1, INP_Required = false  })
+
+
+  OutImage = self:AddOutput("Output", "Output", {
+    LINKID_DataType = "Image",
+    LINK_Main       = 1,
+  })
+
+  ----- Inspector Panel Controls
+
+  self:AddControlPage("Image")
+
+  InGlobalIn  = self:AddInput("Global In",  "GlobalIn",  { LINKID_DataType = "Number", })
+  InGlobalOut = self:AddInput("Global Out", "GlobalOut", { LINKID_DataType = "Number", })
+
+end
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+function Process(req)
+
+  local w  = Width
+  local h  = Height
+  local ax = XAspect
+  local ay = YAspect
+  local sd = SourceDepth
+
+  local input = InImage:GetValue(req)
+
+  if input ~= nil then
+    w   = input.Width
+    h   = input.Height
+    ax  = input.XAspect
+    ay  = input.YAspect
+    sd  = input.SourceDepth
+  end
+
+
+  local output   = Image({
+    IMG_Document = self.Comp,
+    { IMG_Channel = "Red", },
+    { IMG_Channel = "Green", },
+    { IMG_Channel = "Blue", },
+    { IMG_Channel = "Alpha", },
+    IMG_Width  = w,
+    IMG_Height = h,
+    IMG_XScale = ax,
+    IMG_YScale = ay,
+    IMG_Quality = not req:IsQuick(),
+    IMG_MotionBlurQuality = not req:IsNoMotionBlur(),
+    IMG_DeferAlloc = true,
+    IMG_ProxyScale = ( (not req:IsStampOnly()) and 1 or nil),
+    IMG_Depth = ( (sd~=0) and sd or nil   )
+  })
+
+
+
+  output:Fill(Pixel({R=0,G=0,B=0,A=0}))
+
+  if req:IsPreCalc() then
+    OutImage:Set(req, Image({IMG_Like = output, IMG_NoData = true}))
+    return
+  end
+
+  local node = DVIPComputeNode(req,
+    "SdfFontExampleKernel", CompatibilityCode..KernelCode,
+    "Params", ParametersCode
+  )
+
+  -- External texture or create a new one
+
+  if input==nil then
+    input = Image({IMG_Like = output})
+    input:Fill(Pixel({R=0,G=0,B=0,A=0}))
+  end
+
+  -- DCTL parameters
+
+  local params = {}
+
+  params = node:GetParamBlock(ParametersCode)
+
+  params.width  = output.Width
+  params.height = output.Height
+
+  -- Set parameters and add I/O
+
+  node:SetParamBlock(params)
+  node:AddSampler("RowSampler", TEX_FILTER_MODE_LINEAR,TEX_ADDRESS_MODE_MIRROR, TEX_NORMALIZED_COORDS_TRUE)
+  node:AddInput("Image",input)
+  node:AddOutput("Output", output)
+
+  local ok = node:RunSession(req)
+
+	if (not ok) then
+		output = nil
+    dump(node:GetErrorLog())
+	end
+
+  OutImage:Set(req,output)
+end
