@@ -1,5 +1,11 @@
+# SDF Font Example
+
+- [SDF_Font_Example.fuse](SDF_Font_Example.fuse) <br />*... can be downloaded and copied manually into your fuses folder if needed*
+- [SDF_Font_Example.comp](../../Comp/nmbr73/SDF_Font_Example.comp) <br />*... needs the repository to be checked out as described in the [README](../../README.md)*
+- Uses [shader_fontgen/shadertoy.png](../../../Data/Font/shader_fontgen/shadertoy.png) as its input texture
 
 With Otavio Good's [shader_fontgen](https://github.com/otaviogood/shader_fontgen) one can create a SDF (signed distance function) based font texture. For a good introduction into SDF Fonts based on the technique proposed by [Chris Green of Valve at SIGGRAPH 2007](https://steamcdn-a.akamaihd.net/apps/valve/2007/SIGGRAPH2007_AlphaTestedMagnification.pdf) see [SDFont](https://github.com/ShoYamanishi/SDFont), a *Signed Distance Font Generator and Runtime Utility* by [Shoichiro Yamanishi](https://github.com/ShoYamanishi)
+
 
 Shadertoys using the font texture:
 - [SDF font 0](https://www.shadertoy.com/view/NtG3Dd) by [IFHEo](https://www.shadertoy.com/user/IFHEo)
