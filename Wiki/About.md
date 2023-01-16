@@ -95,8 +95,10 @@ Do create a snapshots of your local changes whenever you finished a peace of wor
 ```sh
 git status # to see your changes
 git add . # to add all your changes
-git commit -m <DESCRIPTION> # comit these changes your local repo
+git commit -m <DESCRIPTION> # commit these changes your local repo
 ```
+Use a description that could be read as *"If applied, this commit will _&lt;DESCRIPTION&gt;_"* (see [How to Write a Git Commit Message](https://cbea.ms/git-commit/)).
+
 
 This is to build up a documented version history.
 
@@ -107,27 +109,8 @@ git pull # get any changes, that might have been made to your branch
 git push
 ```
 
-Incorporate changes that may have happened to main in the meantime into your branch:
-```sh
-git switch <NAME>
-git merge origin/main
-git push origin <NAME>
+...
 
-# or rebase?
-# git fetch
-# git rebase origin/main
-```
-
-Create request to pull you brache’s changes into the main branch:
-```sh
- #…
-```
-
-Cleanup when your done with that branch of work:
-```sh
-git switch main
-git branch --delete <NAME>
-```
 
 ### File and directory structure
 
@@ -208,7 +191,7 @@ There's a lot of material we could start with and which is available. But ==it m
 - [ ] Immersive Pipeline Integration Guide
 - [x] [[KartaVision]]
 - [x] [[Vonk Ultra]]
-- [x] [[Krokodove|Krokodove Essentials]] 
+- [x] [[Krokodove|Krokodove Essentials]]
 - [x] [[Workflows|Kartaverse Workflows]]
 
 **WSL-Posts worth it (and allowed) to be copied:**
