@@ -1,4 +1,4 @@
---[[--
+--[[--/*
 
 Copyright (c) 2023 nmbr73 (https://www.youtube.com/c/nmbr73/)
 
@@ -20,11 +20,10 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 IN THE SOFTWARE.
 
---]]--
+*/--]]--
 
 
-
--------------------------------------------------------------------------------------------------------------------------------------------
+-- /* -------------------------------------------------------------------------------------------------------------------------------------
 
 FuRegisterClass("SDF_Font_Example_nmbr73", CT_SourceTool, {
     REGS_Name = "SDF Font Example",
@@ -43,8 +42,6 @@ FuRegisterClass("SDF_Font_Example_nmbr73", CT_SourceTool, {
     REG_Fuse_NoReload = false,
     })
 
-
-
 -------------------------------------------------------------------------------------------------------------------------------------------
 
 ParametersCode =
@@ -53,10 +50,14 @@ ParametersCode =
   float height;
 ]]
 
--------------------------------------------------------------------------------------------------------------------------------------------
+-- */ -------------------------------------------------------------------------------------------------------------------------------------
 
-CompatibilityCode =
+DctlDebugTextCode =
 [[
+// Goal is to (some day) have this code isolated in a way that allows
+// for copying this block into your existing DCTL Fuse to equip int
+// with the functionality to do some simple output, i.e. for debuging
+// purposes.
 
 #define texture(ch,uv) _tex2DVecN(ch, (uv).x, (uv).y, 15)
 
@@ -66,15 +67,8 @@ CompatibilityCode =
   #define fract_f2(A) to_float2(fract((A).x),fract((A).y))
 #endif
 
-]]
-
--------------------------------------------------------------------------------------------------------------------------------------------
-
-
-KernelCode =
-[[
-
 #define _space 32
+#define _slash 47
 
 #define _0 48
 #define _1 49
@@ -114,7 +108,6 @@ KernelCode =
 #define _Y 89
 #define _Z 90
 
-
 #define _a 97
 #define _b 98
 #define _c 99
@@ -142,8 +135,6 @@ KernelCode =
 #define _y 121
 #define _z 122
 
-#define _slash 47
-
 
 __DEVICE__ float4 _char(float2 p, int c, __TEXTURE2D__ t)
 {
@@ -151,6 +142,63 @@ __DEVICE__ float4 _char(float2 p, int c, __TEXTURE2D__ t)
   return texture( t, p/16.0f + fract_f2( to_float2(c, 15-c/16) / 16.0f ) );
 }
 
+__DEVICE__ float print_str(float2 cursor, const constant char txt[], __TEXTURE2D__ font)
+{
+  float  color  = 0.0f;
+
+  for(; *txt != '\0'; ++txt) {
+    color += _char(cursor,*txt,font).x;
+    cursor.x -= 0.5f;
+  }
+
+  return color;
+}
+
+
+__DEVICE__ float print_hex(float2 cursor, int i, __TEXTURE2D__ font)
+{
+  float  color  = 0.0f;
+  float div = 16.0f*16.0f*16.0f;
+
+  for(int j=3;j>=0;j--)
+  {
+    float digit = fract(float(i)/div/16.0f)*16.0f;
+    div/=16.0f;
+    int c = int((digit<10.?48.:65.-10.)+digit);
+    color += _char(cursor,c,font).x;
+    cursor.x -= 0.5f;
+  }
+
+  return color;
+}
+
+]]
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+KernelCode =
+[[
+
+// the most basic example - hope that it works on different
+// platforms and can be used as a basis to port the other
+// functions.
+
+__DEVICE__ float print_Test(float2 cursor, __TEXTURE2D__ font)
+{
+  float  color  = 0.0f;
+
+  #define C(c) color += _char(cursor,c,font).x; cursor.x -= 0.5f
+
+  // The following works on Metal; would allow to avoid all these
+  // defines; must be tested on CUDA/OpenLC:
+  // C('T');C('e');C('x');C('t');
+
+  C(_T);C(_e);C(_s);C(_t);
+
+  #undef C
+
+  return color;
+}
 
 
 __KERNEL__ void SdfFontExampleKernel(
@@ -167,31 +215,20 @@ __KERNEL__ void SdfFontExampleKernel(
     return;
 
   float2 uv = to_float2(x/w,y/h);
-
-  float  printColor  = 0.0f;
   float2 position    = to_float2(0.1f,0.4f);
-  float2 printCursor = ( uv - position)*5.0f;
+  float2 cursor = ( uv - position)*5.0f;
 
-  #define C(c) printColor += _char(printCursor,c,input).x; printCursor.x -= 0.5f
+  // float color = print_Test(cursor,input);
+  // float color = print_str(cursor,"xyz",input); // works on macOS/Metal
+  float color = print_hex(cursor,236762,input);
 
-  // The following works on Metal; would allow to avoid all these
-  // defines; must be tested on CUDA/OpenLC:
-  // C('T');C('e');C('x');C('t');
-
-  C(_T);C(_e);C(_x);C(_t);
-
-  float4 fragColor = to_float4_s(printColor * 0.8f);
+  float4 fragColor = to_float4_s(color * 0.8f);
   _tex2DVec4Write(output, x, y, fragColor);
-
 }
 
-
 ]]
--- /*
 
-
-
--------------------------------------------------------------------------------------------------------------------------------------------
+-- /* -------------------------------------------------------------------------------------------------------------------------------------
 
 function Create()
 
@@ -265,7 +302,7 @@ function Process(req)
   end
 
   local node = DVIPComputeNode(req,
-    "SdfFontExampleKernel", CompatibilityCode..KernelCode,
+    "SdfFontExampleKernel", DctlDebugTextCode..KernelCode,
     "Params", ParametersCode
   )
 
