@@ -4,6 +4,7 @@
 - **[CubeMapColorizer.comp](CubeMapColorizer.comp)**
 - **[CubeMapLoader.comp](CubeMapLoader.comp)**
 - **[CubeMapUnfold.comp](CubeMapUnfold.comp)**
+- **[SDF_Font_Example.comp](SDF_Font_Example.comp)**
 
 ## See also:
 
