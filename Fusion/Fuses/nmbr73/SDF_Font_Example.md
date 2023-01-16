@@ -8,13 +8,15 @@ With Otavio Good's [shader_fontgen](https://github.com/otaviogood/shader_fontgen
 
 ![comp](SDF_Font_Example_comp.png)
 
-Shadertoys using the font texture:
+Examples of how to render the SDF font into text:
 - [SDF font 0](https://www.shadertoy.com/view/NtG3Dd) by [IFHEo](https://www.shadertoy.com/user/IFHEo)
+- [SDF Font Texture Adventures ](https://www.shadertoy.com/view/ldfcDr) ... uses the font texture and adds some effects
+
+Shadertoys using the SDF font texture:
 - [GPU and OS detector v2](https://www.shadertoy.com/view/7ssyzr) by [archee](https://www.shadertoy.com/user/archee)
 - [iResolution, iMouse, iDate, etc](https://www.shadertoy.com/view/llySRh) by [FabriceNeyret2](https://www.shadertoy.com/user/FabriceNeyret2)
 - [\[SH17C\] Physically Based Shading](https://www.shadertoy.com/view/4sSfzK) by [knarkowicz](https://www.shadertoy.com/user/knarkowicz)
 
 Other Shadertoys that display text:
-- https://www.shadertoy.com/view/ldfcDr ... uses the font texture and adds some effects
-- https://www.shadertoy.com/view/XdXGRB ... just "paints" the letters - no texture needed
-- https://www.shadertoy.com/view/Mt2GWD ... a pixel font - no texture needed
+- [Pangram](https://www.shadertoy.com/view/XdXGRB) ... just "paints" the letters - no texture needed
+- [96-bit 8x12 Font](https://www.shadertoy.com/view/Mt2GWD) ... a pixel font - no texture needed
