@@ -51,7 +51,11 @@ There are some really great blogs out there that can help you learn Fusion. Here
 ## Git Repositories
 
 - [bfloch / fusionscript](https://github.com/bfloch/fusionscript)
--
+- Ember Light ([EmberLightVFX](https://github.com/EmberLightVFX?tab=repositories )) maintains some DaVinci Resolve / Fusion related repositories:
+  - [Gyroflow to CSV](https://github.com/EmberLightVFX/Gyroflow-to-CSV) - Convert your GyroFlow stabilization to a CSV file
+  - [FuBar](https://github.com/EmberLightVFX/FuBar) - A better searchbar for BMD Fusion
+  - [Resolve Scripts](https://github.com/EmberLightVFX/Resolve-Scripts) - Collection of small scripts for BMD Davinci Resolve
+  - [Tetrahedral Interpolation for Fusion](https://github.com/EmberLightVFX/Tetrahedral-Interpolation-for-Fusion)
 
 
 ## YouTube Channels
