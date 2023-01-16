@@ -165,7 +165,7 @@ main() {
       echo "Usage: $SCRIPTNAME (docs|edit)"
       echo ""
       echo "  docs: for MkDocs; try '$SCRIPTNAME docs help'"
-      echo "  edit: to edit markdown file; try '$SCRIPTNAME docs help'"
+      echo "  edit: to edit markdown file; try '$SCRIPTNAME edit help'"
       echo ""
       echo "Nothing else implemented yet."
       echo "Try '$SCRIPTNAME (docs|edit) help' for command specific details."
