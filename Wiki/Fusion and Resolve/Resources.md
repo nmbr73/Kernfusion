@@ -3,53 +3,79 @@ tags:
   - Resource
 ---
 
+> Real names of persons are listed on this page if and only if they are easily accessible on their internet presence anyway. Please make sure that you do not expose any personal information here otherwise!
+
 ## Documentation
 
 - [[Scripting Guide]]
 
+- [Compositing with Blackmagic Fusion: Table of Contents and Glossary](http://www.bryanray.name/wordpress/compositing-with-blackmagic-fusion-table-of-contents/) by Bryan Ray
+
+- [ResolveDevDoc](https://resolvedevdoc.readthedocs.io/en/latest/#) is an unofficial documentation for scripting using Python and workflow integration with Davinci Resolve
+
+- [Formatted Resolve Python API Docs (PDF, HTML)](https://forum.blackmagicdesign.com/viewtopic.php?f=21&t=99270) by Julian Böhme - links in the Blackmagic forum post
 
 
 ## Forums
 
-[We Suck Less](https://steakunderwater.com/wesuckless) - The Friendliest Blackmagic Fusion Studio Community Online.
+- [We Suck Less](https://steakunderwater.com/wesuckless) - The Friendliest Blackmagic Fusion Studio Community Online.
 
-[The Blackmagic Design Forum](https://forum.blackmagicdesign.com/) - The Official Fusion forum that is managed by the developers
+- [The Blackmagic Design Forum](https://forum.blackmagicdesign.com/) - The Official Fusion forum that is managed by the developers
+
+- [DaVinci Resolve Forum](http://www.davinci-resolve-forum.de) (German)
+
+### WSL Dev Threads
+
+- [Building GUIs With Fusion's UI Manager](https://www.steakunderwater.com/wesuckless/viewtopic.php?t=1411)
+- [Macro Building Essentials](https://www.steakunderwater.com/wesuckless/viewtopic.php?t=1581)
+
 
 ## Facebook Groups
 
-[Fusion for Davinci Resolve Users](https://www.facebook.com/groups/DavinciResolveFusion) - A Group for people using the Fusion page Inside of Davinci Resolve. Managed by yours truly
+- [Fusion for Davinci Resolve Users](https://www.facebook.com/groups/DavinciResolveFusion) - A Group for people using the Fusion page Inside of Davinci Resolve. Managed by yours truly
 
-[Fusion Artists](https://www.facebook.com/groups/blackmagic.fusion) - A Group for Professional Fusion Artists
+- [Fusion Artists](https://www.facebook.com/groups/blackmagic.fusion) - A Group for Professional Fusion Artists
 
-[Blackmagic Fusion User Group](https://www.facebook.com/groups/1507383929534178) - An Unofficial User Group Where You Can Discuss Fusion, Post Works, Share Info, and Ask for Help
+- [Blackmagic Fusion User Group](https://www.facebook.com/groups/1507383929534178) - An Unofficial User Group Where You Can Discuss Fusion, Post Works, Share Info, and Ask for Help
 
-[DaVinci Resolve Fusion](https://www.facebook.com/groups/BlackmagicDesignFusion) - This Group is for DaVinci Resolve Fusion Users. Welcome!
+- [DaVinci Resolve Fusion](https://www.facebook.com/groups/BlackmagicDesignFusion) - This Group is for DaVinci Resolve Fusion Users. Welcome!
+
+
 
 ## Discord Servers
 
-[Davinci Resolve Community](https://discord.gg/3HWSHdg7fM) - A Great place to get quick answers to your questions. Managed by Jake Wipp
+- [Davinci Resolve Community](https://discord.gg/3HWSHdg7fM) - A Great place to get quick answers to your questions. Managed by Jake Wipp
 
-[Blackmagic Design Community](https://discord.gg/URJpZQQCmx) - A Large Server for Davinci Resolve and Fusion Users
+- [Blackmagic Design Community](https://discord.gg/URJpZQQCmx) - A Large Server for Davinci Resolve and Fusion Users
 
-[Pirates of Confusion](https://discord.gg/vnv8yr5gju) - A Ship Server of Professional Fusion VFX Artists
+- [Pirates of Confusion](https://discord.gg/vnv8yr5gju) - A Ship Server of Professional Fusion VFX Artists
+
+- [Davinci Resolve Plug-in Developers](https://discord.gg/Zb48E4z3Pg)
 
 
 ## Blogs
 
 There are some really great blogs out there that can help you learn Fusion. Here is a list of some of them:
 
-[Bryan Ray Visual FX](http://www.bryanray.name/wordpress/) - The Everyday Life of Hollywood VFX Artist Bryan Ray
+- [Bryan Ray Visual FX](http://www.bryanray.name/wordpress/) - The Everyday Life of Hollywood VFX Artist Bryan Ray
+
+
 
 
 ## Wikis
 
-- [VFXPedia](https://www.steakunderwater.com/VFXPedia/96.0.243.189/index4875.html?title=Main_Page)
+- [VFXPedia](https://www.steakunderwater.com/VFXPedia/96.0.243.189/index4875.html?title=Main_Page) ... The WSL advanced search page allows searching of the VFXPedia pages by keyword. The Internet Archive "Wayback Machine" site has a full [VFXPedia snapshot](https://archive.org/details/wiki-vfxpediacom) that is downloadable in a single archive.
+
 - [WikiFusion](https://learnnowfx.com/wikifusion/)
-- [DaVinci Resolve Wiki](http://www.davinci-resolve-forum.de/wiki/) (German)
+
+- [DaVinci Resolve Wiki](https://www.davinci-resolve-forum.de/tiki/tiki-index.php) (German)
 
 
 ## Git Repositories
 
+- Alexey '[movalex](https://github.com/movalex)' Bogomolov
+	- [BMD_requests](https://github.com/movalex/BMD_requests) - The most friendly list of requests for Blackmagic Design Fusion
+	-  [fusion](https://github.com/movalex/fusion) - Fusion tools I use
 - [bfloch / fusionscript](https://github.com/bfloch/fusionscript)
 - Ember Light ([EmberLightVFX](https://github.com/EmberLightVFX?tab=repositories )) maintains some DaVinci Resolve / Fusion related repositories:
   - [Gyroflow to CSV](https://github.com/EmberLightVFX/Gyroflow-to-CSV) - Convert your GyroFlow stabilization to a CSV file
@@ -59,8 +85,6 @@ There are some really great blogs out there that can help you learn Fusion. Here
 
 
 ## YouTube Channels
-
-> Real names of persons are listed on this page if and only if they are easily accessible on their internet presence anyway. Please make sure that you do not expose any personal information here otherwise!
 
 ### Dedicated DaFusion channels ...
 
