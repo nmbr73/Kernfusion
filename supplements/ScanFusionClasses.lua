@@ -1,6 +1,15 @@
 
 
-local out_path="/Users/nmbr73/Projects/Kernfusion/ConFusion/FusionScript/"
+local repo_path = debug.getinfo(1, "S").source:sub(2):match('^(.+)/supplements/ScanFusionClasses.lua$')
+local out_path = repo_path.."/docs/_ScanFusionClasses"
+
+
+-- function mkdir(path)
+--   bmd.createdir(path)
+--   -- os.execute("mkdir -p " .. path)
+-- end
+
+
 
 -- ---------------------------------------------------------------------------------------------------
 
@@ -235,9 +244,17 @@ local type_characters = {
 
 local page
 
-page = io.open(out_path..'Class Types.md',"w")
+-- ---------------------------------------------------------------------------------------------------
+-- Class Type
+-- ---------------------------------------------------------------------------------------------------
 
-page:write("---\ntags: [reference]\n---\n\n")
+bmd.createdir(out_path..'/Class Types/')
+
+-- Class Type index page
+
+page = io.open(out_path..'/Class Types/Class Types.md',"w")
+
+page:write("---\ntitle: Class Types\nalias: Class Type\ntags: [Reference]\n---\n\n")
 
 for i,class_type_key in ipairs(class_type_keys) do
   local class_type=class_types[class_type_key]
@@ -246,31 +263,45 @@ for i,class_type_key in ipairs(class_type_keys) do
   else
     page:write('* <del>'..class_type_key..'</del> <span style="color:#ff0000; ">(depricated)</span>\n')
   end
-
 end
-
 
 page:close()
 
+-- Create a page for each Class Type
+
+for i,class_type_key in ipairs(class_type_keys) do
+  local class_type=class_types[class_type_key]
+  if not(class_type.Deprecated) then
+    page = io.open(out_path..'/Class Types/'.. class_type_key ..'.md',"w")
+    page:write("---\ntitle: ".. class_type_key .."\n---\n\n")
+    page:write(class_type_key..' is a [[Class Types|Class Type]]\n')
+    page:close()
+  end
+end
 
 
 
-page = io.open(out_path..'Registry Attributes.md',"w")
+-- ---------------------------------------------------------------------------------------------------
+-- Registry Attributes
+-- ---------------------------------------------------------------------------------------------------
 
-page:write("---\ntags: [reference]\n---\n\n")
+bmd.createdir(out_path..'/Registry Attributes/')
 
+-- Registry Attributes index page
 
-local prefix2type = {
-  REGS = 'string',
-  REGI = 'integer',
-  REGB = 'boolean',
-  REGST = 'string table',
-}
+page = io.open(out_path..'/Registry Attributes/Registry Attributes.md',"w")
+
+page:write("---\ntitle: Registry Attributes\nalias: Registry Attribute\ntags: [Reference]\n---\n\n")
+
+-- local prefix2type = {
+--   REGS = 'string',
+--   REGI = 'integer',
+--   REGB = 'boolean',
+--   REGST = 'string table',
+-- }
 
 for i,regristry_attribute_key in ipairs(registry_attribute_keys) do
   local registry_attribute=registry_attributes[regristry_attribute_key]
-
-  print(regristry_attribute_key)
 
   page:write('[[REG'..registry_attribute.Type..'_'..regristry_attribute_key..']] ')
   page:write('('..type_characters[registry_attribute.Type].Name  ..')<br />\n')
@@ -284,3 +315,23 @@ end
 
 
 page:close()
+
+-- Create a page for each Registry Atribute
+
+
+for i,regristry_attribute_key in ipairs(registry_attribute_keys) do
+  local registry_attribute=registry_attributes[regristry_attribute_key]
+
+  local name = 'REG'..registry_attribute.Type..'_'..regristry_attribute_key
+
+  page = io.open(out_path..'/Registry Attributes/'.. name ..'.md',"w")
+  page:write("---\ntitle: ".. name .."\naliases:\n  - "..regristry_attribute_key.."\n---\n\n")
+  page:write(regristry_attribute_key..' (`'.. name..'`) is a [[Registry Attributes|Registry Attribute]] of type '.. type_characters[registry_attribute.Type].Name ..' (\'`'.. registry_attribute.Type ..'`\').\n')
+  page:write(''..registry_attribute.Description..'\n')
+  if registry_attribute.FKA then
+    page:write('> [!warning] FKA "'.. registry_attribute.FKA ..'"\n> This attribute was named [['..registry_attribute.FKA..']] in the [[Scripting Guide]].')
+  end
+  page:close()
+
+
+end

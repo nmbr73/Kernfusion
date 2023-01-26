@@ -1,5 +1,7 @@
 ---
-tags: [reference]
+title: Class Types
+alias: Class Type
+tags: [Reference]
 ---
 
 * [[CT_3D]]

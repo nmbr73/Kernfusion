@@ -1,5 +1,7 @@
 ---
-tags: [reference]
+title: Registry Attributes
+alias: Registry Attribute
+tags: [Reference]
 ---
 
 [[REGS_Category]] (String)<br />
