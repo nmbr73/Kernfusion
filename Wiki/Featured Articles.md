@@ -8,3 +8,5 @@ Imported from Andrew's Scrivener source:
 - [[Workflows|Kartaverse Workflows]]
 
 Did a quick and dirty copy of the [[Kernfusion/README.md|Kernfusion]]'s Fuses/Comps/Macros part into the Wiki ... but it definitely needs some explanation what this 'Fusion' folder is good for and why it is here in this repository 😬
+
+And with [[FusionScript]] a first output of an old (incomplete) script based on Roger Magnusson's Class Browser.

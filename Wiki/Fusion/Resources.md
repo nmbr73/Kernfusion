@@ -73,6 +73,7 @@ There are some really great blogs out there that can help you learn Fusion. Here
 
 ## Git Repositories
 
+- [We Suck Less / Reactor](https://gitlab.com/WeSuckLess/Reactor)
 - Alexey '[movalex](https://github.com/movalex)' Bogomolov
 	- [BMD_requests](https://github.com/movalex/BMD_requests) - The most friendly list of requests for Blackmagic Design Fusion
 	-  [fusion](https://github.com/movalex/fusion) - Fusion tools I use

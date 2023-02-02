@@ -1,3 +1,7 @@
+---
+title: Fusion
+---
+
 Blackmagic Fusion is a state of the art compositing software that is used by Hollywood VFX artists, Professional content creators and Hobbyists alike.
 
 Fusion is used for 3D and 2D compositing and Visual FX, Virtual Reality Production, Motion Graphics and more.
