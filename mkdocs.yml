@@ -17,35 +17,9 @@ edit_uri: blob/main/Wiki/ # 'edit_uri: edit/main/Wiki/' works only if signed in 
 #   - ...
 
 
-# nav:
-#   - Home: index.html
-#   - Kartaverse Workflows:
-#     - Kartaverse Workflows/index.md
-#     - Kartaverse Workflows/Kartaverse Workflows.md
-#     - Kartaverse Workflows/Creating Volumetric NeRFs.md
-#     - Kartaverse Workflows/Creating ST Maps.md
-#     - Render Fusion Comps in Houdini TOPs.md
-#     - SketchFab in VR Via QuestLink.md
-#     - Troubleshooting Guide for Fusion Studio Freeze Ups.md
-#     - YouTube 360 to Equirectangular Conversions.md
-#     - Jupyter Notebook for Resolve/Fusion: Jupyter Notebook for Resolve_Fusion.md
-#     - Domemaster Photoshop Actions Pack.md
-#     - DEV OpenDisplayXR VDD (Virtual Device Driver).md
-#     - DEV The Ultimate Guide to OpenUSD Pipeline Development.md
-#     - DEV Building an Effective nVP (Neural Virtual Production) Sound Stage.md
-#     - KickAss ShaderZ for Fusion.md
-
-# nav:
-#     - Home: README.md
-#     - About: DCTL.md
-#     - Nochmal:
-#       - README.md
-#       - DCTL.md
-#     - Featured: Featured Articles.md
-#     - Woanders: Script/Script-Libraries.md
-
 theme:
   name: 'material'
+  logo: assets_wiki/fusion.png
   # name: bootstrap386
 
   features:
@@ -74,8 +48,8 @@ theme:
     # Light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: pink
-      accent: indigo
+      primary: black # pink
+      accent: deep orange # indigo
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to dark mode
@@ -84,8 +58,8 @@ theme:
     - media: "(prefers-color-scheme: dark)"
       # scheme: wsl
       scheme: slate
-      primary: pink
-      accent: blue
+      primary: purple # pink
+      accent: teal # blue
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
