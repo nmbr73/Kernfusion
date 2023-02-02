@@ -25,7 +25,7 @@ function mk_docs_clean {
 function mk_docs_create {
 
   cp -rp "$VAULTNAME" docs
-  rm -f  "docs/$VAULTNAME/README.md"
+  rm -f  "docs/README.md"
   rm -rf docs/.obsidian
 
   cp -rp Fusion docs/Kernfusion
