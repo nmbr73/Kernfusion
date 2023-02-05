@@ -16,11 +16,13 @@ edit_uri: blob/main/Wiki/ # 'edit_uri: edit/main/Wiki/' works only if signed in 
 #   - About.md
 #   - ...
 
+# https://squidfunk.github.io/mkdocs-material/customization/#setup-and-theme-structure
+# https://github.com/squidfunk/mkdocs-material/tree/master/material/partials
 
 theme:
-  name: 'material'
-  logo: assets_wiki/fusion.png
-  # name: bootstrap386
+  name: material
+  logo: assets/fusion.png
+  custom_dir: supplements/mkdocs/overrides
 
   features:
     # - announce.dismiss
@@ -122,7 +124,7 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 extra_css:
-  - assets_wiki/stylesheets/extra.css
+  - assets/stylesheets/extra.css
 
 
 extra:

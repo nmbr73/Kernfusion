@@ -25,6 +25,8 @@ function mk_docs_clean {
 function mk_docs_create {
 
   cp -rp "$VAULTNAME" docs
+  cp -rp "supplements/mkdocs/assets" docs/
+  cp -rp "supplements/mkdocs/overrides" docs/
   rm -f  "docs/README.md"
   rm -rf docs/.obsidian
 
@@ -42,7 +44,7 @@ function mk_docs_create {
   python "$SUPPLEMENTS/mk_pages.py"
   python "$SUPPLEMENTS/obsidian_to_mkdocs.py"
 
-  mv docs/.assets_wiki docs/assets_wiki
+  # mv docs/.assets_wiki docs/assets_wiki
 
 # # mkdir -p docs/stylesheets/
 # # cp Tools/obsidian_to_mkdocs/docs/stylesheets/* docs/stylesheets/
