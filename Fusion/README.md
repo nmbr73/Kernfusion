@@ -1,8 +1,11 @@
 # Fuses, Macros & Compositions
 
+Not much in here yet. Meant to collect and cleanup code experiments - for example from the [WSL Forum](https://www.steakunderwater.com/wesuckless/index.php) (if permission by the respective author is granted). As a kind of incubator / pre-release area for Reactor for code not yet mature enough for publication; or for Fuses just intended as code examples to learn from, or to provide code fragments to be utilized in your own solutions. But a 'centralized' repository most probably makes very little sense in this regard - however, having some examples may help to shape some schema to link between different such repositories?!?
+
 ## Overview
 
 ### [Fuses](Fuses/README.md)
+- **[AudioWaveform](Fuses/jipi/AudioWaveform.md)** by JiPi
 - **[Bokeh](Fuses/tida/Bokeh.md)** by TiDa
 - **[FastGlow](Fuses/danell/FastGlow.md)** by Danell
 - **[CubeMapLoader](Fuses/nmbr73/CubeMapLoader.md)** by nmbr73
@@ -12,6 +15,7 @@
 - **[SDF Font Example](Fuses/nmbr73/SDF_Font_Example.md)** by nmbr73
 
 ### [Comps](Comp/README.md)
+- **[AudioWaveform](Comp/jipi/AudioWaveform.md)** by JiPi
 - **[TitleBurnEffect](Comp/tida/TitleBurnEffect.md)** by TiDa
 
 ### [Macros](Macros/README.md)
