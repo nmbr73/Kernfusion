@@ -4,8 +4,11 @@
 
   Breadcrumbs exist for example im the readthedocs theme:
   https://github.com/mkdocs/mkdocs/blob/master/mkdocs/themes/readthedocs/breadcrumbs.html
+
+  Good to know:
+  https://www.mkdocs.org/dev-guide/themes/#template-variables
 -#}
-{#- % include "partials/breadcrumb.html" % -#}
+{% include "partials/breadcrumb.html" %}
 {% if "tags" in config.plugins %}
   {% include "partials/tags.html" %}
 {% endif %}
