@@ -62,3 +62,37 @@
   -webkit-mask-image: var(--md-admonition-icon--wiki-todo);
           mask-image: var(--md-admonition-icon--wiki-todo);
 }
+
+/*
+-----------------
+*/
+
+div.kfbreadcrumbs {
+  margin: 0;
+  padding: 0;
+}
+
+ul.kfbreadcrumbs {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+ul.kfbreadcrumbs li {
+  float: left;
+  font-size: smaller;
+}
+
+ul.kfbreadcrumbs li a {
+  display: block;
+  /*
+  text-align: center;
+  padding: 16px;
+  */
+  text-decoration: none;
+}
+
+ul.kfbreadcrumbs li a:hover {
+  background-color: #909090;
+}

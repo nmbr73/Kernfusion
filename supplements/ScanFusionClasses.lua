@@ -223,17 +223,19 @@ table.sort( registry_attribute_keys )
 
 -- ---------------------------------------------------------------------------------------------------
 
+
 -- Fusion 8 Scripting Guide page 40
+-- 'Browser' are the names as found in the Class Broser
 local type_characters = {
-  S  = { Name = "String", },
-  B  = { Name = "Boolean", },
-  N  = { Name = "Number (float)", },
-  I  = { Name = "Integer", },
-  H  = { Name = "Handle", },
-  NT = { Name = "Number Table", },
-  IT = { Name = "Integer Table", },
-  ST = { Name = "String Tabel", },
-  BT = { Name = "Boolean Table", },
+  S  = { Name = "String", Browser = "string", },
+  B  = { Name = "Boolean", Browser = "boolean", },
+  N  = { Name = "Number (float)", Browser = "number (float)", },
+  I  = { Name = "Integer", Browser = "number (integer)", },
+  H  = { Name = "Handle", Browser = "handle", },
+  NT = { Name = "Number Table", Browser = "table { number (float) }", },
+  IT = { Name = "Integer Table", Browser = "table { number (integer) }", },
+  ST = { Name = "String Tabel", Browser = "table { string }", },
+  BT = { Name = "Boolean Table", Browser = "table { bool }"},
 }
 
 -- ---------------------------------------------------------------------------------------------------
