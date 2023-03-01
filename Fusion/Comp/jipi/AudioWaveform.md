@@ -16,6 +16,7 @@
 
 - [How to Create an Audio Visualiser in Davinci Resolve](https://youtu.be/E9oWXZjBTCg) by Video Editor Studio
 - [Create Audio Visualizer Effect using Fusion Modifier in DaVinci Resolve 17](https://youtu.be/W5oJFvg2m9c) by Essential Video Editing
+- [Audio Wave Line Visualizer Effect in DaVinci Resolve - Fusion Tutorial](https://youtu.be/h3I4F-WLMNM) by Essential Video Editing
 
 ## See also:
 
