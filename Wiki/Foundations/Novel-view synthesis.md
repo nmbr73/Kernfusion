@@ -133,10 +133,26 @@ Scalable Construction of Large-Scale NeRFs for Virtual Fly-Throughs
 
 Video: [PlenOctrees for Real-time Rendering of Neural Radiance Fields](https://www.youtube.com/watch?v=obrmH1T5mfI)
 Page: https://alexyu.net/plenoctrees/
-Code: [PlenOctree Volume Rendering](https://github.com/sxyu/volrend)
-Code: [nerfvis](https://github.com/sxyu/nerfvis) ([readthedocs](https://nerfvis.readthedocs.io/en/latest/)()
+Code: [sxyu/volrend](https://github.com/sxyu/volrend) PlenOctree Volume Rendering
+Code: [sxyu/nerfvis](https://github.com/sxyu/nerfvis) ([readthedocs](https://nerfvis.readthedocs.io/en/latest/)()
 
 Darauf basiert wohl der MegaNerf Viewer
+
+#### Compile sxyu/volrend on M1 Macs
+
+Build instructions are staight forward - only two minor changes needed to build on ARM:
+```
+export LIBRARY_PATH=$LIBRARY_PATH:/opt/homebrew/lib/; export ```
+```
+
+```
+CPLUS_INCLUDE_PATH="/usr/local/Cellar/glfw/3.3.4/include"; make -j8
+```
+
+Texture size of the full resolution tree files does exceed some OpenGL limit on Apple silicon ... found some smaller resolution variants (for the web viewer iirc) that work - but I can't recall from where I had them.
+
+![[NeRF plenoctree viewer on M1 mac.png]]
+
 
 
 ### NeRF++
