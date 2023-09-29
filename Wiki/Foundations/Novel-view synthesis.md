@@ -53,11 +53,12 @@ https://alexyu.net/plenoxels/
 
 ## Neural Radiance Fields (NeRFs)
 
+Awesome List: [Awesome Neural Radiance Fields](https://github.com/awesome-NeRF/awesome-NeRF) - A curated list of awesome neural radiance fields papers
 Die Studie: https://www.matthewtancik.com/nerf
 gut erklärt: https://www.youtube.com/watch?v=CRlN-cYFxTk
 weniger gut erklärt, aber trotzdem: https://youtu.be/WSfEfZ0ilw4
 Die Geschichte, Varianten, etc. https://youtu.be/IDMiMKWucaI
-
+Mal angucken: [Jon Barron - Understanding and Extending Neural Radiance Fields](https://youtu.be/HfJpQCBTqZs)
 
 ### novel SOTA in Ultra High Resolution NeRF
 
@@ -132,6 +133,7 @@ Scalable Construction of Large-Scale NeRFs for Virtual Fly-Throughs
 ### PlenOctrees
 
 Video: [PlenOctrees for Real-time Rendering of Neural Radiance Fields](https://www.youtube.com/watch?v=obrmH1T5mfI)
+Video: [Real-time rendering of NeRFs with PlenOctrees - Angjoo Kanazawa](https://youtu.be/WzzCyCcqTjA)
 Page: https://alexyu.net/plenoctrees/
 Code: [sxyu/volrend](https://github.com/sxyu/volrend) PlenOctree Volume Rendering
 Code: [sxyu/nerfvis](https://github.com/sxyu/nerfvis) ([readthedocs](https://nerfvis.readthedocs.io/en/latest/)()
