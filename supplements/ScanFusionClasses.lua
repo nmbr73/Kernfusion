@@ -3,6 +3,8 @@
 local repo_path = debug.getinfo(1, "S").source:sub(2):match('^(.+)/supplements/ScanFusionClasses.lua$')
 local out_path = repo_path.."/docs/_ScanFusionClasses"
 
+print("go")
+-- os.exit(0)
 
 -- function mkdir(path)
 --   bmd.createdir(path)
@@ -14,76 +16,112 @@ local out_path = repo_path.."/docs/_ScanFusionClasses"
 -- ---------------------------------------------------------------------------------------------------
 
 local class_types      = {
-  CT_Any = { Index = nil, Deprecated = true },
-  CT_Operator = { Index = nil, Deprecated = true },
-  CT_Tool = { Index = nil, Deprecated = true },
-  CT_SourceTool = { Index = nil, Deprecated = true },
-  CT_SinkTool = { Index = nil, Deprecated = true },
-  CT_MergeTool = { Index = nil, Deprecated = true },
-  CT_Modifier = { Index = nil, Deprecated = true },
-  CT_Mask = { Index = nil, Deprecated = true },
-  CT_Spline = { Index = nil, Deprecated = true },
-  CT_Parameter = { Index = nil, Deprecated = true },
-  CT_ImageFormat = { Index = nil, Deprecated = true },
-  CT_View = { Index = nil, Deprecated = true },
-  CT_GLViewer = { Index = nil, Deprecated = true },
-  CT_InputControl = { Index = nil, Deprecated = true },
-  CT_PreviewControl = { Index = nil, Deprecated = true },
-  CT_Preview = { Index = nil, Deprecated = true },
-  CT_BinItem = { Index = nil, Deprecated = true },
-  CT_ExternalControl = { Index = nil, Deprecated = true },
-  CT_Converter = { Index = nil, Deprecated = true },
-  CT_3D = { Index = nil, Deprecated = true },
-  CT_3DFilter = { Index = nil, Deprecated = true },
-  CT_3DFilterSource = { Index = nil, Deprecated = true },
-  CT_Event = { Index = nil, Deprecated = true },
-  CT_EventControl = { Index = nil, Deprecated = true },
-  CT_Protocol = { Index = nil, Deprecated = true },
-  CT_Utility = { Index = nil, Deprecated = true },
-  CT_PaintTool = { Index = nil, Deprecated = true },
-  CT_BrushShape = { Index = nil, Deprecated = true },
-  CT_BrushMode = { Index = nil, Deprecated = true },
-  CT_ApplyMode = { Index = nil, Deprecated = true },
-  CT_AnimSegment = { Index = nil, Deprecated = true },
-  CT_FlowType = { Index = nil, Deprecated = true },
-  CT_Locale = { Index = nil, Deprecated = true },
-  CT_PreviewMedia = { Index = nil, Deprecated = true },
-  CT_LayoutItem = { Index = nil, Deprecated = true },
-  CT_Transition = { Index = nil, Deprecated = true },
-  CT_ToolViewInfo = { Index = nil, Deprecated = true },
-  CT_ParticleStyle = { Index = nil, Deprecated = true },
-  CT_ParticleTool = { Index = nil, Deprecated = true },
-  CT_ParticleMergeTool = { Index = nil, Deprecated = true },
-  CT_ParticleSource = { Index = nil, Deprecated = true },
-  CT_Region3D = { Index = nil, Deprecated = true },
-  CT_LightData3D = { Index = nil, Deprecated = true },
-  CT_Light3D = { Index = nil, Deprecated = true },
-  CT_MtlData3D = { Index = nil, Deprecated = true },
-  CT_MtlParticle3D = { Index = nil, Deprecated = true },
-  CT_MtlInputs3D = { Index = nil, Deprecated = true },
-  CT_CameraData3D = { Index = nil, Deprecated = true },
-  CT_Camera3D = { Index = nil, Deprecated = true },
-  CT_CurveData3D = { Index = nil, Deprecated = true },
-  CT_Curve3D = { Index = nil, Deprecated = true },
-  CT_SurfaceData3D = { Index = nil, Deprecated = true },
-  CT_SurfaceInputs3D = { Index = nil, Deprecated = true },
-  CT_Renderer3D = { Index = nil, Deprecated = true },
-  CT_RendererInputs3D = { Index = nil, Deprecated = true },
-  CT_RenderContext3D = { Index = nil, Deprecated = true },
-  CT_Shader3D = { Index = nil, Deprecated = true },
-  CT_FileFormat3D = { Index = nil, Deprecated = true },
-  CT_ShadowClass3D = { Index = nil, Deprecated = true },
-  CT_GLTexture = { Index = nil, Deprecated = true },
-  CT_MtlSW3D = { Index = nil, Deprecated = true },
-  CT_MtlGL3D = { Index = nil, Deprecated = true },
-  CT_LightSW3D = { Index = nil, Deprecated = true },
-  CT_LightGL3D = { Index = nil, Deprecated = true },
-  CT_FuMenu = { Index = nil, Deprecated = true },
-  CT_ConsoleUtility = { Index = nil, Deprecated = true },
-  CT_ViewLUTPlugin = { Index = nil, Deprecated = true },
-  CT_UserControl = { Index = nil, Deprecated = true },
-  CT_LUTFormat = { Index = nil, Deprecated = true },
-  CT_Prefs = { Index = nil, Deprecated = true },
+  CT_Any = { Description = "", },
+  CT_Operator = { Description = "", },
+  CT_Tool = { Description = "", },
+  CT_SourceTool = { Description = "", },
+  CT_SinkTool = { Description = "", },
+  CT_MergeTool = { Description = "", },
+  CT_Modifier = { Description = "", },
+  CT_Mask = { Description = "", },
+  CT_Spline = { Description = "", },
+  CT_Parameter = { Description = "", },
+  CT_ImageFormat = { Description = "", },
+  CT_View = { Description = "", },
+  CT_GLViewer = { Description = "", },
+  CT_InputControl = { Description = "", },
+  CT_PreviewControl = { Description = "", },
+  CT_Preview = { Description = "", },
+  CT_BinItem = { Description = "", },
+  CT_ExternalControl = { Description = "", },
+  CT_Converter = { Description = "", },
+  CT_3D = { Description = "", },
+  CT_3DFilter = { Description = "", },
+  CT_3DFilterSource = { Description = "", },
+  CT_Event = { Description = "", },
+  CT_EventControl = { Description = "", },
+  CT_Protocol = { Description = "", },
+  CT_Utility = { Description = "", },
+  CT_PaintTool = { Description = "", },
+  CT_BrushShape = { Description = "", },
+  CT_BrushMode = { Description = "", },
+  CT_ApplyMode = { Description = "", },
+  CT_AnimSegment = { Description = "", },
+  CT_FlowType = { Description = "", },
+  CT_Locale = { Description = "", },
+  CT_PreviewMedia = { Description = "", },
+  CT_LayoutItem = { Description = "", },
+  CT_Transition = { Description = "", },
+  CT_ToolViewInfo = { Description = "", },
+  CT_ParticleStyle = { Description = "", },
+  CT_ParticleTool = { Description = "", },
+  CT_ParticleMergeTool = { Description = "", },
+  CT_ParticleSource = { Description = "", },
+  CT_Region3D = { Description = "", },
+  CT_LightData3D = { Description = "", },
+  CT_Light3D = { Description = "", },
+  CT_MtlData3D = { Description = "", },
+  CT_MtlParticle3D = { Description = "", },
+  CT_MtlInputs3D = { Description = "", },
+  CT_CameraData3D = { Description = "", },
+  CT_Camera3D = { Description = "", },
+  CT_CurveData3D = { Description = "", },
+  CT_Curve3D = { Description = "", },
+  CT_SurfaceData3D = { Description = "", },
+  CT_SurfaceInputs3D = { Description = "", },
+  CT_Renderer3D = { Description = "", },
+  CT_RendererInputs3D = { Description = "", },
+  CT_RenderContext3D = { Description = "", },
+  CT_Shader3D = { Description = "", },
+  CT_FileFormat3D = { Description = "", },
+  CT_ShadowClass3D = { Description = "", },
+  CT_GLTexture = { Description = "", },
+  CT_MtlSW3D = { Description = "", },
+  CT_MtlGL3D = { Description = "", },
+  CT_LightSW3D = { Description = "", },
+  CT_LightGL3D = { Description = "", },
+  CT_FuMenu = { Description = "", },
+  CT_ConsoleUtility = { Description = "", },
+  CT_ViewLUTPlugin = { Description = "", },
+  CT_UserControl = { Description = "", },
+  CT_LUTFormat = { Description = "", },
+  CT_Prefs = { Description = "", },
+
+	-- Additional constants for future use:
+
+	TIME_UNDEFINED = { Description = "", },
+	CLSID_DataType_Audio = { Description = "", },
+  CLSID_DataType_Clip = { Description = "", },
+  CLSID_DataType_Gradient = { Description = "", },
+	CLSID_DataType_Image = { Description = "", },
+  CLSID_DataType_Histogram = { Description = "", },
+  CLSID_DataType_LookUpTable = { Description = "", },
+	CLSID_DataType_Mask = { Description = "", },
+  CLSID_DataType_Number = { Description = "", },
+  CLSID_DataType_Point = { Description = "", },
+  CLSID_DataType_Text = { Description = "", },
+	CLSID_DataType_Polyline = { Description = "", },
+  CLSID_DataType_BSplinePolyline = { Description = "", },
+  CLSID_DataType_TransformMatrix = { Description = "", },
+	CLSID_DataType_Mesh = { Description = "", },
+  CLSID_DataType_Particles = { Description = "", },
+  CLSID_DataType_3D = { Description = "", },
+  CLSID_DataType_FuID = { Description = "", },
+	CLSID_DataType_ScriptVal = { Description = "", },
+	CLSID_View_GL = { Description = "", },
+  CLSID_View_Controls = { Description = "", },
+  CLSID_View_Modifiers = { Description = "", },
+  CLSID_View_Flow = { Description = "", },
+	CLSID_View_SplineEditor = { Description = "", },
+  CLSID_View_Timeline = { Description = "", },
+  CLSID_View_Console = { Description = "", },
+  CLSID_View_Transport = { Description = "", },
+	TC_PRF_Frame = { Description = "", },
+  TC_PRF_SMPTE = { Description = "", },
+  TC_PRF_Feet = { Description = "", },
+	DCMSG_TIMECODE_CHANGED = { Description = "", },
+  DCMSG_LOOKPACK_CHANGED = { Description = "", },
+  DCMSG_PREFS_CHANGE = { Description = "", },
 }
 
 local class_type_keys = {}
@@ -94,13 +132,15 @@ end
 table.sort( class_type_keys )
 
 
-local class_type_index = {}
+local class_type_index = {} -- map int (class type index) to string (class type key)
 
-for class_type,data in pairs(class_types) do
+for class_type, data in pairs(class_types) do
+  data.Index = -1
+  data.Deprecated = true
 	if (app[class_type]) then
     class_type_index[app[class_type]] = class_type
-    data.Deprecated=false
     data.Index=app[class_type]
+    data.Deprecated=false
 	end
 end
 
@@ -220,6 +260,85 @@ for key in pairs(registry_attributes) do
   table.insert( registry_attribute_keys, key )
 end
 table.sort( registry_attribute_keys )
+
+
+-- ---------------------------------------------------------------------------------------------------
+
+local classes = {}
+
+for i, class_name in ipairs(app:GetHelpRaw()) do
+  local help = app:GetHelpRaw(class_name)
+
+  -- LongHelp ... only for 'Registry'
+  -- ShortHelp ... only for 'Registry' and 'Object'
+  -- Parent ... Name of parent class or nil
+  -- Members ... table
+
+  if classes[class_name] ~= nil then
+
+    -- This happens for:
+    -- MtlWardData, MtlCookTorranceData, _TimeSpeed, _TimeStretcher, TextEditControl, ColorCurves
+
+    -- classes[class_name].Occurences = classes[class_name].Occurences + 1
+    -- classes[class_name.." (".. classes[class_name].Occurences ..")"]
+    --   = { Parent = help.Parent, Children = {}, Occurences = 0, Members = help.Members, }
+
+  else
+    classes[class_name] = { Parent = help.Parent, Children = {}, Occurences = 1, Members = help.Members, }
+  end
+
+end
+
+
+for class_name, data in pairs(classes) do
+  if data.Occurences == 0 then
+    print("- "..class_name.." ".. #data.Members)
+    for i, x in ipairs(data.Members) do
+      print("  "..i..": "..x)
+    end
+  end
+end
+
+
+-- All derived classes for each class
+for class_name, data in pairs(classes) do
+  for cn, d in pairs(classes) do
+    if d.Parent ~= nil and d.Parent == class_name and cn ~= class_name then
+      table.insert(data.Children,cn)
+    end
+  end
+end
+
+-- Inheritance path for each class
+for class_name, data in pairs(classes) do
+  data.Path = {}
+  local stack = data
+  local i = 0
+  while stack ~= nil and stack.Parent ~= nil do
+
+    if stack.Parent == '' then
+      -- What are these classes that have a '' as parent?!?
+      stack = nil
+    elseif classes[stack.Parent] == nil then
+      print("DANG for '"..stack.Parent.."' in "..class_name)
+      os.exit(10)
+    else
+      data.Path[i] = stack.Parent
+      i = i+1
+      stack = classes[stack.Parent]
+    end
+
+  end
+end
+
+
+
+
+
+-- for class_name, data in pairs(classes) do
+--   print(class_name .. " " .. #data.Path)
+-- end
+
 
 -- ---------------------------------------------------------------------------------------------------
 
