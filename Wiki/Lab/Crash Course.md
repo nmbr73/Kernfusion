@@ -1,4 +1,4 @@
-You'll find tons of excellent and thorough documentation on the different formats and tools ... and you can spent hours on each to find out what functionalities it provides. Intention of this section is not to rewrite the user manuals and enthusiasts' blog posts, but to hopefully give a good idea what you could use the different tools for and if they are worth a closer look - here with as much information as needed at as little text to read as possible.
+You'll find tons of excellent and thorough documentation on the different formats and tools ... and you can spend hours on each to find out what functionalities it provides. Intention of this section is not to rewrite the user manuals and enthusiasts' blog posts, but to hopefully give a good idea what you could use the different tools for and if they are worth a closer look - here with as much information as needed at as little text to read as possible.
 
 ## Pandoc
 
@@ -27,9 +27,9 @@ flowchart LR
   writer --> OUTPUT
 ```
 
-This simple concept allows for lots of conversions from many document formats into many others: If a format is not supported yet, you can implement a reader; if there is new format, just create a writer and you can convert all supported input formats into that format; a filter once cerated can be applied to all the input formats for all the output formats. And finally templates can be used for some rough building blocks, e.g. to embed your writers output in some header and footer.
+This simple concept allows for lots of conversions from many document formats into many others: If a format is not supported yet, you can implement a reader; if there is a new format, just create a writer and you can convert all supported input formats into that format; a filter once created can be applied to all the input formats for all the output formats. And finally templates can be used for some rough building blocks, e.g. to embed your writers output in some header and footer.
 
-- The list of supported **input/output formats** are listed under the `--from`/`--to` [General Options](https://pandoc.org/MANUAL.html#general-options).
+- The supported **input/output formats** are listed under the `--from`/`--to` [General Options](https://pandoc.org/MANUAL.html#general-options).
 - The **AST format** is described by the [Text-Pandoc-Definition](https://hackage.haskell.org/package/pandoc-types-1.22.2.1/docs/Text-Pandoc-Definition.html). You can use `--to=native` to get the internal Haskell representation of an input document.
 - **Filtering** can be described in JSON or implemented in miscellaneous script languages (see: [filters](https://pandoc.org/filters.html)), but preferably Pandoc's integrated Lua interpreter can be used to realize [Pandoc Lua Filters](https://pandoc.org/lua-filters.html).
 - **Templates** ...

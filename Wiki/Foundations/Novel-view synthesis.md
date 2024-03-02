@@ -10,7 +10,7 @@ tags:
 
 View synthesis takes a pictures (or a number of pictures) of a subject and aims to create new views, or so to say novel views, of that subject. 3D reconstruction, the creation of three-dimensional models from a set of images, is a view synthesis that tries to reverse the process of obtaining 2D images from 3D scenes. The task of generating new images that render a subject from a different viewpoint than the one given is called a novel view synthesis.
 
-Aproaches to synthesize novel views are for examle NeRF and Photogrammetry.
+Approaches to synthesize novel views are for example NeRF and Photogrammetry.
 
 - [The Difference Between NeRF And Photogrammetry 3D Scan](https://youtu.be/m9JyKQTxTY4)
 
