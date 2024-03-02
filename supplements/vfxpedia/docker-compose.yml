@@ -1,0 +1,31 @@
+version: '3'
+services:
+  mediawiki:
+    image: mediawiki
+    restart: always
+    networks:
+      - vfxpedia_network
+    ports:
+      - 8080:80
+    links:
+      - database
+    volumes:
+      - /var/www/html/
+  database:
+    image: mysql:5.7
+    restart: always
+    networks:
+      - vfxpedia_network
+    environment:
+      MYSQL_DATABASE: vfxpedia_db
+      MYSQL_ROOT_PASSWORD: geh-heim
+      MYSQL_USER: vfxpedia
+      MYSQL_PASSWORD: vfxpedia
+    volumes:
+      - /var/lib/mysql
+  networks:
+    vfxpedia_network:
+      driver: bridge
+
+# open in web browser, do the setup, and then copy the settings via
+# docker cp LocalSettings.php container_name:/var/www/html/
