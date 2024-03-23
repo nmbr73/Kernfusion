@@ -1,0 +1,143 @@
+{
+    Tools = ordered() {
+        Background1 = Background {
+            Inputs = {
+                GlobalOut = Input { Value = 300, },
+                Width = Input { Value = 1920, },
+                Height = Input { Value = 1080, },
+                Depth = Input { Value = 2, },
+                ["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+            },
+            ViewInfo = OperatorInfo { Pos = { 496.667, 66.7575 } },
+        },
+        Merge2 = Merge {
+            Inputs = {
+                Background = Input {
+                    SourceOp = "Background1",
+                    Source = "Output",
+                },
+                Foreground = Input {
+                    SourceOp = "Text1",
+                    Source = "Output",
+                },
+                PerformDepthMerge = Input { Value = 0, },
+            },
+            ViewInfo = OperatorInfo { Pos = { 620, 66.7575 } },
+        },
+        Glow1 = Glow {
+            Inputs = {
+                Blend = Input { Value = 0.819, },
+                Filter = Input { Value = FuID { "Fast Gaussian" }, },
+                XGlowSize = Input { Value = 4.7, },
+                Glow = Input { Value = 0.748, },
+                Input = Input {
+                    SourceOp = "Merge2",
+                    Source = "Output",
+                },
+            },
+            ViewInfo = OperatorInfo { Pos = { 739.333, 66.7576 } },
+        },
+        SoftGlow1 = SoftGlow {
+            Inputs = {
+                Filter = Input { Value = FuID { "Fast Gaussian" }, },
+                Threshold = Input { Value = 0.126, },
+                XGlowSize = Input { Value = 41.7, },
+                Input = Input {
+                    SourceOp = "Glow1",
+                    Source = "Output",
+                },
+            },
+            ViewInfo = OperatorInfo { Pos = { 856, 66.1515 } },
+        },
+        td_Bokeh1 = Fuse.Bokeh_tida {
+            Inputs = {
+                FilterType = Input { Value = 1, },
+                MaskDarkPoint = Input { Value = -7.2, },
+                MaskContrast = Input { Value = 0.332, },
+                MaskPivot = Input { Value = 0.244, },
+                MixGaussian = Input { Value = 0, },
+                MixMicroDither = Input { Value = 0, },
+                DisplaceX = Input { Value = 5.1, },
+                DisplaceY = Input { Value = 10.9, },
+                iChannel0 = Input {
+                    SourceOp = "SoftGlow1",
+                    Source = "Output",
+                },
+                iChannel2 = Input {
+                    SourceOp = "FastNoise1",
+                    Source = "Output",
+                },
+            },
+            ViewInfo = OperatorInfo { Pos = { 1008, 66.1515 } },
+            Version = 8
+        },
+        Text1 = TextPlus {
+            CtrlWZoom = false,
+            Inputs = {
+                GlobalOut = Input { Value = 300, },
+                Width = Input { Value = 1920, },
+                Height = Input { Value = 1080, },
+                ["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+                Center = Input { Value = { 0.5, 0.356 }, },
+                ElementShape1 = Input { Value = 1, },
+                Green1 = Input { Value = 0.517647058823529, },
+                Blue1 = Input { Value = 0.0313725490196078, },
+                StyledText = Input { Value = "Bokeh Fuse\nErode / Dilate \n", },
+                Font = Input { Value = "Open Sans", },
+                Style = Input { Value = "Bold", },
+                Size = Input { Value = 0.2087, },
+                VerticalJustificationNew = Input { Value = 3, },
+                HorizontalJustificationNew = Input { Value = 3, },
+                ManualFontKerningPlacement = Input {
+                    Value = StyledText {
+                        Array = {
+                        },
+                        Value = ""
+                    },
+                },
+            },
+            ViewInfo = OperatorInfo { Pos = { 619.61, 112.671 } },
+        },
+        FastNoise1 = FastNoise {
+            Inputs = {
+                GlobalOut = Input { Value = 300, },
+                Width = Input { Value = 1920, },
+                Height = Input { Value = 1080, },
+                ["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+                Center = Input {
+                    SourceOp = "Path1",
+                    Source = "Position",
+                },
+                Detail = Input { Value = 4.72, },
+                Contrast = Input { Value = 2.08, },
+                XScale = Input { Value = 13.23, },
+            },
+            ViewInfo = OperatorInfo { Pos = { 1008.66, 117.667 } },
+        },
+        Path1 = PolyPath {
+            DrawMode = "InsertAndModify",
+            CtrlWZoom = false,
+            Inputs = {
+                Displacement = Input {
+                    SourceOp = "Path1Displacement",
+                    Source = "Value",
+                },
+                PolyLine = Input {
+                    Value = Polyline {
+                        Points = {
+                            { Linear = true, LockY = true, X = 0, Y = 0, RX = 0, RY = 0.391333333333333 },
+                            { Linear = true, LockY = true, X = 0, Y = 1.174, LX = 0, LY = -0.391333333333333 }
+                        }
+                    },
+                },
+            },
+        },
+        Path1Displacement = BezierSpline {
+            SplineColor = { Red = 255, Green = 0, Blue = 255 },
+            KeyFrames = {
+                [0] = { 0, RH = { 100, 0.333333333333333 }, Flags = { Linear = true, LockedY = true } },
+                [300] = { 1, LH = { 200, 0.666666666666667 }, Flags = { Linear = true, LockedY = true } }
+            }
+        }
+    }
+}

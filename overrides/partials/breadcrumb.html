@@ -1,0 +1,16 @@
+<div class="kfbreadcrumbs" {#- role="navigation" -#} aria-label="breadcrumbs navigation">
+    <ul class="kfbreadcrumbs">
+      {#- Hauptebene
+      <li><a href="{{ nav.homepage.url|url }}"">{{ config.site_name }}</a> &raquo;</li>
+      -#}
+      {%- if page %}
+        {%- for doc in page.ancestors[::-1] %}
+          {%- if doc.link %}
+            <li><a href="{{ doc.link|e }}">{{ doc.title }}</a> &raquo;</li>
+          {%- else %}
+            <li>{{ doc.title }} &raquo;</li>
+          {%- endif %}
+        {%- endfor %}
+      {%- endif %}
+    </ul>
+  </div>

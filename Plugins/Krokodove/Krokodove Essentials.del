@@ -1,0 +1,1457 @@
+# Krokodove Essentials
+
+Krokodove Essentials
+
+Created 2022-06-08 Last Updated 2022-06-12 11.06 PM UTC -4
+
+Docs By [Andrew Hazelden \<andrew@andrewhazelden.com\>](mailto:andrew@andrewhazelden.com)
+
+KKD Plugin By [Raf Schoenmaekers info@komkomdoorn.com](mailto:info@komkomdoorn.com)
+
+## Overview
+
+Overview
+
+Krokodove (KKD) is a cross-platform compatible plugin for Fusion Studio and DaVinci Resolve Studio. It includes 100+ free Fusion tools. Krokodove was created by Raf Schoenmaekers of [Komkom Doorn](http://komkomdoorn.com).
+
+The KKD shape tools allow you to create animatable vector artwork which is excellent for node-based motion graphics projects.
+
+The KKD data tools support workflows similar to Houdini CHOPS through the processing of lists, and sets of arrays.
+
+## Resources
+
+Resources
+
+Krokodove Vimeo Channel:
+
+<https://vimeo.com/channels/krokodove>
+
+Krokodove Email Contact:
+
+<info@komkomdoorn.com>
+
+## License
+
+License
+
+Krokodove is distributed for free.
+
+## Compatibility
+
+Compatibility
+
+Please note that KKD is a compiled Fusion plugin that was created with the FusionSDK. The KKD tools will not work in Fusion Standalone (free) or Resolve (free). A paid copy of either Fusion Studio or DaVinci Resolve Studio is required to run this plugin.
+
+## Software Required
+
+Software Required
+
+To run Krokodove on your system you will need the following tools:
+
+-   ![[img/image157.png]] [Reactor Package Manager](https://www.steakunderwater.com/wesuckless/viewtopic.php?f=32&t=3067) (Free)
+-   ![[img/image53.png]]BMD [Fusion Studio](https://www.blackmagicdesign.com/products/fusion/) (Paid)
+-   ![[img/image65.png]]BMD [Resolve Studio](https://www.blackmagicdesign.com/products/davinciresolve/) (Paid)
+
+## Install KKD
+
+Install KKD
+
+The Krokodove plugin can be installed using the [Reactor Package Manager](https://www.steakunderwater.com/wesuckless/viewtopic.php?f=32&t=3067) for Resolve Studio/Fusion Studio.
+
+![[img/image373.png]]
+
+After you have Reactor installed and open, select the "Tools \> Plugins" category on the left sidebar. Click on the package named "Krokodove for Fusion/Resolve Studio 17" and then press the "Install" button.
+
+![[img/image165__fix1.png]]
+
+Once the installation is complete, restart Resolve Studio or Fusion Studio standalone. This will load the KKD plugin.
+
+## Accessing the KKD Nodes
+
+Accessing the KKD Nodes
+
+Once Fusion Studio has finished loading you will have access to a new "Tools \> Krokodove" set of menu items.
+
+![[img/image249.png]]
+
+You can also right-click in the Nodes view area, and select the "Add Tool \> Krokodove" contextual menu item to access the KKD tools.
+
+![[img/image177.png]]
+
+In Resolve Studio you can access KKD nodes using the Effects Library tab at the top left of the user interface. Expand the "Tools \> Krokodove" hierarchy to view the nodes.
+
+![[img/image97__fix1.png]]
+
+## KKD Example Comps
+
+KKD Example Comps
+
+![[img/image194__fix1.png]]
+
+There is a collection of KKD example .comp files that can also be installed using Reactor.
+
+Select the "Comps \> Krokodove" category on the left sidebar. Click on the package named "Krokodove Showcase" and then press the "Install" button.
+
+![[img/image136__fix1.png]]
+
+To access the installed KKD example comps, navigate to the "Reactor \> Tools \> Show Comps Folder" menu item in Fusion Studio.
+
+This will open up a folder browsing window using Explorer (Windows) or Finder (macOS).
+
+The folder window displays the contents of the PathMap based location of "Reactor:/Deploy/Comps/".
+
+Double-click on the folder labeled "Krokodove" to open it.
+
+Inside this location you will have access to 35 example comps that use a variety of KKD tools. These examples are stored in categorized sub-folders for quick access.
+
+![[img/image202__fix1.png]]
+
+Here is a screenshot of the "Reactor:/Deploy/Comps/Krokodove/Pack/Pack_A\_001.comp" project file:
+
+![[img/image243__fix1.png]]
+
+## KKD Node Categories
+
+KKD Node Categories
+
+The Krokodove nodes are separated into the following categories and sub-categories based upon what data types they work with, and the function they perform:
+
+3D
+
+-   Align 3D
+-   Connect 3D
+-   Cut 3D
+-   Data Duplicate 3D
+-   Kill 3D
+-   Mapped Duplicate 3D
+-   Objectify 3D
+-   Poly Play 3D
+-   Retime 3D
+-   Tool 3D
+-   Vertex Play 3D
+
+3D Create
+
+-   Data Create 3D
+-   Fold Create 3D
+-   Heightfield Create 3D
+-   Object Create 3D
+-   Tube Create 3D
+-   World Position Create 3D
+
+3D Region
+
+-   rCube
+-   rImage
+-   rMerge
+-   rModify
+-   rNoise
+-   rPlane
+-   rShape
+-   rSphere
+-   rTransform
+
+Data
+
+-   dCopy
+-   dDelete
+-   dGrow
+-   dInfo
+-   dMath
+-   dMerge
+-   dRemap
+-   dSelect
+-   dSet Constant
+-   dSet Manual
+-   dSet Ramp
+-   dSet Random
+-   dSort
+-   dTool
+-   dTransform
+
+Data Create
+
+-   dChannels Create
+-   dFrom Image Analyzer Create
+-   dFrom Image Create
+-   dFrom Image Pack Create
+-   dFrom Region Create
+-   dLoader Create
+-   dPattern Create
+
+Image
+
+-   Analyzer
+-   Blur in Space
+-   Bounding Box
+-   Connect
+-   Dither
+-   Extend
+-   Find
+-   Flur
+-   Fragments
+-   Grow
+-   Grow Color
+-   Microwaves
+-   Pack
+-   Painterly
+-   Rasterize
+-   Smart Field Strobe
+-   Spiral
+-   Switcher
+-   Time Mapper
+-   Wireless Link
+-   Wireless Linky
+-   Worm
+
+Image Color
+
+-   Color
+-   Hue/Saturation
+-   Invert
+-   Match Color
+-   Replace Color
+-   Threshold
+-   Image Create
+
+Image Create
+
+-   Blob
+-   Lines
+-   Pattern
+-   Shapes
+
+Image Pixel
+
+-   Average
+-   Beams
+-   Bevel
+-   Border
+-   Canvas
+-   Channel Shifter
+-   Clean Edges
+-   Combine
+-   Crop Monsieur
+-   Cut and Bleed
+-   Deflicker
+-   Duplicate
+-   Eat
+-   Extrude
+-   Map Filter
+-   Matte Cleaner
+-   Merge and Bone
+-   Noise
+-   Pixel Region
+-   Planes
+-   Plastic
+-   Positioner
+-   Push
+-   Reassemble
+-   Rest
+-   Seamless Loop
+-   Smear
+-   Sort
+
+Image Position
+
+-   Contour
+-   Gradient
+-   Shade by Sample
+
+Image Vector
+
+-   Vector Blur
+-   Vector Field
+-   Vector Motion
+-   Vector Time
+-   Vector Visualization
+
+Image Warp
+
+-   Blend
+-   Directional Scale
+-   Kaleidoscope
+-   Lens Distortion
+-   Mirror
+-   Morph
+-   Offset
+-   Radial
+-   Relative Transform
+-   Ramp
+-   Segment Transform
+-   Shear
+-   Shuffle
+-   Spherize
+-   Stretch
+-   Transform
+
+Shape
+
+-   sBoolean
+-   sKill
+-   sMerge
+-   sOffset
+-   sRender
+-   sResample
+-   sShading
+-   sSmooth
+-   sTools
+-   sTransform
+-   sTriangulate
+-   sWriteOn
+-   sZigZag
+
+Shape Create
+
+-   sChart Create
+-   sPrimitive Create
+-   sSpiral Create
+-   sTrace Create
+
+Modifiers
+
+-   Color Switcher
+-   Beat
+-   Formula
+-   From File
+-   Juggle
+-   Random
+-   Write
+
+## KKD Node Reference Guide
+
+KKD Node Reference Guide
+
+Align 3D
+
+Align an object relative to
+
+![[img/image172__fix1.png]]
+
+Connect 3D
+
+Connect vertices...
+
+![[img/image269__fix1.png]]
+
+Cut 3D
+
+Cuts off an object
+
+![[img/image38__fix4.png]]
+
+Data Duplicate 3D
+
+Create duplicates, fully controlled by data channels.
+
+![[img/image280__fix1.png]]
+
+Kill 3D
+
+Kills (part of) an object
+
+![[img/image126.png]]
+
+Mapped Duplicate 3D
+
+Create duplicates, fully controlled by image maps.
+
+![[img/image234__fix1.png]]
+
+Objectify 3D
+
+Manipulates objects as a whole
+
+![[img/image112__fix1.png]]
+
+Poly Play 3D
+
+Manipulate objects on a poly level.
+
+![[img/image55__fix2.png]]
+
+Retime 3D
+
+A 3D retiming tool
+
+![[img/image44__fix4.png]]
+
+Tool 3D
+
+Tools to manipulate an object![[img/image261__fix1.png]]
+
+Vertex Play 3D
+
+Manipulate objects on a vertex level.
+
+![[img/image156__fix1.png]]![[img/image193__fix1.png]]
+
+Data Create 3D
+
+Creates a height field from a map
+
+![[img/image84__fix2.png]]![[img/image20__fix5.png]]![[img/image26__fix4.png]]![[img/image56__fix3.png]]
+
+Fold Create 3D
+
+Creates a foldable object
+
+![[img/image162__fix1.png]]![[img/image142__fix1.png]]![[img/image73__fix2.png]]![[img/image149__fix1.png]]
+
+Heightfield Create 3D
+
+Creates a height field from a map
+
+![[img/image230.png]]![[img/image48__fix3.png]]
+
+Object Create 3D
+
+Creates an object
+
+![[img/image199.png]]
+
+Shape Create 3D
+
+Creates a 3D object from a shape
+
+![[img/image244__fix1.png]]
+
+Tube Create 3D
+
+Creates some tubes
+
+![[img/image35__fix4.png]]![[img/image196.png]]![[img/image65__fix2.png]]![[img/image214__fix1.png]]![[img/image164__fix1.png]]![[img/image260__fix1.png]]
+
+World Position Create 3D
+
+Creates a plane with based on world space coordinates
+
+![[img/image190__fix1.png]]
+
+rCube
+
+Region 3D Cube
+
+![[img/image110__fix2.png]]![[img/image43__fix4.png]]
+
+rImage
+
+Region 3D Image
+
+![[img/image91__fix1.png]]
+
+rMerge
+
+Region 3D Merge
+
+![[img/image83__fix2.png]]
+
+The "Combine" control can be set to "Union", "Intersect", "Add", "Subtract", or "Exclusive".
+
+![[img/image180__fix1.png]]
+
+rModify
+
+Region 3D Modify
+
+![[img/image25__fix5.png]]
+
+rNoise
+
+Region 3D Noise
+
+![[img/image282__fix1.png]]
+
+rPlane
+
+Region 3D Plane
+
+![[img/image227__fix1.png]]
+
+rShape
+
+Region 3D Shape
+
+![[img/image263__fix1.png]]
+
+The Mapping control can be set to "Planar", "Spherical", or "Cylindrical".
+
+rSphere
+
+Region 3D Sphere
+
+![[img/image10__fix6.png]]
+
+rTransform
+
+Region 3D Transform
+
+![[img/image114__fix1.png]]
+
+The "Region Transform" control page has a single checkbox labelled "Invert".
+
+The "Transform" control page can be used to adjust the XYZ Position, Rotation, and Scale attributes.
+
+![[img/image96__fix1.png]]
+
+dCopy
+
+Copy data channels
+
+![[img/image238.png]]
+
+The "Type In" and "Type Out" controls can be set to "Any", "Bool", "Integer", "Float", "Vector2", "Vector3", or "Color".
+
+![[img/image255__fix2.png]]
+
+dDelete
+
+Data Delete
+
+![[img/image154__fix1.png]]
+
+dGrow
+
+Data Grow
+
+![[img/image24__fix4.png]]
+
+dInfo
+
+Data Info
+
+![[img/image205__fix1.png]]
+
+dMath
+
+Data Math
+
+![[img/image111__fix2.png]]
+
+The Operation control can be set to "None", "Add", "Subtr", "Mult", "Div", "Power", or "Mod".
+
+![[img/image270__fix1.png]]
+
+dMerge
+
+Data Merge
+
+![[img/image143__fix1.png]]
+
+The data merge node has 8 initial input connections named "Data \[1-8\] (in)".
+
+![[img/image116__fix1.png]]
+
+dRemap
+
+Data Remap
+
+![[img/image32__fix2.png]]
+
+dSelect
+
+Data Select
+
+![[img/image155__fix1.png]]
+
+The Operation control can be set to "None", "Add", "Subtr", "Mult", "Div", "Power", or "Mod".
+
+![[img/image270__fix1.png]]
+
+dSet Constant
+
+Set Constant Data
+
+![[img/image78__fix1.png]]
+
+dSet Manual
+
+Set Data Manually, one by one
+
+![[img/image217__fix1.png]]
+
+dSet Ramp
+
+Set data to follow a ramp or gradient between 2 values
+
+![[img/image235.png]]
+
+dSet Random
+
+Set/add random data
+
+![[img/image248.png]]
+
+dSort
+
+Data Sorting
+
+![[img/image239.png]]
+
+The "Vector Sort1" control can be set to "By X", "By Y", "By Z", or "Distance".
+
+![[img/image160__fix1.png]]
+
+dTool
+
+Data Tools
+
+![[img/image222.png]]
+
+By default the "Limit Count Start" and "Limit Count End" controls have an initial control range of 0-100.
+
+dTransform
+
+Data Transform
+
+![[img/image189__fix1.png]]
+
+dChannels Create
+
+Create data channels
+
+![[img/image23__fix4.png]]![[img/image50__fix5.png]]![[img/image161.png]]![[img/image64__fix2.png]]![[img/image178__fix1.png]]![[img/image251__fix1.png]]![[img/image86__fix1.png]]
+
+dFrom Image Analyzer Create
+
+Sample image and format data
+
+![[img/image5__fix9.png]]![[img/image132__fix1.png]]![[img/image49__fix3.png]]
+
+dFrom Image Create
+
+Sample Image
+
+![[img/image213__fix1.png]]
+
+dFrom Image Pack Create
+
+Sample image using packing method
+
+![[img/image171__fix1.png]]
+
+dFrom Region Create
+
+Sample Region
+
+![[img/image54__fix4.png]]
+
+The "Replace Type" control can be set to "Replace in Range" or "Replace All".
+
+dLoader Create
+
+Load data
+
+![[img/image18__fix6.png]]
+
+The "Channels Direction" control can be set to "By Row" or "By Column".
+
+The "First Row" control can be set to "Automatic", "Channel Names", or "Channel Data".
+
+The "First Column" control can be set to "Automatic", "Channel Names", or "Channel Data".
+
+dPattern Create
+
+Create a pattern
+
+![[img/image181__fix1.png]]
+
+The "Pattern Type" control can be set to "Grid" or "Ring".
+
+The "Ring Count Type" control can be set to "By Number", "By Distance", or "By Angle".
+
+Analyzer
+
+Image analysis
+
+![[img/image1__fix11.png]]![[img/image37__fix3.png]]![[img/image89__fix2.png]]
+
+The "Scale" control on the Guides control page can be set to "0.0 ... 1.0", "0 ... 255", "0 ... 1023", or "0 ... 65535".
+
+![[img/image201.png]]
+
+Blur in Space
+
+A mere re-packaging of two basic Fusion tools: color space swapping and blur
+
+![[img/image125.png]]
+
+The "Blur Filter" control can be set to "Box", "Soften", "Bartlett", "Gaussian", or "Sharpen"
+
+![[img/image103__fix2.png]]
+
+Bounding Box
+
+Bounding Box
+
+![[img/image275__fix1.png]]
+
+The "Channel" control can be set to "Red", "Green", "Blue", "Alpha", or "Lumin.".
+
+The "Threshold" control has a default input control range of 0 - 1.
+
+The "Lock" control can be set to "All Sides", "Vert./Horiz.", or "None".
+
+The "Extend" control has a default input control range of -0.05 to 0.1. The initial value is 0.0.
+
+Connect
+
+Connect points with lines or splines
+
+![[img/image15__fix5.png]]![[img/image279__fix1.png]]![[img/image283__fix1.png]]
+
+Dither
+
+Reduces the number of bits for each color channel and creates a 'logical noise' doing it
+
+![[img/image218.png]]
+
+The "Dither method" control can be set to "None", "Ordered", "Simple error distribution", or "Floyd & Steinberg".
+
+![[img/image129.png]]
+
+Extend
+
+![[img/image101__fix1.png]]
+
+The "Direction" control can be set to "Horizontal" or "Vertical".
+
+The "Channel" control can be set to "Red", "Green", "Blue", "Alpha", "Lumin.", or "Each".
+
+![[img/image79__fix1.png]]
+
+The "Hold" control can be set to "Within range", "Minimum", or "Maximum".
+
+![[img/image173__fix1.png]]
+
+Find
+
+![[img/image212__fix1.png]]
+
+The "Channel" control can be set to "Red", "Green", "Blue", "Alpha", or "Lumin.".
+
+The "Result" control can be set to "Analytic" or "Clean".
+
+Flur
+
+![[img/image277.png]]
+
+The "Shape" control can be set to "Square", "Round", or "Axial".
+
+Fragments
+
+![[img/image203__fix1.png]]
+
+The "Channel" control can be set to "Red", "Green", "Blue", "Alpha", or "Lumin.".
+
+![[img/image33__fix5.png]]
+
+The "Range Curve" control can be set to "Linear", "Ease In", "Ease Out", or "Ease In/Out".
+
+![[img/image109.png]]
+
+Grow
+
+![[img/image215.png]]![[img/image76__fix2.png]]
+
+Grow Color
+
+Fill transparent parts by extending the edge color
+
+![[img/image179__fix1.png]]
+
+Microwaves![[img/image41__fix3.png]]
+
+Pack
+
+![[img/image137.png]]![[img/image66__fix2.png]]![[img/image3__fix7.png]]
+
+Painterly
+
+Painterly effects
+
+![[img/image106__fix2.png]]
+
+Rasterize
+
+Half-tone style rasterize
+
+![[img/image254.png]]![[img/image197__fix1.png]]![[img/image140__fix1.png]]
+
+Smart Field Strobe
+
+Smart Field Strobe tries to detect motion and only removes fields where there is.
+
+![[img/image123__fix1.png]]![[img/image27__fix3.png]]
+
+Spiral
+
+![[img/image183__fix1.png]]![[img/image163__fix1.png]]![[img/image152__fix1.png]]
+
+Switcher
+
+![[img/image29__fix5.png]]
+
+Time Mapper
+
+![[img/image69__fix2.png]]
+
+Wireless Link
+
+![[img/image259__fix1.png]]
+
+Wireless Linky
+
+![[img/image192__fix1.png]]
+
+Worm
+
+![[img/image88__fix2.png]]![[img/image166__fix1.png]]![[img/image102__fix2.png]]
+
+Color
+
+Simple tool for easy fading to a certain color
+
+![[img/image274__fix1.png]]
+
+Hue/Saturation
+
+A simple color correcting tool, operating in HLS color space
+
+![[img/image16__fix5.png]]
+
+Invert
+
+Invert color, luminance or hue
+
+![[img/image28__fix5.png]]
+
+The "Type" control can be set to "Color", "Luminance", or "Hue".
+
+![[img/image9__fix7.png]]
+
+Match Color
+
+Color matching
+
+![[img/image87__fix2.png]]
+
+The "Number of colors" control can be set to "Single", "Low and High", or "Low, Mid && High".
+
+![[img/image145__fix1.png]]
+
+The "Shadows match" control can be set to "Full color", "Color tint", or "Luminance".
+
+![[img/image6__fix8.png]]
+
+The "Highlights match" control can be set to "Full color", "Color tint", or "Luminance".
+
+![[img/image57__fix2.png]]
+
+Replace Color
+
+This color correcting tool replaces a certain color range with another
+
+![[img/image67__fix3.png]]![[img/image147__fix1.png]]
+
+Threshold
+
+Clips the color in reference to the threshold
+
+![[img/image94__fix2.png]]
+
+Blobs
+
+Create metaball like blob shapes
+
+![[img/image223.png]]![[img/image127__fix1.png]]
+
+Lines
+
+Line patterns
+
+![[img/image208.png]]![[img/image11__fix6.png]]![[img/image232__fix1.png]]![[img/image256.png]]
+
+Pattern
+
+Creation of a wild collection of patterns (assuming you think grids are wild)
+
+The "Type" control can be set to "Triangles", "Grid", or "Honeycomb".
+
+![[img/image121.png]]![[img/image139__fix1.png]]
+
+Shapes
+
+Shape patterns; circles, squares, ...
+
+![[img/image182__fix1.png]]![[img/image184__fix1.png]]![[img/image92__fix2.png]]
+
+Average
+
+![[img/image257.png]]
+
+The "Main Time" control can be set to "Flow Time", or "Time Speed", or "Time Stretch".
+
+The "Non-existing frames" control can be set to "Black" or "Ignore".
+
+Beams
+
+![[img/image17__fix7.png]]![[img/image281__fix1.png]]
+
+Bevel
+
+![[img/image8__fix7.png]]![[img/image175__fix1.png]]![[img/image53__fix4.png]]
+
+Border
+
+![[img/image141.png]]
+
+Canvas
+
+![[img/image167.png]]
+
+Channel Shifter
+
+![[img/image253.png]]![[img/image31__fix5.png]]![[img/image258__fix1.png]]![[img/image188__fix1.png]]![[img/image45__fix4.png]]![[img/image115__fix1.png]]
+
+Clean Edges
+
+![[img/image224__fix1.png]]
+
+Combine
+
+![[img/image265__fix1.png]]
+
+Crop Monsieur
+
+Makes multiple copies of an image
+
+![[img/image158__fix1.png]]
+
+Cut and Bleed
+
+![[img/image4__fix9.png]]
+
+Deflicker
+
+![[img/image131__fix1.png]]![[img/image207.png]]
+
+The "Reference" control can be set to "Fixed Time", "Time Steps", "Average", or "External".
+
+Duplicate
+
+![[img/image130__fix1.png]]![[img/image120__fix1.png]]![[img/image59__fix3.png]]
+
+Eat
+
+Eats out the edges of an image
+
+![[img/image262__fix1.png]]
+
+Extrude
+
+![[img/image34__fix5.png]]![[img/image204__fix1.png]]
+
+The "Perspective type" control can be set to "Parallel" or "Radial".
+
+The "Color type" control can be set to "Solid" or "Original".
+
+Map Filter
+
+![[img/image229__fix1.png]]
+
+Matte Cleaner
+
+![[img/image245__fix1.png]]![[img/image80__fix1.png]]
+
+Merge and Bone
+
+![[img/image117__fix1.png]]![[img/image104__fix2.png]]![[img/image148__fix1.png]]
+
+Noise
+
+![[img/image128.png]]
+
+Pixel Region
+
+![[img/image231.png]]
+
+Planes
+
+![[img/image271__fix1.png]]![[img/image226__fix1.png]]
+
+Plastic
+
+Put a plastic film over your image
+
+![[img/image42__fix4.png]]![[img/image75__fix1.png]]![[img/image74__fix2.png]]
+
+Positioner
+
+![[img/image187__fix1.png]]
+
+The "Type of positioner" control can be set to "One point", "Two point", "Three point", or "Four point".
+
+![[img/image144__fix1.png]]
+
+Push
+
+![[img/image133.png]]
+
+Reassemble
+
+![[img/image82__fix2.png]]
+
+Rest
+
+![[img/image252__fix1.png]]
+
+Seamless Loop
+
+Create seamlessly looping sequences easily
+
+![[img/image266__fix1.png]]
+
+The "Fade type" control can be set to either "Linear" or "Smooth".
+
+Smear
+
+Smears the image horizontally or vertically
+
+![[img/image98__fix2.png]]![[img/image276__fix1.png]]
+
+Sort
+
+![[img/image22__fix6.png]]
+
+Contour
+
+Draws a nice, anti-aliased contour around an image
+
+![[img/image105__fix2.png]]
+
+Gradient
+
+Creation of gradients: linear, radial and spotlight shapes can be created an combined with the background image
+
+![[img/image62__fix3.png]]![[img/image107__fix2.png]]
+
+Shade by Sample
+
+Shade an image based on the normals
+
+![[img/image119__fix1.png]]
+
+Vector Blur
+
+![[img/image135__fix1.png]]
+
+Vector Field
+
+![[img/image108__fix2.png]]
+
+Vector Motion
+
+![[img/image7__fix8.png]]
+
+The "Motion analysis direction" control can be set to "Backward", "Both", or "Forward".
+
+Vector Time
+
+![[img/image68__fix3.png]]
+
+The "Adjust" control can be set to "Not", "Time Speed", "Time Stretch".
+
+Vector Visualization
+
+![[img/image247.png]]
+
+The "Vizualize vector field" control can be set to "Grid" or "Edges".
+
+The "Line Color" control can be set to "Solid" or "Image".
+
+Blend
+
+Directional Scale
+
+![[img/image221.png]]
+
+Kaleidoscope
+
+![[img/image12__fix5.png]]![[img/image90__fix1.png]]
+
+The "Type" control can be set to "Classic" or "Fancy".
+
+Lens Distortion
+
+![[img/image118.png]]
+
+The "Type" control can be set to "Distort" or "Restore".
+
+If you have "K1" and "K2" lens distortion parameters provided by an external lens calibration tool, those values are entered in the "Kappa1" and "Kappa2" number-fields.
+
+Mirror
+
+![[img/image71__fix2.png]]
+
+Morph
+
+![[img/image236__fix1.png]]
+
+The "Warp Type" control can be set to "Field" or "Radial".
+
+Offset
+
+![[img/image185.png]]
+
+Radial
+
+![[img/image273__fix1.png]]
+
+Relative Transform
+
+![[img/image267.png]]
+
+The "Center Type" control can be set to "Bounding Box" or "Weighted Pixels".
+
+The "Size Type" control can be set to "Size X and Size Y" or "Size and Aspect".
+
+Remap
+
+![[img/image176.png]]
+
+Segment Transform
+
+![[img/image138.png]]
+
+Shear
+
+![[img/image206__fix1.png]]
+
+The "Input Type" control can be set to "By value" or "By angle".
+
+Shuffle
+
+![[img/image211.png]]
+
+The "Type" control can be set to "Slide" or "Swap".
+
+Spherize
+
+![[img/image99__fix2.png]]
+
+The "Type" control can be set to "Horizontal", "Vertical", "Sphere", or "Rectangle".
+
+![[img/image228__fix1.png]]
+
+The "Algorithm" control can be set to "Spherize", "Soft in/out", "Smooth", or "Sinusoid".
+
+![[img/image21__fix5.png]]
+
+Stretch
+
+![[img/image122.png]]
+
+The "Type" control can be set to "Source and Destination", or "Source and Offset".
+
+Transform
+
+![[img/image100__fix2.png]]
+
+The "Size Type" control can be set to "Size X and Size Y" or "Size and Aspect".
+
+sBoolean
+
+Combines shapes by union, difference or intersection
+
+![[img/image169__fix1.png]]
+
+The "Type" control can be set to "Intersect", "Union", "Difference", or "Xor".
+
+The "Fill Type" can be set to "Even Odd" or "Non Zero".
+
+sKill
+
+Shape Kill
+
+![[img/image210__fix1.png]]
+
+sMerge
+
+Shape Merge
+
+![[img/image95.png]]
+
+The sMerge node has two input connections named "Shape1" and "Shape2".
+
+sOffset
+
+Shape Offset
+
+![[img/image219__fix1.png]]
+
+The "Join Type" control can be set to "Miter", "Bevel", or "Rounded".
+
+The "Sides" control can be set to "Both", "Inside", or "Outside".
+
+sRender
+
+Render out the shape to an image
+
+![[img/image2__fix8.png]]![[img/image151.png]]
+
+The "Winding" can be set to "Even/Odd" or "Non-Zero".
+
+The "Image" control page can be used to define the dimensions of the rendered image.
+
+sResample
+
+Shape Resample
+
+![[img/image150.png]]
+
+sShading
+
+Apply Shading to shape
+
+![[img/image240__fix1.png]]
+
+The "Pen Line Type" control can be set to "Solid", "Dashed", "Dotted", or "Custom".
+
+![[img/image241__fix1.png]]
+
+sSmooth
+
+Shape Smooth
+
+![[img/image93__fix2.png]]
+
+sTools
+
+Shape Tools
+
+![[img/image40__fix3.png]]
+
+The "Open Close" control can be set to "Keep", "Close All", "Open All", or "Swap".
+
+![[img/image186__fix1.png]]
+
+sTransform
+
+Shape Transform
+
+![[img/image85__fix2.png]]
+
+sTriangulate
+
+Shape Triangulate
+
+![[img/image13__fix6.png]]
+
+The "Type" control can be set to "Type 1" or "Type 2".
+
+sWriteOn
+
+Shape WriteOn
+
+![[img/image113__fix2.png]]
+
+The "Level" control can be set to "Global", "Shape", or "Element".
+
+sZigZag
+
+Shape ZigZag
+
+![[img/image72__fix1.png]]
+
+The "Type" control can be set to "By Segment", or "By distance".
+
+sChart Create
+
+Shape Chart Create
+
+![[img/image242__fix1.png]]![[img/image134__fix1.png]]![[img/image168__fix1.png]]![[img/image225__fix1.png]]
+
+sPrimitive Create
+
+Shape Primitive Create
+
+![[img/image233__fix1.png]]![[img/image51__fix3.png]]![[img/image209.png]]![[img/image52__fix3.png]]
+
+The "Shape Primitive Create" control page has a "Type" control that can be set to "Cross", "Polygon", "Rectangle", or "Star".
+
+![[img/image174__fix1.png]]
+
+sSpiral Create
+
+Shape Spiral Create
+
+![[img/image264__fix1.png]]![[img/image272.png]]![[img/image30__fix5.png]]
+
+The "Shape Spiral Create" control page has an "Angle End Type" control that can be set to "None", "Type 1", or "Type 2".
+
+sTrace Create
+
+Shape Trace Create
+
+![[img/image250__fix2.png]]![[img/image47__fix4.png]]![[img/image58__fix3.png]]
+
+## KKD Modifier Reference Guide
+
+KKD Modifier Reference Guide
+
+Beat
+
+Pulse your animation in sync with the beat of your music
+
+![[img/image46__fix3.png]]![[img/image200__fix1.png]]
+
+Color Switcher
+
+A modifier that switches color values
+
+![[img/image36__fix5.png]]![[img/image19__fix4.png]]![[img/image268.png]]
+
+Formula
+
+Text formula allows numeric values to be used within text fields, or combines several texts (such as timecode, flow name, ...)
+
+![[img/image60__fix3.png]]![[img/image198__fix1.png]]![[img/image278__fix1.png]]![[img/image77__fix2.png]]
+
+From File
+
+Retrieve text from file
+
+![[img/image159.png]]
+
+Source
+
+The "Source" control allows you to input your data from an external text file, or by entering the content in the "Text" input field on the modifier node itself.
+
+![[img/image216__fix1.png]]
+
+The "Format" control options are "Each line a frame", "Startframe and text", and "Line on frame".
+
+Line on Frame
+
+Setting the "Format" control to the "Line on Frame" option exposes an additional "Line" slider element which can be used to directly select the exact line number from the text file that is displayed.
+
+![[img/image63__fix3.png]]
+
+Each line a frame
+
+Setting the "Format" control to the default "Each line a frame" option syncs the line being read from the external text file with the current frame number in the timeline.
+
+![[img/image191__fix1.png]]
+
+The "Loop" checkbox allows you to replay the contents of the external text file, line by line, once the end of the document is reached.
+
+The "Hold frames" control allows you to delay the start of the text file playback for a user specified amount of frames.
+
+Startframe and text
+
+![[img/image246__fix1.png]]
+
+Setting the "Format" control to the "Startframe and text" option allows you to customize your timing with very tight precision for pre-defined frame ranges.
+
+Each row in the document starts with either a single frame number, or a frame range written with a dash like "30-60", followed by a whitespace character, then the text to display. To display an initial message for 120 frames, then to display another message for a subsequent 120 frame duration you would write in:
+
+1-120 Hello World!
+
+121-240 To Be Continued...
+
+Juggle
+
+Juggle text (characters, words, lines) around
+
+![[img/image14__fix6.png]]
+
+The "Juggle Characters" slider can be adjusted from 0 (no effect) to 1.0 (all characters juggled).
+
+If you entered "Hello World" into the "Text" field of the modifier and set the Juggle Characters control to 1.0 you would get a result of "llroeHdl Wo".
+
+Random
+
+Random Number
+
+![[img/image237__fix1.png]]
+
+The Random Modifier is applied to Number input field based values. The randomized number value is animated across the timeline frame range.
+
+The "Minimum value" control is used to adjust the lowest part of the spline curve generated.
+
+The "Maximum value" control is used to adjust the highest part of the spline curve generated.
+
+If you lift both the minimum and maximum ranges at the same time you can offset the range of values created.
+
+It is also possible to split the min/max value range instead of being 0 to 1 to have a min/max value range of -1 to 1, or -0.5 to 0.5 if you need both negative and positive random numbers generated.
+
+The "Seed" control is used to shift the initial random number starting point. Changing the seed value will result in a different sequence of numbers being generated.
+
+New value for every field/frame
+
+Unchecking the "\[x\] New value for every field/frame" checkbox will display two additional UI elements that provide more control over the frequency of change for the random number generation.
+
+![[img/image220__fix1.png]]
+
+The additional UI controls are labeled "New value every ... frames", along with an "Interpolation" control.
+
+The "New value every ... frames" control lets you define how fast the random number generator output is refreshed. The control unit of measure is in timeline frames.
+
+The "Interpolation" control options are "Step", "Linear", and "Ease-in, Ease-out".
+
+Step Interpolation
+
+If you were to set the "New value every ... frames" control to 30 (frames), and the "Interpolation" control to "Step", the resulting number output when displayed in the Splines view would have flat plateau like tangents, positioned at random heights:
+
+![[img/image39__fix3.png]]
+
+Linear Interpolation
+
+Selecting "Linear" interpolation creates a randomized sawtooth like Spline view result:
+
+![[img/image124__fix1.png]]
+
+Ease-in, Ease-out interpolation
+
+Selecting "Ease-in, Ease-out" interpolation creates a slightly smoothed top and bottom "cap" on the peaks of the randomized sawtooth like Spline view result:
+
+![[img/image81__fix3.png]]
+
+Random Number Use Cases
+
+The Random number generator is quite versatile. It could help with adding jitter to 2D or 3D transform attributes, or could add an organic feeling of chaos to blurs, glows, exposure, and other filter effects.
+
+This could be the missing element needed to make a more lively lightsaber that pulses over time, or it could add a bit of uniqueness to simulated analog onscreen motion graphics composited onto an old CRT monitor that has characteristics like snow, static, glitching effects and lots of glow/flicker.
+
+Write
+
+Easy writing of text
+
+![[img/image153__fix1.png]]
+
+The Write modifier acts much like an old VT100 text terminal character generator. This effect will typically be applied on a Text+ node. The font size of the text generated by the Write modifier is inherited from the base "Size" control on the Text+ node.
+
+As you animate the "Write" slider control from 0 to 1, the letters entered in the "Text" field will be printed on screen, one character at a time.
+
+The "Cursor" element is placed to the right of the most recently entered letter.
+
+The "Prefix" element is placed at the start of the line.
+
+If you entered the text "Hello World" in the Write modifier, enabled the "\[x\] Prefix Show" checkbox, and set the "Write" control to 0.45, you would see the output text:
+
+//Hello\_
+
+The Write modifier can be applied to any Text based attributes in Fusion. This includes the Fusion 3D workspace based "Text3D" node, or the 3rd party Vonk "vText" class of nodes like "vTextCreateMultiline".
+
+![[img/image70__fix3.png]]
+
+![[img/image195__fix1.png]]
+
+## KKD Node Cookbook
+
+KKD Node Cookbook
+
+A collection of Fusion node-graph recipes for common KKD techniques.
+
+Content TBD.

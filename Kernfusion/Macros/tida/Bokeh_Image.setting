@@ -1,0 +1,625 @@
+{
+	Tools = ordered() {
+		Bokeh_Image = MacroOperator {
+			CtrlWZoom = false,
+			NameSet = true,
+			Inputs = ordered() {
+				B_Max = Input { Value = 0.936, },
+				BY_S = Input { Value = 0.808, },
+				BG_S = Input { Value = 0.662, },
+				BC_S = Input { Value = 0.472, },
+				BB_S = Input { Value = 0.336, },
+				BM_S = Input { Value = 0.142, },
+				B_Min = Input { Value = 0.472, },
+				BAngle = Input { Value = 29.6, },
+				BSteps = Input { Value = 6, },
+				Red = Input { Value = 0.276, },
+				Green = Input { Value = 0.276, },
+				Blue = Input { Value = 0.276, },
+				Blur = Input { Value = 44.09, }
+			},
+			Outputs = {
+				Output2 = InstanceOutput {
+					SourceOp = "Blur1_1_2_1",
+					Source = "Output",
+				}
+			},
+			ViewInfo = GroupInfo {
+				Pos = { 664.431, -8.46812 },
+				Flags = {
+					AllowPan = false,
+					AutoSnap = true,
+					RemoveRouters = true
+				},
+				Size = { 476.534, 328.477, 190.934, 36.9697 },
+				Direction = "Horizontal",
+				PipeStyle = "Direct",
+				Scale = 1,
+				Offset = { -6.60025, 55.3159 }
+			},
+			Tools = ordered() {
+				Blur1_1_2_1 = Blur {
+					CtrlWShown = false,
+					Inputs = {
+						Filter = Input { Value = FuID { "Bartlett" }, },
+						XBlurSize = Input {
+							Value = 44.09,
+							Expression = "Bokeh_Image.Blur",
+						},
+						Input = Input {
+							SourceOp = "sRender1_1_2_1",
+							Source = "Output",
+						},
+						Thickness = Input { Value = 0.1, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 238.009, -27.911 } },
+					UserControls = ordered() {
+						Thickness = {
+							LINKS_Name = "Thickness",
+							INP_Integer = false,
+							LINKID_DataType = "Number",
+							ICS_ControlPage = "Controls",
+							INPID_InputControl = "SliderControl",
+							INP_MinScale = 0,
+							INP_MaxScale = 1,
+							INP_Default = 0.100000001490116,
+						}
+					}
+				},
+				sRender1_1_2_1 = KomkomDoorn.KD_ShapeRender {
+					CtrlWShown = false,
+					Inputs = {
+						GlobalIn = Input { Value = 200, },
+						GlobalOut = Input { Value = 500, },
+						Width = Input { Value = 1000, },
+						Height = Input { Value = 1000, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						Shape = Input {
+							SourceOp = "sMerge01_1_1",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { 116.876, -27.8234 } },
+				},
+				sMerge03_1_1 = KomkomDoorn.KD_ShapeMerge {
+					CtrlWShown = false,
+					NameSet = true,
+					Inputs = {
+						Shape1 = Input {
+							SourceOp = "sMerge02_1_1",
+							Source = "Output",
+						},
+						Shape2 = Input {
+							SourceOp = "BY_2_1",
+							Source = "Output",
+						},
+						Fade = Input { Value = 1, },
+					},
+					ViewInfo = OperatorInfo { Pos = { -4.0625, -13.2424 } },
+				},
+				sMerge06_1_1 = KomkomDoorn.KD_ShapeMerge {
+					CtrlWShown = false,
+					NameSet = true,
+					Inputs = {
+						Shape1 = Input {
+							SourceOp = "sMerge05_1_1",
+							Source = "Output",
+						},
+						Shape2 = Input {
+							SourceOp = "BB_2_1",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { -3.45833, 93.0302 } },
+				},
+				sMerge04_1_1 = KomkomDoorn.KD_ShapeMerge {
+					CtrlWShown = false,
+					NameSet = true,
+					Inputs = {
+						Shape1 = Input {
+							SourceOp = "sMerge03_1_1",
+							Source = "Output",
+						},
+						Shape2 = Input {
+							SourceOp = "BG_2_1",
+							Source = "Output",
+						},
+						Fade = Input { Value = 1, },
+					},
+					ViewInfo = OperatorInfo { Pos = { -4.72917, 27.0303 } },
+				},
+				sMerge05_1_1 = KomkomDoorn.KD_ShapeMerge {
+					CtrlWShown = false,
+					NameSet = true,
+					Inputs = {
+						Shape1 = Input {
+							SourceOp = "sMerge04_1_1",
+							Source = "Output",
+						},
+						Shape2 = Input {
+							SourceOp = "BC_2_1",
+							Source = "Output",
+						},
+						Fade = Input { Value = 1, },
+					},
+					ViewInfo = OperatorInfo { Pos = { -4.72917, 60.0303 } },
+				},
+				sMerge02_1_1 = KomkomDoorn.KD_ShapeMerge {
+					CtrlWShown = false,
+					NameSet = true,
+					Inputs = {
+						Shape1 = Input {
+							SourceOp = "BR_2_1",
+							Source = "Output",
+						},
+						Shape2 = Input {
+							Value = KomkomDoorn.KD_ShapeParameter {
+								Version = 1,
+								Type = "Shape"
+							},
+						},
+						Fade = Input { Value = 1, },
+					},
+					ViewInfo = OperatorInfo { Pos = { -3.5102, -47.6978 } },
+				},
+				sMerge07_1_1 = KomkomDoorn.KD_ShapeMerge {
+					CtrlWShown = false,
+					NameSet = true,
+					Inputs = {
+						Shape1 = Input {
+							SourceOp = "sMerge06_1_1",
+							Source = "Output",
+						},
+						Shape2 = Input {
+							SourceOp = "BM_2_1",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { -7.31337, 134.518 } },
+				},
+				sMerge01_1_1 = KomkomDoorn.KD_ShapeMerge {
+					CtrlWShown = false,
+					NameSet = true,
+					Inputs = {
+						Shape1 = Input {
+							SourceOp = "sMerge07_1_1",
+							Source = "Output",
+						},
+						Shape2 = Input {
+							SourceOp = "BK_2_1",
+							Source = "Output",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { -3.2447, 176.128 } },
+				},
+				BR_2_1 = KomkomDoorn.KD_ShapePrimitiveCreate {
+					CtrlWShown = false,
+					NameSet = true,
+					Inputs = {
+						Type = Input { Value = 1, },
+						SizeX = Input {
+							Value = 0.936,
+							Expression = "Bokeh_Image.B_Max",
+						},
+						SizeY = Input {
+							Value = 0.936,
+							Expression = "SizeX",
+						},
+						Steps = Input {
+							Value = 6,
+							Expression = "BSteps",
+						},
+						AngleStart = Input {
+							Value = 29.6,
+							Expression = "BAngle",
+						},
+						Data = Input {
+							Value = KomkomDoorn.KD_DataParameter {
+								Version = 1,
+								Type = "Data"
+							},
+						},
+						TransformRotationZ = Input { Value = 28.7, },
+						BrushColorRed = Input { Value = 1, },
+						BrushColorGreen = Input { Value = 0, },
+						BrushColorBlue = Input { Value = 0, },
+						PenEnabled = Input { Value = 0, },
+						PenColorRed = Input { Value = 0.291, },
+						PenColorGreen = Input { Value = 0.425, },
+						PenOpacity = Input { Value = 0, },
+						PenThickness = Input { Value = 2.99, },
+						PenLine = Input { Value = 1, },
+					},
+					ViewInfo = OperatorInfo { Pos = { -113.171, -47.6547 } },
+				},
+				BY_2_1 = KomkomDoorn.KD_ShapePrimitiveCreate {
+					CtrlWShown = false,
+					NameSet = true,
+					SourceOp = "BR_2_1",
+					Inputs = {
+						SettingsNest = Input { },
+						SizeX = Input {
+							Value = 0.846912,
+							Expression = "Bokeh_Image.B_Min+Bokeh_Image.BY_S*(Bokeh_Image.B_Max-Bokeh_Image.B_Min)"
+						},
+						SizeY = Input {
+							Value = 0.846912,
+							Expression = "SizeX"
+						},
+						Steps = Input {
+							Value = 6,
+							Expression = "BSteps"
+						},
+						AngleStart = Input {
+							Value = 29.6,
+							Expression = "BAngle"
+						},
+						Data = Input {
+							Value = KomkomDoorn.KD_DataParameter {
+								Version = 1,
+								Type = "Data"
+							},
+						},
+						BrushColorRed = Input { Value = 1, },
+						BrushColorGreen = Input { Value = 1, },
+						BrushColorBlue = Input { Value = 0, },
+						BrushColorAlpha = Input { },
+						PenLine = Input { Value = 1, },
+						Reset = Input { },
+						CommentsNest = Input { },
+						FrameRenderScriptNest = Input { },
+						StartRenderScripts = Input { },
+						EndRenderScripts = Input { },
+					},
+					ViewInfo = OperatorInfo { Pos = { -114.781, -16.0217 } },
+				},
+				BG_2_1 = KomkomDoorn.KD_ShapePrimitiveCreate {
+					CtrlWShown = false,
+					NameSet = true,
+					SourceOp = "BR_2_1",
+					Inputs = {
+						SettingsNest = Input { },
+						SizeX = Input {
+							Value = 0.779168,
+							Expression = "Bokeh_Image.B_Min+Bokeh_Image.BG_S*(Bokeh_Image.B_Max-Bokeh_Image.B_Min)"
+						},
+						SizeY = Input {
+							Value = 0.779168,
+							Expression = "SizeX"
+						},
+						Steps = Input {
+							Value = 6,
+							Expression = "BSteps"
+						},
+						AngleStart = Input {
+							Value = 29.6,
+							Expression = "BAngle"
+						},
+						Data = Input {
+							Value = KomkomDoorn.KD_DataParameter {
+								Version = 1,
+								Type = "Data"
+							},
+						},
+						BrushColorRed = Input { Value = 0, },
+						BrushColorGreen = Input { Value = 1, },
+						BrushColorBlue = Input { Value = 0, },
+						BrushColorAlpha = Input { },
+						PenLine = Input { Value = 1, },
+						Reset = Input { },
+						CommentsNest = Input { },
+						FrameRenderScriptNest = Input { },
+						StartRenderScripts = Input { },
+						EndRenderScripts = Input { },
+					},
+					ViewInfo = OperatorInfo { Pos = { -111.395, 24.393 } },
+				},
+				BB_2_1 = KomkomDoorn.KD_ShapePrimitiveCreate {
+					CtrlWShown = false,
+					NameSet = true,
+					SourceOp = "BR_2_1",
+					Inputs = {
+						SettingsNest = Input { },
+						SizeX = Input {
+							Value = 0.627904,
+							Expression = "Bokeh_Image.B_Min+Bokeh_Image.BB_S*(Bokeh_Image.B_Max-Bokeh_Image.B_Min)"
+						},
+						SizeY = Input {
+							Value = 0.627904,
+							Expression = "SizeX"
+						},
+						Steps = Input {
+							Value = 6,
+							Expression = "BSteps"
+						},
+						AngleStart = Input {
+							Value = 29.6,
+							Expression = "BAngle"
+						},
+						Data = Input {
+							Value = KomkomDoorn.KD_DataParameter {
+								Version = 1,
+								Type = "Data"
+							},
+						},
+						BrushColorRed = Input { Value = 0, },
+						BrushColorGreen = Input { Value = 0, },
+						BrushColorBlue = Input { Value = 1, },
+						BrushColorAlpha = Input { },
+						PenLine = Input { Value = 1, },
+						Reset = Input { },
+						CommentsNest = Input { },
+						FrameRenderScriptNest = Input { },
+						StartRenderScripts = Input { },
+						EndRenderScripts = Input { },
+					},
+					ViewInfo = OperatorInfo { Pos = { -112.597, 93.2327 } },
+				},
+				BC_2_1 = KomkomDoorn.KD_ShapePrimitiveCreate {
+					CtrlWShown = false,
+					NameSet = true,
+					SourceOp = "BR_2_1",
+					Inputs = {
+						SettingsNest = Input { },
+						SizeX = Input {
+							Value = 0.691008,
+							Expression = "Bokeh_Image.B_Min+Bokeh_Image.BC_S*(Bokeh_Image.B_Max-Bokeh_Image.B_Min)"
+						},
+						SizeY = Input {
+							Value = 0.691008,
+							Expression = "SizeX"
+						},
+						Steps = Input {
+							Value = 6,
+							Expression = "BSteps"
+						},
+						AngleStart = Input {
+							Value = 29.6,
+							Expression = "BAngle"
+						},
+						Data = Input {
+							Value = KomkomDoorn.KD_DataParameter {
+								Version = 1,
+								Type = "Data"
+							},
+						},
+						BrushColorRed = Input { Value = 0, },
+						BrushColorGreen = Input { Value = 1, },
+						BrushColorBlue = Input { Value = 1, },
+						BrushColorAlpha = Input { },
+						PenLine = Input { Value = 1, },
+						Reset = Input { },
+						CommentsNest = Input { },
+						FrameRenderScriptNest = Input { },
+						StartRenderScripts = Input { },
+						EndRenderScripts = Input { },
+					},
+					ViewInfo = OperatorInfo { Pos = { -113.591, 54.9776 } },
+				},
+				BM_2_1 = KomkomDoorn.KD_ShapePrimitiveCreate {
+					CtrlWShown = false,
+					NameSet = true,
+					SourceOp = "BR_2_1",
+					Inputs = {
+						SettingsNest = Input { },
+						SizeX = Input {
+							Value = 0.537888,
+							Expression = "Bokeh_Image.B_Min+Bokeh_Image.BM_S*(Bokeh_Image.B_Max-Bokeh_Image.B_Min)"
+						},
+						SizeY = Input {
+							Value = 0.537888,
+							Expression = "SizeX"
+						},
+						Steps = Input {
+							Value = 6,
+							Expression = "BSteps"
+						},
+						AngleStart = Input {
+							Value = 29.6,
+							Expression = "BAngle"
+						},
+						Data = Input {
+							Value = KomkomDoorn.KD_DataParameter {
+								Version = 1,
+								Type = "Data"
+							},
+						},
+						BrushColorRed = Input { Value = 1, },
+						BrushColorGreen = Input { Value = 0, },
+						BrushColorBlue = Input { Value = 1, },
+						BrushColorAlpha = Input { },
+						PenLine = Input { Value = 1, },
+						Reset = Input { },
+						CommentsNest = Input { },
+						FrameRenderScriptNest = Input { },
+						StartRenderScripts = Input { },
+						EndRenderScripts = Input { },
+					},
+					ViewInfo = OperatorInfo { Pos = { -110.323, 125.514 } },
+				},
+				BK_2_1 = KomkomDoorn.KD_ShapePrimitiveCreate {
+					CtrlWShown = false,
+					NameSet = true,
+					SourceOp = "BR_2_1",
+					Inputs = {
+						SettingsNest = Input { },
+						SizeX = Input {
+							Value = 0.472,
+							Expression = "Bokeh_Image.B_Min"
+						},
+						SizeY = Input {
+							Value = 0.472,
+							Expression = "SizeX"
+						},
+						Steps = Input {
+							Value = 6,
+							Expression = "BSteps"
+						},
+						AngleStart = Input {
+							Value = 29.6,
+							Expression = "BAngle"
+						},
+						Data = Input {
+							Value = KomkomDoorn.KD_DataParameter {
+								Version = 1,
+								Type = "Data"
+							},
+						},
+						BrushColorRed = Input {
+							Value = 0.276,
+							Expression = "Bokeh_Image.Red"
+						},
+						BrushColorGreen = Input {
+							Value = 0.276,
+							Expression = "Bokeh_Image.Green"
+						},
+						BrushColorBlue = Input {
+							Value = 0.276,
+							Expression = "Bokeh_Image.Blue"
+						},
+						BrushColorAlpha = Input { },
+						PenLine = Input { Value = 1, },
+						Reset = Input { },
+						CommentsNest = Input { },
+						FrameRenderScriptNest = Input { },
+						StartRenderScripts = Input { },
+						EndRenderScripts = Input { },
+					},
+					ViewInfo = OperatorInfo { Pos = { -114.235, 179.062 } },
+				}
+			},
+			UserControls = ordered() {
+				B_Max = {
+					INP_Integer = false,
+					INP_Default = 0.5,
+					INPID_InputControl = "SliderControl",
+					INP_MinScale = 0,
+					LINKID_DataType = "Number",
+					INP_MaxScale = 1,
+					LINKS_Name = "Max Red",
+				},
+				BY_S = {
+					INP_Integer = false,
+					INP_Default = 0.5,
+					INPID_InputControl = "SliderControl",
+					INP_MinScale = 0,
+					LINKID_DataType = "Number",
+					INP_MaxScale = 1,
+					LINKS_Name = "Yellow",
+				},
+				BG_S = {
+					INP_Integer = false,
+					INP_Default = 0.5,
+					INPID_InputControl = "SliderControl",
+					INP_MinScale = 0,
+					LINKID_DataType = "Number",
+					INP_MaxScale = 1,
+					LINKS_Name = "Green",
+				},
+				BC_S = {
+					INP_Integer = false,
+					INP_Default = 0.5,
+					INPID_InputControl = "SliderControl",
+					INP_MinScale = 0,
+					LINKID_DataType = "Number",
+					INP_MaxScale = 1,
+					LINKS_Name = "Cyan",
+				},
+				BB_S = {
+					INP_Integer = false,
+					INP_Default = 0.5,
+					INPID_InputControl = "SliderControl",
+					INP_MinScale = 0,
+					LINKID_DataType = "Number",
+					INP_MaxScale = 1,
+					LINKS_Name = "Blue",
+				},
+				BM_S = {
+					INP_Integer = false,
+					INP_Default = 0.5,
+					INPID_InputControl = "SliderControl",
+					INP_MinScale = 0,
+					LINKID_DataType = "Number",
+					INP_MaxScale = 1,
+					LINKS_Name = "Margenta",
+				},
+				B_Min = {
+					INP_Integer = false,
+					INP_Default = 0.5,
+					INPID_InputControl = "SliderControl",
+					INP_MinScale = 0,
+					LINKID_DataType = "Number",
+					INP_MaxScale = 1,
+					LINKS_Name = "Min Core",
+				},
+				Sep1 = {
+					INP_External = false,
+					LINKID_DataType = "Text",
+					INP_Passive = true,
+					INPID_InputControl = "LabelControl",
+					LINKS_Name = "____________________________________________________________________________________________________",
+				},
+				BAngle = {
+					INP_Default = 0,
+					INPID_PreviewControl = "AngleControl",
+					INPID_InputControl = "ScrewControl",
+					LINKID_DataType = "Number",
+					INP_MinScale = 0,
+					INP_Integer = false,
+					INP_MaxScale = 180,
+					LINKS_Name = "Angle",
+				},
+				BSteps = {
+					INP_Integer = true,
+					INP_Default = 5,
+					INPID_InputControl = "SliderControl",
+					INP_MinScale = 3,
+					LINKID_DataType = "Number",
+					INP_MaxScale = 16,
+					LINKS_Name = "Blades",
+				},
+				Sep2 = {
+					INP_External = false,
+					LINKID_DataType = "Text",
+					INP_Passive = true,
+					INPID_InputControl = "LabelControl",
+					LINKS_Name = "____________________________________________________________________________________________________",
+				},
+				Red = {
+					INP_Integer = false,
+					LINKID_DataType = "Number",
+					IC_ControlID = 0,
+					LINKS_Name = "Core Color",
+					INPID_InputControl = "ColorControl",
+					IC_ControlGroup = 1,
+				},
+				Green = {
+					INP_Integer = false,
+					LINKID_DataType = "Number",
+					IC_ControlID = 1,
+					LINKS_Name = "Green",
+					INPID_InputControl = "ColorControl",
+					IC_ControlGroup = 1,
+				},
+				Blue = {
+					INP_Integer = false,
+					LINKID_DataType = "Number",
+					IC_ControlID = 2,
+					LINKS_Name = "Blue",
+					INPID_InputControl = "ColorControl",
+					IC_ControlGroup = 1,
+				},
+				Blur = {
+					INP_Integer = false,
+					LINKS_Name = "Blur",
+					LINKID_DataType = "Number",
+					INPID_InputControl = "SliderControl",
+					INP_MinScale = 0,
+					INP_MaxScale = 50,
+					INP_Default = 0,
+				}
+			}
+		}
+	},
+	ActiveTool = "Bokeh_Image"
+}
