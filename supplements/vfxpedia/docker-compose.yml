@@ -1,31 +1,89 @@
+# MediaWiki with MariaDB
+#
+# Access via "http://localhost:8080"
+#   (or "http://$(docker-machine ip):8080" if using docker-machine)
+
+# https://hub.docker.com/_/mediawiki
+
+# rm -rf volumes/ && mkdir -p volumes/html/images volumes/dbms && docker-compose up
+# open http://127.0.0.1:8080/mw-config/index.php
+
+# in the setup enter 'database' as the databse host!
+
+#  cp ~/Downloads/LocalSettings.php volumes/html
+
+
 version: '3'
 services:
+
   mediawiki:
+
     image: mediawiki
     restart: always
-    networks:
-      - vfxpedia_network
     ports:
       - 8080:80
     links:
       - database
     volumes:
-      - /var/www/html/
+      - ./volumes/html/images:/var/www/html/images
+      # After initial setup, download LocalSettings.php to the same directory as
+      # this yaml and uncomment the following line and use compose to restart
+      # the mediawiki service
+      - ./volumes/html/LocalSettings.php:/var/www/html/LocalSettings.php
+  # This key also defines the name of the database host used during setup instead of the default "localhost"
   database:
-    image: mysql:5.7
+    image: mariadb
     restart: always
-    networks:
-      - vfxpedia_network
     environment:
-      MYSQL_DATABASE: vfxpedia_db
-      MYSQL_ROOT_PASSWORD: geh-heim
-      MYSQL_USER: vfxpedia
-      MYSQL_PASSWORD: vfxpedia
+      # @see https://phabricator.wikimedia.org/source/mediawiki/browse/master/includes/DefaultSettings.php
+      MYSQL_DATABASE: my_wiki
+      MYSQL_USER: vfx
+      MYSQL_PASSWORD: geh-doch-heim
+      MYSQL_RANDOM_ROOT_PASSWORD: 'yes'
     volumes:
-      - /var/lib/mysql
-  networks:
-    vfxpedia_network:
-      driver: bridge
+      - ./volumes/dbms:/var/lib/mysql
+
+volumes:
+  images:
+  db:
+
+
+
+
+
+  # database:
+  #   image: mysql:8.3.0
+  #   restart: always
+  #   networks:
+  #     docker_network:
+  #   environment:
+  #     MYSQL_DATABASE: vfxpedia_db
+  #     MYSQL_ROOT_PASSWORD: geh_heim
+  #     MYSQL_USER: vfxpedia
+  #     MYSQL_PASSWORD: vfxpedia
+  #   volumes:
+  #     - ./volumes/mysql/:/var/lib/mysql
+
+  # mediawiki:
+  #   image: mediawiki
+  #   restart: always
+  #   networks:
+  #     docker_network:
+  #   ports:
+  #     - 8080:80
+  #   links:
+  #     - database
+  #   volumes:
+  #     - ./volumes/web/:/var/www/html/
+  #   depends_on:
+  #     - database
+
+# networks:
+#   docker_network:
+#     driver: bridge
+
+# mkdir -p volumes/html/images volumes/dbms
+
 
 # open in web browser, do the setup, and then copy the settings via
 # docker cp LocalSettings.php container_name:/var/www/html/
