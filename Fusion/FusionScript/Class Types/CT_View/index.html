@@ -1,0 +1,10245 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="http://confusion.nmbr73.net/Fusion/FusionScript/Class%20Types/CT_View/">
+      
+      
+        <link rel="prev" href="../CT_Utility/">
+      
+      
+        <link rel="next" href="../CT_ViewLUTPlugin/">
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>CT_View - Wiki of ConFusion</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Wiki of ConFusion" class="md-header__button md-logo" aria-label="Wiki of ConFusion" data-md-component="logo">
+      
+  <img src="../../../../assets/fusion.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Wiki of ConFusion
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              CT_View
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="deep-orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="purple" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/nmbr73/Kernfusion/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Kernfusion
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Wiki of ConFusion" class="md-nav__button md-logo" aria-label="Wiki of ConFusion" data-md-component="logo">
+      
+  <img src="../../../../assets/fusion.png" alt="logo">
+
+    </a>
+    Wiki of ConFusion
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/nmbr73/Kernfusion/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Kernfusion
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../About/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Featured%20Articles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Featured
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Categories/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Categories
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Pages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    External Links
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            External Links
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.steakunderwater.com/wesuckless/index.php" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WSL Forum
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://forum.blackmagicdesign.com/index.php" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BMD Forum
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.steakunderwater.com/VFXPedia/96.0.243.189/index4875.html?title=Main_Page" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VFXpedia
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://emberlightvfx.github.io/Fusion-Script-Docs/#/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fusion Script
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Content
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Content
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Fusion
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            Fusion
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Config/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Config/
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DCTL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DCTL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Directory%20Structure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Directory Structure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Download%20Links/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Download Links
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Environment%20Variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Environment Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FuScript/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FuScript
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Fuse%20Writing%20Manual/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fuse Writing Manual
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Fuse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fuse
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Fusion%20built%20in%20Tools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fusion built in Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Fusion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fusion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FusionSDK/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FusionSDK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Scripting%20Guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scripting Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tool/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tool
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_1_15" id="__nav_7_1_15_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Expressions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_1_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_1_15">
+            <span class="md-nav__icon md-icon"></span>
+            Expressions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Expressions/Expressions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Expressions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Expressions/Running%20Scripts%20From%20Fusion%20Expression%20Fields/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Running Scripts From Fusion Expression Fields
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1_16" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7_1_16" id="__nav_7_1_16_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    FusionScript
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_1_16_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7_1_16">
+            <span class="md-nav__icon md-icon"></span>
+            FusionScript
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FusionScript/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FusionScript
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1_16_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7_1_16_2" id="__nav_7_1_16_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Class Types
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_7_1_16_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7_1_16_2">
+            <span class="md-nav__icon md-icon"></span>
+            Class Types
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_3D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_3D
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_3DFilter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_3DFilter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_3DFilterSource/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_3DFilterSource
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_AnimSegment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_AnimSegment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_Any/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_Any
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_ApplyMode/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_ApplyMode
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_BinItem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_BinItem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_BrushMode/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_BrushMode
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_BrushShape/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_BrushShape
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_Camera3D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_Camera3D
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_CameraData3D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_CameraData3D
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_ConsoleUtility/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_ConsoleUtility
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_Converter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_Converter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_Curve3D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_Curve3D
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_CurveData3D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_CurveData3D
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_Event/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_Event
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_EventControl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_EventControl
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_ExternalControl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_ExternalControl
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_FileFormat3D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_FileFormat3D
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_FlowType/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_FlowType
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_FuMenu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_FuMenu
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_GLTexture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_GLTexture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_GLViewer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_GLViewer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_ImageFormat/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_ImageFormat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_InputControl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_InputControl
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_LUTFormat/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_LUTFormat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_LayoutItem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_LayoutItem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_Light3D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_Light3D
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_LightData3D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_LightData3D
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_LightSW3D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_LightSW3D
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_Locale/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_Locale
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_Mask/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_Mask
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_MergeTool/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_MergeTool
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_Modifier/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_Modifier
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_MtlData3D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_MtlData3D
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_MtlInputs3D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_MtlInputs3D
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_MtlParticle3D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_MtlParticle3D
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_MtlSW3D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_MtlSW3D
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_Operator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_Operator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_PaintTool/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_PaintTool
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_Parameter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_Parameter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_ParticleMergeTool/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_ParticleMergeTool
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_ParticleSource/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_ParticleSource
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_ParticleStyle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_ParticleStyle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_ParticleTool/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_ParticleTool
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_Prefs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_Prefs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_Preview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_Preview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_PreviewControl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_PreviewControl
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_PreviewMedia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_PreviewMedia
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_Protocol/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_Protocol
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_Region3D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_Region3D
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_RenderContext3D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_RenderContext3D
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_Renderer3D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_Renderer3D
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_RendererInputs3D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_RendererInputs3D
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_Shader3D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_Shader3D
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_ShadowClass3D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_ShadowClass3D
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_SinkTool/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_SinkTool
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_SourceTool/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_SourceTool
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_Spline/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_Spline
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_SurfaceData3D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_SurfaceData3D
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_SurfaceInputs3D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_SurfaceInputs3D
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_Tool/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_Tool
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_ToolViewInfo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_ToolViewInfo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_Transition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_Transition
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_UserControl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_UserControl
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_Utility/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_Utility
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    CT_View
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CT_ViewLUTPlugin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT_ViewLUTPlugin
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Class%20Types/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Types
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1_16_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_1_16_3" id="__nav_7_1_16_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Registry Attributes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_7_1_16_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_1_16_3">
+            <span class="md-nav__icon md-icon"></span>
+            Registry Attributes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_ControlView/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_ControlView
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_CreateFramePreview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_CreateFramePreview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_CreateStaticPreview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_CreateStaticPreview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_EightBitOnly/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_EightBitOnly
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_ForceCommonCtrls/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_ForceCommonCtrls
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_ImageFormat_CanLoadFields/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_ImageFormat_CanLoadFields
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_ImageFormat_CanSave24bit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_ImageFormat_CanSave24bit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_ImageFormat_CanSave32bit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_ImageFormat_CanSave32bit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_ImageFormat_CanSave8bit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_ImageFormat_CanSave8bit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_ImageFormat_CanSaveField/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_ImageFormat_CanSaveField
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_ImageFormat_CanScale/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_ImageFormat_CanScale
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_MediaFormat_CanLoad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_MediaFormat_CanLoad
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_MediaFormat_CanLoadAudio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_MediaFormat_CanLoadAudio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_MediaFormat_CanLoadImages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_MediaFormat_CanLoadImages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_MediaFormat_CanLoadMIDI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_MediaFormat_CanLoadMIDI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_MediaFormat_CanLoadMulti/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_MediaFormat_CanLoadMulti
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_MediaFormat_CanLoadText/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_MediaFormat_CanLoadText
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_MediaFormat_CanSave/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_MediaFormat_CanSave
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_MediaFormat_CanSaveAudio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_MediaFormat_CanSaveAudio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_MediaFormat_CanSaveCompressed/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_MediaFormat_CanSaveCompressed
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_MediaFormat_CanSaveImages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_MediaFormat_CanSaveImages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_MediaFormat_CanSaveMIDI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_MediaFormat_CanSaveMIDI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_MediaFormat_CanSaveMulti/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_MediaFormat_CanSaveMulti
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_MediaFormat_CanSaveText/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_MediaFormat_CanSaveText
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_MediaFormat_ClipSpecificInputValues/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_MediaFormat_ClipSpecificInputValues
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_MediaFormat_LoadLinearOnly/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_MediaFormat_LoadLinearOnly
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_MediaFormat_OneShotLoad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_MediaFormat_OneShotLoad
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_MediaFormat_OneShotSave/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_MediaFormat_OneShotSave
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_MediaFormat_SaveLinearOnly/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_MediaFormat_SaveLinearOnly
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_MediaFormat_WantsIOClass/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_MediaFormat_WantsIOClass
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_MediaFormat_WantsUnbufferedIOClass/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_MediaFormat_WantsUnbufferedIOClass
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_NoAutoProxy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_NoAutoProxy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_NoAuxChannels/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_NoAuxChannels
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_NoBlendCtrls/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_NoBlendCtrls
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_NoMotionBlurCtrls/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_NoMotionBlurCtrls
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_NoObjMatCtrls/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_NoObjMatCtrls
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_NoSplineAnimation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_NoSplineAnimation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_OpNoMask/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_OpNoMask
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_OperatorControl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_OperatorControl
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_Particle_AgeRangeCtrls/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_Particle_AgeRangeCtrls
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_Particle_EmitterCtrls/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_Particle_EmitterCtrls
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_Particle_ProbabilityCtrls/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_Particle_ProbabilityCtrls
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_Particle_RandomSeedCtrls/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_Particle_RandomSeedCtrls
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_Particle_RegionCtrls/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_Particle_RegionCtrls
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_Particle_RegionModeCtrls/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_Particle_RegionModeCtrls
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_Particle_SetCtrls/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_Particle_SetCtrls
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_Particle_StyleCtrls/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_Particle_StyleCtrls
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_Preview_CanCopyAnim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_Preview_CanCopyAnim
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_Preview_CanCopyImage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_Preview_CanCopyImage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_Preview_CanCreateAnim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_Preview_CanCreateAnim
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_Preview_CanDisplayImage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_Preview_CanDisplayImage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_Preview_CanNetRender/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_Preview_CanNetRender
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_Preview_CanPlayAnim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_Preview_CanPlayAnim
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_Preview_CanRecord/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_Preview_CanRecord
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_Preview_CanSaveAnim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_Preview_CanSaveAnim
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_Preview_CanSaveImage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_Preview_CanSaveImage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_Preview_UsesFilenames/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_Preview_UsesFilenames
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_Source_AspectCtrls/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_Source_AspectCtrls
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_Source_GlobalCtrls/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_Source_GlobalCtrls
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_Source_SizeCtrls/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_Source_SizeCtrls
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGB_Unpredictable/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGB_Unpredictable
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGI_ClassType/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGI_ClassType
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGI_ClassType2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGI_ClassType2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGI_DataType/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGI_DataType
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGI_HelpID/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGI_HelpID
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGI_InputDataType/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGI_InputDataType
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGI_Logo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGI_Logo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGI_MediaFormat_Priority/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGI_MediaFormat_Priority
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGI_MergeDataType/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGI_MergeDataType
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGI_OpIcon/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGI_OpIcon
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGI_PI_DataSize/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGI_PI_DataSize
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGI_Particle_DefaultRegion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGI_Particle_DefaultRegion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGI_Particle_DefaultStyle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGI_Particle_DefaultStyle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGI_Priority/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGI_Priority
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGI_TileID/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGI_TileID
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGI_Version/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGI_Version
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGST_MediaFormat_Extension/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGST_MediaFormat_Extension
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGS_Category/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGS_Category
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGS_HelpFile/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGS_HelpFile
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGS_HelpTopic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGS_HelpTopic
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGS_ID/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGS_ID
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGS_IconID/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGS_IconID
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGS_MediaFormat_FormatName/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGS_MediaFormat_FormatName
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGS_Name/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGS_Name
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGS_OpDescription/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGS_OpDescription
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGS_OpIconString/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGS_OpIconString
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGS_OpToolTip/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGS_OpToolTip
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/REGS_ScriptName/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REGS_ScriptName
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Registry%20Attributes/Registry%20Attributes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Registry Attributes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1_17" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_1_17" id="__nav_7_1_17_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UI Controls
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_1_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_1_17">
+            <span class="md-nav__icon md-icon"></span>
+            UI Controls
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../UI%20Controls/AddControlPage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AddControlPage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../UI%20Controls/Event-Functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Event Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../UI%20Controls/MultiButtonControl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MultiButtonControl
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1_17_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_1_17_4" id="__nav_7_1_17_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Fuse
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_7_1_17_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_1_17_4">
+            <span class="md-nav__icon md-icon"></span>
+            Fuse
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../UI%20Controls/Fuse/AddInput/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AddInput
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../UI%20Controls/Fuse/Create%28%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create()
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../User%20Interface/Add%20Tool%20context%20menu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Add Tool context menu
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1_19" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_1_19" id="__nav_7_1_19_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    WebGL to DCTL
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_1_19_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_1_19">
+            <span class="md-nav__icon md-icon"></span>
+            WebGL to DCTL
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../WebGL%20to%20DCTL/Conversion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conversion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../WebGL%20to%20DCTL/Fuse-Settings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fuse Settings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../WebGL%20to%20DCTL/Links/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Links
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../WebGL%20to%20DCTL/Math%20Functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Math Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../WebGL%20to%20DCTL/Swizzling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Swizzling
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../WebGL%20to%20DCTL/WebGL%20to%20DCTL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WebGL to DCTL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1_19_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_1_19_7" id="__nav_7_1_19_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Math
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_7_1_19_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_1_19_7">
+            <span class="md-nav__icon md-icon"></span>
+            Math
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../WebGL%20to%20DCTL/math/clamp%28%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Clamp()
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../WebGL%20to%20DCTL/math/distance%28%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Distance()
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../WebGL%20to%20DCTL/math/dot%28%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dot()
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../WebGL%20to%20DCTL/math/fract%28%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fract()
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../WebGL%20to%20DCTL/math/max%28%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Max()
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../WebGL%20to%20DCTL/math/mod%28%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mod()
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../WebGL%20to%20DCTL/math/pow%28%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pow()
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../WebGL%20to%20DCTL/math/radians%28%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Radians()
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../WebGL%20to%20DCTL/math/reflect%28%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reflect()
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../WebGL%20to%20DCTL/math/sign%28%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sign()
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Kartaverse
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            Kartaverse
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/KartaLink/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    KartaLink
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/KartaVR/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    KartaVR
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/KartaVision/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    KartaVision - Node Based Reverse Image Search
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Kartaverse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kartaverse
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Pipeline%20Guide%20-%20intentions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pipeline Guide   intentions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_2_6" id="__nav_7_2_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Immersive Pipeline Integration Guide
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            Immersive Pipeline Integration Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Immersive Pipeline Integration Guide 📚
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Immersive%20Pipeline%20Integration%20Guide/Immersive%20Pipeline%20Integration%20Guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Immersive Pipeline Integration Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Immersive%20Pipeline%20Integration%20Guide/About/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Immersive%20Pipeline%20Integration%20Guide/Overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Immersive%20Pipeline%20Integration%20Guide/Install%20Reactor%20Package%20Manager/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install Reactor Package Manager
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Immersive%20Pipeline%20Integration%20Guide/Essential%20Reactor%20Atom%20Packages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Essential Reactor Atom Packages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Immersive%20Pipeline%20Integration%20Guide/Adding%20KartaVR%20via%20Reactor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adding KartaVR via Reactor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Immersive%20Pipeline%20Integration%20Guide/Adding%20Vonk%20Ultra%20via%20Reactor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adding Vonk Ultra via Reactor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Immersive%20Pipeline%20Integration%20Guide/The%20Kartaverse%20Packages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Kartaverse Packages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Immersive%20Pipeline%20Integration%20Guide/Kartaverse%20Project%20Assistance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kartaverse Project Assistance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Immersive%20Pipeline%20Integration%20Guide/The%20Karta%20Development%20Journey/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Karta Development Journey
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Immersive%20Pipeline%20Integration%20Guide/Choosing%20Your%20Installation%20Packages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Choosing Your Installation Packages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Immersive%20Pipeline%20Integration%20Guide/Kartaverse%20Development%20Reference%20Hardware/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kartaverse Development Reference Hardware
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Immersive%20Pipeline%20Integration%20Guide/Kartaverse%20Learning%20Resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kartaverse Learning Resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Immersive%20Pipeline%20Integration%20Guide/Fusion%20Render%20Node%20Customization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fusion Render Node Customization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Immersive%20Pipeline%20Integration%20Guide/Configuring%20Fusion%20Render%20Node%20PathMaps/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuring Fusion Render Node PathMaps
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Immersive%20Pipeline%20Integration%20Guide/Automated%20Reactor%20PathMaps%20in%20Resolve%20Studio%20and%20Fusion%20Studio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Automated Reactor PathMaps in Resolve Studio and Fusion Studio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Immersive%20Pipeline%20Integration%20Guide/Installing%20the%20BMD%20Resolve%20_%20Fusion%20Software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installing the BMD Resolve / Fusion Software
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Immersive%20Pipeline%20Integration%20Guide/Working%20With%20Environment%20Variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working With Environment Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Immersive%20Pipeline%20Integration%20Guide/Configuring%20Fusion%20Centric%20Environment%20Variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuring Fusion Centric Environment Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Immersive%20Pipeline%20Integration%20Guide/AWS%20Deadline%20Deployment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AWS Deadline Deployment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Immersive%20Pipeline%20Integration%20Guide/Pixar%20Tractor%20Deployment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pixar Tractor Deployment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Immersive%20Pipeline%20Integration%20Guide/Installing%20Common%20Utilities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installing Common Utilities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Immersive%20Pipeline%20Integration%20Guide/Installing%20Digital%20Content%20Creation%20Apps/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installing Digital Content Creation Apps
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Immersive%20Pipeline%20Integration%20Guide/Photogrammetry%20Tools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Photogrammetry Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Immersive%20Pipeline%20Integration%20Guide/Spatial%20Audio%20Tools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spatial Audio Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Immersive%20Pipeline%20Integration%20Guide/RAW%20and%20HDRI%20Image%20Processing%20Tools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RAW and HDRI Image Processing Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Immersive%20Pipeline%20Integration%20Guide/ACES%20Color%20Management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ACES Color Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Immersive%20Pipeline%20Integration%20Guide/360VR%20Stitching%20Tools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    360VR Stitching Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Immersive%20Pipeline%20Integration%20Guide/FFMpeg%20Command-Line%20Syntax/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FFMpeg Command Line Syntax
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Immersive%20Pipeline%20Integration%20Guide/Apple%20Compressor%20Command-Line%20Syntax/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Apple Compressor Command Line Syntax
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Immersive%20Pipeline%20Integration%20Guide/IP%20Based%20Video%20Workflows/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IP Based Video Workflows
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Immersive%20Pipeline%20Integration%20Guide/Virtual%20Production/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Virtual Production
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Immersive%20Pipeline%20Integration%20Guide/Fulldome/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fulldome
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Immersive%20Pipeline%20Integration%20Guide/Software%20Packaging%20and%20Deployment%20Tools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Software Packaging and Deployment Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Immersive%20Pipeline%20Integration%20Guide/Installing%20a%20Local%20Content%20Staging%20Web%20Server/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installing a Local Content Staging Web Server
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Immersive%20Pipeline%20Integration%20Guide/Using%20Notepad%2B%2B%20for%20Fusion%20on%20Windows/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Notepad++ for Fusion on Windows
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Immersive%20Pipeline%20Integration%20Guide/Using%20BBEdit%20on%20macOS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using BBEdit on macOS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Immersive%20Pipeline%20Integration%20Guide/Automation%20Tools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Automation Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Immersive%20Pipeline%20Integration%20Guide/Computer%20Vision%20and%20Machine%20Learning%20Tools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Computer Vision and Machine Learning Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Immersive%20Pipeline%20Integration%20Guide/Display%20Solutions%2C%20GPUs%2C%20Video%20Cables%2C%20Converters_Adapters/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Display Solutions, GPUs, Video Cables, Converters/Adapters
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Immersive%20Pipeline%20Integration%20Guide/Hardware%20Control%20Surfaces%20and%20HID%20Devices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hardware Control Surfaces and HID Devices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Immersive%20Pipeline%20Integration%20Guide/Installing%20Hardware%20Virtualization%20Tools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installing Hardware Virtualization Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Immersive%20Pipeline%20Integration%20Guide/Installing%20Operating%20Systems%20From%20Scratch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installing Operating Systems From Scratch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Immersive%20Pipeline%20Integration%20Guide/Installing%20Data%20Backup%20and%20Disaster%20Recovery%20Tools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installing Data Backup and Disaster Recovery Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Immersive%20Pipeline%20Integration%20Guide/System%20Admin%20Resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    System Admin Resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Immersive%20Pipeline%20Integration%20Guide/Closing%20Thoughts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Closing Thoughts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_2_7" id="__nav_7_2_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Vonk Ultra
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            Vonk Ultra
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Vonk%20Ultra/Vonk%20Ultra/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vonk Ultra
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Vonk%20Ultra/Software%20Required/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Software Required
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Vonk%20Ultra/Acknowledgements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Acknowledgements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Vonk%20Ultra/Install%20Vonk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install Vonk
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Vonk%20Ultra/Fusion%20Render%20Node%20Customization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fusion Render Node Customization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Vonk%20Ultra/Adding%20Data%20Nodes%20to%20a%20Composite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adding Data Nodes to a Composite
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Vonk%20Ultra/Vonk%20Essentials/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vonk Essentials
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Vonk%20Ultra/Vonk%20Scripts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vonk Scripts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Vonk%20Ultra/Vonk%20Node%20Reference%20Guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vonk Node Reference Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Vonk%20Ultra/Vonk%20Node%20Cookbook/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vonk Node Cookbook
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Vonk%20Ultra/Learning%20Resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Learning Resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_2_8" id="__nav_7_2_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Workflows
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            Workflows
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Workflows/Workflows/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kartaverse Workflows
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Workflows/Creating%20Volumetric%20NeRFs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating Volumetric NeRFs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Workflows/Creating%20ST%20Maps/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating ST Maps
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Workflows/Render%20Fusion%20Comps%20in%20Houdini%20TOPs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Render Fusion Comps in Houdini TOPs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Workflows/SketchFab%20in%20VR%20Via%20QuestLink/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SketchFab in VR Via QuestLink
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Workflows/Troubleshooting%20Guide%20for%20Fusion%20Studio%20Freeze%20Ups/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Troubleshooting Guide for Fusion Studio Freeze Ups
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Workflows/YouTube%20360%20to%20Equirectangular%20Conversions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    YouTube 360 to Equirectangular Conversions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Workflows/Jupyter%20Notebook%20for%20Resolve_Fusion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Jupyter Notebook for Resolve/Fusion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Workflows/Domemaster%20Photoshop%20Actions%20Pack/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Domemaster Photoshop Actions Pack
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Workflows/OpenDisplayXR%20VDD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DEV OpenDisplayXR VDD (Virtual Device Driver)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Workflows/DEV%20The%20Ultimate%20Guide%20to%20OpenUSD%20Pipeline%20Development/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DEV The Ultimate Guide to OpenUSD Pipeline Development
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Workflows/DEV%20Building%20an%20Effective%20nVP%20%28Neural%20Virtual%20Production%29%20Sound%20Stage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DEV Building an Effective nVP (Neural Virtual Production) Sound Stage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kartaverse/Workflows/KickAss%20ShaderZ%20for%20Fusion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    KickAss ShaderZ for Fusion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Reactor
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            Reactor
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Reactor/Atom/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Atom
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Reactor/Development/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Development
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Reactor/Reactor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reactor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Reactor/Writing%20and%20publishing%20packages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Writing and publishing packages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_3_5" id="__nav_7_3_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Essential Reactor Atom Packages
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            Essential Reactor Atom Packages
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Reactor/Essential%20Reactor%20Atom%20Packages/AudioWaveform/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AudioWaveform
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Reactor/Essential%20Reactor%20Atom%20Packages/Essential%20Reactor%20Atom%20Packages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Essential Reactor Atom Packages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_4" id="__nav_7_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Plugins
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_4">
+            <span class="md-nav__icon md-icon"></span>
+            Plugins
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Plugins/Plugins/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Plugins
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_4_2" id="__nav_7_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Krokodove
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Krokodove
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Plugins/Krokodove/Krokodove/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Krokodove Essentials
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Plugins/Krokodove/Example%20Compositions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    KKD Example Comps
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Plugins/Krokodove/Node%20Categories/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    KKD Node Categories
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Plugins/Krokodove/Node%20Reference%20Guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    KKD Node Reference Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Plugins/Krokodove/Modifier%20Reference%20Guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    KKD Modifier Reference Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Plugins/Krokodove/Node%20Cookbook/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    KKD Node Cookbook
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../OpenFX/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OpenFX
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Todo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Todo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_7" id="__nav_7_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Foundations
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_7">
+            <span class="md-nav__icon md-icon"></span>
+            Foundations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Foundations/Bokeh/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bokeh
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Foundations/Computer%20Vision/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Computer Vision
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Foundations/Fast%20Fourier%20Transform%20%28FFT%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fast Fourier Transform (FFT)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Foundations/Novel-view%20synthesis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Novel view synthesis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Foundations/Video%20Village/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Video Village
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Foundations/Voronoi%20Diagram/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Voronoi Diagram
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_8" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../Kernfusion/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Kernfusion
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_8" id="__nav_7_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_8">
+            <span class="md-nav__icon md-icon"></span>
+            Kernfusion
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_8_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../Kernfusion/Comp/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Comp
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_8_2" id="__nav_7_8_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_8_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_8_2">
+            <span class="md-nav__icon md-icon"></span>
+            Comp
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_8_2_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../Kernfusion/Comp/jipi/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Jipi
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_8_2_2" id="__nav_7_8_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_7_8_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_8_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Jipi
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kernfusion/Comp/jipi/AudioWaveform/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Audio Waveform Composition
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kernfusion/Comp/nmbr73/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compositions by nmbr73
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_8_2_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../Kernfusion/Comp/tida/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Tida
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_8_2_4" id="__nav_7_8_2_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_7_8_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_8_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Tida
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kernfusion/Comp/tida/TitleBurnEffect/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Title Burn Effect
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_8_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../Kernfusion/Fuses/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Fuses
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_8_3" id="__nav_7_8_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_8_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_8_3">
+            <span class="md-nav__icon md-icon"></span>
+            Fuses
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_8_3_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../Kernfusion/Fuses/danell/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Danell
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_8_3_2" id="__nav_7_8_3_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_7_8_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_8_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Danell
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kernfusion/Fuses/danell/FastGlow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FastGlow
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_8_3_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../Kernfusion/Fuses/jipi/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Jipi
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_8_3_3" id="__nav_7_8_3_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_7_8_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_8_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Jipi
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kernfusion/Fuses/jipi/AudioWaveform/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Audio Waveform Fuse by JiPi
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_8_3_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../Kernfusion/Fuses/nmbr73/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Nmbr73
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_8_3_4" id="__nav_7_8_3_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_7_8_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_8_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Nmbr73
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kernfusion/Fuses/nmbr73/CubeMapColorizer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CubeMap Colorizer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kernfusion/Fuses/nmbr73/CubeMapEquirectangular/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Equirectangular Projection for CubeMaps
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kernfusion/Fuses/nmbr73/CubeMapLoader/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CubeMap Loader
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kernfusion/Fuses/nmbr73/CubeMapUnfold/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CubeMapUnfold
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kernfusion/Fuses/nmbr73/SDF_Font_Example/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SDF Font Example
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kernfusion/Fuses/nmbr73/Garbage%20Collection/MultiButtonControl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MultiButtonControl
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_8_3_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../Kernfusion/Fuses/tida/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Tida
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_8_3_5" id="__nav_7_8_3_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_7_8_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_8_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            Tida
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kernfusion/Fuses/tida/Bokeh/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bokeh Fuse
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_8_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../Kernfusion/Macros/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Macros
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_8_4" id="__nav_7_8_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_8_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_8_4">
+            <span class="md-nav__icon md-icon"></span>
+            Macros
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_8_4_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../Kernfusion/Macros/tida/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Tida
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_8_4_2" id="__nav_7_8_4_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_7_8_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_8_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Tida
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kernfusion/Macros/tida/Bokeh_AChroma/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bokeh AChroma
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Kernfusion/Macros/tida/Bokeh_Image/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bokeh Image
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_9" id="__nav_7_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Lab
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_9">
+            <span class="md-nav__icon md-icon"></span>
+            Lab
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Lab/Conversion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conversion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Lab/Crash%20Course/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Crash Course
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Lab/Embed%20Videos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Embed Videos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Lab/Experiments/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Experiments
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Lab/Lab/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lab
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_9_6" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../Lab/Folder%20Zero/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Folder Zero
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_9_6" id="__nav_7_9_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_9_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_9_6">
+            <span class="md-nav__icon md-icon"></span>
+            Folder Zero
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_9_6_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../Lab/Folder%20Zero/Folder%20One/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Folder One
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_9_6_2" id="__nav_7_9_6_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_7_9_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_9_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Folder One
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_9_6_2_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../Lab/Folder%20Zero/Folder%20One/Folder%20Two/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Folder Two
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_9_6_2_2" id="__nav_7_9_6_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_7_9_6_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_9_6_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Folder Two
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_9_6_2_2_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../Lab/Folder%20Zero/Folder%20One/Folder%20Two/Folder%20Three/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Folder Three
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_9_6_2_2_2" id="__nav_7_9_6_2_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_7_9_6_2_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_9_6_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Folder Three
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Lab/Folder%20Zero/Folder%20One/Folder%20Two/Folder%20Three/img/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Folder 3/img
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Lab/Folder%20Zero/Folder%20One/Folder%20Two/img/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Folder 2/img
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Lab/Folder%20Zero/Folder%20One/img/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Folder 1/img
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_10" id="__nav_7_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Library
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_10">
+            <span class="md-nav__icon md-icon"></span>
+            Library
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Script/Library/Library/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Library
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_10_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_10_2" id="__nav_7_10_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Bmd
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_10_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_10_2">
+            <span class="md-nav__icon md-icon"></span>
+            Bmd
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Script/Library/bmd/bmd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bmd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Script/Library/bmd/fileexists/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fileexists
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_11" id="__nav_7_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tools
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_11">
+            <span class="md-nav__icon md-icon"></span>
+            Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Tools/Blender/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blender
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Tools/VS%20Code/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VS Code
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_11_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_11_3" id="__nav_7_11_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Lua
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_11_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_11_3">
+            <span class="md-nav__icon md-icon"></span>
+            Lua
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Tools/Lua/Lua/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lua
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Tools/Lua/LuaJIT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LuaJIT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  <div class="kfbreadcrumbs"aria-label="breadcrumbs navigation">
+    <ul class="kfbreadcrumbs">
+            <li>Content &raquo;</li>
+            <li>Fusion &raquo;</li>
+            <li>FusionScript &raquo;</li>
+            <li>Class Types &raquo;</li>
+    </ul>
+  </div>
+
+
+  
+  
+
+
+  <h1>CT_View</h1>
+
+<p>CT_View is a <a href="../Class%20Types/">Class Type</a></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/nmbr73/Kernfusion" target="_blank" rel="noopener" title="Kernfusion on GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://discord.gg/Zb48E4z3Pg" target="_blank" rel="noopener" title="Fusion Developers Discord" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485 485 0 0 0 404.081 32.03a1.82 1.82 0 0 0-1.923.91 338 338 0 0 0-14.9 30.6 447.9 447.9 0 0 0-134.426 0 310 310 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.7 483.7 0 0 0-119.688 37.107 1.7 1.7 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.02 2.02 0 0 0 .765 1.375 487.7 487.7 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348 348 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321 321 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251 251 0 0 0 9.109-7.137 1.82 1.82 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.81 1.81 0 0 1 1.924.233 235 235 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.4 301.4 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391 391 0 0 0 30.014 48.815 1.86 1.86 0 0 0 2.063.7A486 486 0 0 0 610.7 405.729a1.88 1.88 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541M222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241m195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.youtube.com/c/nmbr73/videos" target="_blank" rel="noopener" title="nmbr73 on YouTube (place some reasonable link in here)" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305m-317.51 213.508V175.185l142.739 81.205z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://twitter.com/nmbr73" target="_blank" rel="noopener" title="nmbr73 on Twitter (place some reasonable link in here)" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.instagram.com/nmbr73/" target="_blank" rel="noopener" title="nmbr73 on IG (place some reasonable link in here)" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141m0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7m146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8m76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8M398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.reddit.com/user/nmbr73" target="_blank" rel="noopener" title="nmbr73 on Reddit (place some reasonable link in here)" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M0 256C0 114.6 114.6 0 256 0s256 114.6 256 256-114.6 256-256 256H37.1c-13.7 0-20.5-16.5-10.9-26.2L75 437C28.7 390.7 0 326.7 0 256m349.6-102.4c23.6 0 42.7-19.1 42.7-42.7s-19.1-42.7-42.7-42.7c-20.6 0-37.8 14.6-41.8 34-34.5 3.7-61.4 33-61.4 68.4v.2c-37.5 1.6-71.8 12.3-99 29.1-10.1-7.8-22.8-12.5-36.5-12.5-33 0-59.8 26.8-59.8 59.8 0 24 14.1 44.6 34.4 54.1 2 69.4 77.6 125.2 170.6 125.2s168.7-55.9 170.6-125.3c20.2-9.6 34.1-30.2 34.1-54 0-33-26.8-59.8-59.8-59.8-13.7 0-26.3 4.6-36.4 12.4-27.4-17-62.1-27.7-100-29.1v-.2c0-25.4 18.9-46.5 43.4-49.9 4.4 18.8 21.3 32.8 41.5 32.8zm-172.5 93.3c16.7 0 29.5 17.6 28.5 39.3s-13.5 29.6-30.3 29.6-31.4-8.8-30.4-30.5S160.3 247 177 247zm190.1 38.3c1 21.7-13.7 30.5-30.4 30.5s-29.3-7.9-30.3-29.6 11.8-39.3 28.5-39.3 31.2 16.6 32.1 38.3zm-48.1 56.7c-10.3 24.6-34.6 41.9-63 41.9s-52.7-17.3-63-41.9c-1.2-2.9.8-6.2 3.9-6.5 18.4-1.9 38.3-2.9 59.1-2.9s40.7 1 59.1 2.9c3.1.3 5.1 3.6 3.9 6.5"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.twitch.tv/nmbr73" target="_blank" rel="noopener" title="nmbr73 on Twitch (place some reasonable link in here)" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M391.17 103.47h-38.63v109.7h38.63ZM285 103h-38.63v109.75H285ZM120.83 0 24.31 91.42v329.16h115.83V512l96.53-91.42h77.25L487.69 256V0Zm328.24 237.75-77.22 73.12h-77.24l-67.6 64v-64h-86.87V36.58h308.93Z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.tumblr.com/nmbr73" target="_blank" rel="noopener" title="nmbr73 on tumblr (place some reasonable link in here)" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M309.8 480.3c-13.6 14.5-50 31.7-97.4 31.7-120.8 0-147-88.8-147-140.6v-144H17.9c-5.5 0-10-4.5-10-10v-68c0-7.2 4.5-13.6 11.3-16 62-21.8 81.5-76 84.3-117.1.8-11 6.5-16.3 16.1-16.3h70.9c5.5 0 10 4.5 10 10v115.2h83c5.5 0 10 4.4 10 9.9v81.7c0 5.5-4.5 10-10 10h-83.4V360c0 34.2 23.7 53.6 68 35.8 4.8-1.9 9-3.2 12.7-2.2 3.5.9 5.8 3.4 7.4 7.9l22 64.3c1.8 5 3.3 10.6-.4 14.5"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.pinterest.de/nmbr73/" target="_blank" rel="noopener" title="nmbr73 on Pinterest (place some reasonable link in here)" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M496 256c0 137-111 248-248 248-25.6 0-50.2-3.9-73.4-11.1 10.1-16.5 25.2-43.5 30.8-65 3-11.6 15.4-59 15.4-59 8.1 15.4 31.7 28.5 56.8 28.5 74.8 0 128.7-68.8 128.7-154.3 0-81.9-66.9-143.2-152.9-143.2-107 0-163.9 71.8-163.9 150.1 0 36.4 19.4 81.7 50.3 96.1 4.7 2.2 7.2 1.2 8.3-3.3.8-3.4 5-20.3 6.9-28.1.6-2.5.3-4.7-1.7-7.1-10.1-12.5-18.3-35.3-18.3-56.6 0-54.7 41.4-107.6 112-107.6 60.9 0 103.6 41.5 103.6 100.9 0 67.1-33.9 113.6-78 113.6-24.3 0-42.6-20.1-36.7-44.8 7-29.5 20.5-61.3 20.5-82.6 0-19-10.2-34.9-31.4-34.9-24.9 0-44.9 25.7-44.9 60.2 0 22 7.4 36.8 7.4 36.8s-24.5 103.8-29 123.2c-5 21.4-3 51.6-.9 71.2C65.4 450.9 0 361.1 0 256 0 119 111 8 248 8s248 111 248 248"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.annotate", "content.tooltips", "navigation.indexes", "navigation.sections", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+        <script src="../../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

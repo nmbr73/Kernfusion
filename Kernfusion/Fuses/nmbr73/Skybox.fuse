@@ -1,0 +1,253 @@
+--[[--
+
+Copyright (c) 2021 nmbr73 (https://www.youtube.com/c/nmbr73/)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the “Software”), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+
+--]]--
+
+
+--- Work in Progress !!!
+--
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+FuRegisterClass("Skybox_nmbr73", CT_SourceTool, {
+    REGS_Name = "Skybox (WIP)",
+	  REGS_Category = "Fuses\\Kernfusion\\nmbr73",
+    REGS_OpDescription = "...",
+	  REGS_OpIconString = "SBX",
+    REG_Source_GlobalCtrls = true,
+    REG_Source_SizeCtrls = true,
+    REG_Source_AspectCtrls = true,
+    REG_Source_DepthCtrls = true,
+	  REG_TimeVariant = false,
+	  REGS_Company = "nmbr73",
+	  REGS_URL = "https://nmbr73.github.io/",
+	  REG_Version	= 000001,
+    REG_Fuse_NoEdit = false,
+    REG_Fuse_NoReload = false,
+    })
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+ParametersCode =
+[[
+  float in_width;
+  float in_height;
+
+  float out_width;
+  float out_height;
+]]
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+CompatibilityCode =
+[[
+typedef float2 vec2;
+typedef float3 vec3;
+typedef float4 vec4;
+#define make_vec2(A,B)      make_float2(A,B)
+#define make_vec3(A,B,C)    make_float3(A,B,C)
+#define make_vec4(A,B,C,D)  make_float4(A,B,C,D)
+#define make_vec4_aw(V,F)   make_float4_aw(V,F)
+#define in
+#define out
+#define DEVICE  __DEVICE__
+#define write_color(T,X,Y,C) _tex2DVec4Write((T), (X), (Y), (C));
+
+
+__DEVICE__ float4 cubemap(__TEXTURE2D__ t, float3 xyz)
+{
+  float ax=_fabs(xyz.x);
+  float ay=_fabs(xyz.y);
+  float az=_fabs(xyz.z);
+
+  if (xyz.x>0.0f && ax>=ay && ax>=az) // +X, Face 0, right
+    return _tex2DVecN(t,(-xyz.z/ax+1.0f)/8.0f + 0.5f,(xyz.y/ax+1.0f)/6.0f + (1.0f/3.0f),15);
+
+  if (xyz.y>0.0f && ay>=ax && ay>=az) // +Y, Face 2, top
+    return _tex2DVecN(t,(xyz.x/ay+1.0f)/8.0f + 0.25f,(-xyz.z/ay+1.0f)/6.0f + (2.0f/3.0f),15);
+
+  if (xyz.z>0.0f && az>=ax && az>=ay) // +Z, Face 4, front
+    return _tex2DVecN(t,(xyz.x/az+1.0f)/8.0f + 0.25f,(xyz.y/az+1.0f)/6.0f + (1.0f/3.0f),15);
+
+  if (xyz.x<0.0f && ax>=ay && ax>=az) // -X, Face 1, left
+    return _tex2DVecN(t,(xyz.z/ax+1.0f)/8.0f,(xyz.y/ax+1.0f)/6.0f + (1.0f/3.0f),15);
+
+  if (xyz.y<0.0f && ay>=ax && ay>=az) // -Y, Face 3, bottom
+    return _tex2DVecN(t,(xyz.x/ay+1.0f)/8.0f + 0.25f,(xyz.z/ay+1.0f)/6.0f,15);
+
+  if (xyz.z<0.0f && az>=ax && az>=ay) // -Z, Face 5, back
+    return _tex2DVecN(t,(-xyz.x/az+1.0f)/8.0f + 0.75f,(xyz.y/az+1.0f)/6.0f + (1.0f/3.0f),15);
+
+  return to_float4(1.0f,0.0f,0.0f,1.0f); // error
+}
+
+
+]]
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+
+KernelCode =
+[[
+
+
+__KERNEL__ void CubeMapUnfoldKernel(__CONSTANTREF__ Params*  params,  __TEXTURE2D__ iChannel0, __TEXTURE2D_WRITE__ dst)
+{
+  DEFINE_KERNEL_ITERATORS_XY(x, y);
+
+  if (x >= params->out_width || y >= params->out_height)
+    return;
+
+  vec4 fragColor    = make_vec4(1.0f,1.0f,1.0f,0.5f); // red, green, blue, alpha
+  vec2 fragCoord    = make_vec2(x,y); // x, y coordinate of the pixel to render
+  vec3 iResolution  = make_vec3(params->out_width,params->out_height,1.0f); // width, height, aspect ratio
+
+  write_color(dst, x, y, fragColor)
+}
+
+
+]]
+-- /*
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+function Create()
+
+
+  ----- In/Out
+
+  InChannel0 = self:AddInput( "iChannel0",  "iChannel0",  { LINKID_DataType = "Image", LINK_Main = 1, INP_Required = false  })
+
+  OutImage = self:AddOutput("Output", "Output", {
+    LINKID_DataType = "Image",
+    LINK_Main       = 1,
+  })
+
+  ----- Inspector Panel Controls
+
+  self:AddControlPage("Image")
+
+  InGlobalIn  = self:AddInput("Global In",  "GlobalIn",  { LINKID_DataType = "Number", })
+  InGlobalOut = self:AddInput("Global Out", "GlobalOut", { LINKID_DataType = "Number", })
+
+end
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+function Process(req)
+
+  local imgattrs = {
+    IMG_Document = self.Comp,
+    { IMG_Channel = "Red", },
+    { IMG_Channel = "Green", },
+    { IMG_Channel = "Blue", },
+    { IMG_Channel = "Alpha", },
+    IMG_Width  = Width,
+    IMG_Height = Height,
+    IMG_XScale = XAspect,
+    IMG_YScale = YAspect,
+    IMG_Quality = not req:IsQuick(),
+    IMG_MotionBlurQuality = not req:IsNoMotionBlur(),
+    IMG_DeferAlloc = true,
+    IMG_ProxyScale = ( (not req:IsStampOnly()) and 1 or nil),
+    IMG_Depth = ( (SourceDepth~=0) and SourceDepth or nil   )
+  }
+
+  local dst   = Image(imgattrs)
+  local black = Pixel({R=0,G=0,B=0,A=0})
+  dst:Fill(black)
+
+  if req:IsPreCalc() then
+    local out = Image({IMG_Like = dst, IMG_NoData = true})
+    OutImage:Set(req, out)
+    return
+  end
+
+  local node = DVIPComputeNode(req,
+    "CubeMapUnfoldKernel", CompatibilityCode..KernelCode,
+    "Params", ParametersCode
+  )
+
+  -- Extern texture or create a new one
+
+  iChannel0 = InChannel0:GetValue(req)
+
+  if iChannel0==nil then
+    iChannel0 = Image(imgattrs)
+    iChannel0:Fill(black)
+  end
+
+  -- DCTL parameters
+
+  local framerate = self.Comp:GetPrefs("Comp.FrameFormat.Rate")
+
+  local params = {}
+
+  params = node:GetParamBlock(ParametersCode)
+
+  params.in_width = iChannel0.Width
+  params.in_height = iChannel0.Height
+
+  params.out_width  = dst.Width
+  params.out_height = dst.Height
+
+
+
+  -- Set parameters and add I/O
+
+  node:SetParamBlock(params)
+  node:AddSampler("RowSampler", TEX_FILTER_MODE_LINEAR,TEX_ADDRESS_MODE_MIRROR, TEX_NORMALIZED_COORDS_TRUE)
+  node:AddInput("iChannel0",iChannel0)
+  node:AddOutput("dst", dst)
+
+  local ok = node:RunSession(req)
+
+	if (not ok) then
+		dst = nil
+    dump(node:GetErrorLog())
+	end
+
+  OutImage:Set(req,dst)
+end
+
+
+
+-- // ------------------------------------------------------------------------
+-- // Callback
+-- // ------------------------------------------------------------------------
+
+-- function NotifyChanged(inp, param, time)
+-- 	if (param ~= nil) then
+-- 		if (param.Value == 1) then
+-- 			if (inp == ...) then
+--         ...
+-- 			end
+-- 		end
+-- 	end
+-- end

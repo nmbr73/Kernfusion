@@ -1,0 +1,177 @@
+--- Example of the MultiButonControl not working (most probably)
+--
+
+
+-- ----------------------------------------------------------------------------------------------------------------------------------------
+-- Register the tool on Fusion start up
+--
+
+FuRegisterClass("MultiButtonControlFuse_by_nmbr73", CT_SourceTool, {
+    REGS_Name = "MultiButtonControl (Garbage)",
+	  REGS_Category = "Fuses\\Kernfusion\\nmbr73",
+    REGS_OpDescription = "MultiButtonControl not working as expected.",
+	  REGS_OpIconString = "garbage",
+    REG_Source_GlobalCtrls = true,
+    REG_Source_SizeCtrls = true,
+    REG_Source_AspectCtrls = true,
+    REG_Source_DepthCtrls = true,
+	  REG_TimeVariant = false,
+	  REGS_Company = "nmbr73",
+	  REGS_URL = "https://nmbr73.github.io/",
+	  REG_Version	= 000001,
+    REG_Fuse_NoEdit = false,
+    REG_Fuse_NoReload = false,
+    })
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+-- Callback to initialize the tool.
+--
+function Create()
+
+  self:AddInput("What this is about...", "info", {
+    IC_ControlPage = -1,
+    LINKID_DataType = "Text",
+    INPID_InputControl = "ButtonControl",
+    INP_DoNotifyChanged = false,
+    INP_External = false,
+    -- BTNCS_Execute = 'bmd.openurl("https://nmbr73.github.io/Kernfusion/Fuses/Examples/MultiButtonControl.html")',
+    BTNCS_Execute = 'bmd.openurl("https://github.com/nmbr73/Kernfusion/wiki/MultiButtonControl")',
+  })
+
+
+
+  InErrorLabel = self:AddInput( "Example: MBTNC_Type,MBTNC_ForceButtons=Behavior", "info", {
+    LINKID_DataType = "Text",
+    INPID_InputControl = "LabelControl",
+    IC_NoReset = true,
+    INP_External = false,
+    INP_Passive = true,
+    IC_NoLabel = true,
+  })
+
+  -- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+  attrs = {
+    INPID_InputControl = "MultiButtonControl",
+    LINKID_DataType = "Number",
+    INP_DoNotifyChanged = true,
+    INP_Default = 1,
+    IC_NoLabel = false, -- do not show the Controls lefthandside label text and use the whole width for the control.
+    IC_NoReset = true, -- do not show the 'Keyframe' indicator
+    MBTNC_StretchToFit  = true,
+    }
+
+
+
+  InMultiButton = {}
+
+
+  InMultiButton[1] = self:AddInput("1: 'Normal',nil=Buttons", "mbtn1", { attrs,
+
+    MBTNC_Type            = "Normal", -- nil|Normal|Toggle|TriState
+
+    MBTNC_ShowToolTip     = false,    -- has no effect
+    MBTNC_ShowBasicButton = true,     -- has no effect
+
+    { MBTNC_AddButton = "Oin",    IC_ControlID=1, MBTNCS_ToolTip = "Brother of Gloin, cousin of Dwalin and Balin, uncle of Gimli and nephew of Fundin, who in turn is the father of Balin and Dwalin.", },
+    { MBTNC_AddButton = "Dori",   IC_ControlID=2, MBTNCS_ToolTip = "Brother Nori and cousin of Ori." },
+    { MBTNC_AddButton = "Balin",  IC_ControlID=3, MBTNCS_ToolTip = "Son of Fundin, and elder brother of Dwalin.", },
+  })
+
+
+  InMultiButton[2] = self:AddInput("2: 'Toggle',nil=Checkboxes", "mbtn2", { attrs,
+
+    MBTNC_Type            = "Toggle",
+    MBTNC_ShowBasicButton = true,     -- has no effect
+
+    { MBTNC_AddButton = "Bombur", },
+    { MBTNC_AddButton = "Dwalin", },
+    { MBTNC_AddButton = "Bifur",  },
+  })
+
+  InMultiButton[3] = self:AddInput("3: nil,true=Radio", "mbtn3", { attrs,
+
+    MBTNC_ForceButtons = true,
+    MBTNC_ShowBasicButton = true,     -- has no effect
+
+    MBTNC_AddButton     = "Bofur",
+  })
+
+  -- Buttons can be added afterwards:
+  InMultiButton[3]:SetAttrs({ MBTNC_AddButton = "Fili" })
+  InMultiButton[3]:SetAttrs({ MBTNC_AddButton = "Gloin" })
+
+
+  InMultiButton[4] = self:AddInput("4: nil,nil=Radio=Combo", "mbtn4", { attrs,
+
+    MBTNC_ShowBasicButton = true,     -- has no effect
+
+    { MBTNC_AddButton = "Balin",  },
+    { MBTNC_AddButton = "Kili",   },
+    { MBTNC_AddButton = "Nori",   },
+  })
+
+
+
+
+
+
+
+
+  -- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+
+  OutImage   = self:AddOutput( "Output", "Output", {
+    LINKID_DataType = "Image",
+    LINK_Main = 1
+  })
+
+
+  self:AddControlPage("Image")
+
+  InGlobalIn  = self:AddInput("Global In",  "GlobalIn",  { LINKID_DataType = "Number", })
+  InGlobalOut = self:AddInput("Global Out", "GlobalOut", { LINKID_DataType = "Number", })
+
+end
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+-- Callback to render the node.
+--
+function Process(req)
+
+  OutImage:Set(req,nil)
+
+end
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+-- Callback to handle UI control events.
+--
+
+function NotifyChanged(inp, param, time)
+
+
+  if inp == nil or param == nil then
+    print("empty event")
+    return
+  end
+
+  for i,btn in ipairs(InMultiButton) do
+    if InMultiButton[i] == inp then
+      print("Multibutton "..i.." pressed at frame "..time.."; value is "..param.Value)
+      return
+    end
+  end
+
+  -- print("unknown source")
+  -- dump(inp)
+
+end

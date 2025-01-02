@@ -1,0 +1,741 @@
+--[[--
+
+License:
+Author: TiDa
+Sparse Convolve: https://www.shadertoy.com/view/WlSBzc
+2-Pass Gausian Blur: https://www.steakunderwater.com/wesuckless/viewtopic.php?p=36256#p36256
+Fast Gausian Blur:  https://www.shadertoy.com/view/ldtfDS
+
+--]]--
+
+
+FuRegisterClass("Bokeh_tida", CT_Tool, {
+    REGS_Name = "Bokeh",
+	REGS_Category      = "Fuses\\Kernfusion\\TiDa",
+	REGS_OpIconString  = "TMP",
+	REGS_OpDescription = "DCTL td_Bokeh",
+
+	REG_NoObjMatCtrls      = true,
+	REG_NoMotionBlurCtrls  = true,
+
+	REG_Source_GlobalCtrls = true,
+	REG_Source_SizeCtrls   = true,
+	REG_Source_AspectCtrls = true,
+	REG_Source_DepthCtrls  = true,
+	REG_OpNoMask           = false,
+	REG_Fuse_NoEdit        = false,
+	REG_Fuse_NoReload      = false,
+
+	REG_TimeVariant        = true,
+	REGS_Company           = "Tida",
+	REGS_URL               = "",
+	REG_Version            = 000009,
+	})
+
+local iChannel1 = Image{}
+
+td_BokehParams = [[
+	float iC0_Width;
+	float iC0_Height;
+
+	float iC1_Width;
+	float iC1_Height;
+
+	float iC2_Width;
+	float iC2_Height;
+
+	float FilterType;
+
+	float Size;
+	float MaskDarkPoint;
+
+	float Amplify;
+
+	float Radius; // positive X-Pass    negative Y-Pass
+
+	float DeSqueeze;
+
+
+
+
+	float HighQuality;
+
+	float Brightness;
+	float MixGaussian;
+	float MinConvolutions;
+	float alpha[6];
+
+
+	float EnhanceEdges;
+
+
+
+	float MaskContrast;
+	float MaskPivot;
+	float MixMicroDither;
+
+	float DisplaceX;
+	float DisplaceY;
+]]
+
+
+
+td_BokehPreProcessKernel = [[
+	__DEVICE__ float  fract1f(float a) {return (a - _floor(a));}
+
+__KERNEL__ void td_BokehPreProcessKernel(__CONSTANTREF__ td_BokehParams *params, __TEXTURE2D__ iChannel1, __TEXTURE2D_WRITE__ dst)
+    {
+	DEFINE_KERNEL_ITERATORS_XY(x, y);
+	if (x < params->iC1_Width && y < params->iC1_Height) {
+		float w1 = params->iC1_Width;
+		float h1 = params->iC1_Height;
+		float4 iC1;
+		float sz =1.0f;
+		float ySum =0.0f;
+		float xb =w1;
+		float xe =0.0f;
+		float yb = h1;
+		float ye = 0.0f;
+		float num =0.0f;
+		float x1;
+		float y1;
+		float alpha = 0.0f;
+		if (x <6.0f && y==1.0f){
+			for(y1 = 0; y1 < h1; y1+=1.0f){
+				for(int x1 = 0; x1 < w1; x1+=1.0f){
+					iC1 = _tex2DVecN(iChannel1, x1,y1, 15);
+					float y = 0.2126f * iC1.x + 0.7152f * iC1.y + 0.0722f * iC1.z;
+					if (y > 0.0f) {
+						if (x1 < xb) {xb = x1;}
+						if (y1 < yb) {yb = y1;}
+						if (x1 > xe) {xe = x1;}
+						if (y1 > ye) {ye = y1;}
+						ySum += y; num += 1.0f;
+					}
+				}}
+			ySum = ySum/num;
+			if (x == 1.0f) {alpha = ySum;}
+			if (x == 2.0f) {alpha = xb/w1;}
+			if (x == 3.0f) {alpha = xe/w1;}
+			if (x == 4.0f) {alpha = yb/h1;}
+			if (x == 5.0f) {alpha = ye/h1;}
+		}
+
+
+
+		float sx = x*sz*params->DeSqueeze-w1/2.0f*(sz*params->DeSqueeze-1.0f);
+		float sy = y*sz-h1/2.0f*(sz-1.0f);
+		iC1 = _tex2DVecN(iChannel1, sx,sy, 15);
+		float3 c1	 =  to_float3(iC1.x ,iC1.y ,iC1.z);
+		float4 fragColor = to_float4_aw(c1, alpha);
+		_tex2DVec4Write(dst, x, y, fragColor);
+	}
+	}
+]]
+
+
+
+
+td_BokehSource = [[
+
+	// ---------- BEGIN reliable functions ---------------
+
+	__DEVICE__ inline float pow1f(float x, float y) {
+		float ret = _powf(x,y);
+		if (isnan(ret)) {
+			ret = 0.0001f;
+		}
+		return ret;
+	}
+
+	__DEVICE__ inline float3 pow3f(float3 x, float y) {
+			return to_float3(pow1f(x.x,y),pow1f(x.y,y),pow1f(x.z,y));}
+
+	__DEVICE__ inline float4 pow4f(float4 x, float y) {
+			return to_float4(pow1f(x.x,y),pow1f(x.y,y),pow1f(x.z,y),pow1f(x.w,y));}
+
+
+	__DEVICE__ float  fract1f(float a) {return (a - _floor(a));}
+	__DEVICE__ inline float random(float r) {return fract1f(sin(2811.6871f*r)*4356543.453f);}
+
+	__DEVICE__ float luma41( float4 A) {return A.x * 0.2126f + A.y * 0.7152f + A.z * 0.0722f;}
+
+
+	__DEVICE__ float contrast_curve( float ch_low, float ch_high, float ch_in, float contrast, float pivot) {
+		float ch_out = 0.0f;
+		float q = 2.0f / (1.0f - contrast) - 1.0f;
+		if (ch_in < 0.0f) {ch_out = ch_low;}
+		if (ch_in > 1.0f) {ch_out = ch_high;}
+
+		if (ch_in <= pivot && ch_in >= 0.0f) {	ch_out =         pow1f(ch_in    , q) / pow1f(pivot        , q - 1.0f)  * (ch_high - ch_low) + ch_low; }
+		if (ch_in >  pivot && ch_in <= 1.0f) {	ch_out = (1.0f - pow1f(1.0f - ch_in , q) / pow1f(1.0f - pivot , q - 1.0f)) * (ch_high - ch_low) + ch_low; }
+
+		return ch_out;
+	}
+
+  __KERNEL__ void td_BokehKernel(__CONSTANTREF__ td_BokehParams *params, __TEXTURE2D__ iChannel0,  __TEXTURE2D__ iChannel1,  __TEXTURE2D__ iChannel2, __TEXTURE2D_WRITE__ dst)
+    {
+
+    DEFINE_KERNEL_ITERATORS_XY(x, y);
+	if (x < params->iC0_Width && y < params->iC0_Height) {
+
+		float w1 = params->iC1_Width -1.0f;
+		float h1 = params->iC1_Height -1.0f;
+
+
+	float MaskContrast = params->MaskContrast;
+	float MaskPivot = params->MaskPivot;
+	float MixMicroDither = params->MixMicroDither;
+
+	float DisplaceX = params->DisplaceX;
+	float DisplaceY = params->DisplaceY;
+
+	float4 iC1;
+	float x0;
+	float y0;
+
+	float4 iC0 = to_float4_s(0.0f);
+	float x1;
+	float y1;
+	float4 iC2  = _tex2DVecN(iChannel2,x,y,15);
+
+
+	float numC0 = 0.0f;
+	float amp = params->Amplify;
+
+	float xx = x;
+	float yy = y;
+//	float v = smoothstep(MaskContrast,1.0f,iC2.x);
+
+
+	float2 uv = to_float2(x,y);
+	uv = uv + to_float2(iC2.x * params->iC0_Width/1920.0f*DisplaceX ,iC2.y * params->iC0_Height/1080.0f*DisplaceY )
+				  - to_float2( 0.5f * params->iC0_Width/1920.0f*DisplaceX , 0.5f * params->iC0_Height/1080.0f*DisplaceY );
+
+	float v = contrast_curve( 0.0f, 1.0f, iC2.x, MaskContrast, MaskPivot) ;
+
+	float MaskDarkPoint = params->MaskDarkPoint*0.025f;
+	float Size = params->Size * 0.025f;
+	float rad = Size + MaskDarkPoint *  v; //_sqrtf(v);
+	//if ( rad > 0.0f ) {
+		xx = (random(uv.x*_sinf(uv.y))*rad*rad*MixMicroDither*MixMicroDither)*10.0f+uv.x;
+		yy = (random(uv.y*uv.y+uv.x)     *rad*rad*MixMicroDither*MixMicroDither)*10.0f+uv.y;
+	//}
+
+	float FilterType = params->FilterType;
+	//xx = x;
+	//yy = y;
+
+	float xStep = 1.0f;
+	float yStep = 1.0f;
+
+	float ySum =_tex2DVecN(iChannel1,1.0f,1.0f,15).w;
+	float xb = _tex2DVecN(iChannel1,2.0f,1.0f,15).w;
+	float xe = _tex2DVecN(iChannel1,3.0f,1.0f,15).w;
+	float yb = _tex2DVecN(iChannel1,4.0f,1.0f,15).w;
+	float ye = _tex2DVecN(iChannel1,5.0f,1.0f,15).w;
+	float4 col0;
+	float lumaMax = 0.0f;
+	float lumaMin = 10.0f;
+	float4 colMin = to_float4_s(0.0f);
+	float4 colMax = to_float4_s(0.0f);
+
+	xb = 0.0f;
+	xe = 1.0f;
+	yb = 0.0f;
+	ye = 1.0f;
+
+
+	if (params->HighQuality == 0.0f) {xStep = ((xe-xb)*w1)/(params->MinConvolutions+1.0f); yStep = ((ye-yb)*h1)/(params->MinConvolutions+1.0f);}
+	//if (params->HighQuality == 0.0f) {xStep = w1/25.0f; yStep = h1/25.0f;}
+	if (xStep < 1.0f) {xStep = 1.0f;}
+	if (yStep < 1.0f) {yStep = 1.0f;}
+	if (xStep > yStep) {yStep = xStep;} else {xStep = yStep;}
+
+		 	for(y1 = yb*h1; y1 <= ye*h1; y1+=yStep){
+					for(x1 = xb*w1; x1 <= xe*w1; x1+=xStep){
+						iC1  = _tex2DVecN(iChannel1,x1,y1,15);
+						if (iC1.x > 0.0f) {
+							float xw = (w1/2.0f-x1)* rad;
+							float yh = (h1/2.0f-y1)* rad;
+							x0 = xx+xw;
+							y0 = yy+yh;
+							if (params->EnhanceEdges < 1.0f) {
+								float iCx = -8.0f * _tex2DVecN(iChannel2, x0, y0, 15).x; //Laplace Edge
+								iCx += _tex2DVecN(iChannel2, x0+xw,y0, 15).x;
+								iCx += _tex2DVecN(iChannel2, x0-xw,y0, 15).x;
+								iCx += _tex2DVecN(iChannel2, x0,y0+yh, 15).x;
+								iCx += _tex2DVecN(iChannel2, x0,y0-yh, 15).x;
+
+								iCx += _tex2DVecN(iChannel2, x0+xw,y0+yh, 15).x;
+								iCx += _tex2DVecN(iChannel2, x0-xw,y0-yh, 15).x;
+								iCx += _tex2DVecN(iChannel2, x0-xw,y0+yh, 15).x;
+								iCx += _tex2DVecN(iChannel2, x0+xw,y0-yh, 15).x;
+
+								if (_fabs(iCx) <= params->EnhanceEdges) {
+									col0 = _tex2DVecN(iChannel0, x0,y0, 15);
+									iC0 += pow4f(iC1 * col0,amp);
+									numC0 +=1.0f;}
+									float luma = luma41(col0);
+									if (luma > lumaMax) {colMax = col0; lumaMax = luma;}
+									if (luma < lumaMin) {colMin = col0; lumaMin = luma;}
+								} else {
+									col0 = _tex2DVecN(iChannel0, x0,y0, 15);
+									iC0 += pow4f(iC1 * col0,amp);
+									numC0 +=1.0f;
+									float luma = luma41(col0);
+									if (luma > lumaMax) {colMax = col0; lumaMax = luma;}
+									if (luma < lumaMin) {colMin = col0; lumaMin = luma;}
+									}
+						}
+
+					}
+				}
+
+				if 	(FilterType==0.0f) iC0 = pow4f(iC0/(numC0), 1.0f/(amp))/(-75.5968f+76.09723f*pow1f(amp,0.00199918f))*params->Brightness*2.0f/ySum*0.5f;
+				if 	(FilterType==1.0f) {
+					if (rad > 0) iC0 = colMax;
+					if (rad <= 0) iC0 = colMin;
+					numC0 =1.0f;
+					iC0 = pow4f(iC0/(numC0), 1.0f/(amp))/(-75.5968f+76.09723f*pow1f(amp,0.00199918f))*params->Brightness*2.0f/ySum*0.5f;
+				}
+				if 	(FilterType==2.0f) {
+					iC0 = colMax - colMin;
+				}
+
+
+	float3 c0	 =  to_float3(iC0.x ,iC0.y ,iC0.z);
+	float4 fragColor = to_float4_aw(c0, 1.0f);
+	_tex2DVec4Write(dst, x, y, fragColor);
+
+	}
+    }
+]]
+
+
+TwoPassBlurSource = [[
+__DEVICE__ float4 textureST(__TEXTURE2D__ iChannel0, float2 uv) {
+    return _tex2DVecN(iChannel0, uv.x, uv.y,15);
+}
+
+__DEVICE__ float4 TPBlur(__TEXTURE2D__ iChannel0, float2 fragCoord, float2 iResolution, float sigma) {
+    float2 loc = fragCoord;
+		float support;
+		float2 dir;
+		if (sigma<0.0f) { // Y-Pass
+			sigma = -sigma;
+			support = sigma * 3.0f;
+			dir = to_float2(0.0f, 1.0f / 1.0f);}
+		else {						// X-Pass
+			support = sigma * 3.0f;
+			dir = to_float2(1.0f / 1.0f, 0.0f);}
+
+			float4 acc = to_float4_s(0.0f);
+			float norm = 0.0f;
+	for (float i = -support; i <= support; i+=1.0f) {
+			float a = -0.5f * i * i / (sigma * sigma);
+			float coeff = _powf(3.0f,a);
+			acc += (textureST(iChannel0, loc + (float)i * dir)) * coeff;
+			norm += coeff;
+	}
+			acc *= 1.0f/norm;
+			return acc;
+	}
+
+__KERNEL__ void TwoPassBlurKernel(__CONSTANTREF__ td_BokehParams *params, __TEXTURE2D__ iChannel0, __TEXTURE2D__ iChannel2, __TEXTURE2D_WRITE__ dst)
+{
+    DEFINE_KERNEL_ITERATORS_XY(x, y)
+	if (x < params->iC0_Width && y < params->iC0_Height) {
+    float2 fragCoord = to_float2(x, y);
+    float2 iResolution = to_float2(params->iC0_Width - 1.0f, params->iC0_Height - 1.0f);
+		float4 iC2 = _tex2DVecN(iChannel2,x,y,15);
+		float4 iC0 = _tex2DVecN(iChannel0,x,y,15);
+		iC2.x = iC2.x + 0.001;
+    float4 fragColor = TPBlur(iChannel0, fragCoord, iResolution, params->Radius*iC2.x);
+	//fragColor = iC2;
+	fragColor.w = 1.0f;
+    _tex2DVec4Write(dst, x, y, fragColor);
+
+   }
+}
+]]
+
+
+function Create()
+
+
+
+	-- ============== BEGIN td_Bokeh ====================
+
+	InFilterType = self:AddInput("Type", "FilterType", {
+		LINKID_DataType = "Number",
+		INPID_InputControl = "MultiButtonControl",
+		INP_Default = 0.0,
+		INP_Integer = true,
+		INP_DoNotifyChanged = true,
+		INP_External = false,
+		MBTNC_ForceButtons =    true,
+		INP_MinScale        = 0,
+		INP_MaxScale        = 8,
+		INP_MinAllowed      = 0,
+		INP_MaxAllowed      = 8,
+		MBTNC_ShowBasicButton = true,
+		MBTNC_StretchToFit = true,
+		MBTNC_ShowToolTip = true,
+		{ MBTNC_AddButton = "Bokeh", MBTNCD_ButtonWidth = 1, },
+		{ MBTNC_AddButton = "Erode/Dilate", MBTNCD_ButtonWidth = 1/2, },
+		{ MBTNC_AddButton = "Outline", MBTNCD_ButtonWidth = 1/2, },
+	})
+
+
+	InAmplify = self:AddInput("Amplify", "Amplify", {
+		LINKID_DataType 	= "Number",
+		INPID_InputControl 	= "SliderControl",
+		INP_Default 		= 1.0,
+		INP_MinScale 		= 1.0,
+		INP_MaxScale 		= 4.0,
+	})
+
+	InBrightness = self:AddInput("Brightness", "Brightness", {
+		LINKID_DataType 	= "Number",
+		INPID_InputControl 	= "SliderControl",
+		INP_Default 		= 0.5,
+		INP_MinScale 		= 0.0,
+		INP_MaxScale 		= 1.0,
+	})
+
+
+	InDeSqueeze = self:AddInput("DeSqueeze", "DeSqueeze", {
+		LINKID_DataType 	= "Number",
+		INPID_InputControl 	= "SliderControl",
+		INP_Default 		= 1.0,
+		INP_MinScale 		= 1.0,
+		INP_MaxScale 		= 2.0,
+	})
+
+	InSize = self:AddInput("Size", "Size", {
+		LINKID_DataType 	= "Number",
+		INPID_InputControl 	= "ScrewControl",
+		INPID_PreviewControl= "AngleControl",
+		INP_Default 		= 00,
+		INP_MinScale 		= 0,
+		INP_MaxScale 		= 100,
+	})
+
+	self:BeginControlNest("Mask", "Mask", true, {})
+
+	InMaskDarkPoint = self:AddInput("Dark Point", "MaskDarkPoint", {
+		LINKID_DataType 	= "Number",
+		INPID_InputControl 	= "ScrewControl",
+		INPID_PreviewControl= "AngleControl",
+		INP_Default 		= 00,
+		INP_MinScale 		= 0,
+		INP_MaxScale 		= 100,
+	})
+
+	InMaskContrast = self:AddInput("Contrast", "MaskContrast", {
+		LINKID_DataType 	= "Number",
+		INPID_InputControl 	= "SliderControl",
+		INP_Default 		= 0.0,
+		INP_MinScale 		= -0.95,
+		INP_MaxScale 		= 0.95,
+	})
+
+	InMaskPivot = self:AddInput("Pivot", "MaskPivot", {
+		LINKID_DataType 	= "Number",
+		INPID_InputControl 	= "SliderControl",
+		INP_Default 		= 0.5,
+		INP_MinScale 		= 0.0,
+		INP_MaxScale 		= 1.0,
+	})
+
+	self:EndControlNest()
+
+	self:BeginControlNest("Displacement", "Displacement", true, {})
+
+	InDisplaceX = self:AddInput("Displace X", "DisplaceX", {
+		LINKID_DataType 	= "Number",
+		INPID_InputControl 	= "ScrewControl",
+		INPID_PreviewControl= "AngleControl",
+		INP_Default 		= 00,
+		INP_MinScale 		= 0,
+		INP_MaxScale 		= 100,
+	})
+
+	InDisplaceY = self:AddInput("Displace Y", "DisplaceY", {
+		LINKID_DataType 	= "Number",
+		INPID_InputControl 	= "ScrewControl",
+		INPID_PreviewControl= "AngleControl",
+		INP_Default 		= 00,
+		INP_MinScale 		= 0,
+		INP_MaxScale 		= 100,
+	})
+
+	self:EndControlNest()
+
+	self:BeginControlNest("Quality", "Quality", true, {})
+
+	InHighQuality = self:AddInput("High Quality", "HighQuality", {
+		LINKID_DataType 	= "Number",
+		INPID_InputControl 	= "CheckboxControl",
+		INP_Integer 		= true,
+		INP_Default 		= 0,
+		})
+
+	InMinConvolutions = self:AddInput("Min Convolutions", "MinConvolutions", {
+		LINKID_DataType 	= "Number",
+		INPID_InputControl 	= "SliderControl",
+		INP_Default 		= 25,
+		INP_MinScale 		= 2,
+		INP_MaxScale 		= 50,
+		INP_Integer 		= true,
+	})
+
+	InMixGaussian = self:AddInput("Mix Gaussian Blur", "MixGaussian", {
+		LINKID_DataType 	= "Number",
+		INPID_InputControl 	= "SliderControl",
+		INP_Default 		= 1.0,
+		INP_MinScale 		= 0.0,
+		INP_MaxScale 		= 5.0,
+	})
+
+	InMixMicroDither = self:AddInput("Mix Micro Dither", "MixMicroDither", {
+		LINKID_DataType 	= "Number",
+		INPID_InputControl 	= "SliderControl",
+		INP_Default 		= 0.5,
+		INP_MinScale 		= 0.0,
+		INP_MaxScale 		= 1.0,
+	})
+
+
+
+	InEnhanceEdges = self:AddInput("Enhance Edges", "EnhanceEdges", {
+		LINKID_DataType 	= "Number",
+		INPID_InputControl 	= "SliderControl",
+		INP_Default 		= 1.0,
+		INP_MinScale 		= 0.0,
+		INP_MaxScale 		= 1.0,
+	})
+
+	self:EndControlNest()
+
+
+
+	-- ============== END td_Bokeh ====================
+
+
+
+
+
+	InChannel0 = self:AddInput("Media", "iChannel0", {
+		LINKID_DataType = "Image",
+		LINK_Main = 1,
+		INP_Required = false
+	})
+
+	InChannel1 = self:AddInput("Bokeh Image", "iChannel1", {
+		LINKID_DataType = "Image",
+		LINK_Main = 2,
+		INP_Required = false
+	})
+
+	InChannel2 = self:AddInput("Focus Map", "iChannel2", {
+		LINKID_DataType = "Image",
+		LINK_Main = 3,
+		INP_Required = false
+	})
+
+
+    OutImage = self:AddOutput("Output", "Output", {
+        LINKID_DataType 	= "Image",
+        LINK_Main 			= 1,
+    })
+
+end
+
+
+
+
+
+
+
+local lastreqtime = -2
+
+function Process(req)
+
+    local iChannel0 = InChannel0:GetValue(req)
+    local imgattrs = {
+        IMG_Document = self.Comp,
+        { IMG_Channel = "Red", },
+        { IMG_Channel = "Green", },
+        { IMG_Channel = "Blue", },
+        { IMG_Channel = "Alpha", },
+        IMG_Width = iChannel0.Width,
+        IMG_Height = iChannel0.Height,
+        IMG_XScale = XAspect,
+        IMG_YScale = YAspect,
+        IMAT_OriginalWidth = iChannel0.Width,
+        IMAT_OriginalHeight = iChannel0.Height,
+        IMG_Quality = not req:IsQuick(),
+        IMG_MotionBlurQuality = not req:IsNoMotionBlur(),
+        }
+
+    local imgattrs_1 = {
+        IMG_Document = self.Comp,
+        { IMG_Channel = "Red", },
+        { IMG_Channel = "Green", },
+        { IMG_Channel = "Blue", },
+        { IMG_Channel = "Alpha", },
+        IMG_Width = 100,
+        IMG_Height = 100,
+        IMG_XScale = XAspect,
+        IMG_YScale = YAspect,
+        IMAT_OriginalWidth = 100,
+        IMAT_OriginalHeight = 100,
+        IMG_Quality = not req:IsQuick(),
+        IMG_MotionBlurQuality = not req:IsNoMotionBlur(),
+        }
+    if not req:IsStampOnly() then
+        imgattrs.IMG_ProxyScale = 1
+    end
+
+    if SourceDepth ~= 0 then
+        imgattrs.IMG_Depth = SourceDepth
+    end
+
+
+	local p = Pixel({R=1,G=1,B=1,A=1})
+	if (InChannel1:GetValue(req) ~= nil) then
+			iChannel1 = InChannel1:GetValue(req)
+    else
+        iChannel1 = Image(imgattrs_1)
+        iChannel1:Fill(p)
+    end
+
+
+	if (InChannel2:GetValue(req) ~= nil) then
+        iChannel2 = InChannel2:GetValue(req)
+    else
+        iChannel2 = Image(imgattrs)
+        iChannel2:Fill(p)
+    end
+
+	local Size = InSize:GetValue(req).Value * iChannel0.DataWindow:Width()/1920*50/iChannel1.DataWindow:Width()
+
+	local dst1 = Image{imgattrs}
+
+	local node1 = DVIPComputeNode(req, "td_BokehPreProcessKernel", td_BokehPreProcessKernel, "td_BokehParams", td_BokehParams)
+		if node1 then
+			if (lastreqtime ~= req.Time - 1) then
+				params = node1:GetParamBlock(td_BokehParams)
+			end
+			params.iC1_Width  	= iChannel1.DataWindow:Width()
+			params.iC1_Height 	= iChannel1.DataWindow:Height()
+			params.Size  		= Size
+			params.DeSqueeze  	= InDeSqueeze:GetValue(req).Value
+
+
+			node1:SetParamBlock(params)
+			node1:AddSampler("RowSampler", TEX_FILTER_MODE_LINEAR, TEX_ADDRESS_MODE_BORDER, TEX_NORMALIZED_COORDS_FALSE)
+			node1:AddInput("iChannel1", iChannel1)
+			node1:AddOutput("dst", dst1)
+		end
+		success = node1:RunSession(req)
+	if not success then
+		dst1 = nil
+		dump(node1:GetErrorLog())
+		return
+	end
+
+			local dst = Image{ IMG_Like = iChannel0, IMG_DeferAlloc = true }
+			local node = DVIPComputeNode(req, "td_BokehKernel", td_BokehSource, "td_BokehParams", td_BokehParams)
+			if node then
+				if (lastreqtime ~= req.Time - 1) then
+					params = node:GetParamBlock(td_BokehParams)
+				end
+				params.iC0_Width  	= iChannel0.DataWindow:Width()
+				params.iC0_Height 	= iChannel0.DataWindow:Height()
+				params.iC1_Width  	= iChannel1.DataWindow:Width()
+				params.iC1_Height 	= iChannel1.DataWindow:Height()
+				params.iC2_Width  	= iChannel2.DataWindow:Width()
+				params.iC2_Height 	= iChannel2.DataWindow:Height()
+
+				params.FilterType= InFilterType:GetValue(req).Value
+
+				params.Size  	= Size
+				params.MaskDarkPoint  	= InMaskDarkPoint:GetValue(req).Value
+
+				params.Amplify  	= InAmplify:GetValue(req).Value
+				params.Brightness  	= InBrightness:GetValue(req).Value
+				params.EnhanceEdges  	= InEnhanceEdges:GetValue(req).Value
+				params.HighQuality 	= InHighQuality:GetValue(req).Value
+
+				params.MinConvolutions  	= InMinConvolutions:GetValue(req).Value
+
+		params.MaskContrast  	= InMaskContrast:GetValue(req).Value
+		params.MaskPivot  	= InMaskPivot:GetValue(req).Value
+		params.MixMicroDither  	= InMixMicroDither:GetValue(req).Value
+
+
+		params.DisplaceX  	= InDisplaceX:GetValue(req).Value
+		params.DisplaceY  	= InDisplaceY:GetValue(req).Value
+
+				node:SetParamBlock(params)
+				node:AddInput("iChannel0", iChannel0)
+				node:AddInput("iChannel1", dst1)
+				node:AddInput("iChannel2", iChannel2)
+				node:AddOutput("dst", dst)
+			end
+			local ok = node:RunSession(req)
+			if not ok then
+				dst = nil
+				dump(node:GetErrorLog())
+				return
+			end
+
+			local dstPX = Image{ IMG_Like = iChannel0, IMG_DeferAlloc = true }
+			local nodePX = DVIPComputeNode(req, "TwoPassBlurKernel", TwoPassBlurSource, "td_BokehParams", td_BokehParams)
+			if nodePX then
+				if (lastreqtime ~= req.Time - 1) then
+					params = nodePX:GetParamBlock(td_BokehParams)
+				end
+				params.iC0_Width  	= iChannel0.DataWindow:Width()
+				params.iC0_Height 	= iChannel0.DataWindow:Height()
+				params.Radius  		= InMixGaussian:GetValue(req).Value*Size / InMinConvolutions:GetValue(req).Value *3  + 0.001  --  positive  X-Pass
+				nodePX:SetParamBlock(params)
+				nodePX:AddInput("iChannel0", dst)
+				nodePX:AddInput("iChannel2", iChannel2)
+				nodePX:AddOutput("dst", dstPX)
+			end
+			local okPX = nodePX:RunSession(req)
+			if not okPX then
+				dstPX = nil
+				dump(nodePX:GetErrorLog())
+				return
+			end
+
+			local dstPY = Image{ IMG_Like = iChannel0, IMG_DeferAlloc = true }
+			local nodePY = DVIPComputeNode(req, "TwoPassBlurKernel", TwoPassBlurSource, "td_BokehParams", td_BokehParams)
+			if nodePY then
+				if (lastreqtime ~= req.Time - 1) then
+					params = nodePY:GetParamBlock(td_BokehParams)
+				end
+				params.iC0_Width  	=  iChannel0.DataWindow:Width()
+				params.iC0_Height 	=  iChannel0.DataWindow:Height()
+				params.Radius  		= - InMixGaussian:GetValue(req).Value*Size / InMinConvolutions:GetValue(req).Value *3  + 0.001  --  negativ  X-Pass
+				nodePY:SetParamBlock(params)
+				nodePY:AddInput("iChannel0", dstPX)
+				nodePY:AddInput("iChannel2", iChannel2)
+				nodePY:AddOutput("dst", dstPY)
+			end
+			local okPY = nodePY:RunSession(req)
+			if not okPY then
+			   dstPY = nil
+				 dump(nodePY:GetErrorLog())
+				 return
+			end
+
+
+			OutImage:Set(req, dstPY)
+			lastreqtime = req.Time
+end

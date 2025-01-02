@@ -1,0 +1,266 @@
+Composition {
+	CurrentTime = 0,
+	RenderRange = { 0, 1000 },
+	GlobalRange = { 0, 1000 },
+	CurrentID = 24,
+	HiQ = true,
+	PlaybackUpdateMode = 0,
+	Version = "Fusion Studio 17.0 build 43",
+	SavedOutputs = 0,
+	HeldTools = 0,
+	DisabledTools = 0,
+	LockedTools = 0,
+	AudioOffset = 0,
+	AutoRenderRange = true,
+	Resumable = true,
+	OutputClips = {
+	},
+	Tools = {
+		CubeMapLoader1 = Fuse.CubeMapLoader_nmbr73 {
+			CtrlWZoom = false,
+			Inputs = {
+				Width = Input { Value = 1920, },
+				Height = Input { Value = 1080, },
+				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+				load = Input { Value = 1, },
+				file = Input { Value = "Kernfusion:/Data/CubeMaps/Ryfjallet_1.jpg", },
+				file0 = Input { Value = "Kernfusion:/Data/CubeMaps/Maskonaive2/posx.jpg", },
+				file1 = Input { Value = "Kernfusion:/Data/CubeMaps/Maskonaive2/negx.jpg", },
+				file2 = Input { Value = "Kernfusion:/Data/CubeMaps/Maskonaive2/posy.jpg", },
+				file3 = Input { Value = "Kernfusion:/Data/CubeMaps/Maskonaive2/negy.jpg", },
+				file4 = Input { Value = "Kernfusion:/Data/CubeMaps/Maskonaive2/posz.jpg", },
+				file5 = Input { Value = "Kernfusion:/Data/CubeMaps/Maskonaive2/negz.jpg", },
+				GlobalOut = Input { Value = 1000, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 302.667, 15.2424 } },
+			Version = 1
+		},
+		CubeMap1 = CubeMap {
+			Inputs = {
+				Layout = Input { Value = 2, },
+				Convention = Input { Value = FuID { "NegativeZ" }, },
+				CrossImage = Input {
+					SourceOp = "CubeMapLoader1",
+					Source = "Output",
+				},
+				MaterialID = Input { Value = 1, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 434.667, 15.8485 } },
+		}
+	},
+	Frames = {
+		{
+			FrameTypeID = "ChildFrame",
+			Mode = 3,
+			LayoutPreset = 0,
+			PresetName = "Default",
+			Left = 0,
+			Top = 27,
+			Width = 1680,
+			Height = 886,
+			ZoneInfo = {
+				["!Right"] = {
+				},
+				["!Left"] = {
+				},
+				AuxLeft = { Expanded = true },
+				Right = { Expanded = true, },
+				Left = { Expanded = false, },
+				AuxRight = { Expanded = true }
+			},
+			ViewInfo = {
+				Viewer1 = { Show = true, RatioY = 0.01, RatioX = 1.05305466237942, },
+				InnerLeft = {
+				},
+				MainSplit = {
+					RatioX = 100,
+					RatioY = 1.00377358490566,
+				},
+				CenterSplit = {
+					RatioX = 0.990453460620525,
+					RatioY = 100,
+				},
+				Viewer2 = { Show = true, RatioY = 0.01, RatioX = 0.946945337620579, },
+				Comments = { Show = false },
+				Time = { Show = true, PixelY = 83, RatioX = 100, },
+				InnerColumns = {
+					RatioX = 100,
+					RatioY = 1.99622641509434,
+				},
+				Keyframes = { Show = false, },
+				LayoutStrip = { Show = true, RatioX = 100, },
+				Inspector = { Show = true, RatioY = 1, RatioX = 100.026919020925, },
+				InnerRight = {
+				},
+				OuterLeft = {
+				},
+				OuterColumns = {
+					RatioX = 100,
+					RatioY = 1,
+				},
+				Effects = { Show = false, },
+				Clips = { Show = false, },
+				Metadata = { Show = false, },
+				ActionStrip = { Show = true, RatioX = 100, },
+				ViewerSplit = {
+					RatioX = 100,
+					RatioY = 1,
+				},
+				Nodes = { Show = true, RatioY = 99.874213836478, RatioX = 1, },
+				OuterRight = {
+					RatioY = 100,
+					PixelX = 432,
+				},
+				MediaPool = { Show = false, },
+				Spline = { Show = false, }
+			},
+			Views = ordered() {
+				Effects = MultiView {
+					Active = "EffectView",
+					ViewList = ordered() {
+						EffectView = "EffectView"
+					},
+				},
+				Nodes = MultiView {
+					Active = "FlowView",
+					ViewList = ordered() {
+						FlowView = "FlowView"
+					},
+					Names = {
+						FlowView = "FlowView"
+					},
+					FlowView = FlowView {
+						Flags = {
+							AutoHideNavigator = true,
+							AutoSnap = true,
+							RemoveRouters = true
+						},
+						NavigatorSize = { 200, 140 },
+						Direction = "Horizontal",
+						PipeStyle = "Direct",
+						RootScale = 1,
+						RootOffset = { 26, 29 }
+					}
+				},
+				Keyframes = MultiView {
+					Active = "TimelineView",
+					ViewList = ordered() {
+						TimelineView = "TimelineView"
+					},
+					Names = {
+						TimelineView = "TimelineView"
+					},
+					TimelineView = TimelineView {
+						TreeControlState = {
+						},
+						DisplayMode = "All Tools",
+						ShowCurrentTimeTools = false,
+						Filter = "Show All",
+						ShowSelectedTools = false,
+						ShowAnimatedToolsOnly = false,
+						ShowEditBoxes = false,
+						KeyFrameView = {
+							Position = { Left = 232, Bottom = 320 },
+							ScaleX = 2.14424951267057,
+							OffsetX = -51.4619883040936,
+							OffsetY = 0,
+							AutoScaling = "scroll",
+							AutoSnapTo = "frame",
+							AutoSnapToGuidelines = false,
+							GuidelinesGrabEnabled = true,
+							GuidelinesSnapTo = "frame"
+						},
+						Spreadsheet = { LeftPos = 232, Visible = false }
+					}
+				},
+				Spline = MultiView {
+					Active = "SplineView",
+					ViewList = ordered() {
+						SplineView = "SplineEditorView"
+					},
+					Names = {
+						SplineView = "SplineView"
+					},
+					SplineView = SplineEditorView {
+						LeftPos = 264,
+						ScaleX = 0.2,
+						ScaleY = 0.00338983050847458,
+						OffsetX = -3.4,
+						OffsetY = 0,
+						AutoScaling = "scroll",
+						AutoSnapTo = "frame",
+						AutoSnapToGuidelines = false,
+						GuidelinesSnapTo = "frame",
+						ShowKeyMarkers = false,
+						IndependentHandles = false,
+						ShowNonSplineModifiers = false,
+						GuidelinesGrabEnabled = true,
+						ShowOneToolOnly = false,
+						ShowSelectedTools = false,
+						ShowAllInputs = false,
+						Filter = "Show All"
+					}
+				},
+				Inspector = MultiView {
+					Active = "Tools",
+					ViewList = ordered() {
+						Tools = "ControlView",
+						Modifiers = "ModifierView"
+					},
+				},
+				Viewer1 = MultiView {
+					Active = "LeftView",
+					ViewList = ordered() {
+						LeftView = "PreviewContainer"
+					},
+					Names = {
+						LeftView = "LeftView"
+					},
+				},
+				Viewer2 = MultiView {
+					Active = "RightView",
+					ViewList = ordered() {
+						RightView = "PreviewContainer"
+					},
+					Names = {
+						RightView = "RightView"
+					},
+				},
+				Time = "TimeView",
+				ActionStrip = "ActionStripView",
+				LayoutStrip = "LayoutStripView"
+			},
+			Layout = {
+				Rows = 2,
+				RatioX = 1,
+				RatioY = 1,
+				{ ID = "LayoutStrip", RatioX = 100, FixedY = 36, Flat = true },
+				{
+					Columns = 2,
+					RatioY = 1,
+					{
+						Rows = 3,
+						RatioX = 0.990453460620525,
+						RatioY = 100,
+						{
+							Rows = 2,
+							RatioX = 1,
+							RatioY = 100,
+							{
+								Columns = 2,
+								RatioX = 100,
+								RatioY = 1,
+								{ ID = "Viewer1", RatioX = 1.05305466237942, RatioY = 0.01 },
+								{ ID = "Viewer2", RatioX = 0.946945337620579 }
+							},
+							{ ID = "Time", FixedY = 83, Flat = true }
+						},
+						{ ID = "ActionStrip", FixedY = 50, Flat = true },
+						{ ID = "Nodes", RatioX = 1, RatioY = 99.874213836478 }
+					},
+					{ ID = "Inspector", RatioX = 100.026919020925, RatioY = 1 }
+				}
+			}
+		}
+	},
+}

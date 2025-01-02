@@ -1,0 +1,98 @@
+
+.md-tag {
+  border-radius: 5px !important ;
+  font-size: x-small !important ;
+  font-weight: normal !important ;
+  line-height: 1.0 !important ;
+  padding: 0.5 0 0.5 0  !important ;
+}
+
+
+.md-footer__inner {
+  display: none !important ;
+}
+
+
+/* https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#custom-colors */
+
+/*
+[data-md-color-scheme="wsl"] {
+
+  --md-primary-fg-color:               #191919; //title bar background
+  --md-primary-fg-color--light:        #292929;
+  --md-primary-fg-color--dark:         #090909;
+  --md-primary-bg-color:               #C88D53; // title bar title and images
+  --md-primary-bg-color--light:        #545454; // 'search' placeholder in ttlebar
+
+  --md-accent-fg-color:                #CAA033; // keyword found in serach
+  --md-accent-fg-color--transparent:   #2A2A2A; // diagram fill + selected search result
+  --md-accent-bg-color:                #0000ff;
+  --md-accent-bg-color--light:         #ffff00;
+
+}
+
+*/
+
+/* https://github.com/markusressel/MkDocs-Material-Dark-Theme/tree/master/docs/stylesheets */
+
+
+
+/* ------------------------------------------------------------------------ */
+/*  C U S T O M   A D M O N T I O N  S                                      */
+/* ------------------------------------------------------------------------ */
+/*
+    https://squidfunk.github.io/mkdocs-material/reference/admonitions/#custom-admonitions
+    https://www.svgrepo.com/svg/340317/flash-filled // apache license
+*/
+
+:root {
+  --md-admonition-icon--wiki-todo: url('data:image/svg+xml;charset=utf-8,<svg viewBox="0 0 32 32" id="icon" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:none;}</style></defs><title>flash--filled</title><path d="M11.61,29.92a1,1,0,0,1-.6-1.07L12.83,17H8a1,1,0,0,1-1-1.23l3-13A1,1,0,0,1,11,2H21a1,1,0,0,1,.78.37,1,1,0,0,1,.2.85L20.25,11H25a1,1,0,0,1,.9.56,1,1,0,0,1-.11,1l-13,17A1,1,0,0,1,12,30,1.09,1.09,0,0,1,11.61,29.92Z" transform="translate(0 0)"/><rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" class="cls-1" width="32" height="32" transform="translate(32 32) rotate(-180)"/></svg>')
+}
+.md-typeset .admonition.wiki-todo,
+.md-typeset details.wiki-todo {
+  border-color: rgb(255, 43, 70);
+}
+.md-typeset .wiki-todo > .admonition-title,
+.md-typeset .wiki-todo > summary {
+  background-color: rgba(255, 43, 70, 0.1);
+}
+.md-typeset .wiki-todo > .admonition-title::before,
+.md-typeset .wiki-todo > summary::before {
+  background-color: rgb(255, 43, 70);
+  -webkit-mask-image: var(--md-admonition-icon--wiki-todo);
+          mask-image: var(--md-admonition-icon--wiki-todo);
+}
+
+/*
+-----------------
+*/
+
+div.kfbreadcrumbs {
+  margin: 0;
+  padding: 0;
+}
+
+ul.kfbreadcrumbs {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+ul.kfbreadcrumbs li {
+  float: left;
+  font-size: smaller;
+}
+
+ul.kfbreadcrumbs li a {
+  display: block;
+  /*
+  text-align: center;
+  padding: 16px;
+  */
+  text-decoration: none;
+}
+
+ul.kfbreadcrumbs li a:hover {
+  background-color: #909090;
+}

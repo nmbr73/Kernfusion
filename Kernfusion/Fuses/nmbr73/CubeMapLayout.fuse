@@ -1,0 +1,342 @@
+--[[--
+
+Copyright (c) 2021 nmbr73 (https://www.youtube.com/c/nmbr73/)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the “Software”), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+
+--]]--
+
+
+--- Implements different layouts for a cube map.
+--
+--
+-- Vertical Cross for Skyrim: http://wiki.tesnexus.com/index.php/Creating_cubemaps_for_Skyrim
+--
+-- See for example https://docs.unity3d.com/Manual/class-Cubemap.html or https://github.com/Microsoft/DirectXTex/wiki/Texassemble
+-- for the horizontal/vertical cross/strip layouts.
+-- See https://tools.bivrost360.com/webplayer-docs/cubemap-facebook.html or https://www.researchgate.net/figure/360-video-projected-as-a-cubemap-Order-of-cube-faces-from-top-left-to-bottom-right-are_fig2_316914613
+-- for the Facebook format.
+--
+-- Maybe a T: https://www.researchgate.net/figure/The-cube-map-generated-by-projecting-the-surrounding-point-cloud-onto-6-faces-of-a-cube_fig2_338879396
+--
+-- https://renderman.pixar.com/resources/RenderMan_20/ptexture.html
+-- https://docs.unrealengine.com/4.27/en-US/RenderingAndGraphics/Textures/Cubemaps/CreatingCubemaps/
+-- https://rmanwiki.pixar.com/display/REN24/txmake
+--
+-- https://community.khronos.org/t/image-orientation-for-cubemaps-actually-a-very-old-topic/105338
+-- https://stackoverflow.com/questions/11685608/convention-of-faces-in-opengl-cubemapping
+
+
+-- https://blenderartists.org/t/cubemap-setup-in-bge/523185
+
+
+-- ----------------------------------------------------------------------------------------------------------------------------------------
+
+FuRegisterClass("CubeMapLayout_nmbr73", CT_SourceTool, {
+    REGS_Name = "CubeMap Layout",
+	  REGS_Category = "Fuses\\Kernfusion\\nmbr73",
+    REGS_OpDescription = "Different layouts for the six faces of a cube map",
+	  REGS_OpIconString = "CML",
+    REG_Source_GlobalCtrls = true,
+    REG_Source_SizeCtrls = true,
+    REG_Source_AspectCtrls = true,
+    REG_Source_DepthCtrls = true,
+	  REG_TimeVariant = false,
+    -- REGS_IconID = "Icons.Tools.Icons.Layout",
+    REGS_Company = "nmbr73",
+	  REGS_URL = "https://nmbr73.github.io/",
+	  REG_Version	= 000001,
+    REG_Fuse_NoEdit = true,
+    REG_Fuse_NoReload = false,
+    })
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+-- Callback to initialize the tool.
+--
+function Create()
+
+
+  local layouts = {
+    { MBTNC_AddButton = "Horizontal Cross (Pixar)", MBTNCD_ButtonWidth = 1, MBTNCS_ToolTip = "Horizontal Cross (Pixar)"         },
+    { MBTNC_AddButton = "Vertical Cross",           MBTNCD_ButtonWidth = 1, MBTNCS_ToolTip = "Vertical Cross",                  },
+    { MBTNC_AddButton = "Row (UE4)",                MBTNCD_ButtonWidth = 0.5, MBTNCS_ToolTip = "Row / Horizontal Strip (NVIDIA / Unreal Engine 4)"  },
+    { MBTNC_AddButton = "Column (OpenEXR)",         MBTNCD_ButtonWidth = 0.5, MBTNCS_ToolTip = "Column / Vertical Strip (OpenEXR)" },
+    { MBTNC_AddButton = "Horizontal T",             MBTNCD_ButtonWidth = 0.5, MBTNCS_ToolTip = "Horizontal T",                    },
+    { MBTNC_AddButton = "Vertical T",               MBTNCD_ButtonWidth = 0.5, MBTNCS_ToolTip = "Vertical T",                      },
+    { MBTNC_AddButton = "3x2 (TIFF)",               MBTNCD_ButtonWidth = 0.5, MBTNCS_ToolTip = "TIFF",                            },
+    { MBTNC_AddButton = "3x2 (Facebook)",           MBTNCD_ButtonWidth = 0.5, MBTNCS_ToolTip = "Facebook",                        },
+  }
+
+  InLayout = self:AddInput("Input Layout", "FromLayout", {
+    INPID_InputControl = "MultiButtonControl",
+    LINKID_DataType = "Number",
+    INP_Default = 0,
+    -- MBTNC_ForceButtons = true,
+    -- IC_NoLabel = true,
+    IC_NoReset = true,
+    layouts
+  })
+
+
+  OutLayout = self:AddInput("Output Layout", "ToLayout", {
+    INPID_InputControl = "MultiButtonControl",
+    LINKID_DataType = "Number",
+    INP_Default = 0,
+    -- MBTNC_ForceButtons = true,
+    -- IC_NoLabel = true,
+    IC_NoReset = true,
+
+    layouts,
+
+    { MBTNC_AddButton = "Face 0 / +X / right / red",      MBTNCD_ButtonWidth = 0.5, MBTNCS_ToolTip = "Right (Positive X; Index 0; Red)",     },
+    { MBTNC_AddButton = "Face 1 / -X / left / yellow",       MBTNCD_ButtonWidth = 0.5, MBTNCS_ToolTip = "Left (Negative X; Index 1; Yellow)",      },
+    { MBTNC_AddButton = "Face 2 / +Y / top / green",        MBTNCD_ButtonWidth = 0.5, MBTNCS_ToolTip = "Top (Positive Y; Index 2; Green)",       },
+    { MBTNC_AddButton = "Face 3 / -Y / bottom / cyan",     MBTNCD_ButtonWidth = 0.5, MBTNCS_ToolTip = "Bottom (Negative Y; Index 3; Cyan)",    },
+    { MBTNC_AddButton = "Face 4 / +Z / front / blue",      MBTNCD_ButtonWidth = 0.5, MBTNCS_ToolTip = "Front (Positive Z; Index 4; Blue)",     },
+    { MBTNC_AddButton = "Face 5 / -Z / back / magenta",       MBTNCD_ButtonWidth = 0.5, MBTNCS_ToolTip = "Back (Negative Z; Index 5; Magenta)",      },
+
+  })
+
+
+  InImage   = self:AddInput( "Input",  "Input",  {
+    LINKID_DataType = "Image",
+    LINK_Main = 1,
+    INP_Required = false
+  })
+
+  OutImage  = self:AddOutput( "Output", "Output", {
+    LINKID_DataType = "Image",
+    LINK_Main = 1
+  })
+
+end
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+  SIZE_FACTORS = { [0] =
+    { w = 4, h = 3 }, -- 0 Horizontal Cross (Pixar)
+    { w = 3, h = 4 }, -- 1 Vertical Cross
+    { w = 6, h = 1 }, -- 2 Row (UE4)
+    { w = 1, h = 6 }, -- 3 Column (OpenEXR)
+    { w = 4, h = 3 }, -- 4 Horizontal T
+    { w = 3, h = 4 }, -- 5 Vertical T
+    { w = 3, h = 2 }, -- 6 3x2 (TIFF)
+    { w = 3, h = 2 }, -- 7 3x2 (Facebook)
+  }
+
+
+  FACE_OFFSETS = { [0] =
+    -- 0 Horizontal Cross (Pixar)
+    { [0] =
+      { x = 2, y = 1 },   -- face 0
+      { x = 0, y = 1 },   -- face 1
+      { x = 1, y = 2 },   -- face 2
+      { x = 1, y = 0 },   -- face 3
+      { x = 1, y = 1 },   -- face 4
+      { x = 3, y = 1 },   -- face 5
+    },
+    -- 1 Vertical Cross
+    { [0] =
+      { x = 2, y = 2 },   -- face 0
+      { x = 0, y = 2 },   -- face 1
+      { x = 1, y = 3 },   -- face 2
+      { x = 1, y = 1 },   -- face 3
+      { x = 1, y = 2 },   -- face 4
+      { x = 1, y = 0 },   -- face 5
+    },
+    -- 2 Row (UE4)
+    { [0] =
+      { x = 0, y = 0 },   -- face 0
+      { x = 1, y = 0 },   -- face 1
+      { x = 2, y = 0 },   -- face 2
+      { x = 3, y = 0 },   -- face 3
+      { x = 4, y = 0 },   -- face 4
+      { x = 5, y = 0 },   -- face 5
+    },
+    -- 3 Column (OpenEXR)
+    { [0] =
+      { x = 0, y = 5 },   -- face 0
+      { x = 0, y = 4 },   -- face 1
+      { x = 0, y = 3 },   -- face 2
+      { x = 0, y = 2 },   -- face 3
+      { x = 0, y = 1 },   -- face 4
+      { x = 0, y = 0 },   -- face 5
+    },
+    -- 4 Horizontal T
+    { [0] =
+      { x = 2, y = 1 },   -- face 0
+      { x = 0, y = 1 },   -- face 1
+      { x = 0, y = 2 },   -- face 2
+      { x = 0, y = 0 },   -- face 3
+      { x = 1, y = 1 },   -- face 4
+      { x = 3, y = 1 },   -- face 5
+    },
+    -- 5 Vertical T
+    { [0] =
+      { x = 2, y = 3 },   -- face 0
+      { x = 0, y = 3 },   -- face 1
+      { x = 1, y = 3 },   -- face 2
+      { x = 1, y = 1 },   -- face 3
+      { x = 1, y = 2 },   -- face 4
+      { x = 1, y = 0 },   -- face 5
+    },
+    -- 6 3x2 (TIFF)
+    { [0] =
+      { x = 0, y = 1 },   -- face 0
+      { x = 0, y = 0 },   -- face 1
+      { x = 1, y = 1 },   -- face 2
+      { x = 1, y = 0 },   -- face 3
+      { x = 2, y = 1 },   -- face 4
+      { x = 2, y = 0 },   -- face 5
+    },
+    -- 7 3x2 (Facebook)
+    { [0] =
+      { x = 0, y = 1 },   -- face 0
+      { x = 1, y = 1 },   -- face 1
+      { x = 2, y = 1 },   -- face 2
+      { x = 0, y = 0 },   -- face 3
+      { x = 1, y = 0 },   -- face 4
+      { x = 2, y = 0 },   -- face 5
+    },
+  }
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+-- Callback to render the node.
+--
+function Process(req)
+
+
+  local input_image   = InImage:GetValue(req)
+
+  if input_image == nil then
+    print("no input connected")
+    OutImage:Set(req,nil)
+    return
+  end
+
+
+  local input_layout  = InLayout:GetValue(req).Value
+
+
+  local face_width  =  input_image.Width  / SIZE_FACTORS[input_layout]['w']
+  local face_height =  input_image.Height / SIZE_FACTORS[input_layout]['h']
+
+
+  if face_width ~= face_height then
+    print("face width and height must be equal (wxh = "..face_width.."x"..face_height..")")
+    OutImage:Set(req,nil)
+    return
+  end
+
+
+  local output_layout = OutLayout:GetValue(req).Value
+
+  local output_width  = face_width
+  local output_height = face_height
+
+  if output_layout < 8 then
+    output_width  = face_width  * SIZE_FACTORS[output_layout]['w']
+    output_height = face_height * SIZE_FACTORS[output_layout]['h']
+  end
+
+  local output_image = Image({
+    IMG_Document = self.Comp,
+    { IMG_Channel = "Red", },
+    { IMG_Channel = "Green", },
+    { IMG_Channel = "Blue", },
+    { IMG_Channel = "Alpha", },
+    IMG_Width  = output_width,
+    IMG_Height = output_height,
+    IMG_XScale = XAspect,
+    IMG_YScale = YAspect,
+    IMG_Quality = not req:IsQuick(),
+    IMG_MotionBlurQuality = not req:IsNoMotionBlur(),
+    IMG_DeferAlloc = true,
+    IMG_ProxyScale = ( (not req:IsStampOnly()) and 1 or nil),
+    IMG_Depth = ( (SourceDepth~=0) and SourceDepth or nil   ),
+  })
+
+  output_image:Fill(Pixel({R=0,G=0,B=0,A=0}))
+
+  if req:IsPreCalc() then
+    output_image = Image({IMG_Like = output_image, IMG_NoData = true})
+    OutImage:Set(req,output_image)
+    return
+  end
+
+
+  local face = {}
+
+  for i = 0,5 do
+
+    face[i]=Image({
+      IMG_Document = self.Comp,
+      { IMG_Channel = "Red", },
+      { IMG_Channel = "Green", },
+      { IMG_Channel = "Blue", },
+      { IMG_Channel = "Alpha", },
+      IMG_Width  = face_width,
+      IMG_Height = face_height,
+      -- IMG_XScale = 1.0,
+      -- IMG_YScale = 1.0,
+      -- IMG_Quality = not req:IsQuick(),
+      -- IMG_MotionBlurQuality = not req:IsNoMotionBlur(),
+      IMG_DeferAlloc = true,
+      -- IMG_ProxyScale = ( (not req:IsStampOnly()) and 1 or nil),
+      -- IMG_Depth = ( (sd~=0) and sd or nil   )
+    })
+
+    input_image:Crop(face[i], {
+      CROP_XOffset  = face_width  * FACE_OFFSETS[input_layout][i]['x'],
+      CROP_YOffset  = face_height * FACE_OFFSETS[input_layout][i]['y'],
+      CROP_Width    = face_width,
+      CROP_Height   = face_height,
+    })
+
+  end
+
+  if output_layout < 8 then
+    for i = 0,5 do
+      output_image:OMerge(
+        face[i],
+        face_width  * FACE_OFFSETS[output_layout][i]['x'],
+        face_height * FACE_OFFSETS[output_layout][i]['y']
+      )
+    end
+  else
+    output_image=face[output_layout-8]
+  end
+
+
+
+    -- local rotate={
+    --   XF_XOffset  = 0.5,    XF_YOffset  = 0.5,
+    --   XF_XAxis    = 0.5,    XF_YAxis    = 0.5,
+    --   XF_XSize    = 1.0,    XF_YSize    = 1.0,
+    --   XF_EdgeMode = 'Black',
+    --   XF_Angle    = 180.0,
+    -- }
+
+
+  OutImage:Set(req,output_image)
+
+end
